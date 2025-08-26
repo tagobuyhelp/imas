@@ -1,0 +1,12 @@
+export { HeroSection } from './HeroSection';
+export { ProgramHighlightsSection } from './ProgramHighlightsSection';
+export { PlacementPartnersSection } from './PlacementPartnersSection';
+export { PlacementStatsSection } from './PlacementStatsSection';
+export { LearnersSection } from './LearnersSection';
+export { AboutSection } from './AboutSection';
+export { MentorsSection } from './MentorsSection';
+export { ProgramsSection } from './ProgramsSection';
+export { WhyChooseSection } from './WhyChooseSection';
+export { IndustryCollaborationsSection } from './IndustryCollaborationsSection';
+export { CampusLifeSection } from './CampusLifeSection';
+export { FinalCTASection } from './FinalCTASection';

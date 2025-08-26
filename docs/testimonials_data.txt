@@ -1,0 +1,27 @@
+TESTIMONIALS DATA
+
+1. Jayanto Chaterjee
+   Role: Student
+   Rating: 5 stars
+   Testimonial: "IMAS has not only helped me achieve my academics with foundation but also offered me many opportunities for my personal growth and development through a wide range of extracurricular activities."
+
+2. Tanish Sarkar
+   Role: Student
+   Rating: 5 stars
+   Testimonial: "Excellent faculties. Lot of opportunities are provided for personal and academic growth."
+
+3. Tania Sultana
+   Role: Student
+   Rating: 5 stars
+   Testimonial: "The College infrastructure is awesome . The Best part , it is fully airconditioned . The Classrooms are comfortable and connected with Smart Audio Visual equipment, The Labs are also equipped with latest equipment."
+
+4. Subhodeep Ghosh
+   Role: Student
+   Rating: 5 stars
+   Testimonial: "Overall, it's a good place for a full college experience with lots of chances to learn and grow."
+
+5. Shyam Sundar Banerjee
+   Role: Student
+   Rating: 5 stars
+   Testimonial: "Lot of Placement offers from renowned companies. IMAS is well connected with Industries which in turn help the students for multiple job offers."
+

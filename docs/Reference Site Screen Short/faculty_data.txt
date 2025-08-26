@@ -1,0 +1,32 @@
+FACULTY DATA
+
+1. Dr. KUNAL SIL
+   Position: Dean Academics
+   Qualifications: Ph.D. Management, MBA
+   Image: ./facultyPics/9159501.jpeg
+
+2. Mr. RAJIB BHATTACHARYYA
+   Position: Assistant Professor
+   Qualifications: M.Com
+   Image: ./facultyPics/3635302.png
+
+3. Ms. SHREENITA SEAL
+   Position: Assistant Professor
+   Qualifications: MA English
+   Image: ./facultyPics/1833248.jpeg
+
+4. Mr. AMIT NATH
+   Position: Adjunct Professor
+   Qualifications: CA, MBA
+   Image: ./facultyPics/4108359.jpeg
+
+5. Dr. TAMAL TARU ROY
+   Position: Adjunct Professor
+   Qualifications: Ph.D. Management, MBA, MCom, PGDHRM
+   Image: ./facultyPics/8167024.jpeg
+
+SUMMARY:
+- Total faculty members: 5
+- Positions: 1 Dean Academics, 2 Assistant Professors, 2 Adjunct Professors
+- Qualifications range from Master's to Ph.D. level
+- Areas of expertise: Management, Commerce, English, Accounting, Human Resource Management

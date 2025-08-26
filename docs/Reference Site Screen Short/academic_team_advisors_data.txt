@@ -1,0 +1,86 @@
+ACADEMIC TEAM ADVISORS DATA
+
+1. Prof. Dr. Saikat Moitra
+   Position: Former Vice Chancellor
+   Institution: Maulana Abul Kalam Azad University of Technology
+   Logo: MAKAUT
+   Image: ./accadamicTeamPics/Pic_VC_Dr.-Saikat-Maitra.png
+
+2. Dr Amit Gautam
+   Position: Professor, Faculty of Management Studies
+   Institution: Banaras Hindu University
+   Logo: Banaras Hindu University
+   Image: ./accadamicTeamPics/Amit-Gautam.jpeg
+
+3. Dr. Sangeeta Sahney
+   Position: Professor & Dean
+   Institution: IIT Kharagpur- Vinod Gupta School of Management
+   Logo: IIT Kharagpur
+   Image: ./accadamicTeamPics/sahnis.jpg
+
+4. Dr Gurbandini Kaur
+   Position: Professor
+   Institution: All India Institute of Management-AIMA
+   Logo: AIMA
+   Image: ./accadamicTeamPics/Gurbandini.jpg
+
+5. Dr. M J Xavier
+   Position: Founder-Director
+   Institution: IIM Ranchi
+   Logo: IIM Ranchi
+   Image: ./accadamicTeamPics/mjx.jpg
+
+6. Dr. Saibal Kumar Mukhopadhyay
+   Position: Director
+   Institution: IBM-Jadavpur University
+   Logo: IBM-Jadavpur University
+   Image: ./accadamicTeamPics/Mukhopadhyay.jpg
+
+7. Dr. Prantik Ray
+   Position: Assistant Professor
+   Institution: XLRI Jamshedpur
+   Logo: XLRI Jamshedpur
+   Image: ./accadamicTeamPics/Prantik.jpeg
+
+8. Dr Supravat Bagli
+   Position: Assistant Professor
+   Institution: Presidency University
+   Logo: Presidency University Bangalore
+   Image: ./accadamicTeamPics/Supravat.jpeg
+
+9. Dr. Dhananjay D. Mankar
+   Position: Assistant Professor & HOD
+   Institution: TATA Institute of Social Science
+   Logo: TATA Institute of Social Sciences
+   Image: ./accadamicTeamPics/Dhananjay.jpg
+
+10. Dr. Tridib Chakraborty
+    Position: Former Professor
+    Institution: IIM, Kolkata
+    Logo: IIM Calcutta
+    Image: ./accadamicTeamPics/Tridib-Chakraborty.jpg
+
+11. Dr. Kunal Sil
+    Position: Dean-Management
+    Institution: IMAS, Kolkata
+    Logo: IMAS
+    Image: ./accadamicTeamPics/Kunal.jpg
+
+12. Prof. Dr. Manodip Ray Chaudhuri
+    Position: Professor
+    Institution: Xavier Business School
+    Logo: Xavier Business School
+    Image: ./accadamicTeamPics/manodip-ray.jpg
+
+13. Mr. Tusharendra Barpanda
+    Position: Zonal Head
+    Institution: Indian Institute of Banking & Finance
+    Logo: Indian Institute of Banking & Finance
+    Image: ./accadamicTeamPics/tusharendra-barpanda.jpg
+
+SUMMARY:
+- Total advisors: 13
+- Institutions represented: MAKAUT, BHU, IIT Kharagpur, AIMA, IIM Ranchi, IBM-Jadavpur, XLRI, Presidency University, TISS, IIM Kolkata, IMAS, Xavier Business School, IIBF
+- Positions: 1 Former VC, 1 Founder-Director, 1 Director, 1 Dean, 1 Zonal Head, 4 Professors, 3 Assistant Professors, 1 Former Professor
+- Mix of current and former positions
+- Represents premier institutions across India including IITs, IIMs, and specialized management schools

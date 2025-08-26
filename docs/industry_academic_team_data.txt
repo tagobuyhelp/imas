@@ -1,0 +1,68 @@
+INDUSTRY ACADEMIC TEAM DATA
+
+1. Anuj Ahuja
+   Position: Ex - Head of Sales
+   Company: Escorts Kubota Ltd
+   Core Area: Sales & Marketing
+   Image: ./uploads/Anuj-Ahuja.jpeg
+
+2. Mr. Mayur Sahani
+   Position: AVP – BFSI
+   Company: Tech Mahindra
+   Core Area: Finance
+   Image: ./uploads/Mayur-Sahni.jpg
+
+3. Ms. Amitha Krushnen
+   Position: VP
+   Company: Morgan Stanley
+   Core Area: Finance
+   Image: ./uploads/Amitha-Krushnen.jpeg
+
+4. Mr. Vinod Anand
+   Position: Ex- Project Manager
+   Company: Infosys
+   Core Area: Operation Management
+   Image: ./uploads/Vinod-Anand.jpeg
+
+5. Mr. Rajesh Dsouza
+   Position: Ex – Director (Partner Management)
+   Company: NIKE
+   Core Area: Sales & Marketing
+   Image: ./uploads/Rajesh-Dsouza.jpeg
+
+6. Mr. Ajay Bailur
+   Position: Sr. Director
+   Company: Infosys
+   Core Area: Sales & Marketing
+   Image: ./uploads/Ajay-Bailur.jpeg
+
+7. Mr. Yogesh Pai
+   Position: Head – Project Management
+   Company: Adani Group of Companies
+   Core Area: Project Management
+   Image: ./uploads/ (missing image)
+
+8. Mr. Nilesh Kumar
+   Position: Head – Sales & Distribution
+   Company: Reliance Jio
+   Core Area: Sales & Distribution Management
+   Image: ./uploads/Nilesh-Kumar.jpeg
+
+9. Ms. Ramya Bhat
+   Position: Manager – Staffing & Resource
+   Company: Tata Consultancy Services
+   Core Area: Human Resource Management
+   Image: ./uploads/Ramya-Bhat.jpeg
+
+10. Mr. Nishant Dave
+    Position: Global Head – SAP Practice
+    Company: Tata Consultancy Services
+    Core Area: Operation Management
+    Image: ./uploads/Nishant-Dave.jpeg
+
+SUMMARY:
+- Total team members: 10
+- Companies represented: Escorts Kubota, Tech Mahindra, Morgan Stanley, Infosys, NIKE, Adani Group, Reliance Jio, TCS
+- Core areas covered: Sales & Marketing (4), Finance (2), Operation Management (2), Project Management (1), Human Resource Management (1)
+- Positions range from Manager to VP/Director level
+- Mix of current and former (Ex-) positions
