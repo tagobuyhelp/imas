@@ -9,7 +9,6 @@ import AdmissionsMegaMenu from './AdmissionsMegaMenu';
 interface HeaderProps {
   currentPage?: string;
   onMenuToggle: () => void;
-  isMenuOpen?: boolean;
 }
 
 export function Header({ currentPage, onMenuToggle }: HeaderProps) {
