@@ -90,7 +90,6 @@ export function MentorsSection() {
     }
   ];
 
-
   // Navigation functions
   const nextSlide = () => {
     if (carouselRef.current) {
@@ -268,10 +267,6 @@ export function MentorsSection() {
             ))}
           </div>
         </div>
-
-
-
-        
       </div>
     </section>
   );

@@ -13,6 +13,7 @@ import {
   CampusLifeSection,
   FinalCTASection
 } from '../components/sections/Home';
+import { StickyCTAFooter } from '../components/layout/StickyCTAFooter';
 
 export function HomePage() {
   return (
@@ -29,6 +30,7 @@ export function HomePage() {
       <IndustryCollaborationsSection />
       <CampusLifeSection />
       <FinalCTASection />
+      <StickyCTAFooter heroSectionHeight={800} showFloatingButton={false} />
     </div>
   );
 }
