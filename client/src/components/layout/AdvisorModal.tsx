@@ -37,8 +37,8 @@ export function AdvisorModal({ isOpen, onClose }: AdvisorModalProps) {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
-      <div className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[100vh] ">
+    <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4" onClick={onClose}>
+      <div className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[100vh] " onClick={(e) => e.stopPropagation()}>
         {/* Header Section */}
         <div className={`relative ${IMAS_TAILWIND_CLASSES.BG_DARK_BLUE} text-white rounded-t-2xl p-3 sm:p-4 lg:p-5 bg-gradient-to-r from-blue-900 to-blue-800`}>
           {/* Background Pattern */}
