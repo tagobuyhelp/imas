@@ -5,8 +5,18 @@ import { IMAS_TAILWIND_CLASSES, IMAS_CONTACT } from '../../../lib/constants';
 
 export function FinalCTASection() {
   return (
-    <section className="py-16 bg-gray-900 text-white">
-      <div className="max-w-[1260px] mx-auto px-4 text-center">
+    <section className="relative py-16 bg-gray-900 text-white overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <img 
+          src="/uploads/IMASBUILDING.jpeg" 
+          alt="IMAS Building" 
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gray-900/80"></div>
+      </div>
+      
+      <div className="relative max-w-[1260px] mx-auto px-4 text-center z-10">
         <div className="max-w-4xl mx-auto">
           <div className={`inline-block ${IMAS_TAILWIND_CLASSES.BG_MEDIUM_BLUE} text-white px-6 py-2 rounded-full text-sm font-semibold mb-6`}>
             ADMISSIONS OPEN

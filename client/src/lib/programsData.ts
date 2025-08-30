@@ -210,6 +210,106 @@ const recruiterLogos: Record<string, RecruiterLogo> = {
         name: 'Aditya Birla Group',
         logo: '/uploads/logos/IMAS_LOGO_PNG.png', // Placeholder - add actual ABG logo
         alt: 'Aditya Birla Group Logo'
+    },
+    'McKinsey': {
+        name: 'McKinsey & Company',
+        logo: '/uploads/logos/IMAS_LOGO_PNG.png', // Placeholder - add actual McKinsey logo
+        alt: 'McKinsey & Company Logo'
+    },
+    'BCG': {
+        name: 'Boston Consulting Group',
+        logo: '/uploads/logos/IMAS_LOGO_PNG.png', // Placeholder - add actual BCG logo
+        alt: 'Boston Consulting Group Logo'
+    },
+    'IBM': {
+        name: 'IBM',
+        logo: '/uploads/logos/IMAS_LOGO_PNG.png', // Placeholder - add actual IBM logo
+        alt: 'IBM Logo'
+    },
+    'Microsoft': {
+        name: 'Microsoft',
+        logo: '/uploads/logos/IMAS_LOGO_PNG.png', // Placeholder - add actual Microsoft logo
+        alt: 'Microsoft Logo'
+    },
+    'Apollo': {
+        name: 'Apollo',
+        logo: '/uploads/logos/IMAS_LOGO_PNG.png', // Placeholder - add actual Apollo logo
+        alt: 'Apollo Logo'
+    },
+    'Max': {
+        name: 'Max Healthcare',
+        logo: '/uploads/logos/IMAS_LOGO_PNG.png', // Placeholder - add actual Max logo
+        alt: 'Max Healthcare Logo'
+    },
+    'Manipal': {
+        name: 'Manipal Hospitals',
+        logo: '/uploads/logos/IMAS_LOGO_PNG.png', // Placeholder - add actual Manipal logo
+        alt: 'Manipal Hospitals Logo'
+    },
+    'HDFC': {
+        name: 'HDFC',
+        logo: '/uploads/logos/IMAS_LOGO_PNG.png', // Placeholder - add actual HDFC logo
+        alt: 'HDFC Logo'
+    },
+    'ICICI': {
+        name: 'ICICI',
+        logo: '/uploads/logos/IMAS_LOGO_PNG.png', // Placeholder - add actual ICICI logo
+        alt: 'ICICI Logo'
+    },
+    'Axis': {
+        name: 'Axis Bank',
+        logo: '/uploads/logos/IMAS_LOGO_PNG.png', // Placeholder - add actual Axis logo
+        alt: 'Axis Bank Logo'
+    },
+    'Kotak': {
+        name: 'Kotak Mahindra Bank',
+        logo: '/uploads/logos/IMAS_LOGO_PNG.png', // Placeholder - add actual Kotak logo
+        alt: 'Kotak Mahindra Bank Logo'
+    },
+    'Bajaj': {
+        name: 'Bajaj',
+        logo: '/uploads/logos/IMAS_LOGO_PNG.png', // Placeholder - add actual Bajaj logo
+        alt: 'Bajaj Logo'
+    },
+    'DHL': {
+        name: 'DHL',
+        logo: '/uploads/logos/IMAS_LOGO_PNG.png', // Placeholder - add actual DHL logo
+        alt: 'DHL Logo'
+    },
+    'FedEx': {
+        name: 'FedEx',
+        logo: '/uploads/logos/IMAS_LOGO_PNG.png', // Placeholder - add actual FedEx logo
+        alt: 'FedEx Logo'
+    },
+    'Blue Dart': {
+        name: 'Blue Dart',
+        logo: '/uploads/logos/IMAS_LOGO_PNG.png', // Placeholder - add actual Blue Dart logo
+        alt: 'Blue Dart Logo'
+    },
+    'Mahindra': {
+        name: 'Mahindra Group',
+        logo: '/uploads/logos/IMAS_LOGO_PNG.png', // Placeholder - add actual Mahindra logo
+        alt: 'Mahindra Group Logo'
+    },
+    'Tata': {
+        name: 'Tata Group',
+        logo: '/uploads/logos/IMAS_LOGO_PNG.png', // Placeholder - add actual Tata logo
+        alt: 'Tata Group Logo'
+    },
+    'Godrej': {
+        name: 'Godrej',
+        logo: '/uploads/logos/IMAS_LOGO_PNG.png', // Placeholder - add actual Godrej logo
+        alt: 'Godrej Logo'
+    },
+    'ITC': {
+        name: 'ITC Limited',
+        logo: '/uploads/logos/IMAS_LOGO_PNG.png', // Placeholder - add actual ITC logo
+        alt: 'ITC Limited Logo'
+    },
+    'L&T': {
+        name: 'Larsen & Toubro',
+        logo: '/uploads/logos/IMAS_LOGO_PNG.png', // Placeholder - add actual L&T logo
+        alt: 'Larsen & Toubro Logo'
     }
 };
 

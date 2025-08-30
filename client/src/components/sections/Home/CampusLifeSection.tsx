@@ -105,7 +105,7 @@ export function CampusLifeSection() {
             <div className="bg-white rounded-lg shadow-lg border border-gray-100 overflow-hidden">
               <div className="relative h-64 sm:h-72 md:h-80 lg:h-96">
                 <img
-                  src="/uploads/1712214383phpdRsdhB.jpeg"
+                  src="/uploads/IMASBUILDING.jpeg"
                   alt="IMAS Campus - Premier Business School in Kolkata"
                   className="w-full h-full object-cover"
                   onError={(e) => {
