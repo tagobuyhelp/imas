@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronDown, GraduationCap, Briefcase, Globe } from 'lucide-react';
+import { getProgramsByCategory } from '../../lib/programsData';
 
 interface AdmissionsMegaMenuProps {
   isOpen: boolean;
@@ -10,43 +11,35 @@ interface AdmissionsMegaMenuProps {
 const AdmissionsMegaMenu: React.FC<AdmissionsMegaMenuProps> = ({ isOpen, onClose }) => {
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
 
+  // Get programs dynamically from programsData
+  const plusPrograms = getProgramsByCategory('pgdm-plus');
+  const executivePrograms = getProgramsByCategory('executive');
+  const mbaPrograms = getProgramsByCategory('mba-global');
+
   const admissionsData = {
     'pgdm-plus': {
       title: 'PGDM Plus Programs (for Fresh Graduates)',
       icon: <GraduationCap className="h-5 w-5" />,
-      courses: [
-        'PGDM Plus in Marketing Management',
-        'PGDM Plus in Financial Management',
-        'PGDM Plus in Human Resource Management',
-        'PGDM Plus in Business Analytics',
-        'PGDM Plus in Artificial Intelligence & Data Science',
-        'PGDM Plus in Fintech',
-        'PGDM Plus in Hospital & Healthcare Management',
-        'PGDM Plus in Innovation, Entrepreneurship & Venture Development (IEV)'
-      ]
+      courses: plusPrograms.map(program => ({
+        name: program.name,
+        slug: program.slug
+      }))
     },
-    'pgdm-executives': {
+    'executive': {
       title: 'PGDM Programs (for Working Executives/Blended Mode)',
       icon: <Briefcase className="h-5 w-5" />,
-      courses: [
-        'PGDM in Marketing',
-        'PGDM in Finance',
-        'PGDM in Human Resource',
-        'PGDM in Business Analytics',
-        'PGDM in Artificial Intelligence & Data Science',
-        'PGDM in Fintech',
-        'PGDM in Logistics & Supply Chain Management',
-        'PGDM in Operations Management',
-        'PGDM in Agri Business Management',
-        'PGDM in Hospital & Healthcare Management'
-      ]
+      courses: executivePrograms.map(program => ({
+        name: program.name,
+        slug: program.slug
+      }))
     },
     'mba-global': {
       title: 'MBA (Global) Program',
       icon: <Globe className="h-5 w-5" />,
-      courses: [
-        'MBA (Global) Program'
-      ]
+      courses: mbaPrograms.map(program => ({
+        name: program.name,
+        slug: program.slug
+      }))
     }
   };
 
@@ -84,18 +77,18 @@ const AdmissionsMegaMenu: React.FC<AdmissionsMegaMenuProps> = ({ isOpen, onClose
                 {/* Course List */}
                 <div className="space-y-2">
                   {category.courses.map((course, index) => (
-                    <button
+                    <Link
                       key={index}
-                      className="w-full text-left px-3 py-2 text-sm text-gray-600 hover:text-teal-600 hover:bg-teal-50 rounded-md transition-all duration-200 border border-transparent hover:border-teal-200"
+                      to={`/programs/${course.slug}`}
+                      className="block w-full text-left px-3 py-2 text-sm text-gray-600 hover:text-teal-600 hover:bg-teal-50 rounded-md transition-all duration-200 border border-transparent hover:border-teal-200"
                       onClick={() => {
-                        // Handle course selection
-                        console.log(`Selected: ${course}`);
+                        console.log(`Selected: ${course.name}`);
                         onClose();
                       }}
                     >
                       <span className="text-xs text-gray-400 mr-2">{index + 1}.</span>
-                      {course}
-                    </button>
+                      {course.name}
+                    </Link>
                   ))}
                 </div>
                 
