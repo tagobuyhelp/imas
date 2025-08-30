@@ -221,8 +221,8 @@ export function ProgramsPage() {
         </div>
       </section>
 
-      {/* Program Highlights - Enhanced Design */}
-      <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-slate-50 via-blue-50/30 to-teal-50/30 relative overflow-hidden">
+      {/* Program Highlights - Mobile Optimized */}
+      <section className="py-6 sm:py-12 lg:py-16 bg-gradient-to-br from-slate-50 via-blue-50/30 to-teal-50/30 relative overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-10 left-10 w-32 h-32 bg-gradient-to-br from-blue-600 to-teal-600 rounded-full blur-3xl"></div>
@@ -230,112 +230,112 @@ export function ProgramsPage() {
         </div>
         
         <div className="max-w-[1260px] mx-auto px-4 relative z-10">
-          {/* Section Header */}
-          <div className="text-center mb-12 sm:mb-16">
-            <div className={`inline-block ${IMAS_TAILWIND_CLASSES.BG_DARK_BLUE}/10 ${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE} px-4 py-2 rounded-full text-sm font-semibold mb-4 border ${IMAS_TAILWIND_CLASSES.BORDER_DARK_BLUE}/20`}>
+          {/* Section Header - Compact on Mobile */}
+          <div className="text-center mb-6 sm:mb-12">
+            <div className={`inline-block ${IMAS_TAILWIND_CLASSES.BG_DARK_BLUE}/10 ${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE} px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-semibold mb-2 sm:mb-4 border ${IMAS_TAILWIND_CLASSES.BORDER_DARK_BLUE}/20`}>
               PROGRAM OVERVIEW
             </div>
-            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-800 mb-4">
+            <h2 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-800 mb-2 sm:mb-4">
               Everything You Need to Know
             </h2>
-            <p className="text-base lg:text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-sm sm:text-base lg:text-lg text-gray-600 max-w-2xl mx-auto px-2 sm:px-0">
               Comprehensive details about our flagship programs designed for future leaders
             </p>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6 lg:gap-8">
             {/* Duration Card */}
-            <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 group border border-gray-100 hover:border-blue-200">
+            <div className="bg-white rounded-xl sm:rounded-2xl p-3 sm:p-6 shadow-lg hover:shadow-xl transition-all duration-300 group border border-gray-100 hover:border-blue-200">
               <div className="flex flex-col items-center text-center">
-                <div className={`w-16 h-16 ${IMAS_TAILWIND_CLASSES.GRADIENT_PRIMARY} rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
-                  <Clock className="h-8 w-8 text-white" />
+                <div className={`w-10 h-10 sm:w-16 sm:h-16 ${IMAS_TAILWIND_CLASSES.GRADIENT_PRIMARY} rounded-xl sm:rounded-2xl flex items-center justify-center mb-2 sm:mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
+                  <Clock className="h-5 w-5 sm:h-8 sm:w-8 text-white" />
                 </div>
-                <div className="space-y-2">
-                  <h3 className="font-bold text-gray-800 text-sm uppercase tracking-wider">Duration</h3>
-                  <p className="text-3xl font-bold text-[#143674] mb-1">2 Years</p>
-                  <div className="flex items-center justify-center gap-2">
-                    <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
-                    <p className="text-sm text-gray-600 font-medium">Full Time Programs</p>
+                <div className="space-y-1 sm:space-y-2">
+                  <h3 className="font-bold text-gray-800 text-xs sm:text-sm uppercase tracking-wider">Duration</h3>
+                  <p className="text-lg sm:text-3xl font-bold text-[#143674] mb-0.5 sm:mb-1">2 Years</p>
+                  <div className="flex items-center justify-center gap-1 sm:gap-2">
+                    <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-green-500 rounded-full animate-pulse"></div>
+                    <p className="text-xs sm:text-sm text-gray-600 font-medium">Full Time</p>
                   </div>
-                  <p className="text-xs text-gray-500">Intensive Learning Experience</p>
+                  <p className="text-xs text-gray-500 hidden sm:block">Intensive Learning Experience</p>
                 </div>
               </div>
             </div>
 
             {/* Location Card */}
-            <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 group border border-gray-100 hover:border-blue-200">
+            <div className="bg-white rounded-xl sm:rounded-2xl p-3 sm:p-6 shadow-lg hover:shadow-xl transition-all duration-300 group border border-gray-100 hover:border-blue-200">
               <div className="flex flex-col items-center text-center">
-                <div className={`w-16 h-16 ${IMAS_TAILWIND_CLASSES.GRADIENT_PRIMARY} rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
-                  <MapPin className="h-8 w-8 text-white" />
+                <div className={`w-10 h-10 sm:w-16 sm:h-16 ${IMAS_TAILWIND_CLASSES.GRADIENT_PRIMARY} rounded-xl sm:rounded-2xl flex items-center justify-center mb-2 sm:mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
+                  <MapPin className="h-5 w-5 sm:h-8 sm:w-8 text-white" />
                 </div>
-                <div className="space-y-2">
-                  <h3 className="font-bold text-gray-800 text-sm uppercase tracking-wider">Location</h3>
-                  <p className="text-3xl font-bold text-[#143674] mb-1">Kolkata</p>
-                  <div className="flex items-center justify-center gap-2">
-                    <Building2 className="h-4 w-4 text-blue-500" />
-                    <p className="text-sm text-gray-600 font-medium">Salt Lake Sector V</p>
+                <div className="space-y-1 sm:space-y-2">
+                  <h3 className="font-bold text-gray-800 text-xs sm:text-sm uppercase tracking-wider">Location</h3>
+                  <p className="text-lg sm:text-3xl font-bold text-[#143674] mb-0.5 sm:mb-1">Kolkata</p>
+                  <div className="flex items-center justify-center gap-1 sm:gap-2">
+                    <Building2 className="h-3 w-3 sm:h-4 sm:w-4 text-blue-500" />
+                    <p className="text-xs sm:text-sm text-gray-600 font-medium">Sector V</p>
                   </div>
-                  <p className="text-xs text-gray-500">IT Hub & Business District</p>
+                  <p className="text-xs text-gray-500 hidden sm:block">IT Hub & Business District</p>
                 </div>
               </div>
             </div>
 
             {/* Format Card */}
-            <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 group border border-gray-100 hover:border-blue-200">
+            <div className="bg-white rounded-xl sm:rounded-2xl p-3 sm:p-6 shadow-lg hover:shadow-xl transition-all duration-300 group border border-gray-100 hover:border-blue-200">
               <div className="flex flex-col items-center text-center">
-                <div className={`w-16 h-16 ${IMAS_TAILWIND_CLASSES.GRADIENT_PRIMARY} rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
-                  <GraduationCap className="h-8 w-8 text-white" />
+                <div className={`w-10 h-10 sm:w-16 sm:h-16 ${IMAS_TAILWIND_CLASSES.GRADIENT_PRIMARY} rounded-xl sm:rounded-2xl flex items-center justify-center mb-2 sm:mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
+                  <GraduationCap className="h-5 w-5 sm:h-8 sm:w-8 text-white" />
                 </div>
-                <div className="space-y-2">
-                  <h3 className="font-bold text-gray-800 text-sm uppercase tracking-wider">Format</h3>
-                  <p className="text-3xl font-bold text-[#143674] mb-1">On Campus</p>
-                  <div className="flex items-center justify-center gap-2">
-                    <Users className="h-4 w-4 text-green-500" />
-                    <p className="text-sm text-gray-600 font-medium">Full Time</p>
+                <div className="space-y-1 sm:space-y-2">
+                  <h3 className="font-bold text-gray-800 text-xs sm:text-sm uppercase tracking-wider">Format</h3>
+                  <p className="text-lg sm:text-3xl font-bold text-[#143674] mb-0.5 sm:mb-1">On Campus</p>
+                  <div className="flex items-center justify-center gap-1 sm:gap-2">
+                    <Users className="h-3 w-3 sm:h-4 sm:w-4 text-green-500" />
+                    <p className="text-xs sm:text-sm text-gray-600 font-medium">Full Time</p>
                   </div>
-                  <p className="text-xs text-gray-500">Immersive Campus Life</p>
+                  <p className="text-xs text-gray-500 hidden sm:block">Immersive Campus Life</p>
                 </div>
               </div>
             </div>
 
             {/* Commencement Card */}
-            <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 group border border-gray-100 hover:border-blue-200">
+            <div className="bg-white rounded-xl sm:rounded-2xl p-3 sm:p-6 shadow-lg hover:shadow-xl transition-all duration-300 group border border-gray-100 hover:border-blue-200">
               <div className="flex flex-col items-center text-center">
-                <div className={`w-16 h-16 ${IMAS_TAILWIND_CLASSES.GRADIENT_PRIMARY} rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg relative`}>
-                  <Calendar className="h-8 w-8 text-white" />
-                  <div className="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full flex items-center justify-center">
-                    <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+                <div className={`w-10 h-10 sm:w-16 sm:h-16 ${IMAS_TAILWIND_CLASSES.GRADIENT_PRIMARY} rounded-xl sm:rounded-2xl flex items-center justify-center mb-2 sm:mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg relative`}>
+                  <Calendar className="h-5 w-5 sm:h-8 sm:w-8 text-white" />
+                  <div className="absolute -top-0.5 -right-0.5 sm:-top-1 sm:-right-1 w-3 h-3 sm:w-4 sm:h-4 bg-red-500 rounded-full flex items-center justify-center">
+                    <div className="w-1 h-1 sm:w-2 sm:h-2 bg-white rounded-full animate-pulse"></div>
                   </div>
                 </div>
-                <div className="space-y-2">
-                  <h3 className="font-bold text-gray-800 text-sm uppercase tracking-wider">Commencement</h3>
-                  <p className="text-3xl font-bold text-[#143674] mb-1">Sep 2025</p>
-                  <div className="flex items-center justify-center gap-2">
-                    <div className="w-2 h-2 bg-orange-500 rounded-full animate-bounce"></div>
-                    <p className="text-sm text-gray-600 font-medium">Next Batch</p>
+                <div className="space-y-1 sm:space-y-2">
+                  <h3 className="font-bold text-gray-800 text-xs sm:text-sm uppercase tracking-wider">Start</h3>
+                  <p className="text-lg sm:text-3xl font-bold text-[#143674] mb-0.5 sm:mb-1">Sep 2025</p>
+                  <div className="flex items-center justify-center gap-1 sm:gap-2">
+                    <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-orange-500 rounded-full animate-bounce"></div>
+                    <p className="text-xs sm:text-sm text-gray-600 font-medium">Next Batch</p>
                   </div>
-                  <p className="text-xs text-gray-500">Limited Seats Available</p>
+                  <p className="text-xs text-gray-500 hidden sm:block">Limited Seats Available</p>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Additional Info Banner */}
-          <div className="mt-12 bg-gradient-to-r from-blue-600 to-teal-600 rounded-2xl p-6 text-white text-center">
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <div className="flex items-center gap-2">
-                <CheckCircle className="h-5 w-5" />
-                <span className="font-semibold">AICTE Approved</span>
+          {/* Additional Info Banner - Compact on Mobile */}
+          <div className="mt-6 sm:mt-12 bg-gradient-to-r from-blue-600 to-teal-600 rounded-xl sm:rounded-2xl p-4 sm:p-6 text-white text-center">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-4">
+              <div className="flex items-center gap-1.5 sm:gap-2">
+                <CheckCircle className="h-4 w-4 sm:h-5 sm:w-5" />
+                <span className="font-semibold text-sm sm:text-base">AICTE Approved</span>
               </div>
               <div className="hidden sm:block w-px h-6 bg-white/30"></div>
-              <div className="flex items-center gap-2">
-                <Award className="h-5 w-5" />
-                <span className="font-semibold">100% Placement Support</span>
+              <div className="flex items-center gap-1.5 sm:gap-2">
+                <Award className="h-4 w-4 sm:h-5 sm:w-5" />
+                <span className="font-semibold text-sm sm:text-base">100% Placement</span>
               </div>
               <div className="hidden sm:block w-px h-6 bg-white/30"></div>
-              <div className="flex items-center gap-2">
-                <Globe className="h-5 w-5" />
-                <span className="font-semibold">Global Recognition</span>
+              <div className="flex items-center gap-1.5 sm:gap-2">
+                <Globe className="h-4 w-4 sm:h-5 sm:w-5" />
+                <span className="font-semibold text-sm sm:text-base">Global Recognition</span>
               </div>
             </div>
           </div>
