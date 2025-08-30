@@ -96,7 +96,7 @@ export function StickyCTAFooter({
             <div className="flex space-x-3">
               <button 
                 onClick={onPrimaryClick}
-                className={`px-8 py-3 ${IMAS_TAILWIND_CLASSES.BG_DARK_BLUE} text-white rounded-lg hover:bg-opacity-90 transition-all duration-200 font-semibold text-base shadow-lg hover:shadow-xl`}
+                className={`px-8 py-3 ${IMAS_TAILWIND_CLASSES.GRADIENT_PRIMARY} text-white rounded-lg hover:scale-105 transition-all duration-200 font-semibold text-base shadow-lg hover:shadow-xl`}
               >
                 {primaryButtonText}
               </button>
@@ -107,7 +107,7 @@ export function StickyCTAFooter({
           <div className="md:hidden py-4 px-4">
             <button 
               onClick={onPrimaryClick}
-              className={`w-full py-4 ${IMAS_TAILWIND_CLASSES.BG_DARK_BLUE} text-white rounded-lg hover:bg-opacity-90 transition-all duration-200 font-semibold text-base shadow-lg hover:shadow-xl`}
+              className={`w-full py-4 ${IMAS_TAILWIND_CLASSES.GRADIENT_PRIMARY} text-white rounded-lg hover:scale-105 transition-all duration-200 font-semibold text-base shadow-lg hover:shadow-xl`}
             >
               {primaryButtonText}
             </button>
@@ -170,8 +170,7 @@ export function StickyCTAFooter({
         onClose={handleCloseModal} 
       />
 
-      {/* Add bottom padding to prevent content from being hidden behind sticky footer */}
-      <div className="h-20 md:h-16"></div>
+
     </>
   );
 }

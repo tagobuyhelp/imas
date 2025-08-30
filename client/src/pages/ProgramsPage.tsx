@@ -1,11 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
 import { Button } from '../components/ui/button';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '../components/ui/tabs';
-import { GraduationCap, Clock, Users, Award, ArrowRight, Star, Building2, CheckCircle, Globe, Calendar } from 'lucide-react';
+import { GraduationCap, Clock, Users, Award, ArrowRight, Star, Building2, CheckCircle, Globe, Calendar, MapPin, DollarSign, BookOpen, Target, Users2, Download, Mail, ExternalLink, ChevronRight, Play, Shield, Zap, Heart } from 'lucide-react';
+import { IMAS_TAILWIND_CLASSES } from '../lib/constants';
+import { Link } from 'react-router-dom';
+import { getProgramsByCategory } from '../lib/programsData';
+import { ProgramsSection } from '../components/sections/Home/ProgramsSection';
 
 export function ProgramsPage() {
-  const [activeTab, setActiveTab] = useState('overview');
 
   const programData = {
     name: 'PGDM Plus in Marketing Management',
@@ -51,443 +53,403 @@ export function ProgramsPage() {
     { metric: '50+', label: 'Top Recruiters' }
   ];
 
-  const pgdmPlusPrograms = [
+  const pgdmPlusPrograms = getProgramsByCategory('pgdm-plus');
+  const executivePrograms = getProgramsByCategory('executive');
+  const mbaGlobalProgram = getProgramsByCategory('mba-global')[0];
+
+  // Top Recruiters Data
+  const topRecruiters = [
+    { name: 'Amazon', logo: '/uploads/Customer-logo_Amazon.png', alt: 'Amazon Logo' },
+    { name: 'Google', logo: '/uploads/Google_logo_2013-2015-600x206.png', alt: 'Google Logo' },
+    { name: 'Deloitte', logo: '/uploads/deloitte.png', alt: 'Deloitte Logo' },
+    { name: 'Accenture', logo: '/uploads/Accenture.svg.webp', alt: 'Accenture Logo' },
+    { name: 'Flipkart', logo: '/uploads/flipkart-logo.webp', alt: 'Flipkart Logo' },
+    { name: 'Swiggy', logo: '/uploads/swiggy-logo.svg', alt: 'Swiggy Logo' },
+    { name: 'Zomato', logo: '/uploads/Zomato-Logo.png', alt: 'Zomato Logo' },
+    { name: 'Ola', logo: '/uploads/Ola_Cabs_logo.svg', alt: 'Ola Logo' },
+    { name: 'Razorpay', logo: '/uploads/Razorpay-Logo.jpg', alt: 'Razorpay Logo' },
+    { name: 'Delhivery', logo: '/uploads/delhivery.png', alt: 'Delhivery Logo' }
+  ];
+
+  // Why Choose IMAS Data
+  const whyChooseIMAS = [
     {
-      name: 'PGDM Plus in Marketing Management',
-      description: 'Transform into a Marketing Leader with hands-on experience in branding, digital strategy, and consumer psychology.',
-      duration: '2 Years',
-      highlights: ['AICTE-Approved', 'Industry Projects', 'International Exposure', '100% Placement Support']
+      icon: Shield,
+      title: 'AICTE Approved',
+      description: 'All our programs are AICTE-approved, ensuring quality education and recognition'
     },
     {
-      name: 'PGDM Plus in Financial Management',
-      description: 'Master the world of money, markets, investments, and corporate finance for high-impact careers.',
-      duration: '2 Years',
-      highlights: ['CFO Preparation', 'Investment Banking', 'Financial Analytics', 'Risk Management']
+      icon: Users,
+      title: 'Industry Expert Faculty',
+      description: 'Learn from professionals with 15+ years of industry experience'
     },
     {
-      name: 'PGDM Plus in Human Resource Management',
-      description: 'Develop future-ready HR leaders with strategic thinking and data-driven HR practices.',
-      duration: '2 Years',
-      highlights: ['Strategic HR', 'People Analytics', 'Talent Management', 'Organizational Development']
+      icon: Globe,
+      title: 'Global Partnerships',
+      description: 'International collaborations with UK universities for global exposure'
     },
     {
-      name: 'PGDM Plus in Business Analytics',
-      description: 'Become a Data-Smart Manager with skills in data science, visualization, and business intelligence.',
-      duration: '2 Years',
-      highlights: ['Data Analytics', 'Predictive Modeling', 'Business Intelligence', 'Machine Learning']
+      icon: Target,
+      title: '100% Placement Support',
+      description: 'Dedicated placement cell with 50+ top recruiters'
     },
     {
-      name: 'PGDM Plus in Artificial Intelligence & Data Science',
-      description: 'Shape the Future with AI-Powered Intelligence for next-generation AI professionals.',
-      duration: '2 Years',
-      highlights: ['AI Applications', 'Machine Learning', 'Deep Learning', 'NLP & Computer Vision']
+      icon: Zap,
+      title: 'Modern Infrastructure',
+      description: 'State-of-the-art facilities in Salt Lake Sector V, Kolkata'
     },
     {
-      name: 'PGDM Plus in Fintech',
-      description: 'Lead the Revolution in Financial Technology at the intersection of finance and technology.',
-      duration: '2 Years',
-      highlights: ['Blockchain', 'Digital Banking', 'AI in Finance', 'RegTech & InsurTech']
-    },
-    {
-      name: 'PGDM Plus in Hospital & Healthcare Management',
-      description: 'Lead the Future of Healthcare Delivery with managerial excellence in healthcare systems.',
-      duration: '2 Years',
-      highlights: ['Hospital Administration', 'Healthcare Operations', 'Quality Management', 'Medical Tourism']
-    },
-    {
-      name: 'PGDM Plus in Innovation, Entrepreneurship & Venture Development (IEV)',
-      description: 'Build What the World Needs Next with entrepreneurial skills and startup incubation.',
-      duration: '2 Years',
-      highlights: ['Startup Creation', 'Innovation Management', 'Venture Development', 'Angel Network Access']
+      icon: Heart,
+      title: 'Personalized Mentorship',
+      description: 'One-on-one guidance from industry leaders and alumni'
     }
   ];
 
-  const executivePrograms = [
-    {
-      name: 'PGDM in Marketing',
-      description: 'Transform into a Marketing Leader while continuing your career with blended learning.',
-      duration: '18 Months',
-      highlights: ['Blended Mode', 'Weekend Classes', 'Industry Projects', 'Career Advancement']
-    },
-    {
-      name: 'PGDM in Finance',
-      description: 'Master Finance While Continuing Your Career with specialized financial management skills.',
-      duration: '18 Months',
-      highlights: ['Investment Banking', 'Risk Management', 'Corporate Finance', 'Fintech Integration']
-    },
-    {
-      name: 'PGDM in Human Resource',
-      description: 'Shape People. Shape Businesses with strategic HR leadership skills.',
-      duration: '18 Months',
-      highlights: ['Strategic HR', 'People Analytics', 'Talent Management', 'Organizational Development']
-    },
-    {
-      name: 'PGDM in Business Analytics',
-      description: 'Turn Data into Decisions with advanced analytics and business intelligence.',
-      duration: '18 Months',
-      highlights: ['Data Analytics', 'Predictive Modeling', 'Business Intelligence', 'Machine Learning']
-    },
-    {
-      name: 'PGDM in Artificial Intelligence & Data Science',
-      description: 'Upgrade Your Career with AI-Powered Business Skills for the digital economy.',
-      duration: '18 Months',
-      highlights: ['AI Applications', 'Machine Learning', 'Deep Learning', 'Business AI']
-    },
-    {
-      name: 'PGDM in Fintech',
-      description: 'Shape the Future of Digital Finance While You Work with blended learning.',
-      duration: '18 Months',
-      highlights: ['Digital Banking', 'Blockchain', 'AI in Finance', 'RegTech']
-    },
-    {
-      name: 'PGDM in Logistics & Supply Chain Management',
-      description: 'Streamline Global Supply Chains While Continuing Your Career.',
-      duration: '18 Months',
-      highlights: ['Supply Chain Strategy', 'Logistics Planning', 'Procurement', 'Operations Management']
-    },
-    {
-      name: 'PGDM in Operations Management',
-      description: 'Master Efficiency. Lead Operations. Drive Excellence.',
-      duration: '18 Months',
-      highlights: ['Process Optimization', 'Quality Control', 'Project Management', 'Lean Six Sigma']
-    },
-    {
-      name: 'PGDM in Agri Business Management',
-      description: 'Transform India\'s Agri Economy into a Growth Engine.',
-      duration: '18 Months',
-      highlights: ['Agri Supply Chain', 'Food Processing', 'Rural Marketing', 'AgriTech Innovation']
-    },
-    {
-      name: 'PGDM in Hospital & Healthcare Management',
-      description: 'Lead Healthcare Systems with Managerial Excellence.',
-      duration: '18 Months',
-      highlights: ['Hospital Administration', 'Healthcare Operations', 'Quality Management', 'Health Policy']
-    }
-  ];
-
-  const mbaGlobalProgram = {
-    name: 'MBA (Global) Program',
-    description: 'Think beyond borders. Lead beyond limits with international exposure and UK partnership.',
-    duration: '2 Years',
-    highlights: ['1 Year in India + 1 Year in UK', 'Dual Qualification', 'Post-Study Work Visa', 'Global Alumni Network'],
-    structure: {
-      year1: {
-        location: 'IMAS Kolkata',
-        qualification: 'PGDM (AICTE-approved) + EDLSMP (UK)',
-        fees: '₹3,66,600 (INR)'
-      },
-      year2: {
-        location: 'UK Partner Universities',
-        qualification: 'MBA (Top-Up Program)',
-        fees: '£10,000 - £18,000'
-      }
+  const handleCTAAction = (action: string) => {
+    switch (action) {
+      case 'apply':
+        window.open('/admissions', '_blank');
+        break;
+      case 'enquire':
+        window.open('/contact', '_blank');
+        break;
+      case 'download':
+        console.log('Download brochure');
+        break;
+      default:
+        break;
     }
   };
 
   return (
     <div className="min-h-screen">
-      {/* Hero Section - Scaler Style */}
-      <section className="bg-gradient-to-br from-primary-dark via-primary-medium to-primary-teal text-white py-20">
-        <div className="container mx-auto px-4 text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Our Programs
-          </h1>
-          <p className="text-xl md:text-2xl mb-8 opacity-90">
-            India's Only B-School Powered by Industry Experts & Designed for Tomorrow's Leaders
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-white text-primary-dark hover:bg-gray-100 text-lg px-8 py-3">
-              Apply Now
-            </Button>
-            <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-primary-dark text-lg px-8 py-3">
-              Download Brochure
-            </Button>
+      {/* Hero Section - Mobile Friendly with Background Image */}
+      <section className="relative min-h-[40vh] sm:min-h-[50vh] lg:min-h-[65vh] w-full flex items-center justify-center overflow-hidden">
+        {/* Background Image with Fallback */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src="/uploads/imas_hero_image1.webp"
+            alt="IMAS Programs Hero"
+            className="w-full h-full object-cover"
+            loading="eager"
+            onError={(e) => {
+              const target = e.target as HTMLImageElement;
+              target.style.display = 'none';
+              // Show fallback gradient
+              const fallback = target.nextElementSibling as HTMLElement;
+              if (fallback) {
+                fallback.style.display = 'block';
+              }
+            }}
+          />
+          {/* Fallback gradient - hidden by default */}
+          <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 hidden"></div>
+        </div>
+        
+        {/* Overlay */}
+        <div className="absolute inset-0 bg-black/80 sm:bg-black/70 z-10"></div>
+
+        {/* Animated Background Elements - Mobile Optimized */}
+        <div className="absolute inset-0 overflow-hidden z-10">
+          <div className={`absolute top-8 left-4 sm:top-20 sm:left-10 w-8 h-8 sm:w-20 sm:h-20 ${IMAS_TAILWIND_CLASSES.BG_TEAL}/10 rounded-full animate-pulse`}></div>
+          <div className={`absolute top-16 right-4 sm:top-40 sm:right-20 w-6 h-6 sm:w-16 sm:h-16 ${IMAS_TAILWIND_CLASSES.BG_MEDIUM_BLUE}/10 rounded-full animate-bounce`} style={{ animationDelay: '1s' }}></div>
+          <div className={`absolute bottom-8 left-1/3 sm:bottom-20 sm:left-1/4 w-4 h-4 sm:w-12 sm:h-12 ${IMAS_TAILWIND_CLASSES.BG_DARK_BLUE}/10 rounded-full animate-ping`} style={{ animationDelay: '2s' }}></div>
+        </div>
+
+        <div className="max-w-[1260px] mx-auto px-4 py-6 sm:py-8 lg:py-10 relative z-20 w-full">
+          <div className="text-center space-y-3 sm:space-y-4 lg:space-y-6 animate-fade-in-up">
+            {/* Program Title - Mobile Optimized */}
+            <div className="animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-2 sm:mb-3 lg:mb-4 leading-tight text-white">
+                Our Programs
+              </h1>
+              <p className={`text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl ${IMAS_TAILWIND_CLASSES.TEXT_TEAL} mb-3 sm:mb-4 lg:mb-6 animate-pulse font-medium px-2 sm:px-0`}>
+                India's Only B-School Powered by Industry Experts & Designed for Tomorrow's Leaders
+              </p>
+            </div>
+
+            {/* Key Highlights - Mobile Optimized */}
+            <div className="relative overflow-hidden animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+              <div className="w-full overflow-hidden">
+                <div className="flex gap-1.5 sm:gap-2 lg:gap-4 animate-scroll-left whitespace-nowrap">
+                  <span className={`border ${IMAS_TAILWIND_CLASSES.BORDER_MEDIUM_BLUE} ${IMAS_TAILWIND_CLASSES.TEXT_MEDIUM_BLUE} px-2 sm:px-3 lg:px-4 py-1 sm:py-2 rounded-full text-xs sm:text-sm font-semibold flex-shrink-0 bg-white/10 backdrop-blur-sm`}>
+                    AICTE-Approved
+                  </span>
+                  <span className={`border ${IMAS_TAILWIND_CLASSES.BORDER_MEDIUM_BLUE} ${IMAS_TAILWIND_CLASSES.TEXT_MEDIUM_BLUE} px-2 sm:px-3 lg:px-4 py-1 sm:py-2 rounded-full text-xs sm:text-sm font-semibold flex-shrink-0 bg-white/10 backdrop-blur-sm`}>
+                    100% Placement
+                  </span>
+                  <span className={`border ${IMAS_TAILWIND_CLASSES.BORDER_MEDIUM_BLUE} ${IMAS_TAILWIND_CLASSES.TEXT_MEDIUM_BLUE} px-2 sm:px-3 lg:px-4 py-1 sm:py-2 rounded-full text-xs sm:text-sm font-semibold flex-shrink-0 bg-white/10 backdrop-blur-sm`}>
+                    Global Partnerships
+                  </span>
+                  <span className={`border ${IMAS_TAILWIND_CLASSES.BORDER_MEDIUM_BLUE} ${IMAS_TAILWIND_CLASSES.TEXT_MEDIUM_BLUE} px-2 sm:px-3 lg:px-4 py-1 sm:py-2 rounded-full text-xs sm:text-sm font-semibold flex-shrink-0 bg-white/10 backdrop-blur-sm`}>
+                    Expert Faculty
+                  </span>
+                  <span className={`border ${IMAS_TAILWIND_CLASSES.BORDER_MEDIUM_BLUE} ${IMAS_TAILWIND_CLASSES.TEXT_MEDIUM_BLUE} px-2 sm:px-3 lg:px-4 py-1 sm:py-2 rounded-full text-xs sm:text-sm font-semibold flex-shrink-0 bg-white/10 backdrop-blur-sm`}>
+                    Modern Infrastructure
+                  </span>
+                  {/* Duplicate items for seamless loop */}
+                  <span className={`border ${IMAS_TAILWIND_CLASSES.BORDER_MEDIUM_BLUE} ${IMAS_TAILWIND_CLASSES.TEXT_MEDIUM_BLUE} px-2 sm:px-3 lg:px-4 py-1 sm:py-2 rounded-full text-xs sm:text-sm font-semibold flex-shrink-0 bg-white/10 backdrop-blur-sm`}>
+                    AICTE-Approved
+                  </span>
+                  <span className={`border ${IMAS_TAILWIND_CLASSES.BORDER_MEDIUM_BLUE} ${IMAS_TAILWIND_CLASSES.TEXT_MEDIUM_BLUE} px-2 sm:px-3 lg:px-4 py-1 sm:py-2 rounded-full text-xs sm:text-sm font-semibold flex-shrink-0 bg-white/10 backdrop-blur-sm`}>
+                    100% Placement
+                  </span>
+                  <span className={`border ${IMAS_TAILWIND_CLASSES.BORDER_MEDIUM_BLUE} ${IMAS_TAILWIND_CLASSES.TEXT_MEDIUM_BLUE} px-2 sm:px-3 lg:px-4 py-1 sm:py-2 rounded-full text-xs sm:text-sm font-semibold flex-shrink-0 bg-white/10 backdrop-blur-sm`}>
+                    Global Partnerships
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            {/* CTA Buttons - Mobile Optimized */}
+            <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 lg:gap-4 justify-center animate-fade-in-up px-4 sm:px-0" style={{ animationDelay: '0.8s' }}>
+              <Button 
+                className={`${IMAS_TAILWIND_CLASSES.GRADIENT_PRIMARY} hover:from-[#2e7bb3] hover:to-[#26c1d3] text-white px-4 sm:px-6 lg:px-8 xl:px-12 py-2.5 sm:py-3 lg:py-4 text-sm sm:text-base lg:text-lg font-semibold hover:scale-105 transition-all duration-300 shadow-lg w-full sm:w-auto`}
+                onClick={() => handleCTAAction('apply')}
+              >
+                Apply Now
+              </Button>
+              <Button 
+                variant="outline" 
+                className="border-white bg-transparent text-white hover:bg-white hover:text-gray-900 px-4 sm:px-6 lg:px-8 xl:px-12 py-2.5 sm:py-3 lg:py-4 text-sm sm:text-base lg:text-lg font-semibold hover:scale-105 transition-all duration-300 shadow-lg w-full sm:w-auto"
+                onClick={() => handleCTAAction('download')}
+              >
+                Download Brochure
+              </Button>
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Program Highlights - Scaler Style */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
-            <div className="text-center">
-              <div className="w-16 h-16 bg-primary-medium/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Clock className="h-8 w-8 text-primary-medium" />
-              </div>
-              <h3 className="font-semibold text-primary-dark mb-2">DURATION</h3>
-              <p className="text-2xl font-bold text-primary-dark">2 Years</p>
-              <p className="text-sm text-muted-foreground">Full Time Programs</p>
+      {/* Program Highlights - Enhanced Design */}
+      <section className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-slate-50 via-blue-50/30 to-teal-50/30 relative overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <div className="absolute top-10 left-10 w-32 h-32 bg-gradient-to-br from-blue-600 to-teal-600 rounded-full blur-3xl"></div>
+          <div className="absolute bottom-10 right-10 w-40 h-40 bg-gradient-to-br from-teal-600 to-blue-600 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div className="max-w-[1260px] mx-auto px-4 relative z-10">
+          {/* Section Header */}
+          <div className="text-center mb-12 sm:mb-16">
+            <div className={`inline-block ${IMAS_TAILWIND_CLASSES.BG_DARK_BLUE}/10 ${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE} px-4 py-2 rounded-full text-sm font-semibold mb-4 border ${IMAS_TAILWIND_CLASSES.BORDER_DARK_BLUE}/20`}>
+              PROGRAM OVERVIEW
             </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-primary-medium/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Globe className="h-8 w-8 text-primary-medium" />
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-800 mb-4">
+              Everything You Need to Know
+            </h2>
+            <p className="text-base lg:text-lg text-gray-600 max-w-2xl mx-auto">
+              Comprehensive details about our flagship programs designed for future leaders
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+            {/* Duration Card */}
+            <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 group border border-gray-100 hover:border-blue-200">
+              <div className="flex flex-col items-center text-center">
+                <div className={`w-16 h-16 ${IMAS_TAILWIND_CLASSES.GRADIENT_PRIMARY} rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
+                  <Clock className="h-8 w-8 text-white" />
+                </div>
+                <div className="space-y-2">
+                  <h3 className="font-bold text-gray-800 text-sm uppercase tracking-wider">Duration</h3>
+                  <p className="text-3xl font-bold text-[#143674] mb-1">2 Years</p>
+                  <div className="flex items-center justify-center gap-2">
+                    <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                    <p className="text-sm text-gray-600 font-medium">Full Time Programs</p>
+                  </div>
+                  <p className="text-xs text-gray-500">Intensive Learning Experience</p>
+                </div>
               </div>
-              <h3 className="font-semibold text-primary-dark mb-2">LOCATION</h3>
-              <p className="text-2xl font-bold text-primary-dark">Kolkata</p>
-              <p className="text-sm text-muted-foreground">Salt Lake Sector V</p>
             </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-primary-medium/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <GraduationCap className="h-8 w-8 text-primary-medium" />
+
+            {/* Location Card */}
+            <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 group border border-gray-100 hover:border-blue-200">
+              <div className="flex flex-col items-center text-center">
+                <div className={`w-16 h-16 ${IMAS_TAILWIND_CLASSES.GRADIENT_PRIMARY} rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
+                  <MapPin className="h-8 w-8 text-white" />
+                </div>
+                <div className="space-y-2">
+                  <h3 className="font-bold text-gray-800 text-sm uppercase tracking-wider">Location</h3>
+                  <p className="text-3xl font-bold text-[#143674] mb-1">Kolkata</p>
+                  <div className="flex items-center justify-center gap-2">
+                    <Building2 className="h-4 w-4 text-blue-500" />
+                    <p className="text-sm text-gray-600 font-medium">Salt Lake Sector V</p>
+                  </div>
+                  <p className="text-xs text-gray-500">IT Hub & Business District</p>
+                </div>
               </div>
-              <h3 className="font-semibold text-primary-dark mb-2">FORMAT</h3>
-              <p className="text-2xl font-bold text-primary-dark">On Campus</p>
-              <p className="text-sm text-muted-foreground">Full Time</p>
             </div>
-            <div className="text-center">
-              <div className="w-16 h-16 bg-primary-medium/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Calendar className="h-8 w-8 text-primary-medium" />
+
+            {/* Format Card */}
+            <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 group border border-gray-100 hover:border-blue-200">
+              <div className="flex flex-col items-center text-center">
+                <div className={`w-16 h-16 ${IMAS_TAILWIND_CLASSES.GRADIENT_PRIMARY} rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg`}>
+                  <GraduationCap className="h-8 w-8 text-white" />
+                </div>
+                <div className="space-y-2">
+                  <h3 className="font-bold text-gray-800 text-sm uppercase tracking-wider">Format</h3>
+                  <p className="text-3xl font-bold text-[#143674] mb-1">On Campus</p>
+                  <div className="flex items-center justify-center gap-2">
+                    <Users className="h-4 w-4 text-green-500" />
+                    <p className="text-sm text-gray-600 font-medium">Full Time</p>
+                  </div>
+                  <p className="text-xs text-gray-500">Immersive Campus Life</p>
+                </div>
               </div>
-              <h3 className="font-semibold text-primary-dark mb-2">COMMENCEMENT</h3>
-              <p className="text-2xl font-bold text-primary-dark">Sep 2025</p>
-              <p className="text-sm text-muted-foreground">Next Batch</p>
+            </div>
+
+            {/* Commencement Card */}
+            <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 group border border-gray-100 hover:border-blue-200">
+              <div className="flex flex-col items-center text-center">
+                <div className={`w-16 h-16 ${IMAS_TAILWIND_CLASSES.GRADIENT_PRIMARY} rounded-2xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg relative`}>
+                  <Calendar className="h-8 w-8 text-white" />
+                  <div className="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full flex items-center justify-center">
+                    <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
+                  </div>
+                </div>
+                <div className="space-y-2">
+                  <h3 className="font-bold text-gray-800 text-sm uppercase tracking-wider">Commencement</h3>
+                  <p className="text-3xl font-bold text-[#143674] mb-1">Sep 2025</p>
+                  <div className="flex items-center justify-center gap-2">
+                    <div className="w-2 h-2 bg-orange-500 rounded-full animate-bounce"></div>
+                    <p className="text-sm text-gray-600 font-medium">Next Batch</p>
+                  </div>
+                  <p className="text-xs text-gray-500">Limited Seats Available</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Additional Info Banner */}
+          <div className="mt-12 bg-gradient-to-r from-blue-600 to-teal-600 rounded-2xl p-6 text-white text-center">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <div className="flex items-center gap-2">
+                <CheckCircle className="h-5 w-5" />
+                <span className="font-semibold">AICTE Approved</span>
+              </div>
+              <div className="hidden sm:block w-px h-6 bg-white/30"></div>
+              <div className="flex items-center gap-2">
+                <Award className="h-5 w-5" />
+                <span className="font-semibold">100% Placement Support</span>
+              </div>
+              <div className="hidden sm:block w-px h-6 bg-white/30"></div>
+              <div className="flex items-center gap-2">
+                <Globe className="h-5 w-5" />
+                <span className="font-semibold">Global Recognition</span>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Navigation Tabs - Scaler Style */}
-      <section className="py-8 bg-gray-50 border-b">
-        <div className="container mx-auto px-4">
-          <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-            <TabsList className="grid w-full max-w-4xl mx-auto grid-cols-4">
-              <TabsTrigger value="overview" className="text-primary-dark">Overview</TabsTrigger>
-              <TabsTrigger value="pgdm-plus" className="text-primary-dark">PGDM Plus</TabsTrigger>
-              <TabsTrigger value="executive" className="text-primary-dark">Executive</TabsTrigger>
-              <TabsTrigger value="mba-global" className="text-primary-dark">MBA Global</TabsTrigger>
-            </TabsList>
-          </Tabs>
+      {/* Programs Section from HomePage */}
+      <ProgramsSection />
+
+      {/* Why Choose IMAS Section - Mobile Friendly */}
+      <section className="py-8 sm:py-12 lg:py-16 bg-white">
+        <div className="max-w-[1260px] mx-auto px-4">
+          <div className="text-center mb-8 sm:mb-12">
+            <div className={`inline-block ${IMAS_TAILWIND_CLASSES.BG_DARK_BLUE}/10 ${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE} px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-semibold mb-3 sm:mb-4 border ${IMAS_TAILWIND_CLASSES.BORDER_DARK_BLUE}/20`}>
+              WHY CHOOSE IMAS
+            </div>
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 mb-3 sm:mb-4">
+              India's Premier Business School
+            </h2>
+            <p className="text-sm sm:text-base lg:text-lg text-gray-600 max-w-3xl mx-auto">
+              Choose IMAS for a transformative learning experience that combines academic excellence with industry relevance
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
+            {whyChooseIMAS.map((item, index) => (
+              <Card key={index} className="border-gray-200 hover:border-gray-300 transition-all hover:shadow-lg group">
+                <CardHeader className="pb-3 sm:pb-4">
+                  <div className={`w-10 h-10 sm:w-12 sm:h-12 ${IMAS_TAILWIND_CLASSES.BG_DARK_BLUE}/10 rounded-lg flex items-center justify-center mb-3 sm:mb-4 group-hover:scale-110 transition-transform duration-300`}>
+                    <item.icon className="h-5 w-5 sm:h-6 sm:w-6 text-[#143674]" />
+                  </div>
+                  <CardTitle className="text-[#143674] text-base sm:text-lg">{item.title}</CardTitle>
+                </CardHeader>
+                <CardContent className="pt-0">
+                  <p className="text-sm sm:text-base text-gray-600">{item.description}</p>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
         </div>
       </section>
 
-      {/* Tab Content */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <Tabs value={activeTab} onValueChange={setActiveTab}>
+      {/* Top Recruiters Section - Mobile Friendly */}
+      <section className="py-8 sm:py-12 lg:py-16 bg-gradient-to-br from-gray-50 to-white">
+        <div className="max-w-[1260px] mx-auto px-4">
+          <div className="text-center mb-8 sm:mb-12">
+            <div className={`inline-block ${IMAS_TAILWIND_CLASSES.BG_DARK_BLUE}/10 ${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE} px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-semibold mb-3 sm:mb-4 border ${IMAS_TAILWIND_CLASSES.BORDER_DARK_BLUE}/20`}>
+              OUR TOP RECRUITERS
+            </div>
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 mb-3 sm:mb-4">
+              Join Leading Companies Worldwide
+            </h2>
+            <p className="text-sm sm:text-base lg:text-lg text-gray-600 max-w-3xl mx-auto">
+              Our graduates are placed in top-tier companies across various industries
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6 lg:gap-8">
+            {topRecruiters.map((recruiter, index) => (
+              <div key={index} className="flex items-center justify-center group">
+                <div className="bg-white p-3 sm:p-4 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 group-hover:scale-105">
+                  <img
+                    src={recruiter.logo}
+                    alt={recruiter.alt}
+                    className="h-8 sm:h-12 w-auto object-contain filter  transition-all duration-300"
+                    onError={(e) => {
+                      const target = e.target as HTMLImageElement;
+                      target.style.display = 'none';
+                    }}
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+
+
+
+      {/* CTA Section - Mobile Friendly */}
+      <section className="py-8 sm:py-12 lg:py-16 bg-gray-900 text-white">
+        <div className="max-w-[1260px] mx-auto px-4 text-center">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6">
+              Be the People Leader Companies Want
+            </h2>
+            <p className="text-sm sm:text-base lg:text-lg text-gray-300 mb-6 sm:mb-8 max-w-3xl mx-auto">
+              With access to a global alumni network, certified skill training, and hands-on learning from real-world HR challenges, this PGDM in HRM in Kolkata at IMAS builds leaders who create impact.
+            </p>
             
-            {/* Overview Tab */}
-            <TabsContent value="overview" className="mt-0">
-              <div className="max-w-4xl mx-auto">
-                <h2 className="text-3xl font-bold text-primary-dark mb-8">Program Overview</h2>
-                <div className="prose prose-lg max-w-none">
-                  <p className="text-lg text-muted-foreground mb-6">
-                    IMAS Kolkata offers a comprehensive range of AICTE-approved management programs designed to create future business leaders who can navigate the intersection of traditional business management and cutting-edge technology.
-                  </p>
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
-                    <Card className="border-primary-medium/20">
-                      <CardHeader>
-                        <CardTitle className="text-primary-dark">What You'll Learn</CardTitle>
-                      </CardHeader>
-                      <CardContent>
-                        <ul className="space-y-2">
-                          <li className="flex items-center gap-2">
-                            <CheckCircle className="h-4 w-4 text-primary-medium" />
-                            <span>Core Management Principles</span>
-                          </li>
-                          <li className="flex items-center gap-2">
-                            <CheckCircle className="h-4 w-4 text-primary-medium" />
-                            <span>Digital Transformation</span>
-                          </li>
-                          <li className="flex items-center gap-2">
-                            <CheckCircle className="h-4 w-4 text-primary-medium" />
-                            <span>AI & Analytics</span>
-                          </li>
-                          <li className="flex items-center gap-2">
-                            <CheckCircle className="h-4 w-4 text-primary-medium" />
-                            <span>Leadership & Strategy</span>
-                          </li>
-                        </ul>
-                      </CardContent>
-                    </Card>
-                    <Card className="border-primary-medium/20">
-                      <CardHeader>
-                        <CardTitle className="text-primary-dark">Who Should Apply</CardTitle>
-                      </CardHeader>
-                      <CardContent>
-                        <ul className="space-y-2">
-                          <li className="flex items-center gap-2">
-                            <CheckCircle className="h-4 w-4 text-primary-medium" />
-                            <span>Recent Graduates</span>
-                          </li>
-                          <li className="flex items-center gap-2">
-                            <CheckCircle className="h-4 w-4 text-primary-medium" />
-                            <span>Working Professionals</span>
-                          </li>
-                          <li className="flex items-center gap-2">
-                            <CheckCircle className="h-4 w-4 text-primary-medium" />
-                            <span>Entrepreneurs</span>
-                          </li>
-                          <li className="flex items-center gap-2">
-                            <CheckCircle className="h-4 w-4 text-primary-medium" />
-                            <span>Career Changers</span>
-                          </li>
-                        </ul>
-                      </CardContent>
-                    </Card>
-                  </div>
-                </div>
-              </div>
-            </TabsContent>
-
-            {/* PGDM Plus Programs Tab */}
-            <TabsContent value="pgdm-plus" className="mt-0">
-              <div className="max-w-6xl mx-auto">
-                <h2 className="text-3xl font-bold text-primary-dark mb-8">PGDM Plus Programs (for Fresh Graduates)</h2>
-                <p className="text-lg text-muted-foreground mb-8">
-                  Two-year full-time AICTE-approved programs designed for aspiring professionals who want to master their chosen domain with hands-on industry exposure.
-                </p>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {pgdmPlusPrograms.map((program) => (
-                    <Card key={program.name} className="border-primary-medium/20 hover:border-primary-medium/40 transition-all hover:shadow-lg">
-                      <CardHeader>
-                        <div className="flex items-center gap-3 mb-2">
-                          <div className="w-12 h-12 bg-primary-medium/10 rounded-lg flex items-center justify-center">
-                            <GraduationCap className="h-6 w-6 text-primary-medium" />
-                          </div>
-                          <div>
-                            <CardTitle className="text-primary-dark text-lg">{program.name}</CardTitle>
-                            <p className="text-sm text-muted-foreground">{program.duration}</p>
-                          </div>
-                        </div>
-                        <CardDescription className="text-base">
-                          {program.description}
-                        </CardDescription>
-                      </CardHeader>
-                      <CardContent className="space-y-4">
-                        <div className="space-y-2">
-                          <h4 className="font-semibold text-primary-dark text-sm">Key Highlights:</h4>
-                          <ul className="space-y-1">
-                            {program.highlights.map((highlight, index) => (
-                              <li key={index} className="flex items-center gap-2 text-sm text-muted-foreground">
-                                <div className="w-1.5 h-1.5 bg-primary-medium rounded-full"></div>
-                                {highlight}
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                        <Button 
-                          className="w-full bg-primary-dark hover:bg-primary-medium text-white mt-4"
-                        >
-                          View Program Details
-                          <ArrowRight className="ml-2 h-4 w-4" />
-                        </Button>
-                      </CardContent>
-                    </Card>
-                  ))}
-                </div>
-              </div>
-            </TabsContent>
-
-            {/* Executive Programs Tab */}
-            <TabsContent value="executive" className="mt-0">
-              <div className="max-w-6xl mx-auto">
-                <h2 className="text-3xl font-bold text-primary-dark mb-8">PGDM Programs (for Working Executives/Blended Mode)</h2>
-                <p className="text-lg text-muted-foreground mb-8">
-                  18-month blended learning programs designed for working professionals who want to accelerate their careers without taking a career break.
-                </p>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {executivePrograms.map((program) => (
-                    <Card key={program.name} className="border-primary-medium/20 hover:border-primary-medium/40 transition-all hover:shadow-lg">
-                      <CardHeader>
-                        <div className="flex items-center gap-3 mb-2">
-                          <div className="w-12 h-12 bg-primary-medium/10 rounded-lg flex items-center justify-center">
-                            <Award className="h-6 w-6 text-primary-medium" />
-                          </div>
-                          <div>
-                            <CardTitle className="text-primary-dark text-lg">{program.name}</CardTitle>
-                            <p className="text-sm text-muted-foreground">{program.duration}</p>
-                          </div>
-                        </div>
-                        <CardDescription className="text-base">
-                          {program.description}
-                        </CardDescription>
-                      </CardHeader>
-                      <CardContent className="space-y-4">
-                        <div className="space-y-2">
-                          <h4 className="font-semibold text-primary-dark text-sm">Key Highlights:</h4>
-                          <ul className="space-y-1">
-                            {program.highlights.map((highlight, index) => (
-                              <li key={index} className="flex items-center gap-2 text-sm text-muted-foreground">
-                                <div className="w-1.5 h-1.5 bg-primary-medium rounded-full"></div>
-                                {highlight}
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                        <Button 
-                          className="w-full bg-primary-dark hover:bg-primary-medium text-white mt-4"
-                        >
-                          View Program Details
-                          <ArrowRight className="ml-2 h-4 w-4" />
-                        </Button>
-                      </CardContent>
-                    </Card>
-                  ))}
-                </div>
-              </div>
-            </TabsContent>
-
-            {/* MBA Global Tab */}
-            <TabsContent value="mba-global" className="mt-0">
-              <div className="max-w-4xl mx-auto">
-                <h2 className="text-3xl font-bold text-primary-dark mb-8">MBA (Global) Program</h2>
-                <div className="prose prose-lg max-w-none">
-                  <p className="text-lg text-muted-foreground mb-6">
-                    {mbaGlobalProgram.description}
-                  </p>
-                  
-                  <Card className="border-primary-medium/20 mb-8">
-                    <CardHeader>
-                      <CardTitle className="text-primary-dark">Program Structure</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        <div className="space-y-4">
-                          <h4 className="font-semibold text-primary-dark">Year 1 - IMAS Kolkata</h4>
-                          <ul className="space-y-2 text-sm">
-                            <li><strong>Location:</strong> {mbaGlobalProgram.structure.year1.location}</li>
-                            <li><strong>Qualification:</strong> {mbaGlobalProgram.structure.year1.qualification}</li>
-                            <li><strong>Fees:</strong> {mbaGlobalProgram.structure.year1.fees}</li>
-                          </ul>
-                        </div>
-                        <div className="space-y-4">
-                          <h4 className="font-semibold text-primary-dark">Year 2 - United Kingdom</h4>
-                          <ul className="space-y-2 text-sm">
-                            <li><strong>Location:</strong> {mbaGlobalProgram.structure.year2.location}</li>
-                            <li><strong>Qualification:</strong> {mbaGlobalProgram.structure.year2.qualification}</li>
-                            <li><strong>Fees:</strong> {mbaGlobalProgram.structure.year2.fees}</li>
-                          </ul>
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
-
-                  <Card className="border-primary-medium/20 mb-8">
-                    <CardHeader>
-                      <CardTitle className="text-primary-dark">Key Benefits</CardTitle>
-                    </CardHeader>
-                    <CardContent>
-                      <ul className="space-y-3">
-                        {mbaGlobalProgram.highlights.map((highlight, index) => (
-                          <li key={index} className="flex items-start gap-2">
-                            <CheckCircle className="h-4 w-4 text-primary-medium mt-0.5" />
-                            <span>{highlight}</span>
-                          </li>
-                        ))}
-                      </ul>
-                    </CardContent>
-                  </Card>
-
-                  <div className="text-center">
-                    <Button size="lg" className="bg-primary-dark hover:bg-primary-medium text-white">
-                      Apply Now for MBA Global
-                    </Button>
-                  </div>
-                </div>
-              </div>
-            </TabsContent>
-
-          </Tabs>
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+              <Button 
+                className={`${IMAS_TAILWIND_CLASSES.GRADIENT_PRIMARY} hover:from-[#2e7bb3] hover:to-[#26c1d3] text-white px-6 sm:px-8 py-3 text-sm sm:text-base lg:text-lg font-semibold hover:scale-105 transition-all duration-300`}
+                onClick={() => handleCTAAction('apply')}
+              >
+                Apply Now for IMAS Admission 2025
+              </Button>
+              <Button 
+                variant="outline" 
+                className="border-white bg-transparent text-white hover:bg-white hover:text-gray-900 px-6 sm:px-8 py-3 text-sm sm:text-base lg:text-lg font-semibold hover:scale-105 transition-all duration-300"
+                onClick={() => handleCTAAction('enquire')}
+              >
+                Enquire Now
+              </Button>
+              <Button 
+                variant="outline" 
+                className="border-white bg-transparent text-white hover:bg-white hover:text-gray-900 px-6 sm:px-8 py-3 text-sm sm:text-base lg:text-lg font-semibold hover:scale-105 transition-all duration-300"
+                onClick={() => handleCTAAction('download')}
+              >
+                Download Brochure
+              </Button>
+            </div>
+          </div>
         </div>
       </section>
     </div>
