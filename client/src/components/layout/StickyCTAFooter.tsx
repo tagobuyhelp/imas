@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Plus, MessageCircle } from 'lucide-react';
 import { IMAS_TAILWIND_CLASSES } from '../../lib/constants';
 import { AdvisorModal } from './AdvisorModal';
+import { applyNow } from '../../lib/utils';
 
 interface StickyCTAFooterProps {
   title?: string;
@@ -21,8 +22,8 @@ export function StickyCTAFooter({
   title = "Admissions Open 2025",
   subtitle = "Join the next generation of leaders",
   primaryButtonText = "Apply Now",
-  onPrimaryClick,
-  onFloatingClick,
+  onPrimaryClick = applyNow,
+  onFloatingClick = applyNow,
   onAdvisorClick,
   onPhoneClick,
   showFloatingButton = true,

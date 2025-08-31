@@ -2,7 +2,8 @@ import React from 'react';
 import { Button } from '../../ui/button';
 import { Carousel } from '../../ui/carousel';
 import { IMAS_TAILWIND_CLASSES } from '../../../lib/constants';
-import { downloadBrochure } from '../../../lib/utils';
+import { downloadBrochure, applyNow } from '../../../lib/utils';
+import { ArrowRight, Download, Send } from 'lucide-react';
 
 export function HeroSection() {
   // Sample carousel images - replace with actual IMAS images
@@ -86,8 +87,12 @@ export function HeroSection() {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
-              <Button className={`${IMAS_TAILWIND_CLASSES.GRADIENT_PRIMARY} hover:from-[#2e7bb3] hover:to-[#26c1d3] text-white px-8 sm:px-10 lg:px-12 py-3 sm:py-4 text-sm sm:text-base lg:text-lg font-semibold hover:scale-105 transition-all duration-300`}>
+              <Button 
+                className={`${IMAS_TAILWIND_CLASSES.GRADIENT_PRIMARY} hover:from-[#2e7bb3] hover:to-[#26c1d3] text-white px-8 sm:px-10 lg:px-12 py-3 sm:py-4 text-sm sm:text-base lg:text-lg font-semibold hover:scale-105 transition-all duration-300`}
+                onClick={applyNow}
+              >
                 Apply Now
+                <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
               </Button>
               <Button 
                 variant="outline" 
@@ -95,6 +100,7 @@ export function HeroSection() {
                 onClick={downloadBrochure}
               >
                 Download Brochure
+                <Download className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
               </Button>
             </div>
           </div>
@@ -152,8 +158,12 @@ export function HeroSection() {
               </div>
 
               {/* Primary CTA */}
-              <Button className={`w-full ${IMAS_TAILWIND_CLASSES.GRADIENT_PRIMARY} hover:from-[#2e7bb3] hover:to-[#26c1d3] text-white py-3 text-base sm:text-lg font-semibold rounded-lg hover:scale-105 transition-all duration-300`}>
+              <Button 
+                className={`w-full ${IMAS_TAILWIND_CLASSES.GRADIENT_PRIMARY} hover:from-[#2e7bb3] hover:to-[#26c1d3] text-white py-3 text-base sm:text-lg font-semibold rounded-lg hover:scale-105 transition-all duration-300`}
+                onClick={applyNow}
+              >
                 Start your Application
+                <Send className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
               </Button>
 
               {/* Legal Text */}

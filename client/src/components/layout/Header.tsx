@@ -73,10 +73,10 @@ export function Header({ currentPage, onMenuToggle }: HeaderProps) {
         ];
       case 'admissions':
         return [
-          { label: 'Admissions', sectionId: 'admissions-hero' },
-          { label: 'Process', sectionId: 'admission-process' },
+          { label: 'Overview', sectionId: 'admissions-hero' },
+          { label: 'Application Process', sectionId: 'admission-process' },
           { label: 'Eligibility', sectionId: 'eligibility' },
-          { label: 'Apply', sectionId: 'apply' }
+          { label: 'Apply Now', sectionId: 'apply' }
         ];
       case 'placements':
         return [

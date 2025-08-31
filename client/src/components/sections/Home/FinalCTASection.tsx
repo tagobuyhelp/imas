@@ -2,7 +2,7 @@ import React from 'react';
 import { Button } from '../../ui/button';
 import { ArrowRight, Phone, Mail } from 'lucide-react';
 import { IMAS_TAILWIND_CLASSES, IMAS_CONTACT } from '../../../lib/constants';
-import { downloadBrochure } from '../../../lib/utils';
+import { downloadBrochure, applyNow } from '../../../lib/utils';
 
 export function FinalCTASection() {
   return (
@@ -43,7 +43,10 @@ export function FinalCTASection() {
 
           {/* CTA Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
-            <Button className={`${IMAS_TAILWIND_CLASSES.GRADIENT_PRIMARY} hover:from-[#2e7bb3] hover:to-[#26c1d3] text-white px-8 sm:px-10 lg:px-12 py-3 sm:py-4 text-sm sm:text-base lg:text-lg font-semibold hover:scale-105 transition-all duration-300`}>
+            <Button 
+              className={`${IMAS_TAILWIND_CLASSES.GRADIENT_PRIMARY} hover:from-[#2e7bb3] hover:to-[#26c1d3] text-white px-8 sm:px-10 lg:px-12 py-3 sm:py-4 text-sm sm:text-base lg:text-lg font-semibold hover:scale-105 transition-all duration-300`}
+              onClick={applyNow}
+            >
               Apply Now
               <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
             </Button>
