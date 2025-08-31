@@ -865,32 +865,36 @@ export function ProgramDetailPage() {
                         </div>
 
                         {/* Top Recruiters */}
-                        <div className="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
-                            <div className={`${IMAS_TAILWIND_CLASSES.BG_DARK_BLUE} p-4 sm:p-6 text-white text-center`}>
-                                <Building2 className="w-10 h-10 mx-auto mb-2 opacity-90" />
-                                <h3 className="text-lg sm:text-xl lg:text-2xl font-bold mb-2">
-                                    Our Top Recruiters
-                                </h3>
-                                <p className="text-sm opacity-90 max-w-xl mx-auto">
-                                    Leading companies that trust our graduates
-                                </p>
-                            </div>
-                            <div className="p-4 sm:p-6">
-                                <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+                        <div className="py-6">
+                            
+                            <div className="relative overflow-hidden">
+                                <div className="flex animate-scroll space-x-8">
+                                    {/* First set of logos */}
                                     {program.placement.topRecruiters.map((recruiter, index) => (
-                                        <div key={index} className="group flex flex-col items-center p-3 bg-gray-50 rounded-xl hover:bg-gray-100 hover:shadow-md transition-all duration-300 border border-gray-100 hover:border-[#26c1d3]/30">
+                                        <div key={index} className="flex-shrink-0">
                                             <img
                                                 src={recruiter.logo}
                                                 alt={recruiter.alt}
-                                                className="h-8 w-auto object-contain mb-1 group-hover:scale-110 transition-transform duration-300"
+                                                className="h-5 w-auto object-contain lg:h-16 md:h-16  transition-all duration-300 hover:opacity-70"
                                                 onError={(e) => {
                                                     // Fallback to a placeholder if image fails to load
                                                     e.currentTarget.src = '/uploads/logos/IMAS_LOGO_PNG.png';
                                                 }}
                                             />
-                                            <span className="text-xs text-center text-gray-600 font-medium group-hover:text-gray-800 transition-colors duration-300">
-                                                {recruiter.name}
-                                            </span>
+                                        </div>
+                                    ))}
+                                    {/* Duplicate set for seamless scrolling */}
+                                    {program.placement.topRecruiters.map((recruiter, index) => (
+                                        <div key={`duplicate-${index}`} className="flex-shrink-0">
+                                            <img
+                                                src={recruiter.logo}
+                                                alt={recruiter.alt}
+                                                className="h-5 w-auto object-contain  lg:h-16 md:h-16 transition-all duration-300 hover:opacity-70"
+                                                onError={(e) => {
+                                                    // Fallback to a placeholder if image fails to load
+                                                    e.currentTarget.src = '/uploads/logos/IMAS_LOGO_PNG.png';
+                                                }}
+                                            />
                                         </div>
                                     ))}
                                 </div>
@@ -900,7 +904,7 @@ export function ProgramDetailPage() {
                 </section>
 
                 {/* Enhanced Dynamic CTA Section */}
-                <section className={`py-8 sm:py-15  content-center ${IMAS_TAILWIND_CLASSES.BG_DARK_BLUE} text-white relative overflow-hidden`}>
+                <section className={`py-20 sm:py-15  content-center ${IMAS_TAILWIND_CLASSES.BG_DARK_BLUE} text-white relative overflow-hidden`}>
                     {/* Background Image */}
                     <div className="absolute inset-0 z-0">
                         <img

@@ -133,7 +133,7 @@ const recruiterLogos: Record<string, RecruiterLogo> = {
     },
     'TCS': {
         name: 'TCS',
-        logo: '/uploads/tcsLogo.webp',
+        logo: '/uploads/Tata_Consultancy_Services_old_logo.svg.png',
         alt: 'TCS Logo'
     },
     'Infosys': {
