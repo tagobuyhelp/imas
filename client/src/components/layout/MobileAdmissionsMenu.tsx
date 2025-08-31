@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { ChevronDown, ChevronRight, GraduationCap, Briefcase, Globe, FileText } from 'lucide-react';
 import { IMAS_TAILWIND_CLASSES } from '../../lib/constants';
 import { getProgramsByCategory } from '../../lib/programsData';
+import { downloadBrochure } from '../../lib/utils';
 
 interface MobileAdmissionsMenuProps {
   isExpanded: boolean;
@@ -134,7 +135,10 @@ const MobileAdmissionsMenu: React.FC<MobileAdmissionsMenuProps> = ({
           {/* Quick Actions */}
           <div className="pt-3 mt-3 border-t border-gray-200">
             <div className="space-y-2">
-              <button className="w-full px-3 py-2 text-sm text-teal-600 hover:bg-teal-50 rounded-md transition-colors text-left flex items-center gap-2">
+              <button 
+                className="w-full px-3 py-2 text-sm text-teal-600 hover:bg-teal-50 rounded-md transition-colors text-left flex items-center gap-2"
+                onClick={downloadBrochure}
+              >
                 <FileText className="h-4 w-4" />
                 Download Brochure
               </button>

@@ -2,6 +2,7 @@ import React from 'react';
 import { Button } from '../../ui/button';
 import { Carousel } from '../../ui/carousel';
 import { IMAS_TAILWIND_CLASSES } from '../../../lib/constants';
+import { downloadBrochure } from '../../../lib/utils';
 
 export function HeroSection() {
   // Sample carousel images - replace with actual IMAS images
@@ -88,7 +89,11 @@ export function HeroSection() {
               <Button className={`${IMAS_TAILWIND_CLASSES.GRADIENT_PRIMARY} hover:from-[#2e7bb3] hover:to-[#26c1d3] text-white px-8 sm:px-10 lg:px-12 py-3 sm:py-4 text-sm sm:text-base lg:text-lg font-semibold hover:scale-105 transition-all duration-300`}>
                 Apply Now
               </Button>
-              <Button variant="outline" className="border-white bg-transparent text-white hover:bg-white hover:text-gray-900 px-8 sm:px-10 lg:px-12 py-3 sm:py-4 text-sm sm:text-base lg:text-lg font-semibold hover:scale-105 transition-all duration-300">
+              <Button 
+                variant="outline" 
+                className="border-white bg-transparent text-white hover:bg-white hover:text-gray-900 px-8 sm:px-10 lg:px-12 py-3 sm:py-4 text-sm sm:text-base lg:text-lg font-semibold hover:scale-105 transition-all duration-300"
+                onClick={downloadBrochure}
+              >
                 Download Brochure
               </Button>
             </div>

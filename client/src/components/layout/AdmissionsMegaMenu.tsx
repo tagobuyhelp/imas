@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronDown, GraduationCap, Briefcase, Globe } from 'lucide-react';
 import { getProgramsByCategory } from '../../lib/programsData';
+import { downloadBrochure } from '../../lib/utils';
 
 interface AdmissionsMegaMenuProps {
   isOpen: boolean;
@@ -115,7 +116,13 @@ const AdmissionsMegaMenu: React.FC<AdmissionsMegaMenuProps> = ({ isOpen, onClose
                 <p className="text-sm text-gray-600">Explore our comprehensive admission process and requirements.</p>
               </div>
               <div className="flex gap-3">
-                <button className="px-4 py-2 text-sm border border-teal-500 text-teal-600 hover:bg-teal-50 rounded-lg transition-colors duration-200">
+                <button 
+                  className="px-4 py-2 text-sm border border-teal-500 text-teal-600 hover:bg-teal-50 rounded-lg transition-colors duration-200"
+                  onClick={() => {
+                    downloadBrochure();
+                    onClose();
+                  }}
+                >
                   Download Brochure
                 </button>
                 <Link 

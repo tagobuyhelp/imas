@@ -14,6 +14,7 @@ import {
 } from 'lucide-react';
 import { getProgramBySlug, getAllProgramSlugs } from '../lib/programsData';
 import { IMAS_TAILWIND_CLASSES, IMAS_BRAND } from '../lib/constants';
+import { downloadBrochure } from '../lib/utils';
 
 export function ProgramDetailPage() {
     const { slug } = useParams<{ slug: string }>();
@@ -48,8 +49,7 @@ export function ProgramDetailPage() {
                 window.open('/contact', '_blank');
                 break;
             case 'download':
-                // Handle brochure download
-                console.log('Download brochure for:', program.name);
+                downloadBrochure();
                 break;
             default:
                 break;

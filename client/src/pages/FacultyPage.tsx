@@ -3,6 +3,7 @@ import { Button } from '../components/ui/button';
 import { Search, X, Users, ArrowRight, FileText, GraduationCap, Plus, Minus, Award, Target, BookOpen, ChevronLeft, ChevronRight } from 'lucide-react';
 import { IMAS_TAILWIND_CLASSES } from '../lib/constants';
 import { StickyCTAFooter } from '../components/layout/StickyCTAFooter';
+import { downloadBrochure } from '../lib/utils';
 
 // Custom CSS for line clamping
 const lineClampStyles = `
@@ -266,6 +267,7 @@ export function FacultyPage() {
                 variant="outline"
                 size="lg"
                 className="border-2 border-white/30 text-white hover:bg-white hover:text-gray-900 px-6 py-3 sm:px-8 sm:py-3 md:px-10 md:py-4 text-sm sm:text-base md:text-lg font-semibold transition-all duration-300 transform hover:scale-105 backdrop-blur-sm bg-white/10 w-full sm:w-auto"
+                onClick={downloadBrochure}
               >
                 <FileText className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 mr-2 sm:mr-3" />
                 <span className="hidden sm:inline">Download Brochure</span>

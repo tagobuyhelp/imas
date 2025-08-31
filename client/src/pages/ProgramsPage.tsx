@@ -6,6 +6,7 @@ import { IMAS_TAILWIND_CLASSES } from '../lib/constants';
 import { Link } from 'react-router-dom';
 import { getProgramsByCategory } from '../lib/programsData';
 import { ProgramsSection } from '../components/sections/Home/ProgramsSection';
+import { downloadBrochure } from '../lib/utils';
 
 export function ProgramsPage() {
 
@@ -114,7 +115,7 @@ export function ProgramsPage() {
         window.open('/contact', '_blank');
         break;
       case 'download':
-        console.log('Download brochure');
+        downloadBrochure();
         break;
       default:
         break;
