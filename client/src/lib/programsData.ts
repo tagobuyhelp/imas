@@ -133,182 +133,182 @@ const recruiterLogos: Record<string, RecruiterLogo> = {
     },
     'TCS': {
         name: 'TCS',
-        logo: '/uploads/logos/IMAS_LOGO_PNG.png', // Placeholder - add actual TCS logo
+        logo: '/uploads/tcsLogo.webp',
         alt: 'TCS Logo'
     },
     'Infosys': {
         name: 'Infosys',
-        logo: '/uploads/logos/IMAS_LOGO_PNG.png', // Placeholder - add actual Infosys logo
+        logo: '/uploads/InfosysLogo.png',
         alt: 'Infosys Logo'
     },
     'Wipro': {
         name: 'Wipro',
-        logo: '/uploads/logos/IMAS_LOGO_PNG.png', // Placeholder - add actual Wipro logo
+        logo: '/uploads/Wipro_Primary_Logo_Color_RGB.svg.png',
         alt: 'Wipro Logo'
     },
     'HDFC Bank': {
         name: 'HDFC Bank',
-        logo: '/uploads/logos/IMAS_LOGO_PNG.png', // Placeholder - add actual HDFC logo
+        logo: '/uploads/hdfc-bank-logo-czdJZ5Tf_t.jpg',
         alt: 'HDFC Bank Logo'
     },
     'ICICI Bank': {
         name: 'ICICI Bank',
-        logo: '/uploads/logos/IMAS_LOGO_PNG.png', // Placeholder - add actual ICICI logo
+        logo: '/uploads/ICICI_Bank_Logo.svg.png',
         alt: 'ICICI Bank Logo'
     },
     'Axis Bank': {
         name: 'Axis Bank',
-        logo: '/uploads/logos/IMAS_LOGO_PNG.png', // Placeholder - add actual Axis logo
+        logo: '/uploads/axisBankLogo.png',
         alt: 'Axis Bank Logo'
     },
     'Paytm': {
         name: 'Paytm',
-        logo: '/uploads/logos/IMAS_LOGO_PNG.png', // Placeholder - add actual Paytm logo
+        logo: '/uploads/PaytmLogo.png',
         alt: 'Paytm Logo'
     },
     'PhonePe': {
         name: 'PhonePe',
-        logo: '/uploads/logos/IMAS_LOGO_PNG.png', // Placeholder - add actual PhonePe logo
+        logo: '/uploads/phonepe-1.svg',
         alt: 'PhonePe Logo'
     },
     'Apollo Hospitals': {
         name: 'Apollo Hospitals',
-        logo: '/uploads/logos/IMAS_LOGO_PNG.png', // Placeholder - add actual Apollo logo
+        logo: '/uploads/apollo-hospitals-logo-png-transparent.png',
         alt: 'Apollo Hospitals Logo'
     },
     'Fortis': {
         name: 'Fortis',
-        logo: '/uploads/logos/IMAS_LOGO_PNG.png', // Placeholder - add actual Fortis logo
+        logo: '/uploads/fortis_logo.png',
         alt: 'Fortis Logo'
     },
     'PwC': {
         name: 'PwC',
-        logo: '/uploads/logos/IMAS_LOGO_PNG.png', // Placeholder - add actual PwC logo
+        logo: '/uploads/pwclogo.png',
         alt: 'PwC Logo'
     },
     'EY': {
         name: 'EY',
-        logo: '/uploads/logos/IMAS_LOGO_PNG.png', // Placeholder - add actual EY logo
+        logo: '/uploads/EY_logo_2019.svg.png',
         alt: 'EY Logo'
     },
     'KPMG': {
         name: 'KPMG',
-        logo: '/uploads/logos/IMAS_LOGO_PNG.png', // Placeholder - add actual KPMG logo
+        logo: '/uploads/kpmglogo.png',
         alt: 'KPMG Logo'
     },
     'HSBC': {
         name: 'HSBC',
-        logo: '/uploads/logos/IMAS_LOGO_PNG.png', // Placeholder - add actual HSBC logo
+        logo: '/uploads/HSB-_Logo_1.png',
         alt: 'HSBC Logo'
     },
     'Byju\'s': {
         name: 'Byju\'s',
-        logo: '/uploads/logos/IMAS_LOGO_PNG.png', // Placeholder - add actual Byju's logo
+        logo: '/uploads/Byju\'s_logo.svg.png',
         alt: 'Byju\'s Logo'
     },
     'Aditya Birla Group': {
         name: 'Aditya Birla Group',
-        logo: '/uploads/logos/IMAS_LOGO_PNG.png', // Placeholder - add actual ABG logo
+        logo: '/uploads/Aditya_Birla_Group_Logo.svg.png',
         alt: 'Aditya Birla Group Logo'
     },
     'McKinsey': {
         name: 'McKinsey & Company',
-        logo: '/uploads/logos/IMAS_LOGO_PNG.png', // Placeholder - add actual McKinsey logo
+        logo: '/uploads/mckinseylogo.png',
         alt: 'McKinsey & Company Logo'
     },
     'BCG': {
         name: 'Boston Consulting Group',
-        logo: '/uploads/logos/IMAS_LOGO_PNG.png', // Placeholder - add actual BCG logo
+        logo: '/uploads/BCG_MONOGRAM.png',
         alt: 'Boston Consulting Group Logo'
     },
     'IBM': {
         name: 'IBM',
-        logo: '/uploads/logos/IMAS_LOGO_PNG.png', // Placeholder - add actual IBM logo
+        logo: '/uploads/IBM_logo.svg.webp',
         alt: 'IBM Logo'
     },
     'Microsoft': {
         name: 'Microsoft',
-        logo: '/uploads/logos/IMAS_LOGO_PNG.png', // Placeholder - add actual Microsoft logo
+        logo: '/uploads/purepng.com-microsoft-logologobrand-logoiconslogos-251519939132du80p.png',
         alt: 'Microsoft Logo'
     },
     'Apollo': {
         name: 'Apollo',
-        logo: '/uploads/logos/IMAS_LOGO_PNG.png', // Placeholder - add actual Apollo logo
+        logo: '/uploads/apollo-hospitals-logo-png-transparent.png',
         alt: 'Apollo Logo'
     },
     'Max': {
         name: 'Max Healthcare',
-        logo: '/uploads/logos/IMAS_LOGO_PNG.png', // Placeholder - add actual Max logo
+        logo: '/uploads/max-logo.png',
         alt: 'Max Healthcare Logo'
     },
     'Manipal': {
         name: 'Manipal Hospitals',
-        logo: '/uploads/logos/IMAS_LOGO_PNG.png', // Placeholder - add actual Manipal logo
+        logo: '/uploads/manipalhospitallogo.png',
         alt: 'Manipal Hospitals Logo'
     },
     'HDFC': {
         name: 'HDFC',
-        logo: '/uploads/logos/IMAS_LOGO_PNG.png', // Placeholder - add actual HDFC logo
+        logo: '/uploads/hdfc-bank-logo-czdJZ5Tf_t.jpg',
         alt: 'HDFC Logo'
     },
     'ICICI': {
         name: 'ICICI',
-        logo: '/uploads/logos/IMAS_LOGO_PNG.png', // Placeholder - add actual ICICI logo
+        logo: '/uploads/ICICI_Bank_Logo.svg.png',
         alt: 'ICICI Logo'
     },
     'Axis': {
         name: 'Axis Bank',
-        logo: '/uploads/logos/IMAS_LOGO_PNG.png', // Placeholder - add actual Axis logo
+        logo: '/uploads/axisBankLogo.png',
         alt: 'Axis Bank Logo'
     },
     'Kotak': {
         name: 'Kotak Mahindra Bank',
-        logo: '/uploads/logos/IMAS_LOGO_PNG.png', // Placeholder - add actual Kotak logo
+        logo: '/uploads/kotaklogo.png',
         alt: 'Kotak Mahindra Bank Logo'
     },
     'Bajaj': {
         name: 'Bajaj',
-        logo: '/uploads/logos/IMAS_LOGO_PNG.png', // Placeholder - add actual Bajaj logo
+        logo: '/uploads/bajaj-auto-logo-motorcycle-company-png-favpng-Ba7ZrxBzWGFusbuagxv99a8Uu.jpg',
         alt: 'Bajaj Logo'
     },
     'DHL': {
         name: 'DHL',
-        logo: '/uploads/logos/IMAS_LOGO_PNG.png', // Placeholder - add actual DHL logo
+        logo: '/uploads/dhl-1.svg',
         alt: 'DHL Logo'
     },
     'FedEx': {
         name: 'FedEx',
-        logo: '/uploads/logos/IMAS_LOGO_PNG.png', // Placeholder - add actual FedEx logo
+        logo: '/uploads/purepng.com-fedex-logologobrand-logoiconslogos-251519939539h7rji.png',
         alt: 'FedEx Logo'
     },
     'Blue Dart': {
         name: 'Blue Dart',
-        logo: '/uploads/logos/IMAS_LOGO_PNG.png', // Placeholder - add actual Blue Dart logo
+        logo: '/uploads/460-4608309_blue-dart-logo-transparent-blue-dart-express-logo.png',
         alt: 'Blue Dart Logo'
     },
     'Mahindra': {
         name: 'Mahindra Group',
-        logo: '/uploads/logos/IMAS_LOGO_PNG.png', // Placeholder - add actual Mahindra logo
+        logo: '/uploads/mahindra-logo-vector-free-11574210410bvsayvnvbr.png',
         alt: 'Mahindra Group Logo'
     },
     'Tata': {
         name: 'Tata Group',
-        logo: '/uploads/logos/IMAS_LOGO_PNG.png', // Placeholder - add actual Tata logo
+        logo: '/uploads/tatalogo.jpg',
         alt: 'Tata Group Logo'
     },
     'Godrej': {
         name: 'Godrej',
-        logo: '/uploads/logos/IMAS_LOGO_PNG.png', // Placeholder - add actual Godrej logo
+        logo: '/uploads/Godrej_Logo.svg.png',
         alt: 'Godrej Logo'
     },
     'ITC': {
         name: 'ITC Limited',
-        logo: '/uploads/logos/IMAS_LOGO_PNG.png', // Placeholder - add actual ITC logo
+        logo: '/uploads/ITC_Limited_Logo.svg.png',
         alt: 'ITC Limited Logo'
     },
     'L&T': {
         name: 'Larsen & Toubro',
-        logo: '/uploads/logos/IMAS_LOGO_PNG.png', // Placeholder - add actual L&T logo
+        logo: '/uploads/L&T.png',
         alt: 'Larsen & Toubro Logo'
     }
 };
