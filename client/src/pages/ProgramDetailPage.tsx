@@ -129,7 +129,7 @@ export function ProgramDetailPage() {
 
             <div className="min-h-screen">
                 {/* Hero Section with Enhanced Design */}
-                <section className={`relative ${IMAS_TAILWIND_CLASSES.BG_DARK_BLUE} text-white py-8 sm:py-12 lg:py-16 overflow-hidden`}>
+                <section id="hero" className={`relative ${IMAS_TAILWIND_CLASSES.BG_DARK_BLUE} text-white py-8 sm:py-12 lg:py-16 overflow-hidden`}>
                     {/* Background Image */}
                     <div className="absolute inset-0 z-0">
                         <img 
@@ -250,7 +250,7 @@ export function ProgramDetailPage() {
                 </section>
 
                 {/* Program Highlights - Enhanced */}
-                <section className="py-8 sm:py-12 lg:py-16 bg-gray-50 relative overflow-hidden">
+                <section id="program-highlights" className="py-8 sm:py-12 lg:py-16 bg-gray-50 relative overflow-hidden">
                     {/* Background Elements */}
                     <div className="absolute inset-0 overflow-hidden pointer-events-none">
                         <div className="absolute top-20 -right-20 w-64 h-64 bg-blue-200/20 rounded-full blur-3xl"></div>
@@ -278,7 +278,7 @@ export function ProgramDetailPage() {
                                         <Clock className={`h-5 w-5 sm:h-6 sm:w-6 ${IMAS_TAILWIND_CLASSES.TEXT_MEDIUM_BLUE}`} />
                                     </div>
                                     <h3 className={`font-bold ${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE} mb-1 text-xs sm:text-sm tracking-wide`}>DURATION</h3>
-                                    <p className={`text-lg sm:text-xl font-bold ${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE} mb-1`}>{program.duration}</p>
+                                    <p className={`text-lg sm:text-xl font-bold ${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE} mb-1 capitalize`}>{program.duration}</p>
                                     <p className="text-xs text-gray-500">{program.format} Program</p>
                                 </CardContent>
                             </Card>
@@ -323,7 +323,7 @@ export function ProgramDetailPage() {
                 <div className="bg-gray-50">
 
                     {/* Overview Section - Compact */}
-                    <section className="py-4 sm:py-6">
+                    <section id="overview" className="py-4 sm:py-6">
                         <div className="max-w-[1550px] mx-auto px-4 sm:px-6 lg:px-8">
                             <div className="space-y-6 sm:space-y-8">
                                 {/* Advanced Program Overview */}
@@ -499,7 +499,7 @@ export function ProgramDetailPage() {
                     </section>
 
                     {/* Curriculum Section - Compact Carousel */}
-                    <section className="py-6 sm:py-8">
+                    <section id="curriculum" className="py-6 sm:py-8">
                         <div className="max-w-[1550px] mx-auto px-4 sm:px-6 lg:px-8">
                             <div className="space-y-4 sm:space-y-6">
                                 {/* Section Header */}
@@ -673,7 +673,7 @@ export function ProgramDetailPage() {
                     </section>
 
                     {/* Careers Section - Compact */}
-                    <section className="py-8 sm:py-10">
+                    <section id="careers" className="py-8 sm:py-10">
                         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                             <div className="space-y-6 sm:space-y-8">
                                 {/* Section Header */}
@@ -716,7 +716,7 @@ export function ProgramDetailPage() {
                     </section>
 
                     {/* Eligibility Section - Compact */}
-                    <section className="py-8 sm:py-10">
+                    <section id="eligibility" className="py-8 sm:py-10">
                         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                             <div className="space-y-6 sm:space-y-8">
                                 {/* Section Header */}
@@ -806,7 +806,7 @@ export function ProgramDetailPage() {
                     </section>
 
                 {/* Placement Section - Compact */}
-                <section className="p-6 sm:py-8">
+                <section id="placement" className="p-6 sm:py-8">
                     <div className="space-y-6 sm:space-y-8">
                         {/* Section Header */}
                         <div className="text-center max-w-3xl mx-auto">
@@ -904,7 +904,7 @@ export function ProgramDetailPage() {
                 </section>
 
                 {/* Enhanced Dynamic CTA Section */}
-                <section className={`py-20 sm:py-15  content-center ${IMAS_TAILWIND_CLASSES.BG_DARK_BLUE} text-white relative overflow-hidden`}>
+                <section id="cta" className={`py-20 sm:py-15  content-center ${IMAS_TAILWIND_CLASSES.BG_DARK_BLUE} text-white relative overflow-hidden`}>
                     {/* Background Image */}
                     <div className="absolute inset-0 z-0">
                         <img

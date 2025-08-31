@@ -18,7 +18,8 @@ function AppContent(): React.JSX.Element {
   const getCurrentPage = () => {
     const path = location.pathname;
     if (path === '/') return 'home';
-    if (path.startsWith('/programs/')) return 'programs';
+    if (path === '/programs') return 'programs';
+    if (path.startsWith('/programs/')) return 'program-detail';
     return path.substring(1);
   };
 

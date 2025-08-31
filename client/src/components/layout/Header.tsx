@@ -18,17 +18,105 @@ export function Header({ currentPage, onMenuToggle }: HeaderProps) {
     minutes: 0,
     seconds: 0
   });
-  const [activeTab, setActiveTab] = useState('Overview');
+  const [activeTab, setActiveTab] = useState('');
   const [scrollPosition, setScrollPosition] = useState(0);
   const [isAdmissionsMegaMenuOpen, setIsAdmissionsMegaMenuOpen] = useState(false);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
   const admissionsButtonRef = useRef<HTMLButtonElement>(null);
 
-  const menuItems = ['Overview', 'Instructors & Mentors', 'About the program', 'About IMAS', 'Student Testimonials', 'Campus Life'];
+  // Dynamic menu configuration for different pages
+  const getMenuItemsForPage = (page?: string) => {
+    switch (page) {
+      case 'programs':
+        return [
+          { label: 'Programs', sectionId: 'programs-hero' },
+          { label: 'Program Highlights', sectionId: 'program-highlights' },
+          { label: 'Why Choose', sectionId: 'why-choose' },
+          { label: 'Top Recruiters', sectionId: 'top-recruiters' },
+          { label: 'Apply Now', sectionId: 'cta' }
+        ];
+      case 'program-detail':
+        return [
+          { label: 'Overview', sectionId: 'hero' },
+          { label: 'Program Highlights', sectionId: 'program-highlights' },
+          { label: 'Curriculum', sectionId: 'curriculum' },
+          { label: 'Careers', sectionId: 'careers' },
+          { label: 'Eligibility', sectionId: 'eligibility' },
+          { label: 'Placement', sectionId: 'placement' },
+          { label: 'Apply Now', sectionId: 'cta' }
+        ];
+      case 'home':
+        return [
+          { label: 'About', sectionId: 'about-imas' },
+          { label: 'Programs', sectionId: 'about-the-program' },
+          { label: 'Placement Stats', sectionId: 'placement-stats' },
+          { label: 'Placement Partners', sectionId: 'placement-partners' },
+          { label: 'Testimonials', sectionId: 'student-testimonials' },
+          { label: 'Campus Life', sectionId: 'campus-life' },
+          { label: 'Mentors', sectionId: 'instructors-mentors' },
+          { label: 'Industry Collaborations', sectionId: 'industry-collaborations' },
+          { label: 'Why Choose', sectionId: 'why-choose' },
+          { label: 'Apply Now', sectionId: 'final-cta' }
+        ];
+      case 'faculty':
+        return [
+          { label: 'Faculty', sectionId: 'faculty-hero' },
+          { label: 'Faculty Grid', sectionId: 'faculty-grid' },
+          { label: 'Why Learn from IMAS', sectionId: 'faculty-cta' }
+        ];
+      case 'about':
+        return [
+          { label: 'About', sectionId: 'about-hero' },
+          { label: 'Mentors', sectionId: 'instructors-mentors' },
+          { label: 'Industry Collaborations', sectionId: 'industry-collaborations' },
+          { label: 'Why Choose', sectionId: 'why-choose' }
+        ];
+      case 'admissions':
+        return [
+          { label: 'Admissions', sectionId: 'admissions-hero' },
+          { label: 'Process', sectionId: 'admission-process' },
+          { label: 'Eligibility', sectionId: 'eligibility' },
+          { label: 'Apply', sectionId: 'apply' }
+        ];
+      case 'placements':
+        return [
+          { label: 'Placements', sectionId: 'placements-hero' },
+          { label: 'Statistics', sectionId: 'placement-stats' },
+          { label: 'Recruiters', sectionId: 'recruiters' },
+          { label: 'Success Stories', sectionId: 'success-stories' }
+        ];
+      case 'gallery':
+        return [
+          { label: 'Gallery', sectionId: 'gallery-hero' },
+          { label: 'Photos', sectionId: 'photos' },
+          { label: 'Videos', sectionId: 'videos' },
+          { label: 'Events', sectionId: 'events' }
+        ];
+      case 'contact':
+        return [
+          { label: 'Contact', sectionId: 'contact-hero' },
+          { label: 'Information', sectionId: 'contact-info' },
+          { label: 'Location', sectionId: 'location' },
+          { label: 'Form', sectionId: 'contact-form' }
+        ];
+      default:
+        // Default menu for program detail pages
+        return [
+          { label: 'Overview', sectionId: 'overview' },
+          { label: 'Program Highlights', sectionId: 'program-highlights' },
+          { label: 'Curriculum', sectionId: 'curriculum' },
+          { label: 'Careers', sectionId: 'careers' },
+          { label: 'Eligibility', sectionId: 'eligibility' },
+          { label: 'Placement', sectionId: 'placement' }
+        ];
+    }
+  };
+
+  const menuItems = getMenuItemsForPage(currentPage);
 
   // Intersection Observer to detect active section
   useEffect(() => {
-    const sectionIds = ['overview', 'instructors-mentors', 'about-the-program', 'about-imas', 'student-testimonials', 'campus-life'];
+    const sectionIds = menuItems.map(item => item.sectionId);
     const sections = sectionIds.map(id => document.getElementById(id)).filter(Boolean);
     
     if (sections.length === 0) return;
@@ -38,9 +126,9 @@ export function Header({ currentPage, onMenuToggle }: HeaderProps) {
         entries.forEach((entry) => {
           if (entry.isIntersecting && entry.intersectionRatio > 0.5) {
             const sectionId = entry.target.id;
-            const tabName = getTabNameFromSectionId(sectionId);
-            if (tabName && tabName !== activeTab) {
-              setActiveTab(tabName);
+            const menuItem = menuItems.find(item => item.sectionId === sectionId);
+            if (menuItem && menuItem.label !== activeTab) {
+              setActiveTab(menuItem.label);
             }
           }
         });
@@ -60,26 +148,14 @@ export function Header({ currentPage, onMenuToggle }: HeaderProps) {
         if (section) observer.unobserve(section);
       });
     };
-  }, [activeTab]);
+  }, [activeTab, menuItems]);
 
-  const getTabNameFromSectionId = (sectionId: string): string => {
-    switch (sectionId) {
-      case 'overview':
-        return 'Overview';
-      case 'instructors-mentors':
-        return 'Instructors & Mentors';
-      case 'about-the-program':
-        return 'About the program';
-      case 'about-imas':
-        return 'About IMAS';
-      case 'student-testimonials':
-        return 'Student Testimonials';
-      case 'campus-life':
-        return 'Campus Life';
-      default:
-        return '';
+  // Initialize activeTab with first menu item when page changes
+  useEffect(() => {
+    if (menuItems.length > 0) {
+      setActiveTab(menuItems[0].label);
     }
-  };
+  }, [currentPage, menuItems]);
 
   const scrollLeft = () => {
     if (scrollContainerRef.current) {
@@ -277,81 +353,77 @@ export function Header({ currentPage, onMenuToggle }: HeaderProps) {
               className="flex gap-3 overflow-x-auto scrollbar-hide px-12"
               onScroll={(e) => setScrollPosition(e.currentTarget.scrollLeft)}
             >
-              {menuItems.map((tab) => {
-                const getIcon = (tabName: string) => {
-                  switch (tabName) {
-                    case 'Overview':
-                      return <Home className="h-3 w-3" />;
-                    case 'Instructors & Mentors':
-                      return <Users className="h-3 w-3" />;
-                    case 'About the program':
-                      return <GraduationCap className="h-3 w-3" />;
-                    case 'About IMAS':
-                      return <BookOpen className="h-3 w-3" />;
-                    case 'Student Testimonials':
-                      return <Users className="h-3 w-3" />;
-                    case 'Campus Life':
-                      return <Image className="h-3 w-3" />;
-                    case 'Curriculum':
-                      return <BookOpen className="h-3 w-3" />;
-                    case 'Admission Process':
-                      return <FileText className="h-3 w-3" />;
-                    case 'Events':
-                      return <Calendar className="h-3 w-3" />;
-                    case 'FAQs':
-                      return <HelpCircle className="h-3 w-3" />;
-                    default:
-                      return null;
-                  }
+              {menuItems.map((menuItem) => {
+                const getIcon = (label: string) => {
+                  // Map common labels to icons
+                  const iconMap: { [key: string]: React.ReactNode } = {
+                    'Home': <Home className="h-3 w-3" />,
+                    'Hero': <Home className="h-3 w-3" />,
+                    'Overview': <Home className="h-3 w-3" />,
+                    'Programs': <GraduationCap className="h-3 w-3" />,
+                    'Program Highlights': <GraduationCap className="h-3 w-3" />,
+                    'Curriculum': <BookOpen className="h-3 w-3" />,
+                    'Faculty': <Users className="h-3 w-3" />,
+                    'Academic Leaders': <Users className="h-3 w-3" />,
+                    'Industry Experts': <Users className="h-3 w-3" />,
+                    'Instructors & Mentors': <Users className="h-3 w-3" />,
+                    'Mentors': <Users className="h-3 w-3" />,
+                    'About': <BookOpen className="h-3 w-3" />,
+                    'About the program': <GraduationCap className="h-3 w-3" />,
+                    'About IMAS': <BookOpen className="h-3 w-3" />,
+                    'Campus Life': <Image className="h-3 w-3" />,
+                    'Placements': <Users className="h-3 w-3" />,
+                    'Careers': <Users className="h-3 w-3" />,
+                    'Eligibility': <FileText className="h-3 w-3" />,
+                    'Placement': <Users className="h-3 w-3" />,
+                    'Statistics': <Users className="h-3 w-3" />,
+                    'Recruiters': <Users className="h-3 w-3" />,
+                    'Success Stories': <Users className="h-3 w-3" />,
+                    'Admissions': <FileText className="h-3 w-3" />,
+                    'Process': <FileText className="h-3 w-3" />,
+                    'Apply': <FileText className="h-3 w-3" />,
+                    'Apply Now': <FileText className="h-3 w-3" />,
+                    'Gallery': <Image className="h-3 w-3" />,
+                    'Photos': <Image className="h-3 w-3" />,
+                    'Videos': <Image className="h-3 w-3" />,
+                    'Events': <Calendar className="h-3 w-3" />,
+                    'Contact': <Phone className="h-3 w-3" />,
+                    'Information': <Phone className="h-3 w-3" />,
+                    'Location': <Phone className="h-3 w-3" />,
+                    'Form': <Phone className="h-3 w-3" />,
+                    'Vision': <BookOpen className="h-3 w-3" />,
+                    'Why Choose': <BookOpen className="h-3 w-3" />
+                  };
+                  return iconMap[label] || <Home className="h-3 w-3" />;
                 };
 
                 const scrollToSection = (sectionId: string) => {
                   const element = document.getElementById(sectionId);
                   if (element) {
                     element.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                    setActiveTab(tab);
-                  }
-                };
-
-                const getSectionId = (tabName: string) => {
-                  switch (tabName) {
-                    case 'Overview':
-                      return 'overview';
-                    case 'Instructors & Mentors':
-                      return 'instructors-mentors';
-                    case 'About the program':
-                      return 'about-the-program';
-                    case 'About IMAS':
-                      return 'about-imas';
-                    case 'Student Testimonials':
-                      return 'student-testimonials';
-                    case 'Campus Life':
-                      return 'campus-life';
-                    default:
-                      return '';
+                    setActiveTab(menuItem.label);
                   }
                 };
 
                 const handleClick = () => {
-                  const sectionId = getSectionId(tab);
-                  if (sectionId) {
-                    scrollToSection(sectionId);
+                  if (menuItem.sectionId) {
+                    scrollToSection(menuItem.sectionId);
                   } else {
-                    setActiveTab(tab);
+                    setActiveTab(menuItem.label);
                   }
                 };
 
                 return (
                   <button
-                    key={tab}
+                    key={menuItem.label}
                     onClick={handleClick}
-                    className={`flex-shrink-0 px-3 py-2 rounded-lg text-xs font-medium transition-all duration-300 whitespace-nowrap flex items-center gap-2 ${activeTab === tab
+                    className={`flex-shrink-0 px-3 py-2 rounded-lg text-xs font-medium transition-all duration-300 whitespace-nowrap flex items-center gap-2 ${activeTab === menuItem.label
                         ? `${IMAS_TAILWIND_CLASSES.BG_TEAL} ${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE} shadow-md`
                         : `text-gray-300 ${IMAS_TAILWIND_CLASSES.HOVER_TEXT_TEAL} hover:bg-gray-800`
                       }`}
                   >
-                    {getIcon(tab)}
-                    {tab}
+                    {getIcon(menuItem.label)}
+                    {menuItem.label}
                   </button>
                 );
               })}

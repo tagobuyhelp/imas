@@ -422,7 +422,7 @@ export function WhyChooseSection() {
   };
 
   return (
-    <section className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-gray-50 to-white">
+    <section id="why-choose" className="py-12 sm:py-16 md:py-20 bg-gradient-to-br from-gray-50 to-white">
       <div className="max-w-[1260px] mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-8 sm:mb-12 md:mb-16">

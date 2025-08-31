@@ -5,11 +5,11 @@ import { IMAS_TAILWIND_CLASSES } from '../../../lib/constants';
 
 export function ProgramHighlightsSection() {
   return (
-    <section className="relative z-10">
+    <section id="program-highlights" className="relative z-10">
       <div className="max-w-[1260px] mx-auto px-4">
-        <div className="bg-white rounded-xl shadow-2xl p-4 sm:p-6 border border-gray-100 mt-[-20px] sm:mt-[-4rem] relative animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
+        <div className="bg-white rounded-xl shadow-xl p-4 sm:p-6 border border-gray-100 mt-[20px] sm:mt-[-4rem] relative animate-fade-in-up" style={{ animationDelay: '0.5s' }}>
 
-          <div className="space-y-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="space-y-4 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4">
             {/* Duration Card */}
             <div className="flex items-center group hover:transform hover:scale-105 transition-all duration-300 animate-fade-in-up p-2 sm:p-4  hover:bg-gray-50 border-b sm:border-b-0 border-gray-200" style={{ animationDelay: '0.6s' }}>
               {/* First Row - Icon */}

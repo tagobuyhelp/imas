@@ -210,7 +210,7 @@ export function FacultyPage() {
       <style>{lineClampStyles}</style>
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
-        <section className="relative min-h-[60vh] sm:min-h-[70vh] md:min-h-[80vh] flex items-center justify-center overflow-hidden">
+        <section id="faculty-hero" className="relative min-h-[60vh] sm:min-h-[70vh] md:min-h-[80vh] flex items-center justify-center overflow-hidden">
           {/* Background Image */}
           <div className="absolute inset-0 z-0">
             <img
@@ -287,7 +287,7 @@ export function FacultyPage() {
         </section>
 
         {/* Faculty Section */}
-        <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-gray-50">
+        <section id="faculty-grid" className="py-12 sm:py-16 md:py-20 lg:py-24 bg-gray-50">
           <div className="max-w-[1550px] mx-auto px-4">
             {/* Section Header */}
             <div className="text-center mb-12">
@@ -660,7 +660,7 @@ export function FacultyPage() {
         </section>
 
         {/* Why Learn from IMAS Faculty Section */}
-        <section className="py-12 sm:py-16 md:py-20 lg:py-24 bg-white">
+        <section id="faculty-cta" className="py-12 sm:py-16 md:py-20 lg:py-24 bg-white">
           <div className="max-w-[1550px] mx-auto px-4">
             <div className="mb-16">
               <div className="text-center mb-12">

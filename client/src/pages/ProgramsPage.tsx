@@ -124,7 +124,7 @@ export function ProgramsPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section - Mobile Friendly with Background Image */}
-      <section className="relative min-h-[40vh] sm:min-h-[50vh] lg:min-h-[65vh] w-full flex items-center justify-center overflow-hidden">
+      <section id="programs-hero" className="relative min-h-[40vh] sm:min-h-[50vh] lg:min-h-[65vh] w-full flex items-center justify-center overflow-hidden">
         {/* Background Image with Fallback */}
         <div className="absolute inset-0 z-0">
           <img
@@ -222,7 +222,7 @@ export function ProgramsPage() {
       </section>
 
       {/* Program Highlights - Mobile Optimized */}
-      <section className="py-6 sm:py-12 lg:py-16 bg-gradient-to-br from-slate-50 via-blue-50/30 to-teal-50/30 relative overflow-hidden">
+      <section id="program-highlights" className="py-6 sm:py-12 lg:py-16 bg-gradient-to-br from-slate-50 via-blue-50/30 to-teal-50/30 relative overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-5">
           <div className="absolute top-10 left-10 w-32 h-32 bg-gradient-to-br from-blue-600 to-teal-600 rounded-full blur-3xl"></div>
@@ -346,7 +346,7 @@ export function ProgramsPage() {
       <ProgramsSection />
 
       {/* Why Choose IMAS Section - Mobile Friendly */}
-      <section className="py-8 sm:py-12 lg:py-16 bg-white">
+      <section id="why-choose" className="py-8 sm:py-12 lg:py-16 bg-white">
         <div className="max-w-[1260px] mx-auto px-4">
           <div className="text-center mb-8 sm:mb-12">
             <div className={`inline-block ${IMAS_TAILWIND_CLASSES.BG_DARK_BLUE}/10 ${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE} px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-semibold mb-3 sm:mb-4 border ${IMAS_TAILWIND_CLASSES.BORDER_DARK_BLUE}/20`}>
@@ -379,7 +379,7 @@ export function ProgramsPage() {
       </section>
 
       {/* Top Recruiters Section - Mobile Friendly */}
-      <section className="py-8 sm:py-12 lg:py-16 bg-gradient-to-br from-gray-50 to-white">
+      <section id="top-recruiters" className="py-8 sm:py-12 lg:py-16 bg-gradient-to-br from-gray-50 to-white">
         <div className="max-w-[1260px] mx-auto px-4">
           <div className="text-center mb-8 sm:mb-12">
             <div className={`inline-block ${IMAS_TAILWIND_CLASSES.BG_DARK_BLUE}/10 ${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE} px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-semibold mb-3 sm:mb-4 border ${IMAS_TAILWIND_CLASSES.BORDER_DARK_BLUE}/20`}>
@@ -417,7 +417,7 @@ export function ProgramsPage() {
 
 
       {/* CTA Section - Mobile Friendly */}
-      <section className="py-8 sm:py-12 lg:py-16 bg-gray-900 text-white">
+      <section id="cta" className="py-8 sm:py-12 lg:py-16 bg-gray-900 text-white">
         <div className="max-w-[1260px] mx-auto px-4 text-center">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 sm:mb-6">

@@ -5,7 +5,7 @@ import { IMAS_TAILWIND_CLASSES, IMAS_CONTACT } from '../../../lib/constants';
 
 export function FinalCTASection() {
   return (
-    <section className="relative py-16 bg-gray-900 text-white overflow-hidden">
+    <section id="final-cta" className="relative py-16 bg-gray-900 text-white overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
         <img 

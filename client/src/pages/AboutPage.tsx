@@ -4,7 +4,7 @@ import { IMAS_TAILWIND_CLASSES } from '../lib/constants';
 
 function AboutHeroSection() {
     return (
-        <section className="py-16 lg:py-24 bg-gradient-to-br from-gray-50 to-white bg-cover bg-center bg-no-repeat relative" style={{backgroundImage: 'url(/uploads/imas_hero_image1.webp)'}}>
+        <section id="about-hero" className="py-16 lg:py-24 bg-gradient-to-br from-gray-50 to-white bg-cover bg-center bg-no-repeat relative" style={{backgroundImage: 'url(/uploads/imas_hero_image1.webp)'}}>
             <div className="absolute inset-0 bg-white bg-opacity-80"></div>
             <div className="max-w-[1260px] mx-auto px-4 relative z-10">
                 <div className="text-center mb-12">

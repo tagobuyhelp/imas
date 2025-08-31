@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronDown, ChevronRight, GraduationCap, Briefcase, Globe, FileText } from 'lucide-react';
 import { IMAS_TAILWIND_CLASSES } from '../../lib/constants';
+import { getProgramsByCategory } from '../../lib/programsData';
 
 interface MobileAdmissionsMenuProps {
   isExpanded: boolean;
@@ -16,46 +17,38 @@ const MobileAdmissionsMenu: React.FC<MobileAdmissionsMenuProps> = ({
 }) => {
   const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
 
+  // Get programs dynamically from programsData
+  const plusPrograms = getProgramsByCategory('pgdm-plus');
+  const executivePrograms = getProgramsByCategory('executive');
+  const mbaPrograms = getProgramsByCategory('mba-global');
+
   const admissionsData = {
     'pgdm-plus': {
       title: 'PGDM Plus Programs',
       subtitle: '(for Fresh Graduates)',
       icon: <GraduationCap className="h-4 w-4" />,
-      courses: [
-        'PGDM Plus in Marketing Management',
-        'PGDM Plus in Financial Management',
-        'PGDM Plus in Human Resource Management',
-        'PGDM Plus in Business Analytics',
-        'PGDM Plus in Artificial Intelligence & Data Science',
-        'PGDM Plus in Fintech',
-        'PGDM Plus in Hospital & Healthcare Management',
-        'PGDM Plus in Innovation, Entrepreneurship & Venture Development (IEV)'
-      ]
+      courses: plusPrograms.map(program => ({
+        name: program.name,
+        slug: program.slug
+      }))
     },
-    'pgdm-executives': {
+    'executive': {
       title: 'PGDM Programs',
       subtitle: '(for Working Executives/Blended Mode)',
       icon: <Briefcase className="h-4 w-4" />,
-      courses: [
-        'PGDM in Marketing',
-        'PGDM in Finance',
-        'PGDM in Human Resource',
-        'PGDM in Business Analytics',
-        'PGDM in Artificial Intelligence & Data Science',
-        'PGDM in Fintech',
-        'PGDM in Logistics & Supply Chain Management',
-        'PGDM in Operations Management',
-        'PGDM in Agri Business Management',
-        'PGDM in Hospital & Healthcare Management'
-      ]
+      courses: executivePrograms.map(program => ({
+        name: program.name,
+        slug: program.slug
+      }))
     },
     'mba-global': {
       title: 'MBA (Global) Program',
       subtitle: '',
       icon: <Globe className="h-4 w-4" />,
-      courses: [
-        'MBA (Global) Program'
-      ]
+      courses: mbaPrograms.map(program => ({
+        name: program.name,
+        slug: program.slug
+      }))
     }
   };
 
@@ -63,9 +56,9 @@ const MobileAdmissionsMenu: React.FC<MobileAdmissionsMenuProps> = ({
     setExpandedCategory(expandedCategory === categoryKey ? null : categoryKey);
   };
 
-  const handleCourseClick = (course: string) => {
+  const handleCourseClick = (course: { name: string; slug: string }) => {
     if (onCourseSelect) {
-      onCourseSelect(course);
+      onCourseSelect(course.name);
     }
   };
 
@@ -123,14 +116,15 @@ const MobileAdmissionsMenu: React.FC<MobileAdmissionsMenuProps> = ({
               <div className={`overflow-hidden transition-all duration-300 ${expandedCategory === key ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
                 <div className="pl-6 pt-1 space-y-1">
                   {category.courses.map((course, index) => (
-                    <button
+                    <Link
                       key={index}
+                      to={`/programs/${course.slug}`}
                       onClick={() => handleCourseClick(course)}
-                      className="w-full text-left px-2 py-1.5 text-xs text-gray-600 hover:text-teal-600 hover:bg-teal-50 rounded transition-colors"
+                      className="w-full text-left px-2 py-1.5 text-xs text-gray-600 hover:text-teal-600 hover:bg-teal-50 rounded transition-colors block"
                     >
                       <span className="text-gray-400 mr-2">{index + 1}.</span>
-                      {course}
-                    </button>
+                      {course.name}
+                    </Link>
                   ))}
                 </div>
               </div>

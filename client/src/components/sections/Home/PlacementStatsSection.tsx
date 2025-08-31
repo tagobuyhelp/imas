@@ -11,7 +11,7 @@ export function PlacementStatsSection() {
   ];
 
   return (
-    <section className="py-8 sm:py-16 bg-white">
+    <section id="placement-stats" className="py-8 sm:py-16 bg-white">
       <div className="max-w-[1260px] mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-6 sm:mb-12">
