@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '../ui/button';
-import { Home, GraduationCap, Users, FileText, Award, Image, Phone, X, Briefcase } from 'lucide-react';
+import { Home, GraduationCap, Users, FileText, Award, Image, Phone, X, Briefcase, Calendar } from 'lucide-react';
 import { IMAS_TAILWIND_CLASSES } from '../../lib/constants';
 import { applyNow } from '../../lib/utils';
 import MobileAdmissionsMenu from './MobileAdmissionsMenu';
@@ -19,9 +19,9 @@ export function Sidebar({ currentPage, isOpen, onClose }: SidebarProps) {
     { href: '/', label: 'Home', page: 'home', icon: Home },
     { href: '/programs', label: 'Programs', page: 'programs', icon: GraduationCap },
     { href: '/faculty', label: 'Faculty', page: 'faculty', icon: Users },
+    { href: '/events', label: 'Events', page: 'events', icon: Calendar },
     { href: '/internships', label: 'Internships', page: 'internships', icon: Briefcase },
     { href: '/campus-life', label: 'Campus Life', page: 'campus-life', icon: Users },
-
     { href: '/contact', label: 'Contact', page: 'contact', icon: Phone },
   ];
 

@@ -13,6 +13,7 @@ import { AdmissionsPage } from './pages/AdmissionsPage';
 import { ContactPage } from './pages/ContactPage';
 import { InternshipPage } from './pages/InternshipPage';
 import { CampusLifePage } from './pages/CampusLifePage';
+import { EventsPage } from './pages/EventsPage';
 
 function AppContent(): React.JSX.Element {
   const location = useLocation();
@@ -41,6 +42,7 @@ function AppContent(): React.JSX.Element {
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/internships" element={<InternshipPage />} />
         <Route path="/campus-life" element={<CampusLifePage />} />
+        <Route path="/events" element={<EventsPage />} />
       </Routes>
     </Layout>
   );

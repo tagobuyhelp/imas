@@ -15,6 +15,7 @@ import {
 import { getProgramBySlug, getAllProgramSlugs } from '../lib/programsData';
 import { IMAS_TAILWIND_CLASSES, IMAS_BRAND } from '../lib/constants';
 import { downloadBrochure } from '../lib/utils';
+import { FAQ } from '../components/FAQ';
 
 export function ProgramDetailPage() {
     const { slug } = useParams<{ slug: string }>();
@@ -902,6 +903,9 @@ export function ProgramDetailPage() {
                         </div>
                     </div>
                 </section>
+
+                {/* FAQ Section */}
+                <FAQ />
 
                 {/* Enhanced Dynamic CTA Section */}
                 <section id="cta" className={`py-20 sm:py-15  content-center ${IMAS_TAILWIND_CLASSES.BG_DARK_BLUE} text-white relative overflow-hidden`}>

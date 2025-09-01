@@ -44,6 +44,7 @@ export function Header({ currentPage, onMenuToggle }: HeaderProps) {
           { label: 'Careers', sectionId: 'careers' },
           { label: 'Eligibility', sectionId: 'eligibility' },
           { label: 'Placement', sectionId: 'placement' },
+          { label: 'FAQ', sectionId: 'faq' },
           { label: 'Apply Now', sectionId: 'cta' }
         ];
       case 'home':
@@ -57,6 +58,7 @@ export function Header({ currentPage, onMenuToggle }: HeaderProps) {
           { label: 'Mentors', sectionId: 'instructors-mentors' },
           { label: 'Industry Collaborations', sectionId: 'industry-collaborations' },
           { label: 'Why Choose', sectionId: 'why-choose' },
+          { label: 'FAQ', sectionId: 'faq' },
           { label: 'Apply Now', sectionId: 'final-cta' }
         ];
       case 'faculty':
@@ -70,7 +72,8 @@ export function Header({ currentPage, onMenuToggle }: HeaderProps) {
           { label: 'About', sectionId: 'about-hero' },
           { label: 'Mentors', sectionId: 'instructors-mentors' },
           { label: 'Industry Collaborations', sectionId: 'industry-collaborations' },
-          { label: 'Why Choose', sectionId: 'why-choose' }
+          { label: 'Why Choose', sectionId: 'why-choose' },
+          { label: 'FAQ', sectionId: 'faq' }
         ];
       case 'admissions':
         return [

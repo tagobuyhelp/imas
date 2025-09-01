@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, Phone, MapPin, ExternalLink, Facebook, Instagram, Linkedin, Youtube, Globe, GraduationCap, Users, Award, BookOpen, HeadphonesIcon, HelpCircle, User, UserCheck } from 'lucide-react';
+import { Mail, Phone, MapPin, ExternalLink, Facebook, Instagram, Linkedin, Youtube, Globe, GraduationCap, Users, Award, BookOpen, HeadphonesIcon, HelpCircle, User, UserCheck, Calendar } from 'lucide-react';
 import { IMAS_TAILWIND_CLASSES, IMAS_CONTACT, IMAS_SOCIAL } from '../../lib/constants';
 
 export function Footer() {
@@ -38,17 +38,17 @@ export function Footer() {
                 Quick Links
               </h4>
               <div className="grid grid-cols-2 md:grid-cols-1 gap-2">
-                <a href="#" className={`flex items-center gap-2 text-gray-300 ${IMAS_TAILWIND_CLASSES.HOVER_TEXT_TEAL} transition-all duration-200 hover:translate-x-1 text-sm`}>
+                <a href="/about" className={`flex items-center gap-2 text-gray-300 ${IMAS_TAILWIND_CLASSES.HOVER_TEXT_TEAL} transition-all duration-200 hover:translate-x-1 text-sm`}>
                   <Users className="h-4 w-4" /> About Us
                 </a>
-                <a href="#" className={`flex items-center gap-2 text-gray-300 ${IMAS_TAILWIND_CLASSES.HOVER_TEXT_TEAL} transition-all duration-200 hover:translate-x-1 text-sm`}>
+                <a href="/programs" className={`flex items-center gap-2 text-gray-300 ${IMAS_TAILWIND_CLASSES.HOVER_TEXT_TEAL} transition-all duration-200 hover:translate-x-1 text-sm`}>
                   <GraduationCap className="h-4 w-4" /> Programs
                 </a>
-                <a href="#" className={`flex items-center gap-2 text-gray-300 ${IMAS_TAILWIND_CLASSES.HOVER_TEXT_TEAL} transition-all duration-200 hover:translate-x-1 text-sm`}>
+                <a href="/faculty" className={`flex items-center gap-2 text-gray-300 ${IMAS_TAILWIND_CLASSES.HOVER_TEXT_TEAL} transition-all duration-200 hover:translate-x-1 text-sm`}>
                   <Award className="h-4 w-4" /> Faculty
                 </a>
-                <a href="#" className={`flex items-center gap-2 text-gray-300 ${IMAS_TAILWIND_CLASSES.HOVER_TEXT_TEAL} transition-all duration-200 hover:translate-x-1 text-sm`}>
-                  <ExternalLink className="h-4 w-4" /> Admissions
+                <a href="/events" className={`flex items-center gap-2 text-gray-300 ${IMAS_TAILWIND_CLASSES.HOVER_TEXT_TEAL} transition-all duration-200 hover:translate-x-1 text-sm`}>
+                  <Calendar className="h-4 w-4" /> Events
                 </a>
               </div>
             </div>

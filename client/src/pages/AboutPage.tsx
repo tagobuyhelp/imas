@@ -4,6 +4,7 @@ import { IMAS_TAILWIND_CLASSES } from '../lib/constants';
 import { Users, Lightbulb, Zap, Award, CheckCircle, Globe, Target, ArrowRight } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import { downloadBrochure, applyNow } from '../lib/utils';
+import { FAQ } from '../components/FAQ';
 
 function AboutHeroSection() {
     return (
@@ -165,6 +166,7 @@ export function AboutPage() {
             <MentorsSection />
             <IndustryCollaborationsSection />
             <WhyChooseSection />
+            <FAQ />
         </div>
     );
 }

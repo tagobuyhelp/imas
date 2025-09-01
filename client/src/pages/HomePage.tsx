@@ -14,6 +14,7 @@ import {
   FinalCTASection
 } from '../components/sections/Home';
 import { StickyCTAFooter } from '../components/layout/StickyCTAFooter';
+import { FAQ } from '../components/FAQ';
 
 export function HomePage() {
   return (
@@ -29,6 +30,7 @@ export function HomePage() {
       <WhyChooseSection />
       <IndustryCollaborationsSection />
       <CampusLifeSection />
+      <FAQ />
       <FinalCTASection />
       <StickyCTAFooter heroSectionHeight={800} showFloatingButton={false} />
     </div>

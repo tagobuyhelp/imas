@@ -1,9 +1,9 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Button } from '../components/ui/button';
-import { Check, TrendingUp, Award, Globe } from 'lucide-react';
-import { IMAS_TAILWIND_CLASSES } from '../lib/constants';
-import { applyNow } from '../lib/utils';
+import { Check, TrendingUp, Award, Globe, Phone, Mail, ArrowRight } from 'lucide-react';
+import { IMAS_TAILWIND_CLASSES, IMAS_CONTACT } from '../lib/constants';
+import { applyNow, downloadBrochure } from '../lib/utils';
 import { StickyCTAFooter } from '../components/layout/StickyCTAFooter';
 import { LearnersSection } from '../components/sections/Home/LearnersSection';
 
@@ -277,38 +277,49 @@ export function InternshipPage() {
         </div>
       </section>
 
-      {/* Gateway to Placements Section */}
-      <section className="py-8 sm:py-16 bg-gradient-to-br from-[#143674] to-blue-800 text-white relative overflow-hidden">
-        {/* Animated Background Elements */}
-        <div className="absolute top-5 sm:top-10 left-5 sm:left-10 w-16 sm:w-32 h-16 sm:h-32 bg-white/10 rounded-full animate-float"></div>
-        <div className="absolute bottom-5 sm:bottom-10 right-5 sm:right-10 w-12 sm:w-24 h-12 sm:h-24 bg-white/10 rounded-full animate-float-delayed"></div>
-        <div className="absolute top-1/2 left-1/4 w-8 sm:w-16 h-8 sm:h-16 bg-white/5 rounded-full animate-float"></div>
+      {/* CTA Section - Matching Home Page */}
+      <section id="final-cta" className="relative py-16 bg-gray-900 text-white overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <img 
+            src="/uploads/IMASBUILDING.jpeg" 
+            alt="IMAS Building" 
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gray-900/80"></div>
+        </div>
+        
+        <div className="relative max-w-[1260px] mx-auto px-4 text-center z-10">
+          <div className="max-w-4xl mx-auto">
+            <div className={`inline-block ${IMAS_TAILWIND_CLASSES.BG_MEDIUM_BLUE} text-white px-6 py-2 rounded-full text-sm font-semibold mb-6`}>
+              ADMISSIONS OPEN
+            </div>
+            <h2 className="text-3xl sm:text-4xl font-bold mb-6">
+              IMAS Internships = Gateway to Placements
+            </h2>
+            <p className="text-lg sm:text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+              At IMAS, internships are not just stepping stones, they are career accelerators. Many students receive Pre-Placement Offers (PPOs) directly from their internship companies, leading to seamless placement success.
+            </p>
 
-        <div className="relative z-10 max-w-7xl mx-auto px-3 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-xl sm:text-3xl lg:text-4xl font-bold mb-3 sm:mb-6 px-2">
-            IMAS Internships = Gateway to Placements
-          </h2>
-          <p className="text-sm sm:text-xl mb-6 sm:mb-8 max-w-4xl mx-auto leading-relaxed px-2">
-            At IMAS, internships are not just stepping stones, they are career accelerators. Many students receive Pre-Placement Offers (PPOs) directly from their internship companies, leading to seamless placement success.
-          </p>
-
-          <div className="flex flex-col gap-3 sm:gap-4 justify-center items-center">
-            <Button 
-              onClick={applyNow}
-              className="bg-white text-[#143674] hover:bg-gray-100 px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105 w-full sm:w-auto"
-            >
-              Apply Now for IMAS Admission 2025
-            </Button>
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full sm:w-auto">
+            {/* CTA Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
               <Button 
-                variant="outline"
-                className="border-white bg-transparent text-white hover:bg-white hover:text-[#143674] px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-lg font-semibold rounded-xl transition-all duration-300 w-full sm:w-auto"
+                className={`${IMAS_TAILWIND_CLASSES.GRADIENT_PRIMARY} hover:from-[#2e7bb3] hover:to-[#26c1d3] text-white px-8 sm:px-10 lg:px-12 py-3 sm:py-4 text-sm sm:text-base lg:text-lg font-semibold hover:scale-105 transition-all duration-300`}
+                onClick={applyNow}
+              >
+                Apply Now
+                <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
+              </Button>
+              <Button 
+                variant="outline" 
+                className="border-white bg-transparent text-white hover:bg-white hover:text-gray-900 px-6 sm:px-8 lg:px-10 py-3 sm:py-4 text-sm sm:text-base lg:text-lg font-semibold hover:scale-105 transition-all duration-300"
               >
                 Enquire Now
               </Button>
               <Button 
-                variant="outline"
-                className="border-white bg-transparent text-white hover:bg-white hover:text-[#143674] px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-lg font-semibold rounded-xl transition-all duration-300 w-full sm:w-auto"
+                variant="outline" 
+                className="border-white bg-transparent text-white hover:bg-white hover:text-gray-900 px-6 sm:px-8 lg:px-10 py-3 sm:py-4 text-sm sm:text-base lg:text-lg font-semibold hover:scale-105 transition-all duration-300"
+                onClick={downloadBrochure}
               >
                 Download Brochure
               </Button>
