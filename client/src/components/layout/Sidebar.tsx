@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { Button } from '../ui/button';
 import { Home, GraduationCap, Users, FileText, Award, Image, Phone, X, Trophy } from 'lucide-react';
 import { IMAS_TAILWIND_CLASSES } from '../../lib/constants';
+import { applyNow } from '../../lib/utils';
 import MobileAdmissionsMenu from './MobileAdmissionsMenu';
 
 interface SidebarProps {
@@ -136,13 +137,15 @@ export function Sidebar({ currentPage, isOpen, onClose }: SidebarProps) {
             >
               Login
             </Button>
-            <Link to="/admissions" onClick={handleNavClick}>
-              <Button 
-                className={`w-full ${IMAS_TAILWIND_CLASSES.GRADIENT_PRIMARY} hover:from-[#2e7bb3] hover:to-[#26c1d3] text-white`}
-              >
-                Apply Now
-              </Button>
-            </Link>
+            <Button 
+              className={`w-full ${IMAS_TAILWIND_CLASSES.GRADIENT_PRIMARY} hover:from-[#2e7bb3] hover:to-[#26c1d3] text-white`}
+              onClick={() => {
+                handleNavClick();
+                applyNow();
+              }}
+            >
+              Apply Now
+            </Button>
           </div>
         </div>
       </div>

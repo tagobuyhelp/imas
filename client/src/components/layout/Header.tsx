@@ -4,6 +4,7 @@ import { Button } from '../ui/button';
 import { Menu, X, Clock, ChevronLeft, ChevronRight, Home, GraduationCap, Users, FileText, Calendar, Image, Phone, BookOpen, HelpCircle, ChevronDown } from 'lucide-react';
 import { Sidebar } from './Sidebar';
 import { IMAS_TAILWIND_CLASSES, IMAS_DATES } from '../../lib/constants';
+import { applyNow } from '../../lib/utils';
 import AdmissionsMegaMenu from './AdmissionsMegaMenu';
 
 interface HeaderProps {
@@ -316,7 +317,10 @@ export function Header({ currentPage, onMenuToggle }: HeaderProps) {
               <Button variant="ghost" className={`text-white ${IMAS_TAILWIND_CLASSES.HOVER_TEXT_TEAL} hover:bg-gray-800`}>
                 Login
               </Button>
-              <Button className={`${IMAS_TAILWIND_CLASSES.GRADIENT_PRIMARY} hover:from-[#2e7bb3] hover:to-[#26c1d3] text-white`}>
+              <Button 
+                className={`${IMAS_TAILWIND_CLASSES.GRADIENT_PRIMARY} hover:from-[#2e7bb3] hover:to-[#26c1d3] text-white`}
+                onClick={applyNow}
+              >
                 Apply Now
               </Button>
             </div>
