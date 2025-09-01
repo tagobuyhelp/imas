@@ -3,9 +3,9 @@ import { Button } from '../components/ui/button';
 import { Search, X, Users, ArrowRight, FileText, GraduationCap, Plus, Minus, Award, Target, BookOpen, ChevronLeft, ChevronRight } from 'lucide-react';
 import { IMAS_TAILWIND_CLASSES } from '../lib/constants';
 import { StickyCTAFooter } from '../components/layout/StickyCTAFooter';
-import { downloadBrochure } from '../lib/utils';
+import { downloadBrochure, applyNow } from '../lib/utils';
 
-// Custom CSS for line clamping
+// Custom CSS for line clamping and animations
 const lineClampStyles = `
   .line-clamp-2 {
     display: -webkit-box;
@@ -18,6 +18,62 @@ const lineClampStyles = `
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     overflow: hidden;
+  }
+  
+  /* Custom animations */
+  @keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    33% { transform: translateY(-10px) rotate(1deg); }
+    66% { transform: translateY(5px) rotate(-1deg); }
+  }
+  
+  @keyframes float-delayed {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    33% { transform: translateY(8px) rotate(-1deg); }
+    66% { transform: translateY(-12px) rotate(1deg); }
+  }
+  
+  @keyframes fade-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .animate-float-delayed {
+    animation: float-delayed 8s ease-in-out infinite;
+  }
+  
+  .animate-fade-in-up {
+    animation: fade-in-up 0.8s ease-out forwards;
+  }
+  
+  .animation-delay-200 {
+    animation-delay: 0.2s;
+  }
+  
+  .animation-delay-400 {
+    animation-delay: 0.4s;
+  }
+  
+  .animation-delay-600 {
+    animation-delay: 0.6s;
+  }
+  
+  .animation-delay-800 {
+    animation-delay: 0.8s;
+  }
+  
+  .animation-delay-1000 {
+    animation-delay: 1s;
   }
 `;
 
@@ -223,10 +279,17 @@ export function FacultyPage() {
                 target.style.display = 'none';
               }}
             />
-            {/* Dark Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/70"></div>
-            {/* Additional Pattern Overlay */}
-            <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-transparent to-teal-900/20"></div>
+            {/* Enhanced Dark Overlay with Modern Gradient */}
+            <div className="absolute inset-0 bg-gradient-to-br from-slate-900/90 via-blue-900/80 to-cyan-900/90"></div>
+            {/* Animated Pattern Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 via-transparent to-cyan-600/10 animate-pulse"></div>
+          </div>
+          
+          {/* Animated Background Elements */}
+          <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-gradient-to-r from-blue-400/20 to-cyan-400/20 rounded-full blur-3xl animate-float"></div>
+            <div className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-gradient-to-r from-cyan-400/15 to-blue-400/15 rounded-full blur-3xl animate-float-delayed"></div>
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-blue-500/5 to-cyan-500/5 rounded-full blur-3xl animate-pulse"></div>
           </div>
 
           {/* Content */}
@@ -258,9 +321,10 @@ export function FacultyPage() {
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 md:gap-6 justify-center items-center animate-fade-in-up animation-delay-400 px-4">
               <Button
                 size="lg"
-                className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-3 sm:px-8 sm:py-3 md:px-10 md:py-4 text-sm sm:text-base md:text-lg font-semibold shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300 transform hover:scale-105 border border-white/20 backdrop-blur-sm w-full sm:w-auto"
+                onClick={applyNow}
+                className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-3 sm:px-8 sm:py-3 md:px-10 md:py-4 text-sm sm:text-base md:text-lg font-semibold shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300 transform hover:scale-105 border border-white/20 backdrop-blur-sm w-full sm:w-auto group"
               >
-                <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 mr-2 sm:mr-3" />
+                <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 mr-2 sm:mr-3 group-hover:translate-x-1 transition-transform duration-300" />
                 Apply Now
               </Button>
               <Button
@@ -428,63 +492,69 @@ export function FacultyPage() {
               ) : (
                 <>
                   {/* Desktop Grid */}
-                  <div className="hidden md:grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                  <div className="hidden md:grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
                     {getFilteredFaculty().map((member) => (
-                      <div key={member.id} className="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-all duration-300 group">
-                        {/* Image Section */}
-                        <div className="flex justify-center pt-6 pb-4">
-                          <div className="relative w-24 h-24 rounded-full overflow-hidden border-4 border-gray-100 group-hover:border-cyan-200 transition-colors duration-300">
+                      <div key={member.id} className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 group border border-gray-100 hover:border-cyan-200 transform hover:-translate-y-2 overflow-hidden">
+                        {/* Enhanced Image Section */}
+                        <div className="relative flex justify-center pt-8 pb-6">
+                          <div className="relative w-28 h-28 rounded-full overflow-hidden border-4 border-gradient-to-r from-cyan-200 to-blue-200 group-hover:border-gradient-to-r group-hover:from-cyan-400 group-hover:to-blue-400 transition-all duration-500 shadow-lg">
                             <img
                               src={member.image}
                               alt={`${member.name} - ${member.title}`}
-                              className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                              className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                               onError={(e) => {
                                 const target = e.target as HTMLImageElement;
                                 target.src = '/uploads/placeholder-faculty.jpg';
                               }}
                             />
+                            {/* Gradient overlay on hover */}
+                            <div className="absolute inset-0 bg-gradient-to-t from-cyan-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                          </div>
+                          {/* Floating badge */}
+                          <div className="absolute top-4 right-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-xs px-3 py-1 rounded-full font-semibold opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-2 group-hover:translate-y-0">
+                            {member.title.includes('Professor') ? 'Faculty' : 'Leader'}
                           </div>
                         </div>
 
-                        {/* Content Section */}
-                        <div className="px-6 pb-6 text-center">
-                          <h3 className="text-lg font-bold text-gray-800 mb-2 font-serif">{member.name}</h3>
-                          <p className={`text-sm font-medium mb-2 ${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE}`}>
+                        {/* Enhanced Content Section */}
+                        <div className="px-6 pb-8 text-center">
+                          <h3 className="text-xl font-bold text-gray-800 mb-3 font-serif group-hover:text-cyan-700 transition-colors duration-300">{member.name}</h3>
+                          <p className={`text-sm font-semibold mb-3 bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent`}>
                             {member.title}
                           </p>
-                          <p className="text-xs text-gray-600 mb-3">{member.qualifications}</p>
+                          <p className="text-xs text-gray-500 mb-4 font-medium">{member.qualifications}</p>
                           
-                          {/* Description - Expandable */}
-                          <div className="mb-3">
-                            <p className={`text-xs text-gray-700 leading-relaxed ${
+                          {/* Enhanced Description - Expandable */}
+                          <div className="mb-4">
+                            <p className={`text-sm text-gray-700 leading-relaxed ${
                               expandedCards.has(member.id) ? '' : 'line-clamp-3'
                             }`}>
                               {expandedCards.has(member.id) ? member.fullBio : member.description}
                             </p>
                             <button
                               onClick={() => toggleCardExpansion(member.id)}
-                              className="text-cyan-600 hover:text-cyan-700 text-xs font-medium mt-1 flex items-center justify-center mx-auto"
+                              className="text-cyan-600 hover:text-cyan-700 text-sm font-semibold mt-2 flex items-center justify-center mx-auto bg-cyan-50 hover:bg-cyan-100 px-4 py-2 rounded-full transition-all duration-300 group/btn"
                             >
                               {expandedCards.has(member.id) ? (
-                                <><Minus className="w-3 h-3 mr-1" /> Show less</>
+                                <><Minus className="w-4 h-4 mr-2 group-hover/btn:scale-110 transition-transform duration-300" /> Show less</>
                               ) : (
-                                <><Plus className="w-3 h-3 mr-1" /> Read more</>
+                                <><Plus className="w-4 h-4 mr-2 group-hover/btn:scale-110 transition-transform duration-300" /> Read more</>
                               )}
                             </button>
                           </div>
 
-                          {/* Expertise */}
-                          <div className="flex items-center justify-center text-xs text-gray-500 mb-3">
-                            <GraduationCap className="w-4 h-4 mr-1" />
-                            <span>{member.expertise}</span>
+                          {/* Enhanced Expertise */}
+                          <div className="flex items-center justify-center text-sm text-gray-600 mb-4 bg-gray-50 rounded-lg py-2 px-4">
+                            <GraduationCap className="w-5 h-5 mr-2 text-cyan-600" />
+                            <span className="font-medium">{member.expertise}</span>
                           </div>
 
-                          {/* Tags */}
-                          <div className="flex flex-wrap justify-center gap-1">
+                          {/* Enhanced Tags */}
+                          <div className="flex flex-wrap justify-center gap-2">
                             {member.tags.map(tag => (
                               <span
                                 key={tag}
-                                className={`px-3 py-1 ${IMAS_TAILWIND_CLASSES.BG_TEAL} text-white text-xs rounded-full font-medium`}
+                                className="px-3 py-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-xs rounded-full font-semibold shadow-md hover:shadow-lg transition-shadow duration-300 transform hover:scale-105"
                               >
                                 {tag}
                               </span>
@@ -706,33 +776,67 @@ export function FacultyPage() {
               </div>
             </div>
 
-            {/* Call to Action Section */}
-            <div className="bg-gradient-to-r from-blue-900 via-blue-800 to-cyan-700 rounded-2xl p-8 md:p-12 text-center text-white">
-              <h3 className="text-2xl md:text-3xl font-bold mb-4">
-                ADMISSIONS OPEN
-              </h3>
-              <p className="text-lg mb-6 opacity-90">
-                Avail Education Loans, IMAS Scholarship 2025, and transform your career with a management degree from one of the Best Business School in Kolkata.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <Button className="bg-white text-blue-900 hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold transition-colors duration-200">
-                  Apply Now for IMAS Admission 2025
-                </Button>
-                <Button variant="outline" className="border-white bg-transparent text-white hover:bg-white hover:text-blue-900 px-6 py-3 rounded-lg font-semibold transition-colors duration-200">
-                  Enquire Now
-                </Button>
-                <Button variant="outline" className="border-white bg-transparent text-white hover:bg-white hover:text-blue-900 px-6 py-3 rounded-lg font-semibold transition-colors duration-200">
-                  Download Brochure
-                </Button>
+            {/* Enhanced Call to Action Section */}
+            <div className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-cyan-900 rounded-3xl p-8 md:p-16 text-center text-white overflow-hidden">
+              {/* Animated Background Elements */}
+              <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                <div className="absolute top-0 left-0 w-72 h-72 bg-gradient-to-r from-cyan-400/20 to-blue-400/20 rounded-full blur-3xl animate-float"></div>
+                <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-r from-blue-400/15 to-cyan-400/15 rounded-full blur-3xl animate-float-delayed"></div>
               </div>
-              <div className="mt-6">
-                <Button className="bg-cyan-500 hover:bg-cyan-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors duration-200">
-                  View Programmes
-                </Button>
+              
+              <div className="relative z-10">
+                <div className="inline-block mb-6 animate-fade-in-up">
+                  <div className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-3 rounded-full text-sm font-bold shadow-2xl border border-white/20 backdrop-blur-sm">
+                    <Users className="inline-block w-4 h-4 mr-2" />
+                    ADMISSIONS OPEN 2025
+                  </div>
+                </div>
+                
+                <h3 className="text-3xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-cyan-200 bg-clip-text text-transparent animate-fade-in-up animation-delay-200">
+                  Start Your Journey with
+                  <span className="block bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+                    IMAS Faculty
+                  </span>
+                </h3>
+                
+                <p className="text-lg md:text-xl mb-8 opacity-90 max-w-4xl mx-auto leading-relaxed animate-fade-in-up animation-delay-400">
+                  Avail Education Loans, IMAS Scholarship 2025, and transform your career with a management degree from one of the Best Business School in Kolkata.
+                </p>
+                
+                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8 animate-fade-in-up animation-delay-600">
+                  <Button 
+                    onClick={applyNow}
+                    className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-semibold shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300 transform hover:scale-105 border border-white/20 backdrop-blur-sm group"
+                  >
+                    <ArrowRight className="w-5 h-5 mr-2 group-hover:translate-x-1 transition-transform duration-300" />
+                    Apply Now for IMAS Admission 2025
+                  </Button>
+                  <Button 
+                    variant="outline" 
+                    className="border-2 border-white/30 bg-white/10 text-white hover:bg-white hover:text-blue-900 px-6 py-4 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 backdrop-blur-sm"
+                  >
+                    Enquire Now
+                  </Button>
+                  <Button 
+                    variant="outline" 
+                    onClick={downloadBrochure}
+                    className="border-2 border-white/30 bg-white/10 text-white hover:bg-white hover:text-blue-900 px-6 py-4 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 backdrop-blur-sm"
+                  >
+                    <FileText className="w-4 h-4 mr-2" />
+                    Download Brochure
+                  </Button>
+                </div>
+                
+                <div className="animate-fade-in-up animation-delay-800">
+                  <Button className="bg-white/20 hover:bg-white/30 text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300 backdrop-blur-sm border border-white/20">
+                    View Programmes
+                  </Button>
+                </div>
+                
+                <p className="mt-8 text-sm opacity-75 animate-fade-in-up animation-delay-1000">
+                  IMAS Kolkata. Transforming Ambitions into Careers.
+                </p>
               </div>
-              <p className="mt-6 text-sm opacity-75">
-                IMAS Kolkata. Transforming Ambitions into Careers.
-              </p>
             </div>
           </div>
         </section>

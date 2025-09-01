@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '../ui/button';
-import { Menu, X, Clock, ChevronLeft, ChevronRight, Home, GraduationCap, Users, FileText, Calendar, Image, Phone, BookOpen, HelpCircle, ChevronDown } from 'lucide-react';
+import { Menu, X, Clock, ChevronLeft, ChevronRight, Home, GraduationCap, Users, FileText, Calendar, Image, Phone, BookOpen, HelpCircle, ChevronDown, Briefcase } from 'lucide-react';
 import { Sidebar } from './Sidebar';
 import { IMAS_TAILWIND_CLASSES, IMAS_DATES } from '../../lib/constants';
 import { applyNow } from '../../lib/utils';
@@ -79,12 +79,14 @@ export function Header({ currentPage, onMenuToggle }: HeaderProps) {
           { label: 'Eligibility', sectionId: 'eligibility' },
           { label: 'Apply Now', sectionId: 'apply' }
         ];
-      case 'placements':
+
+      case 'internships':
         return [
-          { label: 'Placements', sectionId: 'placements-hero' },
-          { label: 'Statistics', sectionId: 'placement-stats' },
-          { label: 'Recruiters', sectionId: 'recruiters' },
-          { label: 'Success Stories', sectionId: 'success-stories' }
+          { label: 'Internships', sectionId: 'internships-hero' },
+          { label: 'Outcomes', sectionId: 'outcomes' },
+          { label: 'Companies', sectionId: 'companies' },
+          { label: 'Roles', sectionId: 'roles' },
+          { label: 'Apply Now', sectionId: 'cta' }
         ];
       case 'gallery':
         return [
@@ -283,15 +285,17 @@ export function Header({ currentPage, onMenuToggle }: HeaderProps) {
                   <ChevronDown className={`h-3 w-3 transition-transform duration-200 ${isAdmissionsMegaMenuOpen ? 'rotate-180' : ''}`} />
                 </button>
               </div>
+
               <Link
-                to="/placements"
+                to="/internships"
                 className={`${IMAS_TAILWIND_CLASSES.HOVER_TEXT_TEAL} transition-colors flex items-center gap-2 ${
-                  currentPage === 'placements' ? IMAS_TAILWIND_CLASSES.TEXT_TEAL : ''
+                  currentPage === 'internships' ? IMAS_TAILWIND_CLASSES.TEXT_TEAL : ''
                 }`}
               >
-                <BookOpen className="h-4 w-4" />
-                Placements
+                <Briefcase className="h-4 w-4" />
+                Internships
               </Link>
+
               <Link
                 to="/gallery"
                 className={`${IMAS_TAILWIND_CLASSES.HOVER_TEXT_TEAL} transition-colors flex items-center gap-2 ${
@@ -376,7 +380,7 @@ export function Header({ currentPage, onMenuToggle }: HeaderProps) {
                     'About the program': <GraduationCap className="h-3 w-3" />,
                     'About IMAS': <BookOpen className="h-3 w-3" />,
                     'Campus Life': <Image className="h-3 w-3" />,
-                    'Placements': <Users className="h-3 w-3" />,
+
                     'Careers': <Users className="h-3 w-3" />,
                     'Eligibility': <FileText className="h-3 w-3" />,
                     'Placement': <Users className="h-3 w-3" />,
