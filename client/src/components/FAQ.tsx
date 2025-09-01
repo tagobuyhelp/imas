@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ChevronDown, ChevronRight, HelpCircle } from 'lucide-react';
+import { ChevronDown, ChevronRight, HelpCircle, Menu, X } from 'lucide-react';
 import { IMAS_TAILWIND_CLASSES } from '../lib/constants';
 
 interface FAQItem {
@@ -175,6 +175,7 @@ interface FAQProps {
 export function FAQ({ className = '' }: FAQProps) {
   const [activeSection, setActiveSection] = useState('important-faqs');
   const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
+  const [isMobileSidebarOpen, setIsMobileSidebarOpen] = useState(false);
 
   const toggleItem = (sectionId: string, itemIndex: number) => {
     const itemKey = `${sectionId}-${itemIndex}`;
@@ -189,25 +190,66 @@ export function FAQ({ className = '' }: FAQProps) {
     setExpandedItems(newExpanded);
   };
 
+  const handleSectionChange = (sectionId: string) => {
+    setActiveSection(sectionId);
+    setIsMobileSidebarOpen(false); // Close mobile sidebar when section is selected
+  };
+
   const currentSection = faqData.find(section => section.id === activeSection);
 
   return (
-    <section id="faq" className={`bg-gray-50 py-16 ${className}`}>
+    <section id="faq" className={`bg-gray-50 py-8 sm:py-16 ${className}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-12">
-          <h2 className={`text-4xl md:text-5xl font-bold ${IMAS_TAILWIND_CLASSES.TEXT_TEAL} mb-4`}>
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold ${IMAS_TAILWIND_CLASSES.TEXT_TEAL} mb-3 sm:mb-4 px-2`}>
             Frequently Asked Questions
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Answers to the most commonly asked questions from us
+          <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto px-2">
+            Answers to the most commonly asked questions about Scaler School of Business
           </p>
         </div>
 
+        {/* Mobile Category Selector */}
+        <div className="lg:hidden mb-6">
+          <button
+            onClick={() => setIsMobileSidebarOpen(!isMobileSidebarOpen)}
+            className={`w-full flex items-center justify-between px-4 py-3 bg-white rounded-lg shadow-md ${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE} font-semibold`}
+          >
+            <div className="flex items-center gap-2">
+              <HelpCircle className="h-5 w-5" />
+              <span>{faqData.find(s => s.id === activeSection)?.title || 'Select Category'}</span>
+            </div>
+            {isMobileSidebarOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          </button>
+          
+          {/* Mobile Dropdown Menu */}
+          {isMobileSidebarOpen && (
+            <div className="mt-2 bg-white rounded-lg shadow-lg border border-gray-200 overflow-hidden">
+              {faqData.map((section) => (
+                <button
+                  key={section.id}
+                  onClick={() => handleSectionChange(section.id)}
+                  className={`w-full text-left px-4 py-3 transition-all duration-200 flex items-center gap-2 border-b border-gray-100 last:border-b-0 ${
+                    activeSection === section.id
+                      ? `${IMAS_TAILWIND_CLASSES.BG_TEAL} text-white`
+                      : `text-gray-700 hover:bg-gray-50 ${IMAS_TAILWIND_CLASSES.HOVER_TEXT_TEAL}`
+                  }`}
+                >
+                  <ChevronRight className={`h-4 w-4 transition-transform ${
+                    activeSection === section.id ? 'rotate-90' : ''
+                  }`} />
+                  <span className="text-sm font-medium">{section.title}</span>
+                </button>
+              ))}
+            </div>
+          )}
+        </div>
+
         {/* FAQ Content */}
-        <div className="flex flex-col lg:flex-row gap-8">
-          {/* Sidebar Navigation */}
-          <div className="lg:w-1/4">
+        <div className="flex flex-col lg:flex-row gap-6 lg:gap-8">
+          {/* Desktop Sidebar Navigation */}
+          <div className="hidden lg:block lg:w-1/4">
             <div className="bg-white rounded-xl shadow-lg p-6 sticky top-8">
               <h3 className={`text-xl font-bold ${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE} mb-6 flex items-center gap-2`}>
                 <HelpCircle className="h-5 w-5" />
@@ -235,14 +277,14 @@ export function FAQ({ className = '' }: FAQProps) {
           </div>
 
           {/* FAQ Content */}
-          <div className="lg:w-3/4">
+          <div className="w-full lg:w-3/4">
             {currentSection && (
-              <div className="bg-white rounded-xl shadow-lg p-8">
-                <h3 className={`text-2xl font-bold ${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE} mb-8`}>
+              <div className="bg-white rounded-xl shadow-lg p-4 sm:p-6 lg:p-8">
+                <h3 className={`text-xl sm:text-2xl font-bold ${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE} mb-6 sm:mb-8 px-2 sm:px-0`}>
                   {currentSection.title}
                 </h3>
                 
-                <div className="space-y-4">
+                <div className="space-y-3 sm:space-y-4">
                   {currentSection.items.map((item, index) => {
                     const itemKey = `${activeSection}-${index}`;
                     const isExpanded = expandedItems.has(itemKey);
@@ -254,19 +296,19 @@ export function FAQ({ className = '' }: FAQProps) {
                       >
                         <button
                           onClick={() => toggleItem(activeSection, index)}
-                          className="w-full px-6 py-4 text-left flex items-center justify-between bg-gray-50 hover:bg-gray-100 transition-colors duration-200"
+                          className="w-full px-4 sm:px-6 py-3 sm:py-4 text-left flex items-start sm:items-center justify-between bg-gray-50 hover:bg-gray-100 transition-colors duration-200 touch-manipulation"
                         >
-                          <span className={`font-semibold ${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE} pr-4`}>
+                          <span className={`font-semibold ${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE} pr-3 sm:pr-4 text-sm sm:text-base leading-tight sm:leading-normal`}>
                             {item.question}
                           </span>
-                          <ChevronDown className={`h-5 w-5 ${IMAS_TAILWIND_CLASSES.TEXT_TEAL} transition-transform duration-200 flex-shrink-0 ${
+                          <ChevronDown className={`h-4 w-4 sm:h-5 sm:w-5 ${IMAS_TAILWIND_CLASSES.TEXT_TEAL} transition-transform duration-200 flex-shrink-0 mt-0.5 sm:mt-0 ${
                             isExpanded ? 'rotate-180' : ''
                           }`} />
                         </button>
                         
                         {isExpanded && (
-                          <div className="px-6 py-4 bg-white border-t border-gray-200">
-                            <div className="text-gray-700 leading-relaxed whitespace-pre-line">
+                          <div className="px-4 sm:px-6 py-3 sm:py-4 bg-white border-t border-gray-200">
+                            <div className="text-gray-700 leading-relaxed whitespace-pre-line text-sm sm:text-base">
                               {item.answer}
                             </div>
                           </div>
