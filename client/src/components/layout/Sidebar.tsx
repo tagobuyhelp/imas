@@ -20,7 +20,8 @@ export function Sidebar({ currentPage, isOpen, onClose }: SidebarProps) {
     { href: '/programs', label: 'Programs', page: 'programs', icon: GraduationCap },
     { href: '/faculty', label: 'Faculty', page: 'faculty', icon: Users },
     { href: '/internships', label: 'Internships', page: 'internships', icon: Briefcase },
-    { href: '/gallery', label: 'Gallery', page: 'gallery', icon: Image },
+    { href: '/campus-life', label: 'Campus Life', page: 'campus-life', icon: Users },
+
     { href: '/contact', label: 'Contact', page: 'contact', icon: Phone },
   ];
 

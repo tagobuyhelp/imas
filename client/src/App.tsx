@@ -9,9 +9,10 @@ import { AboutPage } from './pages/AboutPage';
 import { FacultyPage } from './pages/FacultyPage';
 import { AdmissionsPage } from './pages/AdmissionsPage';
 
-import { GalleryPage } from './pages/GalleryPage';
+
 import { ContactPage } from './pages/ContactPage';
 import { InternshipPage } from './pages/InternshipPage';
+import { CampusLifePage } from './pages/CampusLifePage';
 
 function AppContent(): React.JSX.Element {
   const location = useLocation();
@@ -36,9 +37,10 @@ function AppContent(): React.JSX.Element {
         <Route path="/faculty" element={<FacultyPage />} />
         <Route path="/admissions" element={<AdmissionsPage />} />
         
-        <Route path="/gallery" element={<GalleryPage />} />
+
         <Route path="/contact" element={<ContactPage />} />
-          <Route path="/internships" element={<InternshipPage />} />
+        <Route path="/internships" element={<InternshipPage />} />
+        <Route path="/campus-life" element={<CampusLifePage />} />
       </Routes>
     </Layout>
   );

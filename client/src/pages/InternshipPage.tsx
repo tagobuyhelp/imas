@@ -5,6 +5,7 @@ import { Check, TrendingUp, Award, Globe } from 'lucide-react';
 import { IMAS_TAILWIND_CLASSES } from '../lib/constants';
 import { applyNow } from '../lib/utils';
 import { StickyCTAFooter } from '../components/layout/StickyCTAFooter';
+import { LearnersSection } from '../components/sections/Home/LearnersSection';
 
 export function InternshipPage() {
   const companyLogos = [
@@ -200,23 +201,7 @@ export function InternshipPage() {
       </section>
 
       {/* Success Stories Section */}
-      <section className="py-8 sm:py-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
-          <div className="text-center mb-6 sm:mb-12">
-            <h2 className="text-xl sm:text-3xl lg:text-4xl font-bold text-gray-800 mb-2 sm:mb-4 px-2">
-              Our Students' Success Stories
-            </h2>
-            <p className="text-gray-600 mb-4 sm:mb-8 text-sm sm:text-base px-2">
-              Video testimonials showcasing real impact and career transformation
-            </p>
-            <div className="bg-white rounded-xl sm:rounded-2xl p-6 sm:p-12 shadow-lg border border-gray-200">
-              <div className="text-gray-500 text-sm sm:text-lg">
-                [Video content to be provided by the company]
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <LearnersSection />
 
       {/* High-Impact Roles Section */}
       <section className="py-8 sm:py-16 bg-white">

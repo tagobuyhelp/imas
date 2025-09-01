@@ -88,19 +88,22 @@ export function Header({ currentPage, onMenuToggle }: HeaderProps) {
           { label: 'Roles', sectionId: 'roles' },
           { label: 'Apply Now', sectionId: 'cta' }
         ];
-      case 'gallery':
-        return [
-          { label: 'Gallery', sectionId: 'gallery-hero' },
-          { label: 'Photos', sectionId: 'photos' },
-          { label: 'Videos', sectionId: 'videos' },
-          { label: 'Events', sectionId: 'events' }
-        ];
+
       case 'contact':
         return [
           { label: 'Contact', sectionId: 'contact-hero' },
           { label: 'Information', sectionId: 'contact-info' },
           { label: 'Location', sectionId: 'location' },
           { label: 'Form', sectionId: 'contact-form' }
+        ];
+      case 'campus-life':
+        return [
+          { label: 'Overview', sectionId: 'campus-overview' },
+          { label: 'Student Experience', sectionId: 'student-experience' },
+          { label: 'Facilities', sectionId: 'facilities' },
+          { label: 'Community', sectionId: 'student-community' },
+          { label: 'Clubs & Societies', sectionId: 'business-clubs' },
+          { label: 'Industry Leaders', sectionId: 'industry-leaders' }
         ];
       default:
         // Default menu for program detail pages
@@ -297,14 +300,16 @@ export function Header({ currentPage, onMenuToggle }: HeaderProps) {
               </Link>
 
               <Link
-                to="/gallery"
+                to="/campus-life"
                 className={`${IMAS_TAILWIND_CLASSES.HOVER_TEXT_TEAL} transition-colors flex items-center gap-2 ${
-                  currentPage === 'gallery' ? IMAS_TAILWIND_CLASSES.TEXT_TEAL : ''
+                  currentPage === 'campus-life' ? IMAS_TAILWIND_CLASSES.TEXT_TEAL : ''
                 }`}
               >
-                <Image className="h-4 w-4" />
-                Gallery
+                <Users className="h-4 w-4" />
+                Campus Life
               </Link>
+
+
               <Link
                 to="/contact"
                 className={`${IMAS_TAILWIND_CLASSES.HOVER_TEXT_TEAL} transition-colors flex items-center gap-2 ${
@@ -391,10 +396,7 @@ export function Header({ currentPage, onMenuToggle }: HeaderProps) {
                     'Process': <FileText className="h-3 w-3" />,
                     'Apply': <FileText className="h-3 w-3" />,
                     'Apply Now': <FileText className="h-3 w-3" />,
-                    'Gallery': <Image className="h-3 w-3" />,
-                    'Photos': <Image className="h-3 w-3" />,
-                    'Videos': <Image className="h-3 w-3" />,
-                    'Events': <Calendar className="h-3 w-3" />,
+
                     'Contact': <Phone className="h-3 w-3" />,
                     'Information': <Phone className="h-3 w-3" />,
                     'Location': <Phone className="h-3 w-3" />,

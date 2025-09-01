@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Button } from '../components/ui/button';
-import { Search, X, Users, ArrowRight, FileText, GraduationCap, Plus, Minus, Award, Target, BookOpen, ChevronLeft, ChevronRight } from 'lucide-react';
-import { IMAS_TAILWIND_CLASSES } from '../lib/constants';
+import { Search, X, Users, ArrowRight, FileText, GraduationCap, Plus, Minus, Award, Target, BookOpen, ChevronLeft, ChevronRight, Phone, Mail } from 'lucide-react';
+import { IMAS_TAILWIND_CLASSES, IMAS_CONTACT } from '../lib/constants';
 import { StickyCTAFooter } from '../components/layout/StickyCTAFooter';
 import { downloadBrochure, applyNow } from '../lib/utils';
 
@@ -267,20 +267,20 @@ export function FacultyPage() {
       <style>{lineClampStyles}</style>
       <div className="min-h-screen bg-white">
         {/* Hero Section */}
-        <section id="faculty-hero" className="relative min-h-[60vh] sm:min-h-[70vh] md:min-h-[80vh] flex items-center justify-center overflow-hidden">
+        <section id="faculty-hero" className="relative min-h-[50vh] sm:min-h-[50vh] md:min-h-[55vh] flex items-center justify-center overflow-hidden bg-gray-900">
           {/* Background Image */}
           <div className="absolute inset-0 z-0">
             <img
               src="/uploads/imas_hero_image1.webp"
               alt="IMAS Faculty Hero Background"
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover opacity-80"
               onError={(e) => {
                 const target = e.target as HTMLImageElement;
                 target.style.display = 'none';
               }}
             />
-            {/* Enhanced Dark Overlay with Modern Gradient */}
-            <div className="absolute inset-0 bg-gradient-to-br from-slate-900/90 via-blue-900/80 to-cyan-900/90"></div>
+            {/* Enhanced Dark Overlay */}
+            <div className="absolute inset-0 bg-gray-900/80"></div>
             {/* Animated Pattern Overlay */}
             <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 via-transparent to-cyan-600/10 animate-pulse"></div>
           </div>
@@ -296,7 +296,7 @@ export function FacultyPage() {
           <div className="relative z-10 max-w-[1550px] mx-auto px-4 text-center">
             {/* Animated Badge */}
             <div className="inline-block mb-4 sm:mb-6 md:mb-8 animate-fade-in-up">
-              <div className={`${IMAS_TAILWIND_CLASSES.BG_MEDIUM_BLUE} text-white px-3 py-2 sm:px-4 sm:py-2 md:px-6 md:py-3 rounded-full text-xs sm:text-sm font-bold shadow-2xl border border-white/20 backdrop-blur-sm`}>
+              <div className={`bg-transparent text-white px-3 py-2 sm:px-4 sm:py-2 md:px-6 md:py-3 rounded-full text-xs sm:text-sm font-bold shadow-2xl border border-white/20 backdrop-blur-sm`}>
                 <Users className="inline-block w-3 h-3 sm:w-4 sm:h-4 mr-1 sm:mr-2" />
                 <span className="hidden sm:inline">OUR DISTINGUISHED FACULTIES</span>
                 <span className="sm:hidden">OUR FACULTIES</span>
@@ -306,10 +306,8 @@ export function FacultyPage() {
             {/* Main Heading with Animation */}
             <div className="mb-4 sm:mb-6 md:mb-8 animate-fade-in-up animation-delay-200">
               <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-3 sm:mb-4 md:mb-6 leading-tight px-2">
-                <span className="block sm:inline">Meet Our</span>{' '}
-                <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent block sm:inline">
-                  Esteemed Faculty
-                </span>
+                <span className="block sm:inline">Meet Our Esteemed Faculty</span>{' '}
+                
               </h1>
               <p className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-gray-200 max-w-4xl mx-auto leading-relaxed font-light px-4 mb-6">
                 <span className="hidden sm:inline">World-class education begins with world-class educators.</span>
@@ -322,7 +320,7 @@ export function FacultyPage() {
               <Button
                 size="lg"
                 onClick={applyNow}
-                className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-6 py-3 sm:px-8 sm:py-3 md:px-10 md:py-4 text-sm sm:text-base md:text-lg font-semibold shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300 transform hover:scale-105 border border-white/20 backdrop-blur-sm w-full sm:w-auto group"
+                className="bg-white text-black px-6 py-3 sm:px-8 sm:py-3 md:px-10 md:py-4 text-sm sm:text-base md:text-lg font-semibold shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300 transform hover:scale-105 border border-white/20 backdrop-blur-sm w-full sm:w-auto group"
               >
                 <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 mr-2 sm:mr-3 group-hover:translate-x-1 transition-transform duration-300" />
                 Apply Now
@@ -357,16 +355,16 @@ export function FacultyPage() {
           <div className="max-w-[1550px] mx-auto px-4">
             {/* Section Header */}
             <div className="text-center mb-12">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-6">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-6 animate-fade-in-up">
                 Our <span className={`${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE}`}>Faculty Directory</span>
               </h2>
-              <p className="text-gray-600 text-base sm:text-lg max-w-5xl mx-auto leading-relaxed mb-8">
+              <p className="text-gray-600 text-base sm:text-lg max-w-5xl mx-auto leading-relaxed mb-8 animate-fade-in-up animation-delay-200">
                 Our professors not only teach, but they mentor, inspire, and shape the next generation of business leaders, innovators, and entrepreneurs. With a perfect blend of academic rigour and industry relevance, the IMAS faculty team ensures every student is industry-ready and future-focused.
               </p>
             </div>
 
             {/* Search and Filter Section */}
-            <div className="mb-8">
+            <div className="mb-8 animate-fade-in-up animation-delay-400">
               {/* Search Bar */}
               <div className="relative max-w-md mx-auto mb-6">
                 <label htmlFor="faculty-search" className="sr-only">Search faculty by name or expertise</label>
@@ -494,10 +492,10 @@ export function FacultyPage() {
                   {/* Desktop Grid */}
                   <div className="hidden md:grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
                     {getFilteredFaculty().map((member) => (
-                      <div key={member.id} className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 group border border-gray-100 hover:border-cyan-200 transform hover:-translate-y-2 overflow-hidden">
+                      <div key={member.id} className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 group border border-gray-100 hover:border-blue-200 transform hover:-translate-y-2 overflow-hidden">
                         {/* Enhanced Image Section */}
                         <div className="relative flex justify-center pt-8 pb-6">
-                          <div className="relative w-28 h-28 rounded-full overflow-hidden border-4 border-gradient-to-r from-cyan-200 to-blue-200 group-hover:border-gradient-to-r group-hover:from-cyan-400 group-hover:to-blue-400 transition-all duration-500 shadow-lg">
+                          <div className={`relative w-28 h-28 rounded-full overflow-hidden border-4 border-gray-200 group-hover:border-${IMAS_TAILWIND_CLASSES.BORDER_MEDIUM_BLUE} transition-all duration-500 shadow-lg`}>
                             <img
                               src={member.image}
                               alt={`${member.name} - ${member.title}`}
@@ -508,18 +506,18 @@ export function FacultyPage() {
                               }}
                             />
                             {/* Gradient overlay on hover */}
-                            <div className="absolute inset-0 bg-gradient-to-t from-cyan-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                            <div className={`absolute inset-0 bg-gradient-to-t from-${IMAS_TAILWIND_CLASSES.BG_MEDIUM_BLUE}/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
                           </div>
                           {/* Floating badge */}
-                          <div className="absolute top-4 right-4 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-xs px-3 py-1 rounded-full font-semibold opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-2 group-hover:translate-y-0">
+                          <div className={`absolute top-4 right-4 ${IMAS_TAILWIND_CLASSES.GRADIENT_PRIMARY} text-white text-xs px-3 py-1 rounded-full font-semibold opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-2 group-hover:translate-y-0`}>
                             {member.title.includes('Professor') ? 'Faculty' : 'Leader'}
                           </div>
                         </div>
 
                         {/* Enhanced Content Section */}
                         <div className="px-6 pb-8 text-center">
-                          <h3 className="text-xl font-bold text-gray-800 mb-3 font-serif group-hover:text-cyan-700 transition-colors duration-300">{member.name}</h3>
-                          <p className={`text-sm font-semibold mb-3 bg-gradient-to-r from-cyan-600 to-blue-600 bg-clip-text text-transparent`}>
+                          <h3 className={`text-xl font-bold text-gray-800 mb-3 font-serif group-hover:${IMAS_TAILWIND_CLASSES.TEXT_MEDIUM_BLUE} transition-colors duration-300`}>{member.name}</h3>
+                          <p className={`text-sm font-semibold mb-3 }`}>
                             {member.title}
                           </p>
                           <p className="text-xs text-gray-500 mb-4 font-medium">{member.qualifications}</p>
@@ -533,7 +531,7 @@ export function FacultyPage() {
                             </p>
                             <button
                               onClick={() => toggleCardExpansion(member.id)}
-                              className="text-cyan-600 hover:text-cyan-700 text-sm font-semibold mt-2 flex items-center justify-center mx-auto bg-cyan-50 hover:bg-cyan-100 px-4 py-2 rounded-full transition-all duration-300 group/btn"
+                              className={`${IMAS_TAILWIND_CLASSES.TEXT_MEDIUM_BLUE} hover:${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE} text-sm font-semibold mt-2 flex items-center justify-center mx-auto ${IMAS_TAILWIND_CLASSES.BG_MEDIUM_BLUE}/10 hover:${IMAS_TAILWIND_CLASSES.BG_MEDIUM_BLUE}/20 px-4 py-2 rounded-full transition-all duration-300 group/btn`}
                             >
                               {expandedCards.has(member.id) ? (
                                 <><Minus className="w-4 h-4 mr-2 group-hover/btn:scale-110 transition-transform duration-300" /> Show less</>
@@ -545,7 +543,7 @@ export function FacultyPage() {
 
                           {/* Enhanced Expertise */}
                           <div className="flex items-center justify-center text-sm text-gray-600 mb-4 bg-gray-50 rounded-lg py-2 px-4">
-                            <GraduationCap className="w-5 h-5 mr-2 text-cyan-600" />
+                            <GraduationCap className={`w-5 h-5 mr-2 ${IMAS_TAILWIND_CLASSES.TEXT_MEDIUM_BLUE}`} />
                             <span className="font-medium">{member.expertise}</span>
                           </div>
 
@@ -554,7 +552,7 @@ export function FacultyPage() {
                             {member.tags.map(tag => (
                               <span
                                 key={tag}
-                                className="px-3 py-1 bg-gradient-to-r from-cyan-500 to-blue-600 text-white text-xs rounded-full font-semibold shadow-md hover:shadow-lg transition-shadow duration-300 transform hover:scale-105"
+                                className={`px-3 py-1 ${IMAS_TAILWIND_CLASSES.GRADIENT_PRIMARY} text-white text-xs rounded-full font-semibold shadow-md hover:shadow-lg transition-shadow duration-300 transform hover:scale-105`}
                               >
                                 {tag}
                               </span>
@@ -690,7 +688,7 @@ export function FacultyPage() {
                                 {member.tags.slice(0, 3).map(tag => (
                                   <span
                                     key={tag}
-                                    className={`px-2 py-1 ${IMAS_TAILWIND_CLASSES.BG_TEAL} text-white text-xs rounded-full font-medium`}
+                                    className={`px-2 py-1 ${IMAS_TAILWIND_CLASSES.GRADIENT_PRIMARY} text-white text-xs rounded-full font-medium shadow-md hover:shadow-lg transition-shadow duration-300 transform hover:scale-105`}
                                   >
                                     {tag}
                                   </span>
@@ -776,70 +774,72 @@ export function FacultyPage() {
               </div>
             </div>
 
-            {/* Enhanced Call to Action Section */}
-            <div className="relative bg-gradient-to-br from-slate-900 via-blue-900 to-cyan-900 rounded-3xl p-8 md:p-16 text-center text-white overflow-hidden">
-              {/* Animated Background Elements */}
-              <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                <div className="absolute top-0 left-0 w-72 h-72 bg-gradient-to-r from-cyan-400/20 to-blue-400/20 rounded-full blur-3xl animate-float"></div>
-                <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-r from-blue-400/15 to-cyan-400/15 rounded-full blur-3xl animate-float-delayed"></div>
-              </div>
-              
-              <div className="relative z-10">
-                <div className="inline-block mb-6 animate-fade-in-up">
-                  <div className="bg-gradient-to-r from-cyan-500 to-blue-600 text-white px-6 py-3 rounded-full text-sm font-bold shadow-2xl border border-white/20 backdrop-blur-sm">
-                    <Users className="inline-block w-4 h-4 mr-2" />
-                    ADMISSIONS OPEN 2025
-                  </div>
-                </div>
-                
-                <h3 className="text-3xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-cyan-200 bg-clip-text text-transparent animate-fade-in-up animation-delay-200">
-                  Start Your Journey with
-                  <span className="block bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
-                    IMAS Faculty
-                  </span>
-                </h3>
-                
-                <p className="text-lg md:text-xl mb-8 opacity-90 max-w-4xl mx-auto leading-relaxed animate-fade-in-up animation-delay-400">
-                  Avail Education Loans, IMAS Scholarship 2025, and transform your career with a management degree from one of the Best Business School in Kolkata.
-                </p>
-                
-                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8 animate-fade-in-up animation-delay-600">
-                  <Button 
-                    onClick={applyNow}
-                    className="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-8 py-4 rounded-xl font-semibold shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300 transform hover:scale-105 border border-white/20 backdrop-blur-sm group"
-                  >
-                    <ArrowRight className="w-5 h-5 mr-2 group-hover:translate-x-1 transition-transform duration-300" />
-                    Apply Now for IMAS Admission 2025
-                  </Button>
-                  <Button 
-                    variant="outline" 
-                    className="border-2 border-white/30 bg-white/10 text-white hover:bg-white hover:text-blue-900 px-6 py-4 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 backdrop-blur-sm"
-                  >
-                    Enquire Now
-                  </Button>
-                  <Button 
-                    variant="outline" 
-                    onClick={downloadBrochure}
-                    className="border-2 border-white/30 bg-white/10 text-white hover:bg-white hover:text-blue-900 px-6 py-4 rounded-xl font-semibold transition-all duration-300 transform hover:scale-105 backdrop-blur-sm"
-                  >
-                    <FileText className="w-4 h-4 mr-2" />
-                    Download Brochure
-                  </Button>
-                </div>
-                
-                <div className="animate-fade-in-up animation-delay-800">
-                  <Button className="bg-white/20 hover:bg-white/30 text-white px-8 py-3 rounded-xl font-semibold transition-all duration-300 backdrop-blur-sm border border-white/20">
-                    View Programmes
-                  </Button>
-                </div>
-                
-                <p className="mt-8 text-sm opacity-75 animate-fade-in-up animation-delay-1000">
-                  IMAS Kolkata. Transforming Ambitions into Careers.
-                </p>
-              </div>
-            </div>
+            
           </div>
         </section>
+
+        {/* CTA Section - Matching Home Page */}
+            <section id="final-cta" className="relative py-16  bg-gray-900 text-white overflow-hidden">
+              {/* Background Image */}
+              <div className="absolute inset-0">
+                <img 
+                  src="/uploads/IMASBUILDING.jpeg" 
+                  alt="IMAS Building" 
+                  className="w-full h-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gray-900/80"></div>
+              </div>
+              
+              <div className="relative max-w-[1260px] mx-auto px-4 text-center z-10">
+                <div className="max-w-4xl mx-auto">
+                  <div className={`inline-block ${IMAS_TAILWIND_CLASSES.BG_MEDIUM_BLUE} text-white px-6 py-2 rounded-full text-sm font-semibold mb-6`}>
+                    ADMISSIONS OPEN
+                  </div>
+                  <h2 className="text-3xl sm:text-4xl font-bold mb-6">
+                    Ready to Transform Your Career?
+                  </h2>
+                  <p className="text-lg sm:text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                    Join IMAS College Kolkata and become part of a community that's shaping the future of business leadership.
+                  </p>
+
+                  {/* Contact Information */}
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                    <div className="flex items-center justify-center gap-3">
+                      <Phone className="h-5 w-5 text-teal-400" />
+                      <span className="text-gray-300">{IMAS_CONTACT.PHONE}</span>
+                    </div>
+                    <div className="flex items-center justify-center gap-3">
+                      <Mail className="h-5 w-5 text-teal-400" />
+                      <span className="text-gray-300">{IMAS_CONTACT.EMAIL}</span>
+                    </div>
+                  </div>
+
+                  {/* CTA Buttons */}
+                  <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
+                    <Button 
+                      className={`${IMAS_TAILWIND_CLASSES.GRADIENT_PRIMARY} hover:from-[#2e7bb3] hover:to-[#26c1d3] text-white px-8 sm:px-10 lg:px-12 py-3 sm:py-4 text-sm sm:text-base lg:text-lg font-semibold hover:scale-105 transition-all duration-300`}
+                      onClick={applyNow}
+                    >
+                      Apply Now
+                      <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
+                    </Button>
+                    <Button 
+                      variant="outline" 
+                      className="border-white bg-transparent text-white hover:bg-white hover:text-gray-900 px-8 sm:px-10 lg:px-12 py-3 sm:py-4 text-sm sm:text-base lg:text-lg font-semibold hover:scale-105 transition-all duration-300"
+                      onClick={downloadBrochure}
+                    >
+                      Download Brochure
+                    </Button>
+                  </div>
+
+                  {/* Additional Info */}
+                  <div className="mt-8 text-sm text-gray-400">
+                    <p>Application Deadline: <span className="text-red-400 font-semibold">24th August 2025</span></p>
+                    <p className="mt-2">Limited seats available for the 2025 batch</p>
+                  </div>
+                </div>
+              </div>
+            </section>
 
         {/* Sticky CTA Footer */}
         <StickyCTAFooter heroSectionHeight={700} />
