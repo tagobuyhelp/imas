@@ -281,7 +281,8 @@ export function AdmissionsPage(): React.JSX.Element {
 
       <div className="min-h-screen bg-gray-50">
         {/* Hero Section */}
-        <section id="admissions-hero" className="bg-gray-900 text-white min-h-[70vh] relative overflow-hidden">
+        <section id="admissions-hero" className="bg-gray-900 text-white min-h-[70vh] relative overflow-hidden" style={{ backgroundImage: "url('/uploads/imas_hero_image1.webp')", backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
+          <div className="absolute inset-0 bg-black/80" aria-hidden="true"></div>
           {/* Animated Background Elements */}
           <div className="absolute inset-0 overflow-hidden">
             <div className={`absolute top-20 left-10 w-20 h-20 ${IMAS_TAILWIND_CLASSES.BG_MEDIUM_BLUE}/10 rounded-full animate-pulse`}></div>
