@@ -373,41 +373,41 @@ export function Header({ currentPage, onMenuToggle }: HeaderProps) {
                 const getIcon = (label: string) => {
                   // Map common labels to icons
                   const iconMap: { [key: string]: React.ReactNode } = {
-                    'Home': <Home className="h-3 w-3" />,
-                    'Hero': <Home className="h-3 w-3" />,
-                    'Overview': <Home className="h-3 w-3" />,
-                    'Programs': <GraduationCap className="h-3 w-3" />,
-                    'Program Highlights': <GraduationCap className="h-3 w-3" />,
-                    'Curriculum': <BookOpen className="h-3 w-3" />,
-                    'Faculty': <Users className="h-3 w-3" />,
-                    'Academic Leaders': <Users className="h-3 w-3" />,
-                    'Industry Experts': <Users className="h-3 w-3" />,
-                    'Instructors & Mentors': <Users className="h-3 w-3" />,
-                    'Mentors': <Users className="h-3 w-3" />,
-                    'About': <BookOpen className="h-3 w-3" />,
-                    'About the program': <GraduationCap className="h-3 w-3" />,
-                    'About IMAS': <BookOpen className="h-3 w-3" />,
-                    'Campus Life': <Image className="h-3 w-3" />,
+                    'Home': <Home className="h-4 w-4" />,
+                    'Hero': <Home className="h-4 w-4" />,
+                    'Overview': <Home className="h-4 w-4" />,
+                    'Programs': <GraduationCap className="h-4 w-4" />,
+                    'Program Highlights': <GraduationCap className="h-4 w-4" />,
+                    'Curriculum': <BookOpen className="h-4 w-4" />,
+                    'Faculty': <Users className="h-4 w-4" />,
+                    'Academic Leaders': <Users className="h-4 w-4" />,
+                    'Industry Experts': <Users className="h-4 w-4" />,
+                    'Instructors & Mentors': <Users className="h-4 w-4" />,
+                    'Mentors': <Users className="h-4 w-4" />,
+                    'About': <BookOpen className="h-4 w-4" />,
+                    'About the program': <GraduationCap className="h-4 w-4" />,
+                    'About IMAS': <BookOpen className="h-4 w-4" />,
+                    'Campus Life': <Image className="h-4 w-4" />,
 
-                    'Careers': <Users className="h-3 w-3" />,
-                    'Eligibility': <FileText className="h-3 w-3" />,
-                    'Placement': <Users className="h-3 w-3" />,
-                    'Statistics': <Users className="h-3 w-3" />,
-                    'Recruiters': <Users className="h-3 w-3" />,
-                    'Success Stories': <Users className="h-3 w-3" />,
-                    'Admissions': <FileText className="h-3 w-3" />,
-                    'Process': <FileText className="h-3 w-3" />,
-                    'Apply': <FileText className="h-3 w-3" />,
-                    'Apply Now': <FileText className="h-3 w-3" />,
+                    'Careers': <Users className="h-4 w-4" />,
+                    'Eligibility': <FileText className="h-4 w-4" />,
+                    'Placement': <Users className="h-4 w-4" />,
+                    'Statistics': <Users className="h-4 w-4" />,
+                    'Recruiters': <Users className="h-4 w-4" />,
+                    'Success Stories': <Users className="h-4 w-4" />,
+                    'Admissions': <FileText className="h-4 w-4" />,
+                    'Process': <FileText className="h-4 w-4" />,
+                    'Apply': <FileText className="h-4 w-4" />,
+                    'Apply Now': <FileText className="h-4 w-4" />,
 
-                    'Contact': <Phone className="h-3 w-3" />,
-                    'Information': <Phone className="h-3 w-3" />,
-                    'Location': <Phone className="h-3 w-3" />,
-                    'Form': <Phone className="h-3 w-3" />,
-                    'Vision': <BookOpen className="h-3 w-3" />,
-                    'Why Choose': <BookOpen className="h-3 w-3" />
+                    'Contact': <Phone className="h-4 w-4" />,
+                    'Information': <Phone className="h-4 w-4" />,
+                    'Location': <Phone className="h-4 w-4" />,
+                    'Form': <Phone className="h-4 w-4" />,
+                    'Vision': <BookOpen className="h-4 w-4" />,
+                    'Why Choose': <BookOpen className="h-4 w-4" />
                   };
-                  return iconMap[label] || <Home className="h-3 w-3" />;
+                  return iconMap[label] || <Home className="h-4 w-4" />;
                 };
 
                 const scrollToSection = (sectionId: string) => {
@@ -430,7 +430,7 @@ export function Header({ currentPage, onMenuToggle }: HeaderProps) {
                   <button
                     key={menuItem.label}
                     onClick={handleClick}
-                    className={`flex-shrink-0 px-3 py-2 rounded-lg text-xs font-medium transition-all duration-300 whitespace-nowrap flex items-center gap-2 ${activeTab === menuItem.label
+                    className={`flex-shrink-0 px-3 py-2 rounded-lg text-sm font-medium transition-all duration-300 whitespace-nowrap flex items-center gap-2 ${activeTab === menuItem.label
                         ? `${IMAS_TAILWIND_CLASSES.BG_TEAL} ${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE} shadow-md`
                         : `text-gray-300 ${IMAS_TAILWIND_CLASSES.HOVER_TEXT_TEAL} hover:bg-gray-800`
                       }`}
