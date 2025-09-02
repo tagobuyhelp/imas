@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
-import { X, Phone, Check } from 'lucide-react';
+import { X, Phone, Check, Loader2, AlertCircle } from 'lucide-react';
 import { IoLogoWhatsapp } from "react-icons/io";
 import { IMAS_TAILWIND_CLASSES } from '../../lib/constants';
+import { apiService, AdvisorInquiryData } from '../../lib/api';
+import { Alert, AlertDescription } from '../ui/alert';
+import { useToast } from '../../hooks/use-toast';
 
 interface AdvisorModalProps {
   isOpen: boolean;
@@ -9,16 +12,22 @@ interface AdvisorModalProps {
 }
 
 export function AdvisorModal({ isOpen, onClose }: AdvisorModalProps) {
+  const { toast } = useToast();
   const [formData, setFormData] = useState({
     email: '',
     name: '',
-    graduationYear: '',
-    examTaken: '',
-    employer: '',
-    countryCode: '+91',
-    mobile: '',
-    whatsappEnabled: true,
+    phone: '',
+    currentEducation: '',
+    interestedPrograms: [] as string[],
+    careerGoals: '',
+    specificQuestions: '',
+    preferredContactMethod: 'email',
+    urgency: 'medium',
+    countryCode: '+1',
+    whatsappEnabled: false,
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
 
   const handleInputChange = (field: string, value: string | boolean) => {
     setFormData(prev => ({
@@ -27,11 +36,66 @@ export function AdvisorModal({ isOpen, onClose }: AdvisorModalProps) {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Handle form submission here
-    onClose();
+    setIsSubmitting(true);
+    setErrorMessage('');
+
+    try {
+      const advisorData: AdvisorInquiryData = {
+        personalDetails: {
+          name: formData.name,
+          email: formData.email,
+          phone: `${formData.countryCode}${formData.phone}`,
+          currentEducation: formData.currentEducation,
+        },
+        inquiryDetails: {
+          interestedPrograms: formData.interestedPrograms,
+          careerGoals: formData.careerGoals,
+          specificQuestions: formData.specificQuestions,
+          preferredContactMethod: formData.whatsappEnabled ? 'whatsapp' : formData.preferredContactMethod,
+          urgency: formData.urgency,
+        },
+      };
+
+      const response = await apiService.advisor.submit(advisorData);
+
+      if (response.success) {
+        toast({
+          title: "Inquiry Submitted Successfully!",
+          description: "Our advisor will contact you within 24 hours.",
+        });
+        
+        // Reset form
+        setFormData({
+          email: '',
+          name: '',
+          phone: '',
+          currentEducation: '',
+          interestedPrograms: [],
+          careerGoals: '',
+          specificQuestions: '',
+          preferredContactMethod: 'email',
+          urgency: 'medium',
+          countryCode: '+1',
+          whatsappEnabled: false,
+        });
+        
+        onClose();
+      } else {
+        setErrorMessage(response.message || 'Failed to submit inquiry. Please try again.');
+      }
+    } catch (error: any) {
+      console.error('Error submitting advisor inquiry:', error);
+      setErrorMessage(error.message || 'An unexpected error occurred. Please try again.');
+      toast({
+        title: "Submission Failed",
+        description: "Please check your connection and try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   if (!isOpen) return null;
@@ -105,6 +169,16 @@ export function AdvisorModal({ isOpen, onClose }: AdvisorModalProps) {
               </label>
             </div>
 
+            {/* Error Message */}
+            {errorMessage && (
+              <Alert className="border-red-200 bg-red-50">
+                <AlertCircle className="h-4 w-4 text-red-600" />
+                <AlertDescription className="text-red-700">
+                  {errorMessage}
+                </AlertDescription>
+              </Alert>
+            )}
+
             {/* Email */}
             <div>
               <input
@@ -113,6 +187,7 @@ export function AdvisorModal({ isOpen, onClose }: AdvisorModalProps) {
                 value={formData.email}
                 onChange={(e) => handleInputChange('email', e.target.value)}
                 className="w-full px-3 py-2 sm:px-3 sm:py-2.5 lg:px-3 lg:py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm sm:text-base lg:text-sm"
+                disabled={isSubmitting}
                 required
               />
             </div>
@@ -125,51 +200,46 @@ export function AdvisorModal({ isOpen, onClose }: AdvisorModalProps) {
                 value={formData.name}
                 onChange={(e) => handleInputChange('name', e.target.value)}
                 className="w-full px-3 py-2 sm:px-3 sm:py-2.5 lg:px-3 lg:py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm sm:text-base lg:text-sm"
+                disabled={isSubmitting}
                 required
               />
             </div>
 
-            {/* Graduation Year */}
-            <div>
-              <select
-                value={formData.graduationYear}
-                onChange={(e) => handleInputChange('graduationYear', e.target.value)}
-                className="w-full px-3 py-2 sm:px-3 sm:py-2.5 lg:px-3 lg:py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm sm:text-base lg:text-sm"
-                required
-              >
-                <option value="">Select your graduation year</option>
-                <option value="2024">2024</option>
-                <option value="2023">2023</option>
-                <option value="2022">2022</option>
-                <option value="2021">2021</option>
-                <option value="2020">2020</option>
-              </select>
-            </div>
-
-            {/* Exam Taken */}
-            <div>
-              <select
-                value={formData.examTaken}
-                onChange={(e) => handleInputChange('examTaken', e.target.value)}
-                className="w-full px-3 py-2 sm:px-3 sm:py-2.5 lg:px-3 lg:py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm sm:text-base lg:text-sm"
-                required
-              >
-                <option value="">Have you taken GMAT/GRE/CAT?</option>
-                <option value="GMAT">GMAT</option>
-                <option value="GRE">GRE</option>
-                <option value="CAT">CAT</option>
-                <option value="None">None</option>
-              </select>
-            </div>
-
-            {/* Employer */}
+            {/* Current Education */}
             <div>
               <input
                 type="text"
-                placeholder="Enter your most recent employer"
-                value={formData.employer}
-                onChange={(e) => handleInputChange('employer', e.target.value)}
+                placeholder="Current Education Level (e.g., Bachelor's in Engineering)"
+                value={formData.currentEducation}
+                onChange={(e) => handleInputChange('currentEducation', e.target.value)}
                 className="w-full px-3 py-2 sm:px-3 sm:py-2.5 lg:px-3 lg:py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm sm:text-base lg:text-sm"
+                disabled={isSubmitting}
+                required
+              />
+            </div>
+
+            {/* Career Goals */}
+            <div>
+              <textarea
+                placeholder="What are your career goals?"
+                value={formData.careerGoals}
+                onChange={(e) => handleInputChange('careerGoals', e.target.value)}
+                className="w-full px-3 py-2 sm:px-3 sm:py-2.5 lg:px-3 lg:py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm sm:text-base lg:text-sm"
+                rows={3}
+                disabled={isSubmitting}
+                required
+              />
+            </div>
+
+            {/* Specific Questions */}
+            <div>
+              <textarea
+                placeholder="Any specific questions about our programs?"
+                value={formData.specificQuestions}
+                onChange={(e) => handleInputChange('specificQuestions', e.target.value)}
+                className="w-full px-3 py-2 sm:px-3 sm:py-2.5 lg:px-3 lg:py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm sm:text-base lg:text-sm"
+                rows={2}
+                disabled={isSubmitting}
               />
             </div>
 
@@ -179,6 +249,7 @@ export function AdvisorModal({ isOpen, onClose }: AdvisorModalProps) {
                 value={formData.countryCode}
                 onChange={(e) => handleInputChange('countryCode', e.target.value)}
                 className="px-3 py-2 sm:px-3 sm:py-2.5 lg:px-3 lg:py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm sm:text-base lg:text-sm"
+                disabled={isSubmitting}
               >
                 <option value="+91">+91</option>
                 <option value="+1">+1</option>
@@ -187,9 +258,10 @@ export function AdvisorModal({ isOpen, onClose }: AdvisorModalProps) {
               <input
                 type="tel"
                 placeholder="Enter Mobile Number"
-                value={formData.mobile}
-                onChange={(e) => handleInputChange('mobile', e.target.value)}
+                value={formData.phone}
+                onChange={(e) => handleInputChange('phone', e.target.value)}
                 className="flex-1 px-3 py-2 sm:px-3 sm:py-2.5 lg:px-3 lg:py-2.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm sm:text-base lg:text-sm"
+                disabled={isSubmitting}
                 required
               />
             </div>
@@ -202,8 +274,9 @@ export function AdvisorModal({ isOpen, onClose }: AdvisorModalProps) {
               </div>
               <button
                 type="button"
+                disabled={isSubmitting}
                 onClick={() => handleInputChange('whatsappEnabled', !formData.whatsappEnabled)}
-                className={`w-8 h-4 sm:w-10 sm:h-5 lg:w-10 lg:h-5 rounded-full transition-colors ${
+                className={`w-8 h-4 sm:w-10 sm:h-5 lg:w-10 lg:h-5 rounded-full transition-colors disabled:opacity-50 ${
                   formData.whatsappEnabled ? 'bg-green-500' : 'bg-gray-300'
                 }`}
               >
@@ -223,9 +296,17 @@ export function AdvisorModal({ isOpen, onClose }: AdvisorModalProps) {
             {/* Submit Button */}
             <button
               type="submit"
-              className={`w-full py-2.5 sm:py-3 lg:py-3 ${IMAS_TAILWIND_CLASSES.BG_DARK_BLUE} text-white rounded-lg font-bold text-sm sm:text-base lg:text-base hover:bg-opacity-90 transition-colors`}
+              disabled={isSubmitting}
+              className={`w-full py-2.5 sm:py-3 lg:py-3 ${IMAS_TAILWIND_CLASSES.BG_DARK_BLUE} text-white rounded-lg font-bold text-sm sm:text-base lg:text-base hover:bg-opacity-90 transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2`}
             >
-              Proceed
+              {isSubmitting ? (
+                <>
+                  <Loader2 className="w-4 h-4 animate-spin" />
+                  Processing...
+                </>
+              ) : (
+                'Proceed'
+              )}
             </button>
           </form>
         </div>

@@ -28,7 +28,6 @@ export function Layout({ children, currentPage }: LayoutProps) {
       {/* Header */}
       <Header 
         onMenuToggle={handleMenuToggle} 
-        isMenuOpen={isSidebarOpen}
         currentPage={currentPage}
       />
       

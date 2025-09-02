@@ -36,6 +36,10 @@ o	"Your Gateway to Corporate Success"
 •	Email: admission@imas.ac.in
 •	Phone Numbers:
 o	+91 9088822777 (Primary Contact)
+•	Campus Addresses:
+o	Bengal Intelligent Park Campus: Delta Wing Block EP & GP, Plot A2 & M2, Sector V, Kolkata, West Bengal 700091
+o	Main Campus: Plot No: 33 & 37, Near St. Xavier's University Newtown Action Area III, Block - Bhangor – II, Kolkata - 700135
+•	Google Maps Location: Delta, SALT LAKE, Bengal Intelligent Park EP &, Plot A2 & B2, GP Block, Sector V, Kolkata, West Bengal 700091
 7. Templates & Guidelines
 •	Social Media Post Templates: Branded templates for announcements, events, and achievements
 •	Poster & Brochure Design Guide: Ensuring visual consistency across print and digital media
