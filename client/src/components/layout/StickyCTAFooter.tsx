@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { Plus, MessageCircle } from 'lucide-react';
+import { Plus, MessageCircle, Send } from 'lucide-react';
+import { IoLogoWhatsapp } from 'react-icons/io';
 import { IMAS_TAILWIND_CLASSES } from '../../lib/constants';
-import { AdvisorModal } from './AdvisorModal';
 import { applyNow } from '../../lib/utils';
 
 interface StickyCTAFooterProps {
@@ -10,10 +10,10 @@ interface StickyCTAFooterProps {
   primaryButtonText?: string;
   onPrimaryClick?: () => void;
   onFloatingClick?: () => void;
-  onAdvisorClick?: () => void;
+  onWhatsAppClick?: () => void;
   onPhoneClick?: () => void;
   showFloatingButton?: boolean;
-  showAdvisorButton?: boolean;
+  showWhatsAppButton?: boolean;
   floatingButtonIcon?: React.ReactNode;
   heroSectionHeight?: number; // Height of hero section in pixels
 }
@@ -24,16 +24,15 @@ export function StickyCTAFooter({
   primaryButtonText = "Apply Now",
   onPrimaryClick = applyNow,
   onFloatingClick = applyNow,
-  onAdvisorClick,
+  onWhatsAppClick,
   onPhoneClick,
   showFloatingButton = true,
-  showAdvisorButton = true,
-  floatingButtonIcon = <Plus className="w-6 h-6 group-hover:scale-110 transition-transform duration-200" />,
+  showWhatsAppButton = true,
+  floatingButtonIcon = <Send className="w-6 h-6 group-hover:scale-110 transition-transform duration-200" />,
   heroSectionHeight = 600 // Default hero section height
 }: StickyCTAFooterProps) {
   const [isVisible, setIsVisible] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
-  const [isAdvisorModalOpen, setIsAdvisorModalOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -59,10 +58,14 @@ export function StickyCTAFooter({
     return () => window.removeEventListener('scroll', handleScroll);
   }, [lastScrollY, heroSectionHeight]);
 
-  const handleAdvisorClick = () => {
-    setIsAdvisorModalOpen(true);
-    if (onAdvisorClick) {
-      onAdvisorClick();
+  const handleWhatsAppClick = () => {
+    const whatsappNumber = '919088822777';
+    const message = encodeURIComponent('Hi! I am interested in IMAS programs. Can you help me with more information?');
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${message}`;
+    window.open(whatsappUrl, '_blank');
+    
+    if (onWhatsAppClick) {
+      onWhatsAppClick();
     }
   };
 
@@ -72,10 +75,6 @@ export function StickyCTAFooter({
     } else {
       console.log('Phone clicked');
     }
-  };
-
-  const handleCloseModal = () => {
-    setIsAdvisorModalOpen(false);
   };
 
   return (
@@ -119,7 +118,7 @@ export function StickyCTAFooter({
       {/* Floating Apply Now Button (Mobile) */}
       {showFloatingButton && (
         <div className="md:hidden fixed bottom-20 right-4 z-40">
-          <button 
+          <button
             onClick={onFloatingClick || onPrimaryClick}
             className={`w-12 h-12 ${IMAS_TAILWIND_CLASSES.BG_TEAL} text-white rounded-full shadow-xl hover:shadow-2xl transition-all duration-300 flex items-center justify-center group`}
           >
@@ -128,16 +127,16 @@ export function StickyCTAFooter({
         </div>
       )}
 
-      {/* Floating Advisor Button */}
-      {showAdvisorButton && (
+      {/* Floating WhatsApp Button */}
+      {showWhatsAppButton && (
         <div className="fixed bottom-4 right-4 z-40">
-          {/* Main Advisor Button */}
+          {/* Main WhatsApp Button */}
           <button
-            onClick={handleAdvisorClick}
+            onClick={handleWhatsAppClick}
             className="bg-white border-2 border-green-600 text-green-600 px-4 py-2 rounded-full font-medium text-sm shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-green-50 flex items-center gap-2 animate-pulse hover:animate-none hover:scale-105 hover:border-green-700 hover:text-green-700"
           >
-            <MessageCircle className="w-4 h-4 animate-bounce" />
-            <span className="animate-pulse">Talk to our Advisor</span>
+            <IoLogoWhatsapp className="w-4 h-4 animate-bounce" />
+            <span className="animate-pulse">Chat with WhatsApp</span>
           </button>
 
           {/* Floating Phone Button */}
@@ -165,11 +164,7 @@ export function StickyCTAFooter({
         </div>
       )}
 
-      {/* Advisor Modal */}
-      <AdvisorModal 
-        isOpen={isAdvisorModalOpen} 
-        onClose={handleCloseModal} 
-      />
+
 
 
     </>

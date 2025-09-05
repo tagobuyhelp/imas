@@ -1,7 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Button } from '../components/ui/button';
-import { Check, TrendingUp, Award, Globe, Phone, Mail, ArrowRight } from 'lucide-react';
+import { Check, TrendingUp, Award, Globe, Phone, Mail, ArrowRight, Send, MessageCircle, Download } from 'lucide-react';
 import { IMAS_TAILWIND_CLASSES, IMAS_CONTACT } from '../lib/constants';
 import { applyNow, downloadBrochure } from '../lib/utils';
 import { StickyCTAFooter } from '../components/layout/StickyCTAFooter';
@@ -97,6 +97,7 @@ export function InternshipPage() {
               onClick={applyNow}
               className={`${IMAS_TAILWIND_CLASSES.BG_DARK_BLUE} hover:bg-blue-700 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105`}
             >
+              <Send className="mr-2 h-5 w-5" />
               Apply Now for IMAS Admission 2025
             </Button>
           </div>
@@ -314,6 +315,7 @@ export function InternshipPage() {
                 variant="outline" 
                 className="border-white bg-transparent text-white hover:bg-white hover:text-gray-900 px-6 sm:px-8 lg:px-10 py-3 sm:py-4 text-sm sm:text-base lg:text-lg font-semibold hover:scale-105 transition-all duration-300"
               >
+                <MessageCircle className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
                 Enquire Now
               </Button>
               <Button 
@@ -321,6 +323,7 @@ export function InternshipPage() {
                 className="border-white bg-transparent text-white hover:bg-white hover:text-gray-900 px-6 sm:px-8 lg:px-10 py-3 sm:py-4 text-sm sm:text-base lg:text-lg font-semibold hover:scale-105 transition-all duration-300"
                 onClick={downloadBrochure}
               >
+                <Download className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
                 Download Brochure
               </Button>
             </div>
@@ -328,7 +331,7 @@ export function InternshipPage() {
         </div>
       </section>
 
-      <StickyCTAFooter 
+      <StickyCTAFooter
         onPrimaryClick={applyNow}
         onFloatingClick={applyNow}
       />

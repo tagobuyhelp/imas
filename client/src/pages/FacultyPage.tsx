@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { Button } from '../components/ui/button';
-import { Search, X, Users, ArrowRight, FileText, GraduationCap, Plus, Minus, Award, Target, BookOpen, ChevronLeft, ChevronRight, Phone, Mail } from 'lucide-react';
+import { Search, X, Users, ArrowRight, FileText, GraduationCap, Plus, Minus, Award, Target, BookOpen, ChevronLeft, ChevronRight, Phone, Mail, Download } from 'lucide-react';
 import { IMAS_TAILWIND_CLASSES, IMAS_CONTACT } from '../lib/constants';
 import { StickyCTAFooter } from '../components/layout/StickyCTAFooter';
 import { downloadBrochure, applyNow } from '../lib/utils';
@@ -828,6 +828,7 @@ export function FacultyPage() {
                       className="border-white bg-transparent text-white hover:bg-white hover:text-gray-900 px-8 sm:px-10 lg:px-12 py-3 sm:py-4 text-sm sm:text-base lg:text-lg font-semibold hover:scale-105 transition-all duration-300"
                       onClick={downloadBrochure}
                     >
+                      <Download className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
                       Download Brochure
                     </Button>
                   </div>

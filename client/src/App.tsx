@@ -14,13 +14,7 @@ import { ContactPage } from './pages/ContactPage';
 import { InternshipPage } from './pages/InternshipPage';
 import { CampusLifePage } from './pages/CampusLifePage';
 import { EventsPage } from './pages/EventsPage';
-import { DashboardPage } from './pages/DashboardPage';
-import { AdminLayout } from './components/admin/AdminLayout';
-import { ContactFormsPage } from './pages/admin/ContactFormsPage';
-import { AdmissionFormsPage } from './pages/admin/AdmissionFormsPage';
-import { AdvisorInquiriesPage } from './pages/admin/AdvisorInquiriesPage';
-import { ProtectedRoute } from './components/auth/ProtectedRoute';
-import { AuthProvider } from './contexts/AuthContext';
+// Removed admin and auth imports - components deleted
 import { Toaster } from './components/ui/toaster';
 
 function AppContent(): React.JSX.Element {
@@ -51,18 +45,7 @@ function AppContent(): React.JSX.Element {
         <Route path="/internships" element={<InternshipPage />} />
         <Route path="/campus-life" element={<CampusLifePage />} />
         <Route path="/events" element={<EventsPage />} />
-        
-        {/* Admin Routes */}
-        <Route path="/admin" element={
-          <ProtectedRoute requiredRole="admin">
-            <AdminLayout />
-          </ProtectedRoute>
-        }>
-          <Route index element={<DashboardPage />} />
-          <Route path="contact-forms" element={<ContactFormsPage />} />
-          <Route path="admission-forms" element={<AdmissionFormsPage />} />
-          <Route path="advisor-inquiries" element={<AdvisorInquiriesPage />} />
-        </Route>
+        {/* Admin routes removed - no backend API available */}
       </Routes>
     </Layout>
   );
@@ -71,12 +54,10 @@ function AppContent(): React.JSX.Element {
 export function App(): React.JSX.Element {
   return (
     <HelmetProvider>
-      <AuthProvider>
-        <Router>
-          <AppContent />
-          <Toaster />
-        </Router>
-      </AuthProvider>
+      <Router>
+        <AppContent />
+        <Toaster />
+      </Router>
     </HelmetProvider>
   );
 }

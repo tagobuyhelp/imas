@@ -30,7 +30,7 @@ export const IMAS_CONTACT = {
 
 // IMAS Social Media
 export const IMAS_SOCIAL = {
-    FACEBOOK: '#',
+    FACEBOOK: 'https://www.facebook.com/imasbschoolindia/',
     INSTAGRAM: '#',
     LINKEDIN: '#',
     YOUTUBE: '#',

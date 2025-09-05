@@ -85,6 +85,8 @@ export function ProgramsSection() {
   const carouselRef = useRef<HTMLDivElement>(null);
   const [showLeftArrow, setShowLeftArrow] = useState(false);
   const [showRightArrow, setShowRightArrow] = useState(true);
+  const [isAutoScrolling, setIsAutoScrolling] = useState(true);
+  const autoScrollRef = useRef<NodeJS.Timeout | null>(null);
 
   // Utility functions with better performance and type safety
   const getIconForProgram = useCallback((category: string, subcategory?: string): React.ComponentType<any> => {
@@ -200,6 +202,33 @@ export function ProgramsSection() {
     setShowRightArrow(scrollLeft < scrollWidth - clientWidth - SCROLL_THRESHOLD);
   }, []);
 
+  // Auto-scroll functionality
+  useEffect(() => {
+    if (!isAutoScrolling) return;
+
+    autoScrollRef.current = setInterval(() => {
+      const maxIndex = programDetails[activeTab].length - 1;
+      setCurrentIndex(prevIndex => {
+        const nextIndex = prevIndex >= maxIndex ? 0 : prevIndex + 1;
+        
+        if (carouselRef.current) {
+          carouselRef.current.scrollTo({
+            left: nextIndex * CARD_WIDTH,
+            behavior: 'smooth'
+          });
+        }
+        
+        return nextIndex;
+      });
+    }, 4000); // Auto-scroll every 4 seconds
+
+    return () => {
+      if (autoScrollRef.current) {
+        clearInterval(autoScrollRef.current);
+      }
+    };
+  }, [isAutoScrolling, activeTab, programDetails]);
+
   // Update arrow visibility on scroll
   useEffect(() => {
     const carousel = carouselRef.current;
@@ -219,6 +248,18 @@ export function ProgramsSection() {
       carouselRef.current.scrollTo({ left: 0, behavior: 'smooth' });
     }
   }, [activeTab]);
+
+  // Pause/resume auto-scroll handlers
+  const handleMouseEnter = useCallback(() => {
+    setIsAutoScrolling(false);
+    if (autoScrollRef.current) {
+      clearInterval(autoScrollRef.current);
+    }
+  }, []);
+
+  const handleMouseLeave = useCallback(() => {
+    setIsAutoScrolling(true);
+  }, []);
 
   // Keyboard navigation support
   useEffect(() => {
@@ -438,6 +479,8 @@ export function ProgramsSection() {
             role="tabpanel"
             aria-labelledby={`${activeTab}-tab`}
             id={`${activeTab}-programs`}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
           >
             {programDetails[activeTab].map((program, index) => (
               <ProgramCard key={`${activeTab}-${index}`} program={program} index={index} />

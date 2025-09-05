@@ -136,28 +136,7 @@ export function HeroSection() {
                 </div>
               </div>
 
-              {/* Program Highlights */}
-              <div className="space-y-3">
-                <h3 className={`${IMAS_TAILWIND_CLASSES.TEXT_MEDIUM_BLUE} font-semibold text-sm`}>Why Choose IMAS?</h3>
-                <div className="space-y-2">
-                  <div className="flex items-center gap-2">
-                    <div className={`w-2 h-2 ${IMAS_TAILWIND_CLASSES.BG_TEAL} rounded-full`}></div>
-                    <span className="text-xs text-gray-700">Industry-Integrated Curriculum</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className={`w-2 h-2 ${IMAS_TAILWIND_CLASSES.BG_TEAL} rounded-full`}></div>
-                    <span className="text-xs text-gray-700">Live Projects & Internships</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className={`w-2 h-2 ${IMAS_TAILWIND_CLASSES.BG_TEAL} rounded-full`}></div>
-                    <span className="text-xs text-gray-700">Global Exposure Programs</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <div className={`w-2 h-2 ${IMAS_TAILWIND_CLASSES.BG_TEAL} rounded-full`}></div>
-                    <span className="text-xs text-gray-700">AI-Enhanced Learning</span>
-                  </div>
-                </div>
-              </div>
+              
 
               {/* Application Deadline */}
               <div className="bg-red-50 p-3 rounded-lg border border-red-200">

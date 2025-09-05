@@ -4,7 +4,9 @@ import { IMAS_TAILWIND_CLASSES } from '../../../lib/constants';
 
 export function LearnersSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [isAutoScrolling, setIsAutoScrolling] = useState(true);
   const carouselRef = useRef<HTMLDivElement>(null);
+  const autoScrollRef = useRef<NodeJS.Timeout | null>(null);
 
   const learners = [
     {
@@ -79,21 +81,42 @@ export function LearnersSection() {
     }
   };
 
-  // Update arrow visibility on scroll
+  // Auto-scroll functionality
   useEffect(() => {
-    const handleScroll = () => {
-      if (carouselRef.current) {
-        const { scrollLeft, scrollWidth, clientWidth } = carouselRef.current;
-        // You can add arrow visibility logic here if needed
+    if (isAutoScrolling) {
+      autoScrollRef.current = setInterval(() => {
+        setCurrentSlide(prev => {
+          const nextIndex = prev >= learners.length - 1 ? 0 : prev + 1;
+          if (carouselRef.current) {
+            const cardWidth = carouselRef.current.scrollWidth / learners.length;
+            carouselRef.current.scrollTo({
+              left: nextIndex * cardWidth,
+              behavior: 'smooth'
+            });
+          }
+          return nextIndex;
+        });
+      }, 4000); // Auto-scroll every 4 seconds
+    }
+
+    return () => {
+      if (autoScrollRef.current) {
+        clearInterval(autoScrollRef.current);
       }
     };
+  }, [isAutoScrolling, learners.length]);
 
-    const carousel = carouselRef.current;
-    if (carousel) {
-      carousel.addEventListener('scroll', handleScroll);
-      return () => carousel.removeEventListener('scroll', handleScroll);
+  // Pause auto-scroll on hover
+  const handleMouseEnter = () => {
+    setIsAutoScrolling(false);
+    if (autoScrollRef.current) {
+      clearInterval(autoScrollRef.current);
     }
-  }, []);
+  };
+
+  const handleMouseLeave = () => {
+    setIsAutoScrolling(true);
+  };
 
   return (
     <section id="student-testimonials" className="py-12 sm:py-16 md:py-20 bg-gray-50">
@@ -139,6 +162,8 @@ export function LearnersSection() {
             ref={carouselRef}
             className="flex gap-4 sm:gap-6 md:gap-8 overflow-x-auto scrollbar-hide scroll-smooth pb-4 px-4 sm:px-12 md:px-16"
             style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
           >
             {learners.map((learner, index) => (
               <div

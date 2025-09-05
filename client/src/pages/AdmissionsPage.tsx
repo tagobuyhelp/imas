@@ -11,8 +11,61 @@ import { IMAS_TAILWIND_CLASSES, IMAS_BRAND, IMAS_CONTACT } from '../lib/constant
 import { programsData } from '../lib/programsData';
 import { Helmet } from 'react-helmet-async';
 import { applyNow, downloadBrochure } from '../lib/utils';
-import { apiService, AdmissionFormData } from '../lib/api';
+// Removed API dependency - using serverless form submission
 import { useToast } from '../hooks/use-toast';
+
+// Local interface definitions (previously from api.ts)
+interface AdmissionFormData {
+  // Personal Information
+  name: string;
+  email: string;
+  phone: string;
+  alternatePhone?: string;
+  dateOfBirth: string;
+  gender: 'male' | 'female' | 'other';
+  
+  // Address Information
+  address: {
+    street: string;
+    city: string;
+    state: string;
+    pincode: string;
+    country: string;
+  };
+  
+  // Program Information
+  program: string;
+  preferredBatch: '2025-2027' | '2026-2028';
+  
+  // Educational Background
+  education: {
+    graduation: {
+      degree: string;
+      university: string;
+      percentage: number;
+      yearOfPassing: number;
+    };
+    postGraduation?: {
+      degree?: string;
+      university?: string;
+      percentage?: number;
+      yearOfPassing?: number;
+    };
+  };
+  
+  // Work Experience
+  workExperience: {
+    totalExperience: number;
+    currentCompany?: string;
+    currentDesignation?: string;
+    currentSalary?: number;
+    industry?: string;
+    workDetails?: string;
+  };
+  
+  // Additional Information
+  message?: string;
+}
 
 export function AdmissionsPage(): React.JSX.Element {
   const { toast } = useToast();
@@ -194,15 +247,72 @@ export function AdmissionsPage(): React.JSX.Element {
     setErrorMessage('');
 
     try {
-      await apiService.admission.submit(formData);
-
-      setSubmitSuccess(true);
-
-      // Show success toast
-      toast({
-        title: "Application Submitted Successfully!",
-        description: "We'll contact you within 24 hours with next steps.",
+      // Create FormData for FormSubmit.co
+      const formData_submit = new FormData();
+      
+      // Add form fields
+      formData_submit.append('name', formData.name);
+      formData_submit.append('email', formData.email);
+      formData_submit.append('phone', formData.phone);
+      formData_submit.append('alternatePhone', formData.alternatePhone || '');
+      formData_submit.append('dateOfBirth', formData.dateOfBirth);
+      formData_submit.append('gender', formData.gender);
+      formData_submit.append('program', formData.program);
+      formData_submit.append('preferredBatch', formData.preferredBatch);
+      
+      // Address fields
+      formData_submit.append('address_street', formData.address.street);
+      formData_submit.append('address_city', formData.address.city);
+      formData_submit.append('address_state', formData.address.state);
+      formData_submit.append('address_pincode', formData.address.pincode);
+      formData_submit.append('address_country', formData.address.country);
+      
+      // Education fields
+      formData_submit.append('graduation_degree', formData.education.graduation.degree);
+      formData_submit.append('graduation_university', formData.education.graduation.university);
+      formData_submit.append('graduation_percentage', formData.education.graduation.percentage.toString());
+      formData_submit.append('graduation_year', formData.education.graduation.yearOfPassing.toString());
+      
+      if (formData.education.postGraduation?.degree) {
+        formData_submit.append('postgraduation_degree', formData.education.postGraduation.degree);
+        formData_submit.append('postgraduation_university', formData.education.postGraduation.university || '');
+        formData_submit.append('postgraduation_percentage', (formData.education.postGraduation.percentage || 0).toString());
+        formData_submit.append('postgraduation_year', (formData.education.postGraduation.yearOfPassing || 0).toString());
+      }
+      
+      // Work experience fields
+      formData_submit.append('total_experience', formData.workExperience.totalExperience.toString());
+      formData_submit.append('current_company', formData.workExperience.currentCompany || '');
+      formData_submit.append('current_designation', formData.workExperience.currentDesignation || '');
+      formData_submit.append('current_salary', (formData.workExperience.currentSalary || 0).toString());
+      formData_submit.append('industry', formData.workExperience.industry || '');
+      formData_submit.append('work_details', formData.workExperience.workDetails || '');
+      
+      formData_submit.append('message', formData.message || '');
+      
+      // FormSubmit.co configuration
+      formData_submit.append('_replyto', formData.email);
+      formData_submit.append('_subject', `Admission Application: ${formData.name} - ${formData.program}`);
+      formData_submit.append('_captcha', 'false');
+      formData_submit.append('_template', 'table');
+      
+      // Submit to FormSubmit.co
+      const response = await fetch('https://formsubmit.co/admissions@imas.ac.in', {
+        method: 'POST',
+        body: formData_submit
       });
+      
+      if (response.ok) {
+        setSubmitSuccess(true);
+
+        // Show success toast
+        toast({
+          title: "Application Submitted Successfully!",
+          description: "We'll contact you within 24 hours with next steps.",
+        });
+      } else {
+        throw new Error('Form submission failed');
+      }
 
       // Reset form after successful submission
       setFormData({

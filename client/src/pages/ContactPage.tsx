@@ -5,10 +5,17 @@ import { Input } from '../components/ui/input';
 import { Label } from '../components/ui/label';
 import { Textarea } from '../components/ui/textarea';
 import { Alert, AlertDescription } from '../components/ui/alert';
-import { MapPin, Phone, Mail, Clock, Building2, Navigation, Loader2, CheckCircle } from 'lucide-react';
+import { MapPin, Phone, Mail, Clock, Building2, Navigation, Loader2, CheckCircle, BookOpen, Send, ExternalLink } from 'lucide-react';
 import { useToast } from '../hooks/use-toast';
-import { apiService, ContactFormData } from '../lib/api';
 import { IMAS_TAILWIND_CLASSES } from '../lib/constants';
+
+interface ContactFormData {
+  name: string;
+  email: string;
+  phone: string;
+  subject: string;
+  message: string;
+}
 
 export function ContactPage(): React.JSX.Element {
   const [formData, setFormData] = useState<ContactFormData>({
@@ -20,7 +27,6 @@ export function ContactPage(): React.JSX.Element {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
-  const [errorMessage, setErrorMessage] = useState('');
   const { toast } = useToast();
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -31,13 +37,26 @@ export function ContactPage(): React.JSX.Element {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    setSubmitStatus('idle');
-    setErrorMessage('');
-
+    
     try {
-      const response = await apiService.contact.submit(formData);
+      // Using FormSubmit.co for serverless form handling
+      const formData_submit = new FormData();
+      formData_submit.append('name', formData.name);
+      formData_submit.append('email', formData.email);
+      formData_submit.append('phone', formData.phone || 'Not provided');
+      formData_submit.append('subject', formData.subject);
+      formData_submit.append('message', formData.message);
+      formData_submit.append('_replyto', formData.email);
+      formData_submit.append('_subject', `Contact Form: ${formData.subject}`);
+      formData_submit.append('_captcha', 'false');
+      formData_submit.append('_template', 'table');
       
-      if (response.success) {
+      const response = await fetch('https://formsubmit.co/info@imas.ac.in', {
+        method: 'POST',
+        body: formData_submit
+      });
+      
+      if (response.ok) {
         setSubmitStatus('success');
         setFormData({
           name: '',
@@ -46,19 +65,19 @@ export function ContactPage(): React.JSX.Element {
           subject: '',
           message: ''
         });
+        
         toast({
           title: 'Message Sent Successfully!',
           description: 'Thank you for contacting us. We\'ll get back to you within 24 hours.',
         });
       } else {
-        throw new Error(response.message || 'Failed to send message');
+        throw new Error('Failed to send message');
       }
-    } catch (error: any) {
+    } catch (error) {
       setSubmitStatus('error');
-      setErrorMessage(error.message || 'An error occurred while sending your message. Please try again.');
       toast({
         title: 'Failed to Send Message',
-        description: error.message || 'Please check your information and try again.',
+        description: 'Please try again later or contact us directly.',
         variant: 'destructive',
       });
     } finally {
@@ -70,7 +89,7 @@ export function ContactPage(): React.JSX.Element {
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white">
       {/* Hero Section */}
       <section 
-        className="relative bg-gradient-to-r from-[#143674]/90 to-[#2e7bb3]/90 text-white py-20 bg-cover bg-center bg-no-repeat"
+        className="relative bg-gradient-to-r from-[#143674]/90 to-[#2e7bb3]/90 text-white py-36 bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: "url('/uploads/imas_hero_image1.webp')",
           backgroundBlendMode: 'overlay'
@@ -213,9 +232,11 @@ export function ContactPage(): React.JSX.Element {
                     </Alert>
                   )}
                   
-                  {submitStatus === 'error' && errorMessage && (
+                  {submitStatus === 'error' && (
                     <Alert variant="destructive" className="mb-6">
-                      <AlertDescription>{errorMessage}</AlertDescription>
+                      <AlertDescription>
+                        Failed to send message. Please try again later or contact us directly.
+                      </AlertDescription>
                     </Alert>
                   )}
                   
@@ -225,25 +246,25 @@ export function ContactPage(): React.JSX.Element {
                         <Label htmlFor="name" className="text-gray-700 font-semibold">Full Name *</Label>
                         <Input 
                           id="name" 
-                          name="name"
-                          value={formData.name}
-                          onChange={handleInputChange}
-                          placeholder="Enter your full name" 
-                          required
-                          disabled={isSubmitting}
-                          className="border-gray-300 focus:border-[#26c1d3] focus:ring-[#26c1d3]"
+                        name="name"
+                        value={formData.name}
+                        onChange={handleInputChange}
+                        placeholder="Enter your full name" 
+                        required
+                        disabled={isSubmitting}
+                        className="border-gray-300 focus:border-[#26c1d3] focus:ring-[#26c1d3]"
                         />
                       </div>
                       <div className="space-y-2">
                         <Label htmlFor="phone" className="text-gray-700 font-semibold">Phone Number *</Label>
                         <Input 
                           id="phone" 
-                          name="phone"
-                          value={formData.phone || ''}
-                          onChange={handleInputChange}
-                          placeholder="Enter your phone number" 
-                          disabled={isSubmitting}
-                          className="border-gray-300 focus:border-[#26c1d3] focus:ring-[#26c1d3]"
+                        name="phone"
+                        value={formData.phone || ''}
+                        onChange={handleInputChange}
+                        placeholder="Enter your phone number" 
+                        disabled={isSubmitting}
+                        className="border-gray-300 focus:border-[#26c1d3] focus:ring-[#26c1d3]"
                         />
                       </div>
                     </div>
@@ -252,14 +273,14 @@ export function ContactPage(): React.JSX.Element {
                       <Label htmlFor="email" className="text-gray-700 font-semibold">Email Address *</Label>
                       <Input 
                         id="email" 
-                        name="email"
-                        type="email" 
-                        value={formData.email}
-                        onChange={handleInputChange}
-                        placeholder="Enter your email address" 
-                        required
-                        disabled={isSubmitting}
-                        className="border-gray-300 focus:border-[#26c1d3] focus:ring-[#26c1d3]"
+                      name="email"
+                      type="email" 
+                      value={formData.email}
+                      onChange={handleInputChange}
+                      placeholder="Enter your email address" 
+                      required
+                      disabled={isSubmitting}
+                      className="border-gray-300 focus:border-[#26c1d3] focus:ring-[#26c1d3]"
                       />
                     </div>
                     
@@ -267,13 +288,13 @@ export function ContactPage(): React.JSX.Element {
                       <Label htmlFor="subject" className="text-gray-700 font-semibold">Subject *</Label>
                       <Input 
                         id="subject" 
-                        name="subject"
-                        value={formData.subject}
-                        onChange={handleInputChange}
-                        placeholder="What is this regarding?" 
-                        required
-                        disabled={isSubmitting}
-                        className="border-gray-300 focus:border-[#26c1d3] focus:ring-[#26c1d3]"
+                      name="subject"
+                      value={formData.subject}
+                      onChange={handleInputChange}
+                      placeholder="What is this regarding?" 
+                      required
+                      disabled={isSubmitting}
+                      className="border-gray-300 focus:border-[#26c1d3] focus:ring-[#26c1d3]"
                       />
                     </div>
                     
@@ -281,14 +302,14 @@ export function ContactPage(): React.JSX.Element {
                       <Label htmlFor="message" className="text-gray-700 font-semibold">Message *</Label>
                       <Textarea 
                         id="message" 
-                        name="message"
-                        value={formData.message}
-                        onChange={handleInputChange}
-                        placeholder="Tell us more about your inquiry..." 
-                        rows={5}
-                        required
-                        disabled={isSubmitting}
-                        className="border-gray-300 focus:border-[#26c1d3] focus:ring-[#26c1d3] resize-none"
+                      name="message"
+                      value={formData.message}
+                      onChange={handleInputChange}
+                      placeholder="Tell us more about your inquiry..." 
+                      rows={5}
+                      required
+                      disabled={isSubmitting}
+                      className="border-gray-300 focus:border-[#26c1d3] focus:ring-[#26c1d3] resize-none"
                       />
                     </div>
                     
@@ -303,7 +324,10 @@ export function ContactPage(): React.JSX.Element {
                           Sending Message...
                         </>
                       ) : (
-                        'Send Message'
+                        <>
+                          <Send className="mr-2 h-5 w-5" />
+                          Send Message
+                        </>
                       )}
                     </Button>
                   </form>
@@ -316,7 +340,7 @@ export function ContactPage(): React.JSX.Element {
 
       {/* Call to Action Section */}
       <section 
-        className="relative bg-gradient-to-r from-[#143674]/90 to-[#2e7bb3]/90 py-16 bg-cover bg-center bg-no-repeat"
+        className="relative bg-gradient-to-r from-[#143674]/90 to-[#2e7bb3]/90 py-40 bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: "url('/uploads/IMASBUILDING.jpeg')",
           backgroundBlendMode: 'overlay'
@@ -335,6 +359,7 @@ export function ContactPage(): React.JSX.Element {
               onClick={() => window.open('/programs', '_blank')}
               className="bg-white text-[#143674] hover:bg-gray-100 px-8 py-3 text-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg"
             >
+              <BookOpen className="mr-2 h-5 w-5" />
               Explore Programs
             </Button>
             <Button 
@@ -342,6 +367,7 @@ export function ContactPage(): React.JSX.Element {
               variant="outline"
               className="border-2 bg-transparent border-white text-white hover:bg-white hover:text-[#143674] px-8 py-3 text-lg font-semibold transition-all duration-300 hover:scale-105 backdrop-blur-sm"
             >
+              <ExternalLink className="mr-2 h-5 w-5" />
               Apply Now
             </Button>
           </div>

@@ -11,6 +11,8 @@ import { IMAS_TAILWIND_CLASSES } from "../../../lib/constants";
 export function IndustryCollaborationsSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const carouselRef = useRef<HTMLDivElement>(null);
+  const [isAutoScrolling, setIsAutoScrolling] = useState(true);
+  const autoScrollRef = useRef<NodeJS.Timeout | null>(null);
 
   const collaborations = [
     {
@@ -65,6 +67,45 @@ export function IndustryCollaborationsSection() {
         behavior: 'smooth'
       });
     }
+  };
+
+  // Auto-scroll functionality
+  useEffect(() => {
+    if (!isAutoScrolling) return;
+
+    autoScrollRef.current = setInterval(() => {
+      setCurrentSlide(prevSlide => {
+        const nextSlide = prevSlide >= collaborations.length - 1 ? 0 : prevSlide + 1;
+        
+        if (carouselRef.current) {
+          const cardWidth = carouselRef.current.scrollWidth / collaborations.length;
+          carouselRef.current.scrollTo({
+            left: nextSlide * cardWidth,
+            behavior: 'smooth'
+          });
+        }
+        
+        return nextSlide;
+      });
+    }, 4000); // Auto-scroll every 4 seconds
+
+    return () => {
+      if (autoScrollRef.current) {
+        clearInterval(autoScrollRef.current);
+      }
+    };
+  }, [isAutoScrolling, collaborations.length]);
+
+  // Pause/resume auto-scroll handlers
+  const handleMouseEnter = () => {
+    setIsAutoScrolling(false);
+    if (autoScrollRef.current) {
+      clearInterval(autoScrollRef.current);
+    }
+  };
+
+  const handleMouseLeave = () => {
+    setIsAutoScrolling(true);
   };
 
   // Update arrow visibility on scroll
@@ -126,6 +167,8 @@ export function IndustryCollaborationsSection() {
             ref={carouselRef}
             className="flex gap-4 sm:gap-6 md:gap-8 overflow-x-auto scrollbar-hide scroll-smooth pb-4 px-4 sm:px-12 md:px-16"
             style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
           >
             {collaborations.map((collaboration, index) => (
               <div

@@ -16,7 +16,9 @@ import {
   Lightbulb,
   Star,
   Play,
-  ExternalLink
+  ExternalLink,
+  UserPlus,
+  Send
 } from 'lucide-react';
 import { IMAS_TAILWIND_CLASSES } from '../lib/constants';
 import { applyNow } from '../lib/utils';
@@ -127,6 +129,7 @@ export function CampusLifePage() {
               onClick={applyNow}
               className={`${IMAS_TAILWIND_CLASSES.GRADIENT_PRIMARY} hover:from-[#2e7bb3] hover:to-[#26c1d3] text-white px-8 sm:px-10 lg:px-12 py-3 sm:py-4 text-sm sm:text-base lg:text-lg font-semibold hover:scale-105 transition-all duration-300`}
             >
+              <UserPlus className="mr-2 h-5 w-5" />
               Join Our Community
             </Button>
             <a 
@@ -204,6 +207,7 @@ export function CampusLifePage() {
                 rel="noopener noreferrer"
                 className={`inline-flex items-center gap-2 ${IMAS_TAILWIND_CLASSES.GRADIENT_PRIMARY} hover:from-[#2e7bb3] hover:to-[#26c1d3] text-white px-8 sm:px-10 py-3 sm:py-4 text-sm sm:text-base font-semibold hover:scale-105 transition-all duration-300 rounded-full`}
               >
+                <Play className="h-4 w-4" />
                 Visit Our YouTube Channel
                 <ExternalLink className="h-4 w-4" />
               </a>
@@ -539,6 +543,7 @@ export function CampusLifePage() {
             onClick={applyNow}
             className={`${IMAS_TAILWIND_CLASSES.GRADIENT_PRIMARY} hover:from-[#2e7bb3] hover:to-[#26c1d3] text-white px-8 sm:px-10 lg:px-12 py-3 sm:py-4 text-sm sm:text-base lg:text-lg font-semibold hover:scale-105 transition-all duration-300`}
           >
+            <Send className="mr-2 h-5 w-5" />
             Apply Now - Join IMAS
           </Button>
         </div>

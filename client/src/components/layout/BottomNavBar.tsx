@@ -197,7 +197,7 @@ export function BottomNavBar({
   };
 
   return (
-    <div className={`hidden lg:block fixed bg-transparent bottom-3 left-0 right-0 z-50  ${IMAS_TAILWIND_CLASSES.BORDER_MEDIUM_BLUE} shadow-lg ${className}`}>
+    <div className={`hidden lg:block fixed bg-transparent bottom-2 left-0 right-0 z-50  ${IMAS_TAILWIND_CLASSES.BORDER_MEDIUM_BLUE}  ${className}`}>
       <div className="flex justify-center bg-transparent">
         <div className="relative py-3 bg-primary-dark rounded-full flex justify-center items-center  shadow-lg max-w-[1250px] mx-auto" style={{ width: 'auto'}}>
           {/* Scroll Left Arrow */}
