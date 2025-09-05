@@ -431,8 +431,8 @@ export const programsData: Program[] = [
         certifications: ['Six Sigma (Green Belt)', 'SAP ERP', 'Advanced Excel'],
         internationalExposure: ['Dubai', 'Singapore', 'Thailand', 'Malaysia'],
         heroImage: {
-            desktop: '/uploads/imas_hero_image1.webp',
-            mobile: '/uploads/imas_hero_image1.webp',
+            desktop: '/uploads/PGDM_Plus_in_Marketing_Management.png',
+            mobile: '/uploads/PGDM_Plus_in_Marketing_Management.png',
             alt: 'PGDM Plus in Marketing Management at IMAS Kolkata'
         },
         cta: {
@@ -558,8 +558,8 @@ export const programsData: Program[] = [
         certifications: ['SAP ERP Suite', 'Advanced Excel', 'Microsoft Project', 'Six Sigma'],
         internationalExposure: ['Singapore', 'Malaysia', 'Dubai', 'Thailand'],
         heroImage: {
-            desktop: '/uploads/imas_hero_image2.webp',
-            mobile: '/uploads/imas_hero_image2.webp',
+            desktop: '/uploads/PGDM_Plus_in_Financial_Management.png',
+            mobile: '/uploads/PGDM_Plus_in_Financial_Management.png',
             alt: 'PGDM Plus in Financial Management at IMAS Kolkata'
         },
         cta: {
@@ -692,8 +692,8 @@ export const programsData: Program[] = [
         certifications: ['SAP ERP', 'Microsoft Project', 'Six Sigma Green Belt', 'Advanced Excel'],
         internationalExposure: ['Singapore', 'Thailand', 'Malaysia', 'Dubai'],
         heroImage: {
-            desktop: '/uploads/imas_hero_image3.webp',
-            mobile: '/uploads/imas_hero_image3.webp',
+            desktop: '/uploads/PGDM_Plus_in_Human_Resource_Management.png',
+            mobile: '/uploads/PGDM_Plus_in_Human_Resource_Management.png',
             alt: 'PGDM Plus Human Resource Management at IMAS Kolkata'
         },
         cta: {
@@ -958,8 +958,8 @@ export const programsData: Program[] = [
         certifications: ['Six Sigma (Green Belt)', 'SAP ERP', 'Advanced Excel', 'AWS AI Certification'],
         internationalExposure: ['Dubai', 'Singapore', 'Thailand', 'Malaysia'],
         heroImage: {
-            desktop: '/uploads/imas_hero_image2.webp',
-            mobile: '/uploads/imas_hero_image2.webp',
+            desktop: '/uploads/PGDM_Plus_in_Artificial_Intelligence_&_Data_Science.png',
+            mobile: '/uploads/PGDM_Plus_in_Artificial_Intelligence_&_Data_Science.png',
             alt: 'PGDM Plus in Artificial Intelligence & Data Science at IMAS Kolkata'
         },
         cta: {
@@ -1224,8 +1224,8 @@ export const programsData: Program[] = [
         certifications: ['Six Sigma (Green Belt)', 'SAP ERP', 'Advanced Excel', 'Healthcare Management Certification'],
         internationalExposure: ['Dubai', 'Singapore', 'Thailand', 'Malaysia'],
         heroImage: {
-            desktop: '/uploads/imas_hero_image2.webp',
-            mobile: '/uploads/imas_hero_image2.webp',
+            desktop: '/uploads/PGDM_Plus_in_Hospital_&_Healthcare_Management.png',
+            mobile: '/uploads/PGDM_Plus_in_Hospital_&_Healthcare_Management.png',
             alt: 'PGDM Plus Hospital & Healthcare Management at IMAS Kolkata'
         },
         cta: {
@@ -1493,8 +1493,8 @@ export const programsData: Program[] = [
         certifications: ['Six Sigma (Green Belt)', 'SAP ERP', 'Advanced Excel', 'Executive Marketing Leadership Certification'],
         internationalExposure: ['Dubai', 'Singapore', 'Thailand', 'Malaysia'],
         heroImage: {
-            desktop: '/uploads/imas_hero_image1.webp',
-            mobile: '/uploads/imas_hero_image1.webp',
+            desktop: '/uploads/PGDM_in_Marketing_Working_Executive.png',
+            mobile: '/uploads/PGDM_in_Marketing_Working_Executive.png',
             alt: 'PGDM in Marketing (Working Executive) at IMAS Kolkata'
         },
         cta: {
@@ -1629,8 +1629,8 @@ export const programsData: Program[] = [
         certifications: ['Six Sigma (Green Belt)', 'SAP ERP', 'Advanced Excel', 'Financial Modeling Certification', 'CFA Prep'],
         internationalExposure: ['Dubai', 'Singapore', 'Thailand', 'Malaysia'],
         heroImage: {
-            desktop: '/uploads/imas_hero_image2.webp',
-            mobile: '/uploads/imas_hero_image2.webp',
+            desktop: '/uploads/PGDM_in_Finance_Working_Executive.png',
+            mobile: '/uploads/PGDM_in_Finance_Working_Executive.png',
             alt: 'PGDM in Finance (Working Executive) at IMAS Kolkata'
         },
         cta: {
@@ -1765,8 +1765,8 @@ export const programsData: Program[] = [
         certifications: ['SAP ERP', 'Microsoft Project', 'Six Sigma Green Belt', 'Advanced Excel', 'HR Analytics', 'Workday'],
         internationalExposure: ['Dubai', 'Singapore', 'Thailand', 'Malaysia'],
         heroImage: {
-            desktop: '/uploads/imas_hero_image3.webp',
-            mobile: '/uploads/imas_hero_image3.webp',
+            desktop: '/uploads/PGDM_in_Human_Resource_Working_Executive.png',
+            mobile: '/uploads/PGDM_in_Human_Resource_Working_Executive.png',
             alt: 'PGDM in Human Resource (Working Executive) at IMAS Kolkata'
         },
         cta: {
@@ -1901,8 +1901,8 @@ export const programsData: Program[] = [
         certifications: ['SAP ERP', 'Microsoft Project', 'Six Sigma Green Belt', 'Advanced Excel', 'Google Analytics', 'Tableau', 'Power BI'],
         internationalExposure: ['Dubai', 'Singapore', 'Thailand', 'Malaysia'],
         heroImage: {
-            desktop: '/uploads/imas_hero_image1.webp',
-            mobile: '/uploads/imas_hero_image1.webp',
+            desktop: '/uploads/PGDM_in_Business_Analytics_Working_Executive.png',
+            mobile: '/uploads/PGDM_in_Business_Analytics_Working_Executive.png',
             alt: 'PGDM in Business Analytics (Working Executive) at IMAS Kolkata'
         },
         cta: {
@@ -2037,8 +2037,8 @@ export const programsData: Program[] = [
         certifications: ['SAP ERP', 'Microsoft Project', 'Six Sigma Green Belt', 'Advanced Excel', 'AWS AI', 'Google Cloud AI', 'Microsoft Azure AI'],
         internationalExposure: ['Dubai', 'Singapore', 'Thailand', 'Malaysia'],
         heroImage: {
-            desktop: '/uploads/imas_hero_image2.webp',
-            mobile: '/uploads/imas_hero_image2.webp',
+            desktop: '/uploads/PGDM_in_Artificial_Intelligence_&_Data_Science_Working_Executive.png',
+            mobile: '/uploads/PGDM_in_Artificial_Intelligence_&_Data_Science_Working_Executive.png',
             alt: 'PGDM in Artificial Intelligence & Data Science (Working Executive) at IMAS Kolkata'
         },
         cta: {
@@ -2445,8 +2445,8 @@ export const programsData: Program[] = [
         certifications: ['SAP ERP', 'Microsoft Project', 'Six Sigma Green Belt', 'Advanced Excel', 'Operations Analytics', 'Quality Management', 'Lean Manufacturing'],
         internationalExposure: ['Dubai', 'Singapore', 'Thailand', 'Malaysia'],
         heroImage: {
-            desktop: '/uploads/imas_hero_image2.webp',
-            mobile: '/uploads/imas_hero_image2.webp',
+            desktop: '/uploads/PGDM_in_Operations_Management_Working_Executive.png',
+            mobile: '/uploads/PGDM_in_Operations_Management_Working_Executive.png',
             alt: 'PGDM in Operations Management (Working Executive) at IMAS Kolkata'
         },
         cta: {
@@ -2853,8 +2853,8 @@ export const programsData: Program[] = [
         certifications: ['International Business Analytics', 'Global Finance', 'Cross-Cultural Management', 'Advanced Excel', 'Global Project Management', 'International Trade', 'Global Leadership'],
         internationalExposure: ['UK', 'Germany', 'France', 'USA', 'Singapore'],
         heroImage: {
-            desktop: '/uploads/imas_hero_image1.webp',
-            mobile: '/uploads/imas_hero_image1.webp',
+            desktop: '/uploads/MBA_Global_banner.png',
+            mobile: '/uploads/MBA_Global_banner.png',
             alt: 'MBA Global at IMAS Kolkata with UK Partnership'
         },
         cta: {

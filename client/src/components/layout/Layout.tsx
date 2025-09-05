@@ -53,7 +53,7 @@ export function Layout({ children, currentPage }: LayoutProps) {
       <Sidebar isOpen={isSidebarOpen} onClose={handleSidebarClose} currentPage={currentPage} />
       
       {/* Main Content */}
-      <main className="flex-1 pb-0 lg:pb-20">
+      <main className="flex-1 pb-0 ">
         {children}
       </main>
       

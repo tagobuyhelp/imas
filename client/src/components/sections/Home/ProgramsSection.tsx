@@ -48,18 +48,32 @@ const ICON_MAP = {
   agri: Briefcase,
 } as const;
 
-const IMAGE_MAP = {
-  marketing: '/uploads/pgdm-marketing.jpg',
-  finance: '/uploads/pgdm-finance.jpg',
-  hr: '/uploads/pgdm-hr.jpg',
-  analytics: '/uploads/pgdm-ba.jpg',
-  ai: '/uploads/pgdm-ai&ds.jpg',
-  fintech: '/uploads/pgdm-fnt.jpg',
-  healthcare: '/uploads/pgdm-healthcare.jpg',
-  iev: '/uploads/pgdm-iev.jpg',
-  logistics: '/uploads/pgdm-logistics.jpg',
-  operations: '/uploads/pgdm-operations.jpg',
-  agri: '/uploads/pgdm-agri.jpg',
+// Direct program image mapping based on program slugs
+const PROGRAM_IMAGE_MAP = {
+  // PGDM Plus Programs
+  'pgdm-plus-marketing-management': '/uploads/PGDM_Plus_in_Marketing_Management.png',
+  'pgdm-plus-financial-management': '/uploads/PGDM_Plus_in_Financial_Management.png',
+  'pgdm-plus-human-resource-management': '/uploads/PGDM_Plus_in_Human_Resource_Management.png',
+  'pgdm-plus-business-analytics': '/uploads/PGDM_Plus_in_Business_Analytics.png',
+  'pgdm-plus-artificial-intelligence-data-science': '/uploads/PGDM_Plus_in_Artificial_Intelligence_&_Data_Science.png',
+  'pgdm-plus-fintech': '/uploads/PGDM_Plus_in_Fintech.png',
+  'pgdm-plus-hospital-healthcare-management': '/uploads/PGDM_Plus_in_Hospital_&_Healthcare_Management.png',
+  'pgdm-plus-innovation-entrepreneurship-venture-development': '/uploads/PGDM_Plus_in_Innovation_Entrepreneurship_&_Venture_Development.png',
+  
+  // Working Executive Programs
+  'pgdm-marketing-working-executive': '/uploads/PGDM_in_Marketing_Working_Executive.png',
+  'pgdm-finance-working-executive': '/uploads/PGDM_in_Finance_Working_Executive.png',
+  'pgdm-hr-working-executive': '/uploads/PGDM_in_Human_Resource_Working_Executive.png',
+  'pgdm-analytics-working-executive': '/uploads/PGDM_in_Business_Analytics_Working_Executive.png',
+  'pgdm-ai-working-executive': '/uploads/PGDM_in_Artificial_Intelligence_&_Data_Science_Working_Executive.png',
+  'pgdm-fintech-working-executive': '/uploads/PGDM_in_Fintech_Working_Executive.png',
+  'pgdm-logistics-working-executive': '/uploads/PGDM_in_Logistics_&_Supply_Chain_Management_Working_Executive.png',
+  'pgdm-operations-working-executive': '/uploads/PGDM_in_Operations_Management_Working_Executive.png',
+  'pgdm-agri-working-executive': '/uploads/PGDM_in_Agri_Business_Management_Working_Executive.png',
+  'pgdm-healthcare-working-executive': '/uploads/PGDM_in_Hospital_&_Healthcare_Management_Working_Executive.png',
+  
+  // MBA Global Program
+  'mba-global': '/uploads/mba_global.jpg',
 } as const;
 
 const CARD_WIDTH = 280;
@@ -81,17 +95,31 @@ export function ProgramsSection() {
   }, []);
 
   const getImageForProgram = useCallback((program: any): string => {
-    // Use heroImage if available, otherwise fallback to default images
+    // Use heroImage if available, otherwise fallback to program-specific images
     if (program.heroImage?.desktop) {
       return program.heroImage.desktop;
     }
     
-    // Fallback images based on subcategory
-    if (program.subcategory && program.subcategory in IMAGE_MAP) {
-      return IMAGE_MAP[program.subcategory as keyof typeof IMAGE_MAP];
+    // Direct program image mapping based on slug
+    if (program.slug && program.slug in PROGRAM_IMAGE_MAP) {
+      return PROGRAM_IMAGE_MAP[program.slug as keyof typeof PROGRAM_IMAGE_MAP];
     }
     
-    return program.category === 'mba-global' ? '/uploads/mba_global.jpg' : '/uploads/pgdm.jpg';
+    // Fallback based on category for unmapped programs
+    if (program.category === 'mba-global') {
+      return '/uploads/mba_global.jpg';
+    }
+    
+    if (program.category === 'executive') {
+      return '/uploads/PGDM_in_Marketing_Working_Executive.png';
+    }
+    
+    if (program.category === 'pgdm-plus') {
+      return '/uploads/PGDM_Plus_in_Marketing_Management.png';
+    }
+    
+    // Default fallback
+    return '/uploads/pgdm.jpg';
   }, []);
 
   const transformProgramData = useCallback((program: any): TransformedProgram => ({

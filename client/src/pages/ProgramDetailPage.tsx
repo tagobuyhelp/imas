@@ -143,7 +143,7 @@ export function ProgramDetailPage() {
                             alt={program.heroImage.alt}
                             className="w-full h-full object-cover sm:hidden"
                         />
-                        <div className="absolute inset-0 bg-primary-dark/80"></div>
+                        <div className="absolute inset-0 bg-slate-800/50"></div>
                         <div className="absolute inset-0 bg-primary-dark/80"></div>
                         
                         {/* Animated Geometric Elements */}
