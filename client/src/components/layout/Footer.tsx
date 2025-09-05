@@ -162,7 +162,7 @@ export function Footer() {
                 <span>by</span>
               </div>
               <a
-                href="https://tagobuy.net/"
+                href="https://api.whatsapp.com/send/?phone=919732950781&text&type=phone_number&app_absent=0"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`${IMAS_TAILWIND_CLASSES.TEXT_TEAL} ${IMAS_TAILWIND_CLASSES.HOVER_TEXT_MEDIUM_BLUE} transition-all duration-300 font-medium hover:underline hover:scale-105 inline-flex items-center gap-1 group`}
