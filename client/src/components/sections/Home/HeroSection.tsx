@@ -9,7 +9,7 @@ export function HeroSection() {
   // Sample carousel images - replace with actual IMAS images
   const carouselImages = [
     '/uploads/imas_hero_image_2.webp',
-    '/public/uploads/imas_hero_image1.webp',
+    '/uploads/imas_hero_image1.webp',
     '/uploads/imas_hero_image3.webp',
   ];
 

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { Button } from './button';
 
@@ -20,16 +20,44 @@ export function Carousel({
     className = ""
 }: CarouselProps) {
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [loadedImages, setLoadedImages] = useState<Set<number>>(new Set());
+    const [imageErrors, setImageErrors] = useState<Set<number>>(new Set());
+    const [isLoading, setIsLoading] = useState(true);
+
+    // Preload images
+    useEffect(() => {
+        const preloadImages = async () => {
+            const imagePromises = images.map((src, index) => {
+                return new Promise<void>((resolve) => {
+                    const img = new Image();
+                    img.onload = () => {
+                        setLoadedImages(prev => new Set([...prev, index]));
+                        resolve();
+                    };
+                    img.onerror = () => {
+                        setImageErrors(prev => new Set([...prev, index]));
+                        resolve();
+                    };
+                    img.src = src;
+                });
+            });
+
+            await Promise.all(imagePromises);
+            setIsLoading(false);
+        };
+
+        preloadImages();
+    }, [images]);
 
     useEffect(() => {
-        if (!autoPlay) return;
+        if (!autoPlay || isLoading) return;
 
         const timer = setInterval(() => {
             setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
         }, interval);
 
         return () => clearInterval(timer);
-    }, [autoPlay, interval, images.length]);
+    }, [autoPlay, interval, images.length, isLoading]);
 
     const goToSlide = (index: number) => {
         setCurrentIndex(index);
@@ -45,23 +73,54 @@ export function Carousel({
 
     return (
         <div className={`relative overflow-hidden rounded-lg ${className}`}>
+            {/* Loading State */}
+            {isLoading && (
+                <div className="absolute inset-0 flex items-center justify-center bg-gray-200 animate-pulse">
+                    <div className="text-gray-500">Loading images...</div>
+                </div>
+            )}
+
             {/* Images Container */}
             <div className="relative h-full">
-                {images.map((image, index) => (
-                    <div
-                        key={index}
-                        className={`absolute inset-0 transition-opacity duration-1000 ${index === currentIndex ? 'opacity-100' : 'opacity-0'
+                {images.map((image, index) => {
+                    const isImageLoaded = loadedImages.has(index);
+                    const hasImageError = imageErrors.has(index);
+                    const shouldShow = index === currentIndex && !isLoading;
+
+                    return (
+                        <div
+                            key={index}
+                            className={`absolute inset-0 transition-opacity duration-1000 ${
+                                shouldShow ? 'opacity-100' : 'opacity-0'
                             }`}
-                    >
-                        <img
-                            src={image}
-                            alt={`Slide ${index + 1}`}
-                            className="w-full h-full object-cover"
-                        />
-                        {/* Overlay for better text readability */}
-                        <div className="absolute inset-0 bg-black/30"></div>
-                    </div>
-                ))}
+                        >
+                            {hasImageError ? (
+                                <div className="w-full h-full bg-gray-300 flex items-center justify-center">
+                                    <div className="text-gray-500">Image unavailable</div>
+                                </div>
+                            ) : (
+                                <>
+                                    <img
+                                        src={image}
+                                        alt={`Slide ${index + 1}`}
+                                        className={`w-full h-full object-cover transition-opacity duration-500 ${
+                                            isImageLoaded ? 'opacity-100' : 'opacity-0'
+                                        }`}
+                                        loading="eager"
+                                        decoding="async"
+                                    />
+                                    {!isImageLoaded && (
+                                        <div className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center">
+                                            <div className="text-gray-500">Loading...</div>
+                                        </div>
+                                    )}
+                                </>
+                            )}
+                            {/* Overlay for better text readability */}
+                            <div className="absolute inset-0 bg-black/30"></div>
+                        </div>
+                    );
+                })}
             </div>
 
             {/* Navigation Controls */}
