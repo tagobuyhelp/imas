@@ -326,8 +326,12 @@ export function Header({ currentPage, onMenuToggle }: HeaderProps) {
 
             {/* Desktop CTA Buttons */}
             <div className="hidden lg:flex items-center gap-4">
-              <Button variant="ghost" className={`text-white ${IMAS_TAILWIND_CLASSES.HOVER_TEXT_TEAL} hover:bg-gray-800`}>
-                Login
+              <Button 
+                variant="ghost" 
+                className={`text-white ${IMAS_TAILWIND_CLASSES.HOVER_TEXT_TEAL} hover:bg-gray-800`}
+                onClick={() => window.open('https://payment.collexo.com/login/institute/', '_blank')}
+              >
+                Pay Fees
               </Button>
               <Button 
                 className={`${IMAS_TAILWIND_CLASSES.GRADIENT_PRIMARY} hover:from-[#2e7bb3] hover:to-[#26c1d3] text-white`}

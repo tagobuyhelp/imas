@@ -134,9 +134,12 @@ export function Sidebar({ currentPage, isOpen, onClose }: SidebarProps) {
             <Button 
               variant="outline"
               className={`w-full ${IMAS_TAILWIND_CLASSES.BORDER_TEAL} ${IMAS_TAILWIND_CLASSES.TEXT_TEAL} ${IMAS_TAILWIND_CLASSES.HOVER_BG_TEAL}/10`}
-              onClick={handleNavClick}
+              onClick={() => {
+                handleNavClick();
+                window.open('https://payment.collexo.com/login/institute/', '_blank');
+              }}
             >
-              Login
+              Pay Fees
             </Button>
             <Button 
               className={`w-full ${IMAS_TAILWIND_CLASSES.GRADIENT_PRIMARY} hover:from-[#2e7bb3] hover:to-[#26c1d3] text-white`}
