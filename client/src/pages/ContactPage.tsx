@@ -338,7 +338,7 @@ export function ContactPage(): React.JSX.Element {
               Explore Programs
             </Button>
             <Button 
-              onClick={() => window.open('/admissions', '_blank')}
+              onClick={() => window.open('https://admission.imas.ac.in/', '_blank')}
               variant="outline"
               className="border-2 bg-transparent border-white text-white hover:bg-white hover:text-[#143674] px-8 py-3 text-lg font-semibold transition-all duration-300 hover:scale-105 backdrop-blur-sm"
             >

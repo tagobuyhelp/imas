@@ -95,14 +95,16 @@ const AdmissionsMegaMenu: React.FC<AdmissionsMegaMenuProps> = ({ isOpen, onClose
                 
                 {/* View All Button */}
                 <div className="mt-4 pt-3 border-t border-gray-100">
-                  <Link 
-                    to="/admissions"
+                  <a 
+                    href="https://admission.imas.ac.in/"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="text-sm text-teal-600 hover:text-teal-700 font-medium flex items-center gap-1 group-hover:gap-2 transition-all duration-200"
                     onClick={onClose}
                   >
                     View All Programs
                     <ChevronDown className="h-3 w-3 rotate-[-90deg] group-hover:rotate-0 transition-transform duration-200" />
-                  </Link>
+                  </a>
                 </div>
               </div>
             ))}
@@ -125,13 +127,15 @@ const AdmissionsMegaMenu: React.FC<AdmissionsMegaMenuProps> = ({ isOpen, onClose
                 >
                   Download Brochure
                 </button>
-                <Link 
-                  to="/admissions"
+                <a 
+                  href="https://admission.imas.ac.in/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="px-4 py-2 text-sm bg-gradient-to-r from-blue-600 to-teal-600 text-white hover:from-blue-700 hover:to-teal-700 rounded-lg transition-all duration-200"
                   onClick={onClose}
                 >
                   Apply Now
-                </Link>
+                </a>
               </div>
             </div>
           </div>

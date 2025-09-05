@@ -3,7 +3,7 @@ import { Button } from '../../ui/button';
 import { Carousel } from '../../ui/carousel';
 import { IMAS_TAILWIND_CLASSES } from '../../../lib/constants';
 import { downloadBrochure, applyNow } from '../../../lib/utils';
-import { ArrowRight, Download, Send } from 'lucide-react';
+import { ArrowRight, Download } from 'lucide-react';
 
 export function HeroSection() {
   // Sample carousel images - replace with actual IMAS images
@@ -105,55 +105,67 @@ export function HeroSection() {
             </div>
           </div>
 
-          {/* Right Section - Admissions Form */}
+          {/* Right Section - Key Statistics & Highlights */}
           <div className="bg-white text-gray-800 rounded-lg p-3 sm:p-4 lg:p-6 shadow-xl w-full max-w-[400px] sm:max-w-[450px] h-full mx-auto lg:mx-0 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
-            <div className="space-y-3 sm:space-y-4 lg:space-y-5">
+            <div className="space-y-4 sm:space-y-6">
               {/* Program Year */}
-              <div className="border-b border-gray-300 pb-2">
+              <div className="border-b border-gray-300 pb-3">
                 <p className="text-gray-500 text-xs">IMAS 2025</p>
-              </div>
-
-              <div>
-                <h2 className="text-base sm:text-lg lg:text-xl font-bold text-gray-800 leading-tight">
+                <h2 className="text-base sm:text-lg lg:text-xl font-bold text-gray-800 leading-tight mt-1">
                   PGDM Admission Open for 19th Sep 2025
                 </h2>
               </div>
 
-              {/* Form */}
-              <div className="space-y-4">
-                <div>
-                  <h3 className={`${IMAS_TAILWIND_CLASSES.TEXT_MEDIUM_BLUE} font-semibold mb-2 text-sm`}>Create your account</h3>
-                  <p className="text-gray-600 text-xs mb-4">Enter your details to proceed.</p>
+              {/* Key Statistics */}
+              <div className="grid grid-cols-2 gap-4">
+                <div className="text-center p-3 bg-gray-50 rounded-lg">
+                  <div className={`text-xl sm:text-2xl font-bold ${IMAS_TAILWIND_CLASSES.TEXT_MEDIUM_BLUE}`}>100%</div>
+                  <div className="text-xs text-gray-600">Placement Assurance</div>
                 </div>
-
-                <input
-                  type="email"
-                  placeholder="Enter Email Address"
-                  className={`w-full px-3 sm:px-4 py-2 sm:py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2e7bb3] bg-white text-xs sm:text-sm transition-all duration-300 ${IMAS_TAILWIND_CLASSES.HOVER_BORDER_MEDIUM_BLUE}`}
-                />
-
-                <div className="flex gap-2">
-                  <select className={`px-2 sm:px-3 py-2 sm:py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2e7bb3] bg-white text-xs sm:text-sm transition-all duration-300 ${IMAS_TAILWIND_CLASSES.HOVER_BORDER_MEDIUM_BLUE}`}>
-                    <option>+91</option>
-                  </select>
-                  <input
-                    type="tel"
-                    placeholder="Enter Mobile Number"
-                    className={`flex-1 px-3 sm:px-4 py-2 sm:py-2.5 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#2e7bb3] bg-white text-xs sm:text-sm transition-all duration-300 ${IMAS_TAILWIND_CLASSES.HOVER_BORDER_MEDIUM_BLUE}`}
-                  />
+                <div className="text-center p-3 bg-gray-50 rounded-lg">
+                  <div className={`text-xl sm:text-2xl font-bold ${IMAS_TAILWIND_CLASSES.TEXT_MEDIUM_BLUE}`}>15+</div>
+                  <div className="text-xs text-gray-600">Industry Partners</div>
                 </div>
+                <div className="text-center p-3 bg-gray-50 rounded-lg">
+                  <div className={`text-xl sm:text-2xl font-bold ${IMAS_TAILWIND_CLASSES.TEXT_MEDIUM_BLUE}`}>50+</div>
+                  <div className="text-xs text-gray-600">Expert Faculty</div>
+                </div>
+                <div className="text-center p-3 bg-gray-50 rounded-lg">
+                  <div className={`text-xl sm:text-2xl font-bold ${IMAS_TAILWIND_CLASSES.TEXT_MEDIUM_BLUE}`}>AICTE</div>
+                  <div className="text-xs text-gray-600">Approved</div>
+                </div>
+              </div>
 
-                <label className="flex items-center gap-2 text-xs text-gray-600">
-                  <input type="checkbox" className={`rounded border-gray-300 ${IMAS_TAILWIND_CLASSES.TEXT_MEDIUM_BLUE} focus:ring-[#2e7bb3] transition-all duration-300`} defaultChecked />
-                  <span>Receive updates and confirmation from us on WhatsApp</span>
-                </label>
+              {/* Program Highlights */}
+              <div className="space-y-3">
+                <h3 className={`${IMAS_TAILWIND_CLASSES.TEXT_MEDIUM_BLUE} font-semibold text-sm`}>Why Choose IMAS?</h3>
+                <div className="space-y-2">
+                  <div className="flex items-center gap-2">
+                    <div className={`w-2 h-2 ${IMAS_TAILWIND_CLASSES.BG_TEAL} rounded-full`}></div>
+                    <span className="text-xs text-gray-700">Industry-Integrated Curriculum</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className={`w-2 h-2 ${IMAS_TAILWIND_CLASSES.BG_TEAL} rounded-full`}></div>
+                    <span className="text-xs text-gray-700">Live Projects & Internships</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className={`w-2 h-2 ${IMAS_TAILWIND_CLASSES.BG_TEAL} rounded-full`}></div>
+                    <span className="text-xs text-gray-700">Global Exposure Programs</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <div className={`w-2 h-2 ${IMAS_TAILWIND_CLASSES.BG_TEAL} rounded-full`}></div>
+                    <span className="text-xs text-gray-700">AI-Enhanced Learning</span>
+                  </div>
+                </div>
               </div>
 
               {/* Application Deadline */}
-              <div className="pt-2">
-                <p className="text-xs text-gray-700">
-                  Final Intake Phase 7 Application Deadline -
-                  <span className="font-bold text-red-600 ml-1 animate-pulse">24th August 2025</span>
+              <div className="bg-red-50 p-3 rounded-lg border border-red-200">
+                <p className="text-xs text-gray-700 text-center">
+                  Final Intake Phase 7 Application Deadline
+                </p>
+                <p className="font-bold text-red-600 text-center animate-pulse text-sm mt-1">
+                  24th August 2025
                 </p>
               </div>
 
@@ -162,18 +174,9 @@ export function HeroSection() {
                 className={`w-full ${IMAS_TAILWIND_CLASSES.GRADIENT_PRIMARY} hover:from-[#2e7bb3] hover:to-[#26c1d3] text-white py-3 text-base sm:text-lg font-semibold rounded-lg hover:scale-105 transition-all duration-300`}
                 onClick={applyNow}
               >
-                Start your Application
-                <Send className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
+                Apply Now
+                <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
               </Button>
-
-              {/* Legal Text */}
-              <div className="pt-2">
-                <p className="text-xs text-gray-500 text-center">
-                  By creating an account I have read and agree to IMAS's{' '}
-                  <a href="#" className={`${IMAS_TAILWIND_CLASSES.TEXT_MEDIUM_BLUE} hover:underline transition-all duration-300`}>Terms</a> and{' '}
-                  <a href="#" className={`${IMAS_TAILWIND_CLASSES.TEXT_MEDIUM_BLUE} hover:underline transition-all duration-300`}>Privacy Policy</a>
-                </p>
-              </div>
             </div>
           </div>
         </div>

@@ -142,13 +142,15 @@ const MobileAdmissionsMenu: React.FC<MobileAdmissionsMenuProps> = ({
                 <FileText className="h-4 w-4" />
                 Download Brochure
               </button>
-              <Link 
-                to="/admissions"
+              <a 
+                href="https://admission.imas.ac.in/"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-full px-3 py-2 text-sm bg-gradient-to-r from-blue-600 to-teal-600 text-white rounded-md hover:from-blue-700 hover:to-teal-700 transition-all flex items-center gap-2"
               >
                 <GraduationCap className="h-4 w-4" />
                 Apply Now
-              </Link>
+              </a>
             </div>
           </div>
         </div>

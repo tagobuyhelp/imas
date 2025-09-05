@@ -44,7 +44,7 @@ export function ProgramDetailPage() {
     const handleCTAAction = (action: string) => {
         switch (action) {
             case 'apply':
-                window.open('/admissions', '_blank');
+                window.open('https://admission.imas.ac.in/', '_blank');
                 break;
             case 'enquire':
                 window.open('/contact', '_blank');

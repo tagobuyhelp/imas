@@ -24,29 +24,6 @@ export function downloadBrochure() {
  * or navigating to the admissions page
  */
 export function applyNow() {
-  // Check if we're already on the admissions page
-  const isAdmissionsPage = window.location.pathname === '/admissions';
-  
-  if (isAdmissionsPage) {
-    // If on admissions page, scroll to the application form
-    const applicationForm = document.getElementById('apply');
-    
-    if (applicationForm) {
-      applicationForm.scrollIntoView({ 
-        behavior: 'smooth',
-        block: 'start'
-      });
-      
-      // Focus on the first form field after a short delay
-      setTimeout(() => {
-        const firstInput = applicationForm.querySelector('input, select, textarea');
-        if (firstInput instanceof HTMLElement) {
-          firstInput.focus();
-        }
-      }, 800);
-    }
-  } else {
-    // If not on admissions page, navigate to admissions page with hash
-    window.location.href = '/admissions#apply';
-  }
+  // Redirect to the official IMAS admission portal
+  window.open('https://admission.imas.ac.in/', '_blank');
 }
