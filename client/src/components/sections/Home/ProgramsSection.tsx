@@ -507,7 +507,7 @@ export function ProgramsSection() {
         {/* View All Programs Button */}
         <div className="text-center mt-8">
           <Button
-            onClick={() => window.open('/programs', '_blank')}
+            onClick={() => window.open('/programs', '_self')}
             className={`${IMAS_TAILWIND_CLASSES.BG_DARK_BLUE} hover:bg-blue-800 text-white px-8 py-3 text-sm font-semibold transition-all duration-300 hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500`}
             aria-label="View all programs in a new tab"
           >

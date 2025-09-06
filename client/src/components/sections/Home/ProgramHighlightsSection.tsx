@@ -1,7 +1,8 @@
 import React from 'react';
 import { Button } from '../../ui/button';
-import { Clock, MapPin, Users, Calendar } from 'lucide-react';
+import { Clock, MapPin, Users, Calendar, ArrowRight } from 'lucide-react';
 import { IMAS_TAILWIND_CLASSES } from '../../../lib/constants';
+import { Link } from 'react-router-dom';
 
 export function ProgramHighlightsSection() {
   return (
@@ -77,9 +78,12 @@ export function ProgramHighlightsSection() {
 
           {/* Bottom CTA */}
           <div className="text-center mt-4 sm:mt-6 pt-4 border-t border-gray-100 animate-fade-in-up" style={{ animationDelay: '1s' }}>
-            <Button className={`${IMAS_TAILWIND_CLASSES.GRADIENT_PRIMARY} hover:from-[#2e7bb3] hover:to-[#26c1d3] text-white px-4 sm:px-6 py-2 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all text-sm hover:scale-105`}>
-              View All Programs
-            </Button>
+            <Link to="/programs">
+              <Button className={`${IMAS_TAILWIND_CLASSES.GRADIENT_PRIMARY} hover:from-[#2e7bb3] hover:to-[#26c1d3] text-white px-4 sm:px-6 py-2 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all text-sm hover:scale-105`}>
+                View All Programs
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

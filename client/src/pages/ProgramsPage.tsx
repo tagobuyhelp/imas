@@ -209,6 +209,7 @@ export function ProgramsPage() {
                 onClick={() => handleCTAAction('apply')}
               >
                 Apply Now
+                <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
               </Button>
               <Button 
                 variant="outline" 
@@ -216,6 +217,7 @@ export function ProgramsPage() {
                 onClick={() => handleCTAAction('download')}
               >
                 Download Brochure
+                <Download className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
               </Button>
             </div>
           </div>
@@ -434,6 +436,7 @@ export function ProgramsPage() {
                 onClick={() => handleCTAAction('apply')}
               >
                 Apply Now for IMAS Admission 2025
+                <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
               </Button>
               <Button 
                 variant="outline" 
@@ -441,6 +444,7 @@ export function ProgramsPage() {
                 onClick={() => handleCTAAction('enquire')}
               >
                 Enquire Now
+                <Mail className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
               </Button>
               <Button 
                 variant="outline" 
@@ -448,6 +452,7 @@ export function ProgramsPage() {
                 onClick={() => handleCTAAction('download')}
               >
                 Download Brochure
+                <Download className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
               </Button>
             </div>
           </div>

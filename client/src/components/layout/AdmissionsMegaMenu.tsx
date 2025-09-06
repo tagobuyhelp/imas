@@ -96,8 +96,8 @@ const AdmissionsMegaMenu: React.FC<AdmissionsMegaMenuProps> = ({ isOpen, onClose
                 {/* View All Button */}
                 <div className="mt-4 pt-3 border-t border-gray-100">
                   <a 
-                    href="https://admission.imas.ac.in/"
-                    target="_blank"
+                    href="/programs"
+                    target="_self"
                     rel="noopener noreferrer"
                     className="text-sm text-teal-600 hover:text-teal-700 font-medium flex items-center gap-1 group-hover:gap-2 transition-all duration-200"
                     onClick={onClose}
