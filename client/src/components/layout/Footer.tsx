@@ -162,12 +162,12 @@ export function Footer() {
                 <span>by</span>
               </div>
               <a
-                href="https://api.whatsapp.com/send/?phone=919732950781&text&type=phone_number&app_absent=0"
+                href="https://emeacademy.co.in"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`${IMAS_TAILWIND_CLASSES.TEXT_TEAL} ${IMAS_TAILWIND_CLASSES.HOVER_TEXT_MEDIUM_BLUE} transition-all duration-300 font-medium hover:underline hover:scale-105 inline-flex items-center gap-1 group`}
               >
-                Tagobuy IT Services
+                EME
                 <ExternalLink className="w-3 h-3 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-300" />
               </a>
             </div>
