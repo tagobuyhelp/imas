@@ -449,16 +449,18 @@ export function Header({ currentPage, onMenuToggle }: HeaderProps) {
         </div>
         
         {/* Admissions Mega Menu */}
-        <div 
-          className="mega-menu relative"
-          onMouseEnter={() => setIsAdmissionsMegaMenuOpen(true)}
-          onMouseLeave={() => setIsAdmissionsMegaMenuOpen(false)}
-        >
-          <AdmissionsMegaMenu 
-            isOpen={isAdmissionsMegaMenuOpen}
-            onClose={() => setIsAdmissionsMegaMenuOpen(false)}
-          />
-        </div>
+        {isAdmissionsMegaMenuOpen && (
+           <div 
+             className="mega-menu absolute top-full left-0 right-0 z-[110]"
+             onMouseEnter={() => setIsAdmissionsMegaMenuOpen(true)}
+             onMouseLeave={() => setIsAdmissionsMegaMenuOpen(false)}
+           >
+            <AdmissionsMegaMenu 
+              isOpen={isAdmissionsMegaMenuOpen}
+              onClose={() => setIsAdmissionsMegaMenuOpen(false)}
+            />
+          </div>
+        )}
       </header>
     </>
   );
