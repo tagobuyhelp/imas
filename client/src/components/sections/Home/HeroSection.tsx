@@ -32,7 +32,7 @@ export function HeroSection() {
               <Carousel
                 images={carouselImages}
                 autoPlay={true}
-                interval={1000}
+                interval={4000}
                 showControls={false}
                 showIndicators={false}
                 className="h-full"

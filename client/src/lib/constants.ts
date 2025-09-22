@@ -15,15 +15,15 @@ export const IMAS_BRAND = {
     SHORT_NAME: 'IMAS',
     TAGLINE: 'Empowering Future Business Leaders',
     WEBSITE: 'www.imas.ac.in',
-    EMAIL: 'info@imas.ac.in',
-    PHONE: '+91 98765 43210',
+    EMAIL: 'admission@imas.ac.in',
+    PHONE: '+91 90888 22777',
     ADDRESS: 'Salt Lake Sector V, Kolkata',
 } as const;
 
 // IMAS Contact Information
 export const IMAS_CONTACT = {
-    PHONE: '+91 98765 43210',
-    EMAIL: 'info@imas.ac.in',
+    PHONE: '+91 90888 22777',
+    EMAIL: 'admission@imas.ac.in',
     WEBSITE: 'www.imas.ac.in',
     ADDRESS: 'Salt Lake Sector V, Kolkata, West Bengal, India',
 } as const;
@@ -71,7 +71,7 @@ export const IMAS_STATS = {
 
 // IMAS Key Dates
 export const IMAS_DATES = {
-    APPLICATION_DEADLINE: '2025-08-24T23:59:59',
+    APPLICATION_DEADLINE: '2025-07-15T23:59:59',
     COMMENCEMENT: 'September 2025',
     INTAKE_PHASE: 'Phase 7',
 } as const;
@@ -126,18 +126,18 @@ export const IMAS_TAILWIND_CLASSES = {
     BORDER_MEDIUM_BLUE: 'border-[#2e7bb3]',
     BORDER_TEAL: 'border-[#26c1d3]',
 
-      // Hover states
-  HOVER_BG_DARK_BLUE: 'hover:bg-[#143674]',
-  HOVER_BG_MEDIUM_BLUE: 'hover:bg-[#2e7bb3]',
-  HOVER_BG_TEAL: 'hover:bg-[#26c1d3]',
+    // Hover states
+    HOVER_BG_DARK_BLUE: 'hover:bg-[#143674]',
+    HOVER_BG_MEDIUM_BLUE: 'hover:bg-[#2e7bb3]',
+    HOVER_BG_TEAL: 'hover:bg-[#26c1d3]',
 
-  HOVER_TEXT_DARK_BLUE: 'hover:text-[#143674]',
-  HOVER_TEXT_MEDIUM_BLUE: 'hover:text-[#2e7bb3]',
-  HOVER_TEXT_TEAL: 'hover:text-[#26c1d3]',
+    HOVER_TEXT_DARK_BLUE: 'hover:text-[#143674]',
+    HOVER_TEXT_MEDIUM_BLUE: 'hover:text-[#2e7bb3]',
+    HOVER_TEXT_TEAL: 'hover:text-[#26c1d3]',
 
-  HOVER_BORDER_DARK_BLUE: 'hover:border-[#143674]',
-  HOVER_BORDER_MEDIUM_BLUE: 'hover:border-[#2e7bb3]',
-  HOVER_BORDER_TEAL: 'hover:border-[#26c1d3]',
+    HOVER_BORDER_DARK_BLUE: 'hover:border-[#143674]',
+    HOVER_BORDER_MEDIUM_BLUE: 'hover:border-[#2e7bb3]',
+    HOVER_BORDER_TEAL: 'hover:border-[#26c1d3]',
 
     // Gradients
     GRADIENT_PRIMARY: 'bg-gradient-to-r from-[#143674] to-[#2e7bb3]',

@@ -54,7 +54,12 @@ function AppContent(): React.JSX.Element {
 export function App(): React.JSX.Element {
   return (
     <HelmetProvider>
-      <Router>
+      <Router
+        future={{
+          v7_startTransition: true,
+          v7_relativeSplatPath: true,
+        }}
+      >
         <AppContent />
         <Toaster />
       </Router>

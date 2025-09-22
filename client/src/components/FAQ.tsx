@@ -19,16 +19,20 @@ const faqData: FAQSection[] = [
     title: 'Important FAQs',
     items: [
       {
-        question: 'Why choose IMAS Kolkata for MBA Global?',
-        answer: 'IMAS Kolkata offers a unique 2-year MBA Global program that blends India + UK education. You spend your first year at IMAS Kolkata (AICTE-approved PGDM + UK\'s EDLSMP diploma) and your second year at a leading UK partner university. This structure saves up to ₹12 lakhs compared to traditional UK MBAs while providing global exposure, international internships, and post-study work opportunities.'
+        question: 'Why choose IMAS Kolkata for your management education?',
+        answer: 'IMAS Kolkata is a premier business school offering AICTE-approved PGDM programs with 100% placement rate, ₹18.5 LPA highest package, and ₹8-12 LPA average package. We provide industry-focused curriculum, international exposure, state-of-the-art facilities, and strong industry partnerships with top companies for guaranteed career success.'
       },
       {
-        question: 'Is this a fully residential program?',
-        answer: 'The program is non-residential in India (students may choose hostel facilities provided by IMAS). The second year in the UK is fully residential, as per the partner university\'s norms.'
+        question: 'What programs does IMAS Kolkata offer?',
+        answer: 'IMAS offers comprehensive PGDM programs in Marketing Management, Financial Management, Human Resource Management, Business Analytics, AI & Data Science, Fintech, Healthcare Management, Innovation & Entrepreneurship, and Working Executive programs. All programs are AICTE-approved with excellent placement records.'
       },
       {
-        question: 'What career opportunities does this program open?',
-        answer: 'Graduates secure global careers in consulting, finance, technology, healthcare, supply chain, and entrepreneurship with packages ranging between ₹23L to ₹55L depending on the role and industry.'
+        question: 'What are the placement statistics at IMAS Kolkata?',
+        answer: 'IMAS Kolkata boasts 100% placement rate with ₹18.5 LPA highest package and ₹8-12 LPA average package. Over 2,20,234+ students have been empowered through our programs. Our graduates work with top companies like TCS, Wipro, Infosys, HDFC Bank, ICICI Bank, and leading startups.'
+      },
+      {
+        question: 'What makes IMAS different from other business schools?',
+        answer: 'IMAS stands out with its industry-focused curriculum, 100% placement guarantee, international immersion programs, state-of-the-art campus facilities, experienced faculty from IIMs and top institutions, strong industry partnerships, and comprehensive skill development programs including soft skills, leadership, and entrepreneurship training.'
       }
     ]
   },
@@ -51,16 +55,20 @@ const faqData: FAQSection[] = [
     title: 'Eligibility Criteria',
     items: [
       {
-        question: 'What is the eligibility criteria for MBA Global?',
-        answer: '• Graduation with 70% or above (2022, 2023, 2024, 2025 pass-outs eligible).\n• Strong academic background and willingness to pursue global careers.'
+        question: 'What is the eligibility criteria for PGDM programs?',
+        answer: '• Graduation with 50% or above from any recognized university\n• 2022, 2023, 2024, 2025 pass-outs are eligible\n• Valid scores in CAT/XAT/CMAT/MAT/ATMA/CUET accepted\n• Strong academic background and career aspirations in management'
       },
       {
-        question: 'Do I need to take management entrance exams like CAT/XAT/GMAT?',
-        answer: 'For admission into IMAS (Year 1), valid scores in CAT/XAT/CMAT/MAT/ATMA/CUET are accepted. For UK universities, English proficiency tests (IELTS) may be required. IMAS provides IELTS preparation support.'
+        question: 'Do I need management entrance exam scores?',
+        answer: 'Yes, valid scores in any of the following entrance exams are required: CAT/XAT/CMAT/MAT/ATMA/CUET. IMAS also conducts its own entrance test for candidates who haven\'t appeared for these exams.'
       },
       {
-        question: 'Is there an age limit for entry?',
-        answer: 'No, there is no strict age limit. However, the program is designed primarily for recent graduates and early-career professionals.'
+        question: 'Is there an age limit for PGDM programs?',
+        answer: 'There is no strict age limit for PGDM programs. However, the programs are designed primarily for recent graduates and early-career professionals. Working Executive programs are specifically designed for experienced professionals.'
+      },
+      {
+        question: 'Can final year students apply?',
+        answer: 'Yes, final year students (2025 pass-outs) can apply. However, admission will be confirmed only after successful completion of graduation with required percentage.'
       }
     ]
   },
@@ -69,20 +77,20 @@ const faqData: FAQSection[] = [
     title: 'Application',
     items: [
       {
-        question: 'When can I apply for MBA Global?',
-        answer: 'Applications open in early January and continue until seats are filled. Early applications are encouraged due to limited intake and scholarship opportunities.'
+        question: 'When can I apply for PGDM programs 2025?',
+        answer: 'Applications for 2025 batch are now open and will continue until July 15, 2025. We recommend applying early to secure your preferred program and avail scholarship opportunities.'
       },
       {
         question: 'What is the application process?',
-        answer: '1. Submit the online application on www.imas.ac.in.\n2. Upload academic transcripts and entrance test scores.\n3. Shortlisted candidates will be invited for Personal Interview.\n4. Admission offer letters are rolled out in cycles.'
+        answer: '1. Submit the online application on www.imas.ac.in\n2. Upload academic transcripts and entrance test scores\n3. Shortlisted candidates will be invited for Personal Interview\n4. Admission offer letters are rolled out in cycles\n5. Confirm admission by paying fees within deadline'
       },
       {
-        question: 'What is the fee for the program?',
-        answer: '• Year 1 (IMAS Kolkata): ₹3,66,600\n• Year 2 (UK): £10,000–£18,000 (varies by university) + approx. £12,000 living expenses.'
+        question: 'What is the fee structure for PGDM programs?',
+        answer: 'Fee structure varies by program:\n• PGDM Plus Programs: ₹3,66,600 per year\n• Working Executive Programs: ₹2,50,000 per year\n• Flexible payment options and education loans available\n• Scholarships available for meritorious students'
       },
       {
-        question: 'Can I strengthen my application?',
-        answer: 'Yes. Highlight:\n• Academic performance (70%+ marks preferred).\n• Extra-curriculars, internships, or leadership activities.\n• A strong Statement of Purpose (SOP) showcasing your global career vision.'
+        question: 'How can I strengthen my application?',
+        answer: 'To strengthen your application:\n• Maintain good academic performance (60%+ preferred)\n• Highlight extra-curricular activities, internships, and leadership roles\n• Write a compelling Statement of Purpose\n• Prepare well for entrance exams (CAT/XAT/CMAT/MAT)\n• Showcase relevant work experience if any'
       }
     ]
   },
@@ -109,16 +117,20 @@ const faqData: FAQSection[] = [
     title: 'Admissions',
     items: [
       {
-        question: 'When do classes start?',
-        answer: 'The MBA Global program begins in July/August every year (as per IMAS academic calendar).'
+        question: 'When do classes start for 2025 batch?',
+        answer: 'Classes for the 2025 batch begin in September 2025. The exact date will be communicated to admitted students during the orientation process.'
+      },
+      {
+        question: 'What are the admission deadlines for 2025?',
+        answer: 'Application deadlines for 2025 batch:\n• Early Bird: March 15, 2025\n• Regular: May 30, 2025\n• Final: July 15, 2025\n\nEarly applications are encouraged for scholarship opportunities and seat confirmation.'
       },
       {
         question: 'How can I confirm my admission?',
-        answer: 'Once selected, you must pay the admission fee within the given deadline and submit required documents.'
+        answer: 'Once selected, you must pay the admission fee within the given deadline and submit required documents. Our admissions team will guide you through the complete process.'
       },
       {
         question: 'Can I defer my admission?',
-        answer: 'Yes, deferral is allowed on a case-to-case basis for one academic year with valid reasons.'
+        answer: 'Yes, deferral is allowed on a case-to-case basis for one academic year with valid reasons. Please contact our admissions office for deferral procedures.'
       }
     ]
   },

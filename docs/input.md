@@ -804,7 +804,7 @@ From blockchain to digital lending, prepare to drive innovation across global fi
 7. PGDM Plus in Hospital & Healthcare Management
 Lead the Future of Healthcare Delivery
 If you're looking to enter or advance in the healthcare sector, this is one of the most future-focused healthcare management programs in Kolkata. The PGDM Plus in Hospital & Healthcare Management at IMAS Kolkata is a dynamic and AICTE-approved two-year full-time program that prepares future-ready healthcare leaders. It is for aspirants who wish to merge management expertise with the critical demands of healthcare, this course offers in-depth knowledge of hospital administration, health systems, policy, and operations — all while integrating cutting-edge business practices.
-Why Choose PGDM in in Hospital & Healthcare Management at IMAS Business School?
+Why Choose PGDM in Hospital & Healthcare Management at IMAS Business School?
 Core Highlights of PGDM Fintech at IMAS Kolkata
 •
 Two-Year Full-Time program with industry-focused curriculum

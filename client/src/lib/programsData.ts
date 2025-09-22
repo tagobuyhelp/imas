@@ -310,6 +310,51 @@ const recruiterLogos: Record<string, RecruiterLogo> = {
         name: 'Larsen & Toubro',
         logo: '/uploads/L&T.png',
         alt: 'Larsen & Toubro Logo'
+    },
+    'Bajaj Finserv': {
+        name: 'Bajaj Finserv',
+        logo: '/uploads/bajaj-finserv-logo.png',
+        alt: 'Bajaj Finserv Logo'
+    },
+    'Kotak Mahindra Bank': {
+        name: 'Kotak Mahindra Bank',
+        logo: '/uploads/kotaklogo.png',
+        alt: 'Kotak Mahindra Bank Logo'
+    },
+    'Tata Motors': {
+        name: 'Tata Motors',
+        logo: '/uploads/tata-motors-logo.png',
+        alt: 'Tata Motors Logo'
+    },
+    'Tata Consumer': {
+        name: 'Tata Consumer Products',
+        logo: '/uploads/tata-consumer-logo.png',
+        alt: 'Tata Consumer Products Logo'
+    },
+    'Fortis Healthcare': {
+        name: 'Fortis Healthcare',
+        logo: '/uploads/fortis_logo.png',
+        alt: 'Fortis Healthcare Logo'
+    },
+    'Max Healthcare': {
+        name: 'Max Healthcare',
+        logo: '/uploads/max-logo.png',
+        alt: 'Max Healthcare Logo'
+    },
+    'Manipal Hospitals': {
+        name: 'Manipal Hospitals',
+        logo: '/uploads/manipalhospitallogo.png',
+        alt: 'Manipal Hospitals Logo'
+    },
+    'Mahindra Logistics': {
+        name: 'Mahindra Logistics',
+        logo: '/uploads/mahindra-logistics-logo.png',
+        alt: 'Mahindra Logistics Logo'
+    },
+    'Bajaj Auto': {
+        name: 'Bajaj Auto',
+        logo: '/uploads/bajaj-auto-logo-motorcycle-company-png-favpng-Ba7ZrxBzWGFusbuagxv99a8Uu.jpg',
+        alt: 'Bajaj Auto Logo'
     }
 };
 
@@ -322,7 +367,7 @@ export const programsData: Program[] = [
         subcategory: 'marketing',
         duration: '2 Years',
         format: 'full-time',
-        location: 'Kolkata',
+        location: 'Kolkata (Salt Lake)',
         commencement: '19th Sep 2025',
         description: 'The PGDM Plus in Marketing Management at IMAS Kolkata is a comprehensive 2-year program designed to create marketing leaders who can navigate the complexities of modern consumer behavior, digital transformation, and global brand management. This AICTE-approved program combines theoretical foundations with practical applications, ensuring graduates are industry-ready from day one.',
         overview: 'The PGDM Plus in Marketing Management at IMAS Kolkata is a transformative 2-year full-time program designed for aspiring marketers who want to master branding, digital strategy, consumer psychology, and sales leadership.',
@@ -334,6 +379,7 @@ export const programsData: Program[] = [
             'Advanced Certifications: Six Sigma (Green Belt), SAP ERP, Advanced Excel',
             '20+ Presentations per Semester to boost confidence',
             'Live Business Projects, Winter & Summer Internships',
+            'Internship at every semester',
             'International Immersion: Dubai, Singapore, Thailand & Malaysia',
             'Industry Mentorship from top marketing leaders',
             'Global Alumni Network across brands like HUL, Deloitte, and Amazon',
@@ -379,7 +425,7 @@ export const programsData: Program[] = [
             'Client Servicing & Account Management'
         ],
         eligibility: {
-            education: 'Graduation (2022–2025) with 50% marks',
+            education: 'Graduation in any discipline with 50% marks',
             exams: 'Valid CAT/XAT/CMAT/MAT/CUET score',
             additional: 'Strong communication skills and creative aptitude'
         },
@@ -459,7 +505,7 @@ export const programsData: Program[] = [
         subcategory: 'finance',
         duration: '2 Years',
         format: 'full-time',
-        location: 'Kolkata',
+        location: 'Kolkata (Salt Lake)',
         commencement: '19th Sep 2025',
         description: 'The PGDM Plus in Financial Management at IMAS Kolkata is a comprehensive 2-year program designed to create finance leaders who can navigate complex financial markets, corporate finance decisions, and emerging fintech innovations. This AICTE-approved program combines rigorous analytical training with practical applications in investment banking, risk management, and financial strategy.',
         overview: 'The PGDM Plus in Financial Management at IMAS Business School Kolkata is your gateway to mastering the world of money, markets, investments, and corporate finance.',
@@ -475,6 +521,7 @@ export const programsData: Program[] = [
             'International immersion in financial hubs like Singapore and Dubai',
             'Certifications: SAP ERP Suite, Advanced Excel, Microsoft Project, Six Sigma',
             'Live Projects + Dual Internships (Winter & Summer)',
+            'Internship at every semester',
             'Case Studies & Capstone Projects from real finance firms',
             'Corporate Connect: Industrial visits + mentorships'
         ],
@@ -507,7 +554,7 @@ export const programsData: Program[] = [
             'Financial Planning & Analysis Manager'
         ],
         eligibility: {
-            education: 'Graduation (2022–2025) with 50% marks',
+            education: 'Graduation in any discipline with 50% marks',
             exams: 'Valid CAT/XAT/CMAT/MAT/CUET score',
             additional: 'Strong analytical and quantitative skills'
         },
@@ -586,7 +633,7 @@ export const programsData: Program[] = [
         subcategory: 'hr',
         duration: '2 Years',
         format: 'full-time',
-        location: 'Kolkata',
+        location: 'Kolkata (Salt Lake)',
         commencement: '19th Sep 2025',
         description: 'The PGDM Plus in Human Resource Management at IMAS Kolkata is a comprehensive 2-year program designed to create HR leaders who can navigate the complexities of modern workforce management, organizational development, and strategic human capital planning. This AICTE-approved program combines rigorous academic learning with practical industry exposure, preparing students to become strategic HR business partners who drive organizational success through people-centric initiatives.',
         overview: 'The PGDM Plus in Human Resource Management at IMAS Kolkata is a transformative 2-year full-time program designed for aspiring HR professionals who want to master talent management, organizational behavior, people analytics, and strategic HR leadership.',
@@ -600,6 +647,7 @@ export const programsData: Program[] = [
             'Advanced Certifications: Six Sigma (Green Belt), SAP ERP, Advanced Excel',
             '20+ Presentations per Semester to boost confidence and leadership skills',
             'Live Business Projects, Winter & Summer Internships with top companies',
+            'Internship at every semester',
             'International Immersion: Dubai, Singapore, Thailand & Malaysia',
             'Industry Mentorship from senior HR leaders and CHRO executives',
             'Global Alumni Network across companies like TCS, Deloitte, and Accenture',
@@ -642,7 +690,7 @@ export const programsData: Program[] = [
             'HR Operations Manager'
         ],
         eligibility: {
-            education: 'Graduation (2022–2025) with 50% marks',
+            education: 'Graduation in any discipline with 50% marks',
             exams: 'Valid CAT/XAT/CMAT/MAT/CUET score',
             additional: 'Strong interpersonal and communication skills'
         },
@@ -720,7 +768,7 @@ export const programsData: Program[] = [
         subcategory: 'analytics',
         duration: '2 Years',
         format: 'full-time',
-        location: 'Kolkata',
+        location: 'Kolkata (Salt Lake)',
         commencement: '19th Sep 2025',
         description: 'The PGDM Plus in Business Analytics at IMAS Kolkata is a comprehensive 2-year program designed to create data-driven business leaders who can transform raw data into strategic insights and actionable business intelligence. This AICTE-approved program combines statistical analysis, machine learning, and business strategy, preparing students to become analytics professionals who drive data-informed decision-making across industries.',
         overview: 'The PGDM Plus in Business Analytics at IMAS Kolkata is a transformative 2-year full-time program designed for aspiring analytics professionals who want to master data science, predictive modeling, business intelligence, and strategic analytics.',
@@ -733,6 +781,7 @@ export const programsData: Program[] = [
             'Advanced Certifications: Six Sigma (Green Belt), SAP ERP, Advanced Excel',
             '20+ Presentations per Semester to boost analytical communication skills',
             'Live Business Projects, Winter & Summer Internships with analytics firms',
+            'Internship at every semester',
             'International Immersion: Dubai, Singapore, Thailand & Malaysia',
             'Industry Mentorship from senior data scientists and analytics leaders',
             'Global Alumni Network across companies like IBM, Microsoft, and Accenture',
@@ -775,7 +824,7 @@ export const programsData: Program[] = [
             'Data Strategy Consultant'
         ],
         eligibility: {
-            education: 'Graduation (2022–2025) with 50% marks',
+            education: 'Graduation in any discipline with 50% marks',
             exams: 'Valid CAT/XAT/CMAT/MAT/CUET score',
             additional: 'Strong quantitative and analytical aptitude'
         },
@@ -853,7 +902,7 @@ export const programsData: Program[] = [
         subcategory: 'ai-data-science',
         duration: '2 Years',
         format: 'full-time',
-        location: 'Kolkata',
+        location: 'Kolkata (Salt Lake)',
         commencement: '19th Sep 2025',
         description: 'The PGDM Plus in Artificial Intelligence & Data Science at IMAS Kolkata is a comprehensive 2-year program designed to create AI-powered business leaders who can harness the potential of artificial intelligence, machine learning, and advanced data science to drive innovation and competitive advantage. This AICTE-approved program combines cutting-edge AI technologies with business strategy, preparing students to become AI specialists who transform industries through intelligent automation and data-driven insights.',
         overview: 'The PGDM Plus in Artificial Intelligence & Data Science at IMAS Kolkata is a transformative 2-year full-time program designed for aspiring AI professionals who want to master machine learning, deep learning, natural language processing, and AI-driven business solutions.',
@@ -866,6 +915,7 @@ export const programsData: Program[] = [
             'Advanced Certifications: Six Sigma (Green Belt), SAP ERP, Advanced Excel',
             '20+ Presentations per Semester to boost technical communication skills',
             'Live AI Projects, Winter & Summer Internships with tech companies',
+            'Internship at every semester',
             'International Immersion: Dubai, Singapore, Thailand & Malaysia',
             'Industry Mentorship from senior AI engineers and data science leaders',
             'Global Alumni Network across companies like Google, Microsoft, and IBM',
@@ -908,7 +958,7 @@ export const programsData: Program[] = [
             'AI Startup Founder'
         ],
         eligibility: {
-            education: 'Graduation (2022–2025) with 50% marks',
+            education: 'Graduation in any discipline with 50% marks',
             exams: 'Valid CAT/XAT/CMAT/MAT/CUET score',
             additional: 'Strong mathematical and programming aptitude'
         },
@@ -986,7 +1036,7 @@ export const programsData: Program[] = [
         subcategory: 'fintech',
         duration: '2 Years',
         format: 'full-time',
-        location: 'Kolkata',
+        location: 'Kolkata (Salt Lake)',
         commencement: '19th Sep 2025',
         description: 'The PGDM Plus in Fintech at IMAS Kolkata is a cutting-edge 2-year program designed to create financial technology leaders who can revolutionize the financial services industry through digital innovation, blockchain technology, and data-driven financial solutions. This AICTE-approved program combines traditional finance principles with emerging fintech technologies, preparing students to become fintech specialists who drive digital transformation in banking, payments, lending, and investment sectors.',
         overview: 'The PGDM Plus in Fintech at IMAS Kolkata is a transformative 2-year full-time program designed for aspiring fintech professionals who want to master digital banking, cryptocurrency, blockchain, and financial technology innovations.',
@@ -999,6 +1049,7 @@ export const programsData: Program[] = [
             'Advanced Certifications: Six Sigma (Green Belt), SAP ERP, Advanced Excel',
             '20+ Presentations per Semester to boost fintech communication skills',
             'Live Fintech Projects, Winter & Summer Internships with fintech companies',
+            'Internship at every semester',
             'International Immersion: Dubai, Singapore, Thailand & Malaysia',
             'Industry Mentorship from senior fintech executives and banking leaders',
             'Global Alumni Network across companies like PayPal, Razorpay, and Paytm',
@@ -1041,7 +1092,7 @@ export const programsData: Program[] = [
             'Financial Data Scientist'
         ],
         eligibility: {
-            education: 'Graduation (2022–2025) with 50% marks',
+            education: 'Graduation in any discipline with 50% marks',
             exams: 'Valid CAT/XAT/CMAT/MAT/CUET score',
             additional: 'Interest in finance and technology integration'
         },
@@ -1119,7 +1170,7 @@ export const programsData: Program[] = [
         subcategory: 'healthcare',
         duration: '2 Years',
         format: 'full-time',
-        location: 'Kolkata',
+        location: 'Kolkata (Salt Lake)',
         commencement: '19th Sep 2025',
         description: 'The PGDM Plus in Hospital & Healthcare Management at IMAS Kolkata is a specialized 2-year program designed to create healthcare leaders who can transform the healthcare industry through strategic management, digital health innovations, and patient-centric care delivery. This AICTE-approved program combines healthcare domain knowledge with modern management practices, preparing students to become healthcare administrators who drive excellence in hospitals, healthcare systems, and medical organizations.',
         overview: 'The PGDM Plus in Hospital & Healthcare Management at IMAS Kolkata is a transformative 2-year full-time program designed for aspiring healthcare professionals who want to master hospital administration, healthcare policy, and medical service management.',
@@ -1132,6 +1183,7 @@ export const programsData: Program[] = [
             'Advanced Certifications: Six Sigma (Green Belt), SAP ERP, Advanced Excel',
             '20+ Presentations per Semester to boost healthcare communication skills',
             'Live Healthcare Projects, Winter & Summer Internships with hospitals',
+            'Internship at every semester',
             'International Immersion: Dubai, Singapore, Thailand & Malaysia',
             'Industry Mentorship from senior healthcare executives and medical directors',
             'Global Alumni Network across companies like Apollo, Fortis, and Max Healthcare',
@@ -1174,7 +1226,7 @@ export const programsData: Program[] = [
             'Health Insurance Manager'
         ],
         eligibility: {
-            education: 'Graduation (2022–2025) with 50% marks',
+            education: 'Graduation in any discipline with 50% marks',
             exams: 'Valid CAT/XAT/CMAT/MAT/CUET score',
             additional: 'Interest in healthcare and medical services'
         },
@@ -1252,7 +1304,7 @@ export const programsData: Program[] = [
         subcategory: 'entrepreneurship',
         duration: '2 Years',
         format: 'full-time',
-        location: 'Kolkata',
+        location: 'Kolkata (Salt Lake)',
         commencement: '19th Sep 2025',
         description: 'The PGDM Plus in Innovation, Entrepreneurship & Venture Development at IMAS Kolkata is a dynamic 2-year program designed to create innovative business leaders who can build successful startups, drive corporate innovation, and develop scalable ventures. This AICTE-approved program combines entrepreneurial mindset with practical business skills, preparing students to become entrepreneurs who transform ideas into profitable businesses and drive economic growth.',
         overview: 'The PGDM Plus in Innovation, Entrepreneurship & Venture Development at IMAS Kolkata is a transformative 2-year full-time program designed for aspiring entrepreneurs who want to master startup creation, venture capital, and innovation management.',
@@ -1265,6 +1317,7 @@ export const programsData: Program[] = [
             'Advanced Certifications: Six Sigma (Green Belt), SAP ERP, Advanced Excel',
             '20+ Presentations per Semester to boost entrepreneurial communication skills',
             'Live Startup Projects, Winter & Summer Internships with ventures',
+            'Internship at every semester',
             'International Immersion: Dubai, Singapore, Thailand & Malaysia',
             'Industry Mentorship from successful entrepreneurs and venture capitalists',
             'Global Alumni Network across companies like Flipkart, Zomato, and Paytm',
@@ -1307,7 +1360,7 @@ export const programsData: Program[] = [
             'Technology Transfer Manager'
         ],
         eligibility: {
-            education: 'Graduation (2022–2025) with 50% marks',
+            education: 'Graduation in any discipline with 50% marks',
             exams: 'Valid CAT/XAT/CMAT/MAT/CUET score',
             additional: 'Entrepreneurial mindset and business acumen'
         },
@@ -1385,7 +1438,7 @@ export const programsData: Program[] = [
         subcategory: 'marketing',
         duration: '2 Years',
         format: 'blended',
-        location: 'Kolkata',
+        location: 'Kolkata (Salt Lake)',
         commencement: '19th Sep 2025',
         description: 'The PGDM in Marketing (Working Executive) at IMAS Kolkata is a specialized 2-year blended program designed for working professionals who want to advance their marketing careers while continuing their current employment. This AICTE-approved program combines weekend classes with online learning, ensuring professionals can balance work and education effectively.',
         overview: 'The PGDM in Marketing (Working Executive) at IMAS Kolkata is a flexible 2-year blended program designed for working professionals who want to master advanced marketing strategies, digital transformation, and brand management while maintaining their career momentum.',
@@ -1398,6 +1451,7 @@ export const programsData: Program[] = [
             'Advanced Certifications: Six Sigma (Green Belt), SAP ERP, Advanced Excel',
             'Industry-Relevant Projects with current workplace integration',
             'Live Business Projects & Summer Internships',
+            'Internship at every semester',
             'International Immersion: Dubai, Singapore, Thailand & Malaysia',
             'Industry Mentorship from senior marketing leaders',
             'Executive Alumni Network across top brands and agencies',
@@ -1521,7 +1575,7 @@ export const programsData: Program[] = [
         subcategory: 'finance',
         duration: '2 Years',
         format: 'blended',
-        location: 'Kolkata',
+        location: 'Kolkata (Salt Lake)',
         commencement: '19th Sep 2025',
         description: 'The PGDM in Finance (Working Executive) at IMAS Kolkata is a specialized 2-year blended program designed for working professionals who want to advance their finance careers while continuing their current employment. This AICTE-approved program combines weekend classes with online learning, covering corporate finance, investment banking, and financial analytics.',
         overview: 'The PGDM in Finance (Working Executive) at IMAS Kolkata is a flexible 2-year blended program designed for working professionals who want to master advanced financial management, investment strategies, and corporate finance while maintaining their career momentum.',
@@ -1534,6 +1588,7 @@ export const programsData: Program[] = [
             'Advanced Certifications: Six Sigma (Green Belt), SAP ERP, Advanced Excel',
             'Industry-Relevant Projects with current workplace integration',
             'Live Financial Projects & Summer Internships',
+            'Internship at every semester',
             'International Immersion: Dubai, Singapore, Thailand & Malaysia',
             'Industry Mentorship from senior finance leaders',
             'Executive Alumni Network across top banks and financial institutions',
@@ -1808,6 +1863,7 @@ export const programsData: Program[] = [
             'Advanced Certifications: Six Sigma (Green Belt), SAP ERP, Advanced Excel',
             'Industry-Relevant Projects with current workplace integration',
             'Live Analytics Projects & Summer Internships',
+            'Internship at every semester',
             'International Immersion: Dubai, Singapore, Thailand & Malaysia',
             'Industry Mentorship from senior data scientists and analytics leaders',
             'Executive Alumni Network across top tech companies like IBM, Microsoft, Accenture',
@@ -1944,6 +2000,7 @@ export const programsData: Program[] = [
             'Advanced Certifications: Six Sigma (Green Belt), SAP ERP, Advanced Excel',
             'Industry-Relevant Projects with current workplace integration',
             'Live AI Projects & Summer Internships with tech companies',
+            'Internship at every semester',
             'International Immersion: Dubai, Singapore, Thailand & Malaysia',
             'Industry Mentorship from senior AI engineers and data science leaders',
             'Executive Alumni Network across top tech companies like Google, Microsoft, IBM',
@@ -2080,6 +2137,7 @@ export const programsData: Program[] = [
             'Advanced Certifications: Six Sigma (Green Belt), SAP ERP, Advanced Excel',
             'Industry-Relevant Projects with current workplace integration',
             'Live Fintech Projects & Summer Internships with financial institutions',
+            'Internship at every semester',
             'International Immersion: Dubai, Singapore, Thailand & Malaysia',
             'Industry Mentorship from senior fintech executives and banking leaders',
             'Executive Alumni Network across top fintech companies and banks',
@@ -2216,6 +2274,7 @@ export const programsData: Program[] = [
             'Advanced Certifications: Six Sigma (Green Belt), SAP ERP, Advanced Excel',
             'Industry-Relevant Projects with current workplace integration',
             'Live Supply Chain Projects & Summer Internships with logistics companies',
+            'Internship at every semester',
             'International Immersion: Dubai, Singapore, Thailand & Malaysia',
             'Industry Mentorship from senior supply chain executives and logistics leaders',
             'Executive Alumni Network across top logistics and manufacturing companies',
@@ -2352,6 +2411,7 @@ export const programsData: Program[] = [
             'Advanced Certifications: Six Sigma (Green Belt), SAP ERP, Advanced Excel',
             'Industry-Relevant Projects with current workplace integration',
             'Live Operations Projects & Summer Internships with manufacturing companies',
+            'Internship at every semester',
             'International Immersion: Dubai, Singapore, Thailand & Malaysia',
             'Industry Mentorship from senior operations executives and manufacturing leaders',
             'Executive Alumni Network across top manufacturing and service companies',
@@ -2488,6 +2548,7 @@ export const programsData: Program[] = [
             'Advanced Certifications: Agricultural Analytics, Farm Management, Rural Marketing',
             'Industry-Relevant Projects with current workplace integration',
             'Live Agricultural Projects & Summer Internships with agri companies',
+            'Internship at every semester',
             'International Immersion: Netherlands, Israel, Australia & New Zealand',
             'Industry Mentorship from senior agri business executives and farming leaders',
             'Executive Alumni Network across top agricultural and food processing companies',
@@ -2624,6 +2685,7 @@ export const programsData: Program[] = [
             'Advanced Certifications: Healthcare Analytics, Hospital Management, Medical Coding',
             'Industry-Relevant Projects with current workplace integration',
             'Live Healthcare Projects & Summer Internships with hospitals and healthcare companies',
+            'Internship at every semester',
             'International Immersion: Germany, Singapore, USA & Canada',
             'Industry Mentorship from senior healthcare executives and medical administrators',
             'Executive Alumni Network across top hospitals and healthcare organizations',
@@ -2756,6 +2818,7 @@ export const programsData: Program[] = [
             'Comprehensive International Business Curriculum',
             'Cross-Cultural Leadership and Global Management Training',
             'International Internship Opportunities in UK and Europe',
+            'Internship at every semester',
             'Global Alumni Network Across Multiple Countries',
             'Advanced Certifications: International Business, Global Finance, Cross-Cultural Management',
             'Industry-Relevant Projects with multinational corporations',
