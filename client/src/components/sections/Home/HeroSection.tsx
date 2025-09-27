@@ -1,11 +1,24 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from '../../ui/button';
 import { Carousel } from '../../ui/carousel';
-import { IMAS_TAILWIND_CLASSES } from '../../../lib/constants';
+import { IMAS_TAILWIND_CLASSES, IMAS_DATES } from '../../../lib/constants';
 import { downloadBrochure, applyNow } from '../../../lib/utils';
 import { ArrowRight, Download, Play, Users, Award, Globe, BookOpen, TrendingUp } from 'lucide-react';
 
 export function HeroSection() {
+  const [daysLeft, setDaysLeft] = useState<number | null>(null);
+
+  useEffect(() => {
+    const deadlineTs = new Date(IMAS_DATES.APPLICATION_DEADLINE).getTime();
+    const update = () => {
+      const now = Date.now();
+      const diffDays = Math.ceil((deadlineTs - now) / (1000 * 60 * 60 * 24));
+      setDaysLeft(diffDays);
+    };
+    update();
+    const interval = setInterval(update, 60 * 1000);
+    return () => clearInterval(interval);
+  }, []);
   const [currentStat, setCurrentStat] = useState(0);
   
   // Sample carousel images - replace with actual IMAS images
@@ -150,6 +163,7 @@ export function HeroSection() {
                   <Button 
                     variant="ghost" 
                     className="group text-white hover:text-teal-400 px-4 sm:px-6 py-3 sm:py-4 text-base sm:text-lg font-medium rounded-xl transition-all duration-300"
+                    onClick={() => window.dispatchEvent(new Event('imas:openVideoModal'))}
                   >
                     <Play className="mr-2 w-4 h-4 sm:w-5 sm:h-5 group-hover:scale-110 transition-transform" />
                     <span className="hidden sm:inline">Watch Video</span>
@@ -210,7 +224,11 @@ export function HeroSection() {
                           <p className="text-xs font-semibold text-red-700">Application Deadline</p>
                         </div>
                         <p className="text-sm font-bold text-red-600">March 30, 2026</p>
-                        <p className="text-xs text-gray-600">Only 45 days left to apply!</p>
+                        <p className="text-xs text-gray-600">
+                          {daysLeft !== null && daysLeft > 0
+                            ? `Only ${daysLeft} day${daysLeft === 1 ? '' : 's'} left to apply!`
+                            : 'Applications closed'}
+                        </p>
                       </div>
 
                       {/* CTA Buttons */}

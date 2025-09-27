@@ -15,6 +15,8 @@ import { CampusTourPage } from './pages/CampusTourPage';
 import { EventsPage } from './pages/EventsPage';
 // Removed admin and auth imports - components deleted
 import { Toaster } from './components/ui/toaster';
+import { BrochureModal } from './components/BrochureModal';
+import { VideoModal } from './components/VideoModal';
 
 function AppContent(): React.JSX.Element {
   const location = useLocation();
@@ -62,6 +64,8 @@ export function App(): React.JSX.Element {
         }}
       >
         <AppContent />
+        <BrochureModal />
+        <VideoModal />
         <Toaster />
       </Router>
     </HelmetProvider>
