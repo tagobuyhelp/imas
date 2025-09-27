@@ -12,7 +12,7 @@ export function HeroSection() {
     const deadlineTs = new Date(IMAS_DATES.APPLICATION_DEADLINE).getTime();
     const update = () => {
       const now = Date.now();
-      const diffDays = Math.ceil((deadlineTs - now) / (1000 * 60 * 60 * 24));
+      const diffDays = Math.floor((deadlineTs - now) / (1000 * 60 * 60 * 24));
       setDaysLeft(diffDays);
     };
     update();

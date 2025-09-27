@@ -32,35 +32,35 @@ export function CampusTourPage() {
   const campusPhotos = [
     {
       id: 1,
-      src: '/uploads/campus_photos/DSC_2802.JPG',
+      src: '/uploads/campus_photos/DSC_2802.jpg',
       title: 'Main Campus Building',
       description: 'Our state-of-the-art main campus building with modern architecture and facilities.',
       category: 'Infrastructure'
     },
     {
       id: 2,
-      src: '/uploads/campus_photos/DSC_2804.JPG',
+      src: '/uploads/campus_photos/DSC_2804.jpg',
       title: 'Campus Entrance',
       description: 'Welcoming entrance to IMAS Business School with beautiful landscaping.',
       category: 'Infrastructure'
     },
     {
       id: 3,
-      src: '/uploads/campus_photos/DSC_2805.JPG',
+      src: '/uploads/campus_photos/DSC_2805.jpg',
       title: 'Academic Block',
       description: 'Modern academic facilities designed for interactive learning experiences.',
       category: 'Academic'
     },
     {
       id: 4,
-      src: '/uploads/campus_photos/DSC_2807.JPG',
+      src: '/uploads/campus_photos/DSC_2807.jpg',
       title: 'Campus Courtyard',
       description: 'Beautiful courtyard area where students gather and collaborate.',
       category: 'Campus Life'
     },
     {
       id: 5,
-      src: '/uploads/campus_photos/DSC_2817.JPG',
+      src: '/uploads/campus_photos/DSC_2817.jpg',
       title: 'Learning Spaces',
       description: 'Innovative learning spaces equipped with latest technology.',
       category: 'Academic'
@@ -247,6 +247,7 @@ export function CampusTourPage() {
                     alt={photo.title}
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     loading="lazy"
+                    decoding="async"
                   />
                   <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center">
                     <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -375,6 +376,8 @@ export function CampusTourPage() {
               src={filteredPhotos[selectedImage].src}
               alt={filteredPhotos[selectedImage].title}
               className="max-w-full max-h-full object-contain rounded-lg"
+              loading="eager"
+              decoding="async"
             />
 
             {/* Image Info */}

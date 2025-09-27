@@ -201,16 +201,13 @@ export function CampusLifePage() {
                   <p className="text-gray-600 font-medium text-sm">Student Stories & Campus Life</p>
                 </div>
               </div>
-              <a 
-                href="https://www.youtube.com/@IMASKolkata/videos" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className={`inline-flex items-center gap-2 ${IMAS_TAILWIND_CLASSES.GRADIENT_PRIMARY} hover:from-[#2e7bb3] hover:to-[#26c1d3] text-white px-8 sm:px-10 py-3 sm:py-4 text-sm sm:text-base font-semibold hover:scale-105 transition-all duration-300 rounded-full`}
+              <Button 
+                onClick={() => window.dispatchEvent(new CustomEvent("imas:openVideoModal"))}
+                className={`${IMAS_TAILWIND_CLASSES.GRADIENT_PRIMARY} hover:from-[#2e7bb3] hover:to-[#26c1d3] text-white px-8 sm:px-10 py-3 sm:py-4 text-sm sm:text-base font-semibold hover:scale-105 transition-all duration-300 rounded-full inline-flex items-center gap-2`}
               >
                 <Play className="h-4 w-4" />
-                Visit Our YouTube Channel
-                <ExternalLink className="h-4 w-4" />
-              </a>
+                Watch Campus Videos
+              </Button>
             </div>
           </div>
         </div>
@@ -322,9 +319,10 @@ export function CampusLifePage() {
             <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
               <div className="aspect-square overflow-hidden">
                 <img 
-                  src="/uploads/mba_global.jpg" 
-                  alt="MBA Global Program Students" 
+                  src="/uploads/campus_photos/IMG_8110.JPG" 
+                  alt="IMAS Campus Students" 
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
                 />
               </div>
               <div className="p-4">
@@ -336,9 +334,10 @@ export function CampusLifePage() {
             <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
               <div className="aspect-square overflow-hidden">
                 <img 
-                  src="/uploads/pgdm-programmes-ex.jpg" 
-                  alt="PGDM Programme Students" 
+                  src="/uploads/campus_photos/IMG_8115.JPG" 
+                  alt="Campus Facilities and Community" 
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
                 />
               </div>
               <div className="p-4">
@@ -350,9 +349,10 @@ export function CampusLifePage() {
             <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
               <div className="aspect-square overflow-hidden">
                 <img 
-                  src="/uploads/about-imas-pic.webp" 
+                  src="/uploads/campus_photos/DSC_2802.jpg" 
                   alt="IMAS Campus Life" 
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
                 />
               </div>
               <div className="p-4">
@@ -501,11 +501,13 @@ export function CampusLifePage() {
               <div key={index} className="bg-white rounded-xl p-4 sm:p-6 shadow-lg">
                 <div className="aspect-video bg-gray-100 rounded-lg mb-4 overflow-hidden">
                   <iframe
-                    src={`https://www.youtube.com/embed/${video.id}`}
+                    src={`https://www.youtube.com/embed/${video.id}?rel=0`}
                     title={video.title}
                     className="w-full h-full"
                     frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    loading="lazy"
                     allowFullScreen
                   ></iframe>
                 </div>
