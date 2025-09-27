@@ -179,11 +179,11 @@ export function FAQ({ className = '' }: FAQProps) {
           <div className={`inline-block ${IMAS_TAILWIND_CLASSES.BG_DARK_BLUE}/10 ${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE} px-4 py-2 rounded-full text-sm font-semibold mb-4 border ${IMAS_TAILWIND_CLASSES.BORDER_DARK_BLUE}/20`}>
             FREQUENTLY ASKED QUESTIONS
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-800 mb-4 lg:mb-6">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-gray-800 mb-4 lg:mb-6">
             Got Questions?
             <span className={`block ${IMAS_TAILWIND_CLASSES.TEXT_TEAL}`}>We Have Answers</span>
           </h2>
-          <p className="text-lg lg:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base lg:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Find answers to the most commonly asked questions about IMAS programs, admissions, and campus life
           </p>
         </div>
@@ -197,7 +197,7 @@ export function FAQ({ className = '' }: FAQProps) {
               placeholder="Search for questions..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-12 pr-4 py-4 text-lg border border-gray-200 rounded-2xl focus:ring-2 focus:ring-teal-500 focus:border-transparent bg-white/80 backdrop-blur-sm shadow-lg transition-all duration-300"
+              className="w-full pl-12 pr-4 py-3 text-base border border-gray-200 rounded-2xl focus:ring-2 focus:ring-teal-500 focus:border-transparent bg-white/80 backdrop-blur-sm shadow-lg transition-all duration-300"
             />
           </div>
         </div>
@@ -205,7 +205,7 @@ export function FAQ({ className = '' }: FAQProps) {
         {/* Popular Questions - Quick Access */}
         {!searchQuery && (
           <div className="mb-12">
-            <h3 className="text-xl font-bold text-gray-800 mb-6 text-center">Popular Questions</h3>
+            <h3 className="text-lg font-bold text-gray-800 mb-6 text-center">Popular Questions</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {popularQuestions.slice(0, 3).map((item, index) => (
                 <button
@@ -278,7 +278,7 @@ export function FAQ({ className = '' }: FAQProps) {
           {/* Desktop Sidebar Navigation */}
           <div className="hidden lg:block lg:w-1/3">
             <div className="bg-white/90 backdrop-blur-sm rounded-3xl shadow-xl p-8 sticky top-8 border border-white/20">
-              <h3 className="text-2xl font-bold text-gray-800 mb-8 flex items-center gap-3">
+              <h3 className="text-xl font-bold text-gray-800 mb-8 flex items-center gap-3">
                 <HelpCircle className={`h-6 w-6 ${IMAS_TAILWIND_CLASSES.TEXT_TEAL}`} />
                 FAQ Categories
               </h3>
@@ -299,8 +299,8 @@ export function FAQ({ className = '' }: FAQProps) {
                         activeSection === section.id ? 'text-white' : IMAS_TAILWIND_CLASSES.TEXT_TEAL
                       } group-hover:scale-110 transition-transform duration-300`} />
                       <div>
-                        <div className="font-semibold text-base">{section.title}</div>
-                        <div className={`text-sm mt-1 ${
+                        <div className="font-semibold text-sm">{section.title}</div>
+                        <div className={`text-xs mt-1 ${
                           activeSection === section.id ? 'text-white/80' : 'text-gray-500'
                         }`}>
                           {section.description}
@@ -329,10 +329,10 @@ export function FAQ({ className = '' }: FAQProps) {
                     className: `h-8 w-8 ${IMAS_TAILWIND_CLASSES.TEXT_TEAL}` 
                   })}
                   <div>
-                    <h3 className="text-2xl lg:text-3xl font-bold text-gray-800">
+                    <h3 className="text-xl lg:text-2xl font-bold text-gray-800">
                       {currentSection.title}
                     </h3>
-                    <p className="text-gray-600 mt-1">{currentSection.description}</p>
+                    <p className="text-sm text-gray-600 mt-1">{currentSection.description}</p>
                   </div>
                 </div>
                 
@@ -354,7 +354,7 @@ export function FAQ({ className = '' }: FAQProps) {
                             {item.popular && (
                               <Star className={`h-5 w-5 ${IMAS_TAILWIND_CLASSES.TEXT_TEAL} flex-shrink-0 mt-0.5`} />
                             )}
-                            <span className="font-semibold text-gray-800 text-base lg:text-lg leading-relaxed pr-4">
+                            <span className="font-semibold text-gray-800 text-sm lg:text-base leading-relaxed pr-4">
                               {item.question}
                             </span>
                           </div>
@@ -365,7 +365,7 @@ export function FAQ({ className = '' }: FAQProps) {
                         
                         {isExpanded && (
                           <div className="px-6 py-5 bg-white/80 border-t border-gray-200 animate-fade-in">
-                            <div className="text-gray-700 leading-relaxed whitespace-pre-line text-base">
+                            <div className="text-gray-700 leading-relaxed whitespace-pre-line text-sm md:text-base">
                               {item.answer}
                             </div>
                           </div>

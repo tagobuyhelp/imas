@@ -198,8 +198,8 @@ export function HeroSection() {
                           <h3 className="text-lg sm:text-xl font-bold text-gray-800">PGDM Program</h3>
                         </div>
                         <div className="text-right">
-                          <p className="text-xl sm:text-2xl font-bold text-teal-600">₹12.5L</p>
-                          <p className="text-xs sm:text-sm text-gray-500">Total Fees</p>
+                          <p className="text-xl sm:text-2xl font-bold text-teal-600">₹18.5 LPA</p>
+                          <p className="text-xs sm:text-sm text-gray-500">Highest CTC</p>
                         </div>
                       </div>
 
