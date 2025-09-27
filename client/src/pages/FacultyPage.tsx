@@ -78,7 +78,6 @@ const lineClampStyles = `
 `;
 
 export function FacultyPage() {
-  const [activeTab, setActiveTab] = useState('all');
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedTags, setSelectedTags] = useState<string[]>([]);
   const [expandedCards, setExpandedCards] = useState(new Set<string>());
@@ -86,137 +85,159 @@ export function FacultyPage() {
   const carouselRef = useRef<HTMLDivElement>(null);
 
   // Faculty data
-  const academicLeaders = [
+  const faculty = [
     {
-      id: 'al1',
-      name: 'Dr. Kunal Sil',
-      title: 'Dean Academics',
-      qualifications: 'Ph.D. Management, MBA',
-      image: '/uploads/Kunal.jpg',
-      description: 'An acclaimed academician and thought leader in management studies, leading the academic vision of IMAS.',
-      fullBio: 'Dr. Kunal Sil is an acclaimed academician and thought leader in management studies. He leads the academic vision of IMAS with a focus on innovation, research, and strategic leadership. His expertise spans across various domains of management education and strategic planning.',
-      expertise: 'Management Studies, Strategic Leadership',
-      tags: ['Management', 'Strategy', 'Leadership', 'Research']
-    },
-    {
-      id: 'al2',
-      name: 'Dr. Shatrajit Goswami',
-      title: 'Professor',
-      qualifications: 'Ph.D. Engineering Economics, MSc Economics',
+      id: 'f1',
+      name: 'Prof. Dr. Saikat Moitra',
+      title: 'Former Vice Chancellor',
+      qualifications: 'Ph.D., Former Vice Chancellor at MAKAUT',
       image: '/uploads/Pic_VC_Dr.-Saikat-Maitra.png',
-      description: 'A seasoned educator specializing in Economics and Business Strategy, integrating analytical thinking with economic intelligence.',
-      fullBio: 'Dr. Shatrajit Goswami is a seasoned educator specializing in Economics and Business Strategy. He integrates analytical thinking with economic intelligence for future managers, bringing deep expertise in engineering economics and strategic decision-making.',
-      expertise: 'Economics, Business Strategy',
-      tags: ['Economics', 'Strategy', 'Analytics', 'Business']
+      description: 'Former Vice Chancellor of MAKAUT, a distinguished academic leader with extensive experience in higher education management.',
+      fullBio: 'Prof. Dr. Saikat Moitra served as the Vice Chancellor of MAKAUT (Maulana Abul Kalam Azad University of Technology), bringing transformative leadership to the institution. His vision and strategic initiatives have significantly enhanced the university\'s academic standards and industry connections.',
+      expertise: 'Higher Education Management, Academic Leadership, Strategic Planning',
+      tags: ['Leadership', 'Academic', 'Strategy', 'Higher Education']
     },
     {
-      id: 'al3',
-      name: 'Ms. Poulomi Manna',
-      title: 'Assistant Professor',
-      qualifications: 'MHA',
-      image: '/uploads/Ramya-Bhat.jpeg',
-      description: 'Expert in Healthcare Administration and Management, blending healthcare sector expertise with management principles.',
-      fullBio: 'Ms. Poulomi Manna is an expert in Healthcare Administration and Management. She blends healthcare sector expertise with management principles, providing students with comprehensive understanding of healthcare management practices.',
-      expertise: 'Healthcare Administration, Management',
-      tags: ['Healthcare', 'Administration', 'Management']
-    },
-    {
-      id: 'al4',
-      name: 'Mr. Rajib Bhattacharyya',
-      title: 'Assistant Professor',
-      qualifications: 'M.Com',
-      image: '/uploads/Tridib-Chakraborty.jpg',
-      description: 'With vast experience in Commerce and Accounting, ensuring students gain a strong foundation in financial management.',
-      fullBio: 'Mr. Rajib Bhattacharyya brings vast experience in Commerce and Accounting. He ensures students gain a strong foundation in financial management, with expertise in commercial practices and accounting principles.',
-      expertise: 'Commerce, Accounting, Financial Management',
-      tags: ['Commerce', 'Accounting', 'Finance']
-    },
-    {
-      id: 'al5',
-      name: 'Ms. Shreenita Seal',
-      title: 'Assistant Professor',
-      qualifications: 'MA English',
-      image: '/uploads/Amitha-Krushnen.jpeg',
-      description: 'Brings expertise in Business Communication and Soft Skills, helping students enhance their corporate communication abilities.',
-      fullBio: 'Ms. Shreenita Seal brings expertise in Business Communication and Soft Skills. She helps students enhance their corporate communication abilities, focusing on effective communication strategies for business environments.',
-      expertise: 'Business Communication, Soft Skills',
-      tags: ['Communication', 'Soft Skills', 'English']
-    },
-    {
-      id: 'al6',
-      name: 'Ms. Sudeshna Chatterjee',
-      title: 'Assistant Professor',
-      qualifications: 'MHA',
-      image: '/uploads/Ajay-Bailur.jpeg',
-      description: 'With a specialized focus on Hospital Administration, guiding students in Healthcare Management practices.',
-      fullBio: 'Ms. Sudeshna Chatterjee has a specialized focus on Hospital Administration. She guides students in Healthcare Management practices, bringing practical insights from the healthcare industry.',
-      expertise: 'Hospital Administration, Healthcare Management',
-      tags: ['Healthcare', 'Hospital Administration', 'Management']
-    }
-  ];
-
-  const adjunctFaculty = [
-    {
-      id: 'af1',
-      name: 'Mr. Amit Nath',
-      title: 'Adjunct Professor',
-      qualifications: 'CA, MBA',
+      id: 'f2',
+      name: 'Dr Amit Gautam',
+      title: 'Professor, Faculty of Management Studies',
+      qualifications: 'Ph.D., Professor at Banaras Hindu University',
       image: '/uploads/Amit-Gautam.jpeg',
-      description: 'A Chartered Accountant and MBA, bridging the gap between finance theories and corporate practices.',
-      fullBio: 'Mr. Amit Nath is a Chartered Accountant and MBA who bridges the gap between finance theories and corporate practices. His dual expertise in accounting and management provides students with practical insights into financial management.',
-      expertise: 'Finance, Accounting, Corporate Practices',
-      tags: ['Finance', 'Accounting', 'CA', 'Corporate']
+      description: 'Professor at Faculty of Management Studies, Banaras Hindu University, renowned for his expertise in management education and research.',
+      fullBio: 'Dr Amit Gautam is a distinguished Professor at the Faculty of Management Studies, Banaras Hindu University. His extensive research and teaching experience in management studies have contributed significantly to the field of business education.',
+      expertise: 'Management Studies, Business Research, Academic Excellence',
+      tags: ['Management', 'Research', 'Academic', 'BHU']
     },
     {
-      id: 'af2',
-      name: 'Dr. Tamal Taru Roy',
-      title: 'Adjunct Professor',
-      qualifications: 'Ph.D. Management, MBA, MCom, PGDHRM',
-      image: '/uploads/manodip-ray.jpg',
-      description: 'A distinguished academician in Management Studies and Human Resources, renowned for research and leadership teachings.',
-      fullBio: 'Dr. Tamal Taru Roy is a distinguished academician in Management Studies and Human Resources, renowned for his research and leadership teachings. His comprehensive qualifications span across multiple domains of management education.',
-      expertise: 'Management Studies, Human Resources, Leadership',
-      tags: ['Management', 'HR', 'Leadership', 'Research']
+      id: 'f3',
+      name: 'Dr. Sangeeta Sahney',
+      title: 'Professor & Dean',
+      qualifications: 'Ph.D., Professor & Dean at IIT Kharagpur - Vinod Gupta School of Management',
+      image: '/uploads/sahnis.jpg',
+      description: 'Professor & Dean at IIT Kharagpur - Vinod Gupta School of Management, leading excellence in management education and research.',
+      fullBio: 'Dr. Sangeeta Sahney serves as Professor & Dean at IIT Kharagpur - Vinod Gupta School of Management. Her leadership and academic excellence have positioned the school as a premier institution for management education in India.',
+      expertise: 'Management Education, Quality Systems, Academic Leadership',
+      tags: ['IIT', 'Management', 'Quality', 'Leadership']
     },
     {
-      id: 'af3',
+      id: 'f4',
+      name: 'Dr Gurbandini Kaur',
+      title: 'Professor',
+      qualifications: 'Ph.D., Professor at All India Institute of Management-AIMA',
+      image: '/uploads/Gurbandini.jpg',
+      description: 'Professor at All India Institute of Management-AIMA, bringing extensive expertise in management education and leadership development.',
+      fullBio: 'Dr Gurbandini Kaur is a Professor at All India Institute of Management-AIMA, where she contributes to management education with her extensive knowledge and experience in leadership development and organizational behavior.',
+      expertise: 'Management Education, Leadership Development, Organizational Behavior',
+      tags: ['AIMA', 'Leadership', 'Management', 'Organization']
+    },
+    {
+      id: 'f5',
+      name: 'Dr. M J Xavier',
+      title: 'Founder-Director',
+      qualifications: 'Ph.D., Founder-Director at IIM Ranchi',
+      image: '/uploads/mjx.jpg',
+      description: 'Founder-Director of IIM Ranchi, a visionary leader who established one of India\'s premier management institutes.',
+      fullBio: 'Dr. M J Xavier is the Founder-Director of IIM Ranchi, a visionary leader who established one of India\'s premier management institutes. His leadership and vision have shaped the institute\'s academic excellence and industry connections.',
+      expertise: 'Institutional Leadership, Management Education, Strategic Vision',
+      tags: ['IIM', 'Founder', 'Leadership', 'Vision']
+    },
+    {
+      id: 'f6',
       name: 'Dr. Saibal Kumar Mukhopadhyay',
-      title: 'Adjunct Professor',
-      qualifications: 'Ph.D. Management, MSc Economics',
+      title: 'Director',
+      qualifications: 'Ph.D., Director at IBM-Jadavpur University',
       image: '/uploads/Mukhopadhyay.jpg',
-      description: 'With expertise in Economics and Management, mentoring students in analytical decision-making and economic strategies.',
-      fullBio: 'Dr. Saibal Kumar Mukhopadhyay brings expertise in Economics and Management. He mentors students in analytical decision-making and economic strategies, combining theoretical knowledge with practical applications.',
-      expertise: 'Economics, Management, Strategic Decision-making',
-      tags: ['Economics', 'Management', 'Strategy', 'Analytics']
+      description: 'Director at IBM-Jadavpur University, bringing industry-academia collaboration expertise and strategic leadership.',
+      fullBio: 'Dr. Saibal Kumar Mukhopadhyay serves as Director at IBM-Jadavpur University, bringing extensive expertise in industry-academia collaboration and strategic leadership. His work bridges the gap between academic research and industry applications.',
+      expertise: 'Industry-Academia Collaboration, Strategic Leadership, Technology Management',
+      tags: ['IBM', 'Technology', 'Leadership', 'Industry']
     },
     {
-      id: 'af4',
-      name: 'Ms. Sweta S Sengupta',
-      title: 'Adjunct Professor',
-      qualifications: 'MBA HRM',
-      image: '/uploads/Anuj-Ahuja.jpeg',
-      description: 'An industry expert in Human Resource Management, focusing on nurturing HR leaders for the modern workplace.',
-      fullBio: 'Ms. Sweta S Sengupta is an industry expert in Human Resource Management. She focuses on nurturing HR leaders for the modern workplace, bringing practical insights from contemporary HR practices.',
-      expertise: 'Human Resource Management, Leadership Development',
-      tags: ['HR', 'Leadership', 'Management', 'Industry Expert']
+      id: 'f7',
+      name: 'Dr. Prantik Ray',
+      title: 'Assistant Professor',
+      qualifications: 'Ph.D., Assistant Professor at XLRI Jamshedpur',
+      image: '/uploads/Prantik.jpeg',
+      description: 'Assistant Professor at XLRI Jamshedpur, specializing in management education and research excellence.',
+      fullBio: 'Dr. Prantik Ray is an Assistant Professor at XLRI Jamshedpur, specializing in management education and research excellence. He contributes to the academic rigor and practical applications of management theories.',
+      expertise: 'Management Research, Academic Excellence, Strategic Analysis',
+      tags: ['XLRI', 'Research', 'Management', 'Academic']
+    },
+    {
+      id: 'f8',
+      name: 'Dr Supravat Bagli',
+      title: 'Assistant Professor',
+      qualifications: 'Ph.D., Assistant Professor at Presidency University',
+      image: '/uploads/Supravat.jpeg',
+      description: 'Assistant Professor at Presidency University, contributing to management education with research-oriented approach.',
+      fullBio: 'Dr. Supravat Bagli is an Assistant Professor at Presidency University, contributing to management education with a research-oriented approach. His work focuses on contemporary management practices and theoretical foundations.',
+      expertise: 'Management Education, Research Methodology, Academic Excellence',
+      tags: ['Presidency', 'Research', 'Management', 'Academic']
+    },
+    {
+      id: 'f9',
+      name: 'Dr. Dhananjay D. Mankar',
+      title: 'Assistant Professor & HOD',
+      qualifications: 'Ph.D., Assistant Professor & HOD at TATA Institute of Social Science',
+      image: '/uploads/Dhananjay.jpg',
+      description: 'Assistant Professor & HOD at TATA Institute of Social Science, specializing in social sciences and management integration.',
+      fullBio: 'Dr. Dhananjay D. Mankar serves as Assistant Professor & HOD at TATA Institute of Social Science, specializing in the integration of social sciences and management. His work focuses on socially responsible management practices.',
+      expertise: 'Social Sciences, Management Integration, Leadership',
+      tags: ['TISS', 'Social Sciences', 'Management', 'Leadership']
+    },
+    {
+      id: 'f10',
+      name: 'Dr. Tridib Chakraborty',
+      title: 'Former Professor',
+      qualifications: 'Ph.D., Former Professor at IIM, Kolkata',
+      image: '/uploads/Tridib-Chakraborty.jpg',
+      description: 'Former Professor at IIM, Kolkata, bringing extensive experience from one of India\'s premier management institutes.',
+      fullBio: 'Dr. Tridib Chakraborty is a Former Professor at IIM, Kolkata, bringing extensive experience from one of India\'s premier management institutes. His academic excellence and industry insights have shaped numerous management professionals.',
+      expertise: 'Management Education, Strategic Management, Academic Excellence',
+      tags: ['IIM', 'Management', 'Strategy', 'Academic']
+    },
+    {
+      id: 'f11',
+      name: 'Dr. Kunal Sil',
+      title: 'Dean-Management',
+      qualifications: 'Ph.D., Dean-Management at IMAS, Kolkata',
+      image: '/uploads/Kunal.jpg',
+      description: 'Dean-Management at IMAS, Kolkata, leading the academic excellence and strategic direction of the institute.',
+      fullBio: 'Dr. Kunal Sil serves as Dean-Management at IMAS, Kolkata. He leads the academic excellence and strategic direction of the institute, ensuring high-quality management education and industry relevance.',
+      expertise: 'Academic Leadership, Management Education, Strategic Planning',
+      tags: ['Dean', 'IMAS', 'Leadership', 'Management']
+    },
+    {
+      id: 'f12',
+      name: 'Prof. Dr. Manodip Ray Chaudhuri',
+      title: 'Professor',
+      qualifications: 'Ph.D., Professor at Xavier Business School',
+      image: '/uploads/manodip-ray.jpg',
+      description: 'A distinguished professor from Xavier Business School, bringing extensive academic expertise and industry insights to management education.',
+      fullBio: 'Prof. Dr. Manodip Ray Chaudhuri is a distinguished professor from Xavier Business School with extensive academic expertise in management studies. He brings valuable industry insights and academic rigor to management education, contributing to the development of future business leaders.',
+      expertise: 'Management Studies, Business Strategy, Academic Leadership',
+      tags: ['Management', 'Strategy', 'Academic', 'Leadership', 'Xavier']
+    },
+    {
+      id: 'f13',
+      name: 'Mr. Tusharendra Barpanda',
+      title: 'Zonal Head',
+      qualifications: 'Zonal Head at Indian Institute of Banking & Finance',
+      image: '/uploads/tusharendra-barpanda.jpg',
+      description: 'A banking and finance expert serving as Zonal Head at Indian Institute of Banking & Finance, bringing extensive industry experience in financial services.',
+      fullBio: 'Mr. Tusharendra Barpanda serves as Zonal Head at the Indian Institute of Banking & Finance, bringing extensive industry experience in financial services and banking operations. His expertise in banking and finance provides students with practical insights into the financial sector and its evolving landscape.',
+      expertise: 'Banking, Finance, Financial Services, Industry Leadership',
+      tags: ['Banking', 'Finance', 'Financial Services', 'Industry Expert', 'IIBF']
     }
   ];
 
-  // Get filtered faculty based on active tab, search term, and selected tags
+  // Get filtered faculty based on search term and selected tags
   const getFilteredFaculty = () => {
-    let faculty = [];
-    
-    if (activeTab === 'core') {
-      faculty = academicLeaders;
-    } else if (activeTab === 'adjunct') {
-      faculty = adjunctFaculty;
-    } else {
-      faculty = [...academicLeaders, ...adjunctFaculty];
-    }
+    let filteredFaculty = [...faculty];
 
     // Filter by search term
     if (searchTerm) {
-      faculty = faculty.filter(member => 
+      filteredFaculty = filteredFaculty.filter(member => 
         member.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
         member.expertise.toLowerCase().includes(searchTerm.toLowerCase()) ||
         member.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()))
@@ -225,16 +246,16 @@ export function FacultyPage() {
 
     // Filter by selected tags
     if (selectedTags.length > 0) {
-      faculty = faculty.filter(member => 
+      filteredFaculty = filteredFaculty.filter(member => 
         selectedTags.some(tag => member.tags.includes(tag))
       );
     }
 
-    return faculty;
+    return filteredFaculty;
   };
 
   // Get all unique tags
-  const allTags = Array.from(new Set([...academicLeaders, ...adjunctFaculty].flatMap(member => member.tags)));
+  const allTags = Array.from(new Set(faculty.flatMap(member => member.tags)));
 
   // Toggle card expansion
   const toggleCardExpansion = (id: string) => {
@@ -320,7 +341,7 @@ export function FacultyPage() {
               <Button
                 size="lg"
                 onClick={applyNow}
-                className="bg-white text-black px-6 py-3 sm:px-8 sm:py-3 md:px-10 md:py-4 text-sm sm:text-base md:text-lg font-semibold shadow-2xl hover:shadow-cyan-500/25 transition-all duration-300 transform hover:scale-105 border border-white/20 backdrop-blur-sm w-full sm:w-auto group"
+                className="bg-white hover:bg-gray-100 text-black px-6 py-3 sm:px-8 sm:py-3 md:px-10 md:py-4 text-sm sm:text-base md:text-lg font-semibold shadow-2xl transition-all duration-300 transform hover:scale-105 border border-white/20 backdrop-blur-sm w-full sm:w-auto group"
               >
                 <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 mr-2 sm:mr-3 group-hover:translate-x-1 transition-transform duration-300" />
                 Apply Now
@@ -351,55 +372,55 @@ export function FacultyPage() {
         </section>
 
         {/* Faculty Section */}
-        <section id="faculty-grid" className="py-12 sm:py-16 md:py-20 lg:py-24 bg-gray-50">
-          <div className="max-w-[1550px] mx-auto px-4">
+        <section id="faculty-grid" className="py-8 sm:py-12 md:py-16 lg:py-20 bg-gray-50">
+          <div className="max-w-[1550px] mx-auto px-3 sm:px-4 md:px-6">
             {/* Section Header */}
-            <div className="text-center mb-12">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-6 animate-fade-in-up">
+            <div className="text-center mb-8 sm:mb-12">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-4 sm:mb-6 animate-fade-in-up">
                 Our <span className={`${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE}`}>Faculty Directory</span>
               </h2>
-              <p className="text-gray-600 text-base sm:text-lg max-w-5xl mx-auto leading-relaxed mb-8 animate-fade-in-up animation-delay-200">
+              <p className="text-gray-600 text-sm sm:text-base md:text-lg max-w-4xl mx-auto leading-relaxed mb-6 sm:mb-8 animate-fade-in-up animation-delay-200 px-2">
                 Our professors not only teach, but they mentor, inspire, and shape the next generation of business leaders, innovators, and entrepreneurs. With a perfect blend of academic rigour and industry relevance, the IMAS faculty team ensures every student is industry-ready and future-focused.
               </p>
             </div>
 
             {/* Search and Filter Section */}
-            <div className="mb-8 animate-fade-in-up animation-delay-400">
+            <div className="mb-6 sm:mb-8 animate-fade-in-up animation-delay-400">
               {/* Search Bar */}
-              <div className="relative max-w-md mx-auto mb-6">
+              <div className="relative max-w-sm sm:max-w-md mx-auto mb-4 sm:mb-6 px-2 sm:px-0">
                 <label htmlFor="faculty-search" className="sr-only">Search faculty by name or expertise</label>
-                <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" aria-hidden="true" />
+                <Search className="absolute left-4 sm:left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-4 h-4 sm:w-5 sm:h-5" aria-hidden="true" />
                 <input
                   id="faculty-search"
                   type="text"
                   placeholder="Search by name or expertise"
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
-                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent outline-none transition-all duration-200"
+                  className="w-full pl-10 sm:pl-10 pr-10 sm:pr-4 py-3 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-cyan-500 focus:border-transparent outline-none transition-all duration-200 text-sm sm:text-base"
                   aria-describedby="search-help"
                 />
                 <div id="search-help" className="sr-only">Search through faculty members by typing their name or area of expertise</div>
                 {searchTerm && (
                   <button
                     onClick={() => setSearchTerm('')}
-                    className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 rounded"
+                    className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-400 hover:text-gray-600 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 rounded p-1"
                     aria-label="Clear search"
                   >
-                    <X className="w-5 h-5" aria-hidden="true" />
+                    <X className="w-4 h-4 sm:w-5 sm:h-5" aria-hidden="true" />
                   </button>
                 )}
               </div>
 
               {/* Filter Tags */}
-              <div className="flex flex-wrap justify-center gap-2 mb-4" role="group" aria-label="Filter faculty by expertise">
+              <div className="flex flex-wrap justify-center gap-2 mb-3 sm:mb-4 px-2" role="group" aria-label="Filter faculty by expertise">
                 {allTags.map(tag => (
                   <button
                     key={tag}
                     onClick={() => toggleTag(tag)}
-                    className={`px-3 py-1 rounded-full text-sm font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 ${
+                    className={`px-3 py-2 rounded-full text-xs sm:text-sm font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 min-h-[36px] ${
                       selectedTags.includes(tag)
-                        ? 'bg-cyan-500 text-white'
-                        : 'bg-white text-gray-600 border border-gray-300 hover:border-cyan-500'
+                        ? 'bg-cyan-500 text-white shadow-md'
+                        : 'bg-white text-gray-600 border border-gray-300 hover:border-cyan-500 hover:shadow-sm'
                     }`}
                     aria-pressed={selectedTags.includes(tag)}
                     aria-label={`Filter by ${tag} expertise`}
@@ -411,10 +432,10 @@ export function FacultyPage() {
 
               {/* Clear Filters */}
               {(searchTerm || selectedTags.length > 0) && (
-                <div className="text-center">
+                <div className="text-center px-2">
                   <button
                     onClick={clearFilters}
-                    className="text-cyan-600 hover:text-cyan-700 text-sm font-medium flex items-center justify-center mx-auto"
+                    className="text-cyan-600 hover:text-cyan-700 text-sm font-medium flex items-center justify-center mx-auto py-2 px-4 rounded-lg hover:bg-cyan-50 transition-colors duration-200"
                   >
                     <X className="w-4 h-4 mr-1" />
                     Clear all filters
@@ -423,56 +444,10 @@ export function FacultyPage() {
               )}
             </div>
 
-            {/* Tabs */}
-            <div className="flex justify-center mb-8">
-              <div className="bg-white rounded-lg p-1 shadow-sm border border-gray-200" role="tablist" aria-label="Faculty categories">
-                <button
-                  onClick={() => setActiveTab('core')}
-                  className={`px-6 py-2 rounded-md text-sm font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 ${
-                    activeTab === 'core'
-                      ? 'bg-cyan-500 text-white shadow-sm'
-                      : 'text-gray-600 hover:text-gray-800'
-                  }`}
-                  role="tab"
-                  aria-selected={activeTab === 'core'}
-                  aria-controls="faculty-panel"
-                  id="core-tab"
-                >
-                  Core Faculty
-                </button>
-                <button
-                  onClick={() => setActiveTab('adjunct')}
-                  className={`px-6 py-2 rounded-md text-sm font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 ${
-                    activeTab === 'adjunct'
-                      ? 'bg-cyan-500 text-white shadow-sm'
-                      : 'text-gray-600 hover:text-gray-800'
-                  }`}
-                  role="tab"
-                  aria-selected={activeTab === 'adjunct'}
-                  aria-controls="faculty-panel"
-                  id="adjunct-tab"
-                >
-                  Adjunct Faculty
-                </button>
-                <button
-                  onClick={() => setActiveTab('all')}
-                  className={`px-6 py-2 rounded-md text-sm font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2 ${
-                    activeTab === 'all'
-                      ? 'bg-cyan-500 text-white shadow-sm'
-                      : 'text-gray-600 hover:text-gray-800'
-                  }`}
-                  role="tab"
-                  aria-selected={activeTab === 'all'}
-                  aria-controls="faculty-panel"
-                  id="all-tab"
-                >
-                  All Faculty
-                </button>
-              </div>
-            </div>
+
 
             {/* Faculty Grid */}
-            <div className="mb-16" role="tabpanel" id="faculty-panel" aria-labelledby={`${activeTab}-tab`}>
+            <div className="mb-16">
               {getFilteredFaculty().length === 0 ? (
                 <div className="text-center py-12">
                   <div className="text-gray-400 mb-4">
@@ -490,37 +465,37 @@ export function FacultyPage() {
               ) : (
                 <>
                   {/* Desktop Grid */}
-                  <div className="hidden md:grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                  <div className="hidden md:grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-6 lg:gap-8">
                     {getFilteredFaculty().map((member) => (
-                      <div key={member.id} className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 group border border-gray-100 hover:border-blue-200 transform hover:-translate-y-2 overflow-hidden">
+                      <div key={member.id} className="bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-500 group border border-gray-100 hover:border-blue-200 transform hover:-translate-y-1 overflow-hidden">
                         {/* Enhanced Image Section */}
-                        <div className="relative flex justify-center pt-8 pb-6">
-                          <div className={`relative w-28 h-28 rounded-full overflow-hidden border-4 border-gray-200 group-hover:border-${IMAS_TAILWIND_CLASSES.BORDER_MEDIUM_BLUE} transition-all duration-500 shadow-lg`}>
+                        <div className="relative flex justify-center pt-6 pb-4">
+                          <div className={`relative w-32 h-32 rounded-full overflow-hidden border-3 border-gray-200 group-hover:border-blue-400 transition-all duration-500 shadow-md`}>
                             <img
                               src={member.image}
                               alt={`${member.name} - ${member.title}`}
-                              className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                              className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                               onError={(e) => {
                                 const target = e.target as HTMLImageElement;
                                 target.src = '/uploads/placeholder-faculty.jpg';
                               }}
                             />
                             {/* Gradient overlay on hover */}
-                            <div className={`absolute inset-0 bg-gradient-to-t from-${IMAS_TAILWIND_CLASSES.BG_MEDIUM_BLUE}/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
+                            <div className={`absolute inset-0 bg-gradient-to-t from-blue-500/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500`}></div>
                           </div>
                           {/* Floating badge */}
-                          <div className={`absolute top-4 right-4 ${IMAS_TAILWIND_CLASSES.GRADIENT_PRIMARY} text-white text-xs px-3 py-1 rounded-full font-semibold opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-2 group-hover:translate-y-0`}>
+                          <div className={`absolute top-3 right-3 ${IMAS_TAILWIND_CLASSES.GRADIENT_PRIMARY} text-white text-xs px-3 py-1 rounded-full font-semibold opacity-0 group-hover:opacity-100 transition-all duration-500 transform translate-y-2 group-hover:translate-y-0 shadow-lg`}>
                             {member.title.includes('Professor') ? 'Faculty' : 'Leader'}
                           </div>
                         </div>
 
                         {/* Enhanced Content Section */}
-                        <div className="px-6 pb-8 text-center">
-                          <h3 className={`text-xl font-bold text-gray-800 mb-3 font-serif group-hover:${IMAS_TAILWIND_CLASSES.TEXT_MEDIUM_BLUE} transition-colors duration-300`}>{member.name}</h3>
-                          <p className={`text-sm font-semibold mb-3 }`}>
+                        <div className="px-5 pb-6 text-center">
+                          <h3 className={`text-lg font-bold text-gray-800 mb-2 font-serif group-hover:${IMAS_TAILWIND_CLASSES.TEXT_MEDIUM_BLUE} transition-colors duration-300 line-clamp-2`}>{member.name}</h3>
+                          <p className={`text-sm font-semibold mb-2 text-gray-600`}>
                             {member.title}
                           </p>
-                          <p className="text-xs text-gray-500 mb-4 font-medium">{member.qualifications}</p>
+                          <p className="text-xs text-gray-500 mb-3 font-medium line-clamp-2">{member.qualifications}</p>
                           
                           {/* Enhanced Description - Expandable */}
                           <div className="mb-4">
@@ -531,7 +506,7 @@ export function FacultyPage() {
                             </p>
                             <button
                               onClick={() => toggleCardExpansion(member.id)}
-                              className={`${IMAS_TAILWIND_CLASSES.TEXT_MEDIUM_BLUE} hover:${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE} text-sm font-semibold mt-2 flex items-center justify-center mx-auto ${IMAS_TAILWIND_CLASSES.BG_MEDIUM_BLUE}/10 hover:${IMAS_TAILWIND_CLASSES.BG_MEDIUM_BLUE}/20 px-4 py-2 rounded-full transition-all duration-300 group/btn`}
+                              className={`${IMAS_TAILWIND_CLASSES.TEXT_MEDIUM_BLUE} hover:${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE} text-sm font-semibold mt-2 flex items-center justify-center mx-auto bg-blue-50 hover:bg-blue-100 px-4 py-2 rounded-full transition-all duration-300 group/btn`}
                             >
                               {expandedCards.has(member.id) ? (
                                 <><Minus className="w-4 h-4 mr-2 group-hover/btn:scale-110 transition-transform duration-300" /> Show less</>
@@ -542,17 +517,17 @@ export function FacultyPage() {
                           </div>
 
                           {/* Enhanced Expertise */}
-                          <div className="flex items-center justify-center text-sm text-gray-600 mb-4 bg-gray-50 rounded-lg py-2 px-4">
-                            <GraduationCap className={`w-5 h-5 mr-2 ${IMAS_TAILWIND_CLASSES.TEXT_MEDIUM_BLUE}`} />
-                            <span className="font-medium">{member.expertise}</span>
+                          <div className="flex items-center justify-center text-sm text-gray-600 mb-4 bg-gray-50 rounded-lg py-2 px-3">
+                            <GraduationCap className={`w-4 h-4 mr-2 ${IMAS_TAILWIND_CLASSES.TEXT_MEDIUM_BLUE} flex-shrink-0`} />
+                            <span className="font-medium text-center line-clamp-2">{member.expertise}</span>
                           </div>
 
                           {/* Enhanced Tags */}
-                          <div className="flex flex-wrap justify-center gap-2">
-                            {member.tags.map(tag => (
+                          <div className="flex flex-wrap justify-center gap-1">
+                            {member.tags.slice(0, 4).map(tag => (
                               <span
                                 key={tag}
-                                className={`px-3 py-1 ${IMAS_TAILWIND_CLASSES.GRADIENT_PRIMARY} text-white text-xs rounded-full font-semibold shadow-md hover:shadow-lg transition-shadow duration-300 transform hover:scale-105`}
+                                className={`px-2 py-1 ${IMAS_TAILWIND_CLASSES.GRADIENT_PRIMARY} text-white text-xs rounded-full font-medium shadow-sm hover:shadow-md transition-shadow duration-300 transform hover:scale-105`}
                               >
                                 {tag}
                               </span>
@@ -579,9 +554,9 @@ export function FacultyPage() {
                             });
                           }
                         }}
-                        className="absolute left-2 sm:left-0 top-1/2 -translate-y-1/2 z-10 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-white rounded-full shadow-lg flex items-center justify-center hover:shadow-xl transition-all duration-300 border-2 border-gray-100 hover:border-gray-200"
+                        className="absolute left-2 sm:left-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white rounded-full shadow-lg flex items-center justify-center hover:shadow-xl transition-all duration-300 border border-gray-200 hover:border-blue-300"
                       >
-                        <ChevronLeft className="h-4 w-4 sm:h-5 sm:w-5 text-gray-600" />
+                        <ChevronLeft className="h-5 w-5 text-gray-600" />
                       </button>
 
                       <button
@@ -596,24 +571,24 @@ export function FacultyPage() {
                             });
                           }
                         }}
-                        className="absolute right-2 sm:right-0 top-1/2 -translate-y-1/2 z-10 w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 bg-white rounded-full shadow-lg flex items-center justify-center hover:shadow-xl transition-all duration-300 border-2 border-gray-100 hover:border-gray-200"
+                        className="absolute right-2 sm:right-0 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white rounded-full shadow-lg flex items-center justify-center hover:shadow-xl transition-all duration-300 border border-gray-200 hover:border-blue-300"
                       >
-                        <ChevronRight className="h-4 w-4 sm:h-5 sm:w-5 text-gray-600" />
+                        <ChevronRight className="h-5 w-5 text-gray-600" />
                       </button>
 
                       {/* Carousel Container */}
                       <div
                         ref={carouselRef}
-                        className="flex gap-4 sm:gap-6 md:gap-8 overflow-x-auto scrollbar-hide scroll-smooth pb-4 px-4 sm:px-12 md:px-16"
+                        className="flex gap-4 overflow-x-auto scrollbar-hide scroll-smooth pb-4 px-4"
                         style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
                       >
                         {getFilteredFaculty().map((member, index) => (
                           <div
                             key={member.id}
-                            className="flex-shrink-0 w-80 group bg-white rounded-xl sm:rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-500 transform hover:-translate-y-1 sm:hover:-translate-y-2 border border-gray-100"
+                            className="flex-shrink-0 w-80 group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100 hover:border-blue-200"
                           >
-                            {/* Image Section - Prominent */}
-                            <div className="relative h-64 sm:h-56 md:h-96 overflow-hidden">
+                            {/* Image Section - Optimized */}
+                            <div className="relative h-56 overflow-hidden">
                               <img
                                 src={member.image}
                                 alt={`${member.name} - ${member.title}`}
@@ -624,71 +599,66 @@ export function FacultyPage() {
                                 }}
                               />
                               <div className="w-full h-full bg-gray-100 flex items-center justify-center hidden">
-                                <Users className="h-12 w-12 sm:h-16 sm:w-16 text-gray-400" />
+                                <Users className="h-16 w-16 text-gray-400" />
                               </div>
 
                               {/* Gradient Overlay */}
-                              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
+                              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent"></div>
 
                               {/* Title Badge */}
-                              <div className="absolute top-2 sm:top-4 left-2 sm:left-4">
-                                <div className="bg-white/90 backdrop-blur-sm text-gray-800 px-2 sm:px-4 py-1 sm:py-2 rounded-full text-xs sm:text-sm font-bold shadow-sm">
-                                  {member.title}
+                              <div className="absolute top-3 left-3">
+                                <div className="bg-white/95 backdrop-blur-sm text-gray-800 px-3 py-1.5 rounded-full text-xs font-bold shadow-md">
+                                  {member.title.includes('Professor') ? 'Faculty' : 'Leader'}
                                 </div>
                               </div>
 
-                              {/* Hover Effect Overlay */}
-                              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                              {/* Name overlay on image */}
+                              <div className="absolute bottom-3 left-3 right-3">
+                                <h3 className="font-bold text-white text-lg mb-1 drop-shadow-lg">
+                                  {member.name}
+                                </h3>
+                                <p className="text-white/90 text-sm font-medium drop-shadow-md line-clamp-1">
+                                  {member.title}
+                                </p>
+                              </div>
                             </div>
 
-                            {/* Content Section */}
-                            <div className="p-4 sm:p-6 md:p-8">
-                              <h3 className="font-bold text-gray-800 text-lg sm:text-xl mb-2 sm:mb-3 group-hover:text-gray-900 transition-colors">
-                                {member.name}
-                              </h3>
-                              <p className="text-gray-600 text-sm sm:text-base mb-3 sm:mb-4 font-medium">
+                            {/* Content Section - Improved */}
+                            <div className="p-5">
+                              <p className="text-gray-600 text-sm mb-3 font-medium line-clamp-2">
                                 {member.qualifications}
                               </p>
-                              <p className="text-gray-600 leading-relaxed mb-4 sm:mb-6 text-sm sm:text-base">
+                              
+                              <p className="text-gray-700 leading-relaxed mb-4 text-sm line-clamp-3">
                                 {expandedCards.has(member.id) ? member.fullBio : member.description}
                               </p>
 
+                              {/* Expertise Section */}
+                              <div className="flex items-center text-sm text-gray-600 mb-4 bg-gray-50 rounded-lg py-2 px-3">
+                                <GraduationCap className={`w-4 h-4 mr-2 ${IMAS_TAILWIND_CLASSES.TEXT_MEDIUM_BLUE} flex-shrink-0`} />
+                                <span className="font-medium line-clamp-2">{member.expertise}</span>
+                              </div>
+
                               {/* Action Button */}
-                              <div className="flex items-center justify-between">
-                                <div className={`inline-flex items-center gap-1 sm:gap-2 ${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE} font-semibold text-xs sm:text-sm group-hover:gap-2 sm:group-hover:gap-3 transition-all duration-300`}>
-                                  {expandedCards.has(member.id) ? 'Show less' : 'Read more'}
-                                  <svg
-                                    className="w-3 h-3 sm:w-4 sm:h-4 transform group-hover:translate-x-1 transition-transform"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    viewBox="0 0 24 24"
-                                  >
-                                    <path
-                                      strokeLinecap="round"
-                                      strokeLinejoin="round"
-                                      strokeWidth={2}
-                                      d="M9 5l7 7-7 7"
-                                    />
-                                  </svg>
-                                </div>
+                              <div className="flex items-center justify-between mb-4">
                                 <button
                                   onClick={() => toggleCardExpansion(member.id)}
-                                  className={`w-6 h-6 sm:w-8 sm:h-8 ${IMAS_TAILWIND_CLASSES.BG_DARK_BLUE}/10 rounded-full flex items-center justify-center group-hover:${IMAS_TAILWIND_CLASSES.BG_DARK_BLUE} transition-all duration-300`}
+                                  className={`${IMAS_TAILWIND_CLASSES.TEXT_MEDIUM_BLUE} hover:${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE} text-sm font-semibold flex items-center bg-blue-50 hover:bg-blue-100 px-4 py-2 rounded-full transition-all duration-300 group/btn`}
                                 >
                                   {expandedCards.has(member.id) ? (
-                                    <Minus className="w-3 h-3 sm:w-4 sm:h-4 text-gray-600 group-hover:text-white transition-colors" />
+                                    <><Minus className="w-4 h-4 mr-2 group-hover/btn:scale-110 transition-transform duration-300" /> Show less</>
                                   ) : (
-                                    <Plus className="w-3 h-3 sm:w-4 sm:h-4 text-gray-600 group-hover:text-white transition-colors" />
+                                    <><Plus className="w-4 h-4 mr-2 group-hover/btn:scale-110 transition-transform duration-300" /> Read more</>
                                   )}
                                 </button>
                               </div>
 
                               {/* Tags */}
-                              <div className="flex flex-wrap gap-1 mt-4">
+                              <div className="flex flex-wrap gap-1.5">
                                 {member.tags.slice(0, 3).map(tag => (
                                   <span
                                     key={tag}
-                                    className={`px-2 py-1 ${IMAS_TAILWIND_CLASSES.GRADIENT_PRIMARY} text-white text-xs rounded-full font-medium shadow-md hover:shadow-lg transition-shadow duration-300 transform hover:scale-105`}
+                                    className={`px-2.5 py-1 ${IMAS_TAILWIND_CLASSES.GRADIENT_PRIMARY} text-white text-xs rounded-full font-medium shadow-sm hover:shadow-md transition-shadow duration-300 transform hover:scale-105`}
                                   >
                                     {tag}
                                   </span>
@@ -700,7 +670,7 @@ export function FacultyPage() {
                       </div>
 
                       {/* Dots Indicator */}
-                      <div className="flex justify-center mt-6 sm:mt-8 gap-2 sm:gap-3">
+                      <div className="flex justify-center mt-6 gap-2">
                         {getFilteredFaculty().map((_, index) => (
                           <button
                             key={index}
@@ -714,7 +684,7 @@ export function FacultyPage() {
                                 });
                               }
                             }}
-                            className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-all duration-300 ${index === currentSlide
+                            className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${index === currentSlide
                               ? `${IMAS_TAILWIND_CLASSES.BG_DARK_BLUE} scale-125`
                               : "bg-gray-300 hover:bg-gray-400"
                               }`}
@@ -817,7 +787,7 @@ export function FacultyPage() {
                   {/* CTA Buttons */}
                   <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center">
                     <Button 
-                      className={`${IMAS_TAILWIND_CLASSES.GRADIENT_PRIMARY} hover:from-[#2e7bb3] hover:to-[#26c1d3] text-white px-8 sm:px-10 lg:px-12 py-3 sm:py-4 text-sm sm:text-base lg:text-lg font-semibold hover:scale-105 transition-all duration-300`}
+                      className={`${IMAS_TAILWIND_CLASSES.GRADIENT_PRIMARY}  text-white px-8 sm:px-10 lg:px-12 py-3 sm:py-4 text-sm sm:text-base lg:text-lg font-semibold hover:scale-105 transition-all duration-300`}
                       onClick={applyNow}
                     >
                       Apply Now
@@ -835,8 +805,8 @@ export function FacultyPage() {
 
                   {/* Additional Info */}
                   <div className="mt-8 text-sm text-gray-400">
-                    <p>Application Deadline: <span className="text-red-400 font-semibold">15th July 2025</span></p>
-                <p className="mt-2">Limited seats available for the 2025 batch</p>
+                    <p>Application Deadline: <span className="text-red-400 font-semibold">March 30, 2026</span></p>
+                <p className="mt-2">Limited seats available for the 2026 batch</p>
                   </div>
                 </div>
               </div>

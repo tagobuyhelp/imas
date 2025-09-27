@@ -15,7 +15,7 @@ export function ProgramsPage() {
     duration: '2 Years',
     location: 'Kolkata',
     format: 'Full Time - On Campus',
-    commencement: '19th Sep 2025',
+    commencement: '19th Sep 2026',
     includes: 'Includes Industry Projects & Internships',
     locationDesc: 'Located near Salt Lake Sector V'
   };
@@ -312,7 +312,7 @@ export function ProgramsPage() {
                 </div>
                 <div className="space-y-1 sm:space-y-2">
                   <h3 className="font-bold text-gray-800 text-xs sm:text-sm uppercase tracking-wider">Start</h3>
-                  <p className="text-lg sm:text-3xl font-bold text-[#143674] mb-0.5 sm:mb-1">Sep 2025</p>
+                  <p className="text-lg sm:text-3xl font-bold text-[#143674] mb-0.5 sm:mb-1">Sep 2026</p>
                   <div className="flex items-center justify-center gap-1 sm:gap-2">
                     <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-orange-500 rounded-full animate-bounce"></div>
                     <p className="text-xs sm:text-sm text-gray-600 font-medium">Next Batch</p>
@@ -435,17 +435,16 @@ export function ProgramsPage() {
                 className={`${IMAS_TAILWIND_CLASSES.GRADIENT_PRIMARY} hover:from-[#2e7bb3] hover:to-[#26c1d3] text-white px-6 sm:px-8 py-3 text-sm sm:text-base lg:text-lg font-semibold hover:scale-105 transition-all duration-300`}
                 onClick={() => handleCTAAction('apply')}
               >
-                Apply Now for IMAS Admission 2025
+                Apply Now for IMAS Admission 2026
                 <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
               </Button>
-              <Button 
-                variant="outline" 
-                className="border-white bg-transparent text-white hover:bg-white hover:text-gray-900 px-6 sm:px-8 py-3 text-sm sm:text-base lg:text-lg font-semibold hover:scale-105 transition-all duration-300"
-                onClick={() => handleCTAAction('enquire')}
+              <button 
+                type="button" 
+                className="npfWidgetButton npfWidget-aeb7b9fbaa1dcebf1762c1f9bc270c4b border-white bg-transparent text-white hover:bg-white hover:text-gray-900 px-6 sm:px-8 py-3 text-sm sm:text-base lg:text-lg font-semibold hover:scale-105 transition-all duration-300 rounded-md border-2"
               >
                 Enquire Now
                 <Mail className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
-              </Button>
+              </button>
               <Button 
                 variant="outline" 
                 className="border-white bg-transparent text-white hover:bg-white hover:text-gray-900 px-6 sm:px-8 py-3 text-sm sm:text-base lg:text-lg font-semibold hover:scale-105 transition-all duration-300"

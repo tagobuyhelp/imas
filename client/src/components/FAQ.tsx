@@ -56,7 +56,7 @@ const faqData: FAQSection[] = [
     items: [
       {
         question: 'What is the eligibility criteria for PGDM programs?',
-        answer: '• Graduation with 50% or above from any recognized university\n• 2022, 2023, 2024, 2025 pass-outs are eligible\n• Valid scores in CAT/XAT/CMAT/MAT/ATMA/CUET accepted\n• Strong academic background and career aspirations in management'
+        answer: '• Graduation with 50% or above from any recognized university\n• 2023, 2024, 2025, 2026 pass-outs are eligible\n• Valid scores in CAT/XAT/CMAT/MAT/ATMA/CUET accepted\n• Strong academic background and career aspirations in management'
       },
       {
         question: 'Do I need management entrance exam scores?',
@@ -68,7 +68,7 @@ const faqData: FAQSection[] = [
       },
       {
         question: 'Can final year students apply?',
-        answer: 'Yes, final year students (2025 pass-outs) can apply. However, admission will be confirmed only after successful completion of graduation with required percentage.'
+        answer: 'Yes, final year students (2026 pass-outs) can apply. However, admission will be confirmed only after successful completion of graduation with required percentage.'
       }
     ]
   },
@@ -77,8 +77,8 @@ const faqData: FAQSection[] = [
     title: 'Application',
     items: [
       {
-        question: 'When can I apply for PGDM programs 2025?',
-        answer: 'Applications for 2025 batch are now open and will continue until July 15, 2025. We recommend applying early to secure your preferred program and avail scholarship opportunities.'
+        question: 'When can I apply for PGDM programs 2026?',
+        answer: 'Applications for 2026 batch are now open and will continue until March 30, 2026. We recommend applying early to secure your preferred program and avail scholarship opportunities.'
       },
       {
         question: 'What is the application process?',
@@ -117,12 +117,12 @@ const faqData: FAQSection[] = [
     title: 'Admissions',
     items: [
       {
-        question: 'When do classes start for 2025 batch?',
-        answer: 'Classes for the 2025 batch begin in September 2025. The exact date will be communicated to admitted students during the orientation process.'
+        question: 'When do classes start for 2026 batch?',
+        answer: 'Classes for the 2026 batch begin in September 2026. The exact date will be communicated to admitted students during the orientation process.'
       },
       {
-        question: 'What are the admission deadlines for 2025?',
-        answer: 'Application deadlines for 2025 batch:\n• Early Bird: March 15, 2025\n• Regular: May 30, 2025\n• Final: July 15, 2025\n\nEarly applications are encouraged for scholarship opportunities and seat confirmation.'
+        question: 'What are the admission deadlines for 2026?',
+        answer: 'Application deadline for 2026 batch is March 30, 2026. Early applications are encouraged for scholarship opportunities and seat confirmation.'
       },
       {
         question: 'How can I confirm my admission?',
@@ -162,7 +162,7 @@ const faqData: FAQSection[] = [
       },
       {
         question: 'What scholarships are offered?',
-        answer: '• IMAS Merit Scholarship 2025 – for top-performing applicants.\n• Partner University Scholarships (UK) – 200+ scholarships across 49 universities.'
+        answer: '• IMAS Merit Scholarship 2026 – for top-performing applicants.\n• Partner University Scholarships (UK) – 200+ scholarships across 49 universities.'
       },
       {
         question: 'Are scholarships applicable to both years?',

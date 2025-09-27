@@ -19,7 +19,7 @@ interface StickyCTAFooterProps {
 }
 
 export function StickyCTAFooter({
-  title = "Admissions Open 2025",
+  title = "Admissions Open 2026",
   subtitle = "Join the next generation of leaders",
   primaryButtonText = "Apply Now",
   onPrimaryClick = applyNow,

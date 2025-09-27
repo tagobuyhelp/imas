@@ -199,7 +199,7 @@ export function BottomNavBar({
   return (
     <div className={`hidden lg:block fixed bg-transparent bottom-2 left-0 right-0 z-20  ${IMAS_TAILWIND_CLASSES.BORDER_MEDIUM_BLUE}  ${className}`}>
       <div className="flex justify-center bg-transparent">
-        <div className="relative py-3 bg-primary-dark rounded-full flex justify-center items-center  shadow-lg max-w-[1250px] mx-auto" style={{ width: 'auto'}}>
+        <div className="relative py-3 bg-white rounded-full flex justify-center items-center  shadow-lg max-w-[1250px] mx-auto" style={{ width: 'auto'}}>
           {/* Scroll Left Arrow */}
           <button
             onClick={scrollLeft}
@@ -230,7 +230,7 @@ export function BottomNavBar({
                 onClick={() => handleTabClick(menuItem)}
                 className={`flex items-center gap-2 px-4 py-2 rounded-lg whitespace-nowrap transition-all duration-200 ${currentActiveTab === menuItem.label
                     ? 'bg-white text-teal-600 shadow-md font-semibold'
-                    : 'text-white hover:bg-teal-500 hover:text-white'
+                    : 'text-black  hover:text-blue-700'
                   }`}
               >
                 {getIcon(menuItem.label)}

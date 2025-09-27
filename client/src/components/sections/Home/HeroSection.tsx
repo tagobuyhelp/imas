@@ -1,11 +1,13 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Button } from '../../ui/button';
 import { Carousel } from '../../ui/carousel';
 import { IMAS_TAILWIND_CLASSES } from '../../../lib/constants';
 import { downloadBrochure, applyNow } from '../../../lib/utils';
-import { ArrowRight, Download } from 'lucide-react';
+import { ArrowRight, Download, Play, Users, Award, Globe, BookOpen, TrendingUp } from 'lucide-react';
 
 export function HeroSection() {
+  const [currentStat, setCurrentStat] = useState(0);
+  
   // Sample carousel images - replace with actual IMAS images
   const carouselImages = [
     '/uploads/imas_hero_image_2.webp',
@@ -13,149 +15,230 @@ export function HeroSection() {
     '/uploads/imas_hero_image3.webp',
   ];
 
+  const stats = [
+    { icon: Users, value: '500+', label: 'Alumni Network' },
+    { icon: Award, value: '100%', label: 'Placement Rate' },
+    { icon: Globe, value: '15+', label: 'Industry Partners' },
+    { icon: BookOpen, value: '50+', label: 'Expert Faculty' }
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentStat((prev) => (prev + 1) % stats.length);
+    }, 2000);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
-    <section id="hero" className="bg-gray-900 text-white min-h-[90vh] relative overflow-hidden">
-      {/* Animated Background Elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className={`absolute top-20 left-10 w-20 h-20 ${IMAS_TAILWIND_CLASSES.BG_TEAL}/10 rounded-full animate-pulse`}></div>
-        <div className={`absolute top-40 right-20 w-16 h-16 ${IMAS_TAILWIND_CLASSES.BG_MEDIUM_BLUE}/10 rounded-full animate-bounce`} style={{ animationDelay: '1s' }}></div>
-        <div className={`absolute bottom-20 left-1/4 w-12 h-12 ${IMAS_TAILWIND_CLASSES.BG_DARK_BLUE}/10 rounded-full animate-ping`} style={{ animationDelay: '2s' }}></div>
+    <section id="hero" className="relative min-h-screen overflow-hidden">
+      {/* Dynamic Gradient Background */}
+      <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-blue-900 to-teal-900">
+        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
       </div>
 
-      <div className="max-w-[1260px] mx-auto px-4 py-6 sm:py-10 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-20 justify-items-end items-center min-h-[60vh] sm:min-h-[70vh]">
+      {/* Animated Geometric Shapes - Responsive */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className={`absolute top-10 sm:top-20 left-5 sm:left-10 w-16 h-16 sm:w-32 sm:h-32 ${IMAS_TAILWIND_CLASSES.BG_TEAL}/20 rounded-full blur-xl animate-pulse`}></div>
+        <div className={`absolute top-20 sm:top-40 right-10 sm:right-20 w-12 h-12 sm:w-24 sm:h-24 ${IMAS_TAILWIND_CLASSES.BG_MEDIUM_BLUE}/30 rounded-full blur-lg animate-bounce`} style={{ animationDelay: '1s' }}></div>
+        <div className={`absolute bottom-16 sm:bottom-32 left-1/4 sm:left-1/3 w-10 h-10 sm:w-20 sm:h-20 ${IMAS_TAILWIND_CLASSES.BG_DARK_BLUE}/25 rounded-full blur-md animate-ping`} style={{ animationDelay: '2s' }}></div>
+        
+        {/* Floating Elements - Hidden on mobile for performance */}
+        <div className="hidden sm:block absolute top-1/4 right-1/4 w-2 h-2 bg-white/40 rounded-full animate-float" style={{ animationDelay: '0.5s' }}></div>
+        <div className="hidden sm:block absolute top-1/3 left-1/4 w-1 h-1 bg-teal-400/60 rounded-full animate-float" style={{ animationDelay: '1.5s' }}></div>
+        <div className="hidden sm:block absolute bottom-1/3 right-1/3 w-3 h-3 bg-blue-400/50 rounded-full animate-float" style={{ animationDelay: '2.5s' }}></div>
+      </div>
 
-          {/* Left Section - Program Content */}
-          <div className="space-y-4 sm:space-y-6 lg:space-y-8 animate-fade-in-up w-full">
-            {/* Image Carousel */}
-            <section className="h-[200px] sm:h-[250px] md:h-[150px] lg:h-[250px]">
-              <Carousel
-                images={carouselImages}
-                autoPlay={true}
-                interval={4000}
-                showControls={false}
-                showIndicators={false}
-                className="h-full"
-              />
-            </section>
-
-            {/* Program Title */}
-            <div className="animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-              <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-3xl font-bold mb-3 sm:mb-4 leading-tight">
-                India's Only B-School Powered by Industry Experts & Designed for Tomorrow's Leaders
-              </h1>
-              <p className={`text-base sm:text-lg md:text-xl ${IMAS_TAILWIND_CLASSES.TEXT_TEAL} mb-4 sm:mb-6 animate-pulse`}>
-                Hands-on learning, enhanced with AI
-              </p>
-            </div>
-
-            {/* Key Highlights */}
-            <div className="relative overflow-hidden animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-              <div className="w-full overflow-hidden">
-                <div className="flex gap-4 sm:gap-6 animate-scroll-left whitespace-nowrap">
-                  <span className={`border ${IMAS_TAILWIND_CLASSES.BORDER_MEDIUM_BLUE} ${IMAS_TAILWIND_CLASSES.TEXT_MEDIUM_BLUE} px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-semibold flex-shrink-0`}>
-                    AICTE-Approved Programmes
-                  </span>
-                  <span className={`border ${IMAS_TAILWIND_CLASSES.BORDER_MEDIUM_BLUE} ${IMAS_TAILWIND_CLASSES.TEXT_MEDIUM_BLUE} px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-semibold flex-shrink-0`}>
-                    100% Placement Assurance
-                  </span>
-                  <span className={`border ${IMAS_TAILWIND_CLASSES.BORDER_MEDIUM_BLUE} ${IMAS_TAILWIND_CLASSES.TEXT_MEDIUM_BLUE} px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-semibold flex-shrink-0`}>
-                    International Collaborations
-                  </span>
-                  <span className={`border ${IMAS_TAILWIND_CLASSES.BORDER_MEDIUM_BLUE} ${IMAS_TAILWIND_CLASSES.TEXT_MEDIUM_BLUE} px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-semibold flex-shrink-0`}>
-                    Industry Expert Faculty
-                  </span>
-                  <span className={`border ${IMAS_TAILWIND_CLASSES.BORDER_MEDIUM_BLUE} ${IMAS_TAILWIND_CLASSES.TEXT_MEDIUM_BLUE} px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-semibold flex-shrink-0`}>
-                    Modern Infrastructure
-                  </span>
-                  <span className={`border ${IMAS_TAILWIND_CLASSES.BORDER_MEDIUM_BLUE} ${IMAS_TAILWIND_CLASSES.TEXT_MEDIUM_BLUE} px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-semibold flex-shrink-0`}>
-                    Global Partnerships
-                  </span>
-                  {/* Duplicate items for seamless loop */}
-                  <span className={`border ${IMAS_TAILWIND_CLASSES.BORDER_MEDIUM_BLUE} ${IMAS_TAILWIND_CLASSES.TEXT_MEDIUM_BLUE} px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-semibold flex-shrink-0`}>
-                    AICTE-Approved Programmes
-                  </span>
-                  <span className={`border ${IMAS_TAILWIND_CLASSES.BORDER_MEDIUM_BLUE} ${IMAS_TAILWIND_CLASSES.TEXT_MEDIUM_BLUE} px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-semibold flex-shrink-0`}>
-                    100% Placement Assurance
-                  </span>
-                  <span className={`border ${IMAS_TAILWIND_CLASSES.BORDER_MEDIUM_BLUE} ${IMAS_TAILWIND_CLASSES.TEXT_MEDIUM_BLUE} px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-semibold flex-shrink-0`}>
-                    International Collaborations
-                  </span>
-                </div>
-              </div>
-            </div>
-
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
-              <Button 
-                className={`${IMAS_TAILWIND_CLASSES.GRADIENT_PRIMARY} hover:from-[#2e7bb3] hover:to-[#26c1d3] text-white px-8 sm:px-10 lg:px-12 py-3 sm:py-4 text-sm sm:text-base lg:text-lg font-semibold hover:scale-105 transition-all duration-300`}
-                onClick={applyNow}
-              >
-                Apply Now
-                <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
-              </Button>
-              <Button 
-                variant="outline" 
-                className="border-white bg-transparent text-white hover:bg-white hover:text-gray-900 px-8 sm:px-10 lg:px-12 py-3 sm:py-4 text-sm sm:text-base lg:text-lg font-semibold hover:scale-105 transition-all duration-300"
-                onClick={downloadBrochure}
-              >
-                Download Brochure
-                <Download className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
-              </Button>
-            </div>
-          </div>
-
-          {/* Right Section - Key Statistics & Highlights */}
-          <div className="bg-white text-gray-800 rounded-lg p-3 sm:p-4 lg:p-6 shadow-xl w-full max-w-[400px] sm:max-w-[450px] h-full mx-auto lg:mx-0 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
-            <div className="space-y-4 sm:space-y-6">
-              {/* Program Year */}
-              <div className="border-b border-gray-300 pb-3">
-                <p className="text-gray-500 text-xs">IMAS 2025</p>
-                <h2 className="text-base sm:text-lg lg:text-xl font-bold text-gray-800 leading-tight mt-1">
-                  PGDM Admission Open for 19th Sep 2025
-                </h2>
-              </div>
-
-              {/* Key Statistics */}
-              <div className="grid grid-cols-2 gap-4">
-                <div className="text-center p-3 bg-gray-50 rounded-lg">
-                  <div className={`text-xl sm:text-2xl font-bold ${IMAS_TAILWIND_CLASSES.TEXT_MEDIUM_BLUE}`}>100%</div>
-                  <div className="text-xs text-gray-600">Placement Assurance</div>
-                </div>
-                <div className="text-center p-3 bg-gray-50 rounded-lg">
-                  <div className={`text-xl sm:text-2xl font-bold ${IMAS_TAILWIND_CLASSES.TEXT_MEDIUM_BLUE}`}>15+</div>
-                  <div className="text-xs text-gray-600">Industry Partners</div>
-                </div>
-                <div className="text-center p-3 bg-gray-50 rounded-lg">
-                  <div className={`text-xl sm:text-2xl font-bold ${IMAS_TAILWIND_CLASSES.TEXT_MEDIUM_BLUE}`}>50+</div>
-                  <div className="text-xs text-gray-600">Expert Faculty</div>
-                </div>
-                <div className="text-center p-3 bg-gray-50 rounded-lg">
-                  <div className={`text-xl sm:text-2xl font-bold ${IMAS_TAILWIND_CLASSES.TEXT_MEDIUM_BLUE}`}>AICTE</div>
-                  <div className="text-xs text-gray-600">Approved</div>
-                </div>
-              </div>
-
+      {/* Main Content */}
+      <div className="relative z-10  flex items-center">
+        <div className="w-full px-4 sm:px-6 py-6 sm:py-8">
+          <div className="max-w-7xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
               
+              {/* Left Section - Hero Content */}
+              <div className="lg:col-span-7 space-y-6 sm:space-y-8 order-2 lg:order-1">
+                
+                {/* Hero Badge */}
+                <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm text-white animate-fade-in-up">
+                  <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-green-400 rounded-full animate-pulse"></div>
+                  <span>Admissions Open for 2026-28</span>
+                </div>
 
-              {/* Application Deadline */}
-              <div className="bg-red-50 p-3 rounded-lg border border-red-200">
-                <p className="text-xs text-gray-700 text-center">
-                  Final Intake Phase 7 Application Deadline
-                </p>
-                <p className="font-bold text-red-600 text-center animate-pulse text-sm mt-1">
-                  24th August 2025
-                </p>
+                {/* Main Heading */}
+                <div className="space-y-3 sm:space-y-4 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+                  <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
+                    Shape Your
+                    <span className={`block ${IMAS_TAILWIND_CLASSES.TEXT_TEAL} bg-gradient-to-r from-teal-400 to-blue-400 bg-clip-text text-transparent`}>
+                      Business Future
+                    </span>
+                    <span className="block text-xl sm:text-3xl md:text-4xl lg:text-5xl font-medium text-gray-300">
+                      with Industry Experts
+                    </span>
+                  </h1>
+                  
+                  <p className="text-base sm:text-xl text-gray-300 max-w-2xl leading-relaxed">
+                    India's premier B-School where AI meets traditional business education. 
+                    <span className="text-teal-400 font-semibold"> 100% placement assurance</span> with hands-on industry experience.
+                  </p>
+                </div>
+
+                {/* Interactive Stats - Mobile Optimized */}
+                <div className="grid grid-cols-2 sm:flex sm:items-center gap-3 sm:gap-6 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+                  {stats.map((stat, index) => {
+                    const Icon = stat.icon;
+                    return (
+                      <div 
+                        key={index}
+                        className={`flex items-center gap-2 sm:gap-3 p-2 sm:p-3 rounded-lg transition-all duration-500 cursor-pointer ${
+                          currentStat === index 
+                            ? 'bg-white/20 backdrop-blur-sm border border-white/30 scale-105' 
+                            : 'bg-white/5 hover:bg-white/10'
+                        }`}
+                        onClick={() => setCurrentStat(index)}
+                      >
+                        <Icon className={`w-4 h-4 sm:w-6 sm:h-6 ${currentStat === index ? 'text-teal-400' : 'text-gray-400'}`} />
+                        <div>
+                          <div className={`text-sm sm:text-lg font-bold ${currentStat === index ? 'text-white' : 'text-gray-300'}`}>
+                            {stat.value}
+                          </div>
+                          <div className={`text-xs ${currentStat === index ? 'text-gray-200' : 'text-gray-500'}`}>
+                            {stat.label}
+                          </div>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+
+                {/* Scrolling Highlights - Mobile Optimized */}
+                <div className="relative overflow-hidden animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
+                  <div className="flex gap-3 sm:gap-4 animate-scroll-left whitespace-nowrap">
+                    {[
+                      'AICTE Approved', 'AI-Enhanced Learning', 'Global Partnerships', 
+                      'Industry Mentorship', 'Modern Infrastructure', 'Research Excellence',
+                      'AICTE Approved', 'AI-Enhanced Learning', 'Global Partnerships'
+                    ].map((highlight, index) => (
+                      <span 
+                        key={index}
+                        className="inline-flex items-center gap-1.5 sm:gap-2 bg-gradient-to-r from-teal-500/20 to-blue-500/20 backdrop-blur-sm border border-teal-400/30 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm text-teal-300 font-medium"
+                      >
+                        <div className="w-1 h-1 sm:w-1.5 sm:h-1.5 bg-teal-400 rounded-full"></div>
+                        {highlight}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+
+                {/* CTA Buttons - Mobile Optimized */}
+                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
+                  <Button 
+                    className="group bg-gradient-to-r from-teal-500 to-blue-600 hover:from-teal-600 hover:to-blue-700 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold rounded-xl shadow-2xl hover:shadow-teal-500/25 transform hover:scale-105 transition-all duration-300"
+                    onClick={applyNow}
+                  >
+                    Apply Now
+                    <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
+                  </Button>
+                  
+                  <Button 
+                    variant="outline" 
+                    className="group border-2 border-white/30 bg-white/10 backdrop-blur-sm text-white hover:bg-white hover:text-gray-900 px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold rounded-xl transform hover:scale-105 transition-all duration-300"
+                    onClick={downloadBrochure}
+                  >
+                    <Download className="mr-2 w-4 h-4 sm:w-5 sm:h-5 group-hover:animate-bounce" />
+                    Download Brochure
+                  </Button>
+                  
+                  <Button 
+                    variant="ghost" 
+                    className="group text-white hover:text-teal-400 px-4 sm:px-6 py-3 sm:py-4 text-base sm:text-lg font-medium rounded-xl transition-all duration-300"
+                  >
+                    <Play className="mr-2 w-4 h-4 sm:w-5 sm:h-5 group-hover:scale-110 transition-transform" />
+                    <span className="hidden sm:inline">Watch Video</span>
+                    <span className="sm:hidden">Video</span>
+                  </Button>
+                </div>
               </div>
 
-              {/* Primary CTA */}
-              <Button 
-                className={`w-full ${IMAS_TAILWIND_CLASSES.GRADIENT_PRIMARY} hover:from-[#2e7bb3] hover:to-[#26c1d3] text-white py-3 text-base sm:text-lg font-semibold rounded-lg hover:scale-105 transition-all duration-300`}
-                onClick={applyNow}
-              >
-                Apply Now
-                <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
-              </Button>
+              {/* Right Section - Interactive Card - Mobile Optimized */}
+              <div className="lg:col-span-5 order-1 lg:order-2 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
+                <div className="relative max-w-md mx-auto lg:max-w-none">
+                  {/* Main Card */}
+                  <div className="bg-white/95 backdrop-blur-lg rounded-2xl p-4 sm:p-6 shadow-2xl border border-white/20">
+                    
+                    {/* Image Carousel */}
+                    <div className="h-32 sm:h-48 mb-4 sm:mb-6 rounded-xl overflow-hidden">
+                      <Carousel
+                        images={carouselImages}
+                        autoPlay={true}
+                        interval={4000}
+                        showControls={false}
+                        showIndicators={true}
+                        className="h-full"
+                      />
+                    </div>
+
+                    {/* Program Info */}
+                    <div className="space-y-3 sm:space-y-4">
+                      <div className="flex items-center justify-between">
+                        <div>
+                          <p className="text-gray-500 text-xs sm:text-sm font-medium">IMAS 2026</p>
+                          <h3 className="text-lg sm:text-xl font-bold text-gray-800">PGDM Program</h3>
+                        </div>
+                        <div className="text-right">
+                          <p className="text-xl sm:text-2xl font-bold text-teal-600">₹12.5L</p>
+                          <p className="text-xs sm:text-sm text-gray-500">Total Fees</p>
+                        </div>
+                      </div>
+
+                      {/* Quick Stats Grid */}
+                      <div className="grid grid-cols-2 gap-2">
+                        <div className="bg-gradient-to-br from-teal-50 to-blue-50 p-2 rounded-lg text-center">
+                          <TrendingUp className="w-4 h-4 text-teal-600 mx-auto mb-1" />
+                          <div className="text-sm font-bold text-gray-800">24 Months</div>
+                          <div className="text-xs text-gray-600">Duration</div>
+                        </div>
+                        <div className="bg-gradient-to-br from-blue-50 to-purple-50 p-2 rounded-lg text-center">
+                          <Users className="w-4 h-4 text-blue-600 mx-auto mb-1" />
+                          <div className="text-sm font-bold text-gray-800">60 Seats</div>
+                          <div className="text-xs text-gray-600">Available</div>
+                        </div>
+                      </div>
+
+                      {/* Deadline Alert */}
+                      <div className="bg-gradient-to-r from-red-50 to-orange-50 border border-red-200 p-2 rounded-lg">
+                        <div className="flex items-center gap-1 mb-1">
+                          <div className="w-1.5 h-1.5 bg-red-500 rounded-full animate-pulse"></div>
+                          <p className="text-xs font-semibold text-red-700">Application Deadline</p>
+                        </div>
+                        <p className="text-sm font-bold text-red-600">March 30, 2026</p>
+                        <p className="text-xs text-gray-600">Only 45 days left to apply!</p>
+                      </div>
+
+                      {/* CTA Buttons */}
+                      <div className="space-y-2 sm:space-y-3">
+                        <Button 
+                          variant="outline"
+                          className="w-full border-2 border-teal-600 text-teal-600 hover:bg-teal-600 hover:text-white py-2.5 sm:py-3 text-sm sm:text-base font-semibold rounded-lg shadow-md hover:shadow-lg transform hover:scale-[1.02] transition-all duration-300"
+                        >
+                          Enquiry Now
+                          <ArrowRight className="ml-2 w-3 h-3 sm:w-4 sm:h-4" />
+                        </Button>
+                        
+                        <Button 
+                          className="w-full bg-gradient-to-r from-teal-600 to-blue-600 hover:from-teal-700 hover:to-blue-700 text-white py-2.5 sm:py-3 text-sm sm:text-base font-semibold rounded-lg shadow-lg hover:shadow-xl transform hover:scale-[1.02] transition-all duration-300"
+                          onClick={applyNow}
+                        >
+                          Secure Your Seat Now
+                          <ArrowRight className="ml-2 w-3 h-3 sm:w-4 sm:h-4" />
+                        </Button>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Floating Elements around Card - Hidden on mobile */}
+                  <div className="hidden sm:block absolute -top-4 -right-4 w-8 h-8 bg-teal-400 rounded-full opacity-60 animate-bounce" style={{ animationDelay: '1s' }}></div>
+                  <div className="hidden sm:block absolute -bottom-4 -left-4 w-6 h-6 bg-blue-400 rounded-full opacity-40 animate-pulse" style={{ animationDelay: '2s' }}></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

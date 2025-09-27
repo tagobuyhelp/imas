@@ -329,7 +329,7 @@ export function WhyChooseSection() {
           'International Student Exchange Programs',
           'Industry-Ready Management Courses Kolkata with dual certification options',
           'Strategic partnerships with universities in Europe and Asia',
-          'Affordable course fees with options for Education Loans & IMAS Scholarship 2025'
+          'Affordable course fees with options for Education Loans & IMAS Scholarship 2026'
         ]
       }
     },
@@ -364,12 +364,12 @@ export function WhyChooseSection() {
       title: 'Affordable Education',
       subtitle: 'at IMAS COLLEGE KOLKATA',
       image: '/uploads/scholarship-video.jpg',
-      description: 'Education loans and IMAS Scholarship 2025 opportunities',
+      description: 'Education loans and IMAS Scholarship 2026 opportunities',
       videoUrl: '#',
       content: {
         type: 'text',
         title: 'Affordable Education',
-        description: 'We believe quality education should be accessible to all. Our affordable course fees, combined with education loan options and the IMAS Scholarship 2025, make world-class management education within reach for deserving students.'
+        description: 'We believe quality education should be accessible to all. Our affordable course fees, combined with education loan options and the IMAS Scholarship 2026, make world-class management education within reach for deserving students.'
       }
     },
     {

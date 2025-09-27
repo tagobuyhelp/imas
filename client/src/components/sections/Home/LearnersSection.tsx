@@ -119,12 +119,12 @@ export function LearnersSection() {
   };
 
   return (
-    <section id="student-testimonials" className="py-12 sm:py-16 md:py-20 bg-gray-50">
+    <section id="student-testimonials" className="py-12 sm:py-16 md:py-20 bg-gray-100">
       <div className="max-w-[1500px] mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-8 sm:mb-12 md:mb-16">
           {/* Badge */}
-          <div className={`inline-block ${IMAS_TAILWIND_CLASSES.BG_DARK_BLUE} text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full text-xs sm:text-sm font-bold mb-4 sm:mb-6 shadow-md`}>
+          <div className={`inline-block ${IMAS_TAILWIND_CLASSES.BG_DARK_BLUE} text-white px-4 sm:px-6 py-2 sm:py-3 rounded-full text-xs sm:text-sm font-bold mb-4 sm:mb-6 `}>
             STUDENT TESTIMONIALS
           </div>
 

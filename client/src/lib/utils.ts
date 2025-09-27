@@ -6,13 +6,13 @@ export function cn(...inputs: ClassValue[]) {
 }
 
 /**
- * Downloads the IMAS PGDM 2025 Brochure
+ * Downloads the IMAS PGDM 2026 Brochure
  */
 export function downloadBrochure() {
-  const brochureUrl = '/uploads/IMAS_PGDM_2025_Brochure.pdf';
+  const brochureUrl = '/uploads/IMAS_PGDM_2026_Brochure.pdf';
   const link = document.createElement('a');
   link.href = brochureUrl;
-  link.download = 'IMAS_PGDM_2025_Brochure.pdf';
+  link.download = 'IMAS_PGDM_2026_Brochure.pdf';
   link.target = '_blank';
   document.body.appendChild(link);
   link.click();

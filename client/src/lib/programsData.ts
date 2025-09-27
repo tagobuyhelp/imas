@@ -368,7 +368,7 @@ export const programsData: Program[] = [
         duration: '2 Years',
         format: 'full-time',
         location: 'Kolkata (Salt Lake)',
-        commencement: '19th Sep 2025',
+        commencement: '19th Sep 2026',
         description: 'The PGDM Plus in Marketing Management at IMAS Kolkata is a comprehensive 2-year program designed to create marketing leaders who can navigate the complexities of modern consumer behavior, digital transformation, and global brand management. This AICTE-approved program combines theoretical foundations with practical applications, ensuring graduates are industry-ready from day one.',
         overview: 'The PGDM Plus in Marketing Management at IMAS Kolkata is a transformative 2-year full-time program designed for aspiring marketers who want to master branding, digital strategy, consumer psychology, and sales leadership.',
         highlights: [
@@ -485,14 +485,14 @@ export const programsData: Program[] = [
             title: 'Your Journey Doesn\'t End at IMAS. It Begins',
             description: 'From desert safaris in Dubai to business case competitions in Singapore, IMAS Kolkata ensures your PGDM Marketing journey is a life-changing experience. With a focus on leadership development, international exposure, and startup incubation, IMAS makes you future-ready.',
             buttons: [
-                { text: 'Apply Now for IMAS Admission 2025', action: 'apply' },
+                { text: 'Apply Now for IMAS Admission 2026', action: 'apply' },
                 { text: 'Enquire Now', action: 'enquire' },
                 { text: 'Download Brochure', action: 'download' }
             ]
         },
         seo: {
             title: 'PGDM Plus in Marketing Management - IMAS Kolkata | AICTE Approved Marketing Program',
-            description: 'Transform your career with PGDM Plus in Marketing Management at IMAS Kolkata. Learn branding, digital marketing, consumer psychology with 100% placement support. Apply now for 2025 batch.',
+            description: 'Transform your career with PGDM Plus in Marketing Management at IMAS Kolkata. Learn branding, digital marketing, consumer psychology with 100% placement support. Apply now for 2026 batch.',
             keywords: ['PGDM Marketing', 'Marketing Management', 'Digital Marketing', 'Brand Management', 'IMAS Kolkata', 'AICTE Approved'],
             canonical: '/programs/pgdm-plus-marketing-management'
         }
@@ -506,7 +506,7 @@ export const programsData: Program[] = [
         duration: '2 Years',
         format: 'full-time',
         location: 'Kolkata (Salt Lake)',
-        commencement: '19th Sep 2025',
+        commencement: '19th Sep 2026',
         description: 'The PGDM Plus in Financial Management at IMAS Kolkata is a comprehensive 2-year program designed to create finance leaders who can navigate complex financial markets, corporate finance decisions, and emerging fintech innovations. This AICTE-approved program combines rigorous analytical training with practical applications in investment banking, risk management, and financial strategy.',
         overview: 'The PGDM Plus in Financial Management at IMAS Business School Kolkata is your gateway to mastering the world of money, markets, investments, and corporate finance.',
         highlights: [
@@ -613,14 +613,14 @@ export const programsData: Program[] = [
             title: 'Finance for the Future – Start Now',
             description: 'From forex labs to Bloomberg terminal exposure, your learning will match what top employers expect. Plus, international immersion with partner universities like Middlesex University and Raffles University ensures a global outlook.',
             buttons: [
-                { text: 'Apply Now for IMAS Admission 2025', action: 'apply' },
+                { text: 'Apply Now for IMAS Admission 2026', action: 'apply' },
                 { text: 'Enquire Now', action: 'enquire' },
                 { text: 'Download Brochure', action: 'download' }
             ]
         },
         seo: {
             title: 'PGDM Plus in Financial Management - IMAS Kolkata | AICTE Approved Finance Program',
-            description: 'Master finance with PGDM Plus in Financial Management at IMAS Kolkata. Learn investment banking, financial analytics, risk management with 100% placement support. Apply now for 2025 batch.',
+            description: 'Master finance with PGDM Plus in Financial Management at IMAS Kolkata. Learn investment banking, financial analytics, risk management with 100% placement support. Apply now for 2026 batch.',
             keywords: ['PGDM Finance', 'Financial Management', 'Investment Banking', 'Financial Analytics', 'IMAS Kolkata', 'AICTE Approved'],
             canonical: '/programs/pgdm-plus-financial-management'
         }
@@ -634,7 +634,7 @@ export const programsData: Program[] = [
         duration: '2 Years',
         format: 'full-time',
         location: 'Kolkata (Salt Lake)',
-        commencement: '19th Sep 2025',
+        commencement: '19th Sep 2026',
         description: 'The PGDM Plus in Human Resource Management at IMAS Kolkata is a comprehensive 2-year program designed to create HR leaders who can navigate the complexities of modern workforce management, organizational development, and strategic human capital planning. This AICTE-approved program combines rigorous academic learning with practical industry exposure, preparing students to become strategic HR business partners who drive organizational success through people-centric initiatives.',
         overview: 'The PGDM Plus in Human Resource Management at IMAS Kolkata is a transformative 2-year full-time program designed for aspiring HR professionals who want to master talent management, organizational behavior, people analytics, and strategic HR leadership.',
         highlights: [
@@ -748,14 +748,14 @@ export const programsData: Program[] = [
             title: 'Be the People Leader Companies Want',
             description: 'With access to a global alumni network, certified skill training, and hands-on learning from real-world HR challenges, this PGDM in HRM in Kolkata at IMAS builds leaders who create impact.',
             buttons: [
-                { text: 'Apply Now for IMAS Admission 2025', action: 'apply' },
+                { text: 'Apply Now for IMAS Admission 2026', action: 'apply' },
                 { text: 'Enquire Now', action: 'enquire' },
                 { text: 'Download Brochure', action: 'download' }
             ]
         },
         seo: {
             title: 'PGDM Plus in Human Resource Management - IMAS Kolkata | AICTE Approved HR Program',
-            description: 'Become an HR leader with PGDM Plus in Human Resource Management at IMAS Kolkata. Learn strategic HR, people analytics, talent management with 100% placement support. Apply now for 2025 batch.',
+            description: 'Become an HR leader with PGDM Plus in Human Resource Management at IMAS Kolkata. Learn strategic HR, people analytics, talent management with 100% placement support. Apply now for 2026 batch.',
             keywords: ['PGDM HR', 'Human Resource Management', 'HR Analytics', 'Talent Management', 'IMAS Kolkata', 'AICTE Approved'],
             canonical: '/programs/pgdm-plus-human-resource-management'
         }
@@ -769,7 +769,7 @@ export const programsData: Program[] = [
         duration: '2 Years',
         format: 'full-time',
         location: 'Kolkata (Salt Lake)',
-        commencement: '19th Sep 2025',
+        commencement: '19th Sep 2026',
         description: 'The PGDM Plus in Business Analytics at IMAS Kolkata is a comprehensive 2-year program designed to create data-driven business leaders who can transform raw data into strategic insights and actionable business intelligence. This AICTE-approved program combines statistical analysis, machine learning, and business strategy, preparing students to become analytics professionals who drive data-informed decision-making across industries.',
         overview: 'The PGDM Plus in Business Analytics at IMAS Kolkata is a transformative 2-year full-time program designed for aspiring analytics professionals who want to master data science, predictive modeling, business intelligence, and strategic analytics.',
         highlights: [
@@ -882,14 +882,14 @@ export const programsData: Program[] = [
             title: 'Transform Data into Strategic Insights',
             description: 'From statistical modeling to machine learning applications, your analytical skills will match what top employers expect. Plus, international immersion and industry partnerships ensure a global perspective on data-driven business strategy.',
             buttons: [
-                { text: 'Apply Now for IMAS Admission 2025', action: 'apply' },
+                { text: 'Apply Now for IMAS Admission 2026', action: 'apply' },
                 { text: 'Enquire Now', action: 'enquire' },
                 { text: 'Download Brochure', action: 'download' }
             ]
         },
         seo: {
             title: 'PGDM Plus in Business Analytics - IMAS Kolkata | AICTE Approved Analytics Program',
-            description: 'Master data science with PGDM Plus in Business Analytics at IMAS Kolkata. Learn machine learning, predictive analytics, business intelligence with 95% placement support. Apply now for 2025 batch.',
+            description: 'Master data science with PGDM Plus in Business Analytics at IMAS Kolkata. Learn machine learning, predictive analytics, business intelligence with 95% placement support. Apply now for 2026 batch.',
             keywords: ['PGDM Analytics', 'Business Analytics', 'Data Science', 'Machine Learning', 'IMAS Kolkata', 'AICTE Approved'],
             canonical: '/programs/pgdm-plus-business-analytics'
         }
@@ -903,7 +903,7 @@ export const programsData: Program[] = [
         duration: '2 Years',
         format: 'full-time',
         location: 'Kolkata (Salt Lake)',
-        commencement: '19th Sep 2025',
+        commencement: '19th Sep 2026',
         description: 'The PGDM Plus in Artificial Intelligence & Data Science at IMAS Kolkata is a comprehensive 2-year program designed to create AI-powered business leaders who can harness the potential of artificial intelligence, machine learning, and advanced data science to drive innovation and competitive advantage. This AICTE-approved program combines cutting-edge AI technologies with business strategy, preparing students to become AI specialists who transform industries through intelligent automation and data-driven insights.',
         overview: 'The PGDM Plus in Artificial Intelligence & Data Science at IMAS Kolkata is a transformative 2-year full-time program designed for aspiring AI professionals who want to master machine learning, deep learning, natural language processing, and AI-driven business solutions.',
         highlights: [
@@ -1016,14 +1016,14 @@ export const programsData: Program[] = [
             title: 'Shape the Future with AI Innovation',
             description: 'From neural networks to intelligent automation, your AI expertise will match what leading tech companies expect. Plus, international immersion and cutting-edge research opportunities ensure you stay at the forefront of AI advancement.',
             buttons: [
-                { text: 'Apply Now for IMAS Admission 2025', action: 'apply' },
+                { text: 'Apply Now for IMAS Admission 2026', action: 'apply' },
                 { text: 'Enquire Now', action: 'enquire' },
                 { text: 'Download Brochure', action: 'download' }
             ]
         },
         seo: {
             title: 'PGDM Plus in Artificial Intelligence & Data Science - IMAS Kolkata | AICTE Approved AI Program',
-            description: 'Master AI & Data Science with PGDM Plus at IMAS Kolkata. Learn machine learning, deep learning, NLP, computer vision with 94% placement support. Apply now for 2025 batch.',
+            description: 'Master AI & Data Science with PGDM Plus at IMAS Kolkata. Learn machine learning, deep learning, NLP, computer vision with 94% placement support. Apply now for 2026 batch.',
             keywords: ['PGDM AI', 'Artificial Intelligence', 'Data Science', 'Machine Learning', 'Deep Learning', 'IMAS Kolkata', 'AICTE Approved'],
             canonical: '/programs/pgdm-plus-artificial-intelligence-data-science'
         }
@@ -1037,7 +1037,7 @@ export const programsData: Program[] = [
         duration: '2 Years',
         format: 'full-time',
         location: 'Kolkata (Salt Lake)',
-        commencement: '19th Sep 2025',
+        commencement: '19th Sep 2026',
         description: 'The PGDM Plus in Fintech at IMAS Kolkata is a cutting-edge 2-year program designed to create financial technology leaders who can revolutionize the financial services industry through digital innovation, blockchain technology, and data-driven financial solutions. This AICTE-approved program combines traditional finance principles with emerging fintech technologies, preparing students to become fintech specialists who drive digital transformation in banking, payments, lending, and investment sectors.',
         overview: 'The PGDM Plus in Fintech at IMAS Kolkata is a transformative 2-year full-time program designed for aspiring fintech professionals who want to master digital banking, cryptocurrency, blockchain, and financial technology innovations.',
         highlights: [
@@ -1150,14 +1150,14 @@ export const programsData: Program[] = [
             title: 'Revolutionize Finance with Technology',
             description: 'From blockchain to digital banking, your fintech expertise will match what leading financial institutions expect. Plus, international immersion and startup incubation opportunities ensure you stay at the forefront of financial innovation.',
             buttons: [
-                { text: 'Apply Now for IMAS Admission 2025', action: 'apply' },
+                { text: 'Apply Now for IMAS Admission 2026', action: 'apply' },
                 { text: 'Enquire Now', action: 'enquire' },
                 { text: 'Download Brochure', action: 'download' }
             ]
         },
         seo: {
             title: 'PGDM Plus in Fintech - IMAS Kolkata | AICTE Approved Fintech Program',
-            description: 'Master Fintech with PGDM Plus at IMAS Kolkata. Learn blockchain, digital banking, cryptocurrency with 92% placement support. Apply now for 2025 batch.',
+            description: 'Master Fintech with PGDM Plus at IMAS Kolkata. Learn blockchain, digital banking, cryptocurrency with 92% placement support. Apply now for 2026 batch.',
             keywords: ['PGDM Fintech', 'Financial Technology', 'Blockchain', 'Digital Banking', 'Cryptocurrency', 'IMAS Kolkata', 'AICTE Approved'],
             canonical: '/programs/pgdm-plus-fintech'
         }
@@ -1171,7 +1171,7 @@ export const programsData: Program[] = [
         duration: '2 Years',
         format: 'full-time',
         location: 'Kolkata (Salt Lake)',
-        commencement: '19th Sep 2025',
+        commencement: '19th Sep 2026',
         description: 'The PGDM Plus in Hospital & Healthcare Management at IMAS Kolkata is a specialized 2-year program designed to create healthcare leaders who can transform the healthcare industry through strategic management, digital health innovations, and patient-centric care delivery. This AICTE-approved program combines healthcare domain knowledge with modern management practices, preparing students to become healthcare administrators who drive excellence in hospitals, healthcare systems, and medical organizations.',
         overview: 'The PGDM Plus in Hospital & Healthcare Management at IMAS Kolkata is a transformative 2-year full-time program designed for aspiring healthcare professionals who want to master hospital administration, healthcare policy, and medical service management.',
         highlights: [
@@ -1284,14 +1284,14 @@ export const programsData: Program[] = [
             title: 'Transform Healthcare with Strategic Leadership',
             description: 'From hospital operations to digital health innovations, your healthcare management expertise will match what leading medical institutions expect. Plus, international immersion and healthcare entrepreneurship opportunities ensure you stay at the forefront of medical administration.',
             buttons: [
-                { text: 'Apply Now for IMAS Admission 2025', action: 'apply' },
+                { text: 'Apply Now for IMAS Admission 2026', action: 'apply' },
                 { text: 'Enquire Now', action: 'enquire' },
                 { text: 'Download Brochure', action: 'download' }
             ]
         },
         seo: {
             title: 'PGDM Plus in Hospital & Healthcare Management - IMAS Kolkata | AICTE Approved Healthcare Program',
-            description: 'Master Healthcare Management with PGDM Plus at IMAS Kolkata. Learn hospital administration, healthcare operations with 90% placement support. Apply now for 2025 batch.',
+            description: 'Master Healthcare Management with PGDM Plus at IMAS Kolkata. Learn hospital administration, healthcare operations with 90% placement support. Apply now for 2026 batch.',
             keywords: ['PGDM Healthcare', 'Hospital Management', 'Healthcare Administration', 'Medical Services', 'IMAS Kolkata', 'AICTE Approved'],
             canonical: '/programs/pgdm-plus-hospital-healthcare-management'
         }
@@ -1305,7 +1305,7 @@ export const programsData: Program[] = [
         duration: '2 Years',
         format: 'full-time',
         location: 'Kolkata (Salt Lake)',
-        commencement: '19th Sep 2025',
+        commencement: '19th Sep 2026',
         description: 'The PGDM Plus in Innovation, Entrepreneurship & Venture Development at IMAS Kolkata is a dynamic 2-year program designed to create innovative business leaders who can build successful startups, drive corporate innovation, and develop scalable ventures. This AICTE-approved program combines entrepreneurial mindset with practical business skills, preparing students to become entrepreneurs who transform ideas into profitable businesses and drive economic growth.',
         overview: 'The PGDM Plus in Innovation, Entrepreneurship & Venture Development at IMAS Kolkata is a transformative 2-year full-time program designed for aspiring entrepreneurs who want to master startup creation, venture capital, and innovation management.',
         highlights: [
@@ -1418,14 +1418,14 @@ export const programsData: Program[] = [
             title: 'Build Tomorrow\'s Businesses Today',
             description: 'From startup ideation to venture scaling, your entrepreneurial expertise will match what leading investors expect. Plus, international immersion and startup accelerator opportunities ensure you stay at the forefront of business innovation.',
             buttons: [
-                { text: 'Apply Now for IMAS Admission 2025', action: 'apply' },
+                { text: 'Apply Now for IMAS Admission 2026', action: 'apply' },
                 { text: 'Enquire Now', action: 'enquire' },
                 { text: 'Download Brochure', action: 'download' }
             ]
         },
         seo: {
             title: 'PGDM Plus in Innovation, Entrepreneurship & Venture Development - IMAS Kolkata | AICTE Approved',
-            description: 'Master Entrepreneurship with PGDM Plus at IMAS Kolkata. Learn startup creation, venture capital, innovation management with 88% placement support. Apply now for 2025 batch.',
+            description: 'Master Entrepreneurship with PGDM Plus at IMAS Kolkata. Learn startup creation, venture capital, innovation management with 88% placement support. Apply now for 2026 batch.',
             keywords: ['PGDM Entrepreneurship', 'Innovation Management', 'Startup Development', 'Venture Capital', 'IMAS Kolkata', 'AICTE Approved'],
             canonical: '/programs/pgdm-plus-innovation-entrepreneurship-venture-development'
         }
@@ -1433,65 +1433,71 @@ export const programsData: Program[] = [
     {
         id: 'pgdm-executive-marketing',
         slug: 'pgdm-marketing-working-executive',
-        name: 'PGDM in Marketing (Working Executive)',
+        name: 'PGDM (Executive) - Multiple Specializations',
         category: 'executive',
-        subcategory: 'marketing',
+        subcategory: 'multiple-specializations',
         duration: '2 Years',
         format: 'blended',
         location: 'Kolkata (Salt Lake)',
-        commencement: '19th Sep 2025',
-        description: 'The PGDM in Marketing (Working Executive) at IMAS Kolkata is a specialized 2-year blended program designed for working professionals who want to advance their marketing careers while continuing their current employment. This AICTE-approved program combines weekend classes with online learning, ensuring professionals can balance work and education effectively.',
-        overview: 'The PGDM in Marketing (Working Executive) at IMAS Kolkata is a flexible 2-year blended program designed for working professionals who want to master advanced marketing strategies, digital transformation, and brand management while maintaining their career momentum.',
+        commencement: '19th Sep 2026',
+        description: 'The PGDM (Executive) program at IMAS Kolkata offers multiple specializations including Marketing, HR, Finance, Hospital Administration & Healthcare Management, Business Analytics, AI & Data Science, Fintech, Operations Management, Logistics & Supply Chain Management, and Agri Business Management. This comprehensive 2-year blended program is designed for working professionals seeking career advancement in their chosen specialization.',
+        overview: 'The PGDM (Executive) program at IMAS Kolkata is a flexible 2-year blended program offering diverse specializations to working professionals. Choose from Marketing, HR, Finance, Healthcare Management, Business Analytics, AI & Data Science, Fintech, Operations, Logistics & Supply Chain, or Agri Business Management to advance your career while maintaining work-life balance.',
         highlights: [
             'Two-Year Blended PGDM for Working Executives (AICTE Approved)',
+            'Multiple Specializations: Marketing, HR, Finance, Hospital Administration & Healthcare Management',
+            'Additional Specializations: Business Analytics, AI & Data Science, Fintech',
+            'Operations Management, Logistics & Supply Chain Management, Agri Business Management',
             'Weekend Classes + Online Learning for Work-Life Balance',
-            'Digital Marketing & Social Media Strategy with industry applications',
-            'Brand Management & Consumer Psychology with real case studies',
-            'Market Research & Analytics using professional tools',
+            'Industry-Specific Curriculum tailored to each specialization',
             'Advanced Certifications: Six Sigma (Green Belt), SAP ERP, Advanced Excel',
             'Industry-Relevant Projects with current workplace integration',
             'Live Business Projects & Summer Internships',
             'Internship at every semester',
             'International Immersion: Dubai, Singapore, Thailand & Malaysia',
-            'Industry Mentorship from senior marketing leaders',
-            'Executive Alumni Network across top brands and agencies',
+            'Industry Mentorship from senior leaders across all specializations',
+            'Executive Alumni Network across diverse industries',
             'Leadership & Communication Training for senior roles',
-            'Certifications in Google Ads, Facebook Marketing, and HubSpot',
-            'Executive Career Advancement Support'
+            'Specialized Certifications based on chosen specialization',
+            'Executive Career Advancement Support across all domains'
         ],
         whatYouLearn: [
-            'Strategic Marketing Management',
-            'Digital Marketing & E-commerce Strategy',
-            'Advanced Brand Management',
-            'Consumer Behavior & Market Psychology',
-            'Marketing Research & Data Analytics',
-            'Sales Leadership & Channel Management',
-            'Integrated Marketing Communication',
-            'Content Strategy & Digital Storytelling',
-            'Social Media Marketing & Influencer Management',
-            'Marketing Analytics & ROI Measurement',
-            'International Marketing & Global Strategy',
-            'Customer Experience & Relationship Management',
-            'Marketing Technology & Automation',
-            'Performance Marketing & Growth Hacking',
-            'Executive Leadership in Marketing'
+            'Strategic Management across chosen specialization',
+            'Leadership & Executive Decision Making',
+            'Digital Transformation & Technology Integration',
+            'Advanced Analytics & Data-Driven Decision Making',
+            'Financial Management & Business Strategy',
+            'Operations Excellence & Process Optimization',
+            'Marketing Strategy & Brand Management',
+            'Human Resource Management & Organizational Behavior',
+            'Healthcare Administration & Medical Management',
+            'Supply Chain & Logistics Management',
+            'Agri Business & Rural Development',
+            'Fintech & Digital Finance',
+            'Artificial Intelligence & Data Science Applications',
+            'International Business & Global Strategy',
+            'Executive Communication & Leadership Skills'
         ],
         careerOpportunities: [
-            'Senior Brand Manager',
-            'Marketing Director',
-            'Digital Marketing Head',
-            'Market Research Director',
-            'Sales Director',
-            'Marketing Consultant',
-            'Content Marketing Head',
-            'Social Media Strategy Lead',
-            'Product Marketing Director',
-            'Marketing Analytics Head',
-            'Customer Experience Director',
-            'Marketing Communications Head',
-            'E-commerce Marketing Director',
-            'Chief Marketing Officer',
-            'Marketing Strategy Consultant'
+            'Senior Manager/Director across chosen specialization',
+            'Chief Executive Officer (CEO)',
+            'Chief Operating Officer (COO)',
+            'Chief Marketing Officer (CMO)',
+            'Chief Financial Officer (CFO)',
+            'Chief Human Resources Officer (CHRO)',
+            'Chief Technology Officer (CTO)',
+            'Healthcare Administrator/Director',
+            'Supply Chain Director',
+            'Operations Director',
+            'Business Analytics Manager',
+            'AI & Data Science Manager',
+            'Fintech Product Manager',
+            'Agri Business Manager',
+            'Management Consultant',
+            'Strategy Director',
+            'Business Development Head',
+            'Executive Leadership Roles',
+            'Entrepreneur/Business Owner',
+            'Industry Expert/Advisor'
         ],
         eligibility: {
             education: 'Graduation with 50% marks',
@@ -1547,23 +1553,23 @@ export const programsData: Program[] = [
         certifications: ['Six Sigma (Green Belt)', 'SAP ERP', 'Advanced Excel', 'Executive Marketing Leadership Certification'],
         internationalExposure: ['Dubai', 'Singapore', 'Thailand', 'Malaysia'],
         heroImage: {
-            desktop: '/uploads/PGDM_in_Marketing_Working_Executive.png',
-            mobile: '/uploads/PGDM_in_Marketing_Working_Executive.png',
-            alt: 'PGDM in Marketing (Working Executive) at IMAS Kolkata'
+            desktop: '/uploads/PGDM_Executive_Multiple_Specializations.png',
+            mobile: '/uploads/PGDM_Executive_Multiple_Specializations.png',
+            alt: 'PGDM (Executive) - Multiple Specializations at IMAS Kolkata'
         },
         cta: {
-            title: 'Advance Your Marketing Career While You Work',
-            description: 'From strategic brand management to digital marketing leadership, your executive marketing expertise will match what senior roles demand. Plus, flexible learning and international exposure ensure career growth without career breaks.',
+            title: 'Advance Your Career with Executive PGDM',
+            description: 'Choose from 9 specialized tracks including Marketing, HR, Finance, Healthcare, Business Analytics, AI & Data Science, Fintech, Operations, Logistics, and Agri Business. Flexible learning designed for working professionals.',
             buttons: [
-                { text: 'Apply Now for IMAS Admission 2025', action: 'apply' },
+                { text: 'Apply Now for IMAS Admission 2026', action: 'apply' },
                 { text: 'Enquire Now', action: 'enquire' },
                 { text: 'Download Brochure', action: 'download' }
             ]
         },
         seo: {
-            title: 'PGDM in Marketing (Working Executive) - IMAS Kolkata | AICTE Approved Executive Program',
-            description: 'Advance your marketing career with PGDM Working Executive at IMAS Kolkata. Flexible weekend classes, digital marketing specialization with 95% placement support. Apply now for 2025 batch.',
-            keywords: ['PGDM Working Executive', 'Executive Marketing', 'Weekend MBA', 'Digital Marketing', 'IMAS Kolkata', 'AICTE Approved'],
+            title: 'PGDM (Executive) - Multiple Specializations - IMAS Kolkata | AICTE Approved',
+            description: 'Advance your career with PGDM Executive at IMAS Kolkata. Choose from 9 specializations: Marketing, HR, Finance, Healthcare, Analytics, AI, Fintech, Operations, Logistics, Agri Business. Weekend classes with 95% placement support.',
+            keywords: ['PGDM Working Executive', 'Executive MBA', 'Weekend MBA', 'Multiple Specializations', 'Marketing', 'HR', 'Finance', 'Healthcare', 'Business Analytics', 'AI Data Science', 'Fintech', 'Operations', 'Logistics', 'Agri Business', 'IMAS Kolkata', 'AICTE Approved'],
             canonical: '/programs/pgdm-marketing-working-executive'
         }
     },
@@ -1576,7 +1582,7 @@ export const programsData: Program[] = [
         duration: '2 Years',
         format: 'blended',
         location: 'Kolkata (Salt Lake)',
-        commencement: '19th Sep 2025',
+        commencement: '19th Sep 2026',
         description: 'The PGDM in Finance (Working Executive) at IMAS Kolkata is a specialized 2-year blended program designed for working professionals who want to advance their finance careers while continuing their current employment. This AICTE-approved program combines weekend classes with online learning, covering corporate finance, investment banking, and financial analytics.',
         overview: 'The PGDM in Finance (Working Executive) at IMAS Kolkata is a flexible 2-year blended program designed for working professionals who want to master advanced financial management, investment strategies, and corporate finance while maintaining their career momentum.',
         highlights: [
@@ -1692,14 +1698,14 @@ export const programsData: Program[] = [
             title: 'Advance Your Finance Career While You Work',
             description: 'From corporate finance to investment banking, your executive finance expertise will match what senior roles demand. Plus, flexible learning and international exposure ensure career growth without career breaks.',
             buttons: [
-                { text: 'Apply Now for IMAS Admission 2025', action: 'apply' },
+                { text: 'Apply Now for IMAS Admission 2026', action: 'apply' },
                 { text: 'Enquire Now', action: 'enquire' },
                 { text: 'Download Brochure', action: 'download' }
             ]
         },
         seo: {
             title: 'PGDM in Finance (Working Executive) - IMAS Kolkata | AICTE Approved Executive Program',
-            description: 'Advance your finance career with PGDM Working Executive at IMAS Kolkata. Flexible weekend classes, corporate finance specialization with 96% placement support. Apply now for 2025 batch.',
+            description: 'Advance your finance career with PGDM Working Executive at IMAS Kolkata. Flexible weekend classes, corporate finance specialization with 96% placement support. Apply now for 2026 batch.',
             keywords: ['PGDM Working Executive', 'Executive Finance', 'Weekend MBA', 'Corporate Finance', 'IMAS Kolkata', 'AICTE Approved'],
             canonical: '/programs/pgdm-finance-working-executive'
         }
@@ -1713,7 +1719,7 @@ export const programsData: Program[] = [
         duration: '2 Years',
         format: 'blended',
         location: 'Bangalore',
-        commencement: 'July 2025',
+        commencement: 'July 2026',
         description: 'A comprehensive 2-year PGDM program in Human Resource Management designed for working professionals, combining online learning with weekend classroom sessions.',
         overview: 'This program is specifically designed for working professionals who want to advance their careers in Human Resource Management. The blended learning format allows students to continue working while pursuing their management education. The curriculum covers all aspects of modern HR practices including talent management, organizational behavior, compensation management, and strategic HR planning.',
         highlights: [
@@ -1828,7 +1834,7 @@ export const programsData: Program[] = [
             title: 'Advance Your HR Leadership Career',
             description: 'Transform your HR expertise with strategic management skills, advanced analytics, and executive leadership training. Designed for working professionals ready to lead organizational transformation.',
             buttons: [
-                { text: 'Apply Now for IMAS Admission 2025', action: 'apply' },
+                { text: 'Apply Now for IMAS Admission 2026', action: 'apply' },
                 { text: 'Enquire Now', action: 'enquire' },
                 { text: 'Download Brochure', action: 'download' }
             ]
@@ -1849,7 +1855,7 @@ export const programsData: Program[] = [
         duration: '2 Years',
         format: 'blended',
         location: 'Bangalore',
-        commencement: 'July 2025',
+        commencement: 'July 2026',
         description: 'A comprehensive 2-year PGDM program in Business Analytics designed for working professionals, combining online learning with weekend classroom sessions to master data-driven decision making.',
         overview: 'This program is specifically designed for working professionals who want to advance their careers in Business Analytics and Data Science. The blended learning format allows students to continue working while pursuing advanced analytics education. The curriculum covers statistical analysis, machine learning, business intelligence, and strategic analytics applications.',
         highlights: [
@@ -1965,7 +1971,7 @@ export const programsData: Program[] = [
             title: 'Master Data-Driven Decision Making',
             description: 'Transform your analytical expertise with advanced machine learning, business intelligence, and strategic analytics training. Designed for working professionals ready to lead data transformation.',
             buttons: [
-                { text: 'Apply Now for IMAS Admission 2025', action: 'apply' },
+                { text: 'Apply Now for IMAS Admission 2026', action: 'apply' },
                 { text: 'Enquire Now', action: 'enquire' },
                 { text: 'Download Brochure', action: 'download' }
             ]
@@ -1986,7 +1992,7 @@ export const programsData: Program[] = [
         duration: '2 Years',
         format: 'blended',
         location: 'Bangalore',
-        commencement: 'July 2025',
+        commencement: 'July 2026',
         description: 'A comprehensive 2-year PGDM program in Artificial Intelligence & Data Science designed for working professionals, combining online learning with weekend classroom sessions to master AI technologies and applications.',
         overview: 'This program is specifically designed for working professionals who want to advance their careers in Artificial Intelligence and Data Science. The blended learning format allows students to continue working while pursuing cutting-edge AI education. The curriculum covers machine learning, deep learning, natural language processing, computer vision, and AI ethics.',
         highlights: [
@@ -2102,7 +2108,7 @@ export const programsData: Program[] = [
             title: 'Lead the AI Revolution',
             description: 'Transform your technical expertise with cutting-edge AI, machine learning, and deep learning training. Designed for working professionals ready to lead AI transformation in their organizations.',
             buttons: [
-                { text: 'Apply Now for IMAS Admission 2025', action: 'apply' },
+                { text: 'Apply Now for IMAS Admission 2026', action: 'apply' },
                 { text: 'Enquire Now', action: 'enquire' },
                 { text: 'Download Brochure', action: 'download' }
             ]
@@ -2123,7 +2129,7 @@ export const programsData: Program[] = [
         duration: '2 Years',
         format: 'blended',
         location: 'Bangalore',
-        commencement: 'July 2025',
+        commencement: 'July 2026',
         description: 'A comprehensive 2-year PGDM program in Fintech designed for working professionals, combining online learning with weekend classroom sessions to master financial technology innovations and digital banking.',
         overview: 'This program is specifically designed for working professionals who want to advance their careers in Financial Technology. The blended learning format allows students to continue working while pursuing cutting-edge fintech education. The curriculum covers blockchain, cryptocurrency, digital payments, robo-advisory, and regulatory technology.',
         highlights: [
@@ -2239,7 +2245,7 @@ export const programsData: Program[] = [
             title: 'Lead Financial Innovation',
             description: 'Transform your financial expertise with cutting-edge fintech, blockchain, and digital banking training. Designed for working professionals ready to lead financial technology transformation.',
             buttons: [
-                { text: 'Apply Now for IMAS Admission 2025', action: 'apply' },
+                { text: 'Apply Now for IMAS Admission 2026', action: 'apply' },
                 { text: 'Enquire Now', action: 'enquire' },
                 { text: 'Download Brochure', action: 'download' }
             ]
@@ -2260,7 +2266,7 @@ export const programsData: Program[] = [
         duration: '2 Years',
         format: 'blended',
         location: 'Bangalore',
-        commencement: 'July 2025',
+        commencement: 'July 2026',
         description: 'A comprehensive 2-year PGDM program in Logistics & Supply Chain Management designed for working professionals, combining online learning with weekend classroom sessions to master supply chain optimization and logistics management.',
         overview: 'This program is specifically designed for working professionals who want to advance their careers in Logistics and Supply Chain Management. The blended learning format allows students to continue working while pursuing cutting-edge supply chain education. The curriculum covers procurement, inventory management, transportation, warehousing, and global supply chain strategies.',
         highlights: [
@@ -2376,7 +2382,7 @@ export const programsData: Program[] = [
             title: 'Master Global Supply Chains',
             description: 'Transform your logistics expertise with cutting-edge supply chain management, procurement, and operations training. Designed for working professionals ready to lead supply chain transformation.',
             buttons: [
-                { text: 'Apply Now for IMAS Admission 2025', action: 'apply' },
+                { text: 'Apply Now for IMAS Admission 2026', action: 'apply' },
                 { text: 'Enquire Now', action: 'enquire' },
                 { text: 'Download Brochure', action: 'download' }
             ]
@@ -2397,7 +2403,7 @@ export const programsData: Program[] = [
         duration: '2 Years',
         format: 'blended',
         location: 'Bangalore',
-        commencement: 'July 2025',
+        commencement: 'July 2026',
         description: 'A comprehensive 2-year PGDM program in Operations Management designed for working professionals, combining online learning with weekend classroom sessions to master operational excellence and process optimization.',
         overview: 'This program is specifically designed for working professionals who want to advance their careers in Operations Management. The blended learning format allows students to continue working while pursuing cutting-edge operations education. The curriculum covers production planning, quality management, lean manufacturing, process improvement, and operational strategy.',
         highlights: [
@@ -2513,7 +2519,7 @@ export const programsData: Program[] = [
             title: 'Drive Operational Excellence',
             description: 'Transform your operations expertise with cutting-edge manufacturing, quality management, and process improvement training. Designed for working professionals ready to lead operational transformation.',
             buttons: [
-                { text: 'Apply Now for IMAS Admission 2025', action: 'apply' },
+                { text: 'Apply Now for IMAS Admission 2026', action: 'apply' },
                 { text: 'Enquire Now', action: 'enquire' },
                 { text: 'Download Brochure', action: 'download' }
             ]
@@ -2534,7 +2540,7 @@ export const programsData: Program[] = [
         duration: '2 Years',
         format: 'blended',
         location: 'Bangalore',
-        commencement: 'July 2025',
+        commencement: 'July 2026',
         description: 'A comprehensive 2-year PGDM program in Agri Business Management designed for working professionals, combining online learning with weekend classroom sessions to master agricultural value chain management and sustainable farming practices.',
         overview: 'This program is specifically designed for working professionals who want to advance their careers in Agri Business Management. The blended learning format allows students to continue working while pursuing cutting-edge agricultural business education. The curriculum covers farm management, agricultural finance, supply chain management, sustainable agriculture, and agri-tech innovations.',
         highlights: [
@@ -2650,7 +2656,7 @@ export const programsData: Program[] = [
             title: 'Transform Agricultural Business',
             description: 'Master agri business management with sustainable farming practices, agricultural finance, and rural development expertise. Designed for working professionals ready to lead agricultural transformation.',
             buttons: [
-                { text: 'Apply Now for IMAS Admission 2025', action: 'apply' },
+                { text: 'Apply Now for IMAS Admission 2026', action: 'apply' },
                 { text: 'Enquire Now', action: 'enquire' },
                 { text: 'Download Brochure', action: 'download' }
             ]
@@ -2671,7 +2677,7 @@ export const programsData: Program[] = [
         duration: '2 Years',
         format: 'blended',
         location: 'Bangalore',
-        commencement: 'July 2025',
+        commencement: 'July 2026',
         description: 'A comprehensive 2-year PGDM program in Hospital & Healthcare Management designed for working professionals, combining online learning with weekend classroom sessions to master healthcare administration and medical facility management.',
         overview: 'This program is specifically designed for working professionals who want to advance their careers in Healthcare Management. The blended learning format allows students to continue working while pursuing cutting-edge healthcare administration education. The curriculum covers hospital operations, healthcare finance, medical technology management, healthcare policy, and patient care excellence.',
         highlights: [
@@ -2787,7 +2793,7 @@ export const programsData: Program[] = [
             title: 'Lead Healthcare Excellence',
             description: 'Master healthcare management with hospital administration, medical technology, and patient care expertise. Designed for working professionals ready to lead healthcare transformation.',
             buttons: [
-                { text: 'Apply Now for IMAS Admission 2025', action: 'apply' },
+                { text: 'Apply Now for IMAS Admission 2026', action: 'apply' },
                 { text: 'Enquire Now', action: 'enquire' },
                 { text: 'Download Brochure', action: 'download' }
             ]
@@ -2808,7 +2814,7 @@ export const programsData: Program[] = [
         duration: '2 Years',
         format: 'full-time',
         location: 'Bangalore & UK',
-        commencement: 'July 2025',
+        commencement: 'July 2026',
         description: 'A prestigious 2-year MBA Global program with dual qualification from IMAS India and UK partner university, offering international exposure and global business perspectives.',
         overview: 'The MBA Global program is designed to create global business leaders with international exposure and cross-cultural competencies. Students spend time in both India and the UK, earning dual qualifications and gaining invaluable global business experience. The program combines rigorous academic curriculum with practical international business applications.',
         highlights: [
@@ -2924,7 +2930,7 @@ export const programsData: Program[] = [
             title: 'Go Global with MBA',
             description: 'Earn dual qualifications from India and UK while gaining international business expertise. Experience global campuses and build an international career with our prestigious MBA Global program.',
             buttons: [
-                { text: 'Apply Now for IMAS Admission 2025', action: 'apply' },
+                { text: 'Apply Now for IMAS Admission 2026', action: 'apply' },
                 { text: 'Enquire Now', action: 'enquire' },
                 { text: 'Download Brochure', action: 'download' }
             ]

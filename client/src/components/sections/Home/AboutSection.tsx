@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
-import { Award, Users, Globe, BookOpen, MapPin, Building, Target, ArrowRight, CheckCircle, Info, MapPin as MapPinIcon, Star } from 'lucide-react';
+import { Award, Users, Globe, BookOpen, MapPin, Building, Target, ArrowRight, CheckCircle, Info, MapPin as MapPinIcon, Star, Camera } from 'lucide-react';
 import { IMAS_TAILWIND_CLASSES } from '../../../lib/constants';
+import { useNavigate } from 'react-router-dom';
 
 export function AboutSection() {
   const [activeTab, setActiveTab] = useState<'about' | 'vision' | 'highlights'>('about');
+  const navigate = useNavigate();
 
   const keyHighlights = [
     {
@@ -133,16 +135,26 @@ export function AboutSection() {
                   {/* Image Overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
                   <div className="absolute bottom-4 left-4 right-4">
-                    <div className="flex items-center gap-3">
-                      <div className={`w-10 h-10 ${IMAS_TAILWIND_CLASSES.BG_DARK_BLUE} rounded-lg flex items-center justify-center shadow-lg`}>
-                        <Building className="h-5 w-5 text-white" />
-                      </div>
-                      <div>
-                        <h3 className="text-lg font-bold text-white">IMAS Campus</h3>
-                        <div className={`inline-block px-2 py-1 rounded-full text-xs font-medium bg-white/20 backdrop-blur-sm text-white`}>
-                          State-of-the-Art Facilities
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center gap-3">
+                        <div className={`w-10 h-10 ${IMAS_TAILWIND_CLASSES.BG_DARK_BLUE} rounded-lg flex items-center justify-center shadow-lg`}>
+                          <Building className="h-5 w-5 text-white" />
+                        </div>
+                        <div>
+                          <h3 className="text-lg font-bold text-white">IMAS Campus</h3>
+                          <div className={`inline-block px-2 py-1 rounded-full text-xs font-medium bg-white/20 backdrop-blur-sm text-white`}>
+                            State-of-the-Art Facilities
+                          </div>
                         </div>
                       </div>
+                      <button
+                        onClick={() => navigate('/campus-tour')}
+                        className="flex items-center gap-2 px-3 py-2 bg-white/20 backdrop-blur-sm text-white rounded-lg font-semibold text-sm hover:bg-white/30 transition-all duration-300 active:scale-95"
+                      >
+                        <Camera className="h-4 w-4" />
+                        <span className="hidden sm:inline">Campus Tour</span>
+                        <span className="sm:hidden">Tour</span>
+                      </button>
                     </div>
                   </div>
                 </div>
@@ -253,7 +265,7 @@ export function AboutSection() {
 
   return (
     <section id="about-imas" className="py-8 sm:py-12 bg-gradient-to-br from-white to-gray-50">
-      <div className="max-w-[1260px] mx-auto px-4">
+      <div className="max-w-[1300px] mx-auto px-4">
         {/* Section Header - Mobile Optimized */}
         <div className="text-center mb-6 sm:mb-8">
           <div className={`inline-block ${IMAS_TAILWIND_CLASSES.BG_DARK_BLUE}/10 ${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE} px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-semibold mb-3 sm:mb-4 border ${IMAS_TAILWIND_CLASSES.BORDER_DARK_BLUE}/20`}>

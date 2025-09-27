@@ -959,13 +959,13 @@ export function ProgramDetailPage() {
                 <div className="fixed bottom-0 left-0 right-0 z-50 lg:hidden">
                     <div className={`${IMAS_TAILWIND_CLASSES.BG_DARK_BLUE} p-4 shadow-2xl border-t border-white/20 rounded-lg`}>
                         <div className="flex gap-3">
-                            <Button
-                                className="flex-1 bg-white text-gray-800 hover:bg-gray-100 font-semibold py-3 rounded-xl shadow-lg"
-                                onClick={() => handleCTAAction('enquire')}
+                            <button
+                                type="button"
+                                className="npfWidgetButton npfWidget-aeb7b9fbaa1dcebf1762c1f9bc270c4b flex-1 bg-white text-gray-800 hover:bg-gray-100 font-semibold py-3 rounded-xl shadow-lg"
                             >
                                 <MessageCircle className="mr-2 h-4 w-4" />
                                 Enquire Now
-                            </Button>
+                            </button>
                             <Button
                                 className="flex-1 border-2 border-white text-white hover:bg-white hover:text-gray-800 bg-transparent font-semibold py-3 rounded-xl"
                                 onClick={() => handleCTAAction('apply')}

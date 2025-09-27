@@ -71,8 +71,8 @@ export const IMAS_STATS = {
 
 // IMAS Key Dates
 export const IMAS_DATES = {
-    APPLICATION_DEADLINE: '2025-07-15T23:59:59',
-    COMMENCEMENT: 'September 2025',
+    APPLICATION_DEADLINE: '2026-03-30T23:59:59',
+  COMMENCEMENT: 'September 2026',
     INTAKE_PHASE: 'Phase 7',
 } as const;
 

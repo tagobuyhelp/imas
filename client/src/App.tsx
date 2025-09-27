@@ -8,11 +8,10 @@ import { ProgramDetailPage } from './pages/ProgramDetailPage';
 import { AboutPage } from './pages/AboutPage';
 import { FacultyPage } from './pages/FacultyPage';
 import { AdmissionsPage } from './pages/AdmissionsPage';
-
-
 import { ContactPage } from './pages/ContactPage';
 import { InternshipPage } from './pages/InternshipPage';
 import { CampusLifePage } from './pages/CampusLifePage';
+import { CampusTourPage } from './pages/CampusTourPage';
 import { EventsPage } from './pages/EventsPage';
 // Removed admin and auth imports - components deleted
 import { Toaster } from './components/ui/toaster';
@@ -25,6 +24,7 @@ function AppContent(): React.JSX.Element {
     if (path === '/') return 'home';
     if (path === '/programs') return 'programs';
     if (path.startsWith('/programs/')) return 'program-detail';
+    if (path === '/campus-tour') return 'campus-tour';
     return path.substring(1);
   };
 
@@ -44,6 +44,7 @@ function AppContent(): React.JSX.Element {
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/internships" element={<InternshipPage />} />
         <Route path="/campus-life" element={<CampusLifePage />} />
+        <Route path="/campus-tour" element={<CampusTourPage />} />
         <Route path="/events" element={<EventsPage />} />
         {/* Admin routes removed - no backend API available */}
       </Routes>

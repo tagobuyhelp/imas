@@ -35,7 +35,7 @@ interface AdmissionFormData {
   
   // Program Information
   program: string;
-  preferredBatch: '2025-2027' | '2026-2028';
+  preferredBatch: '2026-2028' | '2027-2029';
   
   // Educational Background
   education: {
@@ -84,7 +84,7 @@ export function AdmissionsPage(): React.JSX.Element {
       country: 'India'
     },
     program: '',
-    preferredBatch: '2025-2027',
+    preferredBatch: '2026-2028',
     education: {
       graduation: {
         degree: '',
@@ -330,7 +330,7 @@ export function AdmissionsPage(): React.JSX.Element {
           country: ''
         },
         program: '',
-        preferredBatch: '2025-2027',
+        preferredBatch: '2026-2028',
         education: {
           graduation: {
             degree: '',
@@ -407,7 +407,7 @@ export function AdmissionsPage(): React.JSX.Element {
               <div className="space-y-4 sm:space-y-6 lg:space-y-8 animate-fade-in-up w-full text-center lg:text-left">
                 <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-semibold mb-4 border border-white/30 animate-fade-in-up hover:bg-white/30 hover:scale-105 active:scale-95 transition-all duration-300 cursor-pointer">
                   <GraduationCap className="h-4 w-4 animate-pulse" />
-                  ADMISSIONS OPEN 2025
+                  ADMISSIONS OPEN 2026
                 </div>
 
                 <h1 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4 leading-tight animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
@@ -457,6 +457,12 @@ export function AdmissionsPage(): React.JSX.Element {
                     Apply Now
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
+                  <button 
+                    type="button" 
+                    className="npfWidgetButton npfWidget-aeb7b9fbaa1dcebf1762c1f9bc270c4b border-white bg-transparent text-white hover:bg-white hover:text-gray-900 px-6 sm:px-8 py-3 text-sm sm:text-base font-semibold hover:scale-105 transition-all duration-200 hover:shadow-lg rounded-lg border-2"
+                  >
+                    Enquire Now
+                  </button>
                   <Button
                     variant="outline"
                     className="border-white bg-transparent text-white hover:bg-white hover:text-gray-900 active:bg-gray-100 active:text-gray-900 px-6 sm:px-8 py-3 text-sm sm:text-base font-semibold hover:scale-105 active:scale-95 transition-all duration-200 hover:shadow-lg rounded-lg"
@@ -472,7 +478,7 @@ export function AdmissionsPage(): React.JSX.Element {
               <div className="bg-white text-gray-800 rounded-lg p-4 sm:p-6 shadow-sm w-full max-w-[400px] mx-auto lg:mx-0 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
                 <div className="space-y-4">
                   <div className="border-b border-gray-200 pb-3">
-                    <p className="text-gray-500 text-xs">IMAS 2025</p>
+                    <p className="text-gray-500 text-xs">IMAS 2026</p>
                     <h2 className="text-lg font-bold text-gray-800 leading-tight mt-1">
                       Admissions Open for PGDM Programs
                     </h2>
@@ -500,7 +506,7 @@ export function AdmissionsPage(): React.JSX.Element {
                   <div className="pt-2">
                     <p className="text-xs text-gray-700">
                       Application Deadline:
-                      <span className="font-bold text-red-600 ml-1 animate-pulse">July 15, 2025</span>
+                      <span className="font-bold text-red-600 ml-1 animate-pulse">March 30, 2026</span>
                     </p>
                   </div>
 
@@ -1226,7 +1232,7 @@ export function AdmissionsPage(): React.JSX.Element {
                           <div className="relative z-10 text-center lg:text-left">
                             <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm text-white px-3 py-1 rounded-full text-xs font-semibold mb-4">
                               <Star className="h-3 w-3" />
-                              ADMISSIONS 2025
+                              ADMISSIONS 2026
                             </div>
                             <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-3">
                               Why Choose {IMAS_BRAND.NAME}?
@@ -1287,26 +1293,12 @@ export function AdmissionsPage(): React.JSX.Element {
                           <div className="text-center">
                             <h3 className="text-lg font-bold text-gray-800 mb-3">Application Deadlines</h3>
                             <div className="space-y-3">
-                              <div className="flex items-center justify-between p-3 bg-blue-50 rounded-lg">
-                                <div className="flex items-center gap-2">
-                                  <Calendar className="h-4 w-4 text-[#143674]" />
-                                  <span className="text-sm font-medium">Early Bird</span>
-                                </div>
-                                <span className="text-sm font-bold text-[#143674]">March 15, 2025</span>
-                              </div>
-                              <div className="flex items-center justify-between p-3 bg-yellow-50 rounded-lg">
-                                <div className="flex items-center gap-2">
-                                  <Clock className="h-4 w-4 text-amber-600" />
-                                  <span className="text-sm font-medium">Regular</span>
-                                </div>
-                                <span className="text-sm font-bold text-amber-600">May 30, 2025</span>
-                              </div>
                               <div className="flex items-center justify-between p-3 bg-red-50 rounded-lg">
                                 <div className="flex items-center gap-2">
                                   <Target className="h-4 w-4 text-red-600" />
-                                  <span className="text-sm font-medium">Final</span>
+                                  <span className="text-sm font-medium">Final Deadline</span>
                                 </div>
-                                <span className="text-sm font-bold text-red-600">July 15, 2025</span>
+                                <span className="text-sm font-bold text-red-600">March 30, 2026</span>
                               </div>
                             </div>
                           </div>
