@@ -425,8 +425,8 @@ export const programsData: Program[] = [
             'Client Servicing & Account Management'
         ],
         eligibility: {
-            education: 'Graduation in any discipline with 50% marks',
-            exams: 'Valid CAT/XAT/CMAT/MAT/CUET score',
+            education: 'Graduation with 50% marks',
+            exams: 'Valid scores from CAT, XAT, CMAT, ATMA, MAT, GMAT, or CUET',
             additional: 'Strong communication skills and creative aptitude'
         },
         placement: {
@@ -554,8 +554,8 @@ export const programsData: Program[] = [
             'Financial Planning & Analysis Manager'
         ],
         eligibility: {
-            education: 'Graduation in any discipline with 50% marks',
-            exams: 'Valid CAT/XAT/CMAT/MAT/CUET score',
+            education: 'Graduation with 50% marks',
+            exams: 'Valid scores from CAT, XAT, CMAT, ATMA, MAT, GMAT, or CUET',
             additional: 'Strong analytical and quantitative skills'
         },
         placement: {
@@ -690,8 +690,8 @@ export const programsData: Program[] = [
             'HR Operations Manager'
         ],
         eligibility: {
-            education: 'Graduation in any discipline with 50% marks',
-            exams: 'Valid CAT/XAT/CMAT/MAT/CUET score',
+            education: 'Graduation with 50% marks',
+            exams: 'Valid scores from CAT, XAT, CMAT, ATMA, MAT, GMAT, or CUET',
             additional: 'Strong interpersonal and communication skills'
         },
         placement: {
@@ -824,8 +824,8 @@ export const programsData: Program[] = [
             'Data Strategy Consultant'
         ],
         eligibility: {
-            education: 'Graduation in any discipline with 50% marks',
-            exams: 'Valid CAT/XAT/CMAT/MAT/CUET score',
+            education: 'Graduation with 50% marks',
+            exams: 'Valid scores from CAT, XAT, CMAT, ATMA, MAT, GMAT, or CUET',
             additional: 'Strong quantitative and analytical aptitude'
         },
         placement: {
@@ -958,8 +958,8 @@ export const programsData: Program[] = [
             'AI Startup Founder'
         ],
         eligibility: {
-            education: 'Graduation in any discipline with 50% marks',
-            exams: 'Valid CAT/XAT/CMAT/MAT/CUET score',
+            education: 'Graduation with 50% marks',
+            exams: 'Valid scores from CAT, XAT, CMAT, ATMA, MAT, GMAT, or CUET',
             additional: 'Strong mathematical and programming aptitude'
         },
         placement: {
@@ -1092,8 +1092,8 @@ export const programsData: Program[] = [
             'Financial Data Scientist'
         ],
         eligibility: {
-            education: 'Graduation in any discipline with 50% marks',
-            exams: 'Valid CAT/XAT/CMAT/MAT/CUET score',
+            education: 'Graduation with 50% marks',
+            exams: 'Valid scores from CAT, XAT, CMAT, ATMA, MAT, GMAT, or CUET',
             additional: 'Interest in finance and technology integration'
         },
         placement: {
@@ -1226,8 +1226,8 @@ export const programsData: Program[] = [
             'Health Insurance Manager'
         ],
         eligibility: {
-            education: 'Graduation in any discipline with 50% marks',
-            exams: 'Valid CAT/XAT/CMAT/MAT/CUET score',
+            education: 'Graduation with 50% marks',
+            exams: 'Valid scores from CAT, XAT, CMAT, ATMA, MAT, GMAT, or CUET',
             additional: 'Interest in healthcare and medical services'
         },
         placement: {
@@ -1360,8 +1360,8 @@ export const programsData: Program[] = [
             'Technology Transfer Manager'
         ],
         eligibility: {
-            education: 'Graduation in any discipline with 50% marks',
-            exams: 'Valid CAT/XAT/CMAT/MAT/CUET score',
+            education: 'Graduation with 50% marks',
+            exams: 'Valid scores from CAT, XAT, CMAT, ATMA, MAT, GMAT, or CUET',
             additional: 'Entrepreneurial mindset and business acumen'
         },
         placement: {
@@ -1501,7 +1501,7 @@ export const programsData: Program[] = [
         ],
         eligibility: {
             education: 'Graduation with 50% marks',
-            exams: 'Valid CAT/XAT/CMAT/MAT/CUET score or Work Experience',
+            exams: 'Valid scores from CAT, XAT, CMAT, ATMA, MAT, GMAT, or CUET or Work Experience',
             experience: 'Minimum 2 years of work experience',
             additional: 'Currently employed professionals preferred'
         },
@@ -1638,7 +1638,7 @@ export const programsData: Program[] = [
         ],
         eligibility: {
             education: 'Graduation with 50% marks',
-            exams: 'Valid CAT/XAT/CMAT/MAT/CUET score or Work Experience',
+            exams: 'Valid scores from CAT, XAT, CMAT, ATMA, MAT, GMAT, or CUET or Work Experience',
             experience: 'Minimum 2 years of work experience',
             additional: 'Currently employed professionals preferred'
         },
@@ -1775,9 +1775,9 @@ export const programsData: Program[] = [
             'HR Operations Manager'
         ],
         eligibility: {
-            education: 'Bachelor\'s degree in any discipline with minimum 50% marks',
+            education: 'Graduation with 50% marks',
             experience: 'Minimum 2 years of work experience',
-            exams: 'Valid CAT/MAT/XAT/CMAT/GMAT or IMAS entrance test',
+            exams: 'Valid scores from CAT, XAT, CMAT, ATMA, MAT, GMAT, or CUET',
             additional: 'Personal interview, group discussion, and statement of purpose'
         },
         placement: {
@@ -1912,9 +1912,9 @@ export const programsData: Program[] = [
             'Data Strategy Consultant'
         ],
         eligibility: {
-            education: 'Bachelor\'s degree in any discipline with minimum 50% marks',
+            education: 'Graduation with 50% marks',
             experience: 'Minimum 2 years of work experience',
-            exams: 'Valid CAT/MAT/XAT/CMAT/GMAT or IMAS entrance test',
+            exams: 'Valid scores from CAT, XAT, CMAT, ATMA, MAT, GMAT, or CUET',
             additional: 'Strong quantitative and analytical aptitude, personal interview, group discussion'
         },
         placement: {
@@ -2049,9 +2049,9 @@ export const programsData: Program[] = [
             'AI Transformation Leader'
         ],
         eligibility: {
-            education: 'Bachelor\'s degree in any discipline with minimum 50% marks',
+            education: 'Graduation with 50% marks',
             experience: 'Minimum 2 years of work experience',
-            exams: 'Valid CAT/MAT/XAT/CMAT/GMAT or IMAS entrance test',
+            exams: 'Valid scores from CAT, XAT, CMAT, ATMA, MAT, GMAT, or CUET',
             additional: 'Strong quantitative and programming aptitude, personal interview, group discussion'
         },
         placement: {
@@ -2186,9 +2186,9 @@ export const programsData: Program[] = [
             'Fintech Entrepreneur'
         ],
         eligibility: {
-            education: 'Bachelor\'s degree in any discipline with minimum 50% marks',
+            education: 'Graduation with 50% marks',
             experience: 'Minimum 2 years of work experience',
-            exams: 'Valid CAT/MAT/XAT/CMAT/GMAT or IMAS entrance test',
+            exams: 'Valid scores from CAT, XAT, CMAT, ATMA, MAT, GMAT, or CUET',
             additional: 'Strong analytical and financial aptitude, personal interview, group discussion'
         },
         placement: {
@@ -2323,9 +2323,9 @@ export const programsData: Program[] = [
             'Logistics Entrepreneur'
         ],
         eligibility: {
-            education: 'Bachelor\'s degree in any discipline with minimum 50% marks',
+            education: 'Graduation with 50% marks',
             experience: 'Minimum 2 years of work experience',
-            exams: 'Valid CAT/MAT/XAT/CMAT/GMAT or IMAS entrance test',
+            exams: 'Valid scores from CAT, XAT, CMAT, ATMA, MAT, GMAT, or CUET',
             additional: 'Strong analytical and operational aptitude, personal interview, group discussion'
         },
         placement: {
@@ -2460,9 +2460,9 @@ export const programsData: Program[] = [
             'Operations Entrepreneur'
         ],
         eligibility: {
-            education: 'Bachelor\'s degree in any discipline with minimum 50% marks',
+            education: 'Graduation with 50% marks',
             experience: 'Minimum 2 years of work experience',
-            exams: 'Valid CAT/MAT/XAT/CMAT/GMAT or IMAS entrance test',
+            exams: 'Valid scores from CAT, XAT, CMAT, ATMA, MAT, GMAT, or CUET',
             additional: 'Strong analytical and operational aptitude, personal interview, group discussion'
         },
         placement: {
@@ -2597,9 +2597,9 @@ export const programsData: Program[] = [
             'Agricultural Policy Analyst'
         ],
         eligibility: {
-            education: 'Bachelor\'s degree in any discipline with minimum 50% marks',
+            education: 'Graduation with 50% marks',
             experience: 'Minimum 2 years of work experience',
-            exams: 'Valid CAT/MAT/XAT/CMAT/GMAT or IMAS entrance test',
+            exams: 'Valid scores from CAT, XAT, CMAT, ATMA, MAT, GMAT, or CUET',
             additional: 'Strong interest in agriculture and rural development, personal interview, group discussion'
         },
         placement: {
@@ -2734,9 +2734,9 @@ export const programsData: Program[] = [
             'Healthcare Project Manager'
         ],
         eligibility: {
-            education: 'Bachelor\'s degree in any discipline with minimum 50% marks',
+            education: 'Graduation with 50% marks',
             experience: 'Minimum 2 years of work experience',
-            exams: 'Valid CAT/MAT/XAT/CMAT/GMAT or IMAS entrance test',
+            exams: 'Valid scores from CAT, XAT, CMAT, ATMA, MAT, GMAT, or CUET',
             additional: 'Strong interest in healthcare and medical administration, personal interview, group discussion'
         },
         placement: {
@@ -2871,9 +2871,9 @@ export const programsData: Program[] = [
             'Global Business Director'
         ],
         eligibility: {
-            education: 'Bachelor\'s degree in any discipline with minimum 60% marks',
+            education: 'Graduation with 50% marks',
             experience: 'Fresh graduates or professionals with work experience',
-            exams: 'Valid CAT/MAT/XAT/CMAT/GMAT or IMAS entrance test',
+            exams: 'Valid scores from CAT, XAT, CMAT, ATMA, MAT, GMAT, or CUET',
             additional: 'Strong English proficiency, passport ready for international travel, personal interview, group discussion'
         },
         placement: {
