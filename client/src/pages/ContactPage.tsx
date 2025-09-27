@@ -362,12 +362,7 @@ export function ContactPage(): React.JSX.Element {
               <BookOpen className="mr-2 h-5 w-5" />
               Explore Programs
             </Button>
-            <button 
-              type="button" 
-              className="npfWidgetButton npfWidget-aeb7b9fbaa1dcebf1762c1f9bc270c4b border-2 bg-transparent border-white text-white hover:bg-white hover:text-[#143674] px-8 py-3 text-lg font-semibold transition-all duration-300 hover:scale-105 backdrop-blur-sm rounded-md"
-            >
-              Enquire Now
-            </button>
+
             <Button 
               onClick={() => window.open('https://admission.imas.ac.in/', '_blank')}
               variant="outline"

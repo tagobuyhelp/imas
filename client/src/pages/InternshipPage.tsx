@@ -311,13 +311,7 @@ export function InternshipPage() {
                 Apply Now
                 <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
               </Button>
-              <button 
-                type="button" 
-                className="npfWidgetButton npfWidget-aeb7b9fbaa1dcebf1762c1f9bc270c4b border-white bg-transparent text-white hover:bg-white hover:text-gray-900 px-6 sm:px-8 lg:px-10 py-3 sm:py-4 text-sm sm:text-base lg:text-lg font-semibold hover:scale-105 transition-all duration-300 rounded-md border-2"
-              >
-                <MessageCircle className="mr-2 h-4 w-4 sm:h-5 sm:w-5" />
-                Enquire Now
-              </button>
+
               <Button 
                 variant="outline" 
                 className="border-white bg-transparent text-white hover:bg-white hover:text-gray-900 px-6 sm:px-8 lg:px-10 py-3 sm:py-4 text-sm sm:text-base lg:text-lg font-semibold hover:scale-105 transition-all duration-300"
