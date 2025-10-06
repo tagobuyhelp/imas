@@ -215,8 +215,24 @@ export function Header({ currentPage, onMenuToggle }: HeaderProps) {
                 </span>
               </div>
             </div>
-            <div className="hidden sm:flex items-center gap-4">
-              <span>March 30, 2026</span>
+            <div className="hidden md:flex items-center gap-3">
+              <span className="hidden lg:inline">March 30, 2026</span>
+              <Button 
+                variant="ghost"
+                className="text-white hover:bg-white/10 px-3 py-1 text-xs sm:text-sm"
+                onClick={() => window.open('/contact', '_blank')}
+              >
+                <HelpCircle className="h-4 w-4 mr-2" />
+                Enquiry Now
+              </Button>
+              <Button 
+                variant="ghost"
+                className="text-white hover:bg-white/10 px-3 py-1 text-xs sm:text-sm"
+                onClick={() => window.open('/contact', '_blank')}
+              >
+                <Phone className="h-4 w-4 mr-2" />
+                Contact
+              </Button>
             </div>
           </div>
         </div>
@@ -225,7 +241,7 @@ export function Header({ currentPage, onMenuToggle }: HeaderProps) {
       {/* Main Header */}
       <header className="bg-gray-900 text-white sticky top-0 z-50">
         <div className="w-full px-6">
-          <div className="flex items-center justify-between h-16">
+          <div className="flex items-center justify-between h-14 xl:h-16">
             {/* Logo */}
             <Link 
               to="/"
@@ -234,12 +250,12 @@ export function Header({ currentPage, onMenuToggle }: HeaderProps) {
               <img
                 src="/uploads/logos/IMAS_WHITE.png"
                 alt="IMAS International Management & Analytics School"
-                className="h-12 w-auto"
+                className="h-10 w-auto xl:h-12"
               />
             </Link>
 
             {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center gap-6">
+            <nav className="hidden lg:flex items-center gap-4 xl:gap-6 text-sm xl:text-base">
               <Link
                 to="/"
                 className={`${IMAS_TAILWIND_CLASSES.HOVER_TEXT_TEAL} transition-colors flex items-center gap-2 ${
@@ -322,37 +338,21 @@ export function Header({ currentPage, onMenuToggle }: HeaderProps) {
                 Campus Tour
               </Link>
 
-              <Link
-                to="/contact"
-                className={`${IMAS_TAILWIND_CLASSES.HOVER_TEXT_TEAL} transition-colors flex items-center gap-2 ${
-                  currentPage === 'contact' ? IMAS_TAILWIND_CLASSES.TEXT_TEAL : ''
-                }`}
-              >
-                <Phone className="h-4 w-4" />
-                Contact
-              </Link>
+              
             </nav>
 
             {/* Desktop CTA Buttons */}
-            <div className="hidden lg:flex items-center gap-3">
+            <div className="hidden lg:flex items-center gap-2 xl:gap-3">
               <Button 
                 variant="ghost" 
-                className={`text-white ${IMAS_TAILWIND_CLASSES.HOVER_TEXT_TEAL} hover:bg-gray-800 flex items-center gap-2`}
-                onClick={() => window.open('/contact', '_blank')}
-              >
-                <HelpCircle className="h-4 w-4" />
-                Enquiry Now
-              </Button>
-              <Button 
-                variant="ghost" 
-                className={`text-white bg-gray-800 ${IMAS_TAILWIND_CLASSES.HOVER_TEXT_TEAL} hover:bg-gray-800 flex items-center gap-2`}
+                className={`text-white bg-gray-800 ${IMAS_TAILWIND_CLASSES.HOVER_TEXT_TEAL} hover:bg-gray-800 flex items-center gap-2 text-sm xl:text-base px-3 xl:px-4 py-1.5 xl:py-2`}
                 onClick={() => window.open('https://payment.collexo.com/login/institute/', '_blank')}
               >
                 <Calendar className="h-4 w-4" />
                 Pay Fees
               </Button>
               <Button 
-                className={`${IMAS_TAILWIND_CLASSES.GRADIENT_PRIMARY} hover:from-[#2e7bb3] hover:to-[#26c1d3] text-white px-6 py-2 font-semibold hover:scale-105 transition-all duration-300 flex items-center gap-2`}
+                className={`${IMAS_TAILWIND_CLASSES.GRADIENT_PRIMARY} hover:from-[#2e7bb3] hover:to-[#26c1d3] text-white text-sm xl:text-base px-4 xl:px-6 py-1.5 xl:py-2 font-semibold hover:scale-105 transition-all duration-300 flex items-center gap-2`}
                 onClick={applyNow}
               >
                 <GraduationCap className="h-4 w-4" />
