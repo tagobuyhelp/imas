@@ -2813,7 +2813,7 @@ export const programsData: Program[] = [
         subcategory: 'Global',
         duration: '2 Years',
         format: 'full-time',
-        location: 'Bangalore & UK',
+        location: 'Kolkata & UK',
         commencement: 'July 2026',
         description: 'A prestigious 2-year MBA Global program with dual qualification from IMAS India and UK partner university, offering international exposure and global business perspectives.',
         overview: 'The MBA Global program is designed to create global business leaders with international exposure and cross-cultural competencies. Students spend time in both India and the UK, earning dual qualifications and gaining invaluable global business experience. The program combines rigorous academic curriculum with practical international business applications.',

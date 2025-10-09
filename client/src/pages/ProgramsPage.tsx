@@ -276,7 +276,7 @@ export function ProgramsPage() {
                   <p className="text-lg sm:text-3xl font-bold text-[#143674] mb-0.5 sm:mb-1">Kolkata</p>
                   <div className="flex items-center justify-center gap-1 sm:gap-2">
                     <Building2 className="h-3 w-3 sm:h-4 sm:w-4 text-blue-500" />
-                    <p className="text-xs sm:text-sm text-gray-600 font-medium">Sector V</p>
+                    <p className="text-xs sm:text-sm text-gray-600 font-medium">New town</p>
                   </div>
                   <p className="text-xs text-gray-500 hidden sm:block">IT Hub & Business District</p>
                 </div>
