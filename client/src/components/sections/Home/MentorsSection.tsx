@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { Button } from '../../ui/button';
 import { Users, Building2, ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 import { IMAS_TAILWIND_CLASSES } from '../../../lib/constants';
+import { mentors } from '../../../lib/facultyData';
 
 export function MentorsSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -9,112 +10,7 @@ export function MentorsSection() {
   const carouselRef = useRef<HTMLDivElement>(null);
   const autoScrollRef = useRef<NodeJS.Timeout | null>(null);
 
-  const mentors = [
-    {
-      name: 'Prof. Dr. Saikat Moitra',
-      title: 'Former Vice Chancellor',
-      company: 'MAKAUT',
-      companyLogo: '/uploads/companies/makaut.png',
-      details: 'Core Expertise: Academic Leadership & Management',
-      image: '/uploads/Pic_VC_Dr.-Saikat-Maitra.png'
-    },
-    {
-      name: 'Dr Amit Gautam',
-      title: 'Professor, Faculty of Management Studies',
-      company: 'Banaras Hindu University',
-      companyLogo: '/uploads/companies/bhu.png',
-      details: 'Core Expertise: Management Studies & Research',
-      image: '/uploads/Amit-Gautam.jpeg'
-    },
-    {
-      name: 'Dr. Sangeeta Sahney',
-      title: 'Professor & Dean',
-      company: 'IIT Kharagpur - Vinod Gupta School of Management',
-      companyLogo: '/uploads/companies/iit-kharagpur.png',
-      details: 'Core Expertise: Management & Quality Systems',
-      image: '/uploads/sahnis.jpg'
-    },
-    {
-      name: 'Dr Gurbandini Kaur',
-      title: 'Professor',
-      company: 'All India Institute of Management-AIMA',
-      companyLogo: '/uploads/companies/aima.png',
-      details: 'Core Expertise: Management & Leadership',
-      image: '/uploads/Gurbandini.jpg'
-    },
-    {
-      name: 'Dr. M J Xavier',
-      title: 'Founder-Director',
-      company: 'IIM Ranchi',
-      companyLogo: '/uploads/companies/iim-ranchi.png',
-      details: 'Core Expertise: Strategic Management & Entrepreneurship',
-      image: '/uploads/mjx.jpg'
-    },
-    {
-      name: 'Dr. Saibal Kumar Mukhopadhyay',
-      title: 'Director',
-      company: 'IBM-Jadavpur University',
-      companyLogo: '/uploads/companies/jadavpur-university.png',
-      details: 'Core Expertise: Technology Management & Innovation',
-      image: '/uploads/Mukhopadhyay.jpg'
-    },
-    {
-      name: 'Dr. Prantik Ray',
-      title: 'Assistant Professor',
-      company: 'XLRI Jamshedpur',
-      companyLogo: '/uploads/companies/xlri.png',
-      details: 'Core Expertise: Operations & Supply Chain Management',
-      image: '/uploads/Prantik.jpeg'
-    },
-    {
-      name: 'Dr Supravat Bagli',
-      title: 'Assistant Professor',
-      company: 'Presidency University',
-      companyLogo: '/uploads/companies/presidency-university.png',
-      details: 'Core Expertise: Economics & Business Analytics',
-      image: '/uploads/Supravat.jpeg'
-    },
-    {
-      name: 'Dr. Dhananjay D. Mankar',
-      title: 'Assistant Professor & HOD',
-      company: 'TATA Institute of Social Science',
-      companyLogo: '/uploads/companies/tiss.png',
-      details: 'Core Expertise: Social Sciences & Management',
-      image: '/uploads/Dhananjay.jpg'
-    },
-    {
-      name: 'Dr. Tridib Chakraborty',
-      title: 'Former Professor',
-      company: 'IIM, Kolkata',
-      companyLogo: '/uploads/companies/iim-kolkata.png',
-      details: 'Core Expertise: Finance & Strategic Management',
-      image: '/uploads/Tridib-Chakraborty.jpg'
-    },
-    {
-      name: 'Dr. Kunal Sil',
-      title: 'Dean-Management',
-      company: 'IMAS, Kolkata',
-      companyLogo: '/uploads/logos/IMAS_LOGO_PNG.png',
-      details: 'Core Expertise: Management Education & Leadership',
-      image: '/uploads/Kunal.jpg'
-    },
-    {
-      name: 'Prof. Dr. Manodip Ray Chaudhuri',
-      title: 'Professor',
-      company: 'Xavier Business School',
-      companyLogo: '/uploads/companies/xavier-business-school.png',
-      details: 'Core Expertise: Management Studies & Business Strategy',
-      image: '/uploads/manodip-ray.jpg'
-    },
-    {
-      name: 'Mr. Tusharendra Barpanda',
-      title: 'Zonal Head',
-      company: 'Indian Institute of Banking & Finance',
-      companyLogo: '/uploads/companies/iibf.png',
-      details: 'Core Expertise: Banking & Financial Services',
-      image: '/uploads/tusharendra-barpanda.jpg'
-    }
-  ];
+ 
 
   // Navigation functions
   const nextSlide = () => {
@@ -279,7 +175,7 @@ export function MentorsSection() {
                       </div>
                     </div>
 
-                   
+
                   </div>
                 </div>
               </div>
@@ -301,11 +197,10 @@ export function MentorsSection() {
                     });
                   }
                 }}
-                className={`w-1 h-1 sm:w-2 sm:h-2 rounded-full transition-all duration-300 ${
-                  index === currentSlide
+                className={`w-1 h-1 sm:w-2 sm:h-2 rounded-full transition-all duration-300 ${index === currentSlide
                     ? `${IMAS_TAILWIND_CLASSES.BG_DARK_BLUE} scale-125`
                     : 'bg-gray-300 hover:bg-gray-400'
-                }`}
+                  }`}
               />
             ))}
           </div>

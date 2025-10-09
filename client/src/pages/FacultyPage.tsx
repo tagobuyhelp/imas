@@ -4,6 +4,8 @@ import { Search, X, Users, ArrowRight, FileText, GraduationCap, Plus, Minus, Awa
 import { IMAS_TAILWIND_CLASSES, IMAS_CONTACT } from '../lib/constants';
 import { StickyCTAFooter } from '../components/layout/StickyCTAFooter';
 import { downloadBrochure, applyNow } from '../lib/utils';
+import { MentorsSection } from '../components/sections/Home/MentorsSection';
+import { faculty } from '../lib/facultyData';
 
 // Custom CSS for line clamping and animations
 const lineClampStyles = `
@@ -84,152 +86,7 @@ export function FacultyPage() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const carouselRef = useRef<HTMLDivElement>(null);
 
-  // Faculty data
-  const faculty = [
-    {
-      id: 'f1',
-      name: 'Prof. Dr. Saikat Moitra',
-      title: 'Former Vice Chancellor',
-      qualifications: 'Ph.D., Former Vice Chancellor at MAKAUT',
-      image: '/uploads/Pic_VC_Dr.-Saikat-Maitra.png',
-      description: 'Former Vice Chancellor of MAKAUT, a distinguished academic leader with extensive experience in higher education management.',
-      fullBio: 'Prof. Dr. Saikat Moitra served as the Vice Chancellor of MAKAUT (Maulana Abul Kalam Azad University of Technology), bringing transformative leadership to the institution. His vision and strategic initiatives have significantly enhanced the university\'s academic standards and industry connections.',
-      expertise: 'Higher Education Management, Academic Leadership, Strategic Planning',
-      tags: ['Leadership', 'Academic', 'Strategy', 'Higher Education']
-    },
-    {
-      id: 'f2',
-      name: 'Dr Amit Gautam',
-      title: 'Professor, Faculty of Management Studies',
-      qualifications: 'Ph.D., Professor at Banaras Hindu University',
-      image: '/uploads/Amit-Gautam.jpeg',
-      description: 'Professor at Faculty of Management Studies, Banaras Hindu University, renowned for his expertise in management education and research.',
-      fullBio: 'Dr Amit Gautam is a distinguished Professor at the Faculty of Management Studies, Banaras Hindu University. His extensive research and teaching experience in management studies have contributed significantly to the field of business education.',
-      expertise: 'Management Studies, Business Research, Academic Excellence',
-      tags: ['Management', 'Research', 'Academic', 'BHU']
-    },
-    {
-      id: 'f3',
-      name: 'Dr. Sangeeta Sahney',
-      title: 'Professor & Dean',
-      qualifications: 'Ph.D., Professor & Dean at IIT Kharagpur - Vinod Gupta School of Management',
-      image: '/uploads/sahnis.jpg',
-      description: 'Professor & Dean at IIT Kharagpur - Vinod Gupta School of Management, leading excellence in management education and research.',
-      fullBio: 'Dr. Sangeeta Sahney serves as Professor & Dean at IIT Kharagpur - Vinod Gupta School of Management. Her leadership and academic excellence have positioned the school as a premier institution for management education in India.',
-      expertise: 'Management Education, Quality Systems, Academic Leadership',
-      tags: ['IIT', 'Management', 'Quality', 'Leadership']
-    },
-    {
-      id: 'f4',
-      name: 'Dr Gurbandini Kaur',
-      title: 'Professor',
-      qualifications: 'Ph.D., Professor at All India Institute of Management-AIMA',
-      image: '/uploads/Gurbandini.jpg',
-      description: 'Professor at All India Institute of Management-AIMA, bringing extensive expertise in management education and leadership development.',
-      fullBio: 'Dr Gurbandini Kaur is a Professor at All India Institute of Management-AIMA, where she contributes to management education with her extensive knowledge and experience in leadership development and organizational behavior.',
-      expertise: 'Management Education, Leadership Development, Organizational Behavior',
-      tags: ['AIMA', 'Leadership', 'Management', 'Organization']
-    },
-    {
-      id: 'f5',
-      name: 'Dr. M J Xavier',
-      title: 'Founder-Director',
-      qualifications: 'Ph.D., Founder-Director at IIM Ranchi',
-      image: '/uploads/mjx.jpg',
-      description: 'Founder-Director of IIM Ranchi, a visionary leader who established one of India\'s premier management institutes.',
-      fullBio: 'Dr. M J Xavier is the Founder-Director of IIM Ranchi, a visionary leader who established one of India\'s premier management institutes. His leadership and vision have shaped the institute\'s academic excellence and industry connections.',
-      expertise: 'Institutional Leadership, Management Education, Strategic Vision',
-      tags: ['IIM', 'Founder', 'Leadership', 'Vision']
-    },
-    {
-      id: 'f6',
-      name: 'Dr. Saibal Kumar Mukhopadhyay',
-      title: 'Director',
-      qualifications: 'Ph.D., Director at IBM-Jadavpur University',
-      image: '/uploads/Mukhopadhyay.jpg',
-      description: 'Director at IBM-Jadavpur University, bringing industry-academia collaboration expertise and strategic leadership.',
-      fullBio: 'Dr. Saibal Kumar Mukhopadhyay serves as Director at IBM-Jadavpur University, bringing extensive expertise in industry-academia collaboration and strategic leadership. His work bridges the gap between academic research and industry applications.',
-      expertise: 'Industry-Academia Collaboration, Strategic Leadership, Technology Management',
-      tags: ['IBM', 'Technology', 'Leadership', 'Industry']
-    },
-    {
-      id: 'f7',
-      name: 'Dr. Prantik Ray',
-      title: 'Assistant Professor',
-      qualifications: 'Ph.D., Assistant Professor at XLRI Jamshedpur',
-      image: '/uploads/Prantik.jpeg',
-      description: 'Assistant Professor at XLRI Jamshedpur, specializing in management education and research excellence.',
-      fullBio: 'Dr. Prantik Ray is an Assistant Professor at XLRI Jamshedpur, specializing in management education and research excellence. He contributes to the academic rigor and practical applications of management theories.',
-      expertise: 'Management Research, Academic Excellence, Strategic Analysis',
-      tags: ['XLRI', 'Research', 'Management', 'Academic']
-    },
-    {
-      id: 'f8',
-      name: 'Dr Supravat Bagli',
-      title: 'Assistant Professor',
-      qualifications: 'Ph.D., Assistant Professor at Presidency University',
-      image: '/uploads/Supravat.jpeg',
-      description: 'Assistant Professor at Presidency University, contributing to management education with research-oriented approach.',
-      fullBio: 'Dr. Supravat Bagli is an Assistant Professor at Presidency University, contributing to management education with a research-oriented approach. His work focuses on contemporary management practices and theoretical foundations.',
-      expertise: 'Management Education, Research Methodology, Academic Excellence',
-      tags: ['Presidency', 'Research', 'Management', 'Academic']
-    },
-    {
-      id: 'f9',
-      name: 'Dr. Dhananjay D. Mankar',
-      title: 'Assistant Professor & HOD',
-      qualifications: 'Ph.D., Assistant Professor & HOD at TATA Institute of Social Science',
-      image: '/uploads/Dhananjay.jpg',
-      description: 'Assistant Professor & HOD at TATA Institute of Social Science, specializing in social sciences and management integration.',
-      fullBio: 'Dr. Dhananjay D. Mankar serves as Assistant Professor & HOD at TATA Institute of Social Science, specializing in the integration of social sciences and management. His work focuses on socially responsible management practices.',
-      expertise: 'Social Sciences, Management Integration, Leadership',
-      tags: ['TISS', 'Social Sciences', 'Management', 'Leadership']
-    },
-    {
-      id: 'f10',
-      name: 'Dr. Tridib Chakraborty',
-      title: 'Former Professor',
-      qualifications: 'Ph.D., Former Professor at IIM, Kolkata',
-      image: '/uploads/Tridib-Chakraborty.jpg',
-      description: 'Former Professor at IIM, Kolkata, bringing extensive experience from one of India\'s premier management institutes.',
-      fullBio: 'Dr. Tridib Chakraborty is a Former Professor at IIM, Kolkata, bringing extensive experience from one of India\'s premier management institutes. His academic excellence and industry insights have shaped numerous management professionals.',
-      expertise: 'Management Education, Strategic Management, Academic Excellence',
-      tags: ['IIM', 'Management', 'Strategy', 'Academic']
-    },
-    {
-      id: 'f11',
-      name: 'Dr. Kunal Sil',
-      title: 'Dean-Management',
-      qualifications: 'Ph.D., Dean-Management at IMAS, Kolkata',
-      image: '/uploads/Kunal.jpg',
-      description: 'Dean-Management at IMAS, Kolkata, leading the academic excellence and strategic direction of the institute.',
-      fullBio: 'Dr. Kunal Sil serves as Dean-Management at IMAS, Kolkata. He leads the academic excellence and strategic direction of the institute, ensuring high-quality management education and industry relevance.',
-      expertise: 'Academic Leadership, Management Education, Strategic Planning',
-      tags: ['Dean', 'IMAS', 'Leadership', 'Management']
-    },
-    {
-      id: 'f12',
-      name: 'Prof. Dr. Manodip Ray Chaudhuri',
-      title: 'Professor',
-      qualifications: 'Ph.D., Professor at Xavier Business School',
-      image: '/uploads/manodip-ray.jpg',
-      description: 'A distinguished professor from Xavier Business School, bringing extensive academic expertise and industry insights to management education.',
-      fullBio: 'Prof. Dr. Manodip Ray Chaudhuri is a distinguished professor from Xavier Business School with extensive academic expertise in management studies. He brings valuable industry insights and academic rigor to management education, contributing to the development of future business leaders.',
-      expertise: 'Management Studies, Business Strategy, Academic Leadership',
-      tags: ['Management', 'Strategy', 'Academic', 'Leadership', 'Xavier']
-    },
-    {
-      id: 'f13',
-      name: 'Mr. Tusharendra Barpanda',
-      title: 'Zonal Head',
-      qualifications: 'Zonal Head at Indian Institute of Banking & Finance',
-      image: '/uploads/tusharendra-barpanda.jpg',
-      description: 'A banking and finance expert serving as Zonal Head at Indian Institute of Banking & Finance, bringing extensive industry experience in financial services.',
-      fullBio: 'Mr. Tusharendra Barpanda serves as Zonal Head at the Indian Institute of Banking & Finance, bringing extensive industry experience in financial services and banking operations. His expertise in banking and finance provides students with practical insights into the financial sector and its evolving landscape.',
-      expertise: 'Banking, Finance, Financial Services, Industry Leadership',
-      tags: ['Banking', 'Finance', 'Financial Services', 'Industry Expert', 'IIBF']
-    }
-  ];
+
 
   // Get filtered faculty based on search term and selected tags
   const getFilteredFaculty = () => {
@@ -698,6 +555,11 @@ export function FacultyPage() {
             </div>
           </div>
         </section>
+
+        {/* Mentors Section */}
+        <MentorsSection />
+
+
 
         {/* Why Learn from IMAS Faculty Section */}
         <section id="faculty-cta" className="py-12 sm:py-16 md:py-20 lg:py-24 bg-white">
