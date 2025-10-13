@@ -8,6 +8,8 @@ export interface Faculty {
     fullBio: string;
     expertise: string;
     tags: string[];
+    company?: string;
+    companyLogo?: string;
 }
 
 export interface Mentor {
@@ -32,20 +34,24 @@ export const faculty = [
         qualifications: 'Ph.D., Former Vice Chancellor at MAKAUT',
         image: '/uploads/faculty/Pic_VC_Dr.-Saikat-Maitra.png',
         description: 'Former Vice Chancellor of MAKAUT, a distinguished academic leader with extensive experience in higher education management.',
-        fullBio: 'Prof. Dr. Saikat Moitra served as the Vice Chancellor of MAKAUT (Maulana Abul Kalam Azad University of Technology), where he implemented strategic reforms in curriculum, digital learning, and industry partnerships. His leadership elevated MAKAUT’s academic standards and institutional reputation.',
+        fullBio: 'Prof. Dr. Saikat Moitra served as the Vice Chancellor of MAKAUT (Maulana Abul Kalam Azad University of Technology), where he implemented strategic reforms in curriculum, digital learning, and industry partnerships. His leadership elevated MAKAUT\'s academic standards and institutional reputation.',
         expertise: 'Higher Education Management, Academic Leadership, Strategic Planning',
-        tags: ['Leadership', 'Academic', 'Strategy', 'Higher Education']
+        tags: ['Leadership', 'Academic', 'Strategy', 'Higher Education'],
+        company: 'MAKAUT',
+        companyLogo: '/uploads/companies/makaut.png'
     },
     {
         id: 'f2',
         name: 'Dr. Amit Gautam',
-        title: 'Professor, Faculty of Management Studies',
+        title: 'Professor',
         qualifications: 'Ph.D., Professor at Banaras Hindu University',
         image: '/uploads/faculty/Amit_Gautam.jpeg',
         description: 'Senior professor at BHU with expertise in management strategy, marketing analytics, and organizational studies.',
         fullBio: 'Dr. Amit Gautam is a Professor at the Faculty of Management Studies, Banaras Hindu University. His research focuses on strategic management, marketing analytics, and behavioral science. He has contributed extensively to management education through academic innovation and publications.',
         expertise: 'Strategic Management, Marketing Analytics, Organizational Behaviour',
-        tags: ['Strategy', 'Marketing', 'Analytics', 'Research']
+        tags: ['Strategy', 'Marketing', 'Analytics', 'Research'],
+        company: 'BHU',
+        companyLogo: '/uploads/companies/bhu.webp'
     },
     {
         id: 'f3',
@@ -53,10 +59,12 @@ export const faculty = [
         title: 'Professor & Dean',
         qualifications: 'Ph.D., Professor & Dean, Vinod Gupta School of Management, IIT Kharagpur',
         image: '/uploads/faculty/Sangeeta_Sahney.jpg',
-        description: 'Professor and Dean at IIT Kharagpur’s VGSOM, specializing in quality management and consumer behaviour.',
+        description: 'Professor and Dean at IIT Kharagpur\'s VGSOM, specializing in quality management and consumer behaviour.',
         fullBio: 'Dr. Sangeeta Sahney is Professor and Dean at the Vinod Gupta School of Management, IIT Kharagpur. She is widely recognized for her research in quality management, consumer behaviour, and academic excellence. Her leadership has fostered innovation in management education and industry engagement.',
         expertise: 'Quality Management, Consumer Behaviour, Academic Administration',
-        tags: ['Quality', 'Consumer', 'Leadership', 'Management']
+        tags: ['Quality', 'Consumer', 'Leadership', 'Management'],
+        company: 'IIT Kharagpur',
+        companyLogo: '/uploads/companies/iit_kharagpur.png'
     },
     {
         id: 'f4',
@@ -67,7 +75,9 @@ export const faculty = [
         description: 'Renowned professor and researcher in leadership, human resource development, and organizational studies.',
         fullBio: 'Dr. Gurbandini Kaur is a Professor at the All India Institute of Management (AIMA). Her academic expertise includes leadership development, behavioral sciences, and HR strategy. She has been instrumental in shaping management programs and mentoring future leaders.',
         expertise: 'Human Resource Management, Leadership Development, Behavioral Studies',
-        tags: ['HR', 'Leadership', 'Behavior', 'Development']
+        tags: ['HR', 'Leadership', 'Behavior', 'Development'],
+        company: 'AIMA',
+        companyLogo: '/uploads/companies/aima.jpg'
     },
     {
         id: 'f5',
@@ -78,7 +88,9 @@ export const faculty = [
         description: 'Founder-Director of IIM Ranchi, a pioneer in marketing and innovation management education in India.',
         fullBio: 'Dr. M.J. Xavier is the Founder-Director of the Indian Institute of Management Ranchi. With vast experience in marketing, innovation, and management education, he has guided several academic institutions toward excellence and contributed to national-level education reforms.',
         expertise: 'Marketing, Innovation Management, Entrepreneurship',
-        tags: ['Marketing', 'Innovation', 'Entrepreneurship', 'Leadership']
+        tags: ['Marketing', 'Innovation', 'Entrepreneurship', 'Leadership'],
+        company: 'IIM Ranchi',
+        companyLogo: '/uploads/companies/iim_ranchi.png'
     },
     {
         id: 'f6',
@@ -89,7 +101,9 @@ export const faculty = [
         description: 'Director at IBM-Jadavpur University with extensive expertise in data science and business analytics.',
         fullBio: 'Dr. Saibal Kumar Mukhopadhyay serves as Director at IBM – Jadavpur University, where he oversees advanced programs in data science and business analytics. His academic contributions bridge technology with management education.',
         expertise: 'Business Analytics, Data Science, Research & Technology Management',
-        tags: ['Analytics', 'Data Science', 'Technology', 'Research']
+        tags: ['Analytics', 'Data Science', 'Technology', 'Research'],
+        company: 'IBM-Jadavpur University',
+        companyLogo: '/uploads/companies/ibm_jadavpur.png'
     },
     {
         id: 'f7',
@@ -100,7 +114,9 @@ export const faculty = [
         description: 'Assistant Professor at XLRI Jamshedpur, specializing in corporate strategy and financial management.',
         fullBio: 'Dr. Prantik Ray is an Assistant Professor at XLRI Jamshedpur. His teaching and research interests span finance, strategy, and leadership. He is dedicated to nurturing business professionals with analytical and strategic skills.',
         expertise: 'Finance, Corporate Strategy, Leadership Development',
-        tags: ['Finance', 'Strategy', 'Leadership', 'Corporate']
+        tags: ['Finance', 'Strategy', 'Leadership', 'Corporate'],
+        company: 'XLRI Jamshedpur',
+        companyLogo: '/uploads/companies/xlri.jpg'
     },
     {
         id: 'f8',
@@ -111,7 +127,9 @@ export const faculty = [
         description: 'Assistant Professor at Presidency University with expertise in economics and business policy.',
         fullBio: 'Dr. Supravat Bagli is an Assistant Professor at Presidency University. His research covers economics, business policy, and strategic planning, contributing to academic and industry-oriented programs.',
         expertise: 'Economics, Business Policy, Research Methodology',
-        tags: ['Economics', 'Policy', 'Research', 'Strategy']
+        tags: ['Economics', 'Policy', 'Research', 'Strategy'],
+        company: 'Presidency University',
+        companyLogo: '/uploads/companies/presidency_university.jpg'
     },
     {
         id: 'f9',
@@ -122,7 +140,9 @@ export const faculty = [
         description: 'Assistant Professor and HOD at TISS with expertise in HRM and community development.',
         fullBio: 'Dr. Dhananjay D. Mankar heads the Department at TATA Institute of Social Sciences. His core research areas include social work, HRM, and community development, integrating academic knowledge with practical impact.',
         expertise: 'Social Work, Human Resource Management, Community Development',
-        tags: ['HR', 'Community', 'Social Work', 'Development']
+        tags: ['HR', 'Community', 'Social Work', 'Development'],
+        company: 'TISS',
+        companyLogo: '/uploads/companies/tiss.png'
     },
     {
         id: 'f10',
@@ -133,7 +153,9 @@ export const faculty = [
         description: 'Former Professor at IIM Kolkata with a distinguished background in operations and business strategy.',
         fullBio: 'Dr. Tridib Chakraborty is a Former Professor at IIM Kolkata, recognized for his excellence in management research, operations, and strategy. He continues to contribute as a mentor and consultant to management institutions.',
         expertise: 'Operations Management, Business Strategy, Research',
-        tags: ['Operations', 'Strategy', 'Research', 'Business']
+        tags: ['Operations', 'Strategy', 'Research', 'Business'],
+        company: 'IIM Kolkata',
+        companyLogo: '/uploads/companies/iim_kolkata.png'
     },
     {
         id: 'f11',
@@ -144,7 +166,9 @@ export const faculty = [
         description: 'Dean of Management at IMAS Kolkata, specializing in business education and academic leadership.',
         fullBio: 'Dr. Kunal Sil serves as Dean of Management at IMAS Kolkata. He brings a deep understanding of business education, corporate relations, and academic innovation. His focus lies in developing future-ready management graduates.',
         expertise: 'Business Management, Academic Leadership, Corporate Relations',
-        tags: ['Management', 'Leadership', 'Corporate', 'Education']
+        tags: ['Management', 'Leadership', 'Corporate', 'Education'],
+        company: 'IMAS Kolkata',
+        companyLogo: '/uploads/companies/imas.png'
     },
     {
         id: 'f12',
@@ -155,7 +179,9 @@ export const faculty = [
         description: 'Professor at Xavier Business School with expertise in HR development and organizational psychology.',
         fullBio: 'Prof. Dr. Manodip Ray Chaudhuri teaches at Xavier Business School. His academic and consulting work spans HR development, psychology, and leadership, fostering effective workplace management and team growth.',
         expertise: 'Human Resource Development, Organizational Psychology, Leadership',
-        tags: ['HR', 'Psychology', 'Leadership', 'Development']
+        tags: ['HR', 'Psychology', 'Leadership', 'Development'],
+        company: 'Xavier Business School',
+        companyLogo: '/uploads/companies/xavier.jpeg'
     },
     {
         id: 'f13',
@@ -166,7 +192,9 @@ export const faculty = [
         description: 'Zonal Head at IIBF with over two decades of experience in banking operations and financial management.',
         fullBio: 'Mr. Tusharendra Barpanda serves as Zonal Head at the Indian Institute of Banking & Finance (IIBF). His expertise in banking operations, risk management, and financial literacy has contributed to developing skilled finance professionals across India.',
         expertise: 'Banking Operations, Financial Literacy, Risk Management',
-        tags: ['Banking', 'Finance', 'Risk', 'Training']
+        tags: ['Banking', 'Finance', 'Risk', 'Training'],
+        company: 'IIBF',
+        companyLogo: '/uploads/companies/iibf.jpeg'
     }
 ];
 

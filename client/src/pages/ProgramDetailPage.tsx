@@ -700,8 +700,16 @@ export function ProgramDetailPage() {
                                         {/* University of Manchester */}
                                         <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-100 group">
                                             <div className="text-center">
-                                                <div className="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-red-600 to-red-700 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                                                    <span className="text-white font-bold text-lg">UoM</span>
+                                                <div className="w-full h-48 mx-auto mb-4 rounded-xl overflow-hidden shadow-lg group-hover:scale-105 transition-transform duration-300">
+                                                    <img 
+                                                        src="/uploads/UoM-buildings-1920x1080.jpg"
+                                                        alt="University of Manchester Campus"
+                                                        className="w-full h-full object-cover"
+                                                        onError={(e) => {
+                                                            const target = e.target as HTMLImageElement;
+                                                            target.src = '/uploads/logos/IMAS_LOGO_PNG.png';
+                                                        }}
+                                                    />
                                                 </div>
                                                 <h3 className="text-lg font-bold text-gray-800 mb-2">University of Manchester</h3>
                                                 <p className="text-sm text-gray-600 mb-4">Ranked #27 globally, one of the UK's most prestigious research universities</p>
@@ -719,8 +727,16 @@ export function ProgramDetailPage() {
                                         {/* University of Birmingham */}
                                         <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-100 group">
                                             <div className="text-center">
-                                                <div className="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-blue-600 to-blue-700 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                                                    <span className="text-white font-bold text-lg">UoB</span>
+                                                <div className="w-full h-48 mx-auto mb-4 rounded-xl overflow-hidden shadow-lg group-hover:scale-105 transition-transform duration-300">
+                                                    <img 
+                                                        src="/uploads/University-of-Birmingham.jpg"
+                                                        alt="University of Birmingham Campus"
+                                                        className="w-full h-full object-cover"
+                                                        onError={(e) => {
+                                                            const target = e.target as HTMLImageElement;
+                                                            target.src = '/uploads/logos/IMAS_LOGO_PNG.png';
+                                                        }}
+                                                    />
                                                 </div>
                                                 <h3 className="text-lg font-bold text-gray-800 mb-2">University of Birmingham</h3>
                                                 <p className="text-sm text-gray-600 mb-4">A leading research university with strong business and management programs</p>
@@ -738,8 +754,16 @@ export function ProgramDetailPage() {
                                         {/* University of Leeds */}
                                         <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-100 group">
                                             <div className="text-center">
-                                                <div className="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-yellow-600 to-orange-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                                                    <span className="text-white font-bold text-lg">UoL</span>
+                                                <div className="w-full h-48 mx-auto mb-4 rounded-xl overflow-hidden shadow-lg group-hover:scale-105 transition-transform duration-300">
+                                                    <img 
+                                                        src="/uploads/Parkinson Building, University of Leeds.jpg"
+                                                        alt="University of Leeds Parkinson Building"
+                                                        className="w-full h-full object-cover"
+                                                        onError={(e) => {
+                                                            const target = e.target as HTMLImageElement;
+                                                            target.src = '/uploads/logos/IMAS_LOGO_PNG.png';
+                                                        }}
+                                                    />
                                                 </div>
                                                 <h3 className="text-lg font-bold text-gray-800 mb-2">University of Leeds</h3>
                                                 <p className="text-sm text-gray-600 mb-4">Renowned for its business school and strong industry connections</p>

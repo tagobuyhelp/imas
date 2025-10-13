@@ -140,6 +140,11 @@ export function FacultySection() {
                     {/* Gradient Overlay */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
 
+                    {/* Company Logo */}
+                    <div className="absolute top-2 left-2">
+                      <img src={member.companyLogo} alt={member.company} className="w-full h-8 object-contain " />
+                    </div>
+
                     {/* Expertise Badge */}
                     <div className="absolute top-2 right-2 bg-primary-dark backdrop-blur-sm rounded-full px-2 py-1">
                       <span className="text-xs font-semibold text-white">{member.title || 'Expert'}</span>
@@ -224,3 +229,4 @@ export function FacultySection() {
     </section>
   );
 }
+
