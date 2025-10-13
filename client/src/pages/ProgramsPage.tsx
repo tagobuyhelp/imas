@@ -17,7 +17,7 @@ export function ProgramsPage() {
     format: 'Full Time - On Campus',
     commencement: '19th Sep 2026',
     includes: 'Includes Industry Projects & Internships',
-    locationDesc: 'Located near Salt Lake Sector V'
+    locationDesc: 'Located near Smart City of Kolkata'
   };
 
   const curriculumPhases = [
@@ -97,7 +97,7 @@ export function ProgramsPage() {
     {
       icon: Zap,
       title: 'Modern Infrastructure',
-      description: 'State-of-the-art facilities in Salt Lake Sector V, Kolkata'
+      description: 'State-of-the-art facilities in Smart City of Kolkata, Kolkata'
     },
     {
       icon: Heart,

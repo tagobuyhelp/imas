@@ -17,7 +17,7 @@ export const IMAS_BRAND = {
     WEBSITE: 'www.imas.ac.in',
     EMAIL: 'admission@imas.ac.in',
     PHONE: '+91 90888 22777',
-    ADDRESS: 'Salt Lake Sector V, Kolkata',
+    ADDRESS: 'Smart City of Kolkata, Kolkata',
 } as const;
 
 // IMAS Contact Information
@@ -25,7 +25,7 @@ export const IMAS_CONTACT = {
     PHONE: '+91 90888 22777',
     EMAIL: 'admission@imas.ac.in',
     WEBSITE: 'www.imas.ac.in',
-    ADDRESS: 'Salt Lake Sector V, Kolkata, West Bengal, India',
+    ADDRESS: 'Smart City of Kolkata, Kolkata, West Bengal, India',
 } as const;
 
 // IMAS Social Media

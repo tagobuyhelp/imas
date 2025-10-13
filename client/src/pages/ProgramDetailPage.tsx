@@ -291,7 +291,7 @@ export function ProgramDetailPage() {
                                     </div>
                                     <h3 className={`font-bold ${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE} mb-1 text-xs sm:text-sm tracking-wide`}>LOCATION</h3>
                                     <p className={`text-lg sm:text-xl font-bold ${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE} mb-1`}>{program.location}</p>
-                                    <p className="text-xs text-gray-500">Salt Lake Sector V</p>
+                                    <p className="text-xs text-gray-500">Smart City of Kolkata</p>
                                 </CardContent>
                             </Card>
 

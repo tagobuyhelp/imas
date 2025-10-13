@@ -39,7 +39,7 @@ export function ProgramHighlightsSection() {
               <div className="flex-1">
                 <h3 className="text-xs sm:text-sm font-semibold text-gray-700 uppercase tracking-wide mb-1">Location</h3>
                 <p className={`text-base sm:text-xl font-bold ${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE} mb-1`}>Kolkata</p>
-                <p className="text-xs text-gray-500">Salt Lake Sector V</p>
+                <p className="text-xs text-gray-500">Smart City of Kolkata</p>
               </div>
             </div>
 
