@@ -7,6 +7,7 @@ import {
   LearnersSection,
   AboutSection,
   MentorsSection,
+  FacultySection,
   ProgramsSection,
   WhyChooseSection,
   IndustryCollaborationsSection,
@@ -26,6 +27,7 @@ export function HomePage() {
       <LearnersSection />
       <AboutSection />
       <MentorsSection />
+      <FacultySection />
       <ProgramsSection />
       <WhyChooseSection />
       <IndustryCollaborationsSection />

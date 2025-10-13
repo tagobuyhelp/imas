@@ -102,15 +102,18 @@ export function AboutSection() {
                   <div>
                     <h3 className="text-lg font-bold text-gray-800">Strategic Location</h3>
                     <div className={`inline-block px-2 py-1 rounded-full text-xs font-medium ${IMAS_TAILWIND_CLASSES.BG_DARK_BLUE}/10 ${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE}`}>
-                      Salt Lake Sector V
+                      New Town, Kolkata
                     </div>
                   </div>
                 </div>
                 <div className="space-y-3 text-sm text-gray-600">
                   <p>
-                    Strategically located near <strong>Salt Lake Sector V</strong>, the heart of Kolkata's IT hub, and close to{' '}
-                    <strong>St. Xavier's University Newtown</strong>, <strong>IMAS College Kolkata</strong> offers an unparalleled environment for management education.
+                    Located in the heart of <strong>New Town, Kolkata's Smart City and IT Hub</strong>,
+                    <strong>IMAS College</strong> offers an exceptional environment for modern management education.
+                    The campus enjoys close proximity to leading tech giants such as <strong>Wipro</strong> and <strong>Infosys</strong>,
+                    providing students with unmatched exposure to the corporate world.
                   </p>
+
                   <p>
                     IMAS is approved by <strong>AICTE</strong>, ensuring credibility and quality across all its programs.
                   </p>

@@ -83,7 +83,7 @@ export function MentorsSection() {
             DESIGNED BY EXPERTS
           </div>
           <h2 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold text-white mb-2 sm:mb-3 md:mb-4 px-2 sm:px-4">
-            Founded by Industry Leaders with <span className="text-primary-teal">Large Scale Businesses</span>
+            Learn from Industry Leaders
           </h2>
           <p className="text-gray-300 text-xs sm:text-sm md:text-base max-w-2xl mx-auto px-4">
             Learn from the best minds in the industry who have built and scaled successful businesses
@@ -116,15 +116,15 @@ export function MentorsSection() {
             onMouseLeave={handleMouseLeave}
           >
             {mentors.map((mentor) => (
-              <div key={mentor.name} className="flex-shrink-0 w-[280px] sm:w-[320px] lg:w-[350px] h-[450px] sm:h-[500px] bg-white rounded-xl overflow-hidden  transition-all duration-300 border-none border-gray-200 transform hover:scale-105 hover:-translate-y-1 group">
+              <div key={mentor.name} className="flex-shrink-0 w-[280px] sm:w-[320px] lg:w-[350px] bg-white rounded-xl overflow-hidden  transition-all duration-300 border-none border-gray-200 transform  group">
                 <div className="flex flex-col h-full">
                   {/* Top Section - Mentor Image Full Cover */}
-                  <div className="h-[250px] sm:h-[300px] relative overflow-hidden">
+                  <div className="h-[250px] sm:h-[350px] relative overflow-hidden">
                     {mentor.image && mentor.image !== '/uploads/' ? (
                       <img
                         src={mentor.image}
                         alt={mentor.name}
-                        className="w-full h-full object-cover  transition-transform duration-700 group-hover:scale-110"
+                        className="w-full h-full object-cover  transition-transform duration-700 "
                         onError={(e) => {
                           const target = e.currentTarget as HTMLImageElement;
                           target.style.display = 'none';

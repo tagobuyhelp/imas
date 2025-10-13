@@ -1,13 +1,13 @@
 import React from 'react';
 import { Button } from '../components/ui/button';
 import { MentorsSection } from '../components/sections/Home/MentorsSection';
-import { 
-  GraduationCap, 
-  Users, 
-  Building2, 
-  MapPin, 
-  Utensils, 
-  Wifi, 
+import {
+  GraduationCap,
+  Users,
+  Building2,
+  MapPin,
+  Utensils,
+  Wifi,
   TreePine,
   Trophy,
   Music,
@@ -33,7 +33,7 @@ export function CampusLifePage() {
     {
       icon: MapPin,
       title: "Prime Location",
-      description: "Centrally Located in Sector V, Salt Lake — Kolkata's IT & Business Hub"
+      description: "Newtown – Kolkata’s Smart City and IT Hub, strategically located near Wipro and Infosys, offers a modern learning environment built for the future."
     },
     {
       icon: GraduationCap,
@@ -97,14 +97,14 @@ export function CampusLifePage() {
       <section id="campus-overview" className="relative py-16 bg-gray-900 text-white overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0">
-          <img 
-            src="/uploads/IMASBUILDING.jpeg" 
-            alt="IMAS Campus" 
+          <img
+            src="/uploads/IMASBUILDING.jpeg"
+            alt="IMAS Campus"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gray-900/80"></div>
         </div>
-        
+
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
           <div className="absolute -top-40 -right-40 w-80 h-80 bg-white/10 rounded-full blur-3xl animate-pulse"></div>
@@ -115,26 +115,26 @@ export function CampusLifePage() {
           <div className="inline-block bg-white/20 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-semibold mb-4 shadow-lg">
             CAMPUS LIFE AT IMAS
           </div>
-          
+
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
             Where Management Meets <span className="bg-gradient-to-r from-[#26c1d3] to-[#2e7bb3] bg-clip-text text-transparent">Experience</span>
           </h1>
-          
+
           <p className="text-lg sm:text-xl text-white/90 max-w-4xl mx-auto mb-6 leading-relaxed px-4">
             At IMAS Business School Kolkata, student life goes beyond classrooms. From industry immersion, cultural celebrations, leadership clubs, and global networking opportunities to vibrant everyday experiences, campus life at IMAS is designed to shape well-rounded leaders.
           </p>
-          
+
           <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
-            <Button 
+            <Button
               onClick={applyNow}
               className={`${IMAS_TAILWIND_CLASSES.GRADIENT_PRIMARY} hover:from-[#2e7bb3] hover:to-[#26c1d3] text-white px-8 sm:px-10 lg:px-12 py-3 sm:py-4 text-sm sm:text-base lg:text-lg font-semibold hover:scale-105 transition-all duration-300`}
             >
               <UserPlus className="mr-2 h-5 w-5" />
               Join Our Community
             </Button>
-            <a 
-              href="https://www.youtube.com/@IMASKolkata/videos" 
-              target="_blank" 
+            <a
+              href="https://www.youtube.com/@IMASKolkata/videos"
+              target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-white hover:text-[#26c1d3] transition-colors duration-300 font-medium"
             >
@@ -165,24 +165,29 @@ export function CampusLifePage() {
             {/* Campus Building */}
             <div className="bg-white rounded-xl overflow-hidden shadow-lg">
               <div className="aspect-video overflow-hidden">
-                <img 
-                  src="/uploads/IMASBUILDING.jpeg" 
-                  alt="IMAS Campus Building" 
+                <img
+                  src="/uploads/IMASBUILDING.jpeg"
+                  alt="IMAS Campus Building"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                 />
               </div>
               <div className="p-4">
                 <h3 className="text-lg font-bold text-gray-800 mb-1">Modern Campus Infrastructure</h3>
-                <p className="text-gray-600 text-sm">Our state-of-the-art campus building in Salt Lake Sector V, designed for modern learning.</p>
+                <p className="text-gray-600 text-sm">
+                  Our state-of-the-art campus in <strong>Newtown – Kolkata’s Smart City and IT Hub</strong>,
+                  strategically located near <strong>Wipro</strong> and <strong>Infosys</strong>,
+                  offers a modern learning environment built for the future.
+                </p>
+
               </div>
             </div>
 
             {/* Industry Visit */}
             <div className="bg-white rounded-xl overflow-hidden shadow-lg">
               <div className="aspect-video overflow-hidden">
-                <img 
-                  src="/uploads/Industrial_visit_at_Reliance_Trends.jpeg" 
-                  alt="Industrial Visit at Reliance Trends" 
+                <img
+                  src="/uploads/Industrial_visit_at_Reliance_Trends.jpeg"
+                  alt="Industrial Visit at Reliance Trends"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                 />
               </div>
@@ -201,7 +206,7 @@ export function CampusLifePage() {
                   <p className="text-gray-600 font-medium text-sm">Student Stories & Campus Life</p>
                 </div>
               </div>
-              <Button 
+              <Button
                 onClick={() => window.dispatchEvent(new CustomEvent("imas:openVideoModal"))}
                 className={`${IMAS_TAILWIND_CLASSES.GRADIENT_PRIMARY} hover:from-[#2e7bb3] hover:to-[#26c1d3] text-white px-8 sm:px-10 py-3 sm:py-4 text-sm sm:text-base font-semibold hover:scale-105 transition-all duration-300 rounded-full inline-flex items-center gap-2`}
               >
@@ -229,9 +234,9 @@ export function CampusLifePage() {
             {/* Hospital Visit */}
             <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 group hover:-translate-y-1">
               <div className="aspect-video overflow-hidden">
-                <img 
-                  src="/uploads/Visit to_Apollo_Hospital.jpeg" 
-                  alt="Visit to Apollo Hospital" 
+                <img
+                  src="/uploads/Visit to_Apollo_Hospital.jpeg"
+                  alt="Visit to Apollo Hospital"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                 />
               </div>
@@ -244,9 +249,9 @@ export function CampusLifePage() {
             {/* JSW Workshop */}
             <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 group hover:-translate-y-1">
               <div className="aspect-video overflow-hidden">
-                <img 
-                  src="/uploads/Workshop_at_JSW_Plant.jpg" 
-                  alt="Workshop at JSW Plant" 
+                <img
+                  src="/uploads/Workshop_at_JSW_Plant.jpg"
+                  alt="Workshop at JSW Plant"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                 />
               </div>
@@ -259,9 +264,9 @@ export function CampusLifePage() {
             {/* TDK Industries */}
             <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 group hover:-translate-y-1">
               <div className="aspect-video overflow-hidden">
-                <img 
-                  src="/uploads/TDK_Industries_exposure_for_PGDM_students.jpeg" 
-                  alt="TDK Industries Exposure" 
+                <img
+                  src="/uploads/TDK_Industries_exposure_for_PGDM_students.jpeg"
+                  alt="TDK Industries Exposure"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                 />
               </div>
@@ -274,9 +279,9 @@ export function CampusLifePage() {
             {/* SVS Hospital Visit */}
             <div className="bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 group hover:-translate-y-1">
               <div className="aspect-video overflow-hidden">
-                <img 
-                  src="/uploads/Visit_to_SVS_Marwari_Hospital.jpg" 
-                  alt="Visit to SVS Marwari Hospital" 
+                <img
+                  src="/uploads/Visit_to_SVS_Marwari_Hospital.jpg"
+                  alt="Visit to SVS Marwari Hospital"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                 />
               </div>
@@ -318,9 +323,9 @@ export function CampusLifePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6 mb-8">
             <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
               <div className="aspect-square overflow-hidden">
-                <img 
-                  src="/uploads/campus_photos/IMG_8110.JPG" 
-                  alt="IMAS Campus Students" 
+                <img
+                  src="/uploads/campus_photos/IMG_8110.JPG"
+                  alt="IMAS Campus Students"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                   loading="lazy"
                 />
@@ -333,9 +338,9 @@ export function CampusLifePage() {
 
             <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
               <div className="aspect-square overflow-hidden">
-                <img 
-                  src="/uploads/campus_photos/IMG_8115.JPG" 
-                  alt="Campus Facilities and Community" 
+                <img
+                  src="/uploads/campus_photos/IMG_8115.JPG"
+                  alt="Campus Facilities and Community"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                   loading="lazy"
                 />
@@ -348,9 +353,9 @@ export function CampusLifePage() {
 
             <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
               <div className="aspect-square overflow-hidden">
-                <img 
-                  src="/uploads/campus_photos/DSC_2802.jpg" 
-                  alt="IMAS Campus Life" 
+                <img
+                  src="/uploads/campus_photos/DSC_2802.jpg"
+                  alt="IMAS Campus Life"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                   loading="lazy"
                 />
@@ -366,7 +371,7 @@ export function CampusLifePage() {
             <p className="text-lg sm:text-xl text-gray-700 leading-relaxed mb-8 sm:mb-12">
               At IMAS, learning extends beyond classrooms into a vibrant culture of collaboration, creativity, and celebration. Students actively participate in cultural festivals such as Diwali, Saraswati Puja, and even unique events like Bhai-Dooj with the Indian Army, fostering unity and tradition.
             </p>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
               <div className="text-center">
                 <div className="w-16 h-16 bg-[#143674]/10 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -375,7 +380,7 @@ export function CampusLifePage() {
                 <h3 className="font-bold text-gray-800 mb-2">Cultural Events</h3>
                 <p className="text-gray-600 text-sm">Theatre, debates, open-mic nights</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="w-16 h-16 bg-[#2e7bb3]/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Trophy className="h-8 w-8 text-[#2e7bb3]" />
@@ -383,7 +388,7 @@ export function CampusLifePage() {
                 <h3 className="font-bold text-gray-800 mb-2">Sports & Fitness</h3>
                 <p className="text-gray-600 text-sm">Cricket, table tennis, gym sessions</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="w-16 h-16 bg-[#26c1d3]/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Users className="h-8 w-8 text-[#26c1d3]" />
@@ -391,7 +396,7 @@ export function CampusLifePage() {
                 <h3 className="font-bold text-gray-800 mb-2">Student Clubs</h3>
                 <p className="text-gray-600 text-sm">Marketing, Finance, HR, Analytics</p>
               </div>
-              
+
               <div className="text-center">
                 <div className="w-16 h-16 bg-[#143674]/10 rounded-full flex items-center justify-center mx-auto mb-4">
                   <Briefcase className="h-8 w-8 text-[#143674]" />
@@ -523,14 +528,14 @@ export function CampusLifePage() {
       <section className="relative py-16 bg-gray-900 text-white overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0">
-          <img 
-            src="/uploads/IMASBUILDING.jpeg" 
-            alt="IMAS Building" 
+          <img
+            src="/uploads/IMASBUILDING.jpeg"
+            alt="IMAS Building"
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-gray-900/80"></div>
         </div>
-        
+
         <div className="relative max-w-7xl mx-auto px-4 text-center z-10">
           <div className={`inline-block ${IMAS_TAILWIND_CLASSES.BG_MEDIUM_BLUE} text-white px-6 py-2 rounded-full text-sm font-semibold mb-6`}>
             ADMISSIONS OPEN
@@ -541,7 +546,7 @@ export function CampusLifePage() {
           <p className="text-base sm:text-lg text-gray-300 max-w-3xl mx-auto mb-6 sm:mb-8">
             Experience the perfect blend of academic excellence, industry exposure, and vibrant campus life at IMAS Business School Kolkata.
           </p>
-          <Button 
+          <Button
             onClick={applyNow}
             className={`${IMAS_TAILWIND_CLASSES.GRADIENT_PRIMARY} hover:from-[#2e7bb3] hover:to-[#26c1d3] text-white px-8 sm:px-10 lg:px-12 py-3 sm:py-4 text-sm sm:text-base lg:text-lg font-semibold hover:scale-105 transition-all duration-300`}
           >

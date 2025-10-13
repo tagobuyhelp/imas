@@ -36,7 +36,10 @@ export function CampusLifeSection() {
                     </div>
                     <div className="flex-1">
                       <h3 className="font-bold text-gray-800 mb-2 text-sm sm:text-lg">PRIME LOCATION</h3>
-                      <p className="text-gray-600 leading-relaxed text-xs sm:text-sm">Located in Salt Lake Sector V, Kolkata's IT hub, near St. Xavier's University Newtown</p>
+                      <p className="text-gray-600 leading-relaxed text-xs sm:text-sm">
+                        Newtown – Kolkata’s Smart City and IT Hub, strategically located near Wipro and Infosys, 
+                        offers a modern learning environment built for the future.
+                      </p>
                     </div>
                   </div>
 
@@ -83,13 +86,13 @@ export function CampusLifeSection() {
                     <div>
                       <h3 className="font-bold text-gray-800 text-sm sm:text-lg">CAMPUS LOCATION</h3>
                       <div className={`inline-block px-2 py-1 rounded-full text-xs font-medium ${IMAS_TAILWIND_CLASSES.BG_DARK_BLUE}/10 ${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE}`}>
-                        Salt Lake Sector V
+                        Newtown – Kolkata’s Smart City and IT Hub
                       </div>
                     </div>
                   </div>
                   <div className="space-y-3 text-xs sm:text-sm text-gray-600 ml-13">
                     <p>
-                      <strong>Address:</strong> Near St. Xavier's University Newtown, Salt Lake Sector V, Kolkata
+                      <strong>Address:</strong> Newtown – Kolkata’s Smart City and IT Hub, Near Wipro and Infosys
                     </p>
                     <p>
                       <strong>Connectivity:</strong> Well-connected by public transport and easily accessible from all parts of Kolkata

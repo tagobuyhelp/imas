@@ -234,7 +234,7 @@ export function FacultyPage() {
             {/* Section Header */}
             <div className="text-center mb-8 sm:mb-12">
               <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-4 sm:mb-6 animate-fade-in-up">
-                Our <span className={`${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE}`}>Faculty Directory</span>
+                Our <span className={`${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE}`}>Academic Team</span>
               </h2>
               <p className="text-gray-600 text-sm sm:text-base md:text-lg max-w-4xl mx-auto leading-relaxed mb-6 sm:mb-8 animate-fade-in-up animation-delay-200 px-2">
                 Our professors not only teach, but they mentor, inspire, and shape the next generation of business leaders, innovators, and entrepreneurs. With a perfect blend of academic rigour and industry relevance, the IMAS faculty team ensures every student is industry-ready and future-focused.
@@ -455,7 +455,7 @@ export function FacultyPage() {
                                   target.src = '/uploads/placeholder-faculty.jpg';
                                 }}
                               />
-                              <div className="w-full h-full bg-gray-100 flex items-center justify-center hidden">
+                              <div className="w-full h-full bg-gray-100 hidden items-center justify-center">
                                 <Users className="h-16 w-16 text-gray-400" />
                               </div>
 
@@ -667,7 +667,7 @@ export function FacultyPage() {
 
                   {/* Additional Info */}
                   <div className="mt-8 text-sm text-gray-400">
-                    <p>Application Deadline: <span className="text-red-400 font-semibold">March 30, 2026</span></p>
+                    <p>Application Deadline: <span className="text-red-400 font-semibold">December 30, 2026</span></p>
                 <p className="mt-2">Limited seats available for the 2026 batch</p>
                   </div>
                 </div>

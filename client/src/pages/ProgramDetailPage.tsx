@@ -171,7 +171,7 @@ export function ProgramDetailPage() {
                         <div className="max-w-5xl mx-auto">
                             {/* Enhanced Breadcrumb */}
                             <nav className="mb-4 sm:mb-6 animate-fade-in-up">
-                                <div className="flex items-center space-x-1.5 text-xs text-white/80 bg-white/10 backdrop-blur-sm rounded-full px-3 py-1.5 inline-flex border border-white/20">
+                                <div className="inline-flex items-center space-x-1.5 text-xs text-white/80 bg-white/10 backdrop-blur-sm rounded-full px-3 py-1.5 border border-white/20">
                                     <Link to="/" className="hover:text-white transition-colors font-medium">Home</Link>
                                     <ArrowRight className="h-2.5 w-2.5" />
                                     <Link to="/programs" className="hover:text-white transition-colors font-medium">Programs</Link>
@@ -524,20 +524,24 @@ export function ProgramDetailPage() {
                             <div className={`bg-[#143674]/10 rounded-2xl p-6 border border-[#143674]/20 shadow-sm`}>
                                 
                                 {/* Stats Grid */}
-                                <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-                                    <div className="bg-white/60 backdrop-blur-sm rounded-xl p-3 border border-white/50">
+                                <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-6">
+                                    <div className="bg-white/60 backdrop-blur-sm rounded-xl p-3 border border-white/50 text-center">
                                         <div className={`text-lg font-bold ${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE}`}>{program.duration}</div>
                                         <div className="text-xs text-gray-600 font-medium">Duration</div>
                                     </div>
-                                    <div className="bg-white/60 backdrop-blur-sm rounded-xl p-3 border border-white/50">
+                                    <div className="bg-white/60 backdrop-blur-sm rounded-xl p-3 border border-white/50 text-center">
                                         <div className={`text-lg font-bold ${IMAS_TAILWIND_CLASSES.TEXT_MEDIUM_BLUE}`}>{program.curriculum.phases.length}</div>
                                         <div className="text-xs text-gray-600 font-medium">Semesters</div>
                                     </div>
-                                    <div className="bg-white/60 backdrop-blur-sm rounded-xl p-3 border border-white/50">
+                                    <div className="bg-white/60 backdrop-blur-sm rounded-xl p-3 border border-white/50 text-center">
                                         <div className={`text-lg font-bold ${IMAS_TAILWIND_CLASSES.TEXT_TEAL}`}>{program.format}</div>
                                         <div className="text-xs text-gray-600 font-medium">Format</div>
                                     </div>
-                                    <div className="bg-white/60 backdrop-blur-sm rounded-xl p-3 border border-white/50">
+                                    <div className="bg-white/60 backdrop-blur-sm rounded-xl p-3 border border-white/50 text-center">
+                                        <div className={`text-sm font-bold ${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE}`}>{program.location}</div>
+                                        <div className="text-xs text-gray-600 font-medium">Location</div>
+                                    </div>
+                                    <div className="bg-white/60 backdrop-blur-sm rounded-xl p-3 border border-white/50 text-center">
                                         <div className={`text-lg font-bold ${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE}`}>{program.commencement}</div>
                                         <div className="text-xs text-gray-600 font-medium">Commencement</div>
                                     </div>
@@ -672,6 +676,123 @@ export function ProgramDetailPage() {
                             </div>
                         </div>
                     </section>
+
+                    {/* Partner Universities Section - Only for MBA Global */}
+                    {program.name === 'MBA Global' && (
+                        <section id="partner-universities" className="py-8 sm:py-12 bg-gradient-to-br from-gray-50 to-white">
+                            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                                <div className="space-y-8">
+                                    {/* Section Header */}
+                                    <div className="text-center max-w-4xl mx-auto">
+                                        <div className={`inline-block ${IMAS_TAILWIND_CLASSES.BG_DARK_BLUE}/10 ${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE} px-4 py-2 rounded-full text-sm font-semibold mb-4 border ${IMAS_TAILWIND_CLASSES.BORDER_DARK_BLUE}/20`}>
+                                            UK PARTNER UNIVERSITIES
+                                        </div>
+                                        <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-800 mb-4">
+                                            Study at Prestigious <span className={`${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE}`}>UK Universities</span>
+                                        </h2>
+                                        <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                                            Our MBA Global program offers partnerships with renowned UK universities, providing you with international exposure and dual qualifications.
+                                        </p>
+                                    </div>
+
+                                    {/* Partner Universities Grid */}
+                                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+                                        {/* University of Manchester */}
+                                        <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-100 group">
+                                            <div className="text-center">
+                                                <div className="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-red-600 to-red-700 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                                                    <span className="text-white font-bold text-lg">UoM</span>
+                                                </div>
+                                                <h3 className="text-lg font-bold text-gray-800 mb-2">University of Manchester</h3>
+                                                <p className="text-sm text-gray-600 mb-4">Ranked #27 globally, one of the UK's most prestigious research universities</p>
+                                                <div className="flex flex-wrap justify-center gap-2">
+                                                    <span className={`px-3 py-1 ${IMAS_TAILWIND_CLASSES.BG_DARK_BLUE}/10 ${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE} rounded-full text-xs font-semibold`}>
+                                                        Russell Group
+                                                    </span>
+                                                    <span className={`px-3 py-1 ${IMAS_TAILWIND_CLASSES.BG_TEAL}/10 ${IMAS_TAILWIND_CLASSES.TEXT_TEAL} rounded-full text-xs font-semibold`}>
+                                                        Global Top 30
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        {/* University of Birmingham */}
+                                        <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-100 group">
+                                            <div className="text-center">
+                                                <div className="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-blue-600 to-blue-700 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                                                    <span className="text-white font-bold text-lg">UoB</span>
+                                                </div>
+                                                <h3 className="text-lg font-bold text-gray-800 mb-2">University of Birmingham</h3>
+                                                <p className="text-sm text-gray-600 mb-4">A leading research university with strong business and management programs</p>
+                                                <div className="flex flex-wrap justify-center gap-2">
+                                                    <span className={`px-3 py-1 ${IMAS_TAILWIND_CLASSES.BG_DARK_BLUE}/10 ${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE} rounded-full text-xs font-semibold`}>
+                                                        Russell Group
+                                                    </span>
+                                                    <span className={`px-3 py-1 ${IMAS_TAILWIND_CLASSES.BG_TEAL}/10 ${IMAS_TAILWIND_CLASSES.TEXT_TEAL} rounded-full text-xs font-semibold`}>
+                                                        AACSB Accredited
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        {/* University of Leeds */}
+                                        <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-100 group">
+                                            <div className="text-center">
+                                                <div className="w-20 h-20 mx-auto mb-4 bg-gradient-to-br from-yellow-600 to-orange-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                                                    <span className="text-white font-bold text-lg">UoL</span>
+                                                </div>
+                                                <h3 className="text-lg font-bold text-gray-800 mb-2">University of Leeds</h3>
+                                                <p className="text-sm text-gray-600 mb-4">Renowned for its business school and strong industry connections</p>
+                                                <div className="flex flex-wrap justify-center gap-2">
+                                                    <span className={`px-3 py-1 ${IMAS_TAILWIND_CLASSES.BG_DARK_BLUE}/10 ${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE} rounded-full text-xs font-semibold`}>
+                                                        Russell Group
+                                                    </span>
+                                                    <span className={`px-3 py-1 ${IMAS_TAILWIND_CLASSES.BG_TEAL}/10 ${IMAS_TAILWIND_CLASSES.TEXT_TEAL} rounded-full text-xs font-semibold`}>
+                                                        Triple Accredited
+                                                    </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {/* Benefits Section */}
+                                    <div className="bg-white rounded-xl shadow-lg border border-gray-100 p-6 sm:p-8">
+                                        <h3 className="text-xl font-bold text-gray-800 mb-6 text-center">Why Choose Our UK Partnerships?</h3>
+                                        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                                            <div className="text-center">
+                                                <div className={`w-12 h-12 ${IMAS_TAILWIND_CLASSES.BG_DARK_BLUE} rounded-full flex items-center justify-center mx-auto mb-3`}>
+                                                    <Award className="h-6 w-6 text-white" />
+                                                </div>
+                                                <h4 className="font-semibold text-gray-800 mb-2">Dual Degrees</h4>
+                                                <p className="text-sm text-gray-600">Earn qualifications from both IMAS India and UK university</p>
+                                            </div>
+                                            <div className="text-center">
+                                                <div className={`w-12 h-12 ${IMAS_TAILWIND_CLASSES.BG_TEAL} rounded-full flex items-center justify-center mx-auto mb-3`}>
+                                                    <Globe className="h-6 w-6 text-white" />
+                                                </div>
+                                                <h4 className="font-semibold text-gray-800 mb-2">Global Exposure</h4>
+                                                <p className="text-sm text-gray-600">Experience international business environment</p>
+                                            </div>
+                                            <div className="text-center">
+                                                <div className={`w-12 h-12 ${IMAS_TAILWIND_CLASSES.BG_MEDIUM_BLUE} rounded-full flex items-center justify-center mx-auto mb-3`}>
+                                                    <Users className="h-6 w-6 text-white" />
+                                                </div>
+                                                <h4 className="font-semibold text-gray-800 mb-2">International Network</h4>
+                                                <p className="text-sm text-gray-600">Build connections with global professionals</p>
+                                            </div>
+                                            <div className="text-center">
+                                                <div className={`w-12 h-12 ${IMAS_TAILWIND_CLASSES.BG_DARK_BLUE} rounded-full flex items-center justify-center mx-auto mb-3`}>
+                                                    <Briefcase className="h-6 w-6 text-white" />
+                                                </div>
+                                                <h4 className="font-semibold text-gray-800 mb-2">Career Boost</h4>
+                                                <p className="text-sm text-gray-600">Enhanced job prospects in global markets</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    )}
 
                     {/* Careers Section - Compact */}
                     <section id="careers" className="py-8 sm:py-10">

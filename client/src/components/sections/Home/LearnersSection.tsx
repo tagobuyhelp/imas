@@ -168,10 +168,10 @@ export function LearnersSection() {
             {learners.map((learner, index) => (
               <div
                 key={index}
-                className="flex-shrink-0 w-[280px] sm:w-[320px] lg:w-[350px] group bg-white rounded-xl sm:rounded-2xl overflow-hidden shadow-md hover:shadow-lg transition-all duration-500 transform hover:-translate-y-1 sm:hover:-translate-y-2 border border-gray-100"
+                className="flex-shrink-0 w-[280px] sm:w-[300px] lg:w-[320px] group bg-white rounded-lg overflow-hidden shadow-sm hover:shadow-md transition-all duration-300 transform hover:-translate-y-1 border border-gray-100"
               >
                 {/* Image Section */}
-                <div className="relative h-64 sm:h-56 md:h-80 overflow-hidden">
+                <div className="relative h-70 sm:h-70 md:h-80 overflow-hidden">
                   <img
                     src={learner.photo}
                     alt={learner.name}
@@ -183,7 +183,7 @@ export function LearnersSection() {
                       if (fallback) fallback.style.display = 'flex';
                     }}
                   />
-                  <div className="w-full h-full bg-gray-100 flex items-center justify-center hidden">
+                  <div className="w-full h-full bg-gray-100 hidden items-center justify-center">
                     <Users className="h-12 w-12 sm:h-16 sm:w-16 text-gray-400" />
                   </div>
 
@@ -204,9 +204,9 @@ export function LearnersSection() {
                 </div>
 
                 {/* Content Section */}
-                <div className="p-3 sm:p-4 md:p-5">
+                <div className="p-4 sm:p-5">
                   {/* Name */}
-                  <h3 className="font-bold text-gray-800 text-base sm:text-lg mb-1 group-hover:text-gray-900 transition-colors">
+                  <h3 className="font-bold text-gray-800 text-sm sm:text-base mb-1 group-hover:text-gray-900 transition-colors">
                     {learner.name}
                   </h3>
 
@@ -219,13 +219,13 @@ export function LearnersSection() {
                   <div className="mb-2">
                     <div className="flex gap-1">
                       {[...Array(learner.rating)].map((_, i) => (
-                        <span key={i} className="text-yellow-400 text-xs sm:text-sm">★</span>
+                        <span key={i} className="text-green-600 text-lg sm:text-lg">★</span>
                       ))}
                     </div>
                   </div>
 
                   {/* Testimonial */}
-                  <p className="text-gray-600 leading-snug text-xs sm:text-sm">
+                  <p className="text-gray-600 leading-relaxed text-xs sm:text-sm line-clamp-3">
                     "{learner.testimonial}"
                   </p>
                 </div>

@@ -3,6 +3,7 @@ import { Header } from './Header';
 import { Footer } from './Footer';
 import { Sidebar } from './Sidebar';
 import { BottomNavBar } from './BottomNavBar';
+import { BackToTop } from '../ui/BackToTop';
 import { useLocation } from 'react-router-dom';
 
 interface LayoutProps {
@@ -62,6 +63,9 @@ export function Layout({ children, currentPage }: LayoutProps) {
       
       {/* Footer */}
       <Footer />
+      
+      {/* Back to Top Button */}
+      <BackToTop />
     </div>
   );
 }

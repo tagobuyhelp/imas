@@ -7,7 +7,7 @@ export function PlacementStatsSection() {
     { value: '100%', label: 'Placement Rate' },
     { value: '₹18.5 LPA', label: 'Highest Package' },
     { value: '₹8-12 LPA', label: 'Average Package' },
-    { value: '2,20,234+', label: "Students Empowered" },
+    { value: '2575+', label: "Students Empowered" },
   ];
 
   return (

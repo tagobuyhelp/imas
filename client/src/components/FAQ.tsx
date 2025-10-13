@@ -18,98 +18,239 @@ interface FAQSection {
   items: FAQItem[];
 }
 
-const faqData: FAQSection[] = [
+export const faqData: FAQSection[] = [
   {
-    id: 'important-faqs',
-    title: 'Important FAQs',
-    icon: Star,
-    description: 'Most frequently asked questions about IMAS',
-    items: [
-      {
-        question: 'Why choose IMAS Kolkata for your management education?',
-        answer: 'IMAS Kolkata is a premier business school offering AICTE-approved PGDM programs with 100% placement rate, ₹18.5 LPA highest package, and ₹8-12 LPA average package. We provide industry-focused curriculum, international exposure, state-of-the-art facilities, and strong industry partnerships with top companies for guaranteed career success.',
-        popular: true
-      },
-      {
-        question: 'What programs does IMAS Kolkata offer?',
-        answer: 'IMAS offers comprehensive PGDM programs in Marketing Management, Financial Management, Human Resource Management, Business Analytics, AI & Data Science, Fintech, Healthcare Management, Innovation & Entrepreneurship, and Working Executive programs. All programs are AICTE-approved with excellent placement records.',
-        popular: true
-      },
-      {
-        question: 'What are the placement statistics at IMAS Kolkata?',
-        answer: 'IMAS Kolkata boasts 100% placement rate with ₹18.5 LPA highest package and ₹8-12 LPA average package. Over 2,20,234+ students have been empowered through our programs. Our graduates work with top companies like TCS, Wipro, Infosys, HDFC Bank, ICICI Bank, and leading startups.',
-        popular: true
-      },
-      {
-        question: 'What makes IMAS different from other business schools?',
-        answer: 'IMAS stands out with its industry-focused curriculum, 100% placement guarantee, international immersion programs, state-of-the-art campus facilities, experienced faculty from IIMs and top institutions, strong industry partnerships, and comprehensive skill development programs including soft skills, leadership, and entrepreneurship training.'
-      }
-    ]
-  },
-  {
-    id: 'degree',
+    id: 'degree-certification',
     title: 'Degree & Certification',
     icon: CheckCircle,
-    description: 'Information about degrees and certifications',
+    description: 'Information about degrees and certifications for all IMAS programs',
     items: [
+      // MBA Global
       {
-        question: 'Does this program offer a degree or diploma?',
-        answer: 'Yes. Students receive:\n• Year 1 (India): PGDM (AICTE-approved) + Extended Diploma in Leadership & Strategic Management (EDLSMP) from Edexcel BTEC, UK.\n• Year 2 (UK): MBA degree from the chosen UK partner university (globally recognized).'
+        question: 'What degree will I receive upon completing the MBA Global program?',
+        answer:
+          "Graduates receive a Post Graduate Diploma in Management (PGDM) from IMAS, which is AICTE-approved in India. Additionally, there's a pathway to complete an MBA from a UK university, such as Leeds Beckett University or Cardiff Metropolitan University, offering international recognition.",
+        popular: true,
       },
       {
-        question: 'Are UK MBA degrees globally valid?',
-        answer: 'Yes. The UK MBA degree is recognized and respected worldwide, enhancing career prospects across India, Europe, the Middle East and North America.'
-      }
-    ]
+        question: 'Is the MBA Global degree recognized internationally?',
+        answer:
+          'Yes, the MBA Global program offers a UK pathway, ensuring international recognition of your MBA degree.',
+      },
+      {
+        question: 'What is the duration of the MBA Global program?',
+        answer:
+          'The MBA Global program spans two years, with the initial year completed at IMAS Kolkata and the subsequent year at a partner UK university.',
+      },
+      {
+        question: 'Are there any prerequisites to enroll in MBA Global?',
+        answer:
+          'Applicants must have completed their graduation with 70% or above. Specific eligibility criteria can be found in the program brochure.',
+      },
+      {
+        question: 'Can I obtain a digital copy of my certificate for MBA Global?',
+        answer: 'Yes, digital certificates are typically provided upon completion of the program.',
+      },
+
+      // PGDM Executive
+      {
+        question: 'What degree will I receive upon completing the PGDM Executive program?',
+        answer:
+          'Graduates receive a Post Graduate Diploma in Management (PGDM) from IMAS, which is AICTE-approved in India.',
+      },
+      {
+        question: 'Is the PGDM Executive degree recognized internationally?',
+        answer:
+          'While the PGDM is AICTE-approved in India, the program does not explicitly mention international recognition.',
+      },
+      {
+        question: 'What is the duration of the PGDM Executive program?',
+        answer:
+          'The PGDM Executive program spans two years, designed to accommodate the schedules of working professionals.',
+      },
+      {
+        question: 'Are there any prerequisites to enroll in PGDM Executive?',
+        answer:
+          'Applicants must have completed their graduation. Specific eligibility criteria can be found in the program brochure.',
+      },
+      {
+        question: 'Can I obtain a digital copy of my certificate for PGDM Executive?',
+        answer: 'Yes, digital certificates are typically provided upon completion of the program.',
+      },
+
+      // PGDM Regular
+      {
+        question: 'What degree will I receive upon completing the PGDM Regular program?',
+        answer:
+          'Graduates receive a Post Graduate Diploma in Management (PGDM) from IMAS, which is AICTE-approved in India.',
+      },
+      {
+        question: 'Is the PGDM Regular degree recognized internationally?',
+        answer:
+          'The PGDM is AICTE-approved in India. While the program does not explicitly mention international recognition.',
+      },
+      {
+        question: 'What is the duration of the PGDM Regular program?',
+        answer:
+          'The PGDM Regular program spans two years, designed to provide a comprehensive management education.',
+      },
+      {
+        question: 'Are there any prerequisites to enroll in PGDM Regular?',
+        answer:
+          'Applicants must have completed their graduation with at least 50% aggregate marks. Specific eligibility criteria can be found in the program brochure.',
+      },
+      {
+        question: 'Can I obtain a digital copy of my certificate for PGDM Regular?',
+        answer: 'Yes, digital certificates are typically provided upon completion of the program.',
+      },
+    ],
   },
   {
     id: 'eligibility-criteria',
-    title: 'Eligibility Criteria',
+    title: 'Eligibility & Criteria',
     icon: Users,
     description: 'Requirements and qualifications for admission',
     items: [
+      // MBA Global
       {
-        question: 'What is the eligibility criteria for PGDM programs?',
-        answer: '• Graduation with 50% or above from any recognized university\n• 2023, 2024, 2025, 2026 pass-outs are eligible\n• Valid scores in CAT/XAT/CMAT/MAT/ATMA/CUET accepted\n• Strong academic background and career aspirations in management'
+        question: 'Who is eligible to apply for the MBA Global program?',
+        answer:
+          'Graduates from any discipline are eligible. For detailed eligibility criteria, please refer to the program brochure.',
+        popular: true,
       },
       {
-        question: 'Do I need management entrance exam scores?',
-        answer: 'Yes, valid scores in any of the following entrance exams are required: CAT/XAT/CMAT/MAT/ATMA/CUET. IMAS also conducts its own entrance test for candidates who haven\'t appeared for these exams.'
+        question: 'Is prior work experience required for MBA Global?',
+        answer:
+          'The program does not explicitly mention a requirement for work experience. However, applicants with relevant experience may find the program beneficial.',
       },
       {
-        question: 'Is there an age limit for PGDM programs?',
-        answer: 'There is no strict age limit for PGDM programs. However, the programs are designed primarily for recent graduates and early-career professionals. Working Executive programs are specifically designed for experienced professionals.'
+        question: 'What is the minimum educational qualification for MBA Global?',
+        answer:
+          'A graduate degree with 70% aggregate marks from a recognized institution is required.',
       },
       {
-        question: 'Can final year students apply?',
-        answer: 'Yes, final year students (2026 pass-outs) can apply. However, admission will be confirmed only after successful completion of graduation with required percentage.'
-      }
-    ]
+        question: 'Are there any age restrictions for MBA Global?',
+        answer: 'The program does not specify any age restrictions.',
+      },
+      {
+        question: 'Can international students apply for MBA Global?',
+        answer:
+          'Yes, the program is open to international students, especially with the UK pathway option.',
+      },
+
+      // PGDM Executive
+      {
+        question: 'Who is eligible to apply for the PGDM Executive program?',
+        answer:
+          'Graduates from any discipline with work experience are eligible. For detailed eligibility criteria, please refer to the program brochure.',
+        popular: true,
+      },
+      {
+        question: 'Is prior work experience required for PGDM Executive?',
+        answer: 'Yes, the program requires 2–3 years of professional work experience.',
+      },
+      {
+        question: 'What is the minimum educational qualification for PGDM Executive?',
+        answer:
+          'A graduate degree with at least 50% aggregate marks from a recognized institution is required.',
+      },
+      {
+        question: 'Are there any age restrictions for PGDM Executive?',
+        answer: 'The program does not specify any age restrictions.',
+      },
+      {
+        question: 'Can international students apply for PGDM Executive?',
+        answer:
+          'Yes, the program is open to international students, provided they possess a student visa for studying in India.',
+      },
+
+      // PGDM Regular
+      {
+        question: 'Who is eligible to apply for the PGDM Regular program?',
+        answer:
+          'Graduates from any discipline are eligible. For detailed eligibility criteria, please refer to the program brochure.',
+      },
+      {
+        question: 'Is prior work experience required for PGDM Regular?',
+        answer:
+          'The program does not explicitly mention a requirement for work experience. However, applicants with relevant experience may find the program beneficial.',
+      },
+      {
+        question: 'What is the minimum educational qualification for PGDM Regular?',
+        answer:
+          'A graduate degree with at least 50% aggregate marks from a recognized institution is required.',
+      },
+      {
+        question: 'Are there any age restrictions for PGDM Regular?',
+        answer: 'The program does not specify any age restrictions.',
+      },
+      {
+        question: 'Can international students apply for PGDM Regular?',
+        answer:
+          'Yes, the program is open to international students, provided they possess a student visa for studying in India.',
+      },
+    ],
   },
   {
-    id: 'application',
+    id: 'application-process',
     title: 'Application Process',
     icon: Clock,
     description: 'Application timeline and procedures',
     items: [
+      // Common process for all programs
       {
-        question: 'When can I apply for PGDM programs 2026?',
-        answer: 'Applications for 2026 batch are now open and will continue until March 30, 2026. We recommend applying early to secure your preferred program and avail scholarship opportunities.'
+        question: 'How can I apply for IMAS programs?',
+        answer:
+          'Applications can be submitted online through the official IMAS website for all programs (MBA Global, PGDM Executive, and PGDM Regular).',
+        popular: true,
       },
       {
-        question: 'What is the application process?',
-        answer: '1. Submit the online application on www.imas.ac.in\n2. Upload academic transcripts and entrance test scores\n3. Shortlisted candidates will be invited for Personal Interview\n4. Admission offer letters are rolled out in cycles\n5. Confirm admission by paying fees within deadline'
+        question: 'Is there an online application form?',
+        answer:
+          'Yes, the application form is available on the IMAS website for all programs.',
       },
       {
-        question: 'What is the fee structure for PGDM programs?',
-        answer: 'Fee structure varies by program:\n• PGDM Plus Programs: ₹3,66,600 per year\n• Working Executive Programs: ₹2,50,000 per year\n• Flexible payment options and education loans available\n• Scholarships available for meritorious students'
+        question: 'What documents are required for application?',
+        answer:
+          'Typically, the required documents include:\n• Graduation mark sheets and certificates\n• Passport-sized photographs\n• Identity proof\n• Address proof\n• Entrance exam scores\n• Work experience certificates (for PGDM Executive)',
       },
       {
-        question: 'How can I strengthen my application?',
-        answer: 'To strengthen your application:\n• Maintain good academic performance (60%+ preferred)\n• Highlight extra-curricular activities, internships, and leadership roles\n• Write a compelling Statement of Purpose\n• Prepare well for entrance exams (CAT/XAT/CMAT/MAT)\n• Showcase relevant work experience if any'
-      }
-    ]
-  }
+        question: 'Is there an application fee?',
+        answer:
+          'Yes, there is an application fee of ₹500 to apply for all IMAS programs.',
+      },
+      {
+        question: 'How long does it take to process my application?',
+        answer:
+          'Application processing times can vary. For the most accurate information, please refer to the admissions section on the IMAS website or contact our Admission Cell.',
+      },
+    ],
+  },
+  {
+    id: 'general-info',
+    title: 'General Information',
+    icon: Star,
+    description: 'Additional information about IMAS',
+    items: [
+      {
+        question: 'Why choose IMAS Kolkata for your management education?',
+        answer:
+          'IMAS Kolkata is a premier business school offering AICTE-approved PGDM programs with 100% placement rate, ₹18.5 LPA highest package, and ₹8–12 LPA average package. We provide industry-focused curriculum, international exposure, state-of-the-art facilities, and strong industry partnerships with top companies for guaranteed career success.',
+        popular: true,
+      },
+      {
+        question: 'What are the placement statistics at IMAS Kolkata?',
+        answer:
+          'IMAS Kolkata boasts 100% placement rate with ₹18.5 LPA highest package and ₹8–12 LPA average package. Over 2575+ students have been empowered through our programs. Our graduates work with top companies like TCS, Wipro, Infosys, HDFC Bank, ICICI Bank, and leading startups.',
+        popular: true,
+      },
+      {
+        question: 'What makes IMAS different from other business schools?',
+        answer:
+          'IMAS stands out with its industry-focused curriculum, 100% placement guarantee, international immersion programs, state-of-the-art campus facilities, experienced faculty from IIMs and top institutions, strong industry partnerships, and comprehensive skill development programs including soft skills, leadership, and entrepreneurship training.',
+      },
+    ],
+  },
 ];
 
 interface FAQProps {
@@ -117,7 +258,7 @@ interface FAQProps {
 }
 
 export function FAQ({ className = '' }: FAQProps) {
-  const [activeSection, setActiveSection] = useState('important-faqs');
+  const [activeSection, setActiveSection] = useState('degree-certification');
   const [expandedItems, setExpandedItems] = useState<Set<string>>(new Set());
   const [isMobileSidebarOpen, setIsMobileSidebarOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
@@ -202,32 +343,7 @@ export function FAQ({ className = '' }: FAQProps) {
           </div>
         </div>
 
-        {/* Popular Questions - Quick Access */}
-        {!searchQuery && (
-          <div className="mb-12">
-            <h3 className="text-lg font-bold text-gray-800 mb-6 text-center">Popular Questions</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {popularQuestions.slice(0, 3).map((item, index) => (
-                <button
-                  key={index}
-                  onClick={() => {
-                    setActiveSection(item.sectionId);
-                    const itemKey = `${item.sectionId}-${faqData.find(s => s.id === item.sectionId)?.items.findIndex(i => i.question === item.question)}`;
-                    setExpandedItems(new Set([itemKey]));
-                  }}
-                  className="text-left p-4 bg-white/80 backdrop-blur-sm rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1 border border-white/20 group"
-                >
-                  <div className="flex items-start gap-3">
-                    <Star className={`h-5 w-5 ${IMAS_TAILWIND_CLASSES.TEXT_TEAL} flex-shrink-0 mt-0.5 group-hover:scale-110 transition-transform duration-300`} />
-                    <span className="text-sm font-medium text-gray-800 leading-relaxed group-hover:text-teal-600 transition-colors duration-300">
-                      {item.question}
-                    </span>
-                  </div>
-                </button>
-              ))}
-            </div>
-          </div>
-        )}
+        
 
         {/* Mobile Category Selector */}
         <div className="lg:hidden mb-8">
@@ -283,38 +399,53 @@ export function FAQ({ className = '' }: FAQProps) {
                 FAQ Categories
               </h3>
               <nav className="space-y-3">
-                {filteredData.map((section) => {
-                  const IconComponent = section.icon;
-                  return (
-                    <button
-                      key={section.id}
-                      onClick={() => setActiveSection(section.id)}
-                      className={`w-full text-left px-6 py-4 rounded-2xl transition-all duration-300 flex items-start gap-4 group ${
-                        activeSection === section.id
-                          ? `${IMAS_TAILWIND_CLASSES.BG_TEAL} text-white shadow-lg scale-105`
-                          : `text-gray-700 hover:bg-gray-50 hover:shadow-md hover:scale-102`
-                      }`}
-                    >
-                      <IconComponent className={`h-5 w-5 flex-shrink-0 mt-0.5 ${
-                        activeSection === section.id ? 'text-white' : IMAS_TAILWIND_CLASSES.TEXT_TEAL
-                      } group-hover:scale-110 transition-transform duration-300`} />
-                      <div>
-                        <div className="font-semibold text-sm">{section.title}</div>
-                        <div className={`text-xs mt-1 ${
-                          activeSection === section.id ? 'text-white/80' : 'text-gray-500'
-                        }`}>
-                          {section.description}
-                        </div>
-                        <div className={`text-xs mt-1 ${
-                          activeSection === section.id ? 'text-white/60' : 'text-gray-400'
-                        }`}>
-                          {section.items.length} questions
-                        </div>
-                      </div>
-                    </button>
-                  );
-                })}
-              </nav>
+  {filteredData.map((section) => {
+    const IconComponent = section.icon;
+    const isActive = activeSection === section.id;
+
+    return (
+      <button
+        key={section.id}
+        onClick={() => setActiveSection(section.id)}
+        aria-pressed={isActive}
+         className={`w-full text-left px-4 py-3 rounded-xl transition-all duration-300 flex items-start gap-3 group border ${
+           isActive
+             ? `${IMAS_TAILWIND_CLASSES.BG_TEAL} text-white shadow-lg scale-[1.02] border-transparent`
+             : `text-gray-700 hover:bg-gray-50 hover:shadow-md hover:scale-[1.01] border-gray-100`
+         }`}
+      >
+        <IconComponent
+          className={`h-4 w-4 flex-shrink-0 mt-0.5 transition-transform duration-300 ${
+            isActive
+              ? 'text-white scale-110'
+              : `${IMAS_TAILWIND_CLASSES.TEXT_TEAL} group-hover:scale-110`
+          }`}
+        />
+
+         <div className="flex flex-col">
+           <div className="font-semibold text-xs tracking-wide">
+             {section.title}
+           </div>
+           <div
+             className={`text-[11px] mt-0.5 leading-relaxed ${
+               isActive ? 'text-white/80' : 'text-gray-500'
+             }`}
+           >
+             {section.description}
+           </div>
+           <div
+             className={`text-[10px] mt-0.5 font-medium ${
+               isActive ? 'text-white/60' : 'text-gray-400'
+             }`}
+           >
+             {section.items.length} {section.items.length === 1 ? 'question' : 'questions'}
+           </div>
+         </div>
+      </button>
+    );
+  })}
+</nav>
+
 
 
             </div>
@@ -323,20 +454,20 @@ export function FAQ({ className = '' }: FAQProps) {
           {/* FAQ Content */}
           <div className="w-full lg:w-2/3">
             {currentSection && (
-              <div className="bg-white/90 backdrop-blur-sm rounded-3xl shadow-xl p-6 lg:p-8 border border-white/20">
-                <div className="flex items-center gap-4 mb-8">
+              <div className="bg-white/90 backdrop-blur-sm rounded-2xl shadow-lg p-4 lg:p-6 border border-white/20">
+                <div className="flex items-center gap-3 mb-6">
                   {React.createElement(currentSection.icon, { 
-                    className: `h-8 w-8 ${IMAS_TAILWIND_CLASSES.TEXT_TEAL}` 
+                    className: `h-6 w-6 ${IMAS_TAILWIND_CLASSES.TEXT_TEAL}` 
                   })}
                   <div>
-                    <h3 className="text-xl lg:text-2xl font-bold text-gray-800">
+                    <h3 className="text-lg lg:text-xl font-bold text-gray-800">
                       {currentSection.title}
                     </h3>
-                    <p className="text-sm text-gray-600 mt-1">{currentSection.description}</p>
+                    <p className="text-xs text-gray-600 mt-0.5">{currentSection.description}</p>
                   </div>
                 </div>
                 
-                <div className="space-y-4">
+                <div className="space-y-3">
                   {currentSection.items.map((item, index) => {
                     const itemKey = `${activeSection}-${index}`;
                     const isExpanded = expandedItems.has(itemKey);
@@ -344,28 +475,28 @@ export function FAQ({ className = '' }: FAQProps) {
                     return (
                       <div
                         key={index}
-                        className="border border-gray-200 rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 bg-white/50 backdrop-blur-sm"
+                        className="border border-gray-200 rounded-xl overflow-hidden hover:shadow-md transition-all duration-300 bg-white/50 backdrop-blur-sm"
                       >
                         <button
                           onClick={() => toggleItem(activeSection, index)}
-                          className="w-full px-6 py-5 text-left flex items-start justify-between hover:bg-gray-50/80 transition-colors duration-300"
+                          className="w-full px-4 py-3 text-left flex items-start justify-between hover:bg-gray-50/80 transition-colors duration-300"
                         >
-                          <div className="flex items-start gap-4 flex-1">
+                          <div className="flex items-start gap-3 flex-1">
                             {item.popular && (
-                              <Star className={`h-5 w-5 ${IMAS_TAILWIND_CLASSES.TEXT_TEAL} flex-shrink-0 mt-0.5`} />
+                              <Star className={`h-4 w-4 ${IMAS_TAILWIND_CLASSES.TEXT_TEAL} flex-shrink-0 mt-0.5`} />
                             )}
-                            <span className="font-semibold text-gray-800 text-sm lg:text-base leading-relaxed pr-4">
+                            <span className="font-semibold text-gray-800 text-xs lg:text-sm leading-relaxed pr-3">
                               {item.question}
                             </span>
                           </div>
-                          <ChevronDown className={`h-5 w-5 ${IMAS_TAILWIND_CLASSES.TEXT_TEAL} transition-transform duration-300 flex-shrink-0 mt-1 ${
+                          <ChevronDown className={`h-4 w-4 ${IMAS_TAILWIND_CLASSES.TEXT_TEAL} transition-transform duration-300 flex-shrink-0 mt-0.5 ${
                             isExpanded ? 'rotate-180' : ''
                           }`} />
                         </button>
                         
                         {isExpanded && (
-                          <div className="px-6 py-5 bg-white/80 border-t border-gray-200 animate-fade-in">
-                            <div className="text-gray-700 leading-relaxed whitespace-pre-line text-sm md:text-base">
+                          <div className="px-4 py-3 bg-white/80 border-t border-gray-200 animate-fade-in">
+                            <div className="text-gray-700 leading-relaxed whitespace-pre-line text-xs">
                               {item.answer}
                             </div>
                           </div>
@@ -377,10 +508,10 @@ export function FAQ({ className = '' }: FAQProps) {
 
                 {/* No Results */}
                 {currentSection.items.length === 0 && (
-                  <div className="text-center py-12">
-                    <Search className="h-12 w-12 text-gray-400 mx-auto mb-4" />
-                    <h4 className="text-lg font-semibold text-gray-600 mb-2">No questions found</h4>
-                    <p className="text-gray-500">Try adjusting your search terms or browse other categories.</p>
+                  <div className="text-center py-8">
+                    <Search className="h-8 w-8 text-gray-400 mx-auto mb-3" />
+                    <h4 className="text-sm font-semibold text-gray-600 mb-1">No questions found</h4>
+                    <p className="text-xs text-gray-500">Try adjusting your search terms or browse other categories.</p>
                   </div>
                 )}
               </div>

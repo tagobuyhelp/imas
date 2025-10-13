@@ -136,10 +136,10 @@ export function Sidebar({ currentPage, isOpen, onClose }: SidebarProps) {
               className={`w-full ${IMAS_TAILWIND_CLASSES.BORDER_TEAL} ${IMAS_TAILWIND_CLASSES.TEXT_TEAL} ${IMAS_TAILWIND_CLASSES.HOVER_BG_TEAL}/10`}
               onClick={() => {
                 handleNavClick();
-                window.open('https://payment.collexo.com/login/institute/', '_blank');
+                window.open('https://agorae.app/signin', '_blank');
               }}
             >
-              Pay Fees
+              Student Login
             </Button>
             <Button 
               className={`w-full ${IMAS_TAILWIND_CLASSES.GRADIENT_PRIMARY} hover:from-[#2e7bb3] hover:to-[#26c1d3] text-white`}

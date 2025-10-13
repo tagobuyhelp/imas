@@ -37,7 +37,7 @@ export function ContactPage(): React.JSX.Element {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     try {
       // Using FormSubmit.co for serverless form handling
       const formData_submit = new FormData();
@@ -50,12 +50,12 @@ export function ContactPage(): React.JSX.Element {
       formData_submit.append('_subject', `Contact Form: ${formData.subject}`);
       formData_submit.append('_captcha', 'false');
       formData_submit.append('_template', 'table');
-      
+
       const response = await fetch('https://formsubmit.co/info@imas.ac.in', {
         method: 'POST',
         body: formData_submit
       });
-      
+
       if (response.ok) {
         setSubmitStatus('success');
         setFormData({
@@ -65,7 +65,7 @@ export function ContactPage(): React.JSX.Element {
           subject: '',
           message: ''
         });
-        
+
         toast({
           title: 'Message Sent Successfully!',
           description: 'Thank you for contacting us. We\'ll get back to you within 24 hours.',
@@ -88,7 +88,7 @@ export function ContactPage(): React.JSX.Element {
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 to-white">
       {/* Hero Section */}
-      <section 
+      <section
         className="relative bg-gradient-to-r from-[#143674]/90 to-[#2e7bb3]/90 text-white py-36 bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: "url('/uploads/imas_hero_image1.webp')",
@@ -136,10 +136,11 @@ export function ContactPage(): React.JSX.Element {
                       <MapPin className="h-5 w-5 text-[#26c1d3] mt-1 flex-shrink-0" />
                       <div>
                         <p className="text-gray-700 font-medium">Plot No: 33 & 37</p>
-                        <p className="text-gray-600">Near St. Xavier's University Newtown</p>
+                        <p className="text-gray-600">Near Wipro & Infosys Campus, New Town – Smart City of Kolkata</p>
                         <p className="text-gray-600">Action Area III, Block - Bhangor – II</p>
                         <p className="text-gray-600">Kolkata - 700135, West Bengal</p>
                       </div>
+
                     </div>
                   </CardContent>
                 </Card>
@@ -204,7 +205,7 @@ export function ContactPage(): React.JSX.Element {
               </div>
 
               {/* Map Button */}
-              <Button 
+              <Button
                 onClick={() => window.open('https://maps.google.com/?q=Delta,+SALT+LAKE,+Bengal+Intelligent+Park+EP+%26,+Plot+A2+%26+B2,+GP+Block,+Sector+V,+Kolkata,+West+Bengal+700091', '_blank')}
                 className="w-full bg-[#26c1d3] hover:bg-[#26c1d3]/90 text-white py-3 text-lg font-semibold transition-all duration-300 hover:scale-105"
               >
@@ -231,7 +232,7 @@ export function ContactPage(): React.JSX.Element {
                       </AlertDescription>
                     </Alert>
                   )}
-                  
+
                   {submitStatus === 'error' && (
                     <Alert variant="destructive" className="mb-6">
                       <AlertDescription>
@@ -239,81 +240,81 @@ export function ContactPage(): React.JSX.Element {
                       </AlertDescription>
                     </Alert>
                   )}
-                  
+
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div className="space-y-2">
                         <Label htmlFor="name" className="text-gray-700 font-semibold">Full Name *</Label>
-                        <Input 
-                          id="name" 
-                        name="name"
-                        value={formData.name}
-                        onChange={handleInputChange}
-                        placeholder="Enter your full name" 
-                        required
-                        disabled={isSubmitting}
-                        className="border-gray-300 focus:border-[#26c1d3] focus:ring-[#26c1d3]"
+                        <Input
+                          id="name"
+                          name="name"
+                          value={formData.name}
+                          onChange={handleInputChange}
+                          placeholder="Enter your full name"
+                          required
+                          disabled={isSubmitting}
+                          className="border-gray-300 focus:border-[#26c1d3] focus:ring-[#26c1d3]"
                         />
                       </div>
                       <div className="space-y-2">
                         <Label htmlFor="phone" className="text-gray-700 font-semibold">Phone Number *</Label>
-                        <Input 
-                          id="phone" 
-                        name="phone"
-                        value={formData.phone || ''}
-                        onChange={handleInputChange}
-                        placeholder="Enter your phone number" 
-                        disabled={isSubmitting}
-                        className="border-gray-300 focus:border-[#26c1d3] focus:ring-[#26c1d3]"
+                        <Input
+                          id="phone"
+                          name="phone"
+                          value={formData.phone || ''}
+                          onChange={handleInputChange}
+                          placeholder="Enter your phone number"
+                          disabled={isSubmitting}
+                          className="border-gray-300 focus:border-[#26c1d3] focus:ring-[#26c1d3]"
                         />
                       </div>
                     </div>
-                    
+
                     <div className="space-y-2">
                       <Label htmlFor="email" className="text-gray-700 font-semibold">Email Address *</Label>
-                      <Input 
-                        id="email" 
-                      name="email"
-                      type="email" 
-                      value={formData.email}
-                      onChange={handleInputChange}
-                      placeholder="Enter your email address" 
-                      required
-                      disabled={isSubmitting}
-                      className="border-gray-300 focus:border-[#26c1d3] focus:ring-[#26c1d3]"
+                      <Input
+                        id="email"
+                        name="email"
+                        type="email"
+                        value={formData.email}
+                        onChange={handleInputChange}
+                        placeholder="Enter your email address"
+                        required
+                        disabled={isSubmitting}
+                        className="border-gray-300 focus:border-[#26c1d3] focus:ring-[#26c1d3]"
                       />
                     </div>
-                    
+
                     <div className="space-y-2">
                       <Label htmlFor="subject" className="text-gray-700 font-semibold">Subject *</Label>
-                      <Input 
-                        id="subject" 
-                      name="subject"
-                      value={formData.subject}
-                      onChange={handleInputChange}
-                      placeholder="What is this regarding?" 
-                      required
-                      disabled={isSubmitting}
-                      className="border-gray-300 focus:border-[#26c1d3] focus:ring-[#26c1d3]"
+                      <Input
+                        id="subject"
+                        name="subject"
+                        value={formData.subject}
+                        onChange={handleInputChange}
+                        placeholder="What is this regarding?"
+                        required
+                        disabled={isSubmitting}
+                        className="border-gray-300 focus:border-[#26c1d3] focus:ring-[#26c1d3]"
                       />
                     </div>
-                    
+
                     <div className="space-y-2">
                       <Label htmlFor="message" className="text-gray-700 font-semibold">Message *</Label>
-                      <Textarea 
-                        id="message" 
-                      name="message"
-                      value={formData.message}
-                      onChange={handleInputChange}
-                      placeholder="Tell us more about your inquiry..." 
-                      rows={5}
-                      required
-                      disabled={isSubmitting}
-                      className="border-gray-300 focus:border-[#26c1d3] focus:ring-[#26c1d3] resize-none"
+                      <Textarea
+                        id="message"
+                        name="message"
+                        value={formData.message}
+                        onChange={handleInputChange}
+                        placeholder="Tell us more about your inquiry..."
+                        rows={5}
+                        required
+                        disabled={isSubmitting}
+                        className="border-gray-300 focus:border-[#26c1d3] focus:ring-[#26c1d3] resize-none"
                       />
                     </div>
-                    
-                    <Button 
+
+                    <Button
                       type="submit"
                       disabled={isSubmitting}
                       className="w-full bg-gradient-to-r from-[#143674] to-[#2e7bb3] hover:from-[#2e7bb3] hover:to-[#143674] text-white py-3 text-lg font-semibold transition-all duration-300 hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100"
@@ -339,7 +340,7 @@ export function ContactPage(): React.JSX.Element {
       </section>
 
       {/* Call to Action Section */}
-      <section 
+      <section
         className="relative bg-gradient-to-r from-[#143674]/90 to-[#2e7bb3]/90 py-40 bg-cover bg-center bg-no-repeat"
         style={{
           backgroundImage: "url('/uploads/IMASBUILDING.jpeg')",
@@ -355,7 +356,7 @@ export function ContactPage(): React.JSX.Element {
             Join IMAS – Where Future Leaders Are Made!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button 
+            <Button
               onClick={() => window.open('/programs', '_blank')}
               className="bg-white text-[#143674] hover:bg-gray-100 px-8 py-3 text-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg"
             >
@@ -363,7 +364,7 @@ export function ContactPage(): React.JSX.Element {
               Explore Programs
             </Button>
 
-            <Button 
+            <Button
               onClick={() => window.open('https://admission.imas.ac.in/', '_blank')}
               variant="outline"
               className="border-2 bg-transparent border-white text-white hover:bg-white hover:text-[#143674] px-8 py-3 text-lg font-semibold transition-all duration-300 hover:scale-105 backdrop-blur-sm"

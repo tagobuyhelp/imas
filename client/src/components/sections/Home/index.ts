@@ -5,6 +5,7 @@ export { PlacementStatsSection } from './PlacementStatsSection';
 export { LearnersSection } from './LearnersSection';
 export { AboutSection } from './AboutSection';
 export { MentorsSection } from './MentorsSection';
+export { FacultySection } from './FacultySection';
 export { ProgramsSection } from './ProgramsSection';
 export { WhyChooseSection } from './WhyChooseSection';
 export { IndustryCollaborationsSection } from './IndustryCollaborationsSection';

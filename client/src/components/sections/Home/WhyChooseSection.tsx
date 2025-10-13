@@ -305,7 +305,7 @@ export function WhyChooseSection() {
             subtitle: 'PGDM & MBA Programs Completed'
           },
           {
-            number: '2,20,234+',
+            number: '2575+',
             title: 'Students Empowered',
             subtitle: 'Professionals Trained'
           }

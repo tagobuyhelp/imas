@@ -216,7 +216,7 @@ export function Header({ currentPage, onMenuToggle }: HeaderProps) {
               </div>
             </div>
             <div className="hidden md:flex items-center gap-3">
-              <span className="hidden lg:inline">March 30, 2026</span>
+              <span className="hidden lg:inline">December 30, 2026</span>
               <Button 
                 variant="ghost"
                 className="text-white hover:bg-white/10 px-3 py-1 text-xs sm:text-sm"
@@ -248,7 +248,7 @@ export function Header({ currentPage, onMenuToggle }: HeaderProps) {
               className="flex items-center gap-3 hover:opacity-80 transition-opacity"
             >
               <img
-                src="/uploads/logos/IMAS_WHITE.png"
+                src="/uploads/logos/imas.png"
                 alt="IMAS International Management & Analytics School"
                 className="h-10 w-auto xl:h-12"
               />
@@ -346,10 +346,10 @@ export function Header({ currentPage, onMenuToggle }: HeaderProps) {
               <Button 
                 variant="ghost" 
                 className={`text-white bg-gray-800 ${IMAS_TAILWIND_CLASSES.HOVER_TEXT_TEAL} hover:bg-gray-800 flex items-center gap-2 text-sm xl:text-base px-3 xl:px-4 py-1.5 xl:py-2`}
-                onClick={() => window.open('https://payment.collexo.com/login/institute/', '_blank')}
+                onClick={() => window.open('https://agorae.app/signin', '_blank')}
               >
                 <Calendar className="h-4 w-4" />
-                Pay Fees
+                Student Login
               </Button>
               <Button 
                 className={`${IMAS_TAILWIND_CLASSES.GRADIENT_PRIMARY} hover:from-[#2e7bb3] hover:to-[#26c1d3] text-white text-sm xl:text-base px-4 xl:px-6 py-1.5 xl:py-2 font-semibold hover:scale-105 transition-all duration-300 flex items-center gap-2`}
