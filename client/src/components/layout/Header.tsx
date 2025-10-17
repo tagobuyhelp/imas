@@ -216,7 +216,7 @@ export function Header({ currentPage, onMenuToggle }: HeaderProps) {
               </div>
             </div>
             <div className="hidden md:flex items-center gap-3">
-              <span className="hidden lg:inline">December 30, 2026</span>
+              <span className="hidden lg:inline">December 30, 2025</span>
               <Button 
                 variant="ghost"
                 className="text-white hover:bg-white/10 px-3 py-1 text-xs sm:text-sm"
@@ -484,3 +484,4 @@ export function Header({ currentPage, onMenuToggle }: HeaderProps) {
     </>
   );
 }
+

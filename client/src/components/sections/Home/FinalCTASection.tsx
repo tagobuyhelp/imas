@@ -61,7 +61,7 @@ export function FinalCTASection() {
 
           {/* Additional Info */}
           <div className="mt-8 text-sm text-gray-400">
-            <p>Application Deadline: <span className="text-red-400 font-semibold">December 30, 2026</span></p>
+            <p>Application Deadline: <span className="text-red-400 font-semibold">December 30, 2025</span></p>
             <p className="mt-2">Limited seats available for the 2026 batch</p>
           </div>
         </div>
@@ -69,3 +69,4 @@ export function FinalCTASection() {
     </section>
   );
 }
+

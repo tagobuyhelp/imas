@@ -140,10 +140,7 @@ export function MentorsSection() {
                     {/* Gradient Overlay */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent"></div>
 
-                    {/* Company Logo */}
-                    <div className="absolute top-2 left-2">
-                      <img src={mentor.companyLogo} alt={mentor.company} className="w-16 h-8 sm:w-20 sm:h-10 lg:h-12 object-contain " />
-                    </div>
+                    
 
                     {/* Company Badge */}
                     <div className="absolute top-2 sm:top-4 right-2 sm:right-4 bg-primary-dark backdrop-blur-sm rounded-full px-2 sm:px-3 py-1">
@@ -178,6 +175,11 @@ export function MentorsSection() {
                           })}
                         </p>
                       </div>
+                      {/* Company Logo */}
+                    <div className="flex justify-center">
+                      <img src={mentor.companyLogo} alt={mentor.company} className="w-16 h-8 sm:w-20 sm:h-10 lg:h-12 object-contain " />
+                    </div>
+
                     </div>
 
 

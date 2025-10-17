@@ -223,7 +223,7 @@ export function HeroSection() {
                           <div className="w-1.5 h-1.5 bg-red-500 rounded-full animate-pulse"></div>
                           <p className="text-xs font-semibold text-red-700">Application Deadline</p>
                         </div>
-                        <p className="text-sm font-bold text-red-600">December 30, 2026</p>
+                        <p className="text-sm font-bold text-red-600">December 30, 2025</p>
                         <p className="text-xs text-gray-600">
                           {daysLeft !== null && daysLeft > 0
                             ? `Only ${daysLeft} day${daysLeft === 1 ? '' : 's'} left to apply!`
@@ -264,3 +264,4 @@ export function HeroSection() {
     </section>
   );
 }
+
