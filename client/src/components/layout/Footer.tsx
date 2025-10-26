@@ -27,7 +27,7 @@ export function Footer() {
           <div className="text-left group">
             <div className="flex justify-start items-center gap-3 mb-4">
               <img
-                src="/uploads/logos/IMAS_WHITE.png"
+                src="/uploads/logos/imas.png"
                 alt="IMAS International Management & Analytics School"
                 className="h-10 md:h-12 w-auto transition-transform duration-300 group-hover:scale-105"
               />

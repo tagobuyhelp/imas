@@ -17,7 +17,7 @@ export const IMAS_BRAND = {
     WEBSITE: 'www.imas.ac.in',
     EMAIL: 'admission@imas.ac.in',
     PHONE: '+91 90888 22777',
-    ADDRESS: 'New Town – City of Joy, Kolkata',
+    ADDRESS: 'Newtown, Kolkata',
 } as const;
 
 // IMAS Contact Information
@@ -25,7 +25,7 @@ export const IMAS_CONTACT = {
     PHONE: '+91 90888 22777',
     EMAIL: 'admission@imas.ac.in',
     WEBSITE: 'www.imas.ac.in',
-    ADDRESS: 'New Town – City of Joy, Kolkata, West Bengal, India',
+    ADDRESS: 'Newtown, Kolkata',
 } as const;
 
 // IMAS Social Media

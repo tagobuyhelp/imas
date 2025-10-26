@@ -108,7 +108,7 @@ export function CampusLifeSection() {
             <div className="bg-white rounded-lg shadow-lg border border-gray-100 overflow-hidden">
               <div className="relative h-64 sm:h-72 md:h-80 lg:h-96">
                 <img
-                  src="/uploads/IMASBUILDING.jpeg"
+                  src="/uploads/campus_photos/imas_campus.png"
                   alt="IMAS Campus - Premier Business School in Kolkata"
                   className="w-full h-full object-cover"
                   onError={(e) => {
@@ -144,7 +144,7 @@ export function CampusLifeSection() {
                   VIBRANT LEARNING ENVIRONMENT
                 </p>
               </div>
-              <div className="space-y-4 grid grid-cols-4 gap-4 justify-center items-center">
+              <div className="grid grid-cols-4 sm:grid-cols-4 gap-4 sm:gap-6 justify-center place-items-center">
                 <div className="text-center">
                   <div className={`text-1xl sm:text-3xl font-bold ${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE} mb-1`}>500+</div>
                   <p className="text-[10px] sm:text-sm text-gray-600 font-medium">STUDENTS</p>

@@ -13,6 +13,7 @@ import { InternshipPage } from './pages/InternshipPage';
 import { CampusLifePage } from './pages/CampusLifePage';
 import { CampusTourPage } from './pages/CampusTourPage';
 import { EventsPage } from './pages/EventsPage';
+import { PrivacyPolicyPage } from './pages/PrivacyPolicyPage';
 // Removed admin and auth imports - components deleted
 import { Toaster } from './components/ui/toaster';
 import { BrochureModal } from './components/BrochureModal';
@@ -48,6 +49,7 @@ function AppContent(): React.JSX.Element {
         <Route path="/campus-life" element={<CampusLifePage />} />
         <Route path="/campus-tour" element={<CampusTourPage />} />
         <Route path="/events" element={<EventsPage />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
         {/* Admin routes removed - no backend API available */}
       </Routes>
     </Layout>

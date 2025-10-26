@@ -212,7 +212,7 @@ export function HeroSection() {
                         </div>
                         <div className="bg-gradient-to-br from-blue-50 to-purple-50 p-2 rounded-lg text-center">
                           <Users className="w-4 h-4 text-blue-600 mx-auto mb-1" />
-                          <div className="text-sm font-bold text-gray-800">60 Seats</div>
++                          <div className="text-sm font-bold text-gray-800">120 Seats</div>
                           <div className="text-xs text-gray-600">Available</div>
                         </div>
                       </div>

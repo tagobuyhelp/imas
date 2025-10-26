@@ -102,7 +102,7 @@ export function AboutSection() {
                   <div>
                     <h3 className="text-lg font-bold text-gray-800">Strategic Location</h3>
                     <div className={`inline-block px-2 py-1 rounded-full text-xs font-medium ${IMAS_TAILWIND_CLASSES.BG_DARK_BLUE}/10 ${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE}`}>
-                      New Town, Kolkata
+                      Newtown, Kolkata
                     </div>
                   </div>
                 </div>
@@ -127,7 +127,7 @@ export function AboutSection() {
               <div className="bg-white rounded-lg shadow-md border border-gray-100 overflow-hidden">
                 <div className="relative h-full sm:h-full md:h-full lg:h-full">
                   <img
-                    src="/uploads/IMASBUILDING.jpeg"
+                    src="/uploads/campus_photos/imas_campus.png"
                     alt="IMAS Campus - Premier Business School in Kolkata"
                     className="w-full h-full object-cover"
                     onError={(e) => {
