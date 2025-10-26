@@ -21,9 +21,9 @@ export function ProgramHighlightsSection() {
               </div>
               {/* Second Row - Text Content */}
               <div className="flex-1">
-                <h3 className="text-xs sm:text-sm font-semibold text-gray-700 uppercase tracking-wide mb-1">Duration</h3>
-                <p className={`text-base sm:text-xl font-bold ${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE} mb-1`}>2 Years</p>
-                <p className="text-xs text-gray-500">Includes Industry Projects</p>
+                <h3 className="text-xs sm:text-sm font-semibold text-gray-700 uppercase tracking-wide mb-1 text-center">Duration</h3>
+                <p className={`text-base sm:text-xl font-bold ${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE} mb-1 text-center`}>2 Years</p>
+                <p className="text-xs text-gray-500 text-center">Includes Industry Projects</p>
               </div>
             </div>
 
@@ -37,9 +37,9 @@ export function ProgramHighlightsSection() {
               </div>
               {/* Second Row - Text Content */}
               <div className="flex-1">
-                <h3 className="text-xs sm:text-sm font-semibold text-gray-700 uppercase tracking-wide mb-1">Location</h3>
-                <p className={`text-base sm:text-xl font-bold ${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE} mb-1`}>Kolkata</p>
-                <p className="text-xs text-gray-500">Smart City of Kolkata</p>
+                <h3 className="text-xs sm:text-sm font-semibold text-gray-700 uppercase tracking-wide mb-1 text-center">Location</h3>
+                <p className={`text-base sm:text-xl font-bold ${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE} mb-1 text-center`}>Kolkata</p>
+                <p className="text-xs text-gray-500 text-center">New Town – City of Joy</p>
               </div>
             </div>
 
@@ -53,9 +53,9 @@ export function ProgramHighlightsSection() {
               </div>
               {/* Second Row - Text Content */}
               <div className="flex-1">
-                <h3 className="text-xs sm:text-sm font-semibold text-gray-700 uppercase tracking-wide mb-1">Format</h3>
-                <p className={`text-base sm:text-xl font-bold ${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE} mb-1`}>Full-Time</p>
-                <p className="text-xs text-gray-500">On-Campus Learning</p>
+                <h3 className="text-xs sm:text-sm font-semibold text-gray-700 uppercase tracking-wide mb-1 text-center">Format</h3>
+                <p className={`text-base sm:text-xl font-bold ${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE} mb-1 text-center`}>Full-Time</p>
+                <p className="text-xs text-gray-500 text-center">On-Campus Learning</p>
               </div>
             </div>
 

@@ -291,7 +291,7 @@ export function ProgramDetailPage() {
                                     </div>
                                     <h3 className={`font-bold ${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE} mb-1 text-xs sm:text-sm tracking-wide`}>LOCATION</h3>
                                     <p className={`text-lg sm:text-xl font-bold ${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE} mb-1`}>{program.location}</p>
-                                    <p className="text-xs text-gray-500">Smart City of Kolkata</p>
+                                    <p className="text-xs text-gray-500">New Town – City of Joy</p>
                                 </CardContent>
                             </Card>
 
@@ -462,15 +462,15 @@ export function ProgramDetailPage() {
                                                 <div className="space-y-4">
                                                     <div className="flex items-center justify-between p-3 bg-gray-50 rounded-xl border border-gray-100/50">
                                                         <span className="text-sm font-medium text-gray-600">Duration</span>
-                                                        <span className={`font-bold ${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE}`}>{program.duration}</span>
+                                                        <span className={`font-bold ${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE} text-right`}>{program.duration}</span>
                                                     </div>
                                                     <div className="flex items-center justify-between p-3 bg-gray-50 rounded-xl border border-gray-100/50">
                                                         <span className="text-sm font-medium text-gray-600">Format</span>
-                                                        <span className={`font-bold ${IMAS_TAILWIND_CLASSES.TEXT_MEDIUM_BLUE}`}>{program.format}</span>
+                                                        <span className={`font-bold ${IMAS_TAILWIND_CLASSES.TEXT_MEDIUM_BLUE} text-right`}>{program.format}</span>
                                                     </div>
                                                     <div className="flex items-center justify-between p-3 bg-gray-50 rounded-xl border border-gray-100/50">
                                                         <span className="text-sm font-medium text-gray-600">Location</span>
-                                                        <span className={`font-bold ${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE}`}>{program.location}</span>
+                                                        <span className={`font-bold ${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE} text-right`}>{program.location}</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -526,24 +526,24 @@ export function ProgramDetailPage() {
                                 {/* Stats Grid */}
                                 <div className="grid grid-cols-2 md:grid-cols-5 gap-4 mb-6">
                                     <div className="bg-white/60 backdrop-blur-sm rounded-xl p-3 border border-white/50 text-center">
-                                        <div className={`text-lg font-bold ${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE}`}>{program.duration}</div>
-                                        <div className="text-xs text-gray-600 font-medium">Duration</div>
+                                        <div className={`text-lg font-bold ${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE} text-center`}>{program.duration}</div>
+                                        <div className="text-xs text-gray-600 font-medium text-center">Duration</div>
                                     </div>
                                     <div className="bg-white/60 backdrop-blur-sm rounded-xl p-3 border border-white/50 text-center">
-                                        <div className={`text-lg font-bold ${IMAS_TAILWIND_CLASSES.TEXT_MEDIUM_BLUE}`}>{program.curriculum.phases.length}</div>
-                                        <div className="text-xs text-gray-600 font-medium">Semesters</div>
+                                        <div className={`text-lg font-bold ${IMAS_TAILWIND_CLASSES.TEXT_MEDIUM_BLUE} text-center`}>{program.curriculum.phases.length}</div>
+                                        <div className="text-xs text-gray-600 font-medium text-center">Semesters</div>
                                     </div>
                                     <div className="bg-white/60 backdrop-blur-sm rounded-xl p-3 border border-white/50 text-center">
-                                        <div className={`text-lg font-bold ${IMAS_TAILWIND_CLASSES.TEXT_TEAL}`}>{program.format}</div>
-                                        <div className="text-xs text-gray-600 font-medium">Format</div>
+                                        <div className={`text-lg font-bold ${IMAS_TAILWIND_CLASSES.TEXT_TEAL} text-center`}>{program.format}</div>
+                                        <div className="text-xs text-gray-600 font-medium text-center">Format</div>
                                     </div>
                                     <div className="bg-white/60 backdrop-blur-sm rounded-xl p-3 border border-white/50 text-center">
-                                        <div className={`text-sm font-bold ${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE}`}>{program.location}</div>
-                                        <div className="text-xs text-gray-600 font-medium">Location</div>
+                                        <div className={`text-sm font-bold ${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE} text-center`}>{program.location}</div>
+                                        <div className="text-xs text-gray-600 font-medium text-center">Location</div>
                                     </div>
                                     <div className="bg-white/60 backdrop-blur-sm rounded-xl p-3 border border-white/50 text-center">
-                                        <div className={`text-lg font-bold ${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE}`}>{program.commencement}</div>
-                                        <div className="text-xs text-gray-600 font-medium">Commencement</div>
+                                        <div className={`text-lg font-bold ${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE} text-center`}>{program.commencement}</div>
+                                        <div className="text-xs text-gray-600 font-medium text-center">Commencement</div>
                                     </div>
                                 </div>
                                 

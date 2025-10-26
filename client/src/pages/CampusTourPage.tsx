@@ -188,7 +188,7 @@ export function CampusTourPage() {
             <div className="flex flex-wrap items-center justify-center gap-6 text-white/80 mb-8">
               <div className="flex items-center gap-2">
                 <MapPin className="h-5 w-5" />
-                <span>New Town – Smart City of Kolkata</span>
+                <span>New Town – City of Joy</span>
               </div>
               <div className="flex items-center gap-2">
                 <Building2 className="h-5 w-5" />

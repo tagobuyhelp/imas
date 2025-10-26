@@ -207,7 +207,7 @@ export function Header({ currentPage, onMenuToggle }: HeaderProps) {
         <div className="w-full px-6">
           <div className="flex items-center justify-between text-sm">
             <div className="flex items-center gap-4">
-              <span className="font-semibold">Final Intake Phase 7 Application Deadline</span>
+              <span className="font-semibold">Final Admission Phase – Apply Before the Deadline!</span>
               <div className="flex items-center gap-2">
                 <Clock className="h-4 w-4" />
                 <span className="font-mono">
@@ -216,7 +216,7 @@ export function Header({ currentPage, onMenuToggle }: HeaderProps) {
               </div>
             </div>
             <div className="hidden md:flex items-center gap-3">
-              <span className="hidden lg:inline">December 30, 2025</span>
+              <span className="hidden lg:inline">2025</span>
               <Button 
                 variant="ghost"
                 className="text-white hover:bg-white/10 px-3 py-1 text-xs sm:text-sm"

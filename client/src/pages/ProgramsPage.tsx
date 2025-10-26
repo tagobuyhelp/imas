@@ -254,13 +254,13 @@ export function ProgramsPage() {
                   <Clock className="h-5 w-5 sm:h-8 sm:w-8 text-white" />
                 </div>
                 <div className="space-y-1 sm:space-y-2">
-                  <h3 className="font-bold text-gray-800 text-xs sm:text-sm uppercase tracking-wider">Duration</h3>
-                  <p className="text-lg sm:text-3xl font-bold text-[#143674] mb-0.5 sm:mb-1">2 Years</p>
+                  <h3 className="font-bold text-gray-800 text-xs sm:text-sm uppercase tracking-wider text-center">Duration</h3>
+                  <p className="text-lg sm:text-3xl font-bold text-[#143674] mb-0.5 sm:mb-1 text-center">2 Years</p>
                   <div className="flex items-center justify-center gap-1 sm:gap-2">
                     <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-green-500 rounded-full animate-pulse"></div>
                     <p className="text-xs sm:text-sm text-gray-600 font-medium">Full Time</p>
                   </div>
-                  <p className="text-xs text-gray-500 hidden sm:block">Intensive Learning Experience</p>
+                  <p className="text-xs text-gray-500 hidden sm:block text-center">Intensive Learning Experience</p>
                 </div>
               </div>
             </div>
@@ -272,13 +272,13 @@ export function ProgramsPage() {
                   <MapPin className="h-5 w-5 sm:h-8 sm:w-8 text-white" />
                 </div>
                 <div className="space-y-1 sm:space-y-2">
-                  <h3 className="font-bold text-gray-800 text-xs sm:text-sm uppercase tracking-wider">Location</h3>
-                  <p className="text-lg sm:text-3xl font-bold text-[#143674] mb-0.5 sm:mb-1">Kolkata</p>
+                  <h3 className="font-bold text-gray-800 text-xs sm:text-sm uppercase tracking-wider text-center">Location</h3>
+                  <p className="text-lg sm:text-3xl font-bold text-[#143674] mb-0.5 sm:mb-1 text-center">Kolkata</p>
                   <div className="flex items-center justify-center gap-1 sm:gap-2">
                     <Building2 className="h-3 w-3 sm:h-4 sm:w-4 text-blue-500" />
                     <p className="text-xs sm:text-sm text-gray-600 font-medium">New town</p>
                   </div>
-                  <p className="text-xs text-gray-500 hidden sm:block">IT Hub & Business District</p>
+                  <p className="text-xs text-gray-500 hidden sm:block text-center">IT Hub & Business District</p>
                 </div>
               </div>
             </div>
@@ -290,13 +290,13 @@ export function ProgramsPage() {
                   <GraduationCap className="h-5 w-5 sm:h-8 sm:w-8 text-white" />
                 </div>
                 <div className="space-y-1 sm:space-y-2">
-                  <h3 className="font-bold text-gray-800 text-xs sm:text-sm uppercase tracking-wider">Format</h3>
-                  <p className="text-lg sm:text-3xl font-bold text-[#143674] mb-0.5 sm:mb-1">On Campus</p>
+                  <h3 className="font-bold text-gray-800 text-xs sm:text-sm uppercase tracking-wider text-center">Format</h3>
+                  <p className="text-lg sm:text-3xl font-bold text-[#143674] mb-0.5 sm:mb-1 text-center">On Campus</p>
                   <div className="flex items-center justify-center gap-1 sm:gap-2">
                     <Users className="h-3 w-3 sm:h-4 sm:w-4 text-green-500" />
                     <p className="text-xs sm:text-sm text-gray-600 font-medium">Full Time</p>
                   </div>
-                  <p className="text-xs text-gray-500 hidden sm:block">Immersive Campus Life</p>
+                  <p className="text-xs text-gray-500 hidden sm:block text-center">Immersive Campus Life</p>
                 </div>
               </div>
             </div>

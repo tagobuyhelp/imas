@@ -87,8 +87,8 @@ export function Footer() {
                 <a href="#" className={`flex items-center gap-2 text-gray-300 ${IMAS_TAILWIND_CLASSES.HOVER_TEXT_TEAL} transition-all duration-300 hover:translate-x-2 hover:bg-gray-800/30 rounded-lg p-2 text-sm group`}>
                   <HelpCircle className="h-4 w-4 group-hover:scale-110 transition-transform duration-300" /> FAQ
                 </a>
-                <a href="#" className={`flex items-center gap-2 text-gray-300 ${IMAS_TAILWIND_CLASSES.HOVER_TEXT_TEAL} transition-all duration-300 hover:translate-x-2 hover:bg-gray-800/30 rounded-lg p-2 text-sm group`}>
-                  <User className="h-4 w-4 group-hover:scale-110 transition-transform duration-300" /> Student Portal
+                <a href="https://agorae.app/signin" target="_blank" rel="noopener noreferrer" className={`flex items-center gap-2 text-gray-300 ${IMAS_TAILWIND_CLASSES.HOVER_TEXT_TEAL} transition-all duration-300 hover:translate-x-2 hover:bg-gray-800/30 rounded-lg p-2 text-sm group`}>
+                  <User className="h-4 w-4 group-hover:scale-110 transition-transform duration-300" /> Student Login
                 </a>
                 <a href="#" className={`flex items-center gap-2 text-gray-300 ${IMAS_TAILWIND_CLASSES.HOVER_TEXT_TEAL} transition-all duration-300 hover:translate-x-2 hover:bg-gray-800/30 rounded-lg p-2 text-sm group`}>
                   <UserCheck className="h-4 w-4 group-hover:scale-110 transition-transform duration-300" /> Alumni

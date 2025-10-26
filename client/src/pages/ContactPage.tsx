@@ -136,7 +136,7 @@ export function ContactPage(): React.JSX.Element {
                       <MapPin className="h-5 w-5 text-[#26c1d3] mt-1 flex-shrink-0" />
                       <div>
                         <p className="text-gray-700 font-medium">Plot No: 33 & 37</p>
-                        <p className="text-gray-600">Near Wipro & Infosys Campus, New Town – Smart City of Kolkata</p>
+                        <p className="text-gray-600">Near Wipro & Infosys Campus, New Town – City of Joy</p>
                         <p className="text-gray-600">Action Area III, Block - Bhangor – II</p>
                         <p className="text-gray-600">Kolkata - 700135, West Bengal</p>
                       </div>
