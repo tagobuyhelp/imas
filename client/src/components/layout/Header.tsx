@@ -338,7 +338,15 @@ export function Header({ currentPage, onMenuToggle }: HeaderProps) {
                 Campus Tour
               </Link>
 
-              
+              <Link
+                to="/events"
+                className={`${IMAS_TAILWIND_CLASSES.HOVER_TEXT_TEAL} transition-colors flex items-center gap-2 ${
+                  currentPage === 'events' ? IMAS_TAILWIND_CLASSES.TEXT_TEAL : ''
+                }`}
+              >
+                <Calendar className="h-4 w-4" />
+                Events
+              </Link>
             </nav>
 
             {/* Desktop CTA Buttons */}
