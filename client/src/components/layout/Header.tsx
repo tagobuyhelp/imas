@@ -255,33 +255,33 @@ export function Header({ currentPage, onMenuToggle }: HeaderProps) {
             </Link>
 
             {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center gap-4 xl:gap-6 text-sm xl:text-base">
+            <nav className="hidden lg:flex items-center gap-3 xl:gap-6 text-xs lg:text-sm xl:text-base">
               <Link
                 to="/"
-                className={`${IMAS_TAILWIND_CLASSES.HOVER_TEXT_TEAL} transition-colors flex items-center gap-2 ${
+                className={`${IMAS_TAILWIND_CLASSES.HOVER_TEXT_TEAL} transition-colors flex-shrink-0 flex items-center gap-1 lg:gap-2 ${
                   currentPage === 'home' ? IMAS_TAILWIND_CLASSES.TEXT_TEAL : ''
                 }`}
               >
-                <Home className="h-4 w-4" />
+                <Home className="h-3.5 w-3.5 xl:h-4 xl:w-4" />
                 Home
               </Link>
               
               <Link
                 to="/about"
-                className={`${IMAS_TAILWIND_CLASSES.HOVER_TEXT_TEAL} transition-colors flex items-center gap-2 ${
+                className={`${IMAS_TAILWIND_CLASSES.HOVER_TEXT_TEAL} transition-colors flex-shrink-0 flex items-center gap-1 lg:gap-2 ${
                   currentPage === 'about' ? IMAS_TAILWIND_CLASSES.TEXT_TEAL : ''
                 }`}
               >
-                <BookOpen className="h-4 w-4" />
+                <BookOpen className="h-3.5 w-3.5 xl:h-4 xl:w-4" />
                 About
               </Link>
               <Link
                 to="/faculty"
-                className={`${IMAS_TAILWIND_CLASSES.HOVER_TEXT_TEAL} transition-colors flex items-center gap-2 ${
+                className={`${IMAS_TAILWIND_CLASSES.HOVER_TEXT_TEAL} transition-colors flex-shrink-0 flex items-center gap-1 lg:gap-2 ${
                   currentPage === 'faculty' ? IMAS_TAILWIND_CLASSES.TEXT_TEAL : ''
                 }`}
               >
-                <Users className="h-4 w-4" />
+                <Users className="h-3.5 w-3.5 xl:h-4 xl:w-4" />
                 Faculty
               </Link>
               <div className="relative">
@@ -299,7 +299,7 @@ export function Header({ currentPage, onMenuToggle }: HeaderProps) {
                   onClick={() => {
                     setIsAdmissionsMegaMenuOpen(!isAdmissionsMegaMenuOpen);
                   }}
-                  className={`${IMAS_TAILWIND_CLASSES.HOVER_TEXT_TEAL} transition-colors flex items-center gap-2 ${currentPage === 'admissions' ? IMAS_TAILWIND_CLASSES.TEXT_TEAL : ''
+                  className={`${IMAS_TAILWIND_CLASSES.HOVER_TEXT_TEAL} transition-colors flex-shrink-0 flex items-center gap-1 lg:gap-2 ${currentPage === 'admissions' ? IMAS_TAILWIND_CLASSES.TEXT_TEAL : ''
                     } ${isAdmissionsMegaMenuOpen ? IMAS_TAILWIND_CLASSES.TEXT_TEAL : ''}`}
                 >
                   <FileText className="h-4 w-4" />
@@ -310,7 +310,7 @@ export function Header({ currentPage, onMenuToggle }: HeaderProps) {
 
               <Link
                 to="/internships"
-                className={`${IMAS_TAILWIND_CLASSES.HOVER_TEXT_TEAL} transition-colors flex items-center gap-2 ${
+                className={`${IMAS_TAILWIND_CLASSES.HOVER_TEXT_TEAL} transition-colors flex-shrink-0 flex items-center gap-1 lg:gap-2 ${
                   currentPage === 'internships' ? IMAS_TAILWIND_CLASSES.TEXT_TEAL : ''
                 }`}
               >
@@ -320,7 +320,7 @@ export function Header({ currentPage, onMenuToggle }: HeaderProps) {
 
               <Link
                 to="/campus-life"
-                className={`${IMAS_TAILWIND_CLASSES.HOVER_TEXT_TEAL} transition-colors flex items-center gap-2 ${
+                className={`${IMAS_TAILWIND_CLASSES.HOVER_TEXT_TEAL} transition-colors flex-shrink-0 flex items-center gap-1 lg:gap-2 ${
                   currentPage === 'campus-life' ? IMAS_TAILWIND_CLASSES.TEXT_TEAL : ''
                 }`}
               >
@@ -330,7 +330,7 @@ export function Header({ currentPage, onMenuToggle }: HeaderProps) {
 
               <Link
                 to="/campus-tour"
-                className={`${IMAS_TAILWIND_CLASSES.HOVER_TEXT_TEAL} transition-colors flex items-center gap-2 ${
+                className={`${IMAS_TAILWIND_CLASSES.HOVER_TEXT_TEAL} transition-colors flex-shrink-0 flex items-center gap-1 lg:gap-2 ${
                   currentPage === 'campus-tour' ? IMAS_TAILWIND_CLASSES.TEXT_TEAL : ''
                 }`}
               >
@@ -340,7 +340,7 @@ export function Header({ currentPage, onMenuToggle }: HeaderProps) {
 
               <Link
                 to="/events"
-                className={`${IMAS_TAILWIND_CLASSES.HOVER_TEXT_TEAL} transition-colors flex items-center gap-2 ${
+                className={`${IMAS_TAILWIND_CLASSES.HOVER_TEXT_TEAL} transition-colors flex-shrink-0 flex items-center gap-1 lg:gap-2 ${
                   currentPage === 'events' ? IMAS_TAILWIND_CLASSES.TEXT_TEAL : ''
                 }`}
               >
@@ -353,17 +353,17 @@ export function Header({ currentPage, onMenuToggle }: HeaderProps) {
             <div className="hidden lg:flex items-center gap-2 xl:gap-3">
               <Button 
                 variant="ghost" 
-                className={`text-white bg-gray-800 ${IMAS_TAILWIND_CLASSES.HOVER_TEXT_TEAL} hover:bg-gray-800 flex items-center gap-2 text-sm xl:text-base px-3 xl:px-4 py-1.5 xl:py-2`}
+                className={`text-white bg-gray-800 ${IMAS_TAILWIND_CLASSES.HOVER_TEXT_TEAL} hover:bg-gray-800 flex items-center gap-2 text-xs lg:text-sm xl:text-base px-2.5 lg:px-3 xl:px-4 py-1 lg:py-1.5 xl:py-2`}
                 onClick={() => window.open('https://agorae.app/signin', '_blank')}
               >
-                <Calendar className="h-4 w-4" />
+                <Calendar className="h-3.5 w-3.5 xl:h-4 xl:w-4" />
                 Student Login
               </Button>
               <Button 
-                className={`${IMAS_TAILWIND_CLASSES.GRADIENT_PRIMARY} hover:from-[#2e7bb3] hover:to-[#26c1d3] text-white text-sm xl:text-base px-4 xl:px-6 py-1.5 xl:py-2 font-semibold hover:scale-105 transition-all duration-300 flex items-center gap-2`}
+                className={`${IMAS_TAILWIND_CLASSES.GRADIENT_PRIMARY} hover:from-[#2e7bb3] hover:to-[#26c1d3] text-white text-xs lg:text-sm xl:text-base px-3 lg:px-4 xl:px-6 py-1 lg:py-1.5 xl:py-2 font-semibold hover:scale-105 transition-all duration-300 flex items-center gap-2`}
                 onClick={applyNow}
               >
-                <GraduationCap className="h-4 w-4" />
+                <GraduationCap className="h-3.5 w-3.5 xl:h-4 xl:w-4" />
                 Apply Now
               </Button>
             </div>
@@ -404,39 +404,39 @@ export function Header({ currentPage, onMenuToggle }: HeaderProps) {
                 const getIcon = (label: string) => {
                   // Map common labels to icons
                   const iconMap: { [key: string]: React.ReactNode } = {
-                    'Home': <Home className="h-4 w-4" />,
-                    'Hero': <Home className="h-4 w-4" />,
-                    'Overview': <Home className="h-4 w-4" />,
-                    'Programs': <GraduationCap className="h-4 w-4" />,
-                    'Program Highlights': <GraduationCap className="h-4 w-4" />,
-                    'Curriculum': <BookOpen className="h-4 w-4" />,
-                    'Faculty': <Users className="h-4 w-4" />,
-                    'Academic Leaders': <Users className="h-4 w-4" />,
-                    'Industry Experts': <Users className="h-4 w-4" />,
-                    'Instructors & Mentors': <Users className="h-4 w-4" />,
-                    'Mentors': <Users className="h-4 w-4" />,
-                    'About': <BookOpen className="h-4 w-4" />,
-                    'About the program': <GraduationCap className="h-4 w-4" />,
-                    'About IMAS': <BookOpen className="h-4 w-4" />,
-                    'Campus Life': <Image className="h-4 w-4" />,
+                    'Home': <Home className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
+                    'Hero': <Home className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
+                    'Overview': <Home className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
+                    'Programs': <GraduationCap className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
+                    'Program Highlights': <GraduationCap className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
+                    'Curriculum': <BookOpen className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
+                    'Faculty': <Users className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
+                    'Academic Leaders': <Users className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
+                    'Industry Experts': <Users className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
+                    'Instructors & Mentors': <Users className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
+                    'Mentors': <Users className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
+                    'About': <BookOpen className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
+                    'About the program': <GraduationCap className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
+                    'About IMAS': <BookOpen className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
+                    'Campus Life': <Image className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
 
-                    'Careers': <Users className="h-4 w-4" />,
-                    'Eligibility': <FileText className="h-4 w-4" />,
-                    'Placement': <Users className="h-4 w-4" />,
-                    'Statistics': <Users className="h-4 w-4" />,
-                    'Recruiters': <Users className="h-4 w-4" />,
-                    'Success Stories': <Users className="h-4 w-4" />,
-                    'Admissions': <FileText className="h-4 w-4" />,
-                    'Process': <FileText className="h-4 w-4" />,
-                    'Apply': <FileText className="h-4 w-4" />,
-                    'Apply Now': <FileText className="h-4 w-4" />,
+                    'Careers': <Users className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
+                    'Eligibility': <FileText className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
+                    'Placement': <Users className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
+                    'Statistics': <Users className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
+                    'Recruiters': <Users className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
+                    'Success Stories': <Users className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
+                    'Admissions': <FileText className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
+                    'Process': <FileText className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
+                    'Apply': <FileText className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
+                    'Apply Now': <FileText className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
 
-                    'Contact': <Phone className="h-4 w-4" />,
-                    'Information': <Phone className="h-4 w-4" />,
-                    'Location': <Phone className="h-4 w-4" />,
-                    'Form': <Phone className="h-4 w-4" />,
-                    'Vision': <BookOpen className="h-4 w-4" />,
-                    'Why Choose': <BookOpen className="h-4 w-4" />
+                    'Contact': <Phone className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
+                    'Information': <Phone className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
+                    'Location': <Phone className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
+                    'Form': <Phone className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
+                    'Vision': <BookOpen className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
+                    'Why Choose': <BookOpen className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
                   };
                   return iconMap[label] || <Home className="h-4 w-4" />;
                 };

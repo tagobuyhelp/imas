@@ -10,6 +10,7 @@ import {
   X,
   ChevronLeft,
   ChevronRight,
+  ChevronDown,
   Filter,
   Grid3X3,
   List,
@@ -60,7 +61,7 @@ const getCategoryColor = (category: string) => {
 
 function EventsHeroSection() {
   return (
-    <section className="relative min-h-[60vh] lg:min-h-[70vh] flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-[42vh] sm:min-h-[48vh] lg:min-h-[56vh] py-10 sm:py-14 flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
@@ -87,27 +88,41 @@ function EventsHeroSection() {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
         <div className="animate-fade-in-up">
-          <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 sm:px-6 py-2 rounded-full text-xs sm:text-sm font-semibold mb-6 shadow-lg">
+          <div className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-sm px-3 sm:px-5 py-1.5 rounded-full text-xs sm:text-sm font-semibold mb-5 sm:mb-6 shadow-lg">
             <Calendar className="w-4 h-4" />
             EVENTS & EXPERIENCES
           </div>
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-5 leading-tight">
             Moments That
             <span className="block bg-gradient-to-r from-[#26c1d3] to-[#4fd1c7] bg-clip-text text-transparent">
               Shape Futures
             </span>
           </h1>
-          <p className="text-lg sm:text-xl md:text-2xl text-white/90 max-w-4xl mx-auto mb-8 leading-relaxed">
+          <p className="text-sm sm:text-base md:text-lg text-white/90 max-w-4xl mx-auto mb-6 sm:mb-8 leading-relaxed">
             Discover the vibrant tapestry of experiences that define our academic journey - from industry collaborations to cultural celebrations.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button 
-              size="lg"
-              className={`${IMAS_TAILWIND_CLASSES.GRADIENT_SECONDARY} hover:from-[#2e7bb3] hover:to-[#26c1d3] text-white font-semibold px-8 py-4 text-lg shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105`}
-            >
-              Explore Events
-              <ExternalLink className="ml-2 h-5 w-5" />
-            </Button>
+          <div className="mt-2 sm:mt-3 flex flex-wrap gap-2 sm:gap-3 justify-center items-center">
+            <div className="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm px-3 py-1.5 rounded-full text-xs sm:text-sm font-semibold border border-white/20 shadow-md">
+              <Award className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+              {staticEvents.length}+ Events
+            </div>
+            <div className="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm px-3 py-1.5 rounded-full text-xs sm:text-sm font-semibold border border-white/20 shadow-md">
+              <GraduationCap className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+              {staticEvents.filter(e => e.category === 'Academic Talk').length} Talks
+            </div>
+            <div className="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm px-3 py-1.5 rounded-full text-xs sm:text-sm font-semibold border border-white/20 shadow-md">
+              <Building2 className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+              {staticEvents.filter(e => e.category === 'Industry Engagement').length} Engagements
+            </div>
+            <div className="inline-flex items-center gap-2 bg-white/15 backdrop-blur-sm px-3 py-1.5 rounded-full text-xs sm:text-sm font-semibold border border-white/20 shadow-md">
+              <Heart className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+              {staticEvents.filter(e => e.category === 'Cultural Celebration').length} Celebrations
+            </div>
+          </div>
+
+          <div className="mt-5 sm:mt-6 flex items-center justify-center text-white/80 text-xs sm:text-sm">
+            <ChevronDown className="w-4 h-4 mr-2 animate-bounce" />
+            Scroll to explore
           </div>
         </div>
       </div>
@@ -119,7 +134,7 @@ function EventCard({ event, onImageClick }: { event: EventItem; onImageClick: (e
   const CategoryIcon = getCategoryIcon(event.category);
   
   return (
-    <article className="group bg-white rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100 hover:border-gray-200 hover:-translate-y-2 h-full flex flex-col">
+    <article className="group bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-500 overflow-hidden border border-gray-100 hover:border-gray-200 hover:-translate-y-2 h-full flex flex-col">
       {/* Event Image */}
       {event.images && event.images.length > 0 ? (
         <div 
@@ -136,14 +151,14 @@ function EventCard({ event, onImageClick }: { event: EventItem; onImageClick: (e
           
           {/* Image count badge */}
           {event.images.length > 1 && (
-            <div className="absolute top-3 right-3 bg-black/70 text-white text-xs px-2 py-1 rounded-full backdrop-blur-sm">
+            <div className="absolute top-2 right-2 bg-black/70 text-white text-xs px-2 py-1 rounded-full backdrop-blur-sm">
               {event.images.length} photos
             </div>
           )}
           
           {/* Featured badge */}
           {event.featured && (
-            <div className="absolute top-3 left-3 bg-gradient-to-r from-yellow-400 to-orange-500 text-white text-xs px-2 py-1 rounded-full font-semibold flex items-center gap-1">
+            <div className="absolute top-2 left-2 bg-gradient-to-r from-yellow-400 to-orange-500 text-white text-xs px-2 py-1 rounded-full font-semibold flex items-center gap-1">
               <Star className="w-3 h-3 fill-current" />
               Featured
             </div>
@@ -152,17 +167,17 @@ function EventCard({ event, onImageClick }: { event: EventItem; onImageClick: (e
       ) : (
         <div className="aspect-[4/3] bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center flex-shrink-0">
           <div className="text-center">
-            <ImageIcon className="w-12 h-12 text-gray-400 mx-auto mb-2" />
-            <p className="text-sm text-gray-500">No images available</p>
+            <ImageIcon className="w-10 h-10 text-gray-400 mx-auto mb-2" />
+            <p className="text-xs text-gray-500">No images available</p>
           </div>
         </div>
       )}
 
       {/* Event Content */}
-      <div className="p-6 flex flex-col flex-grow">
+      <div className="p-4 sm:p-5 flex flex-col flex-grow">
         {/* Category and Date */}
-        <div className="flex items-center justify-between mb-4">
-          <div className={`inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-semibold border ${getCategoryColor(event.category)}`}>
+        <div className="flex items-center justify-between mb-3">
+          <div className={`inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-xs font-semibold border ${getCategoryColor(event.category)}`}>
             <CategoryIcon className="w-3 h-3" />
             {event.category}
           </div>
@@ -172,24 +187,24 @@ function EventCard({ event, onImageClick }: { event: EventItem; onImageClick: (e
         </div>
 
         {/* Title */}
-        <h3 className="text-xl font-bold text-gray-900 mb-3 leading-tight group-hover:text-[#143674] transition-colors duration-300">
+        <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-2 sm:mb-3 leading-tight group-hover:text-[#143674] transition-colors duration-300">
           {event.title}
         </h3>
 
         {/* Description */}
-        <p className="text-gray-600 text-sm leading-relaxed mb-4 line-clamp-4 flex-grow">
+        <p className="text-gray-600 text-xs sm:text-sm leading-relaxed mb-3 sm:mb-4 line-clamp-3 sm:line-clamp-4 flex-grow">
           {event.description}
         </p>
 
         {/* Thumbnail Gallery */}
         {event.images && event.images.length > 1 && (
-          <div className="flex gap-2 mb-4 overflow-x-auto pb-2">
+          <div className="flex gap-1.5 sm:gap-2 mb-3 sm:mb-4 overflow-x-auto pb-2">
             {event.images.slice(1, 5).map((thumb, idx) => (
               <img
                 key={idx}
                 src={safeSrc(thumb)}
                 alt={`${event.title} thumbnail ${idx + 1}`}
-                className="w-12 h-12 object-cover rounded-lg border border-gray-200 cursor-pointer hover:border-[#26c1d3] transition-colors flex-shrink-0"
+                className="w-10 h-10 sm:w-12 sm:h-12 object-cover rounded-lg border border-gray-200 cursor-pointer hover:border-[#26c1d3] transition-colors flex-shrink-0"
                 loading="lazy"
                 onClick={() => onImageClick(event, idx + 1)}
               />
@@ -203,7 +218,7 @@ function EventCard({ event, onImageClick }: { event: EventItem; onImageClick: (e
             <Button
               variant="outline"
               size="sm"
-              className="w-full border-[#143674] text-[#143674] hover:bg-[#143674] hover:text-white font-semibold transition-all duration-300 group-hover:scale-105"
+              className="w-full border-[#143674] text-[#143674] hover:bg-[#143674] hover:text-white font-semibold transition-all duration-300 group-hover:scale-105 text-xs sm:text-sm py-2"
               onClick={() => onImageClick(event, 0)}
             >
               View Gallery ({event.images.length})
@@ -261,32 +276,32 @@ function EventsGrid() {
   }, [lightbox.event]);
 
   return (
-    <section className="py-16 lg:py-24 bg-gradient-to-b from-gray-50 to-white">
+    <section className="py-8 sm:py-12 lg:py-16 bg-gradient-to-b from-gray-50 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
-        <div className="text-center mb-12">
-          <div className={`inline-block ${IMAS_TAILWIND_CLASSES.BG_TEAL} text-white px-6 py-2 rounded-full text-sm font-semibold mb-4 shadow-lg`}>
+        <div className="text-center mb-8 sm:mb-10">
+          <div className={`inline-block ${IMAS_TAILWIND_CLASSES.BG_TEAL} text-white px-4 py-1.5 rounded-full text-xs sm:text-sm font-semibold mb-3 sm:mb-4 shadow-lg`}>
             OUR EVENTS
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-2 sm:mb-3">
             Celebrating <span className={IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE}>Excellence</span> Together
           </h2>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="text-sm sm:text-base text-gray-600 max-w-3xl mx-auto">
             From academic achievements to cultural celebrations, explore the moments that define our vibrant community.
           </p>
         </div>
 
         {/* Filter Controls */}
-        <div className="flex flex-col sm:flex-row justify-between items-center gap-4 mb-8">
+        <div className="flex flex-row flex-nowrap justify-between items-center gap-2 mb-6 sm:mb-8">
           {/* Mobile Filter Toggle */}
-          <div className="flex items-center gap-2 w-full sm:w-auto">
+          <div className="flex items-center gap-2">
             <Button
               variant="outline"
               size="sm"
               onClick={() => setShowFilters(!showFilters)}
-              className="sm:hidden flex items-center gap-2"
+              className="sm:hidden flex items-center gap-2 text-xs px-3 py-2"
             >
-              <Filter className="w-4 h-4" />
+              <Filter className="w-3.5 h-3.5" />
               {filter} ({filteredEvents.length})
             </Button>
             
@@ -295,7 +310,7 @@ function EventsGrid() {
               {categories.map((category) => (
                 <button
                   key={category}
-                  className={`px-4 py-2 rounded-full border text-sm font-medium transition-all duration-300 ${
+                  className={`px-3 py-1.5 rounded-full border text-xs sm:text-sm font-medium transition-all duration-300 ${
                     filter === category
                       ? `${IMAS_TAILWIND_CLASSES.BG_TEAL} text-white border-transparent shadow-lg`
                       : `border-gray-300 text-gray-700 hover:bg-gray-100 hover:border-gray-400`
@@ -343,7 +358,7 @@ function EventsGrid() {
               {categories.map((category) => (
                 <button
                   key={category}
-                  className={`px-3 py-2 rounded-lg border text-sm font-medium transition-colors ${
+                  className={`px-3 py-2 rounded-lg border text-xs font-medium transition-colors ${
                     filter === category
                       ? `${IMAS_TAILWIND_CLASSES.BG_TEAL} text-white border-transparent`
                       : `border-gray-300 text-gray-700 hover:bg-gray-100`
@@ -363,8 +378,8 @@ function EventsGrid() {
         {/* Events Grid */}
         <div className={
           viewMode === 'masonry' 
-            ? "columns-1 sm:columns-2 lg:columns-3 gap-6 lg:gap-8 space-y-6 lg:space-y-8"
-            : "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 items-stretch"
+            ? "columns-1 md:columns-2 lg:columns-3 gap-4 md:gap-6 lg:gap-8 space-y-4 md:space-y-6 lg:space-y-8"
+            : "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8 items-stretch"
         }>
           {filteredEvents.map((event) => (
             <div key={event.id} className={viewMode === 'masonry' ? 'break-inside-avoid' : 'flex'}>
