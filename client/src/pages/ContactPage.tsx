@@ -139,33 +139,14 @@ export function ContactPage(): React.JSX.Element {
                         <p className="text-gray-600">Near Wipro & Infosys Campus, New Town – City of Joy</p>
                         <p className="text-gray-600">Action Area III, Block - Bhangor – II</p>
                         <p className="text-gray-600">Kolkata - 700135, West Bengal</p>
+                        
                       </div>
 
-                    </div>
-                  </CardContent>
-                </Card>
-
-                {/* City Campus */}
-                <Card className="border-l-4 border-l-[#2e7bb3] shadow-lg">
-                  <CardHeader className="pb-4">
-                    <CardTitle className="flex items-center gap-3 text-[#143674]">
-                      <Building2 className="h-6 w-6" />
-                      City Campus
-                    </CardTitle>
-                  </CardHeader>
-                  <CardContent>
-                    <div className="flex items-start gap-3 mb-4">
-                      <MapPin className="h-5 w-5 text-[#2e7bb3] mt-1 flex-shrink-0" />
-                      <div>
-                        <p className="text-gray-700 font-medium">Bengal Intelligent Park</p>
-                        <p className="text-gray-600">Delta Wing Block EP & GP</p>
-                        <p className="text-gray-600">Plot A2 & M2, Sector V</p>
-                        <p className="text-gray-600">Kolkata - 700091, West Bengal</p>
-                      </div>
                     </div>
                   </CardContent>
                 </Card>
               </div>
+
 
               {/* Contact Details */}
               <div className="space-y-4">
@@ -180,6 +161,7 @@ export function ContactPage(): React.JSX.Element {
                     </a>
                   </div>
                 </div>
+                
 
                 <div className="flex items-center gap-4 p-4 bg-white rounded-lg shadow-md border border-gray-100">
                   <div className="w-12 h-12 bg-[#2e7bb3]/10 rounded-full flex items-center justify-center">
@@ -337,6 +319,18 @@ export function ContactPage(): React.JSX.Element {
             </div>
           </div>
         </div>
+      </section>
+
+      <section className='p-6'>
+        <div className="mt-4">
+                          <iframe
+                            title="Main Campus Location Map"
+                            src="https://www.google.com/maps?q=HF6M%2BP4R%20Dharmatala%20Pachuria,%20West%20Bengal&output=embed"
+                            className="w-full h-64 md:h-80 rounded-lg border"
+                            loading="lazy"
+                            referrerPolicy="no-referrer-when-downgrade"
+                          ></iframe>
+                        </div>
       </section>
 
       {/* Call to Action Section */}

@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import { Layout } from './components/layout/Layout';
 import { HomePage } from './pages/HomePage';
@@ -50,6 +50,11 @@ function AppContent(): React.JSX.Element {
         <Route path="/campus-tour" element={<CampusTourPage />} />
         <Route path="/events" element={<EventsPage />} />
         <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+        {/* Redirect legacy/SEO path to Programs (PGDM Working Professionals) */}
+        <Route path="/pgdm-executive-courses-kolkata" element={<Navigate to="/programs" replace />} />
+        {/* Redirect legacy/SEO path to Programs (Business Analytics) */}
+        <Route path="/pgdm-business-analytics-college-kolkata" element={<Navigate to="/programs" replace />} />
+        <Route path="/pgdm-business-analytics-college-kolkata/" element={<Navigate to="/programs" replace />} />
         {/* Admin routes removed - no backend API available */}
       </Routes>
     </Layout>

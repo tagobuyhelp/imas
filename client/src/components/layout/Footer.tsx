@@ -122,6 +122,19 @@ export function Footer() {
                   </div>
                   <span className="text-gray-300 truncate group-hover:text-white transition-colors duration-300">{IMAS_CONTACT.EMAIL}</span>
                 </div>
+                {/* Address */}
+                <div className="flex items-start justify-center md:justify-start gap-3 text-sm group hover:bg-gray-800/20 rounded-lg p-2 transition-all duration-300">
+                  <div className="flex items-center gap-1 text-teal-400 mt-0.5">
+                    <MapPin className="h-4 w-4 group-hover:animate-pulse" />
+                  </div>
+                  <div className="text-gray-300 group-hover:text-white transition-colors duration-300 leading-relaxed">
+                    <p>International Management & Analytics School (IMAS)</p>
+                    <p>Plot No. 37, Block – Bhangar-II,</p>
+                    <p>Near St. Xavier’s University, Newtown Action Area – III,</p>
+                    <p>Kolkata, West Bengal,</p>
+                    <p>Pin Code: 700160.</p>
+                  </div>
+                </div>
               </div>
 
               {/* Social Media - Super Enhanced */}

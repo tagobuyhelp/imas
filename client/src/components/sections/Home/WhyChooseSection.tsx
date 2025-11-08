@@ -5,13 +5,13 @@ import { IMAS_TAILWIND_CLASSES } from '../../../lib/constants';
 // Video Content Component
 const VideoContent = ({ title, description, videoUrl }: { title: string; description: string; videoUrl: string }) => {
   return (
-    <div className="space-y-5 font-serif">
+    <div className="space-y-5 font-sans antialiased">
       <div className="text-center space-y-3">
         <h3 className="text-sm sm:text-lg md:text-xl font-bold text-gray-800">
-          {title.toUpperCase()}
+          {title}
         </h3>
-        <p className="text-gray-600 text-xs sm:text-sm leading-relaxed max-w-2xl mx-auto">
-          {description.toUpperCase()}
+        <p className="text-gray-700 text-[11px] sm:text-xs md:text-sm leading-6 max-w-2xl mx-auto">
+          {description}
         </p>
       </div>
 
@@ -22,9 +22,9 @@ const VideoContent = ({ title, description, videoUrl }: { title: string; descrip
             <Play className="h-4 w-4 text-white" />
           </div>
           <div className="flex-1">
-            <h4 className="text-xs sm:text-sm font-semibold text-gray-800 mb-1">VIDEO OVERVIEW</h4>
-            <p className="text-xs text-gray-600 leading-relaxed">
-            Experience Our Modern Campus Facilities, State-of-the-art Classrooms, And Vibrant Learning Environment Through This Comprehensive Virtual Tour.
+            <h4 className="text-xs sm:text-sm font-semibold text-gray-800 mb-1">Video Overview</h4>
+            <p className="text-[11px] sm:text-xs text-gray-700 leading-6">
+              Experience our modern campus facilities, state-of-the-art classrooms, and vibrant learning environment through this comprehensive virtual tour.
             </p>
           </div>
         </div>
@@ -61,13 +61,13 @@ const VideoContent = ({ title, description, videoUrl }: { title: string; descrip
 
 // Statistics Content Component
 const StatsContent = ({ title, stats }: { title: string; stats: Array<{ number: string; title: string; subtitle: string }> }) => (
-  <div className="space-y-6 font-serif">
+  <div className="space-y-6 font-sans antialiased">
     <div className="text-center">
       <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-800 mb-3">
         {title.toUpperCase()}
       </h3>
-      <p className="text-gray-600 text-xs sm:text-sm md:text-base max-w-2xl mx-auto leading-relaxed">
-        OUR COMMITMENT TO EXCELLENCE IS REFLECTED IN THESE IMPRESSIVE NUMBERS
+      <p className="text-gray-700 text-[11px] sm:text-xs md:text-sm max-w-2xl mx-auto leading-6">
+        Our commitment to excellence is reflected in these impressive numbers.
       </p>
     </div>
 
@@ -125,13 +125,13 @@ const StatsContent = ({ title, stats }: { title: string; stats: Array<{ number: 
 
 // Benefits Content Component
 const BenefitsContent = ({ title, benefits }: { title: string; benefits: string[] }) => (
-  <div className="space-y-5 font-serif">
+  <div className="space-y-5 font-sans antialiased">
     <div className="text-center">
       <h3 className="text-sm sm:text-lg md:text-xl font-bold text-gray-800 mb-2">
         {title.toUpperCase()}
       </h3>
-      <p className="text-gray-600 text-xs sm:text-sm max-w-2xl mx-auto">
-        DISCOVER WHAT MAKES IMAS THE PREFERRED CHOICE FOR MANAGEMENT EDUCATION
+      <p className="text-gray-700 text-[11px] sm:text-xs md:text-sm max-w-2xl mx-auto leading-6">
+        Discover what makes IMAS the preferred choice for management education.
       </p>
     </div>
     <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3">
@@ -153,15 +153,15 @@ const BenefitsContent = ({ title, benefits }: { title: string; benefits: string[
 
 // Text Content Component
 const TextContent = ({ title, description }: { title: string; description: string }) => (
-  <div className="space-y-4 font-serif">
+  <div className="space-y-4 font-sans antialiased">
     <div className="text-center">
       <h3 className="text-sm sm:text-lg md:text-xl font-bold text-gray-800 mb-2">
         {title.toUpperCase()}
       </h3>
     </div>
     <div className="max-w-3xl mx-auto">
-      <p className="text-gray-700 text-xs sm:text-sm leading-relaxed text-center">
-        {description.toUpperCase()}
+      <p className="text-gray-700 text-[11px] sm:text-xs md:text-sm leading-6 text-center">
+        {description}
       </p>
     </div>
     <div className="text-center pt-2">
@@ -175,13 +175,13 @@ const TextContent = ({ title, description }: { title: string; description: strin
 
 // Career & Placements Content Component
 const CareerContent = () => (
-  <div className="space-y-5 font-serif">
+  <div className="space-y-5 font-sans antialiased">
     <div className="text-center">
       <h3 className="text-sm sm:text-lg md:text-xl font-bold text-gray-800 mb-2">
         CAREER & PLACEMENTS
       </h3>
-      <p className="text-gray-600 text-xs sm:text-sm max-w-2xl mx-auto">
-        RECOGNIZED AS A TOP MBA PLACEMENT COLLEGE KOLKATA
+      <p className="text-gray-700 text-[11px] sm:text-xs md:text-sm max-w-2xl mx-auto leading-6">
+        Recognized as a top MBA placement college in Kolkata.
       </p>
     </div>
     <div className="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-xl p-4 border border-blue-200">
@@ -192,8 +192,8 @@ const CareerContent = () => (
         <h4 className="text-sm sm:text-base md:text-lg font-semibold text-gray-800">
           100% PLACEMENT ASSISTANCE
         </h4>
-        <p className="text-gray-700 text-xs sm:text-sm leading-relaxed max-w-2xl mx-auto">
-          IMAS BOASTS 100% PLACEMENT ASSISTANCE WITH TOP RECRUITERS FROM DIVERSE INDUSTRIES. THE CURRICULUM IS TAILORED TO PRODUCE INDUSTRY-READY PROFESSIONALS, MAKING IMAS A COLLEGE WITH 100% PLACEMENT IN KOLKATA.
+        <p className="text-gray-700 text-[11px] sm:text-xs md:text-sm leading-6 max-w-2xl mx-auto">
+          IMAS boasts 100% placement assistance with top recruiters from diverse industries. The curriculum is tailored to produce industry-ready professionals, making IMAS a college with 100% placement in Kolkata.
         </p>
       </div>
     </div>
@@ -321,15 +321,15 @@ export function WhyChooseSection() {
       videoUrl: '#',
       content: {
         type: 'benefits',
-        title: 'Why Choose Us?',
+        title: 'WHY CHOOSE US?',
         benefits: [
-          'AICTE-Approved Programmes',
-          '100% Placement Support & IMAS Placement Success',
-          'Average CTC between ₹14.5L - ₹18.5L',
-          'International Student Exchange Programs',
-          'Industry-Ready Management Courses Kolkata with dual certification options',
-          'Strategic partnerships with universities in Europe and Asia',
-          'Affordable course fees with options for Education Loans & IMAS Scholarship 2026'
+          'AICTE-APPROVED PROGRAMMES',
+          '100% PLACEMENT SUPPORT & IMAS PLACEMENT SUCCESS',
+          'AVERAGE CTC BETWEEN ₹14.5L - ₹18.5L',
+          'INTERNATIONAL STUDENT EXCHANGE PROGRAMS',
+          'INDUSTRY-READY MANAGEMENT COURSES KOLKATA WITH DUAL CERTIFICATION OPTIONS',
+          'STRATEGIC PARTNERSHIPS WITH UNIVERSITIES IN EUROPE AND ASIA',
+          'AFFORDABLE COURSE FEES WITH OPTIONS FOR EDUCATION LOANS & IMAS'
         ]
       }
     },

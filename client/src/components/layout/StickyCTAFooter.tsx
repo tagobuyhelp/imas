@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Plus, MessageCircle, Send } from 'lucide-react';
+import { Plus, MessageCircle, Send, Phone } from 'lucide-react';
 import { IoLogoWhatsapp } from 'react-icons/io';
 import { IMAS_TAILWIND_CLASSES } from '../../lib/constants';
 import { applyNow } from '../../lib/utils';
@@ -73,7 +73,8 @@ export function StickyCTAFooter({
     if (onPhoneClick) {
       onPhoneClick();
     } else {
-      console.log('Phone clicked');
+      // Open phone dialer
+      window.open('tel:+919088822777', '_self');
     }
   };
 
@@ -127,39 +128,25 @@ export function StickyCTAFooter({
         </div>
       )}
 
-      {/* Floating WhatsApp Button */}
+      {/* Floating WhatsApp & Call Buttons */}
       {showWhatsAppButton && (
-        <div className="fixed bottom-4 right-4 z-40">
-          {/* Main WhatsApp Button */}
+        <div className="fixed bottom-4 right-4 z-40 flex flex-col sm:flex-row gap-3">
+          {/* WhatsApp Button */}
           <button
             onClick={handleWhatsAppClick}
-            className="bg-white border-2 border-green-600 text-green-600 px-4 py-2 rounded-full font-medium text-sm shadow-lg hover:shadow-xl transition-all duration-300 hover:bg-green-50 flex items-center gap-2 animate-pulse hover:animate-none hover:scale-105 hover:border-green-700 hover:text-green-700"
+            className="bg-white border-2 border-green-600 text-green-700 px-4 py-2 rounded-full font-medium text-sm shadow-lg flex items-center gap-2"
           >
-            <IoLogoWhatsapp className="w-4 h-4 animate-bounce" />
-            <span className="animate-pulse">Chat with WhatsApp</span>
+            <IoLogoWhatsapp className="w-4 h-4" />
+            <span>WhatsApp</span>
           </button>
 
-          {/* Floating Phone Button */}
+          {/* Call Button */}
           <button
             onClick={handlePhoneClick}
-            className={`absolute -bottom-2 -right-2 w-10 h-10 ${IMAS_TAILWIND_CLASSES.BG_DARK_BLUE} text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 flex items-center justify-center group hover:scale-110 animate-pulse hover:animate-none`}
-            style={{
-              clipPath: 'polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 75% 100%, 50% 75%, 0% 75%)'
-            }}
+            className={`${IMAS_TAILWIND_CLASSES.BG_DARK_BLUE} text-white px-4 py-2 rounded-full font-medium text-sm shadow-lg flex items-center gap-2`}
           >
-            <svg
-              className="w-5 h-5 animate-ping"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"
-              />
-            </svg>
+            <Phone className="w-4 h-4" />
+            <span>Call</span>
           </button>
         </div>
       )}

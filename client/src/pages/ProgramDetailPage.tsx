@@ -129,6 +129,16 @@ export function ProgramDetailPage() {
             </Helmet>
 
             <div className="min-h-screen">
+                {/* Top Banner - MBA Global */}
+                {program.name === 'MBA Global' && (
+                    <div className="bg-gradient-to-r from-[#143674] to-[#2e7bb3] text-white py-2 sm:py-3">
+                        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                            <span className="text-sm sm:text-base font-semibold tracking-wide">
+                                Study at Prestigious UK Universities
+                            </span>
+                        </div>
+                    </div>
+                )}
                 {/* Hero Section with Enhanced Design */}
                 <section id="hero" className={`relative ${IMAS_TAILWIND_CLASSES.BG_DARK_BLUE} text-white py-8 sm:py-12 lg:py-16 overflow-hidden`}>
                     {/* Background Image */}
@@ -291,7 +301,9 @@ export function ProgramDetailPage() {
                                     </div>
                                     <h3 className={`font-bold ${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE} mb-1 text-xs sm:text-sm tracking-wide`}>LOCATION</h3>
                                     <p className={`text-lg sm:text-xl font-bold ${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE} mb-1`}>{program.location}</p>
-                                    <p className="text-xs text-gray-500">New Town – City of Joy</p>
+                                    <p className="text-xs text-gray-500">
+                                        {program.name === 'MBA Global' ? 'Step Beyond Boundaries.' : 'New Town – City of Joy'}
+                                    </p>
                                 </CardContent>
                             </Card>
 

@@ -29,6 +29,19 @@ export interface Mentor {
 export const faculty = [
     {
         id: 'f1',
+        name: 'Dr. Kunal Sil',
+        title: 'Dean – Management',
+        qualifications: 'Ph.D., Dean of Management, IMAS Kolkata',
+        image: '/uploads/faculty/Kunal_Sil.jpg',
+        description: 'Dean of Management at IMAS Kolkata, specializing in business education and academic leadership.',
+        fullBio: 'Dr. Kunal Sil serves as Dean of Management at IMAS Kolkata. He brings a deep understanding of business education, corporate relations, and academic innovation. His focus lies in developing future-ready management graduates.',
+        expertise: 'Business Management, Academic Leadership, Corporate Relations',
+        tags: ['Management', 'Leadership', 'Corporate', 'Education'],
+        company: 'IMAS Kolkata',
+        companyLogo: '/uploads/companies/imas.png'
+    },
+    {
+        id: 'f2',
         name: 'Prof. Dr. Saikat Moitra',
         title: 'Former Vice Chancellor',
         qualifications: 'Ph.D., Former Vice Chancellor at MAKAUT',
@@ -41,7 +54,7 @@ export const faculty = [
         companyLogo: '/uploads/companies/makaut.png'
     },
     {
-        id: 'f2',
+        id: 'f3',
         name: 'Dr. Amit Gautam',
         title: 'Professor',
         qualifications: 'Ph.D., Professor at Banaras Hindu University',
@@ -54,7 +67,7 @@ export const faculty = [
         companyLogo: '/uploads/companies/bhu.webp'
     },
     {
-        id: 'f3',
+        id: 'f4',
         name: 'Dr. Sangeeta Sahney',
         title: 'Professor & Dean',
         qualifications: 'Ph.D., Professor & Dean, Vinod Gupta School of Management, IIT Kharagpur',
@@ -67,7 +80,7 @@ export const faculty = [
         companyLogo: '/uploads/companies/iit_kharagpur.png'
     },
     {
-        id: 'f4',
+        id: 'f5',
         name: 'Dr. Gurbandini Kaur',
         title: 'Professor',
         qualifications: 'Ph.D., Professor at All India Institute of Management (AIMA)',
@@ -80,7 +93,7 @@ export const faculty = [
         companyLogo: '/uploads/companies/aima.jpg'
     },
     {
-        id: 'f5',
+        id: 'f6',
         name: 'Dr. M J Xavier',
         title: 'Founder-Director',
         qualifications: 'Ph.D., Founder-Director, IIM Ranchi',
@@ -93,7 +106,7 @@ export const faculty = [
         companyLogo: '/uploads/companies/iim_ranchi.png'
     },
     {
-        id: 'f6',
+        id: 'f7',
         name: 'Dr. Saibal Kumar Mukhopadhyay',
         title: 'Director',
         qualifications: 'Ph.D., Director at IBM – Jadavpur University',
@@ -106,7 +119,7 @@ export const faculty = [
         companyLogo: '/uploads/companies/ibm_jadavpur.png'
     },
     {
-        id: 'f7',
+        id: 'f8',
         name: 'Dr. Prantik Ray',
         title: 'Assistant Professor',
         qualifications: 'Ph.D., Assistant Professor at XLRI Jamshedpur',
@@ -119,7 +132,7 @@ export const faculty = [
         companyLogo: '/uploads/companies/xlri.jpg'
     },
     {
-        id: 'f8',
+        id: 'f9',
         name: 'Dr. Supravat Bagli',
         title: 'Assistant Professor',
         qualifications: 'Ph.D., Assistant Professor at Presidency University',
@@ -132,7 +145,7 @@ export const faculty = [
         companyLogo: '/uploads/companies/presidency_university.jpg'
     },
     {
-        id: 'f9',
+        id: 'f10',
         name: 'Dr. Dhananjay D. Mankar',
         title: 'Assistant Professor & HOD',
         qualifications: 'Ph.D., Assistant Professor & HOD, TATA Institute of Social Science',
@@ -145,7 +158,7 @@ export const faculty = [
         companyLogo: '/uploads/companies/tiss.png'
     },
     {
-        id: 'f10',
+        id: 'f11',
         name: 'Dr. Tridib Chakraborty',
         title: 'Former Professor',
         qualifications: 'Ph.D., Former Professor at IIM Kolkata',
@@ -157,19 +170,7 @@ export const faculty = [
         company: 'IIM Kolkata',
         companyLogo: '/uploads/companies/iim_kolkata.png'
     },
-    {
-        id: 'f11',
-        name: 'Dr. Kunal Sil',
-        title: 'Dean – Management',
-        qualifications: 'Ph.D., Dean of Management, IMAS Kolkata',
-        image: '/uploads/faculty/Kunal_Sil.jpg',
-        description: 'Dean of Management at IMAS Kolkata, specializing in business education and academic leadership.',
-        fullBio: 'Dr. Kunal Sil serves as Dean of Management at IMAS Kolkata. He brings a deep understanding of business education, corporate relations, and academic innovation. His focus lies in developing future-ready management graduates.',
-        expertise: 'Business Management, Academic Leadership, Corporate Relations',
-        tags: ['Management', 'Leadership', 'Corporate', 'Education'],
-        company: 'IMAS Kolkata',
-        companyLogo: '/uploads/companies/imas.png'
-    },
+    
     {
         id: 'f12',
         name: 'Prof. Dr. Manodip Ray Chaudhuri',
