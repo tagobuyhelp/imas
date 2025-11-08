@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import { Plus, MessageCircle, Send, Phone } from 'lucide-react';
-import { IoLogoWhatsapp } from 'react-icons/io';
 import { IMAS_TAILWIND_CLASSES } from '../../lib/constants';
 import { applyNow } from '../../lib/utils';
 
@@ -134,19 +133,17 @@ export function StickyCTAFooter({
           {/* WhatsApp Button */}
           <button
             onClick={handleWhatsAppClick}
-            className="bg-white border-2 border-green-600 text-green-700 px-4 py-2 rounded-full font-medium text-sm shadow-lg flex items-center gap-2"
+            className="bg-white  border-green-600 text-green-700 w-10 h-10 rounded-full shadow-lg flex items-center justify-center"
           >
-            <IoLogoWhatsapp className="w-4 h-4" />
-            <span>WhatsApp</span>
+            <img src="/uploads/icons/whatsapp.png" alt="WhatsApp" className="w-6 h-6" />
           </button>
 
           {/* Call Button */}
           <button
             onClick={handlePhoneClick}
-            className={`${IMAS_TAILWIND_CLASSES.BG_DARK_BLUE} text-white px-4 py-2 rounded-full font-medium text-sm shadow-lg flex items-center gap-2`}
+            className={`bg-green-500 text-white w-10 h-10 rounded-full shadow-lg flex items-center justify-center`}
           >
-            <Phone className="w-4 h-4" />
-            <span>Call</span>
+            <Phone className="w-5 h-5" />
           </button>
         </div>
       )}
