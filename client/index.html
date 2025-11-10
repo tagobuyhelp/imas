@@ -92,6 +92,8 @@
     </script>
   </head>
   <body>
+    <!-- NPF Chatbot Placeholder -->
+    <div class="npf_chatbots" data-w="71289f36cb7f4d1aa57ea9599d67b976"></div>
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5QCT7VPL" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
@@ -113,16 +115,54 @@
       });
     </script>
     
-    <!-- NoPaperForms Chatbot Placeholder -->
-    <div class="npf_chatbots" data-w="71289f36cb7f4d1aa57ea9599d67b976" style="display:none;"></div>
+    <!-- NPF Chatbot Loader Script -->
+    <script type="text/javascript" async src="https://chatbot.in8.nopaperforms.com/en-gb/backend/bots/niaachtbtscpt.js/f66854412785432ea1d2c2257fe7861f/71289f36cb7f4d1aa57ea9599d67b976"></script>
+    <script>
+      (function() {
+        try {
+          console.log('[NPF Chatbot] initializing: looking for placeholder and loader');
+          var placeholder = document.querySelector('.npf_chatbots');
+          if (!placeholder) {
+            console.warn('[NPF Chatbot] placeholder not found');
+          } else {
+            console.log('[NPF Chatbot] placeholder present');
+          }
 
-    <!-- NoPaperForms Chatbot Loader -->
-    <script type="text/javascript">
-      var s = document.createElement("script");
-      s.type = "text/javascript";
-      s.async = true;
-      s.src = "https://chatbot.in8.nopaperforms.com/en-gb/backend/bots/niaachtbtscpt.js/f66854412785432ea1d2c2257fe7861f/71289f36cb7f4d1aa57ea9599d67b976";
-      document.body.appendChild(s);
+          var loader = Array.from(document.scripts).find(function(s){
+            return s.src && s.src.indexOf('niaachtbtscpt.js') !== -1;
+          });
+          if (loader) {
+            loader.addEventListener('load', function(){
+              console.log('[NPF Chatbot] loader script loaded');
+            });
+            loader.addEventListener('error', function(e){
+              console.error('[NPF Chatbot] loader script failed to load', e);
+            });
+          } else {
+            console.warn('[NPF Chatbot] loader script tag not found');
+          }
+
+          if (placeholder) {
+            var obs = new MutationObserver(function(){
+              if (placeholder.childElementCount > 0) {
+                console.log('[NPF Chatbot] widget mounted');
+              }
+            });
+            obs.observe(placeholder, { childList: true, subtree: true });
+            if (placeholder.childElementCount > 0) {
+              console.log('[NPF Chatbot] widget already mounted');
+            }
+          }
+
+          setTimeout(function(){
+            if (placeholder && placeholder.childElementCount === 0) {
+              console.log('[NPF Chatbot] still waiting after 5s – check token/CSP/ad-blockers');
+            }
+          }, 5000);
+        } catch (e) {
+          console.error('[NPF Chatbot] instrumentation error', e);
+        }
+      })();
     </script>
   </body>
   </html>

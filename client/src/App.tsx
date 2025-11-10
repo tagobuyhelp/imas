@@ -74,6 +74,7 @@ export function App(): React.JSX.Element {
         <BrochureModal />
         <VideoModal />
         <Toaster />
+        {/* Chatbot handled via index.html (placeholder + loader script) */}
       </Router>
     </HelmetProvider>
   );
