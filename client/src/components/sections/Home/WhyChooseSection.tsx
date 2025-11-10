@@ -472,7 +472,7 @@ export function WhyChooseSection() {
                 {currentVideo.content.type === 'video' && currentVideo.videoUrl && currentVideo.videoUrl !== '#' ? (
                   /* Video Player for Campus Introduction */
                   <div className="w-full h-full">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/rM3MWkhO6GA?si=kyH6rk9hWiT5sj8t" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+                    <iframe width="100%" height="100%" src="https://www.youtube.com/embed/rM3MWkhO6GA?si=kyH6rk9hWiT5sj8t" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
                   </div>
                 ) : (
                   /* Image for other tabs */
