@@ -472,14 +472,7 @@ export function WhyChooseSection() {
                 {currentVideo.content.type === 'video' && currentVideo.videoUrl && currentVideo.videoUrl !== '#' ? (
                   /* Video Player for Campus Introduction */
                   <div className="w-full h-full">
-                                         <iframe
-                       src={`https://www.youtube-nocookie.com/embed/${getYouTubeVideoId(currentVideo.videoUrl)}?modestbranding=1&rel=0&showinfo=0&controls=0&disablekb=1&fs=0&iv_load_policy=3&cc_load_policy=0&autoplay=0&loop=0&playlist=${getYouTubeVideoId(currentVideo.videoUrl)}`}
-                       title={currentVideo.title}
-                       className="w-full h-full"
-                       frameBorder="0"
-                       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                       allowFullScreen
-                     ></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/rM3MWkhO6GA?si=kyH6rk9hWiT5sj8t" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
                   </div>
                 ) : (
                   /* Image for other tabs */
@@ -503,12 +496,12 @@ export function WhyChooseSection() {
                         </div>
 
                         <div className="flex-1">
-                                                  <h3 className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-bold text-white mb-1">
-                          {currentVideo.title.toUpperCase()}
-                        </h3>
-                        <p className="text-white/90 text-xs sm:text-sm lg:text-base">
-                          {currentVideo.subtitle.toUpperCase()}
-                        </p>
+                          <h3 className="text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl font-bold text-white mb-1">
+                            {currentVideo.title.toUpperCase()}
+                          </h3>
+                          <p className="text-white/90 text-xs sm:text-sm lg:text-base">
+                            {currentVideo.subtitle.toUpperCase()}
+                          </p>
                         </div>
                       </div>
                     </div>
