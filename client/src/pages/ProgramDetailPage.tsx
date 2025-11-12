@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../components/ui/card';
@@ -22,6 +22,8 @@ export function ProgramDetailPage() {
     const program = getProgramBySlug(slug || '');
 
     const [curriculumIndex, setCurriculumIndex] = useState(0);
+    const [partnerUniScrollPosition, setPartnerUniScrollPosition] = useState(0);
+    const partnerUniScrollRef = useRef<HTMLDivElement>(null);
 
     useEffect(() => {
         window.scrollTo(0, 0);
@@ -707,87 +709,183 @@ export function ProgramDetailPage() {
                                         </p>
                                     </div>
 
-                                    {/* Partner Universities Grid */}
-                                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-                                        {/* University of Manchester */}
-                                        <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-100 group">
-                                            <div className="text-center">
-                                                <div className="w-full h-48 mx-auto mb-4 rounded-xl overflow-hidden shadow-lg group-hover:scale-105 transition-transform duration-300">
-                                                    <img 
-                                                        src="/uploads/UoM-buildings-1920x1080.jpg"
-                                                        alt="University of Manchester Campus"
-                                                        className="w-full h-full object-cover"
-                                                        onError={(e) => {
-                                                            const target = e.target as HTMLImageElement;
-                                                            target.src = '/uploads/logos/IMAS_LOGO_PNG.png';
-                                                        }}
-                                                    />
+                                    {/* Partner Universities Carousel */}
+                                    <div className="relative">
+                                        {/* Navigation Arrows */}
+                                        <button
+                                            onClick={() => {
+                                                if (partnerUniScrollRef.current) {
+                                                    const scrollAmount = partnerUniScrollRef.current.clientWidth;
+                                                    partnerUniScrollRef.current.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+                                                }
+                                            }}
+                                            className={`absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 p-3 rounded-full ${IMAS_TAILWIND_CLASSES.BG_DARK_BLUE} hover:${IMAS_TAILWIND_CLASSES.BG_MEDIUM_BLUE} text-white shadow-lg transition-all duration-300 hover:scale-110 disabled:opacity-50 disabled:cursor-not-allowed hidden md:flex items-center justify-center`}
+                                            aria-label="Previous universities"
+                                        >
+                                            <ChevronLeft className="w-5 h-5" />
+                                        </button>
+                                        <button
+                                            onClick={() => {
+                                                if (partnerUniScrollRef.current) {
+                                                    const scrollAmount = partnerUniScrollRef.current.clientWidth;
+                                                    partnerUniScrollRef.current.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+                                                }
+                                            }}
+                                            className={`absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 p-3 rounded-full ${IMAS_TAILWIND_CLASSES.BG_DARK_BLUE} hover:${IMAS_TAILWIND_CLASSES.BG_MEDIUM_BLUE} text-white shadow-lg transition-all duration-300 hover:scale-110 disabled:opacity-50 disabled:cursor-not-allowed hidden md:flex items-center justify-center`}
+                                            aria-label="Next universities"
+                                        >
+                                            <ChevronRight className="w-5 h-5" />
+                                        </button>
+
+                                        {/* Carousel Container */}
+                                        <div
+                                            ref={partnerUniScrollRef}
+                                            className="flex gap-6 sm:gap-8 overflow-x-auto scrollbar-hide scroll-smooth pb-4 px-2 [&::-webkit-scrollbar]:hidden"
+                                            onScroll={(e) => setPartnerUniScrollPosition(e.currentTarget.scrollLeft)}
+                                            style={{
+                                                scrollbarWidth: 'none',
+                                                msOverflowStyle: 'none',
+                                            }}
+                                        >
+                                            {/* University of Sunderland */}
+                                            <div className="flex-shrink-0 w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-100 group">
+                                                <div className="text-center">
+                                                    <div className="w-full h-48 mx-auto mb-4 rounded-xl overflow-hidden shadow-lg group-hover:scale-105 transition-transform duration-300">
+                                                        <img
+                                                            src="/uploads/campus_photos/University_of_Sunderland.jpeg"
+                                                            alt="University of Sunderland Campus"
+                                                            className="w-full h-full object-cover"
+                                                            onError={(e) => {
+                                                                const target = e.target as HTMLImageElement;
+                                                                target.src = '/uploads/logos/IMAS_LOGO_PNG.png';
+                                                            }}
+                                                        />
+                                                    </div>
+                                                    <h3 className="text-lg font-bold text-gray-800 mb-2">University of Sunderland</h3>
+                                                    <p className="text-sm text-gray-600 mb-4">Partner university offering strong business and management education</p>
+                                                    <div className="flex flex-wrap justify-center gap-2">
+                                                        <span className={`px-3 py-1 ${IMAS_TAILWIND_CLASSES.BG_DARK_BLUE}/10 ${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE} rounded-full text-xs font-semibold`}>Partner University</span>
+                                                        <span className={`px-3 py-1 ${IMAS_TAILWIND_CLASSES.BG_TEAL}/10 ${IMAS_TAILWIND_CLASSES.TEXT_TEAL} rounded-full text-xs font-semibold`}>International Collaboration</span>
+                                                    </div>
                                                 </div>
-                                                <h3 className="text-lg font-bold text-gray-800 mb-2">University of Manchester</h3>
-                                                <p className="text-sm text-gray-600 mb-4">Ranked #27 globally, one of the UK's most prestigious research universities</p>
-                                                <div className="flex flex-wrap justify-center gap-2">
-                                                    <span className={`px-3 py-1 ${IMAS_TAILWIND_CLASSES.BG_DARK_BLUE}/10 ${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE} rounded-full text-xs font-semibold`}>
-                                                        Russell Group
-                                                    </span>
-                                                    <span className={`px-3 py-1 ${IMAS_TAILWIND_CLASSES.BG_TEAL}/10 ${IMAS_TAILWIND_CLASSES.TEXT_TEAL} rounded-full text-xs font-semibold`}>
-                                                        Global Top 30
-                                                    </span>
+                                            </div>
+
+                                            {/* University of South Wales */}
+                                            <div className="flex-shrink-0 w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-100 group">
+                                                <div className="text-center">
+                                                    <div className="w-full h-48 mx-auto mb-4 rounded-xl overflow-hidden shadow-lg group-hover:scale-105 transition-transform duration-300">
+                                                        <img
+                                                            src="/uploads/campus_photos/University_of_South_Wales.jpeg"
+                                                            alt="University of South Wales Campus"
+                                                            className="w-full h-full object-cover"
+                                                            onError={(e) => {
+                                                                const target = e.target as HTMLImageElement;
+                                                                target.src = '/uploads/logos/IMAS_LOGO_PNG.png';
+                                                            }}
+                                                        />
+                                                    </div>
+                                                    <h3 className="text-lg font-bold text-gray-800 mb-2">University of South Wales</h3>
+                                                    <p className="text-sm text-gray-600 mb-4">A modern university with industry-focused programs and global outlook</p>
+                                                    <div className="flex flex-wrap justify-center gap-2">
+                                                        <span className={`px-3 py-1 ${IMAS_TAILWIND_CLASSES.BG_DARK_BLUE}/10 ${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE} rounded-full text-xs font-semibold`}>Partner University</span>
+                                                        <span className={`px-3 py-1 ${IMAS_TAILWIND_CLASSES.BG_TEAL}/10 ${IMAS_TAILWIND_CLASSES.TEXT_TEAL} rounded-full text-xs font-semibold`}>International Collaboration</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            {/* Cardiff Metropolitan University */}
+                                            <div className="flex-shrink-0 w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-100 group">
+                                                <div className="text-center">
+                                                    <div className="w-full h-48 mx-auto mb-4 rounded-xl overflow-hidden shadow-lg group-hover:scale-105 transition-transform duration-300">
+                                                        <img
+                                                            src="/uploads/campus_photos/Cardiff_Metropolitan_University.jpeg"
+                                                            alt="Cardiff Metropolitan University Campus"
+                                                            className="w-full h-full object-cover"
+                                                            onError={(e) => {
+                                                                const target = e.target as HTMLImageElement;
+                                                                target.src = '/uploads/logos/IMAS_LOGO_PNG.png';
+                                                            }}
+                                                        />
+                                                    </div>
+                                                    <h3 className="text-lg font-bold text-gray-800 mb-2">Cardiff Metropolitan University</h3>
+                                                    <p className="text-sm text-gray-600 mb-4">Known for applied research and strong business school</p>
+                                                    <div className="flex flex-wrap justify-center gap-2">
+                                                        <span className={`px-3 py-1 ${IMAS_TAILWIND_CLASSES.BG_DARK_BLUE}/10 ${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE} rounded-full text-xs font-semibold`}>Partner University</span>
+                                                        <span className={`px-3 py-1 ${IMAS_TAILWIND_CLASSES.BG_TEAL}/10 ${IMAS_TAILWIND_CLASSES.TEXT_TEAL} rounded-full text-xs font-semibold`}>International Collaboration</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            {/* Leeds Beckett University */}
+                                            <div className="flex-shrink-0 w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-100 group">
+                                                <div className="text-center">
+                                                    <div className="w-full h-48 mx-auto mb-4 rounded-xl overflow-hidden shadow-lg group-hover:scale-105 transition-transform duration-300">
+                                                        <img
+                                                            src="/uploads/campus_photos/Leeds_Beckett_University.jpg"
+                                                            alt="Leeds Beckett University Campus"
+                                                            className="w-full h-full object-cover"
+                                                            onError={(e) => {
+                                                                const target = e.target as HTMLImageElement;
+                                                                target.src = '/uploads/logos/IMAS_LOGO_PNG.png';
+                                                            }}
+                                                        />
+                                                    </div>
+                                                    <h3 className="text-lg font-bold text-gray-800 mb-2">Leeds Beckett University</h3>
+                                                    <p className="text-sm text-gray-600 mb-4">Industry-aligned curriculum with strong links to employers</p>
+                                                    <div className="flex flex-wrap justify-center gap-2">
+                                                        <span className={`px-3 py-1 ${IMAS_TAILWIND_CLASSES.BG_DARK_BLUE}/10 ${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE} rounded-full text-xs font-semibold`}>Partner University</span>
+                                                        <span className={`px-3 py-1 ${IMAS_TAILWIND_CLASSES.BG_TEAL}/10 ${IMAS_TAILWIND_CLASSES.TEXT_TEAL} rounded-full text-xs font-semibold`}>International Collaboration</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            {/* Lincoln University Malaysia */}
+                                            <div className="flex-shrink-0 w-full sm:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.5rem)] bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-100 group">
+                                                <div className="text-center">
+                                                    <div className="w-full h-48 mx-auto mb-4 rounded-xl overflow-hidden shadow-lg group-hover:scale-105 transition-transform duration-300">
+                                                        <img
+                                                            src="/uploads/campus_photos/lincoln_universit.jpg"
+                                                            alt="Lincoln University Malaysia Campus"
+                                                            className="w-full h-full object-cover"
+                                                            onError={(e) => {
+                                                                const target = e.target as HTMLImageElement;
+                                                                target.src = '/uploads/logos/IMAS_LOGO_PNG.png';
+                                                            }}
+                                                        />
+                                                    </div>
+                                                    <h3 className="text-lg font-bold text-gray-800 mb-2">Lincoln University Malaysia</h3>
+                                                    <p className="text-sm text-gray-600 mb-4">Regional partner expanding international study pathways</p>
+                                                    <div className="flex flex-wrap justify-center gap-2">
+                                                        <span className={`px-3 py-1 ${IMAS_TAILWIND_CLASSES.BG_DARK_BLUE}/10 ${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE} rounded-full text-xs font-semibold`}>Partner University</span>
+                                                        <span className={`px-3 py-1 ${IMAS_TAILWIND_CLASSES.BG_TEAL}/10 ${IMAS_TAILWIND_CLASSES.TEXT_TEAL} rounded-full text-xs font-semibold`}>International Collaboration</span>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
 
-                                        {/* University of Birmingham */}
-                                        <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-100 group">
-                                            <div className="text-center">
-                                                <div className="w-full h-48 mx-auto mb-4 rounded-xl overflow-hidden shadow-lg group-hover:scale-105 transition-transform duration-300">
-                                                    <img 
-                                                        src="/uploads/University-of-Birmingham.jpg"
-                                                        alt="University of Birmingham Campus"
-                                                        className="w-full h-full object-cover"
-                                                        onError={(e) => {
-                                                            const target = e.target as HTMLImageElement;
-                                                            target.src = '/uploads/logos/IMAS_LOGO_PNG.png';
+                                        {/* Mobile Navigation Dots */}
+                                        <div className="flex justify-center gap-2 mt-6 md:hidden">
+                                            {[0, 1, 2, 3, 4].map((index) => {
+                                                const cardWidth = partnerUniScrollRef.current?.clientWidth || 1;
+                                                const currentIndex = Math.round(partnerUniScrollPosition / cardWidth);
+                                                return (
+                                                    <button
+                                                        key={index}
+                                                        onClick={() => {
+                                                            if (partnerUniScrollRef.current) {
+                                                                const scrollTo = index * cardWidth;
+                                                                partnerUniScrollRef.current.scrollTo({ left: scrollTo, behavior: 'smooth' });
+                                                            }
                                                         }}
+                                                        className={`h-2 rounded-full transition-all duration-300 ${
+                                                            currentIndex === index
+                                                                ? `${IMAS_TAILWIND_CLASSES.BG_DARK_BLUE} w-6`
+                                                                : 'bg-gray-300 w-2'
+                                                        }`}
+                                                        aria-label={`Go to slide ${index + 1}`}
                                                     />
-                                                </div>
-                                                <h3 className="text-lg font-bold text-gray-800 mb-2">University of Birmingham</h3>
-                                                <p className="text-sm text-gray-600 mb-4">A leading research university with strong business and management programs</p>
-                                                <div className="flex flex-wrap justify-center gap-2">
-                                                    <span className={`px-3 py-1 ${IMAS_TAILWIND_CLASSES.BG_DARK_BLUE}/10 ${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE} rounded-full text-xs font-semibold`}>
-                                                        Russell Group
-                                                    </span>
-                                                    <span className={`px-3 py-1 ${IMAS_TAILWIND_CLASSES.BG_TEAL}/10 ${IMAS_TAILWIND_CLASSES.TEXT_TEAL} rounded-full text-xs font-semibold`}>
-                                                        AACSB Accredited
-                                                    </span>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        {/* University of Leeds */}
-                                        <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-6 border border-gray-100 group">
-                                            <div className="text-center">
-                                                <div className="w-full h-48 mx-auto mb-4 rounded-xl overflow-hidden shadow-lg group-hover:scale-105 transition-transform duration-300">
-                                                    <img 
-                                                        src="/uploads/Parkinson Building, University of Leeds.jpg"
-                                                        alt="University of Leeds Parkinson Building"
-                                                        className="w-full h-full object-cover"
-                                                        onError={(e) => {
-                                                            const target = e.target as HTMLImageElement;
-                                                            target.src = '/uploads/logos/IMAS_LOGO_PNG.png';
-                                                        }}
-                                                    />
-                                                </div>
-                                                <h3 className="text-lg font-bold text-gray-800 mb-2">University of Leeds</h3>
-                                                <p className="text-sm text-gray-600 mb-4">Renowned for its business school and strong industry connections</p>
-                                                <div className="flex flex-wrap justify-center gap-2">
-                                                    <span className={`px-3 py-1 ${IMAS_TAILWIND_CLASSES.BG_DARK_BLUE}/10 ${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE} rounded-full text-xs font-semibold`}>
-                                                        Russell Group
-                                                    </span>
-                                                    <span className={`px-3 py-1 ${IMAS_TAILWIND_CLASSES.BG_TEAL}/10 ${IMAS_TAILWIND_CLASSES.TEXT_TEAL} rounded-full text-xs font-semibold`}>
-                                                        Triple Accredited
-                                                    </span>
-                                                </div>
-                                            </div>
+                                                );
+                                            })}
                                         </div>
                                     </div>
 
