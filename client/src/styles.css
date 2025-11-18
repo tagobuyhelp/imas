@@ -379,4 +379,109 @@ img[src*="imas_hero_image1.webp"] {
   display: none !important;
 }
 
+/* NPF Popup visibility fixes */
+.npfPopupWidget,
+.npf_widget_overlay,
+.npf_widget_modal,
+.npf_modal_container,
+.npf-overlay,
+.npf_widget_wrapper {
+  z-index: 2147483647 !important;
+  pointer-events: auto !important;
+}
+
+html.npf-open body *[class*="fixed"],
+html.npf-open body header,
+html.npf-open body nav {
+  pointer-events: none;
+}
+
+/* NPF Popup theming to match IMAS */
+[id^="popup-in-"] .npfTitle {
+  background-color: var(--imas-dark-blue);
+  color: #ffffff;
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  font-size: 1rem;
+  line-height: 1.25rem;
+  padding: 0.75rem 1rem;
+  border-radius: 12px 12px 0 0;
+  box-shadow: 0 10px 40px rgba(var(--imas-dark-blue-rgb), 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+[id^="popup-in-"] .npfTitle img {
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  filter: brightness(0) invert(1);
+}
+
+[id^="popup-in-"] .npfPopup-message {
+  background: #ffffff;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
+}
+
+[id^="popup-in-"] .npfPopup-message .npf_wgts iframe {
+  border: 0;
+  border-radius: 0 0 12px 12px;
+  box-shadow: none;
+}
+
+.npf_widget_overlay,
+.npf-overlay {
+  background: rgba(0, 0, 0, 0.6) !important;
+}
+
+/* Layout polish for NPF modal container */
+html.npf-open {
+  overflow: hidden;
+}
+
+[id^="popup-in-"] {
+  width: min(700px, 94vw);
+  margin: 6vh auto;
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: 0 30px 70px rgba(var(--imas-dark-blue-rgb), 0.28);
+  transform: translateY(12px);
+  animation: imas-modal-in 240ms cubic-bezier(0.22, 0.61, 0.36, 1) both;
+}
+
+@keyframes imas-modal-in {
+  from { opacity: 0; transform: translateY(20px) scale(0.98); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.npf_widget_overlay,
+.npf-overlay {
+  backdrop-filter: blur(4px) saturate(0.9);
+}
+
+/* Refine header styling */
+[id^="popup-in-"] .npfTitle {
+  background: linear-gradient(90deg, var(--imas-dark-blue) 0%, rgba(var(--imas-medium-blue-rgb), 0.95) 100%);
+  letter-spacing: 0.3px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+[id^="popup-in-"] .npfTitle img {
+  margin-left: 8px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 640px) {
+  [id^="popup-in-"] {
+    margin: 4vh auto;
+    border-radius: 14px;
+  }
+  [id^="popup-in-"] .npfTitle {
+    font-size: 0.95rem;
+    padding: 0.65rem 0.9rem;
+  }
+}
+
 

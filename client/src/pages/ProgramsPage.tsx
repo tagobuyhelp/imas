@@ -107,17 +107,27 @@ export function ProgramsPage() {
   ];
 
   const handleCTAAction = (action: string) => {
+    console.log('[ProgramsPage] CTA clicked', { action });
     switch (action) {
       case 'apply':
+        console.log('[ProgramsPage] apply action: opening admissions portal fallback');
         window.open('https://admission.imas.ac.in/', '_blank');
         break;
       case 'enquire':
-        window.open('/contact', '_blank');
+        if (typeof (window as any).openNpfPopup === 'function') {
+          console.log('[ProgramsPage] opening NPF popup for enquiry');
+          (window as any).openNpfPopup('550974b33503dfc785c6fbf5148e6d84');
+        } else {
+          console.warn('[ProgramsPage] NPF not available, opening contact page');
+          window.open('/contact', '_blank');
+        }
         break;
       case 'download':
+        console.log('[ProgramsPage] download action: invoking downloadBrochure');
         downloadBrochure();
         break;
       default:
+        console.warn('[ProgramsPage] unknown CTA action', action);
         break;
     }
   };

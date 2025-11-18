@@ -44,18 +44,23 @@ export function ProgramDetailPage() {
     }
 
     const handleCTAAction = (action: string) => {
+        console.log('[ProgramDetailPage] CTA clicked', { action, program: program?.name });
         switch (action) {
             case 'apply':
                 if (typeof (window as any).openNpfPopup === 'function') {
+                    console.log('[ProgramDetailPage] opening NPF popup for apply');
                     (window as any).openNpfPopup('550974b33503dfc785c6fbf5148e6d84');
                 } else {
+                    console.warn('[ProgramDetailPage] NPF not available, navigating to admissions');
                     window.open('https://admission.imas.ac.in/', '_blank');
                 }
                 break;
             case 'enquire':
                 if (typeof (window as any).openNpfPopup === 'function') {
+                    console.log('[ProgramDetailPage] opening NPF popup for enquiry');
                     (window as any).openNpfPopup('550974b33503dfc785c6fbf5148e6d84');
                 } else {
+                    console.warn('[ProgramDetailPage] NPF not available, opening contact page');
                     window.open('/contact', '_blank');
                 }
                 break;
@@ -64,10 +69,12 @@ export function ProgramDetailPage() {
                     const brochureHref = program.name === 'MBA Global'
                         ? '/uploads/MBA_Global_Brochure.pdf'
                         : '/uploads/IMAS_PGDM_Plus_2025_Brochure.pdf';
+                    console.log('[ProgramDetailPage] download brochure', { brochureHref });
                     downloadBrochureFor(brochureHref);
                 }
                 break;
             default:
+                console.warn('[ProgramDetailPage] unknown CTA action', action);
                 break;
         }
     };
