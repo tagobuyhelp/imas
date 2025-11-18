@@ -68,7 +68,7 @@ function AboutHeroSection() {
                                         className={`${IMAS_TAILWIND_CLASSES.GRADIENT_PRIMARY} hover:from-[#2e7bb3] hover:to-[#26c1d3] text-white px-8 py-3 text-base font-semibold hover:scale-105 transition-all duration-300`}
                                         onClick={applyNow}
                                     >
-                                        Apply Now
+                                        Enquire Now
                                         <ArrowRight className="ml-2 h-4 w-4" />
                                     </Button>
                                     <Button 

@@ -551,7 +551,7 @@ export function CampusLifePage() {
             className={`${IMAS_TAILWIND_CLASSES.GRADIENT_PRIMARY} hover:from-[#2e7bb3] hover:to-[#26c1d3] text-white px-8 sm:px-10 lg:px-12 py-3 sm:py-4 text-sm sm:text-base lg:text-lg font-semibold hover:scale-105 transition-all duration-300`}
           >
             <Send className="mr-2 h-5 w-5" />
-            Apply Now - Join IMAS
+            Enquire Now - Join IMAS
           </Button>
         </div>
       </section>

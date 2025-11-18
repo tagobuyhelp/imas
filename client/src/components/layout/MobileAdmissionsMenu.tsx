@@ -142,15 +142,14 @@ const MobileAdmissionsMenu: React.FC<MobileAdmissionsMenuProps> = ({
                 <FileText className="h-4 w-4" />
                 Download Brochure
               </button>
-              <a 
-                href="https://admission.imas.ac.in/"
-                target="_blank"
-                rel="noopener noreferrer"
+              <button 
+                type="button"
+                onClick={() => (window as any).openNpfPopup ? (window as any).openNpfPopup('550974b33503dfc785c6fbf5148e6d84') : window.open('https://admission.imas.ac.in/', '_blank')}
                 className="w-full px-3 py-2 text-sm bg-gradient-to-r from-blue-600 to-teal-600 text-white rounded-md hover:from-blue-700 hover:to-teal-700 transition-all flex items-center gap-2"
               >
                 <GraduationCap className="h-4 w-4" />
-                Apply Now
-              </a>
+                Enquire Now
+              </button>
             </div>
           </div>
         </div>

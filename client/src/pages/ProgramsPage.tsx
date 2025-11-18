@@ -206,9 +206,9 @@ export function ProgramsPage() {
             <div className="flex flex-col sm:flex-row gap-2 sm:gap-3 lg:gap-4 justify-center animate-fade-in-up px-4 sm:px-0" style={{ animationDelay: '0.8s' }}>
               <Button 
                 className={`${IMAS_TAILWIND_CLASSES.GRADIENT_PRIMARY} hover:from-[#2e7bb3] hover:to-[#26c1d3] text-white px-4 sm:px-6 lg:px-8 xl:px-12 py-2.5 sm:py-3 lg:py-4 text-sm sm:text-base lg:text-lg font-semibold hover:scale-105 transition-all duration-300 shadow-lg w-full sm:w-auto`}
-                onClick={() => handleCTAAction('apply')}
+                onClick={() => handleCTAAction('enquire')}
               >
-                Apply Now
+                Enquire Now
                 <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
               </Button>
               <Button 
@@ -433,9 +433,9 @@ export function ProgramsPage() {
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
               <Button 
                 className={`${IMAS_TAILWIND_CLASSES.GRADIENT_PRIMARY} hover:from-[#2e7bb3] hover:to-[#26c1d3] text-white px-6 sm:px-8 py-3 text-sm sm:text-base lg:text-lg font-semibold hover:scale-105 transition-all duration-300`}
-                onClick={() => handleCTAAction('apply')}
+                onClick={() => handleCTAAction('enquire')}
               >
-                Apply Now for IMAS Admission 2026
+                Enquire Now for IMAS Admission 2026
                 <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
               </Button>
              

@@ -113,6 +113,27 @@
         "buttonbgColor": "#4c79dc",
         "buttonTextColor": "#FFF"
       });
+      // Initialize user-provided widgets for programmatic popup usage
+      let npfW550974b33503dfc785c6fbf5148e6d84 = new NpfWidgetsInit({
+        "widgetId": "550974b33503dfc785c6fbf5148e6d84",
+        "baseurl": "widgets.in8.nopaperforms.com",
+        "formTitle": "Enquiry Form",
+        "titleColor": "#FF0033",
+        "backgroundColor": "#ddd",
+        "iframeHeight": "500px",
+        "buttonbgColor": "#4c79dc",
+        "buttonTextColor": "#FFF"
+      });
+      let npfWb90761d553ba1ef721aa08c760f669b3 = new NpfWidgetsInit({
+        "widgetId": "b90761d553ba1ef721aa08c760f669b3",
+        "baseurl": "widgets.in8.nopaperforms.com",
+        "formTitle": "Enquiry Form",
+        "titleColor": "#FF0033",
+        "backgroundColor": "#ddd",
+        "iframeHeight": "500px",
+        "buttonbgColor": "#4c79dc",
+        "buttonTextColor": "#FFF"
+      });
     </script>
     
     <!-- NPF Chatbot Loader Script -->
@@ -161,6 +182,89 @@
           }, 5000);
         } catch (e) {
           console.error('[NPF Chatbot] instrumentation error', e);
+        }
+      })();
+    </script>
+    
+    <!-- NPF Popup Helpers: open popup programmatically and auto-download brochure after submit -->
+    <script>
+      // Initialize provided widget IDs if not already initialized elsewhere
+      try {
+        if (typeof NpfWidgetsInit === 'function') {
+          // Create hidden triggers for both widgets so we can open them via JS
+          (function ensureHiddenTriggers(){
+            var ids = ['550974b33503dfc785c6fbf5148e6d84','b90761d553ba1ef721aa08c760f669b3'];
+            ids.forEach(function(id){
+              var cls = 'npfWidget-' + id;
+              if (!document.querySelector('.' + cls)) {
+                var btn = document.createElement('button');
+                btn.type = 'button';
+                btn.className = 'npfWidgetButton ' + cls;
+                btn.style.display = 'none';
+                btn.textContent = 'Enquire';
+                document.body.appendChild(btn);
+              }
+            });
+          })();
+
+          // Expose a helper to open a specific widget popup
+          window.openNpfPopup = function(widgetId) {
+            var trigger = document.querySelector('.npfWidget-' + widgetId);
+            if (trigger) {
+              trigger.click();
+            } else {
+              console.warn('[NPF] Popup trigger not found for widget', widgetId);
+            }
+          };
+        }
+      } catch (e) {
+        console.warn('[NPF] popup helpers init failed', e);
+      }
+
+      // Auto-download brochure on NPF success; configure widget to call this.
+      window.npfFormSuccess = function() {
+        try {
+          var href = window.__imasPendingBrochureHref || '/uploads/IMAS_PGDM_Plus_2025_Brochure.pdf';
+          var a = document.createElement('a');
+          a.href = href;
+          a.download = '';
+          document.body.appendChild(a);
+          a.click();
+          document.body.removeChild(a);
+          window.__imasPendingBrochureHref = null;
+          console.log('[NPF] Brochure download triggered:', href);
+        } catch (e) {
+          console.error('[NPF] Brochure auto-download failed', e);
+        }
+      };
+
+      // Best-effort: listen for postMessage from NPF and trigger auto-download
+      window.addEventListener('message', function(ev){
+        try {
+          var originOk = ev.origin && (ev.origin.indexOf('nopaperforms.com') !== -1 || ev.origin.indexOf('npfs.co') !== -1);
+          if (!originOk) return;
+          var payload = ev.data;
+          var str = typeof payload === 'string' ? payload : JSON.stringify(payload || {});
+          if (str && /(npf|lead|submit|success)/i.test(str)) {
+            window.npfFormSuccess();
+          }
+        } catch (e) {
+          // swallow
+        }
+      });
+    </script>
+
+    <!-- Optional: Load NPF iframe script for inline forms -->
+    <script type="text/javascript">
+      (function(){
+        try {
+          var s=document.createElement('script');
+          s.type='text/javascript';
+          s.async=true;
+          s.src='https://widgets.in8.nopaperforms.com/emwgts.js';
+          document.body.appendChild(s);
+        } catch (e) {
+          console.warn('[NPF] Failed to append iframe script', e);
         }
       })();
     </script>

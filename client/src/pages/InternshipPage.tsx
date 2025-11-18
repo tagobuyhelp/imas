@@ -98,7 +98,7 @@ export function InternshipPage() {
               className={`${IMAS_TAILWIND_CLASSES.BG_DARK_BLUE} hover:bg-blue-700 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105`}
             >
               <Send className="mr-2 h-5 w-5" />
-              Apply Now for IMAS Admission 2026
+              Enquire Now for IMAS Admission 2026
             </Button>
           </div>
         </div>
@@ -308,7 +308,7 @@ export function InternshipPage() {
                 className={`${IMAS_TAILWIND_CLASSES.GRADIENT_PRIMARY} hover:from-[#2e7bb3] hover:to-[#26c1d3] text-white px-8 sm:px-10 lg:px-12 py-3 sm:py-4 text-sm sm:text-base lg:text-lg font-semibold hover:scale-105 transition-all duration-300`}
                 onClick={applyNow}
               >
-                Apply Now
+                Enquire Now
                 <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
               </Button>
 

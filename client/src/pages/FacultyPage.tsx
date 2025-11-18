@@ -201,7 +201,7 @@ export function FacultyPage() {
                 className="bg-white hover:bg-gray-100 text-black px-6 py-3 sm:px-8 sm:py-3 md:px-10 md:py-4 text-sm sm:text-base md:text-lg font-semibold shadow-2xl transition-all duration-300 transform hover:scale-105 border border-white/20 backdrop-blur-sm w-full sm:w-auto group"
               >
                 <ArrowRight className="h-4 w-4 sm:h-5 sm:w-5 md:h-6 md:w-6 mr-2 sm:mr-3 group-hover:translate-x-1 transition-transform duration-300" />
-                Apply Now
+                Enquire Now
               </Button>
               <Button
                 variant="outline"
@@ -652,7 +652,7 @@ export function FacultyPage() {
                       className={`${IMAS_TAILWIND_CLASSES.GRADIENT_PRIMARY}  text-white px-8 sm:px-10 lg:px-12 py-3 sm:py-4 text-sm sm:text-base lg:text-lg font-semibold hover:scale-105 transition-all duration-300`}
                       onClick={applyNow}
                     >
-                      Apply Now
+                      Enquire Now
                       <ArrowRight className="ml-2 h-4 w-4 sm:h-5 sm:w-5" />
                     </Button>
                     <Button 

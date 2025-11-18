@@ -23,7 +23,7 @@ const getMenuItemsForPage = (page?: string) => {
         { label: 'Program Highlights', sectionId: 'program-highlights' },
         { label: 'Why Choose', sectionId: 'why-choose' },
         { label: 'Top Recruiters', sectionId: 'top-recruiters' },
-        { label: 'Apply Now', sectionId: 'cta' }
+        { label: 'Enquire Now', sectionId: 'cta' }
       ];
     case 'program-detail':
       return [
@@ -34,7 +34,7 @@ const getMenuItemsForPage = (page?: string) => {
         { label: 'Eligibility', sectionId: 'eligibility' },
         { label: 'Placement', sectionId: 'placement' },
         { label: 'FAQ', sectionId: 'faq' },
-        { label: 'Apply Now', sectionId: 'cta' }
+        { label: 'Enquire Now', sectionId: 'cta' }
       ];
     case 'home':
       return [
@@ -48,7 +48,7 @@ const getMenuItemsForPage = (page?: string) => {
         { label: 'Industry Collaborations', sectionId: 'industry-collaborations' },
         { label: 'Why Choose', sectionId: 'why-choose' },
         { label: 'FAQ', sectionId: 'faq' },
-        { label: 'Apply Now', sectionId: 'final-cta' }
+        { label: 'Enquire Now', sectionId: 'final-cta' }
       ];
     case 'faculty':
       return [
@@ -69,7 +69,7 @@ const getMenuItemsForPage = (page?: string) => {
         { label: 'Overview', sectionId: 'admissions-hero' },
         { label: 'Application Process', sectionId: 'admission-process' },
         { label: 'Eligibility', sectionId: 'eligibility' },
-        { label: 'Apply Now', sectionId: 'apply' }
+        { label: 'Enquire Now', sectionId: 'apply' }
       ];
     case 'internships':
       return [
@@ -77,7 +77,7 @@ const getMenuItemsForPage = (page?: string) => {
         { label: 'Outcomes', sectionId: 'outcomes' },
         { label: 'Companies', sectionId: 'companies' },
         { label: 'Roles', sectionId: 'roles' },
-        { label: 'Apply Now', sectionId: 'cta' }
+        { label: 'Enquire Now', sectionId: 'cta' }
       ];
     case 'contact':
       return [
@@ -174,8 +174,9 @@ export function BottomNavBar({
       'Success Stories': <Users className="h-4 w-4" />,
       'Admissions': <FileText className="h-4 w-4" />,
       'Process': <FileText className="h-4 w-4" />,
-      'Apply': <FileText className="h-4 w-4" />,
-      'Apply Now': <FileText className="h-4 w-4" />,
+      'Apply': <FileText className="h-4 w-4" />, 
+      'Apply Now': <FileText className="h-4 w-4" />, 
+      'Enquire Now': <FileText className="h-4 w-4" />, 
       'Contact': <Phone className="h-4 w-4" />,
       'Information': <Phone className="h-4 w-4" />,
       'Location': <Phone className="h-4 w-4" />,

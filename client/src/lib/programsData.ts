@@ -485,7 +485,6 @@ export const programsData: Program[] = [
             title: 'Your Journey Doesn\'t End at IMAS. It Begins',
             description: 'From desert safaris in Dubai to business case competitions in Singapore, IMAS Kolkata ensures your PGDM Marketing journey is a life-changing experience. With a focus on leadership development, international exposure, and startup incubation, IMAS makes you future-ready.',
             buttons: [
-                { text: 'Apply Now for IMAS Admission 2026', action: 'apply' },
                 { text: 'Enquire Now', action: 'enquire' },
                 { text: 'Download Brochure', action: 'download' }
             ]
@@ -613,7 +612,6 @@ export const programsData: Program[] = [
             title: 'Finance for the Future – Start Now',
             description: 'From forex labs to Bloomberg terminal exposure, your learning will match what top employers expect. Plus, international immersion with partner universities like Middlesex University and Raffles University ensures a global outlook.',
             buttons: [
-                { text: 'Apply Now for IMAS Admission 2026', action: 'apply' },
                 { text: 'Enquire Now', action: 'enquire' },
                 { text: 'Download Brochure', action: 'download' }
             ]
@@ -748,7 +746,6 @@ export const programsData: Program[] = [
             title: 'Be the People Leader Companies Want',
             description: 'With access to a global alumni network, certified skill training, and hands-on learning from real-world HR challenges, this PGDM in HRM in Kolkata at IMAS builds leaders who create impact.',
             buttons: [
-                { text: 'Apply Now for IMAS Admission 2026', action: 'apply' },
                 { text: 'Enquire Now', action: 'enquire' },
                 { text: 'Download Brochure', action: 'download' }
             ]
@@ -882,7 +879,6 @@ export const programsData: Program[] = [
             title: 'Transform Data into Strategic Insights',
             description: 'From statistical modeling to machine learning applications, your analytical skills will match what top employers expect. Plus, international immersion and industry partnerships ensure a global perspective on data-driven business strategy.',
             buttons: [
-                { text: 'Apply Now for IMAS Admission 2026', action: 'apply' },
                 { text: 'Enquire Now', action: 'enquire' },
                 { text: 'Download Brochure', action: 'download' }
             ]
@@ -1016,7 +1012,6 @@ export const programsData: Program[] = [
             title: 'Shape the Future with AI Innovation',
             description: 'From neural networks to intelligent automation, your AI expertise will match what leading tech companies expect. Plus, international immersion and cutting-edge research opportunities ensure you stay at the forefront of AI advancement.',
             buttons: [
-                { text: 'Apply Now for IMAS Admission 2026', action: 'apply' },
                 { text: 'Enquire Now', action: 'enquire' },
                 { text: 'Download Brochure', action: 'download' }
             ]
@@ -1150,7 +1145,6 @@ export const programsData: Program[] = [
             title: 'Revolutionize Finance with Technology',
             description: 'From blockchain to digital banking, your fintech expertise will match what leading financial institutions expect. Plus, international immersion and startup incubation opportunities ensure you stay at the forefront of financial innovation.',
             buttons: [
-                { text: 'Apply Now for IMAS Admission 2026', action: 'apply' },
                 { text: 'Enquire Now', action: 'enquire' },
                 { text: 'Download Brochure', action: 'download' }
             ]
@@ -1284,7 +1278,6 @@ export const programsData: Program[] = [
             title: 'Transform Healthcare with Strategic Leadership',
             description: 'From hospital operations to digital health innovations, your healthcare management expertise will match what leading medical institutions expect. Plus, international immersion and healthcare entrepreneurship opportunities ensure you stay at the forefront of medical administration.',
             buttons: [
-                { text: 'Apply Now for IMAS Admission 2026', action: 'apply' },
                 { text: 'Enquire Now', action: 'enquire' },
                 { text: 'Download Brochure', action: 'download' }
             ]
@@ -1418,7 +1411,6 @@ export const programsData: Program[] = [
             title: 'Build Tomorrow\'s Businesses Today',
             description: 'From startup ideation to venture scaling, your entrepreneurial expertise will match what leading investors expect. Plus, international immersion and startup accelerator opportunities ensure you stay at the forefront of business innovation.',
             buttons: [
-                { text: 'Apply Now for IMAS Admission 2026', action: 'apply' },
                 { text: 'Enquire Now', action: 'enquire' },
                 { text: 'Download Brochure', action: 'download' }
             ]
@@ -1561,7 +1553,6 @@ export const programsData: Program[] = [
             title: 'Advance Your Career with Executive PGDM',
             description: 'Choose from 9 specialized tracks including Marketing, HR, Finance, Healthcare, Business Analytics, AI & Data Science, Fintech, Operations, Logistics, and Agri Business. Flexible learning designed for working professionals.',
             buttons: [
-                { text: 'Apply Now for IMAS Admission 2026', action: 'apply' },
                 { text: 'Enquire Now', action: 'enquire' },
                 { text: 'Download Brochure', action: 'download' }
             ]
@@ -1698,7 +1689,6 @@ export const programsData: Program[] = [
             title: 'Advance Your Finance Career While You Work',
             description: 'From corporate finance to investment banking, your executive finance expertise will match what senior roles demand. Plus, flexible learning and international exposure ensure career growth without career breaks.',
             buttons: [
-                { text: 'Apply Now for IMAS Admission 2026', action: 'apply' },
                 { text: 'Enquire Now', action: 'enquire' },
                 { text: 'Download Brochure', action: 'download' }
             ]
@@ -1834,7 +1824,6 @@ export const programsData: Program[] = [
             title: 'Advance Your HR Leadership Career',
             description: 'Transform your HR expertise with strategic management skills, advanced analytics, and executive leadership training. Designed for working professionals ready to lead organizational transformation.',
             buttons: [
-                { text: 'Apply Now for IMAS Admission 2026', action: 'apply' },
                 { text: 'Enquire Now', action: 'enquire' },
                 { text: 'Download Brochure', action: 'download' }
             ]
@@ -1971,7 +1960,6 @@ export const programsData: Program[] = [
             title: 'Master Data-Driven Decision Making',
             description: 'Transform your analytical expertise with advanced machine learning, business intelligence, and strategic analytics training. Designed for working professionals ready to lead data transformation.',
             buttons: [
-                { text: 'Apply Now for IMAS Admission 2026', action: 'apply' },
                 { text: 'Enquire Now', action: 'enquire' },
                 { text: 'Download Brochure', action: 'download' }
             ]
@@ -2108,7 +2096,6 @@ export const programsData: Program[] = [
             title: 'Lead the AI Revolution',
             description: 'Transform your technical expertise with cutting-edge AI, machine learning, and deep learning training. Designed for working professionals ready to lead AI transformation in their organizations.',
             buttons: [
-                { text: 'Apply Now for IMAS Admission 2026', action: 'apply' },
                 { text: 'Enquire Now', action: 'enquire' },
                 { text: 'Download Brochure', action: 'download' }
             ]
@@ -2245,7 +2232,6 @@ export const programsData: Program[] = [
             title: 'Lead Financial Innovation',
             description: 'Transform your financial expertise with cutting-edge fintech, blockchain, and digital banking training. Designed for working professionals ready to lead financial technology transformation.',
             buttons: [
-                { text: 'Apply Now for IMAS Admission 2026', action: 'apply' },
                 { text: 'Enquire Now', action: 'enquire' },
                 { text: 'Download Brochure', action: 'download' }
             ]
@@ -2382,7 +2368,6 @@ export const programsData: Program[] = [
             title: 'Master Global Supply Chains',
             description: 'Transform your logistics expertise with cutting-edge supply chain management, procurement, and operations training. Designed for working professionals ready to lead supply chain transformation.',
             buttons: [
-                { text: 'Apply Now for IMAS Admission 2026', action: 'apply' },
                 { text: 'Enquire Now', action: 'enquire' },
                 { text: 'Download Brochure', action: 'download' }
             ]
@@ -2519,7 +2504,6 @@ export const programsData: Program[] = [
             title: 'Drive Operational Excellence',
             description: 'Transform your operations expertise with cutting-edge manufacturing, quality management, and process improvement training. Designed for working professionals ready to lead operational transformation.',
             buttons: [
-                { text: 'Apply Now for IMAS Admission 2026', action: 'apply' },
                 { text: 'Enquire Now', action: 'enquire' },
                 { text: 'Download Brochure', action: 'download' }
             ]
@@ -2656,7 +2640,6 @@ export const programsData: Program[] = [
             title: 'Transform Agricultural Business',
             description: 'Master agri business management with sustainable farming practices, agricultural finance, and rural development expertise. Designed for working professionals ready to lead agricultural transformation.',
             buttons: [
-                { text: 'Apply Now for IMAS Admission 2026', action: 'apply' },
                 { text: 'Enquire Now', action: 'enquire' },
                 { text: 'Download Brochure', action: 'download' }
             ]
@@ -2793,7 +2776,6 @@ export const programsData: Program[] = [
             title: 'Lead Healthcare Excellence',
             description: 'Master healthcare management with hospital administration, medical technology, and patient care expertise. Designed for working professionals ready to lead healthcare transformation.',
             buttons: [
-                { text: 'Apply Now for IMAS Admission 2026', action: 'apply' },
                 { text: 'Enquire Now', action: 'enquire' },
                 { text: 'Download Brochure', action: 'download' }
             ]

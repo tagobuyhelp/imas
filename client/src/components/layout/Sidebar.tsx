@@ -148,7 +148,7 @@ export function Sidebar({ currentPage, isOpen, onClose }: SidebarProps) {
                 applyNow();
               }}
             >
-              Apply Now
+              Enquire Now
             </Button>
           </div>
         </div>

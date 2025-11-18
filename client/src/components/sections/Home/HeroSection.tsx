@@ -149,7 +149,7 @@ export function HeroSection() {
                     className="group bg-gradient-to-r from-teal-500 to-blue-600 hover:from-teal-600 hover:to-blue-700 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold rounded-xl shadow-2xl hover:shadow-teal-500/25 transform hover:scale-105 transition-all duration-300"
                     onClick={applyNow}
                   >
-                    Apply Now
+                    Enquire Now
                     <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
                   </Button>
                   

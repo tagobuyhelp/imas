@@ -14,7 +14,7 @@ import {
 } from 'lucide-react';
 import { getProgramBySlug, getAllProgramSlugs } from '../lib/programsData';
 import { IMAS_TAILWIND_CLASSES, IMAS_BRAND } from '../lib/constants';
-import { downloadBrochure } from '../lib/utils';
+import { downloadBrochure, downloadBrochureFor } from '../lib/utils';
 import { FAQ } from '../components/FAQ';
 
 export function ProgramDetailPage() {
@@ -46,13 +46,26 @@ export function ProgramDetailPage() {
     const handleCTAAction = (action: string) => {
         switch (action) {
             case 'apply':
-                window.open('https://admission.imas.ac.in/', '_blank');
+                if (typeof (window as any).openNpfPopup === 'function') {
+                    (window as any).openNpfPopup('550974b33503dfc785c6fbf5148e6d84');
+                } else {
+                    window.open('https://admission.imas.ac.in/', '_blank');
+                }
                 break;
             case 'enquire':
-                window.open('/contact', '_blank');
+                if (typeof (window as any).openNpfPopup === 'function') {
+                    (window as any).openNpfPopup('550974b33503dfc785c6fbf5148e6d84');
+                } else {
+                    window.open('/contact', '_blank');
+                }
                 break;
             case 'download':
-                downloadBrochure();
+                {
+                    const brochureHref = program.name === 'MBA Global'
+                        ? '/uploads/MBA_Global_Brochure.pdf'
+                        : '/uploads/IMAS_PGDM_Plus_2025_Brochure.pdf';
+                    downloadBrochureFor(brochureHref);
+                }
                 break;
             default:
                 break;
@@ -502,7 +515,7 @@ export function ProgramDetailPage() {
                                                         className="w-full bg-white text-[#143674] hover:bg-gray-100 font-semibold transition-all duration-300 hover:scale-105"
                                                         onClick={() => handleCTAAction('apply')}
                                                     >
-                                                        Apply Now
+                                                        Enquire Now
                                                     </Button>
                                                 </div>
                                             </div>
@@ -1226,7 +1239,7 @@ export function ProgramDetailPage() {
                                 onClick={() => handleCTAAction('apply')}
                             >
                                 <ExternalLink className="mr-2 h-4 w-4" />
-                                Apply Now
+                                Enquire Now
                             </Button>
                         </div>
                     </div>

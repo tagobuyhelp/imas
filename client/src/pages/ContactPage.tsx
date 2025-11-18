@@ -359,12 +359,12 @@ export function ContactPage(): React.JSX.Element {
             </Button>
 
             <Button
-              onClick={() => window.open('https://admission.imas.ac.in/', '_blank')}
+              onClick={() => (window as any).openNpfPopup ? (window as any).openNpfPopup('550974b33503dfc785c6fbf5148e6d84') : window.open('https://admission.imas.ac.in/', '_blank')}
               variant="outline"
               className="border-2 bg-transparent border-white text-white hover:bg-white hover:text-[#143674] px-8 py-3 text-lg font-semibold transition-all duration-300 hover:scale-105 backdrop-blur-sm"
             >
               <ExternalLink className="mr-2 h-5 w-5" />
-              Apply Now
+              Enquire Now
             </Button>
           </div>
         </div>

@@ -454,7 +454,7 @@ export function AdmissionsPage(): React.JSX.Element {
                     className="bg-white text-[#143674] hover:bg-gray-50 active:bg-gray-100 px-6 sm:px-8 py-3 text-sm sm:text-base font-semibold rounded-lg hover:scale-105 active:scale-95 transition-all duration-200 hover:shadow-lg"
                     onClick={applyNow}
                   >
-                    Apply Now
+                    Enquire Now
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                   <button 

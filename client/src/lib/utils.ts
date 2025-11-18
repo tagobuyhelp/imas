@@ -9,7 +9,19 @@ export function cn(...inputs: ClassValue[]) {
  * Opens brochure selection modal instead of direct download
  */
 export function downloadBrochure() {
-  window.dispatchEvent(new Event('imas:openBrochureModal'));
+  // Prefer NPF popup for lead capture
+  try {
+    (window as any).__imasPendingBrochureHref = null;
+    if (typeof (window as any).openNpfPopup === 'function') {
+      (window as any).openNpfPopup('550974b33503dfc785c6fbf5148e6d84');
+    } else {
+      // Fallback to existing modal if NPF blocked
+      window.dispatchEvent(new Event('imas:openBrochureModal'));
+    }
+  } catch (e) {
+    // As a safety fallback
+    window.dispatchEvent(new Event('imas:openBrochureModal'));
+  }
 }
 
 /**
@@ -17,6 +29,30 @@ export function downloadBrochure() {
  * or navigating to the admissions page
  */
 export function applyNow() {
-  // Redirect to the official IMAS admission portal
-  window.open('https://admission.imas.ac.in/', '_blank');
+  // Open NPF Enquiry popup instead of direct admission portal
+  try {
+    if (typeof (window as any).openNpfPopup === 'function') {
+      (window as any).openNpfPopup('550974b33503dfc785c6fbf5148e6d84');
+    } else {
+      window.open('https://admission.imas.ac.in/', '_blank');
+    }
+  } catch (e) {
+    window.open('https://admission.imas.ac.in/', '_blank');
+  }
+}
+
+/**
+ * Open NPF popup and set preferred brochure to auto-download on success
+ */
+export function downloadBrochureFor(href?: string) {
+  try {
+    (window as any).__imasPendingBrochureHref = href || null;
+    if (typeof (window as any).openNpfPopup === 'function') {
+      (window as any).openNpfPopup('550974b33503dfc785c6fbf5148e6d84');
+    } else {
+      window.dispatchEvent(new Event('imas:openBrochureModal'));
+    }
+  } catch (e) {
+    window.dispatchEvent(new Event('imas:openBrochureModal'));
+  }
 }
