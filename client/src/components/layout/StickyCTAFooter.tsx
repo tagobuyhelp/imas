@@ -129,7 +129,7 @@ export function StickyCTAFooter({
 
       {/* Floating WhatsApp & Call Buttons */}
       {showWhatsAppButton && (
-        <div className="fixed bottom-4 right-4 z-40 flex flex-col sm:flex-row gap-3">
+        <div className="fixed bottom-28 right-4 z-40 flex flex-col sm:flex-row gap-3">
           {/* WhatsApp Button */}
           <button
             onClick={handleWhatsAppClick}
