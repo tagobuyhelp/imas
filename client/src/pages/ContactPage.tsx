@@ -189,7 +189,7 @@ export function ContactPage(): React.JSX.Element {
 
               {/* Map Button */}
               <Button
-                onClick={() => window.open('https://maps.google.com/?q=Delta,+SALT+LAKE,+Bengal+Intelligent+Park+EP+%26,+Plot+A2+%26+B2,+GP+Block,+Sector+V,+Kolkata,+West+Bengal+700091', '_blank')}
+                onClick={() => window.open('https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4370.236359009743!2d88.4322102!3d22.570171199999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0275aedaaaaaab%3A0x42fc9c8ae01a94cd!2sIMAS%20Business%20School!5e1!3m2!1sen!2sin!4v1763538136436!5m2!1sen!2sin', '_blank')}
                 className="w-full bg-[#26c1d3] hover:bg-[#26c1d3]/90 text-white py-3 text-lg font-semibold transition-all duration-300 hover:scale-105"
               >
                 <Navigation className="h-5 w-5 mr-2" />
@@ -326,13 +326,15 @@ export function ContactPage(): React.JSX.Element {
         <div className="mt-4">
                           <iframe
                             title="Main Campus Location Map"
-                            src="https://www.google.com/maps?q=HF6M%2BP4R%20Dharmatala%20Pachuria,%20West%20Bengal&output=embed"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3684.238774664635!2d88.4322102!3d22.570171199999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a0275aedaaaaaab%3A0x42fc9c8ae01a94cd!2sIMAS%20Business%20School!5e0!3m2!1sen!2sin!4v1763538389238!5m2!1sen!2sin"
                             className="w-full h-64 md:h-80 rounded-lg border"
                             loading="lazy"
                             referrerPolicy="no-referrer-when-downgrade"
                           ></iframe>
                         </div>
       </section>
+
+      
 
       {/* Call to Action Section */}
       <section
