@@ -186,23 +186,17 @@ const AdmissionsMegaMenu: React.FC<AdmissionsMegaMenuProps> = ({ isOpen, onClose
                   <Download className="h-4 w-4 group-hover/download:animate-bounce" />
                   Download Brochure
                 </button>
-                <a 
-                  href="https://admission.imas.ac.in/"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <button 
                   className="flex items-center gap-2 px-6 py-3 text-sm bg-gradient-to-r from-blue-600 to-teal-600 text-white hover:from-blue-700 hover:to-teal-700 rounded-lg transition-all duration-300 font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 group/apply"
-                  onClick={(e) => { 
-                    const w = window as any; 
-                    if (w.openNpfPopup) { 
-                      e.preventDefault(); 
-                      w.openNpfPopup('550974b33503dfc785c6fbf5148e6d84'); 
-                    }
+                  onClick={() => { 
+                    (window as any).openEnquiryForm?.();
+                    window.dispatchEvent(new Event('imas:openEnquiryForm'));
                     onClose();
                   }}
                 >
                   <span>Enquire Now</span>
                   <ArrowRight className="h-4 w-4 group-hover/apply:translate-x-1 transition-transform duration-300" />
-                </a>
+                </button>
               </div>
             </div>
           </div>

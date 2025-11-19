@@ -34,7 +34,7 @@ export function Header({ currentPage, onMenuToggle }: HeaderProps) {
           { label: 'Program Highlights', sectionId: 'program-highlights' },
           { label: 'Why Choose', sectionId: 'why-choose' },
           { label: 'Top Recruiters', sectionId: 'top-recruiters' },
-          { label: 'Apply Now', sectionId: 'cta' }
+          { label: 'Enquire Now', sectionId: 'cta' }
         ];
       case 'program-detail':
         return [
@@ -45,7 +45,7 @@ export function Header({ currentPage, onMenuToggle }: HeaderProps) {
           { label: 'Eligibility', sectionId: 'eligibility' },
           { label: 'Placement', sectionId: 'placement' },
           { label: 'FAQ', sectionId: 'faq' },
-          { label: 'Apply Now', sectionId: 'cta' }
+          { label: 'Enquire Now', sectionId: 'cta' }
         ];
       case 'home':
         return [
@@ -59,7 +59,7 @@ export function Header({ currentPage, onMenuToggle }: HeaderProps) {
           { label: 'Industry Collaborations', sectionId: 'industry-collaborations' },
           { label: 'Why Choose', sectionId: 'why-choose' },
           { label: 'FAQ', sectionId: 'faq' },
-          { label: 'Apply Now', sectionId: 'final-cta' }
+          { label: 'Enquire Now', sectionId: 'final-cta' }
         ];
       case 'faculty':
         return [
@@ -80,7 +80,7 @@ export function Header({ currentPage, onMenuToggle }: HeaderProps) {
           { label: 'Overview', sectionId: 'admissions-hero' },
           { label: 'Application Process', sectionId: 'admission-process' },
           { label: 'Eligibility', sectionId: 'eligibility' },
-          { label: 'Apply Now', sectionId: 'apply' }
+          { label: 'Enquire Now', sectionId: 'apply' }
         ];
 
       case 'internships':
@@ -89,7 +89,7 @@ export function Header({ currentPage, onMenuToggle }: HeaderProps) {
           { label: 'Outcomes', sectionId: 'outcomes' },
           { label: 'Companies', sectionId: 'companies' },
           { label: 'Roles', sectionId: 'roles' },
-          { label: 'Apply Now', sectionId: 'cta' }
+          { label: 'Enquire Now', sectionId: 'cta' }
         ];
 
       case 'contact':
@@ -220,7 +220,13 @@ export function Header({ currentPage, onMenuToggle }: HeaderProps) {
               <Button 
                 variant="ghost"
                 className="text-white hover:bg-white/10 px-3 py-1 text-xs sm:text-sm"
-                onClick={() => window.open('/contact', '_blank')}
+                onClick={() => {
+                  try {
+                    applyNow();
+                  } catch (e) {
+                    window.dispatchEvent(new Event('imas:openEnquiryForm'));
+                  }
+                }}
               >
                 <HelpCircle className="h-4 w-4 mr-2" />
                 Enquiry Now
@@ -361,7 +367,7 @@ export function Header({ currentPage, onMenuToggle }: HeaderProps) {
               </Button>
               <Button 
                 className={`${IMAS_TAILWIND_CLASSES.GRADIENT_PRIMARY} hover:from-[#2e7bb3] hover:to-[#26c1d3] text-white text-xs lg:text-sm xl:text-base px-3 lg:px-4 xl:px-6 py-1 lg:py-1.5 xl:py-2 font-semibold hover:scale-105 transition-all duration-300 flex items-center gap-2`}
-                onClick={applyNow}
+                onClick={ () => window.open('https://admission.imas.ac.in/', '_blank')}
               >
                 <GraduationCap className="h-3.5 w-3.5 xl:h-4 xl:w-4" />
                 Apply Now
@@ -430,6 +436,7 @@ export function Header({ currentPage, onMenuToggle }: HeaderProps) {
                     'Process': <FileText className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
                     'Apply': <FileText className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
                     'Apply Now': <FileText className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
+                    'Enquire Now': <FileText className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
 
                     'Contact': <Phone className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
                     'Information': <Phone className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,

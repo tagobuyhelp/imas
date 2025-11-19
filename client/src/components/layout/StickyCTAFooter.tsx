@@ -20,7 +20,7 @@ interface StickyCTAFooterProps {
 export function StickyCTAFooter({
   title = "Admissions Open 2026",
   subtitle = "Join the next generation of leaders",
-  primaryButtonText = "Enquire Now",
+  primaryButtonText = "Apply Now",
   onPrimaryClick = applyNow,
   onFloatingClick = applyNow,
   onWhatsAppClick,
@@ -87,30 +87,60 @@ export function StickyCTAFooter({
       >
         <div className="max-w-6xl mx-auto">
           {/* Desktop CTA Strip */}
-          <div className="hidden md:flex items-center justify-between py-3 px-4">
+          <div className="hidden md:flex items-center justify-between py-2 px-3">
             <div className="flex items-center space-x-4">
               <span className="text-base font-bold text-gray-800">{title}</span>
               <span className="text-gray-600">|</span>
               <span className="text-gray-600 text-sm">{subtitle}</span>
             </div>
             <div className="flex space-x-3">
-              <button 
-                onClick={onPrimaryClick}
-                className={`px-8 py-3 ${IMAS_TAILWIND_CLASSES.GRADIENT_PRIMARY} text-white rounded-lg hover:scale-105 transition-all duration-200 font-semibold text-base shadow-lg hover:shadow-xl`}
+              {/* Enquire Now */}
+              <button
+                onClick={() => {
+                  try {
+                    (onPrimaryClick || applyNow)();
+                  } catch (e) {
+                    window.dispatchEvent(new Event('imas:openEnquiryForm'));
+                  }
+                }}
+                className={`px-6 py-2 ${IMAS_TAILWIND_CLASSES.GRADIENT_PRIMARY} text-white rounded-lg hover:scale-105 transition-all duration-200 font-semibold text-sm shadow-lg hover:shadow-xl`}
               >
-                {primaryButtonText}
+                Enquire Now
+              </button>
+              {/* Apply Now */}
+              <button
+                onClick={() => window.open('https://admission.imas.ac.in/', '_blank')}
+                className="px-6 py-2 bg-white text-teal-700 border-2 border-teal-600 rounded-lg hover:bg-teal-50 transition-all duration-200 font-semibold text-sm shadow-lg hover:shadow-xl"
+              >
+                Apply Now
               </button>
             </div>
           </div>
 
-          {/* Mobile CTA Button */}
-          <div className="md:hidden py-4 px-4">
-            <button 
-              onClick={onPrimaryClick}
-              className={`w-full py-4 ${IMAS_TAILWIND_CLASSES.GRADIENT_PRIMARY} text-white rounded-lg hover:scale-105 transition-all duration-200 font-semibold text-base shadow-lg hover:shadow-xl`}
-            >
-              {primaryButtonText}
-            </button>
+          {/* Mobile CTA Buttons */}
+          <div className="md:hidden py-3 px-3">
+            <div className="grid grid-cols-2 gap-3">
+              {/* Enquire Now */}
+              <button
+                onClick={() => {
+                  try {
+                    (onPrimaryClick || applyNow)();
+                  } catch (e) {
+                    window.dispatchEvent(new Event('imas:openEnquiryForm'));
+                  }
+                }}
+                className={`${IMAS_TAILWIND_CLASSES.GRADIENT_PRIMARY} text-white rounded-lg py-3 hover:scale-105 transition-all duration-200 font-semibold text-sm shadow-lg hover:shadow-xl`}
+              >
+                Enquire Now
+              </button>
+              {/* Apply Now */}
+              <button
+                onClick={() => window.open('https://admission.imas.ac.in/', '_blank')}
+                className={`bg-white text-teal-700 border-2 border-teal-600 rounded-lg py-3 hover:bg-teal-50 transition-all duration-200 font-semibold text-sm shadow-lg hover:shadow-xl`}
+              >
+                Apply Now
+              </button>
+            </div>
           </div>
         </div>
       </div>

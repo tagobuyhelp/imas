@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ChevronDown, ChevronRight, GraduationCap, Briefcase, Globe, FileText } from 'lucide-react';
 import { IMAS_TAILWIND_CLASSES } from '../../lib/constants';
+import { applyNow } from '../../lib/utils';
 import { getProgramsByCategory } from '../../lib/programsData';
 import { downloadBrochure } from '../../lib/utils';
 
@@ -144,7 +145,13 @@ const MobileAdmissionsMenu: React.FC<MobileAdmissionsMenuProps> = ({
               </button>
               <button 
                 type="button"
-                onClick={() => (window as any).openNpfPopup ? (window as any).openNpfPopup('550974b33503dfc785c6fbf5148e6d84') : window.open('https://admission.imas.ac.in/', '_blank')}
+                onClick={() => {
+                  try {
+                    applyNow();
+                  } catch (e) {
+                    window.dispatchEvent(new Event('imas:openEnquiryForm'));
+                  }
+                }}
                 className="w-full px-3 py-2 text-sm bg-gradient-to-r from-blue-600 to-teal-600 text-white rounded-md hover:from-blue-700 hover:to-teal-700 transition-all flex items-center gap-2"
               >
                 <GraduationCap className="h-4 w-4" />

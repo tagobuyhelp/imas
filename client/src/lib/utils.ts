@@ -12,19 +12,15 @@ export function downloadBrochure() {
   console.log('[CTA] downloadBrochure clicked');
   try {
     (window as any).__imasPendingBrochureHref = null;
-    console.log('[CTA] __imasPendingBrochureHref set to null');
-    if (typeof (window as any).openNpfPopup === 'function') {
-      console.log('[CTA] openNpfPopup available, opening widget 550974b33503dfc785c6fbf5148e6d84');
-      (window as any).openNpfPopup('550974b33503dfc785c6fbf5148e6d84');
+    // Open Enquiry modal first; BrochureModal will open after successful submit
+    if (typeof (window as any).openEnquiryForm === 'function') {
+      (window as any).openEnquiryForm();
     } else {
-      // Fallback to existing modal if NPF blocked
-      console.warn('[CTA] openNpfPopup not available, dispatching imas:openBrochureModal');
-      window.dispatchEvent(new Event('imas:openBrochureModal'));
+      window.dispatchEvent(new Event('imas:openEnquiryForm'));
     }
   } catch (e) {
-    // As a safety fallback
-    console.error('[CTA] downloadBrochure error, dispatching fallback modal', e);
-    window.dispatchEvent(new Event('imas:openBrochureModal'));
+    console.error('[CTA] downloadBrochure error, opening enquiry modal via event', e);
+    window.dispatchEvent(new Event('imas:openEnquiryForm'));
   }
 }
 
@@ -33,18 +29,16 @@ export function downloadBrochure() {
  * or navigating to the admissions page
  */
 export function applyNow() {
-  console.log('[CTA] applyNow clicked');
+  console.log('[CTA] Enquire Now clicked');
   try {
-    if (typeof (window as any).openNpfPopup === 'function') {
-      console.log('[CTA] openNpfPopup available, opening widget 550974b33503dfc785c6fbf5148e6d84');
-      (window as any).openNpfPopup('550974b33503dfc785c6fbf5148e6d84');
+    if (typeof (window as any).openEnquiryForm === 'function') {
+      (window as any).openEnquiryForm();
     } else {
-      console.warn('[CTA] openNpfPopup not available, navigating to admissions portal');
-      window.open('https://admission.imas.ac.in/', '_blank');
+      window.dispatchEvent(new Event('imas:openEnquiryForm'));
     }
   } catch (e) {
-    console.error('[CTA] applyNow error, navigating to admissions portal', e);
-    window.open('https://admission.imas.ac.in/', '_blank');
+    console.error('[CTA] Enquire Now error', e);
+    window.dispatchEvent(new Event('imas:openEnquiryForm'));
   }
 }
 
@@ -55,16 +49,14 @@ export function downloadBrochureFor(href?: string) {
   console.log('[CTA] downloadBrochureFor clicked with href:', href);
   try {
     (window as any).__imasPendingBrochureHref = href || null;
-    console.log('[CTA] __imasPendingBrochureHref set to:', (window as any).__imasPendingBrochureHref);
-    if (typeof (window as any).openNpfPopup === 'function') {
-      console.log('[CTA] openNpfPopup available, opening widget 550974b33503dfc785c6fbf5148e6d84');
-      (window as any).openNpfPopup('550974b33503dfc785c6fbf5148e6d84');
+    // Open Enquiry modal first; after submit, BrochureModal opens and can use pending href
+    if (typeof (window as any).openEnquiryForm === 'function') {
+      (window as any).openEnquiryForm();
     } else {
-      console.warn('[CTA] openNpfPopup not available, dispatching imas:openBrochureModal');
-      window.dispatchEvent(new Event('imas:openBrochureModal'));
+      window.dispatchEvent(new Event('imas:openEnquiryForm'));
     }
   } catch (e) {
-    console.error('[CTA] downloadBrochureFor error, dispatching fallback modal', e);
-    window.dispatchEvent(new Event('imas:openBrochureModal'));
+    console.error('[CTA] downloadBrochureFor error, opening enquiry modal via event', e);
+    window.dispatchEvent(new Event('imas:openEnquiryForm'));
   }
 }

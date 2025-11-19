@@ -238,6 +238,7 @@ export function HeroSection() {
                         <Button 
                           variant="outline"
                           className="w-full border-2 border-teal-600 text-teal-600 hover:bg-teal-600 hover:text-white py-2.5 sm:py-3 text-sm sm:text-base font-semibold rounded-lg shadow-md hover:shadow-lg transform hover:scale-[1.02] transition-all duration-300"
+                          onClick={applyNow}
                         >
                           Enquiry Now
                           <ArrowRight className="ml-2 w-3 h-3 sm:w-4 sm:h-4" />
@@ -245,7 +246,7 @@ export function HeroSection() {
                         
                         <Button 
                           className="w-full bg-gradient-to-r from-teal-600 to-blue-600 hover:from-teal-700 hover:to-blue-700 text-white py-2.5 sm:py-3 text-sm sm:text-base font-semibold rounded-lg shadow-lg hover:shadow-xl transform hover:scale-[1.02] transition-all duration-300"
-                          onClick={applyNow}
+                          onClick={() => window.open('https://admission.imas.ac.in/', '_blank')}
                         >
                           Secure Your Seat Now
                           <ArrowRight className="ml-2 w-3 h-3 sm:w-4 sm:h-4" />

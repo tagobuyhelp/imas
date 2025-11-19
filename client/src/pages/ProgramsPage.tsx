@@ -6,7 +6,7 @@ import { IMAS_TAILWIND_CLASSES } from '../lib/constants';
 import { Link } from 'react-router-dom';
 import { getProgramsByCategory } from '../lib/programsData';
 import { ProgramsSection } from '../components/sections/Home/ProgramsSection';
-import { downloadBrochure } from '../lib/utils';
+import { downloadBrochure, applyNow } from '../lib/utils';
 
 export function ProgramsPage() {
 
@@ -114,12 +114,11 @@ export function ProgramsPage() {
         window.open('https://admission.imas.ac.in/', '_blank');
         break;
       case 'enquire':
-        if (typeof (window as any).openNpfPopup === 'function') {
-          console.log('[ProgramsPage] opening NPF popup for enquiry');
-          (window as any).openNpfPopup('550974b33503dfc785c6fbf5148e6d84');
-        } else {
-          console.warn('[ProgramsPage] NPF not available, opening contact page');
-          window.open('/contact', '_blank');
+        try {
+          applyNow();
+        } catch (e) {
+          console.error('[ProgramsPage] enquiry action failed, dispatching event fallback', e);
+          window.dispatchEvent(new Event('imas:openEnquiryForm'));
         }
         break;
       case 'download':

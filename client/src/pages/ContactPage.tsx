@@ -8,6 +8,7 @@ import { Alert, AlertDescription } from '../components/ui/alert';
 import { MapPin, Phone, Mail, Clock, Building2, Navigation, Loader2, CheckCircle, BookOpen, Send, ExternalLink } from 'lucide-react';
 import { useToast } from '../hooks/use-toast';
 import { IMAS_TAILWIND_CLASSES } from '../lib/constants';
+import { applyNow } from '../lib/utils';
 
 interface ContactFormData {
   name: string;
@@ -359,12 +360,12 @@ export function ContactPage(): React.JSX.Element {
             </Button>
 
             <Button
-              onClick={() => (window as any).openNpfPopup ? (window as any).openNpfPopup('550974b33503dfc785c6fbf5148e6d84') : window.open('https://admission.imas.ac.in/', '_blank')}
               variant="outline"
               className="border-2 bg-transparent border-white text-white hover:bg-white hover:text-[#143674] px-8 py-3 text-lg font-semibold transition-all duration-300 hover:scale-105 backdrop-blur-sm"
+              onClick={() => window.open('https://admission.imas.ac.in/', '_blank')}
             >
               <ExternalLink className="mr-2 h-5 w-5" />
-              Enquire Now
+              Apply Now
             </Button>
           </div>
         </div>

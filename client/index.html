@@ -100,61 +100,7 @@
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
     
-    <!-- NoPaperForms Enquiry Widget Scripts -->
-    <script src="https://in8cdn.npfs.co/js/widget/npfwpopup.js"></script>
-    <script>
-      // Ensure hidden triggers exist BEFORE initializing widgets so the library can bind handlers
-      (function ensureHiddenTriggersEarly(){
-        try {
-          var ids = ['aeb7b9fbaa1dcebf1762c1f9bc270c4b','550974b33503dfc785c6fbf5148e6d84','b90761d553ba1ef721aa08c760f669b3'];
-          ids.forEach(function(id){
-            var cls = 'npfWidget-' + id;
-            if (!document.querySelector('.' + cls)) {
-              var btn = document.createElement('button');
-              btn.type = 'button';
-              btn.className = 'npfWidgetButton ' + cls;
-              btn.style.display = 'none';
-              btn.textContent = 'Enquire';
-              document.body.appendChild(btn);
-            }
-          });
-        } catch (e) {
-          console.warn('[NPF] Early trigger injection failed', e);
-        }
-      })();
 
-      let npfWaeb7b9fbaa1dcebf1762c1f9bc270c4b = new NpfWidgetsInit({
-        "widgetId": "aeb7b9fbaa1dcebf1762c1f9bc270c4b",
-        "baseurl": "widgets.in8.nopaperforms.com",
-        "formTitle": "Enquiry Form",
-        "titleColor": "#143674",
-        "backgroundColor": "#ffffff",
-        "iframeHeight": "520px",
-        "buttonbgColor": "#2e7bb3",
-        "buttonTextColor": "#ffffff"
-      });
-      // Initialize user-provided widgets for programmatic popup usage
-      let npfW550974b33503dfc785c6fbf5148e6d84 = new NpfWidgetsInit({
-        "widgetId": "550974b33503dfc785c6fbf5148e6d84",
-        "baseurl": "widgets.in8.nopaperforms.com",
-        "formTitle": "Enquiry Form",
-        "titleColor": "#143674",
-        "backgroundColor": "#ffffff",
-        "iframeHeight": "520px",
-        "buttonbgColor": "#2e7bb3",
-        "buttonTextColor": "#ffffff"
-      });
-      let npfWb90761d553ba1ef721aa08c760f669b3 = new NpfWidgetsInit({
-        "widgetId": "b90761d553ba1ef721aa08c760f669b3",
-        "baseurl": "widgets.in8.nopaperforms.com",
-        "formTitle": "Enquiry Form",
-        "titleColor": "#143674",
-        "backgroundColor": "#ffffff",
-        "iframeHeight": "520px",
-        "buttonbgColor": "#2e7bb3",
-        "buttonTextColor": "#ffffff"
-      });
-    </script>
     
     <!-- NPF Chatbot Loader Script -->
     <script type="text/javascript" async src="https://chatbot.in8.nopaperforms.com/en-gb/backend/bots/niaachtbtscpt.js/f66854412785432ea1d2c2257fe7861f/71289f36cb7f4d1aa57ea9599d67b976"></script>

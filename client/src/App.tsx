@@ -18,6 +18,7 @@ import { PrivacyPolicyPage } from './pages/PrivacyPolicyPage';
 import { Toaster } from './components/ui/toaster';
 import { BrochureModal } from './components/BrochureModal';
 import { VideoModal } from './components/VideoModal';
+import EnquiryFormModal from './components/EnquiryFormModal';
 
 function AppContent(): React.JSX.Element {
   const location = useLocation();
@@ -50,8 +51,9 @@ function AppContent(): React.JSX.Element {
         <Route path="/campus-tour" element={<CampusTourPage />} />
         <Route path="/events" element={<EventsPage />} />
         <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
-        {/* Redirect legacy/SEO path to Programs (PGDM Working Professionals) */}
-        <Route path="/pgdm-executive-courses-kolkata" element={<Navigate to="/programs" replace />} />
+        {/* Redirect legacy/SEO path to PGDM for Working Professionals (Operations as default) */}
+        <Route path="/pgdm-executive-courses-kolkata" element={<Navigate to="/programs/pgdm-operations-working-executive" replace />} />
+        <Route path="/pgdm-executive-courses-kolkata/" element={<Navigate to="/programs/pgdm-operations-working-executive" replace />} />
         {/* Redirect legacy/SEO path to Programs (Business Analytics) */}
         <Route path="/pgdm-business-analytics-college-kolkata" element={<Navigate to="/programs" replace />} />
         <Route path="/pgdm-business-analytics-college-kolkata/" element={<Navigate to="/programs" replace />} />
@@ -72,6 +74,7 @@ export function App(): React.JSX.Element {
       >
         <AppContent />
         <BrochureModal />
+        <EnquiryFormModal />
         <VideoModal />
         <Toaster />
         {/* Chatbot handled via index.html (placeholder + loader script) */}
