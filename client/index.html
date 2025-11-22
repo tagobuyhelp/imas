@@ -92,6 +92,7 @@
     </script>
   </head>
   <body>
+    
     <!-- NPF Chatbot Placeholder -->
     <div class="npf_chatbots" data-w="71289f36cb7f4d1aa57ea9599d67b976"></div>
     <!-- Google Tag Manager (noscript) -->
@@ -100,6 +101,7 @@
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
     
+    <script src="https://in8cdn.npfs.co/js/widget/npfwpopup.js"></script>
 
     
     <!-- NPF Chatbot Loader Script -->
@@ -152,163 +154,24 @@
       })();
     </script>
     
-    <!-- NPF Popup Helpers: open popup programmatically and auto-download brochure after submit -->
+    <!-- NPF Popup Minimal Helper -->
     <script>
-      // Initialize provided widget IDs if not already initialized elsewhere
       try {
         if (typeof NpfWidgetsInit === 'function') {
-          // Create hidden triggers for both widgets so we can open them via JS
-          (function ensureHiddenTriggers(){
-            var ids = ['550974b33503dfc785c6fbf5148e6d84','b90761d553ba1ef721aa08c760f669b3'];
-            ids.forEach(function(id){
-              var cls = 'npfWidget-' + id;
-              if (!document.querySelector('.' + cls)) {
-                var btn = document.createElement('button');
-                btn.type = 'button';
-                btn.className = 'npfWidgetButton ' + cls;
-                btn.style.display = 'none';
-                btn.textContent = 'Enquire';
-                document.body.appendChild(btn);
-              }
-            });
-          })();
-
-          // Expose a helper to open a specific widget popup
+          var id = '550974b33503dfc785c6fbf5148e6d84';
+          if (!document.querySelector('.npfWidget-' + id)) {
+            var btn = document.createElement('button');
+            btn.type = 'button';
+            btn.className = 'npfWidgetButton npfWidget-' + id;
+            btn.style.display = 'none';
+            document.body.appendChild(btn);
+          }
           window.openNpfPopup = function(widgetId) {
-            try {
-              console.log('[NPF] openNpfPopup invoked', widgetId);
-              var trigger = document.querySelector('.npfWidget-' + widgetId);
-              if (trigger) {
-                console.log('[NPF] trigger found for widget', widgetId);
-                trigger.click();
-                // Verify popup presence; if not detected, try fallback widget
-                setTimeout(function(){
-                  var hasPopupEl = document.querySelector('iframe[src*="nopaperforms"], .npfPopupWidget, .npf_widget_overlay, .npf-overlay');
-                  var hasPopup = !!hasPopupEl;
-                  if (!hasPopup) {
-                    var fallbackId = 'aeb7b9fbaa1dcebf1762c1f9bc270c4b';
-                    if (widgetId !== fallbackId) {
-                      console.warn('[NPF] Popup not detected after click; trying fallback widget', fallbackId);
-                      var fb = document.querySelector('.npfWidget-' + fallbackId);
-                      if (fb) {
-                        fb.click();
-                      } else {
-                        console.warn('[NPF] Fallback trigger not found for', fallbackId);
-                      }
-                    }
-                  } else {
-                    console.log('[NPF] Popup detected after click');
-                    try {
-                      document.documentElement.classList.add('npf-open');
-                      var overlay = hasPopupEl;
-                      var rect = overlay.getBoundingClientRect();
-                      var comp = window.getComputedStyle(overlay);
-                      if (overlay.tagName === 'IFRAME') {
-                        overlay.style.position = 'fixed';
-                        overlay.style.top = '0';
-                        overlay.style.left = '0';
-                        overlay.style.width = '100vw';
-                        overlay.style.height = '100vh';
-                        overlay.style.border = '0';
-                        overlay.style.display = 'block';
-                        overlay.style.opacity = '1';
-                        overlay.style.visibility = 'visible';
-                        overlay.style.zIndex = '2147483647';
-                        overlay.style.pointerEvents = 'auto';
-                      }
-                      if (rect.height === 0 || comp.visibility === 'hidden' || comp.opacity === '0' || comp.display === 'none') {
-                        console.warn('[NPF] Popup present but hidden; forcing visible');
-                        overlay.style.position = 'fixed';
-                        overlay.style.top = '0';
-                        overlay.style.left = '0';
-                        overlay.style.right = '0';
-                        overlay.style.bottom = '0';
-                        overlay.style.display = 'block';
-                        overlay.style.opacity = '1';
-                        overlay.style.visibility = 'visible';
-                        overlay.style.zIndex = '2147483647';
-                        overlay.style.pointerEvents = 'auto';
-                      }
-                      setTimeout(function(){
-                        var el = document.querySelector('iframe[src*="nopaperforms"], .npfPopupWidget, .npf_widget_overlay, .npf-overlay');
-                        if (el) {
-                          var r = el.getBoundingClientRect();
-                          var c = window.getComputedStyle(el);
-                          if (r.height === 0 || c.visibility === 'hidden' || c.opacity === '0' || c.display === 'none') {
-                            console.warn('[NPF] Popup still hidden after retry; reinforcing styles');
-                            el.style.position = 'fixed';
-                            el.style.top = '0';
-                            el.style.left = '0';
-                            el.style.right = '0';
-                            el.style.bottom = '0';
-                            el.style.width = '100vw';
-                            el.style.height = '100vh';
-                            el.style.display = 'block';
-                            el.style.opacity = '1';
-                            el.style.visibility = 'visible';
-                            el.style.zIndex = '2147483647';
-                            el.style.pointerEvents = 'auto';
-                          } else {
-                            console.log('[NPF] Popup visible on retry check');
-                          }
-                        }
-                      }, 1200);
-                    } catch (e) {
-                      console.warn('[NPF] Failed to force popup visible', e);
-                    }
-                  }
-                }, 800);
-              } else {
-                console.warn('[NPF] Popup trigger not found for widget', widgetId);
-              }
-            } catch (e) {
-              console.error('[NPF] openNpfPopup error', e);
-            }
+            var trigger = document.querySelector('.npfWidget-' + (widgetId || id));
+            if (trigger) trigger.click();
           };
         }
-      } catch (e) {
-        console.warn('[NPF] popup helpers init failed', e);
-      }
-
-      // On NPF success: if a preferred brochure is set, auto-download it; otherwise open modal
-      window.npfFormSuccess = function() {
-        try {
-          var pending = window.__imasPendingBrochureHref || null;
-          if (pending) {
-            var a = document.createElement('a');
-            a.href = pending;
-            a.download = '';
-            document.body.appendChild(a);
-            a.click();
-            document.body.removeChild(a);
-            console.log('[NPF] Brochure download triggered:', pending);
-          } else {
-            console.log('[NPF] No pending brochure; opening selection modal');
-          }
-          // Always clear pending and open modal so the user can download or pick another
-          window.__imasPendingBrochureHref = null;
-          window.dispatchEvent(new Event('imas:openBrochureModal'));
-        } catch (e) {
-          console.error('[NPF] Brochure success handling failed', e);
-        }
-      };
-
-      // Best-effort: listen for postMessage from NPF and trigger auto-download
-      window.addEventListener('message', function(ev){
-        try {
-          var originOk = ev.origin && (ev.origin.indexOf('nopaperforms.com') !== -1 || ev.origin.indexOf('npfs.co') !== -1);
-          if (!originOk) return;
-          var payload = ev.data;
-          console.log('[NPF] postMessage received', { origin: ev.origin, payload: payload });
-          var str = typeof payload === 'string' ? payload : JSON.stringify(payload || {});
-          if (str && /(npf|lead|submit|success)/i.test(str)) {
-            console.log('[NPF] postMessage suggests successful submit; triggering brochure download');
-            window.npfFormSuccess();
-          }
-        } catch (e) {
-          // swallow
-        }
-      });
+      } catch (e) {}
     </script>
 
     <!-- Optional: Load NPF iframe script for inline forms -->
@@ -323,6 +186,50 @@
         } catch (e) {
           console.warn('[NPF] Failed to append iframe script', e);
         }
+      })();
+    </script>
+    <script>
+      (function(){
+        try {
+          var baseurl = 'widgets.in8.nopaperforms.com';
+          var ids = [
+            '550974b33503dfc785c6fbf5148e6d84',
+            '6f02920af7038d6b629201af29a8c43d',
+            'b90761d553ba1ef721aa08c760f669b3',
+            '64b63ee0b99580af377d995a9434088f'
+          ];
+          if (typeof NpfWidgetsInit === 'function') {
+            ids.forEach(function(id){
+              if (!document.querySelector('.npfWidget-' + id)) {
+                var btn = document.createElement('button');
+                btn.type = 'button';
+                btn.className = 'npfWidgetButton npfWidget-' + id;
+                btn.style.display = 'none';
+                btn.textContent = 'Enquire Now';
+                document.body.appendChild(btn);
+              }
+              try {
+                var inst = new NpfWidgetsInit({
+                  widgetId: id,
+                  baseurl: baseurl,
+                  formTitle: 'Enquiry Form',
+                  titleColor: '#FF0033',
+                  backgroundColor: '#ddd',
+                  iframeHeight: '500px',
+                  buttonbgColor: '#4c79dc',
+                  buttonTextColor: '#FFF'
+                });
+                window['npfW' + id] = inst;
+              } catch {}
+            });
+            window.openNpfPopup = function(id){
+              try {
+                var trigger = document.querySelector('.npfWidget-' + id);
+                if (trigger) trigger.click();
+              } catch {}
+            };
+          }
+        } catch (e) {}
       })();
     </script>
   </body>

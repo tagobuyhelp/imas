@@ -11,11 +11,7 @@ export const EnquiryButton: React.FC<EnquiryButtonProps> = ({
   children = 'Enquire Now!' 
 }) => {
   const onClick = () => {
-    try {
-      applyNow();
-    } catch (e) {
-      window.dispatchEvent(new Event('imas:openEnquiryForm'));
-    }
+    applyNow();
   };
 
   return (

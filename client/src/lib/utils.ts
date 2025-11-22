@@ -5,40 +5,40 @@ export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
 
-/**
- * Opens brochure selection modal instead of direct download
- */
 export function downloadBrochure() {
   console.log('[CTA] downloadBrochure clicked');
   try {
-    (window as any).__imasPendingBrochureHref = null;
-    // Open Enquiry modal first; BrochureModal will open after successful submit
-    if (typeof (window as any).openEnquiryForm === 'function') {
-      (window as any).openEnquiryForm();
-    } else {
-      window.dispatchEvent(new Event('imas:openEnquiryForm'));
+    if (typeof (window as any).openNpfPopup === 'function') {
+      (window as any).openNpfPopup('6f02920af7038d6b629201af29a8c43d');
+      return;
     }
+  } catch {}
+  try {
+    const href = '/uploads/IMAS_PGDM_Plus_2025_Brochure.pdf';
+    const win = window.open(href, '_blank');
+    if (!win) window.location.href = href;
   } catch (e) {
-    console.error('[CTA] downloadBrochure error, opening enquiry modal via event', e);
-    window.dispatchEvent(new Event('imas:openEnquiryForm'));
+    console.error('[CTA] downloadBrochure fallback error', e);
   }
 }
 
-/**
- * Handles "Apply Now" action by scrolling to the application form
- * or navigating to the admissions page
- */
 export function applyNow() {
   console.log('[CTA] Enquire Now clicked');
   try {
-    if (typeof (window as any).openEnquiryForm === 'function') {
-      (window as any).openEnquiryForm();
-    } else {
-      window.dispatchEvent(new Event('imas:openEnquiryForm'));
+    if (typeof (window as any).openNpfPopup === 'function') {
+      (window as any).openNpfPopup('550974b33503dfc785c6fbf5148e6d84');
+      return;
     }
+  } catch {}
+  try {
+    const cta = document.getElementById('cta');
+    if (cta) {
+      cta.scrollIntoView({ behavior: 'smooth' });
+      return;
+    }
+    window.location.href = '/contact';
   } catch (e) {
-    console.error('[CTA] Enquire Now error', e);
-    window.dispatchEvent(new Event('imas:openEnquiryForm'));
+    console.error('[CTA] Enquire Now navigation error', e);
   }
 }
 
@@ -48,15 +48,23 @@ export function applyNow() {
 export function downloadBrochureFor(href?: string) {
   console.log('[CTA] downloadBrochureFor clicked with href:', href);
   try {
-    (window as any).__imasPendingBrochureHref = href || null;
-    // Open Enquiry modal first; after submit, BrochureModal opens and can use pending href
-    if (typeof (window as any).openEnquiryForm === 'function') {
-      (window as any).openEnquiryForm();
-    } else {
-      window.dispatchEvent(new Event('imas:openEnquiryForm'));
+    var id = '6f02920af7038d6b629201af29a8c43d';
+    var s = String(href || '').toLowerCase();
+    if (s.includes('mba_global') || s.includes('mba')) {
+      id = '64b63ee0b99580af377d995a9434088f';
+    } else if (s.includes('executive')) {
+      id = 'b90761d553ba1ef721aa08c760f669b3';
     }
+    if (typeof (window as any).openNpfPopup === 'function') {
+      (window as any).openNpfPopup(id);
+      return;
+    }
+  } catch {}
+  try {
+    const target = href || '/uploads/IMAS_PGDM_Plus_2025_Brochure.pdf';
+    const win = window.open(target, '_blank');
+    if (!win) window.location.href = target;
   } catch (e) {
-    console.error('[CTA] downloadBrochureFor error, opening enquiry modal via event', e);
-    window.dispatchEvent(new Event('imas:openEnquiryForm'));
+    console.error('[CTA] downloadBrochureFor fallback error', e);
   }
 }
