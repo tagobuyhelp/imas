@@ -31,6 +31,16 @@ export function applyNow() {
     }
   } catch {}
   try {
+    const url = 'https://widgets.in8.nopaperforms.com/widget/550974b33503dfc785c6fbf5148e6d84';
+    const w = 920, h = 700;
+    const left = Math.max(0, (window.innerWidth - w) / 2);
+    const top = Math.max(0, (window.innerHeight - h) / 2);
+    const features = `toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=${w},height=${h},top=${top},left=${left}`;
+    const win = window.open(url, 'Enquiry Form', features);
+    if (!win) window.open(url, '_blank', 'noopener,noreferrer');
+    return;
+  } catch {}
+  try {
     const cta = document.getElementById('cta');
     if (cta) {
       cta.scrollIntoView({ behavior: 'smooth' });
