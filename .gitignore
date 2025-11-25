@@ -262,3 +262,5 @@ out/
 
 # Turbo
 .turbo
+
+!client/public/js/npf-init.js
