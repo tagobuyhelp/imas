@@ -6,6 +6,14 @@ import { IMAS_TAILWIND_CLASSES, IMAS_DATES } from '../../../lib/constants';
 import { downloadBrochure, applyNow } from '../../../lib/utils';
 import { ArrowRight, Download, Play, Users, Award, Globe, BookOpen, TrendingUp } from 'lucide-react';
 
+import LoadNpfScript from "../../integrations/LoadNpfScript";
+
+<LoadNpfScript />
+
+function btnDebug() {
+  console.log("Enquire Now button clicked");
+}
+
 export function HeroSection() {
   const [daysLeft, setDaysLeft] = useState<number | null>(null);
 
@@ -152,6 +160,9 @@ export function HeroSection() {
                     Enquire Now
                     <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
                   </Button>
+
+                  <button onClick={btnDebug} className="npfWidgetButton npfWidget-550974b33503dfc785c6fbf5148e6d84">Enquire Now</button>
+
                   
                   <Button 
                     variant="outline" 
