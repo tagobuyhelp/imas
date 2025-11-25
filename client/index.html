@@ -192,12 +192,15 @@
       (function(){
         try {
           var baseurl = 'widgets.in8.nopaperforms.com';
-          var ids = [
-            '550974b33503dfc785c6fbf5148e6d84',
+          var mainId = '550974b33503dfc785c6fbf5148e6d84';
+          var qp = new URLSearchParams(window.location.search);
+          var useMulti = qp.get('npf') === 'multi';
+          var ids = useMulti ? [
+            mainId,
             '6f02920af7038d6b629201af29a8c43d',
             'b90761d553ba1ef721aa08c760f669b3',
             '64b63ee0b99580af377d995a9434088f'
-          ];
+          ] : [mainId];
           if (typeof NpfWidgetsInit === 'function') {
             ids.forEach(function(id){
               if (!document.querySelector('.npfWidget-' + id)) {
@@ -224,7 +227,8 @@
             });
             window.openNpfPopup = function(id){
               try {
-                var trigger = document.querySelector('.npfWidget-' + id);
+                var targetId = id || mainId;
+                var trigger = document.querySelector('.npfWidget-' + targetId);
                 if (trigger) trigger.click();
               } catch {}
             };
