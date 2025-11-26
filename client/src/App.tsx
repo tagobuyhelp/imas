@@ -14,6 +14,7 @@ import { CampusLifePage } from './pages/CampusLifePage';
 import { CampusTourPage } from './pages/CampusTourPage';
 import { EventsPage } from './pages/EventsPage';
 import { PrivacyPolicyPage } from './pages/PrivacyPolicyPage';
+import { PgdmPlusLandingPage } from './pages/PgdmPlusLandingPage';
 // Removed admin and auth imports - components deleted
 import { Toaster } from './components/ui/toaster';
 import { BrochureModal } from './components/BrochureModal';
@@ -35,6 +36,15 @@ function AppContent(): React.JSX.Element {
   };
 
   const currentPage = getCurrentPage();
+  const isPgdmPlus = location.pathname === '/pgdm-plus';
+
+  if (isPgdmPlus) {
+    return (
+      <Routes>
+        <Route path="/pgdm-plus" element={<PgdmPlusLandingPage />} />
+      </Routes>
+    );
+  }
 
   return (
     <Layout currentPage={currentPage}>
@@ -45,21 +55,16 @@ function AppContent(): React.JSX.Element {
         <Route path="/about" element={<AboutPage />} />
         <Route path="/faculty" element={<FacultyPage />} />
         <Route path="/admissions" element={<AdmissionsPage />} />
-        
-
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/internships" element={<InternshipPage />} />
         <Route path="/campus-life" element={<CampusLifePage />} />
         <Route path="/campus-tour" element={<CampusTourPage />} />
         <Route path="/events" element={<EventsPage />} />
         <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
-        {/* Redirect legacy/SEO path to PGDM for Working Professionals (Operations as default) */}
         <Route path="/pgdm-executive-courses-kolkata" element={<Navigate to="/programs/pgdm-operations-working-executive" replace />} />
         <Route path="/pgdm-executive-courses-kolkata/" element={<Navigate to="/programs/pgdm-operations-working-executive" replace />} />
-        {/* Redirect legacy/SEO path to Programs (Business Analytics) */}
         <Route path="/pgdm-business-analytics-college-kolkata" element={<Navigate to="/programs" replace />} />
         <Route path="/pgdm-business-analytics-college-kolkata/" element={<Navigate to="/programs" replace />} />
-        {/* Admin routes removed - no backend API available */}
       </Routes>
     </Layout>
   );
