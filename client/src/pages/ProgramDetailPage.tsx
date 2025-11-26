@@ -70,6 +70,12 @@ export function ProgramDetailPage() {
                         ? '/uploads/MBA_Global_Brochure.pdf'
                         : '/uploads/IMAS_PGDM_Plus_2025_Brochure.pdf';
                     console.log('[ProgramDetailPage] download brochure', { brochureHref });
+                    try {
+                        if (typeof (window as any).openBrochurePopup === 'function') {
+                            (window as any).openBrochurePopup(brochureHref);
+                            return;
+                        }
+                    } catch {}
                     downloadBrochureFor(brochureHref);
                 }
                 break;

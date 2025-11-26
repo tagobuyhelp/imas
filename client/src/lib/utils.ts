@@ -27,6 +27,20 @@ export function applyNow() {
   try {
     if (typeof (window as any).openNpfPopup === 'function') {
       (window as any).openNpfPopup('550974b33503dfc785c6fbf5148e6d84');
+      setTimeout(() => {
+        try {
+          const has = !!document.querySelector('iframe[src*="nopaperforms.com"]');
+          if (!has) {
+            const url = 'https://widgets.in8.nopaperforms.com/widget/550974b33503dfc785c6fbf5148e6d84';
+            const w = 920, h = 700;
+            const left = Math.max(0, (window.innerWidth - w) / 2);
+            const top = Math.max(0, (window.innerHeight - h) / 2);
+            const features = `toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=${w},height=${h},top=${top},left=${left}`;
+            const win = window.open(url, 'Enquiry Form', features);
+            if (!win) window.open(url, '_blank', 'noopener,noreferrer');
+          }
+        } catch {}
+      }, 800);
       return;
     }
   } catch {}
@@ -67,8 +81,39 @@ export function downloadBrochureFor(href?: string) {
     }
     if (typeof (window as any).openNpfPopup === 'function') {
       (window as any).openNpfPopup(id);
+      setTimeout(() => {
+        try {
+          const has = !!document.querySelector('iframe[src*="nopaperforms.com"]');
+          if (!has) {
+            const url = `https://widgets.in8.nopaperforms.com/widget/${id}`;
+            const w = 920, h = 700;
+            const left = Math.max(0, (window.innerWidth - w) / 2);
+            const top = Math.max(0, (window.innerHeight - h) / 2);
+            const features = `toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=${w},height=${h},top=${top},left=${left}`;
+            const win = window.open(url, 'Brochure Form', features);
+            if (!win) window.open(url, '_blank', 'noopener,noreferrer');
+          }
+        } catch {}
+      }, 800);
       return;
     }
+  } catch {}
+  try {
+    var id = '6f02920af7038d6b629201af29a8c43d';
+    var s = String(href || '').toLowerCase();
+    if (s.includes('mba_global') || s.includes('mba')) {
+      id = '64b63ee0b99580af377d995a9434088f';
+    } else if (s.includes('executive')) {
+      id = 'b90761d553ba1ef721aa08c760f669b3';
+    }
+    const url = `https://widgets.in8.nopaperforms.com/widget/${id}`;
+    const w = 920, h = 700;
+    const left = Math.max(0, (window.innerWidth - w) / 2);
+    const top = Math.max(0, (window.innerHeight - h) / 2);
+    const features = `toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=${w},height=${h},top=${top},left=${left}`;
+    const win = window.open(url, 'Brochure Form', features);
+    if (!win) window.open(url, '_blank', 'noopener,noreferrer');
+    return;
   } catch {}
   try {
     const target = href || '/uploads/IMAS_PGDM_Plus_2025_Brochure.pdf';
