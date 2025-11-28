@@ -4,7 +4,7 @@ import { Button } from '../components/ui/button'
 import { Badge } from '../components/ui/badge'
 import { IMAS_TAILWIND_CLASSES, IMAS_BRAND, IMAS_CONTACT } from '../lib/constants'
 import { applyNow, downloadBrochureFor } from '../lib/utils'
-import { GraduationCap, Star, MapPin, Building2, Target, Download, Mail, ExternalLink, BookOpen, Layers, Globe, Briefcase, Users, CheckCircle, Phone, Award, Trophy } from 'lucide-react'
+import { GraduationCap, Star, MapPin, Building2, Target, Download, Mail, ExternalLink, BookOpen, Layers, Globe, Briefcase, Users, CheckCircle, Phone, Award, Trophy, ChevronDown } from 'lucide-react'
 
 export function PgdmPlusLandingPage(): React.JSX.Element {
   const onDownload = () => {
@@ -81,18 +81,16 @@ export function PgdmPlusLandingPage(): React.JSX.Element {
         </div>
       </div>
 
-      <header className="sticky top-0 z-40 border-b border-slate-200 bg-white/90 backdrop-blur shadow-md/70">
+      <header className="sticky top-0 z-40  bg-slate-800 backdrop-blur shadow-md/70">
         <div className="mx-auto flex max-w-[1550px] items-center justify-between px-4 py-3">
           <div className="flex items-center gap-2">
-            <div className="flex h-9 w-9 items-center justify-center rounded-lg bg-[#26c1d3] text-xs font-bold text-white shadow-md transition-transform duration-200 hover:scale-105">
-              IMAS
-            </div>
-            <div className="leading-tight">
-              <p className="text-sm font-semibold">IMAS Business School</p>
-              <p className="text-[11px] text-slate-500">Newtown, Kolkata</p>
-            </div>
+            <img
+                src="/uploads/logos/imas.png"
+                alt="IMAS International Management & Analytics School"
+                className="h-10 w-auto xl:h-12"
+              />
           </div>
-          <nav className="hidden items-center gap-6 text-sm text-slate-700 md:flex">
+          <nav className="hidden items-center gap-6 text-sm text-slate-300 md:flex">
             <a href="#about-imas" className="flex items-center gap-1 hover:text-[#2e7bb3] transition-colors duration-200"><BookOpen className="h-4 w-4" /><span>Program Overview</span></a>
             <a href="#specialisations" className="flex items-center gap-1 hover:text-[#2e7bb3] transition-colors duration-200"><Layers className="h-4 w-4" /><span>Specialisations</span></a>
             <a href="#international-immersion" className="flex items-center gap-1 hover:text-[#2e7bb3] transition-colors duration-200"><Globe className="h-4 w-4" /><span>International Immersion</span></a>
@@ -101,7 +99,7 @@ export function PgdmPlusLandingPage(): React.JSX.Element {
             <a href="#admissions-2026" className="flex items-center gap-1 hover:text-[#2e7bb3] transition-colors duration-200"><CheckCircle className="h-4 w-4" /><span>Admissions 2026</span></a>
             <Button onClick={() => window.open('https://admission.imas.ac.in/', '_blank')} className="bg-[#26c1d3] px-4 py-2 text-sm font-semibold text-white shadow-md hover:bg-[#2e7bb3]">Apply Now</Button>
           </nav>
-          <button className="inline-flex h-9 w-9 items-center justify-center rounded-md border border-slate-200 transition-colors duration-200 hover:bg-slate-100 md:hidden">
+          <button className="inline-flex h-9 w-9  items-center justify-center  rounded-md border border-slate-200 transition-colors duration-200 hover:bg-slate-100 md:hidden">
             <span className="sr-only">Open menu</span>
             <div className="h-4 w-4 space-y-1">
               <span className="block h-[2px] w-full bg-slate-700" />
@@ -123,7 +121,7 @@ export function PgdmPlusLandingPage(): React.JSX.Element {
         }}
       >
         <div
-          className="absolute inset-0 bg-gradient-to-br from-[#143674]/75 via-[#143674]/55 to-black/50"
+          className="absolute inset-0 bg-gradient-to-br from-[#143674]/95 via-[#143674]/95 to-black/80"
           aria-hidden="true"
         ></div>
         <div
@@ -138,58 +136,86 @@ export function PgdmPlusLandingPage(): React.JSX.Element {
           data-animate-on-scroll
           className="relative mx-auto flex max-w-[1550px] flex-col gap-8 px-4 py-8 md:flex-row md:gap-10 md:py-14 transition-all duration-700 ease-out"
         >
-          <div className="flex-1 space-y-5">
-            <div className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 px-3 py-1 text-xs font-medium text-white shadow-sm">
-              <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-              <span>Full-Time AICTE-Approved PGDM Plus</span>
-              <span className="h-1 w-1 rounded-full bg-[#26c1d3]" />
-              <span>On-Campus • Newtown, Kolkata</span>
+          <div className="flex-1 space-y-3 sm:space-y-5">
+            <div className="inline-flex items-center gap-1.5 sm:gap-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 px-2.5 py-0.5 sm:px-3 sm:py-1 text-[11px] sm:text-xs font-medium text-white shadow-sm">
+              <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-green-400 rounded-full animate-pulse" />
+              <span>PGDM Plus Admissions</span>
             </div>
             <div className="space-y-3">
-              <h1 className="text-3xl font-bold tracking-tight text-white drop-shadow-md sm:text-4xl lg:text-[2.6rem]">
+              <h1 className="text-2xl sm:text-4xl lg:text-[2.6rem] font-bold tracking-tight text-white drop-shadow-md">
                 MBA / PGDM (Full-Time) – PGDM Plus Program
               </h1>
-              <p className="text-sm font-medium text-gray-200/95 drop-shadow sm:text-lg">
+              <p className="text-xs sm:text-lg font-medium text-gray-200/95 drop-shadow">
                 Strength Your Future with a Transformative Management Program at IMAS.
               </p>
+              <div className="flex items-center gap-0.5 sm:gap-1 text-xs font-semibold text-white" aria-label="Student rating">
+                <Star className="h-3 w-3 sm:h-4 sm:w-4 text-yellow-400" fill="currentColor" />
+                <Star className="h-3 w-3 sm:h-4 sm:w-4 text-yellow-400" fill="currentColor" />
+                <Star className="h-3 w-3 sm:h-4 sm:w-4 text-yellow-400" fill="currentColor" />
+                <Star className="h-3 w-3 sm:h-4 sm:w-4 text-yellow-400" fill="currentColor" />
+                <Star className="h-3 w-3 sm:h-4 sm:w-4 text-yellow-400" fill="currentColor" />
+                <span className="ml-2 text-[10px] sm:text-[11px] text-gray-200/95">4.9/5 Student Rating</span>
+              </div>
             </div>
-            <p className="max-w-xl text-xs leading-relaxed text-gray-200 sm:text-sm">IMAS Kolkata, one of the best MBA colleges in Kolkata 2026, guides the new generation to become proficient corporate leaders by providing an AICTE-approved full-time MBA/PGDM – PGDM Plus programme designed to enhance their potential.</p>
-            <div className="flex flex-wrap items-center gap-3 text-xs font-medium text-white backdrop-blur-sm">
-              <span className="inline-flex items-center gap-1 rounded-full bg-white/10 px-3 py-1 shadow-sm ring-1 ring-white/30"><Award className="h-4 w-4 text-white" /><span>AICTE Approved</span></span>
-              <span className="inline-flex items-center gap-1 rounded-full bg-white/10 px-3 py-1 shadow-sm ring-1 ring-white/30"><Trophy className="h-4 w-4 text-white" /><span>Award-Winning B-School</span></span>
-              <span className="inline-flex items-center gap-1 rounded-full bg-white/10 px-3 py-1 shadow-sm ring-1 ring-white/30"><MapPin className="h-4 w-4 text-white" /><span>Newtown Smart City Zone</span></span>
+            <p className="max-w-xl hidden sm:block text-xs leading-snug text-gray-200 sm:text-sm">IMAS Kolkata, one of the best MBA colleges in Kolkata 2026, guides the new generation to become proficient corporate leaders by providing an AICTE-approved full-time MBA/PGDM – PGDM Plus programme designed to enhance their potential.</p>
+            <div className="relative overflow-hidden">
+              <div className="flex gap-2 sm:gap-3 animate-scroll-left scrolling-text-container whitespace-nowrap text-xs font-medium text-white">
+                <span className="inline-flex items-center gap-1 rounded-full bg-white/10 px-3 py-1 shadow-sm border-t border-b border-white/30"><Award className="h-4 w-4 text-white" /><span>AICTE Approved</span></span>
+                <span className="inline-flex items-center gap-1 rounded-full bg-white/10 px-3 py-1 shadow-sm border-t border-b border-white/30"><Trophy className="h-4 w-4 text-white" /><span>Award-Winning B-School</span></span>
+                <span className="inline-flex items-center gap-1 rounded-full bg-white/10 px-3 py-1 shadow-sm border-t border-b border-white/30"><MapPin className="h-4 w-4 text-white" /><span>Newtown Smart City Zone</span></span>
+              </div>
             </div>
-            <div className="flex flex-wrap items-center gap-3 pt-2">
-              <Button onClick={() => window.open('https://admission.imas.ac.in/', '_blank')} className="group rounded-full bg-gradient-to-r from-teal-500 to-blue-600 hover:from-teal-600 hover:to-blue-700 px-5 py-2.5 text-sm font-semibold text-white shadow-md transition-all duration-300 hover:scale-105 hover:shadow-teal-500/25 active:scale-95">
+            <div className="flex flex-wrap items-center gap-2 sm:gap-3 pt-2">
+              <Button onClick={() => window.open('https://admission.imas.ac.in/', '_blank')} className="group rounded-full bg-gradient-to-r from-teal-500 to-blue-600 hover:from-teal-600 hover:to-blue-700 px-4 py-2 text-xs sm:text-sm sm:px-5 sm:py-2.5 font-semibold text-white shadow-md transition-all duration-300 hover:scale-105 hover:shadow-teal-500/25 active:scale-95">
                 Apply Now
                 <ExternalLink className="ml-2 h-4 w-4 text-white opacity-80 group-hover:translate-x-0.5 transition-transform" />
               </Button>
-              <Button onClick={onDownload} variant="outline" className="group rounded-full bg-transparent border-2 border-white/30 px-5 py-2.5 text-sm font-semibold text-white transition-all duration-300 hover:bg-white/10 hover:scale-105 active:scale-95">
+              <Button onClick={onDownload} variant="outline" className="group rounded-full bg-transparent border-2 border-white/30 px-4 py-2 text-xs sm:text-sm sm:px-5 sm:py-2.5 font-semibold text-white transition-all duration-300 hover:bg-white/10 hover:scale-105 active:scale-95">
                 <Download className="h-4 w-4 mr-1 text-white group-hover:rotate-12 transition-transform" />
                 Download Brochure
               </Button>
-              <Button onClick={() => window.open('/campus-tour', '_blank')} variant="link" className="group text-sm font-medium text-white underline-offset-4 hover:underline transition-all duration-300">
+              <Button onClick={() => window.open('/campus-tour', '_blank')} variant="link" className="group text-xs sm:text-sm font-medium text-white underline-offset-4 hover:underline transition-all duration-300">
                 <ExternalLink className="h-4 w-4 mr-1 text-white group-hover:translate-x-0.5 transition-transform" />
                 Visit Campus
               </Button>
             </div>
             <div className="mt-4 grid max-w-xl grid-cols-3 items-stretch gap-3 text-center text-[11px] text-slate-600 sm:grid-cols-3">
-              <div className="h-full rounded-xl bg-white/80 p-3 shadow-sm ring-1 ring-slate-100 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:bg-white">
+              <div className="h-full rounded-xl bg-white/90 p-3 shadow-sm ring-1 ring-slate-100 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:bg-white">
                 <p className="text-[10px] uppercase tracking-wide text-slate-500">Programme</p>
-                <p className="mt-1 text-xs font-semibold text-slate-900 sm:text-sm">Full-Time PGDM</p>
+                <p className="mt-1 text-[10px] font-semibold text-slate-900 sm:text-sm">Full-Time PGDM</p>
               </div>
-              <div className="h-full rounded-xl bg-white/80 p-3 shadow-sm ring-1 ring-slate-100 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:bg-white">
+              <div className="h-full rounded-xl bg-white/90 p-3 shadow-sm ring-1 ring-slate-100 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:bg-white">
                 <p className="text-[10px] uppercase tracking-wide text-slate-500">Intake</p>
-                <p className="mt-1 text-xs font-semibold text-slate-900 sm:text-sm">2026 Batch</p>
+                <p className="mt-1 text-[10px] font-semibold text-slate-900 sm:text-sm">2026 Batch</p>
               </div>
-              <div className="h-full rounded-xl bg-white/80 p-3 shadow-sm ring-1 ring-slate-100 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:bg-white">
+              <div className="h-full rounded-xl bg-white/90 p-3 shadow-sm ring-1 ring-slate-100 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:bg-white">
                 <p className="text-[10px] uppercase tracking-wide text-slate-500">Location</p>
-                <p className="mt-1 text-xs font-semibold text-slate-900 sm:text-sm">Newtown, Kolkata</p>
+                <p className="mt-1 text-[10px] font-semibold text-slate-900 sm:text-sm">Newtown, Kolkata</p>
               </div>
             </div>
           </div>
-          <aside className="w-full max-w-md self-start rounded-2xl bg-white/95 p-5 shadow-xl ring-1 ring-slate-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
-            
+          <div className="md:hidden">
+            <details className="group rounded-2xl bg-white/95 p-4 shadow-xl ring-1 ring-slate-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
+              <summary className="flex items-center justify-between cursor-pointer">
+                <span className="flex items-center gap-2 text-lg font-semibold text-slate-900">
+                  <Mail className="h-5 w-5 text-[#2e7bb3]" />
+                  <span className='text-[14px] md:text-[16px]'>Get Detailed Program Information</span>
+                </span>
+                <ChevronDown className="h-5 w-5 text-slate-600 transition-transform group-open:rotate-180" />
+              </summary>
+              <p className="mt-2 text-xs text-slate-600">Fill in your details to receive the brochure and personalised counselling from the IMAS admissions team.</p>
+              <form className="mt-4 space-y-3 text-xs">
+                <div className="space-y-1"><label className="block font-medium text-slate-700">Full Name</label><input type="text" className="w-full rounded-lg border border-slate-200 px-3 py-2 text-sm outline-none focus:border-[#2e7bb3] focus:ring-1 focus:ring-[#2e7bb3]" placeholder="Enter your full name" /></div>
+                <div className="grid gap-3 md:grid-cols-2"><div className="space-y-1"><label className="block font-medium text-slate-700">Mobile Number</label><input type="tel" className="w-full rounded-lg border border-slate-200 px-3 py-2 text-sm outline-none focus:border-[#2e7bb3] focus:ring-1 focus:ring-[#2e7bb3]" placeholder="10-digit mobile" /></div><div className="space-y-1"><label className="block font-medium text-slate-700">Email</label><input type="email" className="w-full rounded-lg border border-slate-200 px-3 py-2 text-sm outline-none focus:border-[#2e7bb3] focus:ring-1 focus:ring-[#2e7bb3]" placeholder="you@example.com" /></div></div>
+                <div className="grid gap-3 md:grid-cols-2"><div className="space-y-1"><label className="block font-medium text-slate-700">City</label><input type="text" className="w-full rounded-lg border border-slate-200 px-3 py-2 text-sm outline-none focus:border-[#2e7bb3] focus:ring-1 focus:ring-[#2e7bb3]" placeholder="Your city" /></div><div className="space-y-1"><label className="block font-medium text-slate-700">Qualification</label><select className="w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm outline-none focus:border-[#2e7bb3] focus:ring-1 focus:ring-[#2e7bb3]"><option value="">Select</option><option>Final Year Undergraduate</option><option>Graduate</option><option>Working Professional</option></select></div></div>
+                <div className="grid gap-3 md:grid-cols-2"><div className="space-y-1"><label className="block font-medium text-slate-700">Year of Graduation</label><select className="w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm outline-none focus:border-[#2e7bb3] focus:ring-1 focus:ring-[#2e7bb3]"><option value="">Select year</option><option>2026</option><option>2025</option><option>2024</option><option>2023</option><option>2022 & Earlier</option></select></div><div className="space-y-1"><label className="block font-medium text-slate-700">Preferred Specialisation</label><select className="w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm outline-none focus:border-[#2e7bb3] focus:ring-1 focus:ring-[#2e7bb3]"><option value="">Select</option><option>Marketing Management</option><option>Financial Management</option><option>Human Resource Management</option><option>Business Analytics</option><option>Artificial Intelligence & Data Science</option><option>FinTech</option><option>Hospital & Healthcare Management</option><option>Innovation, Entrepreneurship & Venture Development (IEV)</option></select></div></div>
+                <div className="flex items-start gap-2 pt-1"><input type="checkbox" className="mt-1 h-3.5 w-3.5 rounded border-slate-300" /><p className="text-[11px] text-slate-500">By submitting this form, I agree to be contacted by IMAS via phone, email, or SMS.</p></div>
+                <div className="flex gap-2 pt-2"><Button onClick={onDownload} className="bg-[#26c1d3] text-white px-4 py-2 text-sm font-semibold">Get Brochure</Button><Button onClick={applyNow} variant="outline" className="border border-slate-300 px-4 py-2 text-sm">Enquire Now</Button></div>
+              </form>
+            </details>
+          </div>
+
+          <aside className="hidden md:block w-full max-w-md self-start rounded-2xl bg-white/95 p-5 shadow-xl ring-1 ring-slate-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
             <h2 className="flex items-center gap-2 text-lg font-semibold text-slate-900"><Mail className="h-5 w-5 text-[#2e7bb3]" /><span>Get Detailed Program Information</span></h2>
             <p className="mt-1 text-xs text-slate-600">Fill in your details to receive the brochure and personalised counselling from the IMAS admissions team.</p>
             <form className="mt-4 space-y-3 text-xs">
@@ -210,13 +236,13 @@ export function PgdmPlusLandingPage(): React.JSX.Element {
           className="mx-auto max-w-[1550px] px-4 py-8 transition-all duration-700 ease-out md:py-10"
         >
           <div>
-            <div className="text-2xl font-bold bg-gradient-to-r from-slate-900 to-sky-700 bg-clip-text text-transparent">
+            <div className="text-lg sm:text-2xl font-bold font-sans bg-gradient-to-r from-slate-900 to-sky-700 bg-clip-text text-transparent">
               Awards & Recognitions
             </div>
             <div className="mt-1 h-1 w-20 rounded-full bg-gradient-to-r from-cyan-400 to-sky-600" />
           </div>
           <p className="mt-2 text-xs text-slate-700 sm:text-sm">IMAS has been recognised for its academic excellence, innovation, and professional development support.</p>
-          <div className="mt-5 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-5 grid grid-cols-2 gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {[
               'Academic Excellence',
               'Emerging Business School of the Year',
@@ -246,7 +272,7 @@ export function PgdmPlusLandingPage(): React.JSX.Element {
           <div className="mb-5 flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
             <div className="max-w-2xl">
               <div>
-                <div className="flex items-center gap-2 text-2xl font-bold bg-gradient-to-r from-slate-900 to-sky-700 bg-clip-text text-transparent">
+                <div className="flex items-center gap-2 text-lg sm:text-2xl font-bold font-sans bg-gradient-to-r from-slate-900 to-sky-700 bg-clip-text text-transparent">
                   <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-emerald-100">
                     <span className="material-symbols-outlined text-[20px] text-emerald-700">school</span>
                   </span>
@@ -290,7 +316,7 @@ export function PgdmPlusLandingPage(): React.JSX.Element {
           className="mx-auto max-w-[1550px] px-4 py-8 transition-all duration-700 ease-out md:py-10"
         >
           <div>
-            <div className="text-2xl font-bold bg-gradient-to-r from-slate-900 to-sky-700 bg-clip-text text-transparent">
+            <div className="text-lg sm:text-2xl font-bold font-sans bg-gradient-to-r from-slate-900 to-sky-700 bg-clip-text text-transparent">
               Program Features (Brochure-Aligned)
             </div>
             <div className="mt-1 h-1 w-28 rounded-full bg-gradient-to-r from-cyan-400 to-sky-600" />
@@ -328,13 +354,13 @@ export function PgdmPlusLandingPage(): React.JSX.Element {
           className="mx-auto max-w-[1550px] px-4 py-8 transition-all duration-700 ease-out md:py-10"
         >
           <div>
-            <div className="text-2xl font-bold bg-gradient-to-r from-slate-900 to-sky-700 bg-clip-text text-transparent">
+            <div className="text-lg sm:text-2xl font-bold font-sans bg-gradient-to-r from-slate-900 to-sky-700 bg-clip-text text-transparent">
               MBA / PGDM Program Objectives
             </div>
             <div className="mt-1 h-1 w-24 rounded-full bg-gradient-to-r from-cyan-400 to-sky-600" />
           </div>
           <p className="mt-2 text-xs text-slate-700 sm:text-sm">The programme is designed to develop well-trained management professionals who can excel in a dynamic business environment.</p>
-          <div className="mt-5 grid gap-3 md:grid-cols-2 md:gap-4 lg:grid-cols-4">
+          <div className="mt-5 grid grid-cols-2 gap-3 md:grid-cols-2 md:gap-4 lg:grid-cols-4">
             {[
               { label: 'Industry-relevant curriculum knowledge', icon: BookOpen },
               { label: 'Specialisation enhancement', icon: Layers },
@@ -366,7 +392,7 @@ export function PgdmPlusLandingPage(): React.JSX.Element {
         >
           <div className="space-y-4">
             <div>
-              <div className="flex items-center gap-2 text-2xl font-bold bg-gradient-to-r from-slate-900 to-sky-700 bg-clip-text text-transparent">
+              <div className="flex items-center gap-2 text-lg sm:text-2xl font-bold font-sans bg-gradient-to-r from-slate-900 to-sky-700 bg-clip-text text-transparent">
                 <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-[#26c1d3]/20">
                   <span className="material-symbols-outlined text-[20px] text-[#2e7bb3]">public</span>
                 </span>
@@ -462,7 +488,7 @@ export function PgdmPlusLandingPage(): React.JSX.Element {
           <div className="grid gap-8 md:grid-cols-2">
             <div>
               <div>
-                <div className="text-2xl font-bold bg-gradient-to-r from-slate-900 to-sky-700 bg-clip-text text-transparent">
+                <div className="text-lg sm:text-2xl font-bold font-sans bg-gradient-to-r from-slate-900 to-sky-700 bg-clip-text text-transparent">
                   Placements at IMAS
                 </div>
                 <div className="mt-1 h-1 w-24 rounded-full bg-gradient-to-r from-cyan-400 to-sky-600" />
@@ -511,7 +537,7 @@ export function PgdmPlusLandingPage(): React.JSX.Element {
           <div className="mb-6 flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
             <div className="max-w-2xl">
               <div>
-                <div className="flex items-center gap-2 text-2xl font-bold bg-gradient-to-r from-slate-900 to-sky-700 bg-clip-text text-transparent">
+                <div className="flex items-center gap-2 text-lg sm:text-2xl font-bold font-sans bg-gradient-to-r from-slate-900 to-sky-700 bg-clip-text text-transparent">
                   <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-purple-100">
                     <span className="material-symbols-outlined text-[20px] text-purple-700">auto_awesome</span>
                   </span>
@@ -566,7 +592,7 @@ export function PgdmPlusLandingPage(): React.JSX.Element {
           <div className="grid gap-8 md:grid-cols-2">
             <div>
               <div>
-                <div className="text-2xl font-bold bg-gradient-to-r from-slate-900 to-sky-700 bg-clip-text text-transparent">
+                <div className="text-lg sm:text-2xl font-bold font-sans bg-gradient-to-r from-slate-900 to-sky-700 bg-clip-text text-transparent">
                   MBA / PGDM Admissions Open 2026 – Apply Now
                 </div>
                 <div className="mt-1 h-1 w-32 rounded-full bg-gradient-to-r from-cyan-400 to-sky-600" />
@@ -600,7 +626,7 @@ export function PgdmPlusLandingPage(): React.JSX.Element {
           className="max-w-[1550px] mx-auto px-4 transition-all duration-700 ease-out"
         >
           <div>
-            <div className="text-2xl font-bold bg-gradient-to-r from-slate-900 to-sky-700 bg-clip-text text-transparent">
+            <div className="text-lg sm:text-2xl font-bold font-sans bg-gradient-to-r from-slate-900 to-sky-700 bg-clip-text text-transparent">
               Frequently Asked Questions
             </div>
             <div className="mt-1 h-1 w-28 rounded-full bg-gradient-to-r from-cyan-400 to-sky-600" />
