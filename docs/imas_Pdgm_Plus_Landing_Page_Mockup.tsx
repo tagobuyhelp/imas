@@ -648,9 +648,7 @@ export default function ImasPgdmPlusLandingPage() {
                                 </div>
                                 <div className="rounded-2xl bg-slate-50 p-6 ring-1 ring-slate-100">
                                     <p className="text-xs font-semibold uppercase tracking-[0.25em] text-slate-500">Placement Snapshot*</p>
-                                    <p className="mt-2 text-[11px] text-slate-500">
-                                        *Illustrative layout. Replace with actual statistics and recruiter logos when available.
-                                    </p>
+                                    
                                     <div className="mt-4 grid grid-cols-3 gap-4 text-center text-xs">
                                         <div className="rounded-xl bg-white p-3 shadow-sm ring-1 ring-slate-100">
                                             <p className="text-[10px] text-slate-500">Highest CTC</p>

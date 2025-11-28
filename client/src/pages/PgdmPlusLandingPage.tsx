@@ -230,60 +230,202 @@ export function PgdmPlusLandingPage(): React.JSX.Element {
         </div>
       </section>
 
+      <section id="about-imas" className="border-b border-slate-200 bg-slate-50">
+        <div
+          data-animate-on-scroll
+          className="mx-auto max-w-[1550px] px-4 py-8 md:py-10 transition-all duration-700 ease-out"
+        >
+          <div className="relative overflow-hidden rounded-xl bg-white/95   ring-1 ring-white/20 p-5 sm:p-6 md:p-8">
+            
+            <div className="grid gap-6 md:grid-cols-2 md:gap-8">
+          <div className="space-y-4">
+            <div>
+              <div className="flex items-center gap-2 text-lg sm:text-2xl font-bold font-sans bg-gradient-to-r from-slate-900 to-sky-700 bg-clip-text text-transparent">
+                <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-[#26c1d3]/20">
+                  <Building2 className="h-4 w-4 text-[#2e7bb3]" />
+                </span>
+                <span>About IMAS Business School</span>
+              </div>
+              <div className="mt-1 h-1 w-24 rounded-full bg-gradient-to-r from-cyan-400 to-sky-600" />
+            </div>
+            <div className="flex flex-wrap items-center gap-2 text-[11px] text-slate-700">
+              <span className="inline-flex items-center gap-1 rounded-full bg-[#143674]/10 px-3 py-1 shadow-sm ring-1 ring-[#143674]/20"><Award className="h-4 w-4 text-[#143674]" /><span>AICTE Approved</span></span>
+              <span className="inline-flex items-center gap-1 rounded-full bg-[#26c1d3]/10 px-3 py-1 shadow-sm ring-1 ring-[#26c1d3]/20"><Users className="h-4 w-4 text-[#26c1d3]" /><span>Industry Mentors</span></span>
+              <span className="inline-flex items-center gap-1 rounded-full bg-[#2e7bb3]/10 px-3 py-1 shadow-sm ring-1 ring-[#2e7bb3]/20"><Globe className="h-4 w-4 text-[#2e7bb3]" /><span>Global Collaborations</span></span>
+            </div>
+            <p className="text-xs leading-relaxed text-slate-700 sm:text-sm">IMAS Kolkata is a dynamic business school located in Newtown, Kolkata, offering an industry-focused full-time MBA / PGDM programme with internship opportunities. The institute focuses on academic excellence, corporate exposure, and holistic personality development.</p>
+            <p className="text-xs leading-relaxed text-slate-700 sm:text-sm">At IMAS, students unlock their potential through future-ready learning environments, industry-linked curriculum, and active corporate engagement.</p>
+            <div className="mt-3 grid grid-cols-2 gap-3 sm:grid-cols-2">
+              <div className="group flex items-center gap-3 rounded-2xl bg-slate-50 px-4 py-3 ring-1 ring-slate-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+                <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-[#143674]/10">
+                  <Building2 className="h-4 w-4 text-[#143674]" />
+                </span>
+                <p className="text-xs sm:text-sm font-semibold text-slate-900">Vibrant and future-ready campus</p>
+              </div>
+              <div className="group flex items-center gap-3 rounded-2xl bg-slate-50 px-4 py-3 ring-1 ring-slate-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+                <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-[#26c1d3]/10">
+                  <BookOpen className="h-4 w-4 text-[#2e7bb3]" />
+                </span>
+                <p className="text-xs sm:text-sm font-semibold text-slate-900">Industry-linked MBA curriculum</p>
+              </div>
+              <div className="group flex items-center gap-3 rounded-2xl bg-slate-50 px-4 py-3 ring-1 ring-slate-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+                <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-[#2e7bb3]/10">
+                  <Briefcase className="h-4 w-4 text-[#2e7bb3]" />
+                </span>
+                <p className="text-xs sm:text-sm font-semibold text-slate-900">Active corporate partnerships</p>
+              </div>
+              <div className="group flex items-center gap-3 rounded-2xl bg-slate-50 px-4 py-3 ring-1 ring-slate-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+                <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-[#26c1d3]/10">
+                  <Globe className="h-4 w-4 text-[#26c1d3]" />
+                </span>
+                <p className="text-xs sm:text-sm font-semibold text-slate-900">International collaborations with top universities</p>
+              </div>
+              <div className="group flex items-center gap-3 rounded-2xl bg-slate-50 px-4 py-3 ring-1 ring-slate-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-md sm:col-span-2">
+                <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-emerald-100/40">
+                  <GraduationCap className="h-4 w-4 text-emerald-600" />
+                </span>
+                <p className="text-xs sm:text-sm font-semibold text-slate-900">Practical exposure – internships & projects</p>
+              </div>
+            </div>
+          </div>
+          <div className="flex items-center justify-center">
+            <div className="relative h-full w-full  overflow-hidden rounded-2xl border bg-white shadow-sm ring-1 ring-slate-200">
+              <img
+                src="/uploads/campus_photos/imas_campus.png"
+                alt="IMAS Kolkata campus building"
+                className="h-full w-full object-cover"
+                onError={(e) => {
+                  const target = e.currentTarget as HTMLImageElement;
+                  target.src = '/uploads/logos/IMAS_LOGO_PNG.png';
+                }}
+              />
+              
+            </div>
+          </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="why-imas" className="border-b border-slate-200 bg-white">
+        <div
+          data-animate-on-scroll
+          className="mx-auto max-w-[1550px] px-4 py-8 transition-all duration-700 ease-out md:py-10"
+        >
+          <div className="relative overflow-hidden rounded-3xl bg-white/95  ring-1 ring-white/20 p-5 sm:p-6 md:p-8">
+           
+            <div className="mb-4 max-w-2xl">
+              <div className="text-lg sm:text-2xl font-bold font-sans bg-gradient-to-r from-slate-900 to-sky-700 bg-clip-text text-transparent">Why Choose MBA / PGDM (PGDM Plus) at IMAS?</div>
+              <div className="mt-1 h-1 w-32 rounded-full bg-gradient-to-r from-cyan-400 to-sky-600" />
+              <p className="mt-2 text-xs text-slate-700 sm:text-sm">Learn from top executives, business leaders, and academic experts from globally renowned organisations, and become a corporate-ready professional with strong management foundations and future-focused skills.</p>
+              <div className="mt-3 flex flex-wrap items-center gap-2 text-[11px] text-slate-700">
+                <span className="inline-flex items-center gap-1 rounded-full bg-[#143674]/10 px-3 py-1 shadow-sm ring-1 ring-[#143674]/20"><Award className="h-4 w-4 text-[#143674]" /><span>AICTE Approved</span></span>
+                <span className="inline-flex items-center gap-1 rounded-full bg-[#26c1d3]/10 px-3 py-1 shadow-sm ring-1 ring-[#26c1d3]/20"><Briefcase className="h-4 w-4 text-[#26c1d3]" /><span>Placement Support</span></span>
+                <span className="inline-flex items-center gap-1 rounded-full bg-[#2e7bb3]/10 px-3 py-1 shadow-sm ring-1 ring-[#2e7bb3]/20"><Globe className="h-4 w-4 text-[#2e7bb3]" /><span>Global Exposure</span></span>
+              </div>
+            </div>
+
+            <div className="grid gap-4 sm:gap-5 md:grid-cols-2 lg:grid-cols-3">
+              {[
+                { label: 'AICTE approved full-time MBA / PGDM programme 2026', icon: Award },
+                { label: 'Full-time PGDM programme with 100% placement assistance', icon: Briefcase },
+                { label: 'High placements with top recruiters in India', icon: Users },
+                { label: 'Cutting-edge curriculum aligned with digital business trends', icon: Layers },
+                { label: 'Contemporary central AC campus with advanced digital classrooms', icon: Building2 },
+                { label: 'Personality Enrichment Programs and Grooming Modules', icon: Star },
+                { label: 'Professional training from academic and industry experts', icon: GraduationCap },
+                { label: 'Scholarships, guidance and education loan support', icon: BookOpen },
+                { label: 'International Immersion Program for global exposure', icon: Globe },
+                { label: "Strategically located campus in Newtown's Smart City Zone", icon: MapPin },
+              ].map(({ label, icon: Icon }) => (
+                <div
+                  key={label}
+                  className="flex items-start gap-3 rounded-2xl bg-slate-50 p-4 text-xs sm:text-sm ring-1 ring-slate-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
+                >
+                  <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-[#26c1d3]/10">
+                    <Icon className="h-4 w-4 text-[#2e7bb3]" />
+                  </span>
+                  <p className="font-medium text-slate-900">{label}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section id="awards" className="border-b border-slate-200 bg-slate-50">
         <div
           data-animate-on-scroll
           className="mx-auto max-w-[1550px] px-4 py-8 transition-all duration-700 ease-out md:py-10"
         >
-          <div>
-            <div className="text-lg sm:text-2xl font-bold font-sans bg-gradient-to-r from-slate-900 to-sky-700 bg-clip-text text-transparent">
-              Awards & Recognitions
-            </div>
-            <div className="mt-1 h-1 w-20 rounded-full bg-gradient-to-r from-cyan-400 to-sky-600" />
-          </div>
-          <p className="mt-2 text-xs text-slate-700 sm:text-sm">IMAS has been recognised for its academic excellence, innovation, and professional development support.</p>
-          <div className="mt-5 grid grid-cols-2 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {[
-              'Academic Excellence',
-              'Emerging Business School of the Year',
-              'Innovation & Entrepreneurship Award',
-              'Professional Development Award',
-            ].map((title) => (
-              <div
-                key={title}
-                className="flex h-28 flex-col justify-center rounded-2xl bg-white p-4 text-sm font-medium text-slate-800 shadow-sm ring-1 ring-slate-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:ring-[#26c1d3]/60"
-              >
-                <span className="flex items-center gap-1 text-xs font-semibold uppercase tracking-wide text-[#2e7bb3]">
-                  <Award className="h-4 w-4" />
-                  <span>Recognition</span>
-                </span>
-                <span className="mt-1">{title}</span>
+          <div className="relative overflow-hidden rounded-3xl bg-white/95  ring-1 ring-white/20 p-5 sm:p-6 md:p-8">
+            
+            <div>
+              <div className="text-lg sm:text-2xl font-bold font-sans bg-gradient-to-r from-slate-900 to-sky-700 bg-clip-text text-transparent">
+                Awards & Recognitions
               </div>
-            ))}
+              <div className="mt-1 h-1 w-24 rounded-full bg-gradient-to-r from-cyan-400 to-sky-600" />
+              <div className="mt-3 flex flex-wrap items-center gap-2 text-[11px] text-slate-700">
+                <span className="inline-flex items-center gap-1 rounded-full bg-[#143674]/10 px-3 py-1 shadow-sm ring-1 ring-[#143674]/20"><Trophy className="h-4 w-4 text-[#143674]" /><span>National</span></span>
+                <span className="inline-flex items-center gap-1 rounded-full bg-[#26c1d3]/10 px-3 py-1 shadow-sm ring-1 ring-[#26c1d3]/20"><Award className="h-4 w-4 text-[#26c1d3]" /><span>Industry</span></span>
+                <span className="inline-flex items-center gap-1 rounded-full bg-[#2e7bb3]/10 px-3 py-1 shadow-sm ring-1 ring-[#2e7bb3]/20"><Star className="h-4 w-4 text-[#2e7bb3]" /><span>Academic</span></span>
+              </div>
+            </div>
+
+            <p className="mt-2 text-xs text-slate-700 sm:text-sm">IMAS has been recognised for its academic excellence, innovation, and professional development support.</p>
+            <div className="mt-5 grid grid-cols-2 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+              {[
+                'Academic Excellence',
+                'Emerging Business School of the Year',
+                'Innovation & Entrepreneurship Award',
+                'Professional Development Award',
+              ].map((title) => (
+                <div
+                  key={title}
+                  className="group relative overflow-hidden rounded-2xl bg-white p-4 text-sm font-medium text-slate-800 shadow-sm ring-1 ring-slate-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg hover:ring-[#26c1d3]/60"
+                >
+                  <div className="absolute -right-6 -top-6 h-16 w-16 rounded-full bg-[#26c1d3]/10 blur-xl" aria-hidden="true" />
+                  <span className="flex items-center gap-2 text-xs font-semibold uppercase tracking-wide text-[#2e7bb3]">
+                    <Award className="h-4 w-4" />
+                    <span>Recognition</span>
+                  </span>
+                  <span className="mt-1">{title}</span>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </section>
+
+      
 
       <section id="specialisations" className="border-b border-slate-200 bg-white">
         <div
           data-animate-on-scroll
           className="mx-auto max-w-[1550px] px-4 py-8 transition-all duration-700 ease-out md:py-10"
         >
-          <div className="mb-5 flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
-            <div className="max-w-2xl">
-              <div>
-                <div className="flex items-center gap-2 text-lg sm:text-2xl font-bold font-sans bg-gradient-to-r from-slate-900 to-sky-700 bg-clip-text text-transparent">
-                  <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-emerald-100">
-                    <span className="material-symbols-outlined text-[20px] text-emerald-700">school</span>
-                  </span>
-                  <span>Specialisations Offered by IMAS Kolkata</span>
+          <div className="relative overflow-hidden rounded-3xl bg-white/95 backdrop-blur-sm  ring-1 ring-white/20 p-5 sm:p-6 md:p-8">
+
+            <div className="mb-5 flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
+              <div className="max-w-2xl">
+                <div>
+                  <div className="flex items-center gap-2 text-lg sm:text-2xl font-bold font-sans bg-gradient-to-r from-slate-900 to-sky-700 bg-clip-text text-transparent">
+                    <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-emerald-100">
+                      <span className="material-symbols-outlined text-[20px] text-emerald-700">school</span>
+                    </span>
+                    <span>Specialisations Offered by IMAS Kolkata</span>
+                  </div>
+                  <div className="mt-1 h-1 w-24 rounded-full bg-gradient-to-r from-cyan-400 to-sky-600" />
                 </div>
-                <div className="mt-1 h-1 w-24 rounded-full bg-gradient-to-r from-cyan-400 to-sky-600" />
+                <p className="mt-2 text-xs text-slate-700 sm:text-sm">Personalise your learning journey with single or dual specialisation options in high-demand management domains.</p>
+                <div className="mt-3 flex flex-wrap items-center gap-2 text-[11px] text-slate-700">
+                  <span className="inline-flex items-center gap-1 rounded-full bg-[#143674]/10 px-3 py-1 shadow-sm ring-1 ring-[#143674]/20"><span className="material-symbols-outlined text-[16px] text-[#143674]">diversity_2</span><span>Dual Specialisation</span></span>
+                  <span className="inline-flex items-center gap-1 rounded-full bg-[#26c1d3]/10 px-3 py-1 shadow-sm ring-1 ring-[#26c1d3]/20"><span className="material-symbols-outlined text-[16px] text-[#26c1d3]">workspace_premium</span><span>Industry-Relevant</span></span>
+                  <span className="inline-flex items-center gap-1 rounded-full bg-[#2e7bb3]/10 px-3 py-1 shadow-sm ring-1 ring-[#2e7bb3]/20"><span className="material-symbols-outlined text-[16px] text-[#2e7bb3]">lightbulb</span><span>Future-Focused</span></span>
+                </div>
               </div>
-              <p className="mt-2 text-xs text-slate-700 sm:text-sm">Personalise your learning journey with single or dual specialisation options in high-demand management domains.</p>
+              <p className="text-[11px] text-slate-500">Choose a focus area that aligns with your career goals.</p>
             </div>
-            <p className="text-[11px] text-slate-500">Choose a focus area that aligns with your career goals.</p>
-          </div>
           <div className="grid gap-3 md:grid-cols-2 lg:grid-cols-4">
             {[
               { label: 'Marketing Management', icon: 'trending_up' },
@@ -297,16 +439,17 @@ export function PgdmPlusLandingPage(): React.JSX.Element {
             ].map((spec) => (
               <div
                 key={spec.label}
-                className="flex items-center gap-3 rounded-2xl bg-slate-50 px-4 py-3 text-xs font-medium text-slate-800 ring-1 ring-slate-200 transition-all duration-300 hover:bg-white hover:-translate-y-1 hover:shadow-md"
+                className="group flex items-center gap-3 rounded-2xl bg-slate-50 px-4 py-3 text-xs font-medium text-slate-800 ring-1 ring-slate-200 transition-all duration-300 hover:bg-white hover:-translate-y-1 hover:shadow-md"
               >
-                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white">
-                  <span className="material-symbols-outlined text-[20px] text-slate-800">{spec.icon}</span>
+                <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#26c1d3]/10">
+                  <span className="material-symbols-outlined text-[20px] text-[#2e7bb3]">{spec.icon}</span>
                 </span>
                 <span>{spec.label}</span>
               </div>
             ))}
           </div>
           <p className="mt-3 text-[11px] text-slate-600 sm:text-xs">Students may also choose a Dual Specialisation pathway for a broader and more flexible career trajectory.</p>
+          </div>
         </div>
       </section>
 
@@ -315,36 +458,69 @@ export function PgdmPlusLandingPage(): React.JSX.Element {
           data-animate-on-scroll
           className="mx-auto max-w-[1550px] px-4 py-8 transition-all duration-700 ease-out md:py-10"
         >
-          <div>
-            <div className="text-lg sm:text-2xl font-bold font-sans bg-gradient-to-r from-slate-900 to-sky-700 bg-clip-text text-transparent">
-              Program Features (Brochure-Aligned)
-            </div>
-            <div className="mt-1 h-1 w-28 rounded-full bg-gradient-to-r from-cyan-400 to-sky-600" />
-          </div>
-          <p className="mt-2 text-xs text-slate-700 sm:text-sm">The PGDM Plus programme integrates globally recognised certifications with strong practical exposure and corporate engagement.</p>
-          <div className="mt-6 grid gap-6 md:grid-cols-2 md:gap-8">
+          <div className="relative overflow-hidden rounded-3xl bg-white/95 backdrop-blur-sm shadow-1xl ring-1 ring-white/20 p-5 sm:p-6 md:p-8">
+            
+
             <div>
-              <div className="flex items-center gap-1 text-sm font-semibold text-slate-900"><Award className="h-4 w-4" /><span>Certifications & Tools</span></div>
-              <ul className="mt-3 space-y-1.5 text-sm text-slate-700">
-                <li>• SAP ERP Suite Certification</li>
-                <li>• Microsoft Project Certification</li>
-                <li>• Six Sigma Green Belt Certification</li>
-                <li>• Advanced Excel Certification</li>
-              </ul>
+              <div className="text-lg sm:text-2xl font-bold font-sans bg-gradient-to-r from-slate-900 to-sky-700 bg-clip-text text-transparent">
+                Program Features (Brochure-Aligned)
+              </div>
+              <div className="mt-1 h-1 w-28 rounded-full bg-gradient-to-r from-cyan-400 to-sky-600" />
             </div>
-            <div>
-              <div className="flex items-center gap-1 text-sm font-semibold text-slate-900"><GraduationCap className="h-4 w-4" /><span>Experiential Learning & Exposure</span></div>
-              <ul className="mt-3 space-y-1.5 text-sm text-slate-700">
-                <li>• Live Business Projects</li>
-                <li>• Winter & Summer Internships</li>
-                <li>• 20+ Presentations Each Semester</li>
-                <li>• Corporate Mentorship Program</li>
-                <li>• Industry Visits</li>
-                <li>• Basic & Advanced Communication Training</li>
-              </ul>
+
+            <div className="mt-3 flex flex-wrap gap-2">
+              <span className="inline-flex items-center gap-1 rounded-full bg-[#143674]/10 text-[#143674] ring-1 ring-[#143674]/20 px-3 py-1 text-[10px] sm:text-xs font-semibold">
+                <span className="material-symbols-outlined text-[16px]">workspace_premium</span>
+                Global Tools
+              </span>
+              <span className="inline-flex items-center gap-1 rounded-full bg-[#26c1d3]/10 text-[#2e7bb3] ring-1 ring-[#26c1d3]/20 px-3 py-1 text-[10px] sm:text-xs font-semibold">
+                <span className="material-symbols-outlined text-[16px]">handshake</span>
+                Hands-on Learning
+              </span>
+              <span className="inline-flex items-center gap-1 rounded-full bg-[#143674]/10 text-[#143674] ring-1 ring-[#143674]/20 px-3 py-1 text-[10px] sm:text-xs font-semibold">
+                <span className="material-symbols-outlined text-[16px]">business_center</span>
+                Corporate Exposure
+              </span>
             </div>
+
+            <p className="mt-3 text-xs text-slate-700 sm:text-sm">The PGDM Plus programme integrates globally recognised certifications with strong practical exposure and corporate engagement.</p>
+
+            <div className="mt-6 grid gap-6 md:grid-cols-2 md:gap-8">
+              <div className="rounded-2xl bg-slate-50 p-4 ring-1 ring-slate-200 transition-all duration-300 hover:bg-white hover:-translate-y-1 hover:shadow-md">
+                <div className="flex items-center gap-2 text-sm font-semibold text-slate-900">
+                  <span className="inline-flex h-8 w-8 items-center justify-center rounded-xl bg-[#26c1d3]/10">
+                    <Award className="h-4 w-4 text-[#2e7bb3]" />
+                  </span>
+                  <span>Certifications & Tools</span>
+                </div>
+                <ul className="mt-3 space-y-2">
+                  <li className="flex items-center gap-2"><CheckCircle className="h-3.5 w-3.5 text-emerald-600" /><span className="text-sm text-slate-700">SAP ERP Suite Certification</span></li>
+                  <li className="flex items-center gap-2"><CheckCircle className="h-3.5 w-3.5 text-emerald-600" /><span className="text-sm text-slate-700">Microsoft Project Certification</span></li>
+                  <li className="flex items-center gap-2"><CheckCircle className="h-3.5 w-3.5 text-emerald-600" /><span className="text-sm text-slate-700">Six Sigma Green Belt Certification</span></li>
+                  <li className="flex items-center gap-2"><CheckCircle className="h-3.5 w-3.5 text-emerald-600" /><span className="text-sm text-slate-700">Advanced Excel Certification</span></li>
+                </ul>
+              </div>
+
+              <div className="rounded-2xl bg-slate-50 p-4 ring-1 ring-slate-200 transition-all duration-300 hover:bg-white hover:-translate-y-1 hover:shadow-md">
+                <div className="flex items-center gap-2 text-sm font-semibold text-slate-900">
+                  <span className="inline-flex h-8 w-8 items-center justify-center rounded-xl bg-[#26c1d3]/10">
+                    <GraduationCap className="h-4 w-4 text-[#2e7bb3]" />
+                  </span>
+                  <span>Experiential Learning & Exposure</span>
+                </div>
+                <ul className="mt-3 space-y-2">
+                  <li className="flex items-center gap-2"><CheckCircle className="h-3.5 w-3.5 text-emerald-600" /><span className="text-sm text-slate-700">Live Business Projects</span></li>
+                  <li className="flex items-center gap-2"><CheckCircle className="h-3.5 w-3.5 text-emerald-600" /><span className="text-sm text-slate-700">Winter & Summer Internships</span></li>
+                  <li className="flex items-center gap-2"><CheckCircle className="h-3.5 w-3.5 text-emerald-600" /><span className="text-sm text-slate-700">20+ Presentations Each Semester</span></li>
+                  <li className="flex items-center gap-2"><CheckCircle className="h-3.5 w-3.5 text-emerald-600" /><span className="text-sm text-slate-700">Corporate Mentorship Program</span></li>
+                  <li className="flex items-center gap-2"><CheckCircle className="h-3.5 w-3.5 text-emerald-600" /><span className="text-sm text-slate-700">Industry Visits</span></li>
+                  <li className="flex items-center gap-2"><CheckCircle className="h-3.5 w-3.5 text-emerald-600" /><span className="text-sm text-slate-700">Basic & Advanced Communication Training</span></li>
+                </ul>
+              </div>
+            </div>
+
+            <Button onClick={onDownload} className="mt-6 inline-flex items-center gap-2 rounded-full bg-[#26c1d3] px-5 py-2.5 text-sm font-semibold text-white shadow-md hover:bg-[#2e7bb3]"><Download className="h-4 w-4" />Download Detailed Program Brochure</Button>
           </div>
-          <Button onClick={onDownload} className="mt-6 inline-flex items-center gap-2 rounded-full bg-[#26c1d3] px-5 py-2.5 text-sm font-semibold text-white shadow-md hover:bg-[#2e7bb3]"><Download className="h-4 w-4" />Download Detailed Program Brochure</Button>
         </div>
       </section>
 
@@ -506,7 +682,7 @@ export function PgdmPlusLandingPage(): React.JSX.Element {
             </div>
             <div className="rounded-2xl bg-slate-50 p-6 ring-1 ring-slate-100 transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
               <div className="text-xs font-semibold uppercase tracking-[0.25em] text-slate-500">Placement Snapshot*</div>
-              <div className="mt-2 text-[11px] text-slate-500">*Illustrative layout. Replace with actual statistics and recruiter logos when available.</div>
+              
               <div className="mt-4 grid grid-cols-3 gap-4 text-center text-xs">
                 <div className="rounded-xl bg-white p-3 shadow-sm ring-1 ring-slate-100 transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
                   <div className="text-[10px] text-slate-500">Highest CTC</div>
