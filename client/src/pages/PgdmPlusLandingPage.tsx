@@ -6,7 +6,10 @@ import { IMAS_TAILWIND_CLASSES, IMAS_BRAND, IMAS_CONTACT } from '../lib/constant
 import { applyNow, downloadBrochureFor } from '../lib/utils'
 import { GraduationCap, Star, MapPin, Building2, Target, Download, Mail, ExternalLink, BookOpen, Layers, Globe, Briefcase, Users, CheckCircle, Phone, Award, Trophy, ChevronDown } from 'lucide-react'
 
+
+
 export function PgdmPlusLandingPage(): React.JSX.Element {
+  const marqueeRef = React.useRef<HTMLDivElement | null>(null)
   const onDownload = () => {
     const href = '/uploads/IMAS_PGDM_Plus_2025_Brochure.pdf'
     try {
@@ -45,6 +48,21 @@ export function PgdmPlusLandingPage(): React.JSX.Element {
     })
 
     return () => observer.disconnect()
+  }, [])
+
+  React.useEffect(() => {
+    const scroller = marqueeRef.current
+    if (!scroller) return
+    if (typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+    scroller.setAttribute('data-animated', 'true')
+    const inner = scroller.querySelector('.scroller__inner') as HTMLElement | null
+    if (!inner) return
+    const children = Array.from(inner.children)
+    children.forEach((item) => {
+      const dup = item.cloneNode(true) as HTMLElement
+      dup.setAttribute('aria-hidden', 'true')
+      inner.appendChild(dup)
+    })
   }, [])
 
   return (
@@ -134,9 +152,9 @@ export function PgdmPlusLandingPage(): React.JSX.Element {
         />
         <div
           data-animate-on-scroll
-          className="relative mx-auto flex max-w-[1550px] flex-col gap-8 px-4 py-8 md:flex-row md:gap-10 md:py-14 transition-all duration-700 ease-out"
+          className="relative mx-auto grid max-w-[1550px] grid-cols-1 gap-8 px-4 py-8 md:grid-cols-12 md:gap-10 md:py-14 transition-all duration-700 ease-out"
         >
-          <div className="flex-1 space-y-3 sm:space-y-5">
+          <div className="flex-1 md:col-span-8 space-y-3 sm:space-y-5">
             <div className="inline-flex items-center gap-1.5 sm:gap-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 px-2.5 py-0.5 sm:px-3 sm:py-1 text-[11px] sm:text-xs font-medium text-white shadow-sm">
               <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-green-400 rounded-full animate-pulse" />
               <span>PGDM Plus Admissions</span>
@@ -159,10 +177,12 @@ export function PgdmPlusLandingPage(): React.JSX.Element {
             </div>
             <p className="max-w-xl hidden sm:block text-xs leading-snug text-gray-200 sm:text-sm">IMAS Kolkata, one of the best MBA colleges in Kolkata 2026, guides the new generation to become proficient corporate leaders by providing an AICTE-approved full-time MBA/PGDM – PGDM Plus programme designed to enhance their potential.</p>
             <div className="relative overflow-hidden">
-              <div className="flex gap-2 sm:gap-3 animate-scroll-left scrolling-text-container whitespace-nowrap text-xs font-medium text-white">
-                <span className="inline-flex items-center gap-1 rounded-full bg-white/10 px-3 py-1 shadow-sm border-t border-b border-white/30"><Award className="h-4 w-4 text-white" /><span>AICTE Approved</span></span>
-                <span className="inline-flex items-center gap-1 rounded-full bg-white/10 px-3 py-1 shadow-sm border-t border-b border-white/30"><Trophy className="h-4 w-4 text-white" /><span>Award-Winning B-School</span></span>
-                <span className="inline-flex items-center gap-1 rounded-full bg-white/10 px-3 py-1 shadow-sm border-t border-b border-white/30"><MapPin className="h-4 w-4 text-white" /><span>Newtown Smart City Zone</span></span>
+              <div ref={marqueeRef} className="scroller" data-speed="fast" data-direction="left">
+                <div className="scroller__inner whitespace-nowrap text-xs font-medium text-white">
+                  <span className="inline-flex items-center gap-1 rounded-full bg-white/10 px-3 py-1 shadow-sm border-t border-b border-white/30"><Award className="h-4 w-4 text-white" /><span>AICTE Approved</span></span>
+                  <span className="inline-flex items-center gap-1 rounded-full bg-white/10 px-3 py-1 shadow-sm border-t border-b border-white/30"><Trophy className="h-4 w-4 text-white" /><span>Award-Winning B-School</span></span>
+                  <span className="inline-flex items-center gap-1 rounded-full bg-white/10 px-3 py-1 shadow-sm border-t border-b border-white/30"><MapPin className="h-4 w-4 text-white" /><span>Newtown Smart City Zone</span></span>
+                </div>
               </div>
             </div>
             <div className="flex flex-wrap items-center gap-2 sm:gap-3 pt-2">
@@ -176,7 +196,7 @@ export function PgdmPlusLandingPage(): React.JSX.Element {
               </Button>
               <Button onClick={() => window.open('/campus-tour', '_blank')} variant="link" className="group text-xs sm:text-sm font-medium text-white underline-offset-4 hover:underline transition-all duration-300">
                 <ExternalLink className="h-4 w-4 mr-1 text-white group-hover:translate-x-0.5 transition-transform" />
-                Visit Campus
+                Campus Tour
               </Button>
             </div>
             <div className="mt-4 grid max-w-xl grid-cols-3 items-stretch gap-3 text-center text-[11px] text-slate-600 sm:grid-cols-3">
@@ -215,8 +235,9 @@ export function PgdmPlusLandingPage(): React.JSX.Element {
             </details>
           </div>
 
-          <aside className="hidden md:block w-full max-w-md self-start rounded-2xl bg-white/95 p-5 shadow-xl ring-1 ring-slate-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
-            <h2 className="flex items-center gap-2 text-lg font-semibold text-slate-900"><Mail className="h-5 w-5 text-[#2e7bb3]" /><span>Get Detailed Program Information</span></h2>
+          
+          <div className="hidden md:block md:col-span-4 w-full rounded-2xl bg-white/95 p-5 shadow-xl ring-1 ring-slate-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
+            <h2 className="flex items-center gap-2 text-lg font-semibold text-slate-900"><Mail className="h-5 w-5 text-[#2e7bb3]" /><span>Gett Detailed Program Information</span></h2>
             <p className="mt-1 text-xs text-slate-600">Fill in your details to receive the brochure and personalised counselling from the IMAS admissions team.</p>
             <form className="mt-4 space-y-3 text-xs">
               <div className="space-y-1"><label className="block font-medium text-slate-700">Full Name</label><input type="text" className="w-full rounded-lg border border-slate-200 px-3 py-2 text-sm outline-none focus:border-[#2e7bb3] focus:ring-1 focus:ring-[#2e7bb3]" placeholder="Enter your full name" /></div>
@@ -226,8 +247,9 @@ export function PgdmPlusLandingPage(): React.JSX.Element {
               <div className="flex items-start gap-2 pt-1"><input type="checkbox" className="mt-1 h-3.5 w-3.5 rounded border-slate-300" /><p className="text-[11px] text-slate-500">By submitting this form, I agree to be contacted by IMAS via phone, email, or SMS.</p></div>
               <div className="flex gap-2 pt-2"><Button onClick={onDownload} className="bg-[#26c1d3] text-white px-4 py-2 text-sm font-semibold">Get Brochure</Button><Button onClick={applyNow} variant="outline" className="border border-slate-300 px-4 py-2 text-sm">Enquire Now</Button></div>
             </form>
-          </aside>
+          </div>
         </div>
+
       </section>
 
       <section id="about-imas" className="border-b border-slate-200 bg-slate-50">
