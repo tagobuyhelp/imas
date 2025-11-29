@@ -248,6 +248,143 @@ img[src*="imas_hero_image1.webp"] {
   background-color: var(--imas-teal);
 }
 
+/* Global Map Background & Neon Connections */
+.map-grid::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(to right, rgba(255,255,255,0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.06) 1px, transparent 1px);
+  background-size: 40px 40px;
+  mix-blend-mode: overlay;
+  opacity: 0.3;
+}
+
+@keyframes flight-dash {
+  to { stroke-dashoffset: 200; }
+}
+
+.neon-line {
+  stroke: rgba(var(--imas-teal-rgb), 0.85);
+  stroke-width: 2.5;
+  fill: none;
+  filter: drop-shadow(0 0 8px rgba(38,193,211,0.8));
+  stroke-linecap: round;
+  stroke-dasharray: 8 6;
+  animation: flight-dash 6s linear infinite;
+}
+
+.neon-dot {
+  fill: rgba(255,255,255,0.9);
+  filter: drop-shadow(0 0 6px rgba(109,179,248,0.9));
+}
+
+/* Holographic Panels for premium tech background */
+.holo-panels::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(1200px 500px at 80% 0%, rgba(38,193,211,0.10), transparent 70%),
+    radial-gradient(900px 400px at 10% 100%, rgba(20,54,116,0.10), transparent 70%),
+    linear-gradient(135deg, rgba(46,123,179,0.08), rgba(38,193,211,0.08));
+  filter: blur(2px);
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-slide-up {
+  animation: slide-up 500ms ease-out both;
+}
+
+/* Mesh grid background for Specialisations */
+.mesh-grid::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(600px 250px at 10% 20%, rgba(38,193,211,0.08), transparent 70%),
+    radial-gradient(800px 300px at 90% 80%, rgba(20,54,116,0.10), transparent 70%),
+    linear-gradient(to right, rgba(46,123,179,0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(46,123,179,0.06) 1px, transparent 1px);
+  background-size: 40px 40px, 40px 40px, 48px 48px, 48px 48px;
+  mix-blend-mode: overlay;
+  opacity: 0.35;
+}
+
+.award-banner {
+  position: relative;
+  background-image: linear-gradient(135deg, #0b1c3a 0%, #143674 60%, #0b1c3a 100%);
+}
+
+.award-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(800px 300px at 50% -10%, rgba(255,215,0,0.15), transparent 70%);
+}
+
+@keyframes shineSweep {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(200%); }
+}
+
+.trophy-shine::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 30%;
+  background: linear-gradient(90deg, rgba(255,255,255,0), rgba(255,255,255,0.18), rgba(255,255,255,0));
+  transform: translateX(-100%);
+}
+
+.trophy-shine:hover::before {
+  animation: shineSweep 1.2s ease-out;
+}
+
+@keyframes pulseGold {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(255,215,0,0.4); }
+  50% { box-shadow: 0 0 20px 6px rgba(255,215,0,0.35); }
+}
+
+.pulse-gold {
+  animation: pulseGold 2.2s ease-in-out infinite;
+}
+
+/* Admissions CTA banner */
+.cta-banner {
+  position: relative;
+  background-image: linear-gradient(135deg, rgba(20,54,116,0.95) 0%, rgba(46,123,179,0.95) 100%);
+}
+
+.cta-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(900px 320px at 20% -10%, rgba(109,179,248,0.18), transparent 60%),
+              radial-gradient(700px 280px at 80% 110%, rgba(38,193,211,0.14), transparent 60%);
+}
+
+.cta-lines::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(to right, rgba(255,255,255,0.06) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255,255,255,0.06) 1px, transparent 1px);
+  background-size: 44px 44px;
+  opacity: 0.2;
+  mix-blend-mode: overlay;
+}
+
 .text-imas-dark-blue {
   color: var(--imas-dark-blue);
 }
