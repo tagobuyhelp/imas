@@ -218,14 +218,6 @@ export const mentors = [
         image: '/uploads/mentors/Mayur_Sahani.png'
     },
     {
-        name: 'Ms. Amitha Krushnen',
-        title: 'VP',
-        company: 'Morgan Stanley',
-        companyLogo: '/uploads/companies/morgan_stanley.png',
-        details: 'Core Expertise: Investment Banking, Risk Management & Global Finance',
-        image: '/uploads/mentors/Amitha_Krushnen.png'
-    },
-    {
         name: 'Mr. Vinod Anand',
         title: 'Ex – Project Manager',
         company: 'Infosys',
