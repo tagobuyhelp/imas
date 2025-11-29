@@ -436,7 +436,7 @@ export function PgdmPlusLandingPage(): React.JSX.Element {
                 { icon: 'work', label: 'Practical exposure – internships & projects' },
               ].map((f) => (
                 <div key={f.label} className="group inline-flex items-start gap-3 p-3 rounded-xl bg-white ring-1 ring-slate-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
-                  <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-r from-sky-500 to-blue-700 text-white">
+                  <span className="inline-flex p-1 items-center justify-center rounded-full bg-gradient-to-r from-sky-500 to-blue-700 text-white">
                     <span className="material-symbols-outlined text-[18px]">{f.icon}</span>
                   </span>
                   <span className="text-xs sm:text-sm font-medium text-slate-900">{f.label}</span>
