@@ -1300,8 +1300,9 @@ export function PgdmPlusLandingPage(): React.JSX.Element {
         <div className="mx-auto flex max-w-[1550px] items-center justify-between gap-2 text-xs font-semibold">
           <Button
             onClick={() => window.open('https://admission.imas.ac.in/', '_blank')}
-            className="flex-1 rounded-full bg-[#26c1d3] px-3 py-2 text-center text-white transition-all duration-200 active:scale-95"
+            className="flex-1 rounded-full bg-gradient-to-r from-teal-500 to-blue-600 hover:from-teal-600 hover:to-blue-700 px-3 py-2 text-center text-white transition-all duration-200 active:scale-95"
           >
+            <ExternalLink className="mr-2 h-4 w-4" />
             Apply
           </Button>
           <Button
@@ -1309,12 +1310,14 @@ export function PgdmPlusLandingPage(): React.JSX.Element {
             variant="outline"
             className="flex-1 rounded-full border border-[#26c1d3] px-3 py-2 text-center text-[#2e7bb3] transition-all duration-200 active:scale-95"
           >
+            <Download className="mr-2 h-4 w-4" />
             Brochure
           </Button>
           <a
             href={`tel:${IMAS_CONTACT.PHONE.replace(/\s/g,'')}`}
-            className="flex-1 rounded-full border border-slate-300 px-3 py-2 text-center text-slate-800 transition-all duration-200 active:scale-95"
+            className="flex-1 rounded-full border border-slate-300 px-3 py-2 flex items-center justify-center text-slate-800 transition-all duration-200 active:scale-95"
           >
+            <Phone className="mr-2 h-4 w-4" />
             Call
           </a>
         </div>
