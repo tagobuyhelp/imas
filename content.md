@@ -1,115 +1,96 @@
-
-PGDM Regular Landing Page
-
-
 References Landing page : 
 
-https://www.spjain.org/lp/elo/executive-mba?utm_source=Google&utm_medium=ppc&utm_campaign=ELO_East_West_Search_2025&cmpid=22103830469&adgroupid=173423778699&Placement=&Keyword=mba%20executive&utm_source=Google&utm_medium=ppc&utm_term=mba%20executive&utm_c
-
+SP Jain Postgraduate Programs | Global MBA | Master of Global Business
 
 IMAS brand assets
 brand assets IMAS
-Heading(H1)- MBA / PGDM (Full-Time) – PGDM Plus Program
-Strength Your Future with a Transformative Management Program at IMAS
+H1-PGDM in FinTech – Regular + Flexible Blended Mode
+H3- Future-Ready | Flexible | AICTE Approved
 
-IMAS Kolkata, one of the best MBA colleges in Kolkata 2026, guides the new generation to become proficient corporate leaders by providing them with an AICTE-approved full-time MBA/PGDM – PGDM Plus programme 2026, designed to enhance their potential.
+IMAS offers the AICTE-approved PGDM in FinTech course in India, built for students who want to upgrade their financial and technological professional skills with an AICTE-approved PGDM FinTech program in India, with different learning modes
 
-On-Campus | Newtown, Kolkata
-AICTE Approved | Award-Winning B-School
-CTA: Apply Now | Download Brochure | Visit Campus
-Subheading (H2)- About IMAS Business School
+Regular On Campus
+Flexible Blended Learning Mode
+Choose the best to build your path
 
-IMAS Kolkata, a dynamic business school located in Newtown, inspires excellence through its full-time PGDM/MBA programme with an internship in Kolkata.
-At IMAS Business School, we provide the path to unlock your potential with our Top full-time MBA courses in India. We enrich your skills that improve leadership for a competitive world by working on:
-●	A vibrant and future-ready campus
+📍 Newtown, Kolkata
+📍 AICTE Approved | Industry Aligned | Future Focused
+CTA: Apply Now | Download Brochure | Select Your Mode 
+H2- Why Choose PGDM in FinTech at IMAS?
+IMAS offers the best PGDM in FinTech courses India with multiple learning modes designed for future finance and technology professionals with advantages:
 
-●	Industry-linked MBA cutting-edge curriculum India
+●	AICTE-approved MBA FinTech and blockchain courses
+●	Industry-focused curriculum aligned with BFSI & emerging tech
+●	Banking + Technology integrated learning
+●	Choose Regular or Flexible Blended Learning Mode
+●	100% placement support with strong recruiters
+●	FinTech labs, digital finance tools & expert faculty
+●	Global immersion for on-campus learners
+●	Centrally located corporate campus in Newtown
+●	Designed for FinTech PGDM admission with placement
+H2-Program Modes Explained
+H3- Regular On-Campus
+●	Weekday classes
+●	Complete classroom learning experience
+●	Workshops, events & campus activities
+●	Hands-on FinTech labs
+●	Direct faculty mentorship
+H3- Flexible Blended Mode
+●	Weekend classes along with
+●	Live + recorded classes with LMS support
+●	Ideal for students needing schedule flexibility
+●	Same curriculum as on-campus
+●	Industry-aligned PGDM certification
+●	Best alternative to the MBA FinTech online program India
+Both modes offer a similar PGDM certification and specialisation.
+H2- What You Will Learn in the FinTech Specialisation
+Ideal for those seeking MBA FinTech and blockchain courses, or an MBA digital finance program India with real-world skills.
 
-●	Active corporate partnerships
-
-●	International collaborations with top universities
-
-●	Practical exposure– internships & projects
-H2-Why Choose MBA / PGDM (PGDM Plus) at IMAS?
-IMAS top executives, business leaders, and seasoned professionals from globally renowned organisations guide and prepare our prudents for the competitive corporate world with offered advantages such as:
-
-●	AICTE approved full-time MBA programme 2026
-●	Full-time PGDM programme with 100% placement assistance
-●	High placements with Full-time MBA top recruiters in India
-●	MBA cutting-edge curriculum in India aligned with Digital trends
-●	Contemporary central AC campus with advanced digital classrooms
-●	Personality Enrichment Programs and Grooming Modules
-●	Professional training from academic industry experts
-●	Scholarships, Guidance & Education Loan Support
-●	International Immersion Program for global exposure
-●	Strategically located campus in Newtown’s Smart City Zone
-H2-Awards & Recognitions
-Academic Excellence | Emerging Business School of the Year | Innovation & Entrepreneurship Award | Professional Development Award
-H2-Specialisations Offered By IMAS Kolkata
-At IMAS, students are empowered to personalise their learning with MBA (PGDM) full-time AICTE-approved programmes specialisations:
-●	Marketing Management
-●	Financial Management
-●	Human Resource Management
-●	Business Analytics
-●	Artificial Intelligence & Data Science
-●	FinTech
-●	Hospital & Healthcare Management
-●	Innovation, Entrepreneurship & Venture Development (IEV)
-Students may choose the MBA dual specialisations programme for a broad career path
-H2-Program Features (Brochure-Aligned)
-IMAS AICTE approved full-time MBA programme 2026 unites globally recognised certifications and learning exposure:
-●	SAP ERP Suite Certification
-●	Microsoft Project Certification
-●	Six Sigma Green Belt Certification
-●	Advanced Excel Certification
+●	Digital Payments & UPI Infrastructure
+●	Blockchain Technologies & Cryptocurrency
+●	AI & Machine Learning in Finance
+●	Robo-Advisory & WealthTech Tools
+●	FinTech Product Development
+●	RegTech, Risk & Compliance
+●	Cybersecurity for Financial Systems
+●	Banking, Insurance & Digital Finance Systems
+H2- PGDM+ Program Features
+●	SAP ERP Certification (Optional )
+●	Microsoft Project Certification  (Optional )
+●	Six Sigma Green Belt  (Optional )
+●	Advanced Excel Mastery
 ●	Live Business Projects
-●	Winter Internship
-●	Summer Internship
-●	20+ Presentations Each Semester
-●	Corporate Mentorship Program
-●	Industry Visits
-●	Basic & Advanced Communication Training
+●	Summer & Winter Internships (Regular On-Campus)
+●	Corporate Connect & Industry Mentorship
+●	Communication & Presentation Mastery
+●	20+ Presentations Every Semester
 
-H2- MBA/PGDM Program Objectives
-Working to develop well-trained management professionals, the MBA (PGDM) full-time AICTE-approved programme ensures every student gains:
+H2- Career Opportunities
+H3- Job Roles
+FinTech Analyst • Blockchain Consultant • AI-Finance Analyst • Digital Banking Specialist • Payment Systems Analyst • FinTech Product Manager • Business Analyst (BFSI) • RegTech Consultant
+H3- Industries
+FinTech Startups • Banks & NBFCs • InsurTech • Digital Payment Apps • IT & Tech Firms • WealthTech Firms
+H2- International Immersion (On-Campus Only)
+FinTech PGDM admission placement offers an international immersion in Dubai, Singapore, Malaysia, Thailand, and Vietnam.
+Placement Support
+●	100% placement assistance
+●	Resume building + PI training
+●	Corporate workshops
+●	Internship and job opportunities
+●	Access to 2000+ hiring partners
+H2- Eligibility
+The students who are eligible for PGDM FinTech admissions 2026 are required:
+●	Bachelor’s Degree with 50%
+●	Valid  score CAT / MAT / CMAT / CUET / XAT / ATMA / GMAT
+●	Freshers and working professionals
 
-●	Industry-Relevant Curriculum Knowledge
-●	Specialization Enhancement
-●	Professional Networking & Career Support
-●	Advanced Skill Development
-●	Leadership & Professional Development
-●	Globally Informed Business Perspective
-●	Experiential Learning mindset
-●	Continuous Learning & Adaptability
-
-H2- International Immersion Program
-Our global immersion programs give opportunities to students to explore the international market and business cultures in:
-
-Dubai | Singapore | Thailand | Malaysia
-
-Collaborating with Middlesex University, Curtin University, Panyapiwat Institute, and Raffles University offers an understanding of the global business ecosystem.
-
-H2- Placements at IMAS
-IMAS PGDM/MBA programme 2026, high placements through: 
-●	Corporate training & mentorship
-●	Seminars, workshops & field visits
-●	Resume Building & GD/PI Training
-●	Multiple job opportunities per student
-●	Recruitments across HRM, Marketing, and Finance
-●	Strong alumni network with India’s top recruiters
-H2-Life at IMAS
-
-Student life at IMAS offers a dynamic environment with limitless growth opportunities, fostering personality development sessions, leadership clubs, corporate events, cultural fests, experiential projects, and communication skills in Modern Digital Learning Spaces.  
-
-These Full-time management programmes in India are built on strong academic foundations, global exposure, and 100% placement support, offering the Top full-time MBA courses in India, for better growth in India or beyond.
-H2-MBA Admissions Open 2026 India
-Campus Address:
- Plot No 37, Block – Bhangar-II
- Near St. Xavier’s University
- Newtown Action Area – III,
- Kolkata, West Bengal,
- Pin Code: 700160
-Ph: +91 90888 22777
-Web: www.imas.ac.in
- Email: admission@imas.ac.in
+H2- Start Your FinTech Journey Today
+📍 Campus Address:
+Plot No 37,  Newtown Action Area – III
+Block – Bhangar-II
+Near St. Xavier’s University, Newtown
+Kolkata, West Bengal
+Pin Code: 700160
+📞 +91 90888 22777 | 🌐 www.imas.ac.in | 📧 admission@imas.ac.in
+CTA: Apply Now | Choose Your Mode | Download Brochure
 
