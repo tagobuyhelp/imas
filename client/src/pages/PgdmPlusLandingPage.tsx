@@ -9,7 +9,9 @@ import { GraduationCap, Star, MapPin, Building2, Target, Download, Mail, Externa
 
 
 export function PgdmPlusLandingPage(): React.JSX.Element {
+  const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false)
   const marqueeRef = React.useRef<HTMLDivElement | null>(null)
+  const lifeTrackRef = React.useRef<HTMLDivElement | null>(null)
   const onDownload = () => {
     const href = '/uploads/IMAS_PGDM_Plus_2025_Brochure.pdf'
     try {
@@ -65,6 +67,44 @@ export function PgdmPlusLandingPage(): React.JSX.Element {
     })
   }, [])
 
+  const lifeSlides = [
+    { src: '/uploads/campus_photos/IMG_8110.JPG', title: 'Leadership clubs & student committees', icon: Users },
+    { src: '/uploads/TDK_Industries_exposure_for_PGDM_students.jpeg', title: 'Corporate events, guest lectures & conclaves', icon: Briefcase },
+    { src: '/uploads/abt-img.jpg', title: 'Cultural fests & management competitions', icon: Trophy },
+    { src: '/uploads/pgdm-iev.jpg', title: 'Research, case studies & live projects', icon: BookOpen },
+    { src: '/uploads/PGDM_Plus_in_Marketing_Management.png', title: 'Modern digital learning spaces & labs', icon: Layers },
+    { src: '/uploads/imas_hero_image_2.webp', title: 'Soft skills & communication training sessions', icon: GraduationCap },
+  ]
+  const placementLogos = [
+    { name: 'BainCapital', logo: '/uploads/bcpe_logo.png' },
+    { name: 'Amazon', logo: '/uploads/Customer-logo_Amazon.png' },
+    { name: 'Swiggy', logo: '/uploads/swiggy-logo.svg' },
+    { name: 'Google', logo: '/uploads/Google_logo_2013-2015-600x206.png' },
+    { name: 'JPMorgan Chase & Co.', logo: '/uploads/Partnership-Creatives--48-.png' },
+    { name: 'Accenture', logo: '/uploads/Accenture.svg.webp' },
+    { name: 'Razorpay', logo: '/uploads/Razorpay-Logo.jpg' },
+    { name: 'Zomato', logo: '/uploads/Zomato-Logo.png' },
+    { name: 'Flipkart', logo: '/uploads/flipkart-logo.webp' },
+    { name: 'Deloitte', logo: '/uploads/deloitte.png' },
+    { name: 'Delhivery', logo: '/uploads/delhivery.png' },
+    { name: 'Ola', logo: '/uploads/Ola_Cabs_logo.svg' },
+  ]
+  const campusImages = [
+    '/uploads/campus_photos/imas_campus.png',
+    '/uploads/campus_photos/IMG_8110.JPG',
+    '/uploads/campus_photos/IMG_8115.JPG',
+    '/uploads/campus_photos/DSC_2802.jpg',
+  ]
+  const [campusIndex, setCampusIndex] = React.useState(0)
+  React.useEffect(() => {
+    const id = setInterval(() => {
+      setCampusIndex((i) => (i + 1) % campusImages.length)
+    }, 3500)
+    return () => clearInterval(id)
+  }, [])
+
+
+
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 via-slate-50 to-slate-100 text-slate-900 scroll-smooth">
       <Helmet>
@@ -115,9 +155,9 @@ export function PgdmPlusLandingPage(): React.JSX.Element {
             <a href="#placements" className="flex items-center gap-1 hover:text-[#2e7bb3] transition-colors duration-200"><Briefcase className="h-4 w-4" /><span>Placements</span></a>
             <a href="#life-at-imas" className="flex items-center gap-1 hover:text-[#2e7bb3] transition-colors duration-200"><Users className="h-4 w-4" /><span>Life at IMAS</span></a>
             <a href="#admissions-2026" className="flex items-center gap-1 hover:text-[#2e7bb3] transition-colors duration-200"><CheckCircle className="h-4 w-4" /><span>Admissions 2026</span></a>
-            <Button onClick={() => window.open('https://admission.imas.ac.in/', '_blank')} className="bg-[#26c1d3] px-4 py-2 text-sm font-semibold text-white shadow-md hover:bg-[#2e7bb3]">Apply Now</Button>
+            <Button onClick={() => window.open('https://admission.imas.ac.in/', '_blank')} className="px-4 py-2 text-sm font-semibold text-white shadow-md bg-gradient-to-r from-teal-500 to-blue-600 hover:from-teal-600 hover:to-blue-700">Apply Now</Button>
           </nav>
-          <button className="inline-flex h-9 w-9  items-center justify-center  rounded-md border border-slate-200 transition-colors duration-200 hover:bg-slate-100 md:hidden">
+          <button className="inline-flex h-9 w-9  items-center justify-center  rounded-md border border-slate-200 transition-colors duration-200 hover:bg-slate-100 md:hidden" onClick={() => setMobileMenuOpen(true)}>
             <span className="sr-only">Open menu</span>
             <div className="h-4 w-4 space-y-1">
               <span className="block h-[2px] w-full bg-slate-700" />
@@ -127,6 +167,103 @@ export function PgdmPlusLandingPage(): React.JSX.Element {
           </button>
         </div>
       </header>
+
+      {/* Mobile Menu - Custom for PGDM Plus Landing Page */}
+      {/* Backdrop */}
+      {mobileMenuOpen && (
+        <div
+          className="fixed inset-0 z-40 bg-black/50 md:hidden"
+          onClick={() => setMobileMenuOpen(false)}
+        />
+      )}
+      {/* Drawer */}
+      <div
+        className={`fixed top-0 right-0 z-50 h-full w-80 max-w-[85vw] bg-white shadow-xl transform transition-transform duration-300 md:hidden ${mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'}`}
+        role="dialog"
+        aria-modal="true"
+        aria-label="Mobile navigation"
+      >
+        <div className="flex flex-col h-full">
+          {/* Header */}
+          <div className="flex items-center justify-between p-4 border-b border-gray-200">
+            <div className="flex items-center gap-3">
+              <img
+                src="/uploads/logos/imas.png"
+                alt="IMAS International Management & Analytics School"
+                className="h-10 w-auto"
+              />
+            </div>
+            <Button variant="ghost" size="sm" onClick={() => setMobileMenuOpen(false)} className="text-gray-600 hover:text-gray-900">
+              <ChevronDown className="h-5 w-5 rotate-180" />
+            </Button>
+          </div>
+
+          {/* Navigation */}
+          <nav className="flex-1 p-6 overflow-y-auto">
+            <ul className="space-y-2">
+              <li>
+                <a href="#about-imas" onClick={() => setMobileMenuOpen(false)} className="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-left text-gray-700 hover:text-[#2e7bb3] hover:bg-slate-50 transition-colors">
+                  <BookOpen className="h-5 w-5" />
+                  <span className="font-medium">Program Overview</span>
+                </a>
+              </li>
+              <li>
+                <a href="#specialisations" onClick={() => setMobileMenuOpen(false)} className="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-left text-gray-700 hover:text-[#2e7bb3] hover:bg-slate-50 transition-colors">
+                  <Layers className="h-5 w-5" />
+                  <span className="font-medium">Specialisations</span>
+                </a>
+              </li>
+              <li>
+                <a href="#international-immersion" onClick={() => setMobileMenuOpen(false)} className="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-left text-gray-700 hover:text-[#2e7bb3] hover:bg-slate-50 transition-colors">
+                  <Globe className="h-5 w-5" />
+                  <span className="font-medium">International Immersion</span>
+                </a>
+              </li>
+              <li>
+                <a href="#placements" onClick={() => setMobileMenuOpen(false)} className="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-left text-gray-700 hover:text-[#2e7bb3] hover:bg-slate-50 transition-colors">
+                  <Briefcase className="h-5 w-5" />
+                  <span className="font-medium">Placements</span>
+                </a>
+              </li>
+              <li>
+                <a href="#life-at-imas" onClick={() => setMobileMenuOpen(false)} className="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-left text-gray-700 hover:text-[#2e7bb3] hover:bg-slate-50 transition-colors">
+                  <Users className="h-5 w-5" />
+                  <span className="font-medium">Life at IMAS</span>
+                </a>
+              </li>
+              <li>
+                <a href="#admissions-2026" onClick={() => setMobileMenuOpen(false)} className="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-left text-gray-700 hover:text-[#2e7bb3] hover:bg-slate-50 transition-colors">
+                  <CheckCircle className="h-5 w-5" />
+                  <span className="font-medium">Admissions 2026</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+
+          {/* Footer CTAs */}
+          <div className="p-6 border-t border-gray-200 space-y-3">
+            <Button 
+              className="w-full bg-gradient-to-r from-teal-500 to-blue-600 hover:from-teal-600 hover:to-blue-700 text-white"
+              onClick={() => {
+                setMobileMenuOpen(false)
+                window.open('https://admission.imas.ac.in/', '_blank')
+              }}
+            >
+              Apply Now
+            </Button>
+            <Button 
+              variant="outline"
+              className="w-full border-[#26c1d3] text-[#2e7bb3] hover:bg-[#26c1d3]/10"
+              onClick={() => {
+                setMobileMenuOpen(false)
+                onDownload()
+              }}
+            >
+              <Download className="h-4 w-4 mr-2" /> Download Brochure
+            </Button>
+          </div>
+        </div>
+      </div>
 
       <section
         id="hero"
@@ -200,15 +337,15 @@ export function PgdmPlusLandingPage(): React.JSX.Element {
               </Button>
             </div>
             <div className="mt-4 grid max-w-xl grid-cols-3 items-stretch gap-3 text-center text-[11px] text-slate-600 sm:grid-cols-3">
-              <div className="h-full rounded-xl bg-white/90 p-3 shadow-sm ring-1 ring-slate-100 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:bg-white">
+              <div className="h-full rounded-xl bg-white items-center justify-center p-3 shadow-sm ring-1 ring-slate-100 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:bg-white">
                 <p className="text-[10px] uppercase tracking-wide text-slate-500">Programme</p>
                 <p className="mt-1 text-[10px] font-semibold text-slate-900 sm:text-sm">Full-Time PGDM</p>
               </div>
-              <div className="h-full rounded-xl bg-white/90 p-3 shadow-sm ring-1 ring-slate-100 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:bg-white">
+              <div className="h-full rounded-xl bg-white items-center justify-center p-3 shadow-sm ring-1 ring-slate-100 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:bg-white">
                 <p className="text-[10px] uppercase tracking-wide text-slate-500">Intake</p>
                 <p className="mt-1 text-[10px] font-semibold text-slate-900 sm:text-sm">2026 Batch</p>
               </div>
-              <div className="h-full rounded-xl bg-white/90 p-3 shadow-sm ring-1 ring-slate-100 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:bg-white">
+              <div className="h-full rounded-xl bg-white items-center justify-center p-3 shadow-sm ring-1 ring-slate-100 transition-all duration-300 hover:shadow-lg hover:-translate-y-1 hover:bg-white">
                 <p className="text-[10px] uppercase tracking-wide text-slate-500">Location</p>
                 <p className="mt-1 text-[10px] font-semibold text-slate-900 sm:text-sm">Newtown, Kolkata</p>
               </div>
@@ -236,6 +373,8 @@ export function PgdmPlusLandingPage(): React.JSX.Element {
           </div>
 
           
+        
+        
           <div className="hidden md:block md:col-span-4 w-full rounded-2xl bg-white/95 p-5 shadow-xl ring-1 ring-slate-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
             <h2 className="flex items-center gap-2 text-lg font-semibold text-slate-900"><Mail className="h-5 w-5 text-[#2e7bb3]" /><span>Gett Detailed Program Information</span></h2>
             <p className="mt-1 text-xs text-slate-600">Fill in your details to receive the brochure and personalised counselling from the IMAS admissions team.</p>
@@ -255,7 +394,7 @@ export function PgdmPlusLandingPage(): React.JSX.Element {
       <section id="about-imas" className="border-b border-slate-200 bg-slate-50">
         <div
           data-animate-on-scroll
-          className="mx-auto max-w-[1550px] px-4 py-8 md:py-10 transition-all duration-700 ease-out"
+          className="mx-auto max-w-[1550px]  py-8  transition-all duration-700 ease-out"
         >
           <div className="relative overflow-hidden rounded-xl bg-white/95   ring-1 ring-white/20 p-5 sm:p-6 md:p-8">
             
@@ -278,50 +417,57 @@ export function PgdmPlusLandingPage(): React.JSX.Element {
             <p className="text-xs leading-relaxed text-slate-700 sm:text-sm">IMAS Kolkata is a dynamic business school located in Newtown, Kolkata, offering an industry-focused full-time MBA / PGDM programme with internship opportunities. The institute focuses on academic excellence, corporate exposure, and holistic personality development.</p>
             <p className="text-xs leading-relaxed text-slate-700 sm:text-sm">At IMAS, students unlock their potential through future-ready learning environments, industry-linked curriculum, and active corporate engagement.</p>
             <div className="mt-3 grid grid-cols-2 gap-3 sm:grid-cols-2">
-              <div className="group flex items-center gap-3 rounded-2xl bg-slate-50 px-4 py-3 ring-1 ring-slate-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
-                <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-[#143674]/10">
-                  <Building2 className="h-4 w-4 text-[#143674]" />
+              <div className="group flex items-center gap-3 rounded-2xl bg-gradient-to-r from-teal-500 to-sky-700 px-4 py-3 ring-1 ring-slate-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+                <span className="inline-flex p-3 items-center justify-center rounded-xl bg-white/10">
+                  <Building2 className="h-4 w-4 text-white" />
                 </span>
-                <p className="text-xs sm:text-sm font-semibold text-slate-900">Vibrant and future-ready campus</p>
+                <p className="text-xs sm:text-sm font-medium text-white">Vibrant and future-ready campus</p>
               </div>
-              <div className="group flex items-center gap-3 rounded-2xl bg-slate-50 px-4 py-3 ring-1 ring-slate-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
-                <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-[#26c1d3]/10">
-                  <BookOpen className="h-4 w-4 text-[#2e7bb3]" />
+              <div className="group flex items-center gap-3 rounded-2xl bg-gradient-to-r from-teal-500 to-sky-700 px-4 py-3 ring-1 ring-slate-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+                <span className="inline-flex p-3 items-center justify-center rounded-xl bg-white/10">
+                  <BookOpen className="h-4 w-4 text-white" />
                 </span>
-                <p className="text-xs sm:text-sm font-semibold text-slate-900">Industry-linked MBA curriculum</p>
+                <p className="text-xs sm:text-sm font-medium text-white">Industry-linked MBA curriculum</p>
               </div>
-              <div className="group flex items-center gap-3 rounded-2xl bg-slate-50 px-4 py-3 ring-1 ring-slate-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
-                <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-[#2e7bb3]/10">
-                  <Briefcase className="h-4 w-4 text-[#2e7bb3]" />
+              <div className="group flex items-center gap-3 rounded-2xl bg-gradient-to-r from-teal-500 to-sky-700 px-4 py-3 ring-1 ring-slate-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+                <span className="inline-flex p-3 items-center justify-center rounded-xl bg-white/10">
+                  <Briefcase className="h-4 w-4 text-white" />
                 </span>
-                <p className="text-xs sm:text-sm font-semibold text-slate-900">Active corporate partnerships</p>
+                <p className="text-xs sm:text-sm font-medium text-white">Active corporate partnerships</p>
               </div>
-              <div className="group flex items-center gap-3 rounded-2xl bg-slate-50 px-4 py-3 ring-1 ring-slate-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
-                <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-[#26c1d3]/10">
-                  <Globe className="h-4 w-4 text-[#26c1d3]" />
+              <div className="group flex items-center gap-3 rounded-2xl bg-gradient-to-r from-teal-500 to-sky-700 px-4 py-3 ring-1 ring-slate-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
+                <span className="inline-flex p-3 items-center justify-center rounded-xl bg-white/10">
+                  <Globe className="h-4 w-4 text-white" />
                 </span>
-                <p className="text-xs sm:text-sm font-semibold text-slate-900">International collaborations with top universities</p>
+                <p className="text-xs sm:text-sm font-medium text-white">International collaborations with top universities</p>
               </div>
-              <div className="group flex items-center gap-3 rounded-2xl bg-slate-50 px-4 py-3 ring-1 ring-slate-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-md sm:col-span-2">
-                <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-emerald-100/40">
-                  <GraduationCap className="h-4 w-4 text-emerald-600" />
+              <div className="group flex items-center gap-3 rounded-2xl bg-gradient-to-r from-teal-500 to-sky-700 px-4 py-3 ring-1 ring-slate-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-md sm:col-span-2">
+                <span className="inline-flex p-3 items-center justify-center rounded-xl bg-white/10">
+                  <GraduationCap className="h-4 w-4 text-white" />
                 </span>
-                <p className="text-xs sm:text-sm font-semibold text-slate-900">Practical exposure – internships & projects</p>
+                <p className="text-xs sm:text-sm font-medium text-white">Practical exposure – internships & projects</p>
               </div>
             </div>
           </div>
           <div className="flex items-center justify-center">
-            <div className="relative h-full w-full  overflow-hidden rounded-2xl border bg-white shadow-sm ring-1 ring-slate-200">
-              <img
-                src="/uploads/campus_photos/imas_campus.png"
-                alt="IMAS Kolkata campus building"
-                className="h-full w-full object-cover"
-                onError={(e) => {
-                  const target = e.currentTarget as HTMLImageElement;
-                  target.src = '/uploads/logos/IMAS_LOGO_PNG.png';
-                }}
-              />
-              
+            <div className="relative w-full overflow-hidden rounded-2xl border bg-white shadow-sm ring-1 ring-slate-200 h-48 sm:h-64 md:h-[420px]">
+              {campusImages.map((src, idx) => (
+                <img
+                  key={idx}
+                  src={src}
+                  alt="IMAS Kolkata campus building"
+                  className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-700 ${idx === campusIndex ? 'opacity-100' : 'opacity-0'}`}
+                  onError={(e) => {
+                    const target = e.currentTarget as HTMLImageElement
+                    target.src = '/uploads/logos/IMAS_LOGO_PNG.png'
+                  }}
+                />
+              ))}
+              <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5">
+                {campusImages.map((_, idx) => (
+                  <span key={idx} className={`h-1.5 w-1.5 rounded-full ${idx === campusIndex ? 'bg-white' : 'bg-white/50'}`} />
+                ))}
+              </div>
             </div>
           </div>
             </div>
@@ -332,14 +478,14 @@ export function PgdmPlusLandingPage(): React.JSX.Element {
       <section id="why-imas" className="border-b border-slate-200 bg-white">
         <div
           data-animate-on-scroll
-          className="mx-auto max-w-[1550px] px-4 py-8 transition-all duration-700 ease-out md:py-10"
+          className="mx-auto max-w-[1550px]  py-8 transition-all duration-700 ease-out md:py-10"
         >
           <div className="relative overflow-hidden rounded-3xl bg-white/95  ring-1 ring-white/20 p-5 sm:p-6 md:p-8">
            
             <div className="mb-4 max-w-2xl">
               <div className="text-lg sm:text-2xl font-bold font-sans bg-gradient-to-r from-slate-900 to-sky-700 bg-clip-text text-transparent">Why Choose MBA / PGDM (PGDM Plus) at IMAS?</div>
               <div className="mt-1 h-1 w-32 rounded-full bg-gradient-to-r from-cyan-400 to-sky-600" />
-              <p className="mt-2 text-xs text-slate-700 sm:text-sm">Learn from top executives, business leaders, and academic experts from globally renowned organisations, and become a corporate-ready professional with strong management foundations and future-focused skills.</p>
+              <p className="mt-2 text-xs text-slate-700 sm:text-sm">IMAS top executives, business leaders, and seasoned professionals from globally renowned organisations guide and prepare our prudents for the competitive corporate world with offered advantages such as:</p>
               <div className="mt-3 flex flex-wrap items-center gap-2 text-[11px] text-slate-700">
                 <span className="inline-flex items-center gap-1 rounded-full bg-[#143674]/10 px-3 py-1 shadow-sm ring-1 ring-[#143674]/20"><Award className="h-4 w-4 text-[#143674]" /><span>AICTE Approved</span></span>
                 <span className="inline-flex items-center gap-1 rounded-full bg-[#26c1d3]/10 px-3 py-1 shadow-sm ring-1 ring-[#26c1d3]/20"><Briefcase className="h-4 w-4 text-[#26c1d3]" /><span>Placement Support</span></span>
@@ -347,7 +493,7 @@ export function PgdmPlusLandingPage(): React.JSX.Element {
               </div>
             </div>
 
-            <div className="grid gap-4 sm:gap-5 md:grid-cols-2 lg:grid-cols-3">
+            <div className="grid gap-4 grid-cols-2 sm:gap-5 md:grid-cols-2 lg:grid-cols-3">
               {[
                 { label: 'AICTE approved full-time MBA / PGDM programme 2026', icon: Award },
                 { label: 'Full-time PGDM programme with 100% placement assistance', icon: Briefcase },
@@ -362,9 +508,9 @@ export function PgdmPlusLandingPage(): React.JSX.Element {
               ].map(({ label, icon: Icon }) => (
                 <div
                   key={label}
-                  className="flex items-start gap-3 rounded-2xl bg-slate-50 p-4 text-xs sm:text-sm ring-1 ring-slate-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
+                  className="flex  gap-3 rounded-2xl items-center justify-center content-center bg-slate-50 p-4 text-xs sm:text-sm ring-1 ring-slate-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
                 >
-                  <span className="inline-flex h-9 w-9 items-center justify-center rounded-xl bg-[#26c1d3]/10">
+                  <span className="inline-flex p-4 items-center justify-center rounded-xl bg-[#26c1d3]/10">
                     <Icon className="h-4 w-4 text-[#2e7bb3]" />
                   </span>
                   <p className="font-medium text-slate-900">{label}</p>
@@ -678,49 +824,135 @@ export function PgdmPlusLandingPage(): React.JSX.Element {
         </div>
       </section>
 
-      <section id="placements" className="border-b border-slate-200 bg-white">
+      <section id="placements" className="relative overflow-hidden border-b border-slate-200 bg-gradient-to-br from-[#143674] via-[#143674] to-[#0b1c3a]">
+        <div className="pointer-events-none absolute inset-0" aria-hidden="true">
+          <div className="absolute -top-16 left-1/2 h-72 w-72 -translate-x-1/2 rounded-full bg-cyan-400/20 blur-3xl" />
+          <div className="absolute bottom-10 right-10 h-64 w-64 rounded-full bg-[#26c1d3]/20 blur-3xl" />
+        </div>
         <div
           data-animate-on-scroll
-          className="mx-auto max-w-[1550px] px-4 py-8 transition-all duration-700 ease-out md:py-10"
+          className="relative mx-auto max-w-[1550px] px-4 py-10 transition-all duration-700 ease-out md:py-14"
         >
-          <div className="grid gap-8 md:grid-cols-2">
-            <div>
+          <div className="grid gap-8 md:grid-cols-12">
+            {/* Left: Story & Highlights */}
+            <div className="md:col-span-6 space-y-4 text-white">
               <div>
-                <div className="text-lg sm:text-2xl font-bold font-sans bg-gradient-to-r from-slate-900 to-sky-700 bg-clip-text text-transparent">
-                  Placements at IMAS
+                <div className="flex items-center gap-2 text-lg sm:text-2xl font-bold font-sans bg-gradient-to-r from-white to-[#26c1d3] bg-clip-text text-transparent">
+                  <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-white/10 ring-1 ring-white/20">
+                    <Briefcase className="h-5 w-5 text-white" />
+                  </span>
+                  <span>Placements at IMAS</span>
                 </div>
-                <div className="mt-1 h-1 w-24 rounded-full bg-gradient-to-r from-cyan-400 to-sky-600" />
+                <div className="mt-1 h-1 w-28 rounded-full bg-gradient-to-r from-[#26c1d3] to-sky-500" />
               </div>
-              <p className="mt-2 text-sm text-slate-700">IMAS offers structured placement support with multiple corporate engagement touchpoints, training modules, and alumni-backed opportunities.</p>
-              <ul className="mt-3 space-y-1.5 text-sm text-slate-700">
-                <li>• Corporate training & mentorship</li>
-                <li>• Seminars, workshops & field visits</li>
-                <li>• Resume building & GD/PI training</li>
-                <li>• Multiple job opportunities per student</li>
-                <li>• Recruitments across HRM, Marketing, Finance & Analytics</li>
-                <li>• Strong alumni network with top recruiters</li>
-              </ul>
-              <Button onClick={applyNow} variant="outline" className="mt-4 inline-flex items-center gap-2 rounded-full border border-[#26c1d3] px-4 py-2 text-xs font-semibold text-[#2e7bb3] hover:bg-[#26c1d3]/10">Talk to Our Career Counsellor</Button>
+              <p className="text-xs sm:text-sm text-slate-100/90">Built on career-focused learning and industry partnerships, IMAS offers structured placement support with mentorship, training modules, and strong recruiter engagement.</p>
+
+              <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-3">
+                {[
+                  { label: 'Resume + GD/PI training', icon: CheckCircle },
+                  { label: 'Corporate mentorship', icon: Users },
+                  { label: 'Seminars & workshops', icon: GraduationCap },
+                  { label: 'Skills development', icon: Layers },
+                  { label: 'Industry visits', icon: Globe },
+                  { label: 'Multiple job offers', icon: Trophy },
+                ].map((item) => (
+                  <div key={item.label} className="group flex items-center gap-2 rounded-2xl bg-white/10 p-3 ring-1 ring-white/10 transition-all duration-300 hover:-translate-y-1 hover:bg-white/15">
+                    <span className="inline-flex h-8 w-8 items-center justify-center rounded-xl bg-[#26c1d3]/10">
+                      {React.createElement(item.icon, { className: 'h-4 w-4 text-[#26c1d3]' })}
+                    </span>
+                    <span className="text-xs sm:text-sm font-medium">{item.label}</span>
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-2 flex flex-wrap gap-3">
+                <Button onClick={applyNow} className="rounded-full bg-gradient-to-r from-[#26c1d3] to-[#143674] px-5 py-2.5 text-sm font-semibold text-white shadow-md hover:from-[#2ed4e6] hover:to-[#1a3f7a]">Talk to Placement Counsellor</Button>
+                <Button onClick={onDownload} variant="outline" className="inline-flex items-center gap-2 rounded-full bg-transparent border border-white/40 px-5 py-2.5 text-sm font-semibold text-white hover:bg-white/10"><Download className="h-4 w-4" />Download Placement Report</Button>
+              </div>
             </div>
-            <div className="rounded-2xl bg-slate-50 p-6 ring-1 ring-slate-100 transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
-              <div className="text-xs font-semibold uppercase tracking-[0.25em] text-slate-500">Placement Snapshot*</div>
-              
-              <div className="mt-4 grid grid-cols-3 gap-4 text-center text-xs">
-                <div className="rounded-xl bg-white p-3 shadow-sm ring-1 ring-slate-100 transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
-                  <div className="text-[10px] text-slate-500">Highest CTC</div>
-                  <div className="mt-1 text-base font-semibold text-slate-900">₹ —</div>
+
+            {/* Right: Snapshot & Logos */}
+            <div className="md:col-span-6">
+              <div className="rounded-3xl bg-white p-6 ring-1 ring-slate-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
+                <div className="text-[11px] font-semibold uppercase tracking-[0.25em] text-slate-600">Placement Snapshot*</div>
+                <div className="mt-4 grid grid-cols-3 gap-4 text-center">
+                  {[
+                    { label: 'Highest CTC', value: '₹ 22.5 LPA' },
+                    { label: 'Average CTC', value: '₹ 10.2 LPA' },
+                    { label: 'Offers / Student', value: '2+' },
+                  ].map((stat) => (
+                    <div key={stat.label} className="rounded-2xl bg-slate-50 p-4 text-slate-900 ring-1 ring-slate-200">
+                      <div className="text-[10px] text-slate-600">{stat.label}</div>
+                      <div className="mt-1 text-lg font-bold bg-gradient-to-r from-[#26c1d3] to-[#6db3f8] bg-clip-text ">{stat.value}</div>
+                    </div>
+                  ))}
                 </div>
-                <div className="rounded-xl bg-white p-3 shadow-sm ring-1 ring-slate-100 transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
-                  <div className="text-[10px] text-slate-500">Average CTC</div>
-                  <div className="mt-1 text-base font-semibold text-slate-900">₹ —</div>
+
+                <div className="mt-5 space-y-3">
+                  <div className="relative overflow-hidden    p-2">
+                    <div className="flex items-center gap-6 animate-scroll-left">
+                      {placementLogos.slice(0, 6).map((company) => (
+                        <div key={`row1-${company.name}`} className="flex-shrink-0 flex items-center justify-center">
+                          <img
+                            src={company.logo}
+                            alt={`${company.name} logo`}
+                            className="h-8 w-auto object-contain"
+                            onError={(e) => {
+                              const target = e.currentTarget as HTMLImageElement
+                              target.style.display = 'none'
+                            }}
+                          />
+                        </div>
+                      ))}
+                      {placementLogos.slice(0, 6).map((company) => (
+                        <div key={`row1-dup-${company.name}`} className="flex-shrink-0 flex items-center justify-center">
+                          <img
+                            src={company.logo}
+                            alt={`${company.name} logo`}
+                            className="h-8 w-auto object-contain"
+                            onError={(e) => {
+                              const target = e.currentTarget as HTMLImageElement
+                              target.style.display = 'none'
+                            }}
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+
+                  <div className="relative overflow-hidden  p-2">
+                    <div className="flex items-center gap-6 animate-scroll-right">
+                      {placementLogos.slice(6).map((company) => (
+                        <div key={`row2-${company.name}`} className="flex-shrink-0 flex items-center justify-center">
+                          <img
+                            src={company.logo}
+                            alt={`${company.name} logo`}
+                            className="h-8 w-auto object-contain"
+                            onError={(e) => {
+                              const target = e.currentTarget as HTMLImageElement
+                              target.style.display = 'none'
+                            }}
+                          />
+                        </div>
+                      ))}
+                      {placementLogos.slice(6).map((company) => (
+                        <div key={`row2-dup-${company.name}`} className="flex-shrink-0 flex items-center justify-center">
+                          <img
+                            src={company.logo}
+                            alt={`${company.name} logo`}
+                            className="h-8 w-auto object-contain"
+                            onError={(e) => {
+                              const target = e.currentTarget as HTMLImageElement
+                              target.style.display = 'none'
+                            }}
+                          />
+                        </div>
+                      ))}
+                    </div>
+                  </div>
                 </div>
-                <div className="rounded-xl bg-white p-3 shadow-sm ring-1 ring-slate-100 transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
-                  <div className="text-[10px] text-slate-500">Top Recruiters</div>
-                  <div className="mt-1 text-base font-semibold text-slate-900">—</div>
-                </div>
-              </div>
-              <div className="mt-5 h-24 rounded-xl border border-dashed border-slate-200 bg-white/60 p-3 text-center text-[11px] text-slate-500 flex items-center justify-center">
-                Logo grid placeholder for companies like consulting firms, banks, IT, and analytics recruiters.
+
+                <p className="mt-3 text-[11px] text-slate-600">More than 150+ recruiters engaged yearly</p>
               </div>
             </div>
           </div>
@@ -747,28 +979,54 @@ export function PgdmPlusLandingPage(): React.JSX.Element {
             </div>
             <p className="text-[11px] text-slate-500">Academic rigour blended with vibrant campus culture.</p>
           </div>
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3">
-            {[
-              { title: 'Leadership clubs & student committees', icon: 'groups' },
-              { title: 'Corporate events, guest lectures & conclaves', icon: 'event' },
-              { title: 'Cultural fests & management competitions', icon: 'theater_comedy' },
-              { title: 'Research, case studies & live projects', icon: 'menu_book' },
-              { title: 'Modern digital learning spaces & labs', icon: 'computer' },
-              { title: 'Soft skills & communication training sessions', icon: 'record_voice_over' },
-            ].map((item) => (
-              <div
-                key={item.title}
-                className="group relative overflow-hidden rounded-2xl bg-white p-4 text-sm text-slate-700 shadow-sm ring-1 ring-slate-100 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
+          <div className="relative">
+            <div
+              ref={lifeTrackRef}
+              className="grid grid-flow-col auto-cols-[85%] sm:auto-cols-[45%] md:auto-cols-[30%] gap-4 overflow-x-auto snap-x snap-mandatory sm:grid-flow-row sm:overflow-visible sm:grid-cols-3"
+            >
+              {lifeSlides.map((slide, idx) => (
+                <div key={idx} className="snap-start relative aspect-[16/10] rounded-2xl overflow-hidden ring-1 ring-slate-200 shadow-sm">
+                  <img
+                    src={slide.src}
+                    alt={slide.title}
+                    className="absolute inset-0 h-full w-full object-cover"
+                    onError={(e) => {
+                      const target = e.currentTarget as HTMLImageElement
+                      target.src = '/uploads/logos/IMAS_LOGO_PNG.png'
+                    }}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                  <div className="absolute bottom-0 left-0 right-0 p-3">
+                    <div className="inline-flex items-center gap-2 rounded-full bg-black/50 px-3 py-1 text-white">
+                      {React.createElement(slide.icon, { className: 'h-4 w-4 text-white' })}
+                      <span className="text-xs sm:text-sm font-medium">{slide.title}</span>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="mt-3 flex justify-center gap-2 sm:hidden">
+              <Button
+                variant="outline"
+                className="h-8 w-8 rounded-full border-slate-300"
+                onClick={() => {
+                  const el = lifeTrackRef.current
+                  if (el) el.scrollBy({ left: -el.clientWidth * 0.8, behavior: 'smooth' })
+                }}
               >
-                <div className="mb-2 inline-flex h-8 w-8 items-center justify-center rounded-full bg-slate-50">
-                  <span className="material-symbols-outlined text-[20px] text-slate-800">{item.icon}</span>
-                </div>
-                <p>{item.title}</p>
-                <div className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-200 group-hover:opacity-100">
-                  <div className="absolute bottom-0 right-0 h-16 w-20 bg-gradient-to-tl from-[#26c1d3]/20 to-transparent" />
-                </div>
-              </div>
-            ))}
+                <ChevronDown className="h-4 w-4 rotate-90" />
+              </Button>
+              <Button
+                variant="outline"
+                className="h-8 w-8 rounded-full border-slate-300"
+                onClick={() => {
+                  const el = lifeTrackRef.current
+                  if (el) el.scrollBy({ left: el.clientWidth * 0.8, behavior: 'smooth' })
+                }}
+              >
+                <ChevronDown className="h-4 w-4 -rotate-90" />
+              </Button>
+            </div>
           </div>
           <p className="mt-4 text-xs text-slate-600">Full-time management programmes at IMAS combine academic foundations, global exposure, and strong placement support to prepare students for success in India and beyond.</p>
         </div>
@@ -797,7 +1055,7 @@ export function PgdmPlusLandingPage(): React.JSX.Element {
               </div>
           <p className="mt-2 text-xs text-slate-700 sm:text-sm">Take the next step towards a high-impact management career with the IMAS PGDM Plus programme. Complete your application, download the brochure, or schedule a campus visit.</p>
               <div className="mt-4 flex flex-wrap gap-3">
-                <Button onClick={() => window.open('https://admission.imas.ac.in/', '_blank')} className="rounded-full bg-[#26c1d3] px-5 py-2.5 text-sm font-semibold text-white shadow-md hover:bg-[#2e7bb3]">Apply Online</Button>
+                <Button onClick={() => window.open('https://admission.imas.ac.in/', '_blank')} className="rounded-full bg-gradient-to-r from-teal-500 to-blue-600 hover:from-teal-600 hover:to-blue-700 px-5 py-2.5 text-sm font-semibold text-white shadow-md ">Apply Online</Button>
                 <Button onClick={onDownload} variant="outline" className="inline-flex items-center gap-1 rounded-full border border-[#26c1d3] px-5 py-2.5 text-sm font-semibold text-[#2e7bb3] hover:bg-[#26c1d3]/10"><Download className="h-4 w-4" />Download Brochure</Button>
                 <Button onClick={() => window.open('/campus-tour', '_blank')} variant="outline" className="inline-flex items-center gap-1 rounded-full border border-slate-300 px-5 py-2.5 text-sm font-semibold text-slate-800 hover:bg-slate-50"><ExternalLink className="h-4 w-4" />Schedule Campus Visit</Button>
               </div>

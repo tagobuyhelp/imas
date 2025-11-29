@@ -181,6 +181,10 @@ img[src*="imas_hero_image1.webp"] {
   animation: scroll-left 15s linear infinite;
 }
 
+.animate-scroll-right {
+  animation: scroll-left 15s linear infinite reverse;
+}
+
 .animate-float {
   animation: float 3s ease-in-out infinite;
 }
