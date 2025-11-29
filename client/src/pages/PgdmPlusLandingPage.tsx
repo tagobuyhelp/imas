@@ -758,7 +758,7 @@ export function PgdmPlusLandingPage(): React.JSX.Element {
 
                 <Button onClick={onDownload} className="mt-6 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-sky-600 to-blue-700 px-5 py-2.5 text-sm font-semibold text-white shadow-md hover:from-sky-500 hover:to-blue-600">
                   <span className="material-symbols-outlined text-[18px]">description</span>
-                  Download Detailed Program Brochure
+                  Download  Program Brochure
                   <ArrowRight className="h-4 w-4" />
                 </Button>
               </div>
