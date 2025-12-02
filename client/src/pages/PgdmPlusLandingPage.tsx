@@ -772,7 +772,7 @@ export function PgdmPlusLandingPage(): React.JSX.Element {
                   </div>
                   <div className="relative overflow-hidden rounded-2xl ring-1 ring-slate-200 bg-white p-4 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
                     <div className="text-[11px] font-semibold uppercase tracking-wide text-slate-800">Learning Environment</div>
-                    <div className="relative mt-3 h-28 w-full overflow-hidden rounded-xl">
+                    <div className="relative mt-3 h-40 w-full overflow-hidden rounded-xl">
                       <img
                         src={'/uploads/imas_hero_image1.webp'}
                         alt={'Business classroom environment'}
