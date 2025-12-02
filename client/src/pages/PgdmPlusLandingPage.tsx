@@ -68,12 +68,13 @@ export function PgdmPlusLandingPage(): React.JSX.Element {
   }, [])
 
   const lifeSlides = [
-    { src: '/uploads/campus_photos/IMG_8110.JPG', title: 'Leadership clubs & student committees', icon: Users },
-    { src: '/uploads/TDK_Industries_exposure_for_PGDM_students.jpeg', title: 'Corporate events, guest lectures & conclaves', icon: Briefcase },
-    { src: '/uploads/abt-img.jpg', title: 'Cultural fests & management competitions', icon: Trophy },
-    { src: '/uploads/pgdm-iev.jpg', title: 'Research, case studies & live projects', icon: BookOpen },
-    { src: '/uploads/PGDM_Plus_in_Marketing_Management.png', title: 'Modern digital learning spaces & labs', icon: Layers },
-    { src: '/uploads/imas_hero_image_2.webp', title: 'Soft skills & communication training sessions', icon: GraduationCap },
+    { src: '/uploads/pgdm_plus/1.png', title: 'Leadership clubs & student committees', icon: Users },
+    { src: '/uploads/pgdm_plus/2.png', title: 'Corporate events, guest lectures & conclaves', icon: Briefcase },
+    { src: '/uploads/pgdm_plus/3.png', title: 'Cultural fests & management competitions', icon: Trophy },
+    { src: '/uploads/pgdm_plus/4.png', title: 'Research, case studies & live projects', icon: BookOpen },
+    { src: '/uploads/pgdm_plus/5.png', title: 'Modern digital learning spaces & labs', icon: Layers },
+    { src: '/uploads/pgdm_plus/6.png', title: 'Soft skills & communication training sessions', icon: GraduationCap },
+    { src: '/uploads/pgdm_plus/7.png', title: 'Industry exposure & real-world projects', icon: Briefcase },
   ]
   const placementLogos = [
     { name: 'BainCapital', logo: '/uploads/bcpe_logo.png' },
@@ -90,10 +91,13 @@ export function PgdmPlusLandingPage(): React.JSX.Element {
     { name: 'Ola', logo: '/uploads/Ola_Cabs_logo.svg' },
   ]
   const campusImages = [
-    '/uploads/campus_photos/imas_campus.png',
-    '/uploads/campus_photos/IMG_8110.JPG',
-    '/uploads/campus_photos/IMG_8115.JPG',
-    '/uploads/campus_photos/DSC_2802.jpg',
+    '/uploads/pgdm_plus/1.png',
+    '/uploads/pgdm_plus/2.png',
+    '/uploads/pgdm_plus/3.png',
+    '/uploads/pgdm_plus/4.png',
+    '/uploads/pgdm_plus/5.png',
+    '/uploads/pgdm_plus/6.png',
+    '/uploads/pgdm_plus/7.png',
   ]
   const [campusIndex, setCampusIndex] = React.useState(0)
   React.useEffect(() => {
@@ -312,7 +316,7 @@ export function PgdmPlusLandingPage(): React.JSX.Element {
                 <span className="ml-2 text-[10px] sm:text-[11px] text-gray-200/95">4.9/5 Student Rating</span>
               </div>
             </div>
-            <p className="max-w-xl hidden sm:block text-xs leading-snug text-gray-200 sm:text-sm">IMAS Kolkata, one of the best MBA colleges in Kolkata 2026, guides the new generation to become proficient corporate leaders by providing an AICTE-approved full-time MBA/PGDM – PGDM Plus programme designed to enhance their potential.</p>
+            <p className="max-w-xl hidden sm:block text-xs leading-snug text-gray-200 sm:text-sm">IMAS Kolkata, one of the best business schools in Kolkata, guides the new generation to become proficient corporate leaders by offering an AICTE-approved full-time MBA/PGDM – PGDM Plus programme designed to enhance their potential.</p>
             <div className="relative overflow-hidden">
               <div ref={marqueeRef} className="scroller" data-speed="fast" data-direction="left">
                 <div className="scroller__inner whitespace-nowrap text-xs font-medium text-white">
@@ -323,8 +327,8 @@ export function PgdmPlusLandingPage(): React.JSX.Element {
               </div>
             </div>
             <div className="flex flex-wrap items-center gap-2 sm:gap-3 pt-2">
-              <Button onClick={() => window.open('https://admission.imas.ac.in/', '_blank')} className="group rounded-full bg-gradient-to-r from-teal-500 to-blue-600 hover:from-teal-600 hover:to-blue-700 px-4 py-2 text-xs sm:text-sm sm:px-5 sm:py-2.5 font-semibold text-white shadow-md transition-all duration-300 hover:scale-105 hover:shadow-teal-500/25 active:scale-95">
-                Apply Now
+              <Button onClick={applyNow} className="group rounded-full bg-gradient-to-r from-teal-500 to-blue-600 hover:from-teal-600 hover:to-blue-700 px-4 py-2 text-xs sm:text-sm sm:px-5 sm:py-2.5 font-semibold text-white shadow-md transition-all duration-300 hover:scale-105 hover:shadow-teal-500/25 active:scale-95">
+                Inquire Now
                 <ExternalLink className="ml-2 h-4 w-4 text-white opacity-80 group-hover:translate-x-0.5 transition-transform" />
               </Button>
               <Button onClick={onDownload} variant="outline" className="group rounded-full bg-transparent border-2 border-white/30 px-4 py-2 text-xs sm:text-sm sm:px-5 sm:py-2.5 font-semibold text-white transition-all duration-300 hover:bg-white/10 hover:scale-105 active:scale-95">
@@ -351,42 +355,18 @@ export function PgdmPlusLandingPage(): React.JSX.Element {
               </div>
             </div>
           </div>
-          <div className="md:hidden">
-            <details className="group rounded-2xl bg-white/95 p-4 shadow-xl ring-1 ring-slate-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
-              <summary className="flex items-center justify-between cursor-pointer">
-                <span className="flex items-center gap-2 text-lg font-semibold text-slate-900">
-                  <Mail className="h-5 w-5 text-[#2e7bb3]" />
-                  <span className='text-[14px] md:text-[16px]'>Get Detailed Program Information</span>
-                </span>
-                <ChevronDown className="h-5 w-5 text-slate-600 transition-transform group-open:rotate-180" />
-              </summary>
-              <p className="mt-2 text-xs text-slate-600">Fill in your details to receive the brochure and personalised counselling from the IMAS admissions team.</p>
-              <form className="mt-4 space-y-3 text-xs">
-                <div className="space-y-1"><label className="block font-medium text-slate-700">Full Name</label><input type="text" className="w-full rounded-lg border border-slate-200 px-3 py-2 text-sm outline-none focus:border-[#2e7bb3] focus:ring-1 focus:ring-[#2e7bb3]" placeholder="Enter your full name" /></div>
-                <div className="grid gap-3 md:grid-cols-2"><div className="space-y-1"><label className="block font-medium text-slate-700">Mobile Number</label><input type="tel" className="w-full rounded-lg border border-slate-200 px-3 py-2 text-sm outline-none focus:border-[#2e7bb3] focus:ring-1 focus:ring-[#2e7bb3]" placeholder="10-digit mobile" /></div><div className="space-y-1"><label className="block font-medium text-slate-700">Email</label><input type="email" className="w-full rounded-lg border border-slate-200 px-3 py-2 text-sm outline-none focus:border-[#2e7bb3] focus:ring-1 focus:ring-[#2e7bb3]" placeholder="you@example.com" /></div></div>
-                <div className="grid gap-3 md:grid-cols-2"><div className="space-y-1"><label className="block font-medium text-slate-700">City</label><input type="text" className="w-full rounded-lg border border-slate-200 px-3 py-2 text-sm outline-none focus:border-[#2e7bb3] focus:ring-1 focus:ring-[#2e7bb3]" placeholder="Your city" /></div><div className="space-y-1"><label className="block font-medium text-slate-700">Qualification</label><select className="w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm outline-none focus:border-[#2e7bb3] focus:ring-1 focus:ring-[#2e7bb3]"><option value="">Select</option><option>Final Year Undergraduate</option><option>Graduate</option><option>Working Professional</option></select></div></div>
-                <div className="grid gap-3 md:grid-cols-2"><div className="space-y-1"><label className="block font-medium text-slate-700">Year of Graduation</label><select className="w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm outline-none focus:border-[#2e7bb3] focus:ring-1 focus:ring-[#2e7bb3]"><option value="">Select year</option><option>2026</option><option>2025</option><option>2024</option><option>2023</option><option>2022 & Earlier</option></select></div><div className="space-y-1"><label className="block font-medium text-slate-700">Preferred Specialisation</label><select className="w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm outline-none focus:border-[#2e7bb3] focus:ring-1 focus:ring-[#2e7bb3]"><option value="">Select</option><option>Marketing Management</option><option>Financial Management</option><option>Human Resource Management</option><option>Business Analytics</option><option>Artificial Intelligence & Data Science</option><option>FinTech</option><option>Hospital & Healthcare Management</option><option>Innovation, Entrepreneurship & Venture Development (IEV)</option></select></div></div>
-                <div className="flex items-start gap-2 pt-1"><input type="checkbox" className="mt-1 h-3.5 w-3.5 rounded border-slate-300" /><p className="text-[11px] text-slate-500">By submitting this form, I agree to be contacted by IMAS via phone, email, or SMS.</p></div>
-                <div className="flex gap-2 pt-2"><Button onClick={onDownload} className="bg-[#26c1d3] text-white px-4 py-2 text-sm font-semibold">Get Brochure</Button><Button onClick={applyNow} variant="outline" className="border border-slate-300 px-4 py-2 text-sm">Enquire Now</Button></div>
-              </form>
-            </details>
-          </div>
-
           
-        
-        
-          <div className="hidden md:block md:col-span-4 w-full rounded-2xl bg-white/95 p-5 shadow-xl ring-1 ring-slate-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
-            <h2 className="flex items-center gap-2 text-lg font-semibold text-slate-900"><Mail className="h-5 w-5 text-[#2e7bb3]" /><span>Gett Detailed Program Information</span></h2>
-            <p className="mt-1 text-xs text-slate-600">Fill in your details to receive the brochure and personalised counselling from the IMAS admissions team.</p>
-            <form className="mt-4 space-y-3 text-xs">
-              <div className="space-y-1"><label className="block font-medium text-slate-700">Full Name</label><input type="text" className="w-full rounded-lg border border-slate-200 px-3 py-2 text-sm outline-none focus:border-[#2e7bb3] focus:ring-1 focus:ring-[#2e7bb3]" placeholder="Enter your full name" /></div>
-              <div className="grid gap-3 md:grid-cols-2"><div className="space-y-1"><label className="block font-medium text-slate-700">Mobile Number</label><input type="tel" className="w-full rounded-lg border border-slate-200 px-3 py-2 text-sm outline-none focus:border-[#2e7bb3] focus:ring-1 focus:ring-[#2e7bb3]" placeholder="10-digit mobile" /></div><div className="space-y-1"><label className="block font-medium text-slate-700">Email</label><input type="email" className="w-full rounded-lg border border-slate-200 px-3 py-2 text-sm outline-none focus:border-[#2e7bb3] focus:ring-1 focus:ring-[#2e7bb3]" placeholder="you@example.com" /></div></div>
-              <div className="grid gap-3 md:grid-cols-2"><div className="space-y-1"><label className="block font-medium text-slate-700">City</label><input type="text" className="w-full rounded-lg border border-slate-200 px-3 py-2 text-sm outline-none focus:border-[#2e7bb3] focus:ring-1 focus:ring-[#2e7bb3]" placeholder="Your city" /></div><div className="space-y-1"><label className="block font-medium text-slate-700">Qualification</label><select className="w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm outline-none focus:border-[#2e7bb3] focus:ring-1 focus:ring-[#2e7bb3]"><option value="">Select</option><option>Final Year Undergraduate</option><option>Graduate</option><option>Working Professional</option></select></div></div>
-              <div className="grid gap-3 md:grid-cols-2"><div className="space-y-1"><label className="block font-medium text-slate-700">Year of Graduation</label><select className="w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm outline-none focus:border-[#2e7bb3] focus:ring-1 focus:ring-[#2e7bb3]"><option value="">Select year</option><option>2026</option><option>2025</option><option>2024</option><option>2023</option><option>2022 & Earlier</option></select></div><div className="space-y-1"><label className="block font-medium text-slate-700">Preferred Specialisation</label><select className="w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm outline-none focus:border-[#2e7bb3] focus:ring-1 focus:ring-[#2e7bb3]"><option value="">Select</option><option>Marketing Management</option><option>Financial Management</option><option>Human Resource Management</option><option>Business Analytics</option><option>Artificial Intelligence & Data Science</option><option>FinTech</option><option>Hospital & Healthcare Management</option><option>Innovation, Entrepreneurship & Venture Development (IEV)</option></select></div></div>
-              <div className="flex items-start gap-2 pt-1"><input type="checkbox" className="mt-1 h-3.5 w-3.5 rounded border-slate-300" /><p className="text-[11px] text-slate-500">By submitting this form, I agree to be contacted by IMAS via phone, email, or SMS.</p></div>
-              <div className="flex gap-2 pt-2"><Button onClick={onDownload} className="bg-[#26c1d3] text-white px-4 py-2 text-sm font-semibold">Get Brochure</Button><Button onClick={applyNow} variant="outline" className="border border-slate-300 px-4 py-2 text-sm">Enquire Now</Button></div>
-            </form>
+
+          <div className=" sm:w-[400px]  h-full  ">
+            <img
+              src="/uploads/pgdm_plus/hero_image.png"
+              alt="PGDM Plus"
+              className='w-full h-full object-cover rounded-xl'
+              onError={(e) => { const t = e.currentTarget as HTMLImageElement; t.style.display = 'none' }}
+            />
           </div>
+        
+        
         </div>
 
       </section>
@@ -767,9 +747,9 @@ export function PgdmPlusLandingPage(): React.JSX.Element {
                 <div className="space-y-4">
                   <div className="relative overflow-hidden rounded-2xl ring-1 ring-slate-200 bg-gradient-to-br from-[#143674] to-[#2e7bb3] p-4 text-white transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
                     <div className="text-[11px] font-semibold uppercase tracking-wide">Corporate Training</div>
-                    <div className="relative mt-3 h-28 w-full overflow-hidden rounded-xl">
+                    <div className="relative mt-3 h-40 sm:h-60 w-full overflow-hidden rounded-xl">
                       <img
-                        src={'/uploads/IMASBUILDING.jpeg'}
+                        src={'/uploads/campus_photos/imas_campus.png'}
                         alt={'Corporate training workshop'}
                         className="absolute inset-0 h-full w-full object-cover opacity-70"
                         onError={(e) => { const t = e.currentTarget as HTMLImageElement; t.src = '/uploads/logos/IMAS_LOGO_PNG.png' }}
@@ -1147,8 +1127,8 @@ export function PgdmPlusLandingPage(): React.JSX.Element {
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
                   <div className="absolute bottom-0 left-0 right-0 p-3">
                     <div className="inline-flex items-center gap-2 rounded-full bg-black/50 px-3 py-1 text-white">
-                      {React.createElement(slide.icon, { className: 'h-4 w-4 text-white' })}
-                      <span className="text-xs sm:text-sm font-medium">{slide.title}</span>
+                      
+                      
                     </div>
                   </div>
                 </div>
