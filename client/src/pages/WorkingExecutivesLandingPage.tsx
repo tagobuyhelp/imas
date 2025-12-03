@@ -153,14 +153,50 @@ export function WorkingExecutivesLandingPage(): React.JSX.Element {
             />
           </div>
           <nav className="hidden items-center gap-6 text-sm text-slate-300 md:flex">
-            <a href="#about-imas" className="flex items-center gap-1 hover:text-[#2e7bb3] transition-colors duration-200"><BookOpen className="h-4 w-4" /><span>Program Overview</span></a>
-            <a href="#specialisations" className="flex items-center gap-1 hover:text-[#2e7bb3] transition-colors duration-200"><Layers className="h-4 w-4" /><span>Specialisations</span></a>
-            <a href="#international-immersion" className="flex items-center gap-1 hover:text-[#2e7bb3] transition-colors duration-200"><Globe className="h-4 w-4" /><span>International Immersion</span></a>
-            <a href="#placements" className="flex items-center gap-1 hover:text-[#2e7bb3] transition-colors duration-200"><Briefcase className="h-4 w-4" /><span>Placements</span></a>
-            <a href="#life-at-imas" className="flex items-center gap-1 hover:text-[#2e7bb3] transition-colors duration-200"><Users className="h-4 w-4" /><span>Life at IMAS</span></a>
-            <a href="#admissions-2026" className="flex items-center gap-1 hover:text-[#2e7bb3] transition-colors duration-200"><CheckCircle className="h-4 w-4" /><span>Admissions 2026</span></a>
-            <Button onClick={() => window.open('https://admission.imas.ac.in/', '_blank')} className="px-4 py-2 text-sm font-semibold text-white shadow-md bg-gradient-to-r from-teal-500 to-blue-600 hover:from-teal-600 hover:to-blue-700">Apply Now</Button>
-          </nav>
+  <a href="#about-imas" className="flex items-center gap-1 hover:text-[#2e7bb3] transition-colors duration-200">
+    <span className="material-symbols-outlined text-[18px]">menu_book</span>
+    <span>Program Overview</span>
+  </a>
+
+  <a href="#specialisations" className="flex items-center gap-1 hover:text-[#2e7bb3] transition-colors duration-200">
+    <span className="material-symbols-outlined text-[18px]">layers</span>
+    <span>Specialisations</span>
+  </a>
+
+  {/* Highlight CTA Item */}
+  <a
+    href="#eligibility"
+    className="inline-flex items-center gap-2 rounded-full bg-slate-100 border border-slate-200 px-3 py-1 text-sm font-semibold hover:bg-sky-600 text-black hover:text-white hover:border-transparent transition-all"
+  >
+    <span className="flex h-6 w-6 items-center justify-center rounded-full bg-gradient-to-r from-sky-500 to-blue-700 text-white">
+      <span className="material-symbols-outlined text-[16px]">checklist</span>
+    </span>
+    Eligibility
+  </a>
+
+  <a href="#placements" className="flex items-center gap-1 hover:text-[#2e7bb3] transition-colors duration-200">
+    <span className="material-symbols-outlined text-[18px]">work</span>
+    <span>Placements</span>
+  </a>
+
+  <a href="#life-at-imas" className="flex items-center gap-1 hover:text-[#2e7bb3] transition-colors duration-200">
+    <span className="material-symbols-outlined text-[18px]">groups</span>
+    <span>Life at IMAS</span>
+  </a>
+
+  <a href="#admissions-2026" className="flex items-center gap-1 hover:text-[#2e7bb3] transition-colors duration-200">
+    <span className="material-symbols-outlined text-[18px]">check_circle</span>
+    <span>Admissions 2026</span>
+  </a>
+
+  <Button
+    onClick={() => window.open('https://admission.imas.ac.in/', '_blank')}
+    className="ml-2 px-5 py-2 text-sm font-semibold text-white shadow-lg rounded-full bg-gradient-to-r from-teal-500 to-blue-600 hover:from-teal-600 hover:to-blue-700"
+  >
+    Apply Now
+  </Button>
+</nav>
+
           <button className="inline-flex h-9 w-9  items-center justify-center  rounded-md border border-slate-200 transition-colors duration-200 hover:bg-slate-100 md:hidden" onClick={() => setMobileMenuOpen(true)}>
             <span className="sr-only">Open menu</span>
             <div className="h-4 w-4 space-y-1">
@@ -203,46 +239,82 @@ export function WorkingExecutivesLandingPage(): React.JSX.Element {
           </div>
 
           {/* Navigation */}
-          <nav className="flex-1 p-6 overflow-y-auto">
-            <ul className="space-y-2">
-              <li>
-                <a href="#about-imas" onClick={() => setMobileMenuOpen(false)} className="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-left text-gray-700 hover:text-[#2e7bb3] hover:bg-slate-50 transition-colors">
-                  <BookOpen className="h-5 w-5" />
-                  <span className="font-medium">Program Overview</span>
-                </a>
-              </li>
-              <li>
-                <a href="#specialisations" onClick={() => setMobileMenuOpen(false)} className="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-left text-gray-700 hover:text-[#2e7bb3] hover:bg-slate-50 transition-colors">
-                  <Layers className="h-5 w-5" />
-                  <span className="font-medium">Specialisations</span>
-                </a>
-              </li>
-              <li>
-                <a href="#international-immersion" onClick={() => setMobileMenuOpen(false)} className="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-left text-gray-700 hover:text-[#2e7bb3] hover:bg-slate-50 transition-colors">
-                  <Globe className="h-5 w-5" />
-                  <span className="font-medium">International Immersion</span>
-                </a>
-              </li>
-              <li>
-                <a href="#placements" onClick={() => setMobileMenuOpen(false)} className="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-left text-gray-700 hover:text-[#2e7bb3] hover:bg-slate-50 transition-colors">
-                  <Briefcase className="h-5 w-5" />
-                  <span className="font-medium">Placements</span>
-                </a>
-              </li>
-              <li>
-                <a href="#life-at-imas" onClick={() => setMobileMenuOpen(false)} className="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-left text-gray-700 hover:text-[#2e7bb3] hover:bg-slate-50 transition-colors">
-                  <Users className="h-5 w-5" />
-                  <span className="font-medium">Life at IMAS</span>
-                </a>
-              </li>
-              <li>
-                <a href="#admissions-2026" onClick={() => setMobileMenuOpen(false)} className="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-left text-gray-700 hover:text-[#2e7bb3] hover:bg-slate-50 transition-colors">
-                  <CheckCircle className="h-5 w-5" />
-                  <span className="font-medium">Admissions 2026</span>
-                </a>
-              </li>
-            </ul>
-          </nav>
+          {/* Navigation */}
+<nav className="flex-1 p-6 overflow-y-auto">
+  <ul className="space-y-2">
+    <li>
+      <a
+        href="#about-imas"
+        onClick={() => setMobileMenuOpen(false)}
+        className="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-left text-gray-700 hover:text-[#2e7bb3] hover:bg-slate-50 transition-colors"
+      >
+        <BookOpen className="h-5 w-5" />
+        <span className="font-medium">Program Overview</span>
+      </a>
+    </li>
+
+    <li>
+      <a
+        href="#specialisations"
+        onClick={() => setMobileMenuOpen(false)}
+        className="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-left text-gray-700 hover:text-[#2e7bb3] hover:bg-slate-50 transition-colors"
+      >
+        <Layers className="h-5 w-5" />
+        <span className="font-medium">Specialisations</span>
+      </a>
+    </li>
+
+    {/* Eligibility – highlighted CTA-style item */}
+    <li>
+      <a
+        href="#eligibility"
+        onClick={() => setMobileMenuOpen(false)}
+        className="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-left text-gray-800 bg-slate-100 border border-slate-200 hover:bg-sky-600 hover:text-white hover:border-transparent transition-all"
+      >
+        <span className="flex h-6 w-6 items-center justify-center rounded-full bg-gradient-to-r from-sky-500 to-blue-700 text-white">
+          <span className="material-symbols-outlined text-[16px]">checklist</span>
+        </span>
+        <span className="font-semibold">Eligibility</span>
+      </a>
+    </li>
+
+    
+
+    <li>
+      <a
+        href="#placements"
+        onClick={() => setMobileMenuOpen(false)}
+        className="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-left text-gray-700 hover:text-[#2e7bb3] hover:bg-slate-50 transition-colors"
+      >
+        <Briefcase className="h-5 w-5" />
+        <span className="font-medium">Placements</span>
+      </a>
+    </li>
+
+    <li>
+      <a
+        href="#life-at-imas"
+        onClick={() => setMobileMenuOpen(false)}
+        className="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-left text-gray-700 hover:text-[#2e7bb3] hover:bg-slate-50 transition-colors"
+      >
+        <Users className="h-5 w-5" />
+        <span className="font-medium">Life at IMAS</span>
+      </a>
+    </li>
+
+    <li>
+      <a
+        href="#admissions-2026"
+        onClick={() => setMobileMenuOpen(false)}
+        className="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-left text-gray-700 hover:text-[#2e7bb3] hover:bg-slate-50 transition-colors"
+      >
+        <CheckCircle className="h-5 w-5" />
+        <span className="font-medium">Admissions 2026</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+
 
           {/* Footer CTAs */}
           <div className="p-6 border-t border-gray-200 space-y-3">
@@ -373,129 +445,127 @@ export function WorkingExecutivesLandingPage(): React.JSX.Element {
 
 
       <section id="about-imas" className="border-b border-slate-200 bg-slate-50">
-  <div
-    data-animate-on-scroll
-    className="mx-auto max-w-[1550px] py-8 transition-all duration-700 ease-out"
-  >
-    <div className="relative overflow-hidden rounded-xl bg-white/95 ring-1 ring-white/20 p-5 sm:p-6 md:p-8">
-      <div className="pointer-events-none absolute inset-0">
-        <div className="absolute inset-0 mesh-grid" />
-      </div>
-      <div className="grid gap-6 md:grid-cols-2 md:gap-8">
-        <div className="space-y-4">
-          <div>
-            <div className="flex items-center gap-3 mb-3">
-              <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-r from-sky-500 to-blue-700">
-                <GraduationCap className="h-5 w-5 text-white" />
-              </span>
-              <h2 className="text-xl sm:text-2xl font-bold font-sans bg-gradient-to-r from-slate-900 to-sky-700 bg-clip-text text-transparent">
-                MBA/PGDM Programme Overview
-              </h2>
+        <div
+          data-animate-on-scroll
+          className="mx-auto max-w-[1550px] py-8 transition-all duration-700 ease-out"
+        >
+          <div className="relative overflow-hidden rounded-xl bg-white/95 ring-1 ring-white/20 p-5 sm:p-6 md:p-8">
+            <div className="pointer-events-none absolute inset-0">
+              <div className="absolute inset-0 mesh-grid" />
             </div>
-            <div className="h-1 w-32 rounded-full bg-gradient-to-r from-cyan-400 to-sky-600 mb-4" />
-            <p className="text-sm sm:text-base leading-relaxed text-slate-700">
-              Flexible program designed for working professionals to build leadership, management skills, and
-              industry-ready expertise while continuing their careers.
-            </p>
-          </div>
+            <div className="grid gap-6 md:grid-cols-2 md:gap-8">
+              <div className="space-y-4">
+                <div>
+                  <div className="flex items-center gap-3 mb-3">
+                    <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-r from-sky-500 to-blue-700">
+                      <GraduationCap className="h-5 w-5 text-white" />
+                    </span>
+                    <h2 className="text-xl sm:text-2xl font-bold font-sans bg-gradient-to-r from-slate-900 to-sky-700 bg-clip-text text-transparent">
+                      MBA/PGDM Programme Overview
+                    </h2>
+                  </div>
+                  <div className="h-1 w-32 rounded-full bg-gradient-to-r from-cyan-400 to-sky-600 mb-4" />
+                  <p className="text-sm sm:text-base leading-relaxed text-slate-700">
+                    Flexible program designed for working professionals to build leadership, management skills, and
+                    industry-ready expertise while continuing their careers.
+                  </p>
+                </div>
 
-          <div>
-            <p className="text-sm sm:text-base leading-relaxed text-slate-800 mb-5">
-              MBA/PGDM for working professionals with a flexible schedule designed to build leadership qualities,
-              management skills, and industry-relevant expertise while balancing career and education.
-            </p>
-          </div>
+                <div>
+                  <p className="text-sm sm:text-base leading-relaxed text-slate-800 mb-5">
+                    MBA/PGDM for working professionals with a flexible schedule designed to build leadership qualities,
+                    management skills, and industry-relevant expertise while balancing career and education.
+                  </p>
+                </div>
 
-          {/* Feature Chips */}
-          <div className="flex flex-wrap items-center gap-3">
-            {[
-              { icon: 'groups', label: 'Learn from Industry Professionals' },
-              { icon: 'psychology', label: 'Expert Mentors' },
-              { icon: 'workspace_premium', label: 'Gain Certifications' },
-            ].map((chip) => (
-              <button
-                key={chip.label}
-                className="group rounded-full bg-slate-100 border border-slate-200 px-4 py-2 inline-flex items-center gap-2 font-medium text-sm hover:bg-gradient-to-r hover:from-sky-600 hover:to-blue-700 hover:text-white hover:border-transparent transition-all duration-300 cursor-pointer"
-              >
-                <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-gradient-to-r from-sky-500 to-blue-700 text-white group-hover:bg-white/20 group-hover:text-white">
-                  <span className="material-symbols-outlined text-[18px]">{chip.icon}</span>
-                </span>
-                <span>{chip.label}</span>
-              </button>
-            ))}
-          </div>
+                {/* Feature Chips */}
+                <div className="flex flex-wrap items-center gap-3">
+                  {[
+                    { icon: 'groups', label: 'Learn from Industry Professionals' },
+                    { icon: 'psychology', label: 'Expert Mentors' },
+                    { icon: 'workspace_premium', label: 'Gain Certifications' },
+                  ].map((chip) => (
+                    <button
+                      key={chip.label}
+                      className="group rounded-full bg-slate-100 border border-slate-200 px-4 py-2 inline-flex items-center gap-2 font-medium text-sm hover:bg-gradient-to-r hover:from-sky-600 hover:to-blue-700 hover:text-white hover:border-transparent transition-all duration-300 cursor-pointer"
+                    >
+                      <span className="inline-flex h-7 w-7 items-center justify-center rounded-full bg-gradient-to-r from-sky-500 to-blue-700 text-white group-hover:bg-white/20 group-hover:text-white">
+                        <span className="material-symbols-outlined text-[18px]">{chip.icon}</span>
+                      </span>
+                      <span>{chip.label}</span>
+                    </button>
+                  ))}
+                </div>
 
-          {/* Optional Quote Overlay */}
-          <div className="pt-4 flex flex-wrap items-center gap-2 text-xs text-slate-500">
-            <span className="font-semibold">Leadership</span>
-            <span>•</span>
-            <span className="font-semibold">Growth</span>
-            <span>•</span>
-            <span className="font-semibold">Advancement</span>
-            <span>•</span>
-            <span className="font-semibold">Career Elevation</span>
-          </div>
+                {/* Optional Quote Overlay */}
+                <div className="pt-4 flex flex-wrap items-center gap-2 text-xs text-slate-500">
+                  <span className="font-semibold">Leadership</span>
+                  <span>•</span>
+                  <span className="font-semibold">Growth</span>
+                  <span>•</span>
+                  <span className="font-semibold">Advancement</span>
+                  <span>•</span>
+                  <span className="font-semibold">Career Elevation</span>
+                </div>
 
-          {/* Updated CTAs */}
-          <div className="pt-2 flex flex-wrap items-center gap-3">
-            <Button
-              onClick={onDownload}
-              className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-sky-600 to-blue-700 px-4 py-2 text-xs font-semibold text-white shadow-md hover:from-sky-500 hover:to-blue-600"
-            >
-              Download Programme Brochure
-              <ExternalLink className="h-4 w-4" />
-            </Button>
+                {/* Updated CTAs */}
+                <div className="pt-2 flex flex-wrap items-center gap-3">
+                  <Button
+                    onClick={onDownload}
+                    className="inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-sky-600 to-blue-700 px-4 py-2 text-xs font-semibold text-white shadow-md hover:from-sky-500 hover:to-blue-600"
+                  >
+                    Download Programme Brochure
+                    <ExternalLink className="h-4 w-4" />
+                  </Button>
 
-            <Button
-              type="button"
-              onClick={() => {
-                const telLink = 'tel:+919088822777'
-                window.location.href = telLink
-              }}
-              className="inline-flex items-center gap-2 rounded-full border border-sky-200 bg-white px-4 py-2 text-xs font-semibold text-sky-700 shadow-sm hover:border-sky-400 hover:bg-sky-50"
-            >
-              Speak to Programme Advisor
-              <span className="material-symbols-outlined text-[16px] align-middle">
-                call
-              </span>
-            </Button>
+                  <Button
+                    type="button"
+                    onClick={() => {
+                      const telLink = 'tel:+919088822777'
+                      window.location.href = telLink
+                    }}
+                    className="inline-flex items-center gap-2 rounded-full border border-sky-200 bg-white px-4 py-2 text-xs font-semibold text-sky-700 shadow-sm hover:border-sky-400 hover:bg-sky-50"
+                  >
+                    Speak to Programme Advisor
+                    <span className="material-symbols-outlined text-[16px] align-middle">
+                      call
+                    </span>
+                  </Button>
+                </div>
+              </div>
+
+              <div className="flex items-center justify-center">
+                <div className="relative w-full overflow-hidden rounded-2xl border bg-white shadow-sm ring-1 ring-slate-200 h-48 sm:h-64 md:h-[420px]">
+                  {campusImages.map((src, idx) => (
+                    <img
+                      key={idx}
+                      src={src}
+                      alt="IMAS Kolkata campus building"
+                      className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-700 ${idx === campusIndex ? 'opacity-100' : 'opacity-0'
+                        }`}
+                      onError={(e) => {
+                        const target = e.currentTarget as HTMLImageElement
+                        target.src = '/uploads/logos/IMAS_LOGO_PNG.png'
+                      }}
+                    />
+                  ))}
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+
+                  <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5">
+                    {campusImages.map((_, idx) => (
+                      <span
+                        key={idx}
+                        className={`h-1.5 w-1.5 rounded-full ${idx === campusIndex ? 'bg-white' : 'bg-white/50'
+                          }`}
+                      />
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-
-        <div className="flex items-center justify-center">
-          <div className="relative w-full overflow-hidden rounded-2xl border bg-white shadow-sm ring-1 ring-slate-200 h-48 sm:h-64 md:h-[420px]">
-            {campusImages.map((src, idx) => (
-              <img
-                key={idx}
-                src={src}
-                alt="IMAS Kolkata campus building"
-                className={`absolute inset-0 h-full w-full object-cover transition-opacity duration-700 ${
-                  idx === campusIndex ? 'opacity-100' : 'opacity-0'
-                }`}
-                onError={(e) => {
-                  const target = e.currentTarget as HTMLImageElement
-                  target.src = '/uploads/logos/IMAS_LOGO_PNG.png'
-                }}
-              />
-            ))}
-            <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-
-            <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5">
-              {campusImages.map((_, idx) => (
-                <span
-                  key={idx}
-                  className={`h-1.5 w-1.5 rounded-full ${
-                    idx === campusIndex ? 'bg-white' : 'bg-white/50'
-                  }`}
-                />
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+      </section>
 
       <section id="why-imas" className="border-b border-slate-200 bg-white">
         <div
@@ -850,330 +920,330 @@ export function WorkingExecutivesLandingPage(): React.JSX.Element {
 
 
       <section
-  id="career-growth-support"
-  className="border-b border-slate-200 bg-white"
->
-  <div
-    data-animate-on-scroll
-    className="mx-auto max-w-[1550px] px-4 py-10 transition-all duration-700 ease-out md:py-12"
-  >
-    <div className="relative overflow-hidden rounded-3xl bg-slate-900 text-slate-50 shadow-1xl ring-1 ring-slate-800">
-      {/* Gradient / pattern overlay */}
-      <div className="pointer-events-none absolute inset-0">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(56,189,248,0.16),_transparent_55%),radial-gradient(circle_at_bottom,_rgba(59,130,246,0.22),_transparent_55%)]" />
-      </div>
+        id="career-growth-support"
+        className="border-b border-slate-200 bg-white"
+      >
+        <div
+          data-animate-on-scroll
+          className="mx-auto max-w-[1550px] px-4 py-10 transition-all duration-700 ease-out md:py-12"
+        >
+          <div className="relative overflow-hidden rounded-3xl bg-slate-900 text-slate-50 shadow-1xl ring-1 ring-slate-800">
+            {/* Gradient / pattern overlay */}
+            <div className="pointer-events-none absolute inset-0">
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(56,189,248,0.16),_transparent_55%),radial-gradient(circle_at_bottom,_rgba(59,130,246,0.22),_transparent_55%)]" />
+            </div>
 
-      <div className="relative grid gap-8 p-6 sm:p-8 md:grid-cols-12 md:gap-10 md:p-10">
-        {/* LEFT – text + highlight */}
-        <div className="md:col-span-5 flex flex-col gap-4">
-          <div className="inline-flex items-center gap-2 rounded-full bg-slate-800/70 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-sky-200 ring-1 ring-slate-700">
-            <span className="material-symbols-outlined text-[15px]">
-              trending_up
-            </span>
-            <span>Career Growth & Support</span>
-          </div>
-
-          <h2 className="text-xl font-bold sm:text-2xl">
-            Build secure, long-term career growth while you continue working.
-          </h2>
-
-          <p className="text-sm leading-relaxed text-slate-200">
-            IMAS flexible PGDM for working executives is designed to support
-            your professional journey with{" "}
-            <span className="font-semibold">
-              dedicated placement support, reskilling, networking,
-            </span>{" "}
-            and access to a strong recruiter ecosystem.
-          </p>
-
-          <div className="mt-2 space-y-2 text-xs text-slate-300">
-            <p className="flex items-center gap-2">
-              <span className="material-symbols-outlined text-[16px] text-emerald-400">
-                groups
-              </span>
-              <span>Access to 900+ hiring partners across sectors</span>
-            </p>
-            <p className="flex items-center gap-2">
-              <span className="material-symbols-outlined text-[16px] text-sky-300">
-                workspace_premium
-              </span>
-              <span>Exclusive assistance for executive-level roles</span>
-            </p>
-          </div>
-        </div>
-
-        {/* RIGHT – cards grid */}
-        <div className="md:col-span-7">
-          <div className="grid gap-4 md:grid-cols-2">
-            {[
-              {
-                icon: "diversity_3",
-                label: "Access to 900+ Hiring Partners",
-                desc: "Tap into a curated network of recruiters hiring for mid to senior roles.",
-              },
-              {
-                icon: "workspace_premium",
-                label: "Exclusive Placement Assistance",
-                desc: "Targeted support for working executives exploring new opportunities.",
-              },
-              {
-                icon: "auto_awesome",
-                label: "Reskilling & Career Upgrade Sessions",
-                desc: "Regular workshops to upgrade your skills, profile and career direction.",
-              },
-              {
-                icon: "notifications_active",
-                label: "Frequent Placement Notifications",
-                desc: "Stay updated with new openings relevant to your experience and goals.",
-              },
-              {
-                icon: "event_repeat",
-                label: "Virtual Job Fairs Every 3 Months",
-                desc: "Interact with multiple recruiters and brands in curated hiring events.",
-              },
-              {
-                icon: "support_agent",
-                label: "Industry Mentorship & Communities",
-                desc: "Engage with leaders and peer networks through professional communities.",
-              },
-            ].map((item) => (
-              <div
-                key={item.label}
-                className="group flex gap-3 rounded-2xl bg-slate-900/60 p-3 ring-1 ring-slate-700/80 transition-all duration-300 hover:-translate-y-1 hover:bg-slate-800/80 hover:ring-sky-500/80"
-              >
-                <div className="mt-0.5 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-sky-400 to-emerald-400 text-slate-900 shadow-sm">
-                  <span className="material-symbols-outlined text-[18px]">
-                    {item.icon}
+            <div className="relative grid gap-8 p-6 sm:p-8 md:grid-cols-12 md:gap-10 md:p-10">
+              {/* LEFT – text + highlight */}
+              <div className="md:col-span-5 flex flex-col gap-4">
+                <div className="inline-flex items-center gap-2 rounded-full bg-slate-800/70 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-sky-200 ring-1 ring-slate-700">
+                  <span className="material-symbols-outlined text-[15px]">
+                    trending_up
                   </span>
+                  <span>Career Growth & Support</span>
                 </div>
-                <div className="space-y-0.5">
-                  <p className="text-sm font-semibold text-slate-50">
-                    {item.label}
+
+                <h2 className="text-xl font-bold sm:text-2xl">
+                  Build secure, long-term career growth while you continue working.
+                </h2>
+
+                <p className="text-sm leading-relaxed text-slate-200">
+                  IMAS flexible PGDM for working executives is designed to support
+                  your professional journey with{" "}
+                  <span className="font-semibold">
+                    dedicated placement support, reskilling, networking,
+                  </span>{" "}
+                  and access to a strong recruiter ecosystem.
+                </p>
+
+                <div className="mt-2 space-y-2 text-xs text-slate-300">
+                  <p className="flex items-center gap-2">
+                    <span className="material-symbols-outlined text-[16px] text-emerald-400">
+                      groups
+                    </span>
+                    <span>Access to 900+ hiring partners across sectors</span>
                   </p>
-                  <p className="text-[11px] leading-relaxed text-slate-300">
-                    {item.desc}
+                  <p className="flex items-center gap-2">
+                    <span className="material-symbols-outlined text-[16px] text-sky-300">
+                      workspace_premium
+                    </span>
+                    <span>Exclusive assistance for executive-level roles</span>
                   </p>
                 </div>
               </div>
-            ))}
-          </div>
 
-          <p className="mt-3 text-[11px] text-slate-300">
-            From <span className="font-semibold">mentorship</span> to{" "}
-            <span className="font-semibold">placement touchpoints</span>, the
-            ecosystem is built to support working executives aiming for their
-            next big role.
-          </p>
+              {/* RIGHT – cards grid */}
+              <div className="md:col-span-7">
+                <div className="grid gap-4 md:grid-cols-2">
+                  {[
+                    {
+                      icon: "diversity_3",
+                      label: "Access to 900+ Hiring Partners",
+                      desc: "Tap into a curated network of recruiters hiring for mid to senior roles.",
+                    },
+                    {
+                      icon: "workspace_premium",
+                      label: "Exclusive Placement Assistance",
+                      desc: "Targeted support for working executives exploring new opportunities.",
+                    },
+                    {
+                      icon: "auto_awesome",
+                      label: "Reskilling & Career Upgrade Sessions",
+                      desc: "Regular workshops to upgrade your skills, profile and career direction.",
+                    },
+                    {
+                      icon: "notifications_active",
+                      label: "Frequent Placement Notifications",
+                      desc: "Stay updated with new openings relevant to your experience and goals.",
+                    },
+                    {
+                      icon: "event_repeat",
+                      label: "Virtual Job Fairs Every 3 Months",
+                      desc: "Interact with multiple recruiters and brands in curated hiring events.",
+                    },
+                    {
+                      icon: "support_agent",
+                      label: "Industry Mentorship & Communities",
+                      desc: "Engage with leaders and peer networks through professional communities.",
+                    },
+                  ].map((item) => (
+                    <div
+                      key={item.label}
+                      className="group flex gap-3 rounded-2xl bg-slate-900/60 p-3 ring-1 ring-slate-700/80 transition-all duration-300 hover:-translate-y-1 hover:bg-slate-800/80 hover:ring-sky-500/80"
+                    >
+                      <div className="mt-0.5 flex h-9 w-9 flex-shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-sky-400 to-emerald-400 text-slate-900 shadow-sm">
+                        <span className="material-symbols-outlined text-[18px]">
+                          {item.icon}
+                        </span>
+                      </div>
+                      <div className="space-y-0.5">
+                        <p className="text-sm font-semibold text-slate-50">
+                          {item.label}
+                        </p>
+                        <p className="text-[11px] leading-relaxed text-slate-300">
+                          {item.desc}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                <p className="mt-3 text-[11px] text-slate-300">
+                  From <span className="font-semibold">mentorship</span> to{" "}
+                  <span className="font-semibold">placement touchpoints</span>, the
+                  ecosystem is built to support working executives aiming for their
+                  next big role.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
+      </section>
 
 
       <section
-  id="who-should-apply"
-  className="border-b border-slate-200 bg-slate-50"
->
-  <div
-    data-animate-on-scroll
-    className="mx-auto max-w-[1550px] px-4 py-10 transition-all duration-700 ease-out md:py-12"
-  >
-    <div className="relative overflow-hidden rounded-3xl bg-white/95 p-6 shadow-1xl ring-1 ring-slate-200 backdrop-blur-sm sm:p-8">
-      <div className="pointer-events-none absolute inset-0">
-        <div className="absolute inset-y-0 right-0 w-1/2 bg-gradient-to-l from-sky-50/80 to-transparent" />
-      </div>
+        id="who-should-apply"
+        className="border-b border-slate-200 bg-slate-50"
+      >
+        <div
+          data-animate-on-scroll
+          className="mx-auto max-w-[1550px] px-4 py-10 transition-all duration-700 ease-out md:py-12"
+        >
+          <div className="relative overflow-hidden rounded-3xl bg-white/95 p-6 shadow-1xl ring-1 ring-slate-200 backdrop-blur-sm sm:p-8">
+            <div className="pointer-events-none absolute inset-0">
+              <div className="absolute inset-y-0 right-0 w-1/2 bg-gradient-to-l from-sky-50/80 to-transparent" />
+            </div>
 
-      <div className="relative grid gap-8 md:grid-cols-12 md:gap-10">
-        <div className="md:col-span-4">
-          <div className="inline-flex items-center gap-2 rounded-full bg-sky-50 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-sky-800 ring-1 ring-sky-100">
-            <span className="material-symbols-outlined text-[16px]">
-              badge
-            </span>
-            <span>Who Should Apply?</span>
-          </div>
-          <h2 className="mt-3 text-xl font-bold text-slate-900 sm:text-2xl">
-            Designed for ambitious working professionals & emerging leaders.
-          </h2>
-          <p className="mt-2 text-sm leading-relaxed text-slate-600">
-            This AICTE-approved MBA / PGDM format is best suited for mid-career
-            individuals and early professionals who need{" "}
-            <span className="font-semibold">
-              flexible learning, weekend classes and blended delivery
-            </span>{" "}
-            without pausing their careers.
-          </p>
-        </div>
-
-        <div className="md:col-span-8">
-          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-            {[
-              {
-                icon: "work",
-                label: "Working Professionals",
-                desc: "Full-time employees seeking structured management education.",
-              },
-              {
-                icon: "supervisor_account",
-                label: "Team Leads & Managers",
-                desc: "Professionals managing teams and preparing for larger roles.",
-              },
-              {
-                icon: "trending_up",
-                label: "Promotion Seekers",
-                desc: "Executives preparing for role upgrade or internal promotion.",
-              },
-              {
-                icon: "swap_horiz",
-                label: "Career Switchers",
-                desc: "Those planning to move into management or new domains.",
-              },
-              {
-                icon: "schedule",
-                label: "Need Flexible Learning",
-                desc: "Professionals needing weekend / blended learning formats.",
-              },
-              {
-                icon: "school",
-                label: "Early-Career Graduates",
-                desc: "Fresh graduates with limited experience, targeting fast growth.",
-              },
-            ].map((item) => (
-              <div
-                key={item.label}
-                className="group flex flex-col gap-2 rounded-2xl bg-slate-50 p-3 ring-1 ring-slate-200 transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-md"
-              >
-                <div className="flex items-center gap-2">
-                  <div className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-sky-500 to-blue-700 text-white shadow-sm">
-                    <span className="material-symbols-outlined text-[18px]">
-                      {item.icon}
-                    </span>
-                  </div>
-                  <p className="text-sm font-semibold text-slate-900">
-                    {item.label}
-                  </p>
+            <div className="relative grid gap-8 md:grid-cols-12 md:gap-10">
+              <div className="md:col-span-4">
+                <div className="inline-flex items-center gap-2 rounded-full bg-sky-50 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-sky-800 ring-1 ring-sky-100">
+                  <span className="material-symbols-outlined text-[16px]">
+                    badge
+                  </span>
+                  <span>Who Should Apply?</span>
                 </div>
-                <p className="text-[11px] leading-relaxed text-slate-600">
-                  {item.desc}
+                <h2 className="mt-3 text-xl font-bold text-slate-900 sm:text-2xl">
+                  Designed for ambitious working professionals & emerging leaders.
+                </h2>
+                <p className="mt-2 text-sm leading-relaxed text-slate-600">
+                  This AICTE-approved MBA / PGDM format is best suited for mid-career
+                  individuals and early professionals who need{" "}
+                  <span className="font-semibold">
+                    flexible learning, weekend classes and blended delivery
+                  </span>{" "}
+                  without pausing their careers.
                 </p>
               </div>
-            ))}
-          </div>
 
-          <p className="mt-3 text-[11px] text-slate-500">
-            If you&apos;re looking for an{" "}
-            <span className="font-semibold">
-              MBA / PGDM that fits around your work-life
-            </span>
-            , this format is built for you.
-          </p>
+              <div className="md:col-span-8">
+                <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+                  {[
+                    {
+                      icon: "work",
+                      label: "Working Professionals",
+                      desc: "Full-time employees seeking structured management education.",
+                    },
+                    {
+                      icon: "supervisor_account",
+                      label: "Team Leads & Managers",
+                      desc: "Professionals managing teams and preparing for larger roles.",
+                    },
+                    {
+                      icon: "trending_up",
+                      label: "Promotion Seekers",
+                      desc: "Executives preparing for role upgrade or internal promotion.",
+                    },
+                    {
+                      icon: "swap_horiz",
+                      label: "Career Switchers",
+                      desc: "Those planning to move into management or new domains.",
+                    },
+                    {
+                      icon: "schedule",
+                      label: "Need Flexible Learning",
+                      desc: "Professionals needing weekend / blended learning formats.",
+                    },
+                    {
+                      icon: "school",
+                      label: "Early-Career Graduates",
+                      desc: "Fresh graduates with limited experience, targeting fast growth.",
+                    },
+                  ].map((item) => (
+                    <div
+                      key={item.label}
+                      className="group flex flex-col gap-2 rounded-2xl bg-slate-50 p-3 ring-1 ring-slate-200 transition-all duration-300 hover:-translate-y-1 hover:bg-white hover:shadow-md"
+                    >
+                      <div className="flex items-center gap-2">
+                        <div className="flex h-8 w-8 flex-shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-sky-500 to-blue-700 text-white shadow-sm">
+                          <span className="material-symbols-outlined text-[18px]">
+                            {item.icon}
+                          </span>
+                        </div>
+                        <p className="text-sm font-semibold text-slate-900">
+                          {item.label}
+                        </p>
+                      </div>
+                      <p className="text-[11px] leading-relaxed text-slate-600">
+                        {item.desc}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+
+                <p className="mt-3 text-[11px] text-slate-500">
+                  If you&apos;re looking for an{" "}
+                  <span className="font-semibold">
+                    MBA / PGDM that fits around your work-life
+                  </span>
+                  , this format is built for you.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-  </div>
-</section>
+      </section>
 
       <section id="eligibility" className="border-b border-slate-200 bg-white">
-  <div
-    data-animate-on-scroll
-    className="mx-auto max-w-[1550px] px-4 py-10 transition-all duration-700 ease-out md:py-12"
-  >
-    <div className="relative overflow-hidden rounded-3xl bg-slate-50 p-6 shadow-1xl ring-1 ring-slate-200 sm:p-8">
-      <div className="pointer-events-none absolute inset-0">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(56,189,248,0.12),_transparent_55%)]" />
-      </div>
+        <div
+          data-animate-on-scroll
+          className="mx-auto max-w-[1550px] px-4 py-10 transition-all duration-700 ease-out md:py-12"
+        >
+          <div className="relative overflow-hidden rounded-3xl bg-slate-50 p-6 shadow-1xl ring-1 ring-slate-200 sm:p-8">
+            <div className="pointer-events-none absolute inset-0">
+              <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(56,189,248,0.12),_transparent_55%)]" />
+            </div>
 
-      <div className="relative grid gap-8 md:grid-cols-12 md:gap-10">
-        <div className="md:col-span-4 flex flex-col gap-3">
-          <div className="inline-flex items-center gap-2 rounded-full bg-emerald-50 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-emerald-800 ring-1 ring-emerald-100">
-            <span className="material-symbols-outlined text-[16px]">
-              checklist
-            </span>
-            <span>Eligibility</span>
+            <div className="relative grid gap-8 md:grid-cols-12 md:gap-10">
+              <div className="md:col-span-4 flex flex-col gap-3">
+                <div className="inline-flex items-center gap-2 rounded-full bg-emerald-50 px-3 py-1 text-[11px] font-semibold uppercase tracking-wide text-emerald-800 ring-1 ring-emerald-100">
+                  <span className="material-symbols-outlined text-[16px]">
+                    checklist
+                  </span>
+                  <span>Eligibility</span>
+                </div>
+                <h2 className="text-xl font-bold text-slate-900 sm:text-2xl">
+                  Check if you&apos;re eligible for the Executive PGDM / MBA.
+                </h2>
+                <p className="text-sm leading-relaxed text-slate-600">
+                  The programme is structured for experienced professionals and
+                  graduates who meet the{" "}
+                  <span className="font-semibold">
+                    academic and entrance test criteria
+                  </span>{" "}
+                  for AICTE-approved PGDM / MBA.
+                </p>
+                <p className="text-[11px] text-slate-500">
+                  Accepted exams include{" "}
+                  <span className="font-semibold">
+                    CAT, MAT, WBJEE-MAT and GMAT
+                  </span>
+                  .
+                </p>
+              </div>
+
+              <div className="md:col-span-8">
+                <div className="grid gap-4 sm:grid-cols-3">
+                  <div className="flex flex-col gap-2 rounded-2xl bg-white p-4 ring-1 ring-slate-200 shadow-sm">
+                    <div className="flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br from-sky-500 to-blue-700 text-white shadow-sm">
+                      <span className="material-symbols-outlined text-[18px]">
+                        school
+                      </span>
+                    </div>
+                    <p className="text-sm font-semibold text-slate-900">
+                      Bachelor&apos;s Degree (50%+)
+                    </p>
+                    <p className="text-[11px] leading-relaxed text-slate-600">
+                      A recognised Bachelor&apos;s degree with a minimum of{" "}
+                      <span className="font-semibold">50% aggregate marks</span>.
+                    </p>
+                  </div>
+
+                  <div className="flex flex-col gap-2 rounded-2xl bg-white p-4 ring-1 ring-slate-200 shadow-sm">
+                    <div className="flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br from-emerald-500 to-teal-600 text-white shadow-sm">
+                      <span className="material-symbols-outlined text-[18px]">
+                        assignment_turned_in
+                      </span>
+                    </div>
+                    <p className="text-sm font-semibold text-slate-900">
+                      Valid Entrance Test Score
+                    </p>
+                    <p className="text-[11px] leading-relaxed text-slate-600">
+                      A valid score in{" "}
+                      <span className="font-semibold">
+                        CAT, MAT, WBJEE-MAT or GMAT
+                      </span>{" "}
+                      is required for admission.
+                    </p>
+                  </div>
+
+                  <div className="flex flex-col gap-2 rounded-2xl bg-white p-4 ring-1 ring-slate-200 shadow-sm">
+                    <div className="flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br from-amber-500 to-orange-600 text-white shadow-sm">
+                      <span className="material-symbols-outlined text-[18px]">
+                        work
+                      </span>
+                    </div>
+                    <p className="text-sm font-semibold text-slate-900">
+                      Working / Aspiring Executives
+                    </p>
+                    <p className="text-[11px] leading-relaxed text-slate-600">
+                      Ideal for mid-career professionals and early executives looking
+                      to fast-track their growth.
+                    </p>
+                  </div>
+                </div>
+
+                <p className="mt-3 text-[11px] text-slate-500">
+                  If you meet these criteria, you can apply for the{" "}
+                  <span className="font-semibold">
+                    MBA / PGDM for Working Executives
+                  </span>{" "}
+                  and continue your career while you study.
+                </p>
+              </div>
+            </div>
           </div>
-          <h2 className="text-xl font-bold text-slate-900 sm:text-2xl">
-            Check if you&apos;re eligible for the Executive PGDM / MBA.
-          </h2>
-          <p className="text-sm leading-relaxed text-slate-600">
-            The programme is structured for experienced professionals and
-            graduates who meet the{" "}
-            <span className="font-semibold">
-              academic and entrance test criteria
-            </span>{" "}
-            for AICTE-approved PGDM / MBA.
-          </p>
-          <p className="text-[11px] text-slate-500">
-            Accepted exams include{" "}
-            <span className="font-semibold">
-              CAT, MAT, WBJEE-MAT and GMAT
-            </span>
-            .
-          </p>
         </div>
-
-        <div className="md:col-span-8">
-          <div className="grid gap-4 sm:grid-cols-3">
-            <div className="flex flex-col gap-2 rounded-2xl bg-white p-4 ring-1 ring-slate-200 shadow-sm">
-              <div className="flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br from-sky-500 to-blue-700 text-white shadow-sm">
-                <span className="material-symbols-outlined text-[18px]">
-                  school
-                </span>
-              </div>
-              <p className="text-sm font-semibold text-slate-900">
-                Bachelor&apos;s Degree (50%+)
-              </p>
-              <p className="text-[11px] leading-relaxed text-slate-600">
-                A recognised Bachelor&apos;s degree with a minimum of{" "}
-                <span className="font-semibold">50% aggregate marks</span>.
-              </p>
-            </div>
-
-            <div className="flex flex-col gap-2 rounded-2xl bg-white p-4 ring-1 ring-slate-200 shadow-sm">
-              <div className="flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br from-emerald-500 to-teal-600 text-white shadow-sm">
-                <span className="material-symbols-outlined text-[18px]">
-                  assignment_turned_in
-                </span>
-              </div>
-              <p className="text-sm font-semibold text-slate-900">
-                Valid Entrance Test Score
-              </p>
-              <p className="text-[11px] leading-relaxed text-slate-600">
-                A valid score in{" "}
-                <span className="font-semibold">
-                  CAT, MAT, WBJEE-MAT or GMAT
-                </span>{" "}
-                is required for admission.
-              </p>
-            </div>
-
-            <div className="flex flex-col gap-2 rounded-2xl bg-white p-4 ring-1 ring-slate-200 shadow-sm">
-              <div className="flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-br from-amber-500 to-orange-600 text-white shadow-sm">
-                <span className="material-symbols-outlined text-[18px]">
-                  work
-                </span>
-              </div>
-              <p className="text-sm font-semibold text-slate-900">
-                Working / Aspiring Executives
-              </p>
-              <p className="text-[11px] leading-relaxed text-slate-600">
-                Ideal for mid-career professionals and early executives looking
-                to fast-track their growth.
-              </p>
-            </div>
-          </div>
-
-          <p className="mt-3 text-[11px] text-slate-500">
-            If you meet these criteria, you can apply for the{" "}
-            <span className="font-semibold">
-              MBA / PGDM for Working Executives
-            </span>{" "}
-            and continue your career while you study.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+      </section>
 
 
 
@@ -1455,57 +1525,57 @@ export function WorkingExecutivesLandingPage(): React.JSX.Element {
       </section>
 
       <section id="faq" className="py-10 sm:py-14 bg-slate-50 border-b border-slate-200">
-  <div
-    data-animate-on-scroll
-    className="max-w-[1550px] mx-auto px-4 transition-all duration-700 ease-out"
-  >
-    {/* Heading */}
-    <div className="flex items-center gap-2">
-      <span className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-sky-500 to-blue-700 p-3 text-white shadow-sm">
-        <span className="material-symbols-outlined text-[18px]">help</span>
-      </span>
-      <div>
-        <h2 className="text-lg sm:text-2xl font-bold bg-gradient-to-r from-slate-900 to-sky-700 bg-clip-text text-transparent">
-          Frequently Asked Questions
-        </h2>
-        <p className="text-[11px] sm:text-xs font-medium text-slate-600">
-          Quick answers to help you with the IMAS MBA / PGDM admissions journey.
-        </p>
-      </div>
-    </div>
-
-    {/* Divider underline */}
-    <div className="mt-3 h-1 w-28 rounded-full bg-gradient-to-r from-cyan-400 to-sky-600" />
-
-    {/* FAQ List */}
-    <div className="mt-8 space-y-3 sm:space-y-4">
-      {[
-        'What is the eligibility for the MBA / PGDM programme?',
-        'Is the programme AICTE approved?',
-        'What is the duration of the MBA / PGDM programme?',
-        'Are scholarships and education loans available?',
-        'Does IMAS offer hostel or accommodation support?',
-        'How does the International Immersion Program work?',
-      ].map((q) => (
-        <details
-          key={q}
-          className="group rounded-2xl bg-white p-4 sm:p-5 text-slate-800 shadow-sm ring-1 ring-slate-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+        <div
+          data-animate-on-scroll
+          className="max-w-[1550px] mx-auto px-4 transition-all duration-700 ease-out"
         >
-          <summary className="flex cursor-pointer items-center justify-between text-sm sm:text-base font-semibold text-slate-800">
-            <span>{q}</span>
-            <span className="transition-transform group-open:rotate-180">
-              <span className="material-symbols-outlined text-[18px] text-slate-500">expand_more</span>
+          {/* Heading */}
+          <div className="flex items-center gap-2">
+            <span className="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-sky-500 to-blue-700 p-3 text-white shadow-sm">
+              <span className="material-symbols-outlined text-[18px]">help</span>
             </span>
-          </summary>
-
-          <div className="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">
-            Official responses will be published soon. Contact admissions for detailed guidance and case-specific clarifications.
+            <div>
+              <h2 className="text-lg sm:text-2xl font-bold bg-gradient-to-r from-slate-900 to-sky-700 bg-clip-text text-transparent">
+                Frequently Asked Questions
+              </h2>
+              <p className="text-[11px] sm:text-xs font-medium text-slate-600">
+                Quick answers to help you with the IMAS MBA / PGDM admissions journey.
+              </p>
+            </div>
           </div>
-        </details>
-      ))}
-    </div>
-  </div>
-</section>
+
+          {/* Divider underline */}
+          <div className="mt-3 h-1 w-28 rounded-full bg-gradient-to-r from-cyan-400 to-sky-600" />
+
+          {/* FAQ List */}
+          <div className="mt-8 space-y-3 sm:space-y-4">
+            {[
+              'What is the eligibility for the MBA / PGDM programme?',
+              'Is the programme AICTE approved?',
+              'What is the duration of the MBA / PGDM programme?',
+              'Are scholarships and education loans available?',
+              'Does IMAS offer hostel or accommodation support?',
+              'How does the International Immersion Program work?',
+            ].map((q) => (
+              <details
+                key={q}
+                className="group rounded-2xl bg-white p-4 sm:p-5 text-slate-800 shadow-sm ring-1 ring-slate-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
+              >
+                <summary className="flex cursor-pointer items-center justify-between text-sm sm:text-base font-semibold text-slate-800">
+                  <span>{q}</span>
+                  <span className="transition-transform group-open:rotate-180">
+                    <span className="material-symbols-outlined text-[18px] text-slate-500">expand_more</span>
+                  </span>
+                </summary>
+
+                <div className="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">
+                  Official responses will be published soon. Contact admissions for detailed guidance and case-specific clarifications.
+                </div>
+              </details>
+            ))}
+          </div>
+        </div>
+      </section>
 
 
       <footer className="border-t border-slate-200 bg-white">
