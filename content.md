@@ -1,96 +1,90 @@
 References Landing page : 
 
-SP Jain Postgraduate Programs | Global MBA | Master of Global Business
+https://www.spjain.org/lp/elo/executive-mba?utm_source=Google&utm_medium=ppc&utm_campaign=ELO_East_West_Search_2025&cmpid=22103830469&adgroupid=173423778699&Placement=&Keyword=mba%20executive&utm_source=Google&utm_medium=ppc&utm_term=mba%20executive&utm_c
 
 IMAS brand assets
 brand assets IMAS
-H1-PGDM in FinTech – Regular + Flexible Blended Mode
-H3- Future-Ready | Flexible | AICTE Approved
 
-IMAS offers the AICTE-approved PGDM in FinTech course in India, built for students who want to upgrade their financial and technological professional skills with an AICTE-approved PGDM FinTech program in India, with different learning modes
 
-Regular On Campus
-Flexible Blended Learning Mode
-Choose the best to build your path
+H1-MBA / PGDM for Working Executives (2-Year Program)
+Improve Your Excellence without Leaving Your Job
 
-📍 Newtown, Kolkata
-📍 AICTE Approved | Industry Aligned | Future Focused
-CTA: Apply Now | Download Brochure | Select Your Mode 
-H2- Why Choose PGDM in FinTech at IMAS?
-IMAS offers the best PGDM in FinTech courses India with multiple learning modes designed for future finance and technology professionals with advantages:
+IMAS offers flexible, AICTE-approved Executive MBA/PGDM programmes designed for working professionals seeking part-time or weekend study options. These programmes help professionals upgrade their management skills without quitting their jobs.
+📍 Perfect for Working Professionals
+📍 Blended + On-Campus Weekend Options
+📍 Continue Job While Learning
+CTA: Apply Now | Download Brochure | Speak to Counsellor
+H2- MBA/PGDM Programme Overview
+MBA/PGDM for working professionals with a flexible schedule to develop leadership qualities, management skills, and industry-relevant expertise while balancing career and education.
 
-●	AICTE-approved MBA FinTech and blockchain courses
-●	Industry-focused curriculum aligned with BFSI & emerging tech
-●	Banking + Technology integrated learning
-●	Choose Regular or Flexible Blended Learning Mode
-●	100% placement support with strong recruiters
-●	FinTech labs, digital finance tools & expert faculty
-●	Global immersion for on-campus learners
-●	Centrally located corporate campus in Newtown
-●	Designed for FinTech PGDM admission with placement
-H2-Program Modes Explained
-H3- Regular On-Campus
-●	Weekday classes
-●	Complete classroom learning experience
-●	Workshops, events & campus activities
-●	Hands-on FinTech labs
-●	Direct faculty mentorship
-H3- Flexible Blended Mode
-●	Weekend classes along with
-●	Live + recorded classes with LMS support
-●	Ideal for students needing schedule flexibility
-●	Same curriculum as on-campus
-●	Industry-aligned PGDM certification
-●	Best alternative to the MBA FinTech online program India
-Both modes offer a similar PGDM certification and specialisation.
-H2- What You Will Learn in the FinTech Specialisation
-Ideal for those seeking MBA FinTech and blockchain courses, or an MBA digital finance program India with real-world skills.
+Learn from Industry professionals | Expert Mentors | Gain Certifications 
+H2- Why Choose MBA / PGDM for Working Executives at IMAS?
 
-●	Digital Payments & UPI Infrastructure
-●	Blockchain Technologies & Cryptocurrency
-●	AI & Machine Learning in Finance
-●	Robo-Advisory & WealthTech Tools
-●	FinTech Product Development
-●	RegTech, Risk & Compliance
-●	Cybersecurity for Financial Systems
-●	Banking, Insurance & Digital Finance Systems
-H2- PGDM+ Program Features
-●	SAP ERP Certification (Optional )
-●	Microsoft Project Certification  (Optional )
-●	Six Sigma Green Belt  (Optional )
-●	Advanced Excel Mastery
-●	Live Business Projects
-●	Summer & Winter Internships (Regular On-Campus)
-●	Corporate Connect & Industry Mentorship
-●	Communication & Presentation Mastery
-●	20+ Presentations Every Semester
+AICTE-approved Executive MBA/PGDM Programmes
+Fully flexible schedule for working professionals
+Continue your full-time job while studying
+Blended online + weekend/evening classes
+Corporate trainers & industry mentors
+Dedicated program manager for support
+Career-focused, industry-relevant curriculum
+Practical case studies + capstone projects
+ Suitable for Working Professionals
+H2: Specialisations for Working Executives
+IMAS is ideal for PGDM/MBA programs designed for mid-career working professionals. We offer specialisations in:
 
-H2- Career Opportunities
-H3- Job Roles
-FinTech Analyst • Blockchain Consultant • AI-Finance Analyst • Digital Banking Specialist • Payment Systems Analyst • FinTech Product Manager • Business Analyst (BFSI) • RegTech Consultant
-H3- Industries
-FinTech Startups • Banks & NBFCs • InsurTech • Digital Payment Apps • IT & Tech Firms • WealthTech Firms
-H2- International Immersion (On-Campus Only)
-FinTech PGDM admission placement offers an international immersion in Dubai, Singapore, Malaysia, Thailand, and Vietnam.
-Placement Support
-●	100% placement assistance
-●	Resume building + PI training
-●	Corporate workshops
-●	Internship and job opportunities
-●	Access to 2000+ hiring partners
+Business Analytics
+AI & Data Science
+FinTech
+Marketing
+Finance
+Human Resource
+Operations
+Healthcare & Hospital Management
+H2- Executive Program Features
+Best flexible blended PGDM for working professionals — designed for working executives who want to upgrade their potential with:
+
+Blended Online + Weekend Sessions
+Executive Leadership Development
+Industry Networking Circles
+Capstone Projects for Leadership Exposure
+One-on-one personal mentorship
+Corporate Skill Certifications
+Learn anytime, anywhere
+Cost-effective professional education
+Flexible EMI plans available
+
+H2- Career Growth & Support
+IMAS flexible PGDM course for working executives, supporting them in building secure career growth with.
+
+Access to 900+ hiring partners
+Exclusive placement assistance
+Regular reskilling & career upgrade sessions
+Frequent placement notifications
+Virtual job fairs every 3 months
+Industry mentorship from business leaders
+Professional networking communities
+H2- Who Should Apply?
+This is an ideal opportunity for working professional mid-career individuals with an AICTE-approved PGDM/MBA flexible schedule, best suited for:
+
+working professionals
+Team leads, supervisors & managers
+Professionals preparing for promotions
+Career switchers
+Individuals needing flexible learning options
+Fresh graduates with less work experience
 H2- Eligibility
-The students who are eligible for PGDM FinTech admissions 2026 are required:
-●	Bachelor’s Degree with 50%
-●	Valid  score CAT / MAT / CMAT / CUET / XAT / ATMA / GMAT
-●	Freshers and working professionals
+The two requirements are a Bachelor’s degree with a minimum of 50% and a valid entrance test score to be eligible for the PGDM for experienced professionals. Accepted exams include CAT, MAT, WBJEE-MAT, and GMAT.
+H2- Admissions Open – Apply Now
+Upgrade your potential with IMAS’s PGDM/MBA for experienced professionals without quitting your job.
+ Blended PGDM/MBA course for executives — apply now for Weekend MBA/PGDM course for executives. Apply now for flexible PGDM for working professionals.
 
-H2- Start Your FinTech Journey Today
+
 📍 Campus Address:
-Plot No 37,  Newtown Action Area – III
-Block – Bhangar-II
-Near St. Xavier’s University, Newtown
-Kolkata, West Bengal
-Pin Code: 700160
-📞 +91 90888 22777 | 🌐 www.imas.ac.in | 📧 admission@imas.ac.in
-CTA: Apply Now | Choose Your Mode | Download Brochure
+ Plot No 37, Newtown Action Area – III
+ Near St. Xavier’s University, Newtown
+ Block – Bhangar-II
+ Kolkata, West Bengal – 700160
+📞 +91 90888 22777
+ 🌐 www.imas.ac.in
+ 📧 admission@imas.ac.in
 

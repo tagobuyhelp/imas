@@ -16,6 +16,7 @@ import { EventsPage } from './pages/EventsPage';
 import { PrivacyPolicyPage } from './pages/PrivacyPolicyPage';
 import { PgdmPlusLandingPage } from './pages/PgdmPlusLandingPage';
 import { PgdmFintechLandingPage } from './pages/PgdmFintechLandingPage';
+import { WorkingExecutivesLandingPage } from './pages/WorkingExecutivesLandingPage';
 // Removed admin and auth imports - components deleted
 import { Toaster } from './components/ui/toaster';
 import { BrochureModal } from './components/BrochureModal';
@@ -37,13 +38,14 @@ function AppContent(): React.JSX.Element {
   };
 
   const currentPage = getCurrentPage();
-  const isStandalone = ['/pgdm-plus', '/pgdm-fintech'].includes(location.pathname);
+  const isStandalone = ['/pgdm-plus', '/pgdm-fintech', '/pgdm-working-executive-programs'].includes(location.pathname);
 
   if (isStandalone) {
     return (
       <Routes>
         <Route path="/pgdm-plus" element={<PgdmPlusLandingPage />} />
         <Route path="/pgdm-fintech" element={<PgdmFintechLandingPage />} />
+        <Route path="/pgdm-working-executive-programs" element={<WorkingExecutivesLandingPage />} />
       </Routes>
     );
   }
@@ -91,5 +93,4 @@ export function App(): React.JSX.Element {
     </HelmetProvider>
   );
 }
-
 
