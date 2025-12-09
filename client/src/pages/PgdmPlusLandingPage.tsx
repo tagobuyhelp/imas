@@ -261,10 +261,15 @@ export function PgdmPlusLandingPage(): React.JSX.Element {
               className="w-full bg-gradient-to-r from-teal-500 to-blue-600 hover:from-teal-600 hover:to-blue-700 text-white"
               onClick={() => {
                 setMobileMenuOpen(false)
-                window.open('https://admission.imas.ac.in/', '_blank')
+                try {
+                  applyNow()
+                } catch (e) {
+                  console.error('[PgdmPlusLandingPage] enquiry action failed, dispatching event fallback', e)
+                  window.dispatchEvent(new Event('imas:openEnquiryForm'))
+                }
               }}
             >
-              Apply Now
+              Inquire Now
             </Button>
             <Button 
               variant="outline"
@@ -1308,11 +1313,18 @@ export function PgdmPlusLandingPage(): React.JSX.Element {
       <div className="fixed bottom-0 left-0 right-0 z-40 border-t border-slate-200 bg-white/95 px-4 py-2 shadow-[0_-4px_12px_rgba(15,23,42,0.08)] md:hidden">
         <div className="mx-auto flex max-w-[1550px] items-center justify-between gap-2 text-xs font-semibold">
           <Button
-            onClick={() => window.open('https://admission.imas.ac.in/', '_blank')}
+            onClick={() => {
+              try {
+                applyNow()
+              } catch (e) {
+                console.error('[PgdmPlusLandingPage] enquiry action failed, dispatching event fallback', e)
+                window.dispatchEvent(new Event('imas:openEnquiryForm'))
+              }
+            }}
             className="flex-1 rounded-full bg-gradient-to-r from-teal-500 to-blue-600 hover:from-teal-600 hover:to-blue-700 px-3 py-2 text-center text-white transition-all duration-200 active:scale-95"
           >
             <ExternalLink className="mr-2 h-4 w-4" />
-            Apply
+            Inquire Now
           </Button>
           <Button
             onClick={onDownload}

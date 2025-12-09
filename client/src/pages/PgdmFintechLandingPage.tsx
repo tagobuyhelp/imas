@@ -383,26 +383,7 @@ export function PgdmFintechLandingPage(): React.JSX.Element {
             </div>
             
           </div>
-          <div className="md:hidden">
-            <details className="group rounded-2xl bg-white/95 p-4 shadow-xl ring-1 ring-slate-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl">
-              <summary className="flex items-center justify-between cursor-pointer">
-                <span className="flex items-center gap-2 text-lg font-semibold text-slate-900">
-                  <Mail className="h-5 w-5 text-[#2e7bb3]" />
-                  <span className='text-[14px] md:text-[16px]'>Get Detailed Program Information</span>
-                </span>
-                <ChevronDown className="h-5 w-5 text-slate-600 transition-transform group-open:rotate-180" />
-              </summary>
-              <p className="mt-2 text-xs text-slate-600">Fill in your details to receive the brochure and personalised counselling from the IMAS admissions team.</p>
-              <form className="mt-4 space-y-3 text-xs">
-                <div className="space-y-1"><label className="block font-medium text-slate-700">Full Name</label><input type="text" className="w-full rounded-lg border border-slate-200 px-3 py-2 text-sm outline-none focus:border-[#2e7bb3] focus:ring-1 focus:ring-[#2e7bb3]" placeholder="Enter your full name" /></div>
-                <div className="grid gap-3 md:grid-cols-2"><div className="space-y-1"><label className="block font-medium text-slate-700">Mobile Number</label><input type="tel" className="w-full rounded-lg border border-slate-200 px-3 py-2 text-sm outline-none focus:border-[#2e7bb3] focus:ring-1 focus:ring-[#2e7bb3]" placeholder="10-digit mobile" /></div><div className="space-y-1"><label className="block font-medium text-slate-700">Email</label><input type="email" className="w-full rounded-lg border border-slate-200 px-3 py-2 text-sm outline-none focus:border-[#2e7bb3] focus:ring-1 focus:ring-[#2e7bb3]" placeholder="you@example.com" /></div></div>
-                <div className="grid gap-3 md:grid-cols-2"><div className="space-y-1"><label className="block font-medium text-slate-700">City</label><input type="text" className="w-full rounded-lg border border-slate-200 px-3 py-2 text-sm outline-none focus:border-[#2e7bb3] focus:ring-1 focus:ring-[#2e7bb3]" placeholder="Your city" /></div><div className="space-y-1"><label className="block font-medium text-slate-700">Qualification</label><select className="w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm outline-none focus:border-[#2e7bb3] focus:ring-1 focus:ring-[#2e7bb3]"><option value="">Select</option><option>Final Year Undergraduate</option><option>Graduate</option><option>Working Professional</option></select></div></div>
-                <div className="grid gap-3 md:grid-cols-2"><div className="space-y-1"><label className="block font-medium text-slate-700">Year of Graduation</label><select className="w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm outline-none focus:border-[#2e7bb3] focus:ring-1 focus:ring-[#2e7bb3]"><option value="">Select year</option><option>2026</option><option>2025</option><option>2024</option><option>2023</option><option>2022 & Earlier</option></select></div><div className="space-y-1"><label className="block font-medium text-slate-700">Preferred Specialisation</label><select className="w-full rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm outline-none focus:border-[#2e7bb3] focus:ring-1 focus:ring-[#2e7bb3]"><option value="">Select</option><option>Marketing Management</option><option>Financial Management</option><option>Human Resource Management</option><option>Business Analytics</option><option>Artificial Intelligence & Data Science</option><option>FinTech</option><option>Hospital & Healthcare Management</option><option>Innovation, Entrepreneurship & Venture Development (IEV)</option></select></div></div>
-                <div className="flex items-start gap-2 pt-1"><input type="checkbox" className="mt-1 h-3.5 w-3.5 rounded border-slate-300" /><p className="text-[11px] text-slate-500">By submitting this form, I agree to be contacted by IMAS via phone, email, or SMS.</p></div>
-                <div className="flex gap-2 pt-2"><Button onClick={onDownload} className="bg-[#26c1d3] text-white px-4 py-2 text-sm font-semibold">Get Brochure</Button><Button onClick={applyNow} variant="outline" className="border border-slate-300 px-4 py-2 text-sm">Enquire Now</Button></div>
-              </form>
-            </details>
-          </div>
+          
 
 
 
@@ -668,7 +649,14 @@ export function PgdmFintechLandingPage(): React.JSX.Element {
                 ))}
               </div>
               <div className="mt-4 flex flex-wrap gap-2">
-                <Button onClick={applyNow} className="rounded-full bg-sky-600 hover:bg-sky-700 text-white px-6 py-3 shadow-lg">Apply for PGDM FinTech</Button>
+                <Button onClick={() => {
+                  try {
+                    applyNow()
+                  } catch (e) {
+                    console.error('[PgdmFintechLandingPage] enquiry action failed, dispatching event fallback', e)
+                    window.dispatchEvent(new Event('imas:openEnquiryForm'))
+                  }
+                }} className="rounded-full bg-sky-600 hover:bg-sky-700 text-white px-6 py-3 shadow-lg">Inquire Now</Button>
                 <Button onClick={() => setActiveMode('regular')} variant="outline" className="rounded-full border-[#26c1d3] text-[#2e7bb3] hover:bg-[#26c1d3]/10 px-6 py-3">Choose Regular Mode</Button>
               </div>
             </div>
@@ -696,7 +684,14 @@ export function PgdmFintechLandingPage(): React.JSX.Element {
                 ))}
               </div>
               <div className="mt-4 flex flex-wrap gap-2">
-                <Button onClick={applyNow} className="rounded-full bg-sky-600 hover:bg-sky-700 text-white px-6 py-3 shadow-lg">Apply for PGDM FinTech</Button>
+                <Button onClick={() => {
+                  try {
+                    applyNow()
+                  } catch (e) {
+                    console.error('[PgdmFintechLandingPage] enquiry action failed, dispatching event fallback', e)
+                    window.dispatchEvent(new Event('imas:openEnquiryForm'))
+                  }
+                }} className="rounded-full bg-sky-600 hover:bg-sky-700 text-white px-6 py-3 shadow-lg">Inquire Now</Button>
                 <Button onClick={() => setActiveMode('blended')} variant="outline" className="rounded-full border-[#26c1d3] text-[#2e7bb3] hover:bg-[#26c1d3]/10 px-6 py-3">Choose Flexible Mode</Button>
               </div>
             </div>
@@ -1283,9 +1278,16 @@ export function PgdmFintechLandingPage(): React.JSX.Element {
                   <div className="text-[11px] sm:text-xs opacity-90">Take the next step towards a high-impact FinTech career with IMAS.</div>
                 </div>
                 <div className="mt-4 flex flex-wrap gap-3">
-                  <Button onClick={() => window.open('https://admission.imas.ac.in/', '_blank')} className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-sky-600 to-blue-700 px-5 py-2.5 text-sm font-semibold text-white shadow-lg transition-all duration-200 hover:-translate-y-0.5 hover:from-sky-500 hover:to-blue-600">
+                  <Button onClick={() => {
+                    try {
+                      applyNow()
+                    } catch (e) {
+                      console.error('[PgdmFintechLandingPage] enquiry action failed, dispatching event fallback', e)
+                      window.dispatchEvent(new Event('imas:openEnquiryForm'))
+                    }
+                  }} className="group inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-sky-600 to-blue-700 px-5 py-2.5 text-sm font-semibold text-white shadow-lg transition-all duration-200 hover:-translate-y-0.5 hover:from-sky-500 hover:to-blue-600">
                     <span className="material-symbols-outlined text-[18px]">send</span>
-                    Apply Online
+                    Inquire Now
                   </Button>
                   <Button onClick={onDownload} variant="outline" className="group inline-flex items-center bg-transparent gap-2 rounded-full border border-white/50 px-5 py-2.5 text-sm font-semibold text-white hover:bg-white/10">
                     <span className="material-symbols-outlined text-[18px]">description</span>
@@ -1330,11 +1332,18 @@ export function PgdmFintechLandingPage(): React.JSX.Element {
       <div className="fixed bottom-0 left-0 right-0 z-40 border-t border-slate-200 bg-white/95 px-4 py-2 shadow-[0_-4px_12px_rgba(15,23,42,0.08)] md:hidden">
         <div className="mx-auto flex max-w-[1550px] items-center justify-between gap-2 text-xs font-semibold">
           <Button
-            onClick={() => window.open('https://admission.imas.ac.in/', '_blank')}
+            onClick={() => {
+              try {
+                applyNow()
+              } catch (e) {
+                console.error('[PgdmFintechLandingPage] enquiry action failed, dispatching event fallback', e)
+                window.dispatchEvent(new Event('imas:openEnquiryForm'))
+              }
+            }}
             className="flex-1 rounded-full bg-gradient-to-r from-teal-500 to-blue-600 hover:from-teal-600 hover:to-blue-700 px-3 py-2 text-center text-white transition-all duration-200 active:scale-95"
           >
             <ExternalLink className="mr-2 h-4 w-4" />
-            Apply
+            Inquire Now
           </Button>
           <Button
             onClick={onDownload}
