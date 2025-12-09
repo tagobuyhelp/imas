@@ -1253,13 +1253,31 @@ export function PgdmPlusLandingPage(): React.JSX.Element {
           <p className="mt-2 text-xs text-slate-700 sm:text-sm">Have queries about the IMAS PGDM Plus programme? Find quick answers below or connect with our admissions team.</p>
           <div className="mt-5 space-y-3 text-sm">
             {[
-              'What is the eligibility for the MBA / PGDM (PGDM Plus) programme?',
-              'Is the programme AICTE approved?',
-              'What is the duration of the MBA / PGDM (PGDM Plus) programme?',
-              'Are scholarships and education loans available?',
-              'Does IMAS offer hostel or accommodation support?',
-              'How does the International Immersion Program work?',
-            ].map((q) => (
+              {
+                q: 'What is the eligibility for the MBA / PGDM (PGDM Plus) programme?',
+                a: 'Applicants must have a Bachelor’s degree in any discipline from a recognized university. Final-year students may also apply, subject to fulfilling eligibility criteria at the time of admission.',
+              },
+              {
+                q: 'Is the programme AICTE approved?',
+                a: 'Yes, the PGDM Plus programme is AICTE approved.',
+              },
+              {
+                q: 'What is the duration of the MBA / PGDM (PGDM Plus) programme?',
+                a: 'The programme is a full-time, two-year programme, divided into four semesters.',
+              },
+              {
+                q: 'Are scholarships and education loans available?',
+                a: 'Yes, merit-based scholarships are available for eligible candidates. Students can also apply for education loans through leading banks and financial institutions, subject to their terms and conditions.',
+              },
+              {
+                q: 'Does IMAS offer hostel or accommodation support?',
+                a: 'IMAS provides assistance and guidance in finding safe and convenient accommodation near the campus. Hostel availability is subject to location and availability.',
+              },
+              {
+                q: 'How does the International Immersion Program work?',
+                a: 'The International Immersion Program offers students global exposure through international academic interactions, faculty-led sessions, and industry visits. Program details are shared with students prior to participation.',
+              },
+            ].map(({ q, a }) => (
               <details
                 key={q}
                 className="group rounded-2xl bg-white p-4 text-slate-800 shadow-sm ring-1 ring-slate-100 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
@@ -1269,7 +1287,7 @@ export function PgdmPlusLandingPage(): React.JSX.Element {
                   <span className="text-xs text-slate-500 group-open:hidden">+</span>
                   <span className="hidden text-xs text-slate-500 group-open:inline">−</span>
                 </summary>
-                <div className="mt-2 text-xs text-slate-600">Official responses will be published soon. Contact admissions for detailed guidance.</div>
+                <div className="mt-2 text-xs text-slate-600">{a}</div>
               </details>
             ))}
           </div>
