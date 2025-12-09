@@ -371,6 +371,7 @@ img[src*="imas_hero_image1.webp"] {
   inset: 0;
   background: radial-gradient(900px 320px at 20% -10%, rgba(109,179,248,0.18), transparent 60%),
               radial-gradient(700px 280px at 80% 110%, rgba(38,193,211,0.14), transparent 60%);
+  pointer-events: none;
 }
 
 .cta-lines::before {
@@ -383,6 +384,7 @@ img[src*="imas_hero_image1.webp"] {
   background-size: 44px 44px;
   opacity: 0.2;
   mix-blend-mode: overlay;
+  pointer-events: none;
 }
 
 .text-imas-dark-blue {

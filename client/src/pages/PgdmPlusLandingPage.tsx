@@ -74,7 +74,6 @@ export function PgdmPlusLandingPage(): React.JSX.Element {
     { src: '/uploads/pgdm_plus/4.png', title: 'Research, case studies & live projects', icon: BookOpen },
     { src: '/uploads/pgdm_plus/5.png', title: 'Modern digital learning spaces & labs', icon: Layers },
     { src: '/uploads/pgdm_plus/6.png', title: 'Soft skills & communication training sessions', icon: GraduationCap },
-    { src: '/uploads/pgdm_plus/7.png', title: 'Industry exposure & real-world projects', icon: Briefcase },
   ]
   const placementLogos = [
     { name: 'BainCapital', logo: '/uploads/bcpe_logo.png' },
@@ -159,7 +158,19 @@ export function PgdmPlusLandingPage(): React.JSX.Element {
             <a href="#placements" className="flex items-center gap-1 hover:text-[#2e7bb3] transition-colors duration-200"><Briefcase className="h-4 w-4" /><span>Placements</span></a>
             <a href="#life-at-imas" className="flex items-center gap-1 hover:text-[#2e7bb3] transition-colors duration-200"><Users className="h-4 w-4" /><span>Life at IMAS</span></a>
             <a href="#admissions-2026" className="flex items-center gap-1 hover:text-[#2e7bb3] transition-colors duration-200"><CheckCircle className="h-4 w-4" /><span>Admissions 2026</span></a>
-            <Button onClick={() => window.open('https://admission.imas.ac.in/', '_blank')} className="px-4 py-2 text-sm font-semibold text-white shadow-md bg-gradient-to-r from-teal-500 to-blue-600 hover:from-teal-600 hover:to-blue-700">Apply Now</Button>
+            <Button
+              onClick={() => {
+                try {
+                  applyNow()
+                } catch (e) {
+                  console.error('[PgdmPlusLandingPage] enquiry action failed, dispatching event fallback', e)
+                  window.dispatchEvent(new Event('imas:openEnquiryForm'))
+                }
+              }}
+              className="px-4 py-2 text-sm font-semibold text-white shadow-md bg-gradient-to-r from-teal-500 to-blue-600 hover:from-teal-600 hover:to-blue-700"
+            >
+              Inquire Now
+            </Button>
           </nav>
           <button className="inline-flex h-9 w-9  items-center justify-center  rounded-md border border-slate-200 transition-colors duration-200 hover:bg-slate-100 md:hidden" onClick={() => setMobileMenuOpen(true)}>
             <span className="sr-only">Open menu</span>
@@ -1081,7 +1092,7 @@ export function PgdmPlusLandingPage(): React.JSX.Element {
                   </div>
                 </div>
 
-                <p className="mt-3 text-[11px] text-slate-600">More than 150+ recruiters engaged yearly</p>
+            <p className="mt-3 text-[11px] text-slate-600">OUR PROUD ALUMNI ARE WORKING WITH.</p>
               </div>
             </div>
           </div>

@@ -74,7 +74,6 @@ export function WorkingExecutivesLandingPage(): React.JSX.Element {
     { src: '/uploads/pgdm_plus/4.png', title: 'Research, case studies & live projects', icon: BookOpen },
     { src: '/uploads/pgdm_plus/5.png', title: 'Modern digital learning spaces & labs', icon: Layers },
     { src: '/uploads/pgdm_plus/6.png', title: 'Soft skills & communication training sessions', icon: GraduationCap },
-    { src: '/uploads/pgdm_plus/7.png', title: 'Industry exposure & real-world projects', icon: Briefcase },
   ]
   const placementLogos = [
     { name: 'BainCapital', logo: '/uploads/bcpe_logo.png' },
@@ -153,49 +152,56 @@ export function WorkingExecutivesLandingPage(): React.JSX.Element {
             />
           </div>
           <nav className="hidden items-center gap-6 text-sm text-slate-300 md:flex">
-  <a href="#about-imas" className="flex items-center gap-1 hover:text-[#2e7bb3] transition-colors duration-200">
-    <span className="material-symbols-outlined text-[18px]">menu_book</span>
-    <span>Program Overview</span>
-  </a>
+            <a href="#about-imas" className="flex items-center gap-1 hover:text-[#2e7bb3] transition-colors duration-200">
+              <span className="material-symbols-outlined text-[18px]">menu_book</span>
+              <span>Program Overview</span>
+            </a>
 
-  <a href="#specialisations" className="flex items-center gap-1 hover:text-[#2e7bb3] transition-colors duration-200">
-    <span className="material-symbols-outlined text-[18px]">layers</span>
-    <span>Specialisations</span>
-  </a>
+            <a href="#specialisations" className="flex items-center gap-1 hover:text-[#2e7bb3] transition-colors duration-200">
+              <span className="material-symbols-outlined text-[18px]">layers</span>
+              <span>Specialisations</span>
+            </a>
 
-  {/* Highlight CTA Item */}
-  <a
-    href="#eligibility"
-    className="inline-flex items-center gap-2 rounded-full bg-slate-100 border border-slate-200 px-3 py-1 text-sm font-semibold hover:bg-sky-600 text-black hover:text-white hover:border-transparent transition-all"
-  >
-    <span className="flex h-6 w-6 items-center justify-center rounded-full bg-gradient-to-r from-sky-500 to-blue-700 text-white">
-      <span className="material-symbols-outlined text-[16px]">checklist</span>
-    </span>
-    Eligibility
-  </a>
+            {/* Highlight CTA Item */}
+            <a
+              href="#eligibility"
+              className="inline-flex items-center gap-2 rounded-full bg-slate-100 border border-slate-200 px-3 py-1 text-sm font-semibold hover:bg-sky-600 text-black hover:text-white hover:border-transparent transition-all"
+            >
+              <span className="flex h-6 w-6 items-center justify-center rounded-full bg-gradient-to-r from-sky-500 to-blue-700 text-white">
+                <span className="material-symbols-outlined text-[16px]">checklist</span>
+              </span>
+              Eligibility
+            </a>
 
-  <a href="#placements" className="flex items-center gap-1 hover:text-[#2e7bb3] transition-colors duration-200">
-    <span className="material-symbols-outlined text-[18px]">work</span>
-    <span>Placements</span>
-  </a>
+            <a href="#placements" className="flex items-center gap-1 hover:text-[#2e7bb3] transition-colors duration-200">
+              <span className="material-symbols-outlined text-[18px]">work</span>
+              <span>Placements</span>
+            </a>
 
-  <a href="#life-at-imas" className="flex items-center gap-1 hover:text-[#2e7bb3] transition-colors duration-200">
-    <span className="material-symbols-outlined text-[18px]">groups</span>
-    <span>Life at IMAS</span>
-  </a>
+            <a href="#life-at-imas" className="flex items-center gap-1 hover:text-[#2e7bb3] transition-colors duration-200">
+              <span className="material-symbols-outlined text-[18px]">groups</span>
+              <span>Life at IMAS</span>
+            </a>
 
-  <a href="#admissions-2026" className="flex items-center gap-1 hover:text-[#2e7bb3] transition-colors duration-200">
-    <span className="material-symbols-outlined text-[18px]">check_circle</span>
-    <span>Admissions 2026</span>
-  </a>
+            <a href="#admissions-2026" className="flex items-center gap-1 hover:text-[#2e7bb3] transition-colors duration-200">
+              <span className="material-symbols-outlined text-[18px]">check_circle</span>
+              <span>Admissions 2026</span>
+            </a>
 
-  <Button
-    onClick={() => window.open('https://admission.imas.ac.in/', '_blank')}
-    className="ml-2 px-5 py-2 text-sm font-semibold text-white shadow-lg rounded-full bg-gradient-to-r from-teal-500 to-blue-600 hover:from-teal-600 hover:to-blue-700"
-  >
-    Apply Now
-  </Button>
-</nav>
+            <Button
+              onClick={() => {
+                try {
+                  applyNow()
+                } catch (e) {
+                  console.error('[WorkingExecutivesLandingPage] enquiry action failed, dispatching event fallback', e)
+                  window.dispatchEvent(new Event('imas:openEnquiryForm'))
+                }
+              }}
+              className="ml-2 px-5 py-2 text-sm font-semibold text-white shadow-lg rounded-full bg-gradient-to-r from-teal-500 to-blue-600 hover:from-teal-600 hover:to-blue-700"
+            >
+              Inquire Now
+            </Button>
+          </nav>
 
           <button className="inline-flex h-9 w-9  items-center justify-center  rounded-md border border-slate-200 transition-colors duration-200 hover:bg-slate-100 md:hidden" onClick={() => setMobileMenuOpen(true)}>
             <span className="sr-only">Open menu</span>
@@ -240,80 +246,80 @@ export function WorkingExecutivesLandingPage(): React.JSX.Element {
 
           {/* Navigation */}
           {/* Navigation */}
-<nav className="flex-1 p-6 overflow-y-auto">
-  <ul className="space-y-2">
-    <li>
-      <a
-        href="#about-imas"
-        onClick={() => setMobileMenuOpen(false)}
-        className="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-left text-gray-700 hover:text-[#2e7bb3] hover:bg-slate-50 transition-colors"
-      >
-        <BookOpen className="h-5 w-5" />
-        <span className="font-medium">Program Overview</span>
-      </a>
-    </li>
+          <nav className="flex-1 p-6 overflow-y-auto">
+            <ul className="space-y-2">
+              <li>
+                <a
+                  href="#about-imas"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-left text-gray-700 hover:text-[#2e7bb3] hover:bg-slate-50 transition-colors"
+                >
+                  <BookOpen className="h-5 w-5" />
+                  <span className="font-medium">Program Overview</span>
+                </a>
+              </li>
 
-    <li>
-      <a
-        href="#specialisations"
-        onClick={() => setMobileMenuOpen(false)}
-        className="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-left text-gray-700 hover:text-[#2e7bb3] hover:bg-slate-50 transition-colors"
-      >
-        <Layers className="h-5 w-5" />
-        <span className="font-medium">Specialisations</span>
-      </a>
-    </li>
+              <li>
+                <a
+                  href="#specialisations"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-left text-gray-700 hover:text-[#2e7bb3] hover:bg-slate-50 transition-colors"
+                >
+                  <Layers className="h-5 w-5" />
+                  <span className="font-medium">Specialisations</span>
+                </a>
+              </li>
 
-    {/* Eligibility – highlighted CTA-style item */}
-    <li>
-      <a
-        href="#eligibility"
-        onClick={() => setMobileMenuOpen(false)}
-        className="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-left text-gray-800 bg-slate-100 border border-slate-200 hover:bg-sky-600 hover:text-white hover:border-transparent transition-all"
-      >
-        <span className="flex h-6 w-6 items-center justify-center rounded-full bg-gradient-to-r from-sky-500 to-blue-700 text-white">
-          <span className="material-symbols-outlined text-[16px]">checklist</span>
-        </span>
-        <span className="font-semibold">Eligibility</span>
-      </a>
-    </li>
+              {/* Eligibility – highlighted CTA-style item */}
+              <li>
+                <a
+                  href="#eligibility"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-left text-gray-800 bg-slate-100 border border-slate-200 hover:bg-sky-600 hover:text-white hover:border-transparent transition-all"
+                >
+                  <span className="flex h-6 w-6 items-center justify-center rounded-full bg-gradient-to-r from-sky-500 to-blue-700 text-white">
+                    <span className="material-symbols-outlined text-[16px]">checklist</span>
+                  </span>
+                  <span className="font-semibold">Eligibility</span>
+                </a>
+              </li>
 
-    
 
-    <li>
-      <a
-        href="#placements"
-        onClick={() => setMobileMenuOpen(false)}
-        className="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-left text-gray-700 hover:text-[#2e7bb3] hover:bg-slate-50 transition-colors"
-      >
-        <Briefcase className="h-5 w-5" />
-        <span className="font-medium">Placements</span>
-      </a>
-    </li>
 
-    <li>
-      <a
-        href="#life-at-imas"
-        onClick={() => setMobileMenuOpen(false)}
-        className="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-left text-gray-700 hover:text-[#2e7bb3] hover:bg-slate-50 transition-colors"
-      >
-        <Users className="h-5 w-5" />
-        <span className="font-medium">Life at IMAS</span>
-      </a>
-    </li>
+              <li>
+                <a
+                  href="#placements"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-left text-gray-700 hover:text-[#2e7bb3] hover:bg-slate-50 transition-colors"
+                >
+                  <Briefcase className="h-5 w-5" />
+                  <span className="font-medium">Placements</span>
+                </a>
+              </li>
 
-    <li>
-      <a
-        href="#admissions-2026"
-        onClick={() => setMobileMenuOpen(false)}
-        className="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-left text-gray-700 hover:text-[#2e7bb3] hover:bg-slate-50 transition-colors"
-      >
-        <CheckCircle className="h-5 w-5" />
-        <span className="font-medium">Admissions 2026</span>
-      </a>
-    </li>
-  </ul>
-</nav>
+              <li>
+                <a
+                  href="#life-at-imas"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-left text-gray-700 hover:text-[#2e7bb3] hover:bg-slate-50 transition-colors"
+                >
+                  <Users className="h-5 w-5" />
+                  <span className="font-medium">Life at IMAS</span>
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="#admissions-2026"
+                  onClick={() => setMobileMenuOpen(false)}
+                  className="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-left text-gray-700 hover:text-[#2e7bb3] hover:bg-slate-50 transition-colors"
+                >
+                  <CheckCircle className="h-5 w-5" />
+                  <span className="font-medium">Admissions 2026</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
 
 
           {/* Footer CTAs */}
@@ -374,7 +380,7 @@ export function WorkingExecutivesLandingPage(): React.JSX.Element {
             </div>
             <div className="space-y-3">
               <h1 className="text-2xl sm:text-4xl lg:text-[2.6rem] font-bold tracking-tight text-white drop-shadow-md">
-                MBA / PGDM for Working Executives (2-Year Program)
+                MBA / PGDM for Working Executives
               </h1>
               <p className="text-xs sm:text-lg font-medium text-gray-200/95 drop-shadow">
                 Improve Your Excellence without Leaving Your Job
@@ -1301,8 +1307,8 @@ export function WorkingExecutivesLandingPage(): React.JSX.Element {
                 <div className="text-[11px] font-semibold uppercase tracking-[0.25em] text-slate-600">Placement Snapshot*</div>
                 <div className="mt-4 grid grid-cols-3 gap-4 text-center">
                   {[
-                    { label: 'Highest CTC', value: '₹ 22.5 LPA' },
-                    { label: 'Average CTC', value: '₹ 10.2 LPA' },
+                    { label: 'Highest package offered', value: '₹ 18 LPA' },
+                    { label: 'Average package', value: '₹ 8.4 LPA' },
                     { label: 'Offers / Student', value: '2+' },
                   ].map((stat) => (
                     <div key={stat.label} className="rounded-2xl bg-slate-50 p-4 text-slate-900 ring-1 ring-slate-200">
@@ -1376,7 +1382,7 @@ export function WorkingExecutivesLandingPage(): React.JSX.Element {
                   </div>
                 </div>
 
-                <p className="mt-3 text-[11px] text-slate-600">More than 150+ recruiters engaged yearly</p>
+                <p className="mt-3 text-[11px] text-slate-600">OUR PROUD ALUMNI ARE WORKING WITH.</p>
               </div>
             </div>
           </div>
@@ -1550,13 +1556,36 @@ export function WorkingExecutivesLandingPage(): React.JSX.Element {
           {/* FAQ List */}
           <div className="mt-8 space-y-3 sm:space-y-4">
             {[
-              'What is the eligibility for the MBA / PGDM programme?',
-              'Is the programme AICTE approved?',
-              'What is the duration of the MBA / PGDM programme?',
-              'Are scholarships and education loans available?',
-              'Does IMAS offer hostel or accommodation support?',
-              'How does the International Immersion Program work?',
-            ].map((q) => (
+              {
+                q: 'What is the eligibility for the PGDM Working Executive programme?',
+                a:
+                  'Candidates must have a Bachelor’s degree in any discipline from a recognized university. Working professionals with relevant work experience are eligible to apply.',
+              },
+              {
+                q: 'Is the PGDM Working Executive programme AICTE approved?',
+                a: 'Yes, the PGDM Working Executive programme is AICTE approved.',
+              },
+              {
+                q: 'What is the duration of the PGDM Working Executive programme?',
+                a:
+                  'The programme duration is two years, structured to suit working professionals with flexible schedules.',
+              },
+              {
+                q: 'Are scholarships and education loans available?',
+                a:
+                  'Yes, merit-based scholarships may be available for eligible candidates. Education loans can be availed from leading banks and financial institutions, subject to their policies.',
+              },
+              {
+                q: 'Does IMAS offer hostel or accommodation support?',
+                a:
+                  'As this is designed for working professionals, hostel facilities are not mandatory. However, IMAS can guide candidates toward nearby accommodation options if required.',
+              },
+              {
+                q: 'How does the International Immersion Program work?',
+                a:
+                  'The International Immersion Program provides optional global exposure through international academic interactions, expert sessions, and industry visits. Participation details are shared with eligible students in advance.',
+              },
+            ].map(({ q, a }) => (
               <details
                 key={q}
                 className="group rounded-2xl bg-white p-4 sm:p-5 text-slate-800 shadow-sm ring-1 ring-slate-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
@@ -1569,7 +1598,7 @@ export function WorkingExecutivesLandingPage(): React.JSX.Element {
                 </summary>
 
                 <div className="mt-2 text-xs sm:text-sm text-slate-600 leading-relaxed">
-                  Official responses will be published soon. Contact admissions for detailed guidance and case-specific clarifications.
+                  {a}
                 </div>
               </details>
             ))}
