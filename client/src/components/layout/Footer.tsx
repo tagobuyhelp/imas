@@ -129,10 +129,10 @@ export function Footer() {
                   </div>
                   <div className="text-gray-300 group-hover:text-white transition-colors duration-300 leading-relaxed">
                     <p>International Management & Analytics School (IMAS)</p>
-                    <p>Plot No. 37, Block – Bhangar-II,</p>
-                    <p>Near St. Xavier’s University, Newtown Action Area – III,</p>
+                    <p>Plot No 37, Block – Bhangar-II,</p>
+                    <p>Near St. Xavier’s University, Newtown Action Area - III,</p>
                     <p>Kolkata, West Bengal,</p>
-                    <p>Pin Code: 700160.</p>
+                    <p>Pin Code - 700 160</p>
                   </div>
                 </div>
               </div>

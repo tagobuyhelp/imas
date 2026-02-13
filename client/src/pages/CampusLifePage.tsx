@@ -98,7 +98,7 @@ export function CampusLifePage() {
         {/* Background Image */}
         <div className="absolute inset-0">
           <img
-            src="/uploads/IMASBUILDING.jpeg"
+            src="/uploads/campus_photos/imas_campus.png"
             alt="IMAS Campus"
             className="w-full h-full object-cover"
           />
@@ -166,7 +166,7 @@ export function CampusLifePage() {
             <div className="bg-white rounded-xl overflow-hidden shadow-lg">
               <div className="aspect-video overflow-hidden">
                 <img
-                  src="/uploads/IMASBUILDING.jpeg"
+                  src="/uploads/campus_photos/imas_campus.png"
                   alt="IMAS Campus Building"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                 />
@@ -354,7 +354,7 @@ export function CampusLifePage() {
             <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300">
               <div className="aspect-square overflow-hidden">
                 <img
-                  src="/uploads/campus_photos/DSC_2802.jpg"
+                  src="/uploads/campus_photos/imas_campus.png"
                   alt="IMAS Campus Life"
                   className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
                   loading="lazy"
@@ -529,7 +529,7 @@ export function CampusLifePage() {
         {/* Background Image */}
         <div className="absolute inset-0">
           <img
-            src="/uploads/IMASBUILDING.jpeg"
+            src="/uploads/campus_photos/imas_campus.png"
             alt="IMAS Building"
             className="w-full h-full object-cover"
           />
