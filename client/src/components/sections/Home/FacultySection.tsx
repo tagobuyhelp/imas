@@ -83,7 +83,7 @@ export function FacultySection() {
             MEET OUR ACADEMIC TEAM
           </div>
           <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800 mb-3">
-            Learn from Industry <span className={`${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE}`}>Experts</span>
+            Board of Governors
           </h2>
           <p className="text-gray-600 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
             Our distinguished faculty brings together academic excellence and real-world industry experience.
@@ -213,17 +213,7 @@ export function FacultySection() {
           </div>
         </div>
 
-        {/* View All Faculty Button */}
-        <div className="text-center">
-          <a
-            href="/faculty"
-            className={`inline-flex items-center gap-2 px-4 py-2 ${IMAS_TAILWIND_CLASSES.GRADIENT_PRIMARY} hover:from-[#2e7bb3] hover:to-[#26c1d3] text-white rounded-lg font-semibold shadow-md hover:shadow-lg transition-all duration-300 hover:scale-105 text-sm`}
-          >
-            <Users className="h-4 w-4" />
-            View All Faculty
-            <ArrowRight className="h-3 w-3" />
-          </a>
-        </div>
+        
       </div>
     </section>
   );
