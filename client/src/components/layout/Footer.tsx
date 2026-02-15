@@ -70,6 +70,15 @@ export function Footer() {
                 <a href="/events" className={`flex items-center gap-2 text-gray-300 ${IMAS_TAILWIND_CLASSES.HOVER_TEXT_TEAL} transition-all duration-300 hover:translate-x-2 hover:bg-gray-800/30 rounded-lg p-2 text-sm group`}>
                   <Calendar className="h-4 w-4 group-hover:scale-110 transition-transform duration-300" /> Events
                 </a>
+                <a href="/aicte-mandatory-disclosure" className={`flex items-center gap-2 text-gray-300 ${IMAS_TAILWIND_CLASSES.HOVER_TEXT_TEAL} transition-all duration-300 hover:translate-x-2 hover:bg-gray-800/30 rounded-lg p-2 text-sm group`}>
+                  <BookOpen className="h-4 w-4 group-hover:scale-110 transition-transform duration-300" /> AICTE Mandatory Disclosure
+                </a>
+                <a href="/board-of-governors" className={`flex items-center gap-2 text-gray-300 ${IMAS_TAILWIND_CLASSES.HOVER_TEXT_TEAL} transition-all duration-300 hover:translate-x-2 hover:bg-gray-800/30 rounded-lg p-2 text-sm group`}>
+                  <Users className="h-4 w-4 group-hover:scale-110 transition-transform duration-300" /> Board of Governors
+                </a>
+                <a href="/statutory-committees" className={`flex items-center gap-2 text-gray-300 ${IMAS_TAILWIND_CLASSES.HOVER_TEXT_TEAL} transition-all duration-300 hover:translate-x-2 hover:bg-gray-800/30 rounded-lg p-2 text-sm group`}>
+                  <HelpCircle className="h-4 w-4 group-hover:scale-110 transition-transform duration-300" /> Statutory Committees
+                </a>
               </div>
             </div>
 

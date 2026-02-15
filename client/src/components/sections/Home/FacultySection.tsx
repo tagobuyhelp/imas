@@ -85,9 +85,7 @@ export function FacultySection() {
           <h2 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-800 mb-3">
             Board of Governors
           </h2>
-          <p className="text-gray-600 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
-            Our distinguished faculty brings together academic excellence and real-world industry experience.
-          </p>
+          
         </div>
 
         {/* Faculty Carousel */}

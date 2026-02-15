@@ -14,6 +14,9 @@ import { CampusLifePage } from './pages/CampusLifePage';
 import { CampusTourPage } from './pages/CampusTourPage';
 import { EventsPage } from './pages/EventsPage';
 import { PrivacyPolicyPage } from './pages/PrivacyPolicyPage';
+import { AicteMandatoryDisclosurePage } from './pages/AicteMandatoryDisclosurePage';
+import { BoardOfGovernorsPage } from './pages/BoardOfGovernorsPage';
+import { StatutoryCommitteesPage } from './pages/StatutoryCommitteesPage';
 import { PgdmPlusLandingPage } from './pages/PgdmPlusLandingPage';
 import { PgdmFintechLandingPage } from './pages/PgdmFintechLandingPage';
 import { WorkingExecutivesLandingPage } from './pages/WorkingExecutivesLandingPage';
@@ -65,6 +68,9 @@ function AppContent(): React.JSX.Element {
         <Route path="/campus-tour" element={<CampusTourPage />} />
         <Route path="/events" element={<EventsPage />} />
         <Route path="/privacy-policy" element={<PrivacyPolicyPage />} />
+        <Route path="/aicte-mandatory-disclosure" element={<AicteMandatoryDisclosurePage />} />
+        <Route path="/board-of-governors" element={<BoardOfGovernorsPage />} />
+        <Route path="/statutory-committees" element={<StatutoryCommitteesPage />} />
         <Route path="/pgdm-executive-courses-kolkata" element={<Navigate to="/programs/pgdm-operations-working-executive" replace />} />
         <Route path="/pgdm-executive-courses-kolkata/" element={<Navigate to="/programs/pgdm-operations-working-executive" replace />} />
         <Route path="/pgdm-business-analytics-college-kolkata" element={<Navigate to="/programs" replace />} />
@@ -93,4 +99,3 @@ export function App(): React.JSX.Element {
     </HelmetProvider>
   );
 }
-
