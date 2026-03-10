@@ -48,7 +48,7 @@ export function StatutoryCommitteesPage() {
                                 View Committee Document
                                 <ArrowRight className="h-4 w-4" />
                             </a>
-                            <a href="/uploads/files/Anti_Ragging_Committee_and_Squad.pdf" download className="ml-4 text-sm text-gray-600 hover:text-gray-800">Download</a>
+                            <a href="/uploads/files/Anti_Ragging_Committee_and_Squad.pdf" target="_blank" rel="noopener noreferrer" className="ml-4 text-sm text-gray-600 hover:text-gray-800">Open</a>
                         </div>
                     </div>
 
@@ -65,7 +65,7 @@ export function StatutoryCommitteesPage() {
                                 View Anti-Ragging Squad Document
                                 <ArrowRight className="h-4 w-4" />
                             </a>
-                            <a href="/uploads/files/Anti_Ragging_Committee_and_Squad.pdf" download className="ml-4 text-sm text-gray-600 hover:text-gray-800">Download</a>
+                            <a href="/uploads/files/Anti_Ragging_Committee_and_Squad.pdf" target="_blank" rel="noopener noreferrer" className="ml-4 text-sm text-gray-600 hover:text-gray-800">Open</a>
                         </div>
                     </div>
 
@@ -89,7 +89,7 @@ export function StatutoryCommitteesPage() {
                                 View ICC Document
                                 <ArrowRight className="h-4 w-4" />
                             </a>
-                            <a href="/uploads/files/Internal_Committee.pdf" download className="ml-4 text-sm text-gray-600 hover:text-gray-800">Download</a>
+                            <a href="/uploads/files/Internal_Committee.pdf" target="_blank" rel="noopener noreferrer" className="ml-4 text-sm text-gray-600 hover:text-gray-800">Open</a>
                         </div>
                     </div>
 
@@ -112,7 +112,7 @@ export function StatutoryCommitteesPage() {
                                 View Grievance Redressal Document
                                 <ArrowRight className="h-4 w-4" />
                             </a>
-                            <a href="/uploads/files/Grievance_Redressal_Committee.pdf" download className="ml-4 text-sm text-gray-600 hover:text-gray-800">Download</a>
+                            <a href="/uploads/files/Grievance_Redressal_Committee.pdf" target="_blank" rel="noopener noreferrer" className="ml-4 text-sm text-gray-600 hover:text-gray-800">Open</a>
                         </div>
                     </div>
 
@@ -129,7 +129,7 @@ export function StatutoryCommitteesPage() {
                                 View SC/ST Committee Document
                                 <ArrowRight className="h-4 w-4" />
                             </a>
-                            <a href="/uploads/files/SC.ST_Committee.pdf" download className="ml-4 text-sm text-gray-600 hover:text-gray-800">Download</a>
+                            <a href="/uploads/files/SC.ST_Committee.pdf" target="_blank" rel="noopener noreferrer" className="ml-4 text-sm text-gray-600 hover:text-gray-800">Open</a>
                         </div>
                     </div>
                 </div>
@@ -168,8 +168,8 @@ export function StatutoryCommitteesPage() {
                                         Anti Ragging Committee and Squad (PDF)
                                     </a>
                                 </div>
-                                <a href="/uploads/files/Anti_Ragging_Committee_and_Squad.pdf" download className="text-sm text-gray-600 hover:text-gray-800 flex items-center gap-2">
-                                    Download <ArrowRight className="h-4 w-4" />
+                                <a href="/uploads/files/Anti_Ragging_Committee_and_Squad.pdf" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-600 hover:text-gray-800 flex items-center gap-2">
+                                    Open <ArrowRight className="h-4 w-4" />
                                 </a>
                             </li>
 
@@ -180,8 +180,8 @@ export function StatutoryCommitteesPage() {
                                         Grievance Redressal Committee (PDF)
                                     </a>
                                 </div>
-                                <a href="/uploads/files/Grievance_Redressal_Committee.pdf" download className="text-sm text-gray-600 hover:text-gray-800 flex items-center gap-2">
-                                    Download <ArrowRight className="h-4 w-4" />
+                                <a href="/uploads/files/Grievance_Redressal_Committee.pdf" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-600 hover:text-gray-800 flex items-center gap-2">
+                                    Open <ArrowRight className="h-4 w-4" />
                                 </a>
                             </li>
 
@@ -192,8 +192,8 @@ export function StatutoryCommitteesPage() {
                                         Internal Committee (PDF)
                                     </a>
                                 </div>
-                                <a href="/uploads/files/Internal_Committee.pdf" download className="text-sm text-gray-600 hover:text-gray-800 flex items-center gap-2">
-                                    Download <ArrowRight className="h-4 w-4" />
+                                <a href="/uploads/files/Internal_Committee.pdf" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-600 hover:text-gray-800 flex items-center gap-2">
+                                    Open <ArrowRight className="h-4 w-4" />
                                 </a>
                             </li>
 
@@ -204,8 +204,8 @@ export function StatutoryCommitteesPage() {
                                         SC/ST Committee (PDF)
                                     </a>
                                 </div>
-                                <a href="/uploads/files/SC.ST_Committee.pdf" download className="text-sm text-gray-600 hover:text-gray-800 flex items-center gap-2">
-                                    Download <ArrowRight className="h-4 w-4" />
+                                <a href="/uploads/files/SC.ST_Committee.pdf" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-600 hover:text-gray-800 flex items-center gap-2">
+                                    Open <ArrowRight className="h-4 w-4" />
                                 </a>
                             </li>
                         </ul>
