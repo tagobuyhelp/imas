@@ -5,7 +5,7 @@ import { applyNow, downloadBrochure } from '../lib/utils';
 import { Download, ArrowRight, FileText } from 'lucide-react';
 
 export function AicteMandatoryDisclosurePage() {
-    const pdfHref = '/uploads/aicte_mandatory_disclosure.pdf';
+    const pdfHref = '/uploads/files/IMAS_Mandatoy_DIsclosure.pdf';
 
     const items = [
         'Name & Address of the Institution',
@@ -69,6 +69,25 @@ export function AicteMandatoryDisclosurePage() {
                         <p className="text-gray-800 font-medium">
                             IMAS Kolkata is committed to maintaining high academic standards and ensuring full compliance with all statutory bodies.
                         </p>
+
+                        <div className="mt-8">
+                            <div className="flex items-center justify-between gap-3 mb-3">
+                                <h3 className="text-base md:text-lg font-semibold text-gray-900">Preview</h3>
+                                <a href={pdfHref} target="_blank" rel="noopener noreferrer" className="shrink-0">
+                                    <Button variant="outline" className="border-[#143674] text-[#143674] hover:bg-[#143674] hover:text-white inline-flex items-center gap-2">
+                                        <FileText className="h-4 w-4" />
+                                        Open PDF
+                                    </Button>
+                                </a>
+                            </div>
+                            <div className="rounded-xl border border-gray-200 overflow-hidden bg-gray-50">
+                                <iframe
+                                    title="AICTE Mandatory Disclosure PDF"
+                                    src={pdfHref}
+                                    className="w-full h-[70vh]"
+                                />
+                            </div>
+                        </div>
                         <div className="mt-8 flex flex-col sm:flex-row gap-3">
                             <Button className={`${IMAS_TAILWIND_CLASSES.GRADIENT_PRIMARY} text-white`} onClick={applyNow}>
                                 Apply Now

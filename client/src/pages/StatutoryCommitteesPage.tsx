@@ -41,6 +41,15 @@ export function StatutoryCommitteesPage() {
                             <li className="flex items-start gap-2"><CheckCircle className={`${IMAS_TAILWIND_CLASSES.TEXT_TEAL} h-4 w-4 mt-0.5`} />Create awareness among students</li>
                             <li className="flex items-start gap-2"><CheckCircle className={`${IMAS_TAILWIND_CLASSES.TEXT_TEAL} h-4 w-4 mt-0.5`} />Investigate complaints and recommend action</li>
                         </ul>
+
+                        {/* File link for Anti-Ragging Committee */}
+                        <div className="mt-4">
+                            <a href="/uploads/files/Anti_Ragging_Committee_and_Squad.pdf" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-[#143674] font-medium hover:underline">
+                                View Committee Document
+                                <ArrowRight className="h-4 w-4" />
+                            </a>
+                            <a href="/uploads/files/Anti_Ragging_Committee_and_Squad.pdf" download className="ml-4 text-sm text-gray-600 hover:text-gray-800">Download</a>
+                        </div>
                     </div>
 
                     <div className="rounded-2xl border border-gray-200 p-6">
@@ -49,6 +58,15 @@ export function StatutoryCommitteesPage() {
                             <h2 className="text-xl font-bold text-gray-900">Anti-Ragging Proctorial Squad</h2>
                         </div>
                         <p className="text-gray-700">A dedicated squad to monitor campus premises and ensure discipline and student safety.</p>
+
+                        {/* File link for Proctorial Squad (uses same anti-ragging document) */}
+                        <div className="mt-4">
+                            <a href="/uploads/files/Anti_Ragging_Committee_and_Squad.pdf" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-[#143674] font-medium hover:underline">
+                                View Anti-Ragging Squad Document
+                                <ArrowRight className="h-4 w-4" />
+                            </a>
+                            <a href="/uploads/files/Anti_Ragging_Committee_and_Squad.pdf" download className="ml-4 text-sm text-gray-600 hover:text-gray-800">Download</a>
+                        </div>
                     </div>
 
                     <div className="rounded-2xl border border-gray-200 p-6">
@@ -64,6 +82,15 @@ export function StatutoryCommitteesPage() {
                             <li className="flex items-start gap-2"><CheckCircle className={`${IMAS_TAILWIND_CLASSES.TEXT_TEAL} h-4 w-4 mt-0.5`} />Conduct impartial inquiries</li>
                             <li className="flex items-start gap-2"><CheckCircle className={`${IMAS_TAILWIND_CLASSES.TEXT_TEAL} h-4 w-4 mt-0.5`} />Recommend corrective actions</li>
                         </ul>
+
+                        {/* File link for ICC */}
+                        <div className="mt-4">
+                            <a href="/uploads/files/Internal_Committee.pdf" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-[#143674] font-medium hover:underline">
+                                View ICC Document
+                                <ArrowRight className="h-4 w-4" />
+                            </a>
+                            <a href="/uploads/files/Internal_Committee.pdf" download className="ml-4 text-sm text-gray-600 hover:text-gray-800">Download</a>
+                        </div>
                     </div>
 
                     <div className="rounded-2xl border border-gray-200 p-6">
@@ -78,12 +105,32 @@ export function StatutoryCommitteesPage() {
                             <li className="flex items-start gap-2"><CheckCircle className={`${IMAS_TAILWIND_CLASSES.TEXT_TEAL} h-4 w-4 mt-0.5`} />Provide timely resolution</li>
                             <li className="flex items-start gap-2"><CheckCircle className={`${IMAS_TAILWIND_CLASSES.TEXT_TEAL} h-4 w-4 mt-0.5`} />Ensure transparency and fairness</li>
                         </ul>
+
+                        {/* File link for Grievance Redressal Committee */}
+                        <div className="mt-4">
+                            <a href="/uploads/files/Grievance_Redressal_Committee.pdf" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-[#143674] font-medium hover:underline">
+                                View Grievance Redressal Document
+                                <ArrowRight className="h-4 w-4" />
+                            </a>
+                            <a href="/uploads/files/Grievance_Redressal_Committee.pdf" download className="ml-4 text-sm text-gray-600 hover:text-gray-800">Download</a>
+                        </div>
                     </div>
 
+                    {/* New SC/ST Committee card with PDF link */}
                     <div className="rounded-2xl border border-gray-200 p-6">
-                        <p className="text-gray-800 font-medium">
-                            IMAS Kolkata is committed to upholding dignity, equality, and student welfare through these statutory bodies.
-                        </p>
+                        <div className="flex items-center gap-3 mb-2">
+                            <Shield className={`${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE} h-6 w-6`} />
+                            <h2 className="text-xl font-bold text-gray-900">SC/ST Committee</h2>
+                        </div>
+                        <p className="text-gray-700 mb-4">Committed to safeguarding the rights and welfare of SC/ST students and addressing related issues on campus.</p>
+
+                        <div className="mt-4">
+                            <a href="/uploads/files/SC.ST_Committee.pdf" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-[#143674] font-medium hover:underline">
+                                View SC/ST Committee Document
+                                <ArrowRight className="h-4 w-4" />
+                            </a>
+                            <a href="/uploads/files/SC.ST_Committee.pdf" download className="ml-4 text-sm text-gray-600 hover:text-gray-800">Download</a>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -104,6 +151,64 @@ export function StatutoryCommitteesPage() {
                                 Enquire Now
                             </Button>
                         </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Documents section: list PDFs available in public/uploads/files */}
+            <section className="py-10 bg-white">
+                <div className="max-w-[1000px] mx-auto px-4">
+                    <div className="rounded-2xl border border-gray-200 p-6 bg-white">
+                        <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-4">Important Documents</h3>
+                        <ul className="space-y-3">
+                            <li className="flex items-center justify-between">
+                                <div className="flex items-center gap-3">
+                                    <CheckCircle className={`${IMAS_TAILWIND_CLASSES.TEXT_TEAL} h-5 w-5`} />
+                                    <a href="/uploads/files/Anti_Ragging_Committee_and_Squad.pdf" target="_blank" rel="noopener noreferrer" className="text-[#143674] hover:underline">
+                                        Anti Ragging Committee and Squad (PDF)
+                                    </a>
+                                </div>
+                                <a href="/uploads/files/Anti_Ragging_Committee_and_Squad.pdf" download className="text-sm text-gray-600 hover:text-gray-800 flex items-center gap-2">
+                                    Download <ArrowRight className="h-4 w-4" />
+                                </a>
+                            </li>
+
+                            <li className="flex items-center justify-between">
+                                <div className="flex items-center gap-3">
+                                    <CheckCircle className={`${IMAS_TAILWIND_CLASSES.TEXT_TEAL} h-5 w-5`} />
+                                    <a href="/uploads/files/Grievance_Redressal_Committee.pdf" target="_blank" rel="noopener noreferrer" className="text-[#143674] hover:underline">
+                                        Grievance Redressal Committee (PDF)
+                                    </a>
+                                </div>
+                                <a href="/uploads/files/Grievance_Redressal_Committee.pdf" download className="text-sm text-gray-600 hover:text-gray-800 flex items-center gap-2">
+                                    Download <ArrowRight className="h-4 w-4" />
+                                </a>
+                            </li>
+
+                            <li className="flex items-center justify-between">
+                                <div className="flex items-center gap-3">
+                                    <CheckCircle className={`${IMAS_TAILWIND_CLASSES.TEXT_TEAL} h-5 w-5`} />
+                                    <a href="/uploads/files/Internal_Committee.pdf" target="_blank" rel="noopener noreferrer" className="text-[#143674] hover:underline">
+                                        Internal Committee (PDF)
+                                    </a>
+                                </div>
+                                <a href="/uploads/files/Internal_Committee.pdf" download className="text-sm text-gray-600 hover:text-gray-800 flex items-center gap-2">
+                                    Download <ArrowRight className="h-4 w-4" />
+                                </a>
+                            </li>
+
+                            <li className="flex items-center justify-between">
+                                <div className="flex items-center gap-3">
+                                    <CheckCircle className={`${IMAS_TAILWIND_CLASSES.TEXT_TEAL} h-5 w-5`} />
+                                    <a href="/uploads/files/SC.ST_Committee.pdf" target="_blank" rel="noopener noreferrer" className="text-[#143674] hover:underline">
+                                        SC/ST Committee (PDF)
+                                    </a>
+                                </div>
+                                <a href="/uploads/files/SC.ST_Committee.pdf" download className="text-sm text-gray-600 hover:text-gray-800 flex items-center gap-2">
+                                    Download <ArrowRight className="h-4 w-4" />
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </section>

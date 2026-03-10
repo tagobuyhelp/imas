@@ -29,16 +29,16 @@ export interface Mentor {
 export const faculty = [
     {
         id: 'f1',
-        name: 'Dr. Kunal Sil',
-        title: 'Dean – Management',
-        qualifications: 'Ph.D., Dean of Management, IMAS Kolkata',
-        image: '/uploads/faculty/Kunal_Sil.jpg',
-        description: 'Dean of Management at IMAS Kolkata, specializing in business education and academic leadership.',
-        fullBio: 'Dr. Kunal Sil serves as Dean of Management at IMAS Kolkata. He brings a deep understanding of business education, corporate relations, and academic innovation. His focus lies in developing future-ready management graduates.',
-        expertise: 'Business Management, Academic Leadership, Corporate Relations',
-        tags: ['Management', 'Leadership', 'Corporate', 'Education'],
-        company: 'IMAS Kolkata',
-        companyLogo: '/uploads/companies/imas.png'
+        name: 'Nibir Saha',
+        title: 'Chairman',
+        qualifications: 'Chairman of IMAS, IAER, IAHM, DUC',
+        image: '/uploads/faculty/Nibir_Saha.jpeg',
+        description: 'Education entrepreneur leading institutions focused on industry-oriented higher education.',
+        fullBio: 'Nibir Saha is an education entrepreneur and the Chairman of IMAS, IAER, IAHM, and DUC. He is focused on developing industry-oriented higher education and employability-driven programmes that bridge academia and industry to enhance student outcomes and employability.',
+        expertise: 'Higher Education Leadership, Industry-Academia Collaboration, Employability-driven Programs',
+        tags: ['Leadership', 'Education', 'Industry', 'Employability'],
+        company: 'IMAS',
+        companyLogo: '/uploads/logos/imas_iaer_logo.png'
     },
     {
         id: 'f2',
