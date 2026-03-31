@@ -14,7 +14,7 @@ export function PlacementsHighlightsSection() {
   ];
 
   return (
-    <section className="py-12 bg-gradient-to-b from-white via-slate-50 to-white relative overflow-hidden">
+    <section id="placements-highlights" className="py-12 bg-gradient-to-b from-white via-slate-50 to-white relative overflow-hidden">
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute -top-24 -right-24 h-64 w-64 rounded-full bg-gradient-to-br from-[#26c1d3]/20 to-[#2e7bb3]/10 blur-3xl"></div>
         <div className="absolute -bottom-24 -left-24 h-64 w-64 rounded-full bg-gradient-to-br from-[#143674]/15 to-[#26c1d3]/10 blur-3xl"></div>

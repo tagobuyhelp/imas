@@ -37,6 +37,7 @@ export function Layout({ children, currentPage }: LayoutProps) {
     if (path === '/about') return 'about';
     if (path === '/admissions') return 'admissions';
     if (path === '/internships') return 'internships';
+    if (path === '/placements') return 'placements';
     if (path === '/contact') return 'contact';
     if (path === '/campus-life') return 'campus-life';
     return undefined;

@@ -37,7 +37,7 @@ export function PlacementsInternshipAndTrainingSection() {
   ];
 
   return (
-    <section className="py-12 bg-white">
+    <section id="placements-training" className="py-12 bg-white">
       <div className="max-w-[1260px] mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
           <Card className="border-gray-200 shadow-sm">
@@ -129,4 +129,3 @@ export function PlacementsInternshipAndTrainingSection() {
     </section>
   );
 }
-

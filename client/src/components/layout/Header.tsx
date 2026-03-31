@@ -108,6 +108,15 @@ export function Header({ currentPage, onMenuToggle }: HeaderProps) {
           { label: 'Clubs & Societies', sectionId: 'business-clubs' },
           { label: 'Industry Leaders', sectionId: 'industry-leaders' }
         ];
+      case 'placements':
+        return [
+          { label: 'Overview', sectionId: 'placements-hero' },
+          { label: 'Highlights', sectionId: 'placements-highlights' },
+          { label: 'Recruiters', sectionId: 'placements-recruiters' },
+          { label: 'Training', sectionId: 'placements-training' },
+          { label: 'FAQ', sectionId: 'placements-faq' },
+          { label: 'Success Stories', sectionId: 'placements-alumni' }
+        ];
       default:
         // Default menu for program detail pages
         return [
@@ -325,6 +334,16 @@ export function Header({ currentPage, onMenuToggle }: HeaderProps) {
               </Link>
 
               <Link
+                to="/placements"
+                className={`${IMAS_TAILWIND_CLASSES.HOVER_TEXT_TEAL} transition-colors flex-shrink-0 flex items-center gap-1 lg:gap-2 ${
+                  currentPage === 'placements' ? IMAS_TAILWIND_CLASSES.TEXT_TEAL : ''
+                }`}
+              >
+                <Briefcase className="h-4 w-4" />
+                Placements
+              </Link>
+
+              <Link
                 to="/campus-life"
                 className={`${IMAS_TAILWIND_CLASSES.HOVER_TEXT_TEAL} transition-colors flex-shrink-0 flex items-center gap-1 lg:gap-2 ${
                   currentPage === 'campus-life' ? IMAS_TAILWIND_CLASSES.TEXT_TEAL : ''
@@ -415,6 +434,7 @@ export function Header({ currentPage, onMenuToggle }: HeaderProps) {
                     'Overview': <Home className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
                     'Programs': <GraduationCap className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
                     'Program Highlights': <GraduationCap className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
+                    'Highlights': <GraduationCap className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
                     'Curriculum': <BookOpen className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
                     'Faculty': <Users className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
                     'Academic Leaders': <Users className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
@@ -432,6 +452,8 @@ export function Header({ currentPage, onMenuToggle }: HeaderProps) {
                     'Statistics': <Users className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
                     'Recruiters': <Users className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
                     'Success Stories': <Users className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
+                    'Training': <BookOpen className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
+                    'FAQ': <HelpCircle className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
                     'Admissions': <FileText className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
                     'Process': <FileText className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
                     'Apply': <FileText className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,

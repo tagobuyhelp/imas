@@ -36,7 +36,7 @@ export function PlacementsCompaniesSection() {
   const logoItems = Array.from(new Map(rawLogos.map((l) => [l.logo, l])).values());
 
   return (
-    <section className="py-12 bg-gray-50">
+    <section id="placements-recruiters" className="py-12 bg-gray-50">
       <div className="max-w-[1260px] mx-auto px-4">
         <div className="text-center mb-8">
           <div className={`inline-flex items-center gap-2 ${IMAS_TAILWIND_CLASSES.BG_MEDIUM_BLUE}/10 ${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE} px-4 py-2 rounded-full text-xs font-semibold mb-3 border ${IMAS_TAILWIND_CLASSES.BORDER_MEDIUM_BLUE}/20`}>

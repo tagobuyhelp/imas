@@ -21,6 +21,7 @@ export function Sidebar({ currentPage, isOpen, onClose }: SidebarProps) {
     { href: '/faculty', label: 'Faculty', page: 'faculty', icon: Users },
     { href: '/events', label: 'Events', page: 'events', icon: Calendar },
     { href: '/internships', label: 'Internships', page: 'internships', icon: Briefcase },
+    { href: '/placements', label: 'Placements', page: 'placements', icon: Award },
     { href: '/campus-life', label: 'Campus Life', page: 'campus-life', icon: Users },
     { href: '/contact', label: 'Contact', page: 'contact', icon: Phone },
   ];

@@ -95,6 +95,15 @@ const getMenuItemsForPage = (page?: string) => {
         { label: 'Clubs & Societies', sectionId: 'business-clubs' },
         { label: 'Industry Leaders', sectionId: 'industry-leaders' }
       ];
+    case 'placements':
+      return [
+        { label: 'Overview', sectionId: 'placements-hero' },
+        { label: 'Highlights', sectionId: 'placements-highlights' },
+        { label: 'Recruiters', sectionId: 'placements-recruiters' },
+        { label: 'Training', sectionId: 'placements-training' },
+        { label: 'FAQ', sectionId: 'placements-faq' },
+        { label: 'Success Stories', sectionId: 'placements-alumni' }
+      ];
     default:
       // Default menu for program detail pages
       return [
@@ -156,6 +165,7 @@ export function BottomNavBar({
       'Overview': <Home className="h-4 w-4" />,
       'Programs': <GraduationCap className="h-4 w-4" />,
       'Program Highlights': <GraduationCap className="h-4 w-4" />,
+      'Highlights': <GraduationCap className="h-4 w-4" />,
       'Curriculum': <BookOpen className="h-4 w-4" />,
       'Faculty': <Users className="h-4 w-4" />,
       'Academic Leaders': <Users className="h-4 w-4" />,
@@ -172,6 +182,8 @@ export function BottomNavBar({
       'Statistics': <Users className="h-4 w-4" />,
       'Recruiters': <Users className="h-4 w-4" />,
       'Success Stories': <Users className="h-4 w-4" />,
+      'Training': <BookOpen className="h-4 w-4" />,
+      'FAQ': <FileText className="h-4 w-4" />,
       'Admissions': <FileText className="h-4 w-4" />,
       'Process': <FileText className="h-4 w-4" />,
       'Apply': <FileText className="h-4 w-4" />, 
