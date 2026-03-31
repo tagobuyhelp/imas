@@ -121,6 +121,24 @@
   }
 }
 
+@keyframes scroll-vertical-up {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes scroll-vertical-down {
+  0% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
 /* Hero Image Fixes */
 .hero-background-image {
   width: 100%;
@@ -178,15 +196,23 @@ img[src*="imas_hero_image1.webp"] {
 }
 
 .animate-scroll-left {
-  animation: scroll-left 15s linear infinite;
+  animation: scroll-left 30s linear infinite;
 }
 
 .animate-scroll-right {
-  animation: scroll-left 15s linear infinite reverse;
+  animation: scroll-left 30s linear infinite reverse;
 }
 
 .animate-float {
   animation: float 3s ease-in-out infinite;
+}
+
+.animate-vertical-up {
+  animation: scroll-vertical-up 20s linear infinite;
+}
+
+.animate-vertical-down {
+  animation: scroll-vertical-down 20s linear infinite;
 }
 
 /* Animation Delay Classes */

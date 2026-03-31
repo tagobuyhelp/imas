@@ -1,90 +1,199 @@
-References Landing page : 
+PGDM Placements at IMAS Business School
 
-https://www.spjain.org/lp/elo/executive-mba?utm_source=Google&utm_medium=ppc&utm_campaign=ELO_East_West_Search_2025&cmpid=22103830469&adgroupid=173423778699&Placement=&Keyword=mba%20executive&utm_source=Google&utm_medium=ppc&utm_term=mba%20executive&utm_c
+Industry-Aligned Careers for Future Business Leaders
+The Post Graduate Diploma in Management (PGDM) programs at IMAS Business School are designed with
+a strong focus on industry employability and career outcomes.
+Through a combination of industry-oriented curriculum, corporate partnerships, internships, and career
+development training, the institute prepares students to enter leadership roles across multiple industries
+including technology, consulting, finance, analytics, healthcare, logistics, and digital business.
+The Corporate Relations &amp; Placement Cell actively engages with companies to facilitate campus
+recruitment opportunities and internships for PGDM students.
+PGDM Placement Highlights
+Placement Statistics (Indicative Trends)
+Placement Indicator Statistics
+Placement Assistance 100% Career
+Support
+Highest Salary Package ₹12 LPA
+Average Salary Package ₹4.5 – ₹6 LPA
+Internship
+Opportunities 500+ annually
+Recruiting Companies 120+
+Industry Sectors 15+
+Students graduating from the PGDM programs receive opportunities across corporate management,
+technology-driven roles, analytics, consulting, and healthcare administration.
+Our Students are working with Top Companies.
+Companies across diverse sectors recruit PGDM graduates from IMAS Business School.
+Technology &amp; IT Services
+ Tata Consultancy Services
+ Infosys
+ Wipro
+ Tech Mahindra
+ HCL Technologies
+Consulting &amp; Professional Services
+ Deloitte
+ PwC
+ EY
+ KPMG
+Banking, Finance &amp; Fintech
+ HDFC Bank
+ ICICI Bank
+ Axis Bank
+ Kotak Mahindra Bank
 
-IMAS brand assets
-brand assets IMAS
+Healthcare &amp; Hospital Management
+ Apollo Hospitals
+ Fortis Healthcare
+ Manipal Hospitals
+Aviation, Logistics &amp; Retail
+ IndiGo
+ Bluedart
+ Amazon
+ Reliance Retail
 
+Internship Program
+All PGDM students at IMAS Business School participate in industry internships, which play a vital role in
+building professional experience.
+Benefits of internships include:
+ Exposure to real corporate projects
+ Practical learning and industry insights
+ Professional networking opportunities
+ Increased chances of pre-placement offers (PPO)
+Career Development &amp; Employability Training
+IMAS Business School provides continuous career preparation support through structured training
+programs.
 
-H1-MBA / PGDM for Working Executives (2-Year Program)
-Improve Your Excellence without Leaving Your Job
+Career Development Initiatives
+ Resume and LinkedIn profile building
+ Aptitude and analytical skill development
+ Mock interviews and group discussions
+ Corporate communication training
+ Industry expert sessions and guest lectures
+ Professional certification programs
+These initiatives ensure that PGDM students develop industry-ready professional competencies.
+Placement Process
+The placement process for PGDM students follows a structured approach.
+1. Student Registration – Students submit their placement profiles to the Placement Cell.
+2. Corporate Invitations – Companies are invited for campus recruitment drives.
+3. Pre-Placement Talks – Recruiters present company details and job roles.
+4. Selection Process – Includes aptitude tests, group discussions, and interviews.
+5. Final Offers – Selected students receive job offers from recruiting companies.
+Why Recruit PGDM Graduates from IMAS Business School
 
-IMAS offers flexible, AICTE-approved Executive MBA/PGDM programmes designed for working professionals seeking part-time or weekend study options. These programmes help professionals upgrade their management skills without quitting their jobs.
-📍 Perfect for Working Professionals
-📍 Blended + On-Campus Weekend Options
-📍 Continue Job While Learning
-CTA: Apply Now | Download Brochure | Speak to Counsellor
-H2- MBA/PGDM Programme Overview
-MBA/PGDM for working professionals with a flexible schedule to develop leadership qualities, management skills, and industry-relevant expertise while balancing career and education.
+Organizations recruit PGDM graduates from IMAS because they possess:
+ Industry-oriented management training
+ Analytical and problem-solving capabilities
+ Practical exposure through internships and projects
+ Professional communication and leadership skills
+ Adaptability to modern business environments
 
-Learn from Industry professionals | Expert Mentors | Gain Certifications 
-H2- Why Choose MBA / PGDM for Working Executives at IMAS?
+Frequently Asked Questions
 
-AICTE-approved Executive MBA/PGDM Programmes
-Fully flexible schedule for working professionals
-Continue your full-time job while studying
-Blended online + weekend/evening classes
-Corporate trainers & industry mentors
-Dedicated program manager for support
-Career-focused, industry-relevant curriculum
-Practical case studies + capstone projects
- Suitable for Working Professionals
-H2: Specialisations for Working Executives
-IMAS is ideal for PGDM/MBA programs designed for mid-career working professionals. We offer specialisations in:
+1. Does IMAS Business School provide placement assistance for PGDM students?
+Yes. IMAS Business School provides comprehensive placement assistance for PGDM students through its
+Corporate Relations &amp; Placement Cell. The institute organizes campus recruitment drives, internships,
+industry networking events, and career development programs to support students in securing
+employment opportunities.
+2. What is the average salary for PGDM graduates at IMAS Business School?
+The average salary for PGDM graduates typically ranges between ₹ 8 LPA and ₹ 12 LPA, depending on
+specialization, skill set, and recruiting company.
+3. Which PGDM specialization offers the best placement opportunities?
+Specializations such as Business Analytics, Artificial Intelligence &amp; Data Science, Fintech, and Logistics &amp;
+Supply Chain Management currently offer strong placement opportunities due to increasing demand for
+data-driven and technology-focused roles.
+4. Which companies recruit PGDM students from IMAS Business School?
+Recruiters include companies from sectors such as IT services, consulting, banking, healthcare, logistics,
+aviation, and e-commerce. These companies look for graduates with strong analytical, managerial, and
+technical skills.
+5. How does IMAS Business School prepare PGDM students for placements?
+The institute prepares students through structured training programs that include:
+ Resume and LinkedIn profile development
+ Mock interviews and group discussions
+ Communication and presentation skills training
+ Aptitude and analytical skill development
+ Industry workshops and guest lectures
+6. Are internships included in the PGDM program?
+Yes. PGDM students participate in industry internships and live projects, which provide practical exposure
+to real business environments and improve employability.
+7. What job roles are offered to PGDM graduates during campus placements?
+Common roles offered during campus placements include:
+ Management Trainee
+ Business Analyst
+ Marketing Executive
+ Financial Analyst
 
-Business Analytics
-AI & Data Science
-FinTech
-Marketing
-Finance
-Human Resource
-Operations
-Healthcare & Hospital Management
-H2- Executive Program Features
-Best flexible blended PGDM for working professionals — designed for working executives who want to upgrade their potential with:
+ HR Executive
+ Supply Chain Analyst
+ Data Analyst
+ Healthcare Operations Executive
+8. Can PGDM students from IMAS Business School work in multinational companies?
+Yes. PGDM graduates with strong skills and industry exposure may receive opportunities with
+multinational corporations operating in India and global markets.
+9. What industries recruit PGDM graduates?
+PGDM graduates are recruited across multiple sectors, including:
+ Information Technology
+ Banking and Financial Services
+ Consulting
+ Healthcare Management
+ Logistics and Supply Chain
+ E-commerce and Retail
+10. Is there a dedicated placement cell at IMAS Business School?
+Yes. IMAS Business School has a Corporate Relations &amp; Placement Cell that actively connects students
+with recruiters, organizes placement drives, and facilitates internships.
+11. How early does placement preparation start for PGDM students?
+Placement preparation begins from the first year of the PGDM program, with training sessions, industry
+exposure, and skill development workshops conducted throughout the course.
+12. What skills improve placement chances for PGDM students?
+Recruiters look for graduates with skills such as:
+ Analytical thinking
+ Communication and presentation abilities
+ Data interpretation and digital tools knowledge
+ Leadership and teamwork
+ Problem-solving and decision-making
+13. Are startups and technology companies invited for campus recruitment?
+Yes. In addition to established corporations, startups, fintech companies, analytics firms, and technology-
+driven businesses also recruit PGDM graduates.
+14. Can PGDM students apply for jobs outside campus placements?
+Yes. Students are encouraged to explore both campus recruitment opportunities and off-campus job
+applications, which increases their chances of securing the best career opportunities.
+15. Why should students choose IMAS Business School for PGDM placements?
+Students choose IMAS Business School because of:
+ Industry-aligned PGDM specializations
+ Strong corporate partnerships
 
-Blended Online + Weekend Sessions
-Executive Leadership Development
-Industry Networking Circles
-Capstone Projects for Leadership Exposure
-One-on-one personal mentorship
-Corporate Skill Certifications
-Learn anytime, anywhere
-Cost-effective professional education
-Flexible EMI plans available
+ Internship-driven learning
+ Professional skill development training
+ Dedicated placement support
+These factors help students build successful careers in management, analytics, technology, finance, and
+healthcare sectors.
 
-H2- Career Growth & Support
-IMAS flexible PGDM course for working executives, supporting them in building secure career growth with.
+--------------------------------------------------------------------------------------------------------------
+Career Success Stories from IMAS Alumni
+Read about the achievements of IMAS graduates who have secured rewarding careers in fields such as
+management, analytics, finance, technology, and healthcare.
 
-Access to 900+ hiring partners
-Exclusive placement assistance
-Regular reskilling & career upgrade sessions
-Frequent placement notifications
-Virtual job fairs every 3 months
-Industry mentorship from business leaders
-Professional networking communities
-H2- Who Should Apply?
-This is an ideal opportunity for working professional mid-career individuals with an AICTE-approved PGDM/MBA flexible schedule, best suited for:
-
-working professionals
-Team leads, supervisors & managers
-Professionals preparing for promotions
-Career switchers
-Individuals needing flexible learning options
-Fresh graduates with less work experience
-H2- Eligibility
-The two requirements are a Bachelor’s degree with a minimum of 50% and a valid entrance test score to be eligible for the PGDM for experienced professionals. Accepted exams include CAT, MAT, WBJEE-MAT, and GMAT.
-H2- Admissions Open – Apply Now
-Upgrade your potential with IMAS’s PGDM/MBA for experienced professionals without quitting your job.
- Blended PGDM/MBA course for executives — apply now for Weekend MBA/PGDM course for executives. Apply now for flexible PGDM for working professionals.
-
-
-📍 Campus Address:
- Plot No 37, Newtown Action Area – III
- Near St. Xavier’s University, Newtown
- Block – Bhangar-II
- Kolkata, West Bengal – 700160
-📞 +91 90888 22777
- 🌐 www.imas.ac.in
- 📧 admission@imas.ac.in
-
+Arindam Chatterjee
+TCS
+Sayan Mukherjee
+Wipro
+Anirban Ghosh
+Infosys
+Abhishek Dutta
+Microsoft
+Debarghya Das
+PwC
+Ritam Bose
+PwC
+Sagnik Mitra
+Accenture
+Aditya Sharma
+Deloitte
+Nikhil Agarwal
+EY
+Ranjan Ghosh
+EY
+Rohan Mehta
+KPMG
+Sohini Banerjee
+Hindustan Unilever
+Debolina Ghosh
+ITC Limited
