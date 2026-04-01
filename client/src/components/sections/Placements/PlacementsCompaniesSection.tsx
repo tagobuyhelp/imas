@@ -20,7 +20,7 @@ export function PlacementsCompaniesSection() {
     { name: 'BainCapital', logo: '/uploads/bcpe_logo.png' },
     { name: 'JPMorgan Chase & Co.', logo: '/uploads/Partnership-Creatives--48-.png' },
     { name: 'TCS', logo: '/uploads/companies/Tata_Consultancy_Services_old_logo.svg.png' },
-    { name: 'Infosys', logo: '/uploads/InfosysLogo.png' },
+    { name: 'Infosys', logo: '/uploads/companies/Infosys_logo.svg.png' },
     { name: 'Wipro', logo: '/uploads/Wipro_Primary_Logo_Color_RGB.svg.png' },
     { name: 'Tech Mahindra', logo: '/uploads/companies/tech_mahindra.png' },
     { name: 'HDFC Bank', logo: '/uploads/companies/HDFC-Bank-logo.png' },
