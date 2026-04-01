@@ -8,7 +8,7 @@ export function BoardOfGovernorsPage() {
       <section className="py-16 bg-gradient-to-br from-gray-900 via-[#143674] to-[#2e7bb3] text-white relative overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src="/uploads/campus_photos/imas_campus.png"
+            src="/uploads/campus_photos/NEW_IMAS_Building_Logo.png"
             alt="IMAS Campus"
             className="w-full h-full object-cover"
           />

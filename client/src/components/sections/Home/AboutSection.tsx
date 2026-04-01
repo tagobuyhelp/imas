@@ -127,7 +127,7 @@ export function AboutSection() {
               <div className="bg-white rounded-lg shadow-md border border-gray-100 overflow-hidden">
                 <div className="relative h-full sm:h-full md:h-full lg:h-full">
                   <img
-                    src="/uploads/campus_photos/imas_campus.png"
+                    src="/uploads/campus_photos/NEW_IMAS_Building_Logo.png"
                     alt="IMAS Campus - Premier Business School in Kolkata"
                     className="w-full h-full object-cover"
                     onError={(e) => {

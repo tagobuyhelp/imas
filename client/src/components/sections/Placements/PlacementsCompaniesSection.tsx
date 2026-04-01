@@ -7,9 +7,9 @@ export function PlacementsCompaniesSection() {
     { name: 'Amazon', logo: '/uploads/Customer-logo_Amazon.png' },
     { name: 'Google', logo: '/uploads/Google_logo_2013-2015-600x206.png' },
     { name: 'Deloitte', logo: '/uploads/deloitte.png' },
-    { name: 'PwC', logo: '/uploads/pwclogo.png' },
+    { name: 'PwC', logo: '/uploads/companies/PwC_Company_Logo.svg.png' },
     { name: 'EY', logo: '/uploads/EY_logo_2019.svg.png' },
-    { name: 'KPMG', logo: '/uploads/kpmglogo.png' },
+    { name: 'KPMG', logo: '/uploads/companies/KPMG.svg.png' },
     { name: 'Accenture', logo: '/uploads/Accenture.svg.webp' },
     { name: 'Flipkart', logo: '/uploads/flipkart-logo.webp' },
     { name: 'Zomato', logo: '/uploads/Zomato-Logo.png' },
@@ -19,18 +19,18 @@ export function PlacementsCompaniesSection() {
     { name: 'Razorpay', logo: '/uploads/Razorpay-Logo.jpg' },
     { name: 'BainCapital', logo: '/uploads/bcpe_logo.png' },
     { name: 'JPMorgan Chase & Co.', logo: '/uploads/Partnership-Creatives--48-.png' },
-    { name: 'TCS', logo: '/uploads/tcsLogo.webp' },
+    { name: 'TCS', logo: '/uploads/companies/Tata_Consultancy_Services_old_logo.svg.png' },
     { name: 'Infosys', logo: '/uploads/InfosysLogo.png' },
     { name: 'Wipro', logo: '/uploads/Wipro_Primary_Logo_Color_RGB.svg.png' },
     { name: 'Tech Mahindra', logo: '/uploads/companies/tech_mahindra.png' },
-    { name: 'HDFC Bank', logo: '/uploads/hdfc-bank-logo-czdJZ5Tf_t.jpg' },
+    { name: 'HDFC Bank', logo: '/uploads/companies/HDFC-Bank-logo.png' },
     { name: 'ICICI Bank', logo: '/uploads/ICICI_Bank_Logo.svg.png' },
-    { name: 'Axis Bank', logo: '/uploads/axisBankLogo.png' },
+    { name: 'Axis Bank', logo: '/uploads/companies/Axis_Bank_logo.svg.png' },
     { name: 'Kotak Mahindra Bank', logo: '/uploads/kotaklogo.png' },
     { name: 'Apollo Hospitals', logo: '/uploads/apollo-hospitals-logo-png-transparent.png' },
-    { name: 'Fortis Healthcare', logo: '/uploads/fortis_logo.png' },
+    { name: 'Fortis Healthcare', logo: '/uploads/companies/Fortis-Logo.png' },
     { name: 'Manipal Hospitals', logo: '/uploads/manipalhospitallogo.png' },
-    { name: 'Blue Dart', logo: '/uploads/460-4608309_blue-dart-logo-transparent-blue-dart-express-logo.png' }
+    { name: 'Blue Dart', logo: '/uploads/companies/Blue_Dart_logo_transparent.png' }
   ];
 
   const logoItems = Array.from(new Map(rawLogos.map((l) => [l.logo, l])).values());

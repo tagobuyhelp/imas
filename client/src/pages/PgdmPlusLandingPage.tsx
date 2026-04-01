@@ -765,7 +765,7 @@ export function PgdmPlusLandingPage(): React.JSX.Element {
                     <div className="text-[11px] font-semibold uppercase tracking-wide">Corporate Training</div>
                     <div className="relative mt-3 h-40 sm:h-60 w-full overflow-hidden rounded-xl">
                       <img
-                        src={'/uploads/campus_photos/imas_campus.png'}
+                        src={'/uploads/campus_photos/NEW_IMAS_Building_Logo.png'}
                         alt={'Corporate training workshop'}
                         className="absolute inset-0 h-full w-full object-cover opacity-70"
                         onError={(e) => { const t = e.currentTarget as HTMLImageElement; t.src = '/uploads/logos/IMAS_LOGO_PNG.png' }}
