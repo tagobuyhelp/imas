@@ -216,7 +216,7 @@ export function Header({ currentPage, onMenuToggle }: HeaderProps) {
         <div className="w-full px-6">
           <div className="flex items-center justify-between text-sm">
             <div className="flex items-center gap-4">
-              <span className="font-semibold">Final Admission Phase I – Apply Before the Deadline!</span>
+              <span className="font-semibold text-[12px]  md:text-[14px]">Final Admission Phase I – Apply Before the Deadline!</span>
               <div className="flex items-center gap-2">
                 <Clock className="h-4 w-4" />
                 <span className="font-mono">

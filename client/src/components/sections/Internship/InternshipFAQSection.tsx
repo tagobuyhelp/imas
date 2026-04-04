@@ -28,9 +28,9 @@ export function InternshipFAQSection() {
   ];
 
   return (
-    <section id="faq" className="bg-[#f7f8ff] px-4 py-12">
+    <section id="faq" className="bg-[#f7f8ff] px-4 py-10 sm:py-12">
       <div className="mx-auto max-w-6xl">
-        <h2 className="text-xl font-semibold text-[#143674] mb-6 text-center sm:text-left">
+        <h2 className="text-lg font-semibold text-[#143674] mb-5 text-center sm:text-left sm:text-xl sm:mb-6">
           Frequently Asked Questions
         </h2>
 
@@ -39,7 +39,7 @@ export function InternshipFAQSection() {
             <Accordion.Item
               key={item.question}
               value={item.question}
-              className="rounded-xl bg-white p-4 shadow-[0_10px_30px_rgba(20,54,116,0.08)]"
+              className="rounded-xl bg-white p-3.5 shadow-[0_10px_30px_rgba(20,54,116,0.08)] sm:p-4"
             >
               <Accordion.Header className="flex">
                 <Accordion.Trigger className="group flex w-full items-center justify-between gap-3 text-left font-semibold text-[#143674] outline-none transition-colors data-[state=open]:text-[#2e7bb3]">
@@ -47,7 +47,7 @@ export function InternshipFAQSection() {
                   <ChevronDown className="h-4 w-4 shrink-0 text-[#143674]/70 transition-transform duration-200 group-data-[state=open]:rotate-180 group-data-[state=open]:text-[#2e7bb3]" />
                 </Accordion.Trigger>
               </Accordion.Header>
-              <Accordion.Content className="pt-2 text-sm text-[#444655] data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down">
+              <Accordion.Content className="pt-2 text-xs text-[#444655] sm:text-sm data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down">
                 {item.answer}
               </Accordion.Content>
             </Accordion.Item>

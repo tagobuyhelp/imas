@@ -32,31 +32,31 @@ export function InternshipWhyInternshipsMatterSection() {
   ];
 
   return (
-    <section className="bg-[#f7f8ff] py-16">
+    <section className="bg-[#f7f8ff] py-10 sm:py-16">
       <div className="mx-auto max-w-6xl px-4">
         <div className="text-center">
-          <h2 className="text-3xl font-bold text-[#143674]">Why Internships Matter</h2>
-          <p className="mt-2 text-sm text-[#444655] sm:text-base">
+          <h2 className="text-2xl font-bold text-[#143674] sm:text-3xl">Why Internships Matter</h2>
+          <p className="mt-2 text-xs text-[#444655] sm:text-base">
             Bridge the gap between academic learning and real-world experience
           </p>
         </div>
 
-        <div className="mt-10 flex snap-x snap-mandatory gap-4 overflow-x-auto pb-2 [-webkit-overflow-scrolling:touch] sm:grid sm:snap-none sm:grid-cols-2 sm:gap-6 sm:overflow-visible sm:pb-0 lg:grid-cols-4">
+        <div className="mt-7 flex snap-x snap-mandatory gap-3 overflow-x-auto pb-2 [-webkit-overflow-scrolling:touch] sm:mt-10 sm:grid sm:snap-none sm:grid-cols-2 sm:gap-6 sm:overflow-visible sm:pb-0 lg:grid-cols-4">
           {cards.map((c) => {
             const Icon = c.icon;
             return (
               <div
                 key={c.title}
-                className="group w-[85%] min-w-[280px] shrink-0 snap-start rounded-xl border border-[#eaeeff] bg-white p-5 shadow-[0_10px_30px_rgba(20,54,116,0.08)] transition-all duration-300 active:scale-[0.99] sm:w-auto sm:min-w-0 sm:shrink sm:snap-align-none sm:hover:-translate-y-1 sm:hover:border-[#26c1d3] sm:hover:shadow-[0_18px_45px_rgba(38,193,211,0.15)]"
+                className="group w-[82%] min-w-[240px] shrink-0 snap-start rounded-xl border border-[#eaeeff] bg-white p-4 shadow-[0_10px_30px_rgba(20,54,116,0.08)] transition-all duration-300 active:scale-[0.99] sm:w-auto sm:min-w-0 sm:shrink sm:snap-align-none sm:p-5 sm:hover:-translate-y-1 sm:hover:border-[#26c1d3] sm:hover:shadow-[0_18px_45px_rgba(38,193,211,0.15)]"
               >
                 <div className="flex items-center justify-center sm:justify-start">
-                  <div className="rounded-xl bg-[#f7f8ff] p-3 transition-colors duration-300 sm:group-hover:bg-[#26c1d3]/10">
-                    <Icon className="h-8 w-8 text-[#2e7bb3] transition-colors duration-300 sm:group-hover:text-[#26c1d3]" />
+                  <div className="rounded-xl bg-[#f7f8ff] p-2.5 transition-colors duration-300 sm:p-3 sm:group-hover:bg-[#26c1d3]/10">
+                    <Icon className="h-7 w-7 text-[#2e7bb3] transition-colors duration-300 sm:h-8 sm:w-8 sm:group-hover:text-[#26c1d3]" />
                   </div>
                 </div>
-                <div className="mt-5 text-center sm:text-left">
+                <div className="mt-4 text-center sm:mt-5 sm:text-left">
                   <div className="text-base font-semibold text-[#143674]">{c.title}</div>
-                  <div className="mt-2 text-sm leading-relaxed text-gray-600">{c.text}</div>
+                  <div className="mt-1.5 text-sm leading-relaxed text-gray-600 sm:mt-2">{c.text}</div>
                 </div>
               </div>
             );

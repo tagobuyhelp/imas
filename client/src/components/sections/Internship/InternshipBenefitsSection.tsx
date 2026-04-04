@@ -12,24 +12,24 @@ export function InternshipBenefitsSection() {
   ];
 
   return (
-    <section className="bg-gradient-to-br from-[#143674] via-[#00bbcc] to-[#6dfacd] px-4 py-12 text-white">
+    <section className="bg-gradient-to-br from-[#143674] via-[#00bbcc] to-[#6dfacd] px-4 py-10 sm:py-12 text-white">
       <div className="mx-auto max-w-6xl">
-        <h2 className="mb-6 text-xl font-semibold">What You Gain</h2>
+        <h2 className="mb-5 text-lg font-semibold sm:text-xl sm:mb-6">What You Gain</h2>
 
-        <div className="grid grid-cols-1 gap-6 lg:grid-cols-2 lg:items-start lg:gap-10">
+        <div className="grid grid-cols-1 gap-5 lg:grid-cols-2 lg:items-start lg:gap-10">
           <div className="relative overflow-hidden rounded-2xl shadow-[0_18px_60px_rgba(0,0,0,0.35)]">
             <img
               src="/uploads/working/hero_image4.jpg"
               alt="Professional success and growth"
-              className="h-[340px] w-full object-cover sm:h-[420px] lg:h-[620px]"
+              className="h-[260px] w-full object-cover sm:h-[420px] lg:h-[620px]"
               loading="lazy"
             />
             <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(180deg,rgba(0,0,0,0.10),rgba(0,0,0,0.55))]" />
             <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(700px_circle_at_35%_15%,rgba(109,250,205,0.25),transparent_60%)]" />
           </div>
 
-          <div className="rounded-2xl border border-white/15 bg-white/10 p-5 backdrop-blur-md">
-            <ul className="space-y-3 text-sm text-[#e6f7ff]">
+          <div className="rounded-2xl border border-white/15 bg-white/10 p-4 backdrop-blur-md sm:p-5">
+            <ul className="space-y-2.5 text-xs text-[#e6f7ff] sm:space-y-3 sm:text-sm">
               {benefits.map((b, idx) => {
                 const isHighlighted = b === 'Opportunity for pre-placement offers';
                 return (

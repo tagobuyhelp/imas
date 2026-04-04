@@ -61,33 +61,33 @@ export function InternshipHeroSection() {
         </div>
       </div>
 
-      <div className="relative mx-auto max-w-[1260px] px-4 py-8 sm:py-12 lg:py-14">
-        <div className="grid grid-cols-1 items-center gap-6 lg:grid-cols-2 lg:gap-10">
+      <div className="relative mx-auto max-w-[1260px] px-4 py-6 sm:py-12 lg:py-14">
+        <div className="grid grid-cols-1 items-center gap-5 lg:grid-cols-2 lg:gap-10">
           <div className="text-center lg:text-left">
             <div className="inline-flex items-center rounded-full border border-white/15 bg-white/10 px-3 py-1 text-xs font-semibold text-white/90 backdrop-blur-md">
               INTERNSHIPS
             </div>
 
-            <div className="mt-4 rounded-3xl border border-white/15 bg-white/10 p-4 backdrop-blur-xl sm:p-7">
-              <h1 className="text-[28px] font-bold leading-tight text-white sm:text-4xl lg:text-[44px]">
+            <div className="mt-3 rounded-3xl border border-white/15 bg-white/10 p-3 backdrop-blur-xl sm:mt-4 sm:p-7">
+              <h1 className="text-[24px] font-bold leading-tight text-white sm:text-4xl lg:text-[44px]">
                 Real Industry Experience for Future Business Leaders
               </h1>
-              <p className="mt-3 text-sm leading-relaxed text-[#eaeeff] sm:text-base">
+              <p className="mt-2 text-xs leading-relaxed text-[#eaeeff] sm:mt-3 sm:text-base">
                 Gain hands-on experience, work on real business projects, and build a career-ready skillset through IMAS
                 internships.
               </p>
 
-              <div className="mt-5 flex flex-col gap-3 sm:flex-row sm:justify-center lg:justify-start">
+              <div className="mt-4 flex flex-row gap-3 sm:mt-5 sm:justify-center lg:justify-start">
                 <Button
                   onClick={applyNow}
-                  className="h-11 rounded-xl bg-[#f9f871] px-6 text-base font-semibold text-[#143674] hover:text-white shadow-[0_12px_40px_rgba(0,0,0,0.25)] transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_40px_rgba(249,248,113,0.35)] active:scale-[0.99]"
+                  className="h-10 flex-1 rounded-xl bg-[#f9f871] px-4 text-sm font-semibold text-[#143674] hover:text-white shadow-[0_12px_40px_rgba(0,0,0,0.25)] transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_40px_rgba(249,248,113,0.35)] active:scale-[0.99] sm:h-11 sm:flex-none sm:px-6 sm:text-base"
                 >
                   Apply Now
                 </Button>
                 <Button
                   variant="outline"
                   onClick={downloadBrochure}
-                  className="h-11 rounded-xl border-white/35 bg-white/5 px-6 text-base font-semibold text-white/95 transition-all duration-300 hover:bg-white/10 hover:shadow-[0_0_30px_rgba(38,193,211,0.18)]"
+                  className="h-10 flex-1 rounded-xl border-white/35 bg-white/5 px-4 text-sm font-semibold text-white/95 transition-all duration-300 hover:bg-white/10 hover:shadow-[0_0_30px_rgba(38,193,211,0.18)] sm:h-11 sm:flex-none sm:px-6 sm:text-base"
                 >
                   Download Brochure
                 </Button>
@@ -100,7 +100,7 @@ export function InternshipHeroSection() {
               <img
                 src="/uploads/internship/hero-main-visual.webp"
                 alt="Young professional working on laptop"
-                className="h-[240px] w-full object-cover sm:h-[340px] lg:h-[420px]"
+                className="h-[200px] w-full object-cover sm:h-[340px] lg:h-[420px]"
               />
 
               <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(135deg,rgba(20,54,116,0.35),transparent_40%,rgba(202,84,129,0.18))]" />
@@ -144,7 +144,7 @@ export function InternshipHeroSection() {
                         src={s.src}
                         alt="IMAS internship student"
                         loading="lazy"
-                        className="inline-block h-9 w-9 rounded-full object-cover ring-2 ring-white/20 sm:h-10 sm:w-10"
+                        className="inline-block h-8 w-8 rounded-full object-cover ring-2 ring-white/20 sm:h-10 sm:w-10"
                       />
                     ))}
                   </div>
@@ -158,7 +158,7 @@ export function InternshipHeroSection() {
               <div className="pointer-events-none absolute inset-y-0 left-0 w-10 bg-[linear-gradient(90deg,rgba(20,54,116,0.85),transparent)]" />
               <div className="pointer-events-none absolute inset-y-0 right-0 w-10 bg-[linear-gradient(90deg,transparent,rgba(20,54,116,0.85))]" />
 
-              <div className="flex items-center gap-3 px-4 py-2.5">
+              <div className="flex items-center gap-3 px-4 py-2">
                 <div className="hidden text-xs font-semibold uppercase tracking-wide text-white/70 sm:block">
                   Hiring Partners
                 </div>
@@ -171,7 +171,7 @@ export function InternshipHeroSection() {
                             src={l.src}
                             alt={l.name}
                             loading="lazy"
-                            className="h-4  w-auto max-w-[110px] opacity-70 grayscale brightness-0 invert sm:h-6"
+                            className="h-4 w-auto max-w-[110px] opacity-70 grayscale brightness-0 invert sm:h-6"
                           />
                         ) : (
                           <span className="text-xs font-semibold text-white/70">{l.name}</span>

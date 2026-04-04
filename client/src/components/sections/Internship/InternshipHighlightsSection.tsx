@@ -110,17 +110,17 @@ export function InternshipHighlightsSection() {
   const partnersValue = useCountUp({ start: isVisible, target: 100, durationMs: 900 });
 
   return (
-    <section ref={sectionRef} className="bg-[#143674] py-16">
+    <section ref={sectionRef} className="bg-[#143674] py-10 sm:py-16">
       <div className="mx-auto max-w-6xl px-4">
         <div className="text-center">
-          <h2 className="text-3xl font-bold text-white">Internship Highlights</h2>
-          <p className="mt-2 text-sm text-[#eaeeff] sm:text-base">A quick snapshot of scale and credibility</p>
+          <h2 className="text-2xl font-bold text-white sm:text-3xl">Internship Highlights</h2>
+          <p className="mt-2 text-xs text-[#eaeeff] sm:text-base">A quick snapshot of scale and credibility</p>
         </div>
 
-        <div className="relative mt-10">
+        <div className="relative mt-7 sm:mt-10">
           <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-20 bg-[linear-gradient(90deg,transparent,rgba(20,54,116,1))] sm:block" />
           <div className="pointer-events-none absolute inset-y-0 right-0 w-16 bg-[linear-gradient(90deg,transparent,rgba(20,54,116,1))] sm:hidden" />
-          <div className="flex snap-x snap-mandatory gap-4 overflow-x-auto pb-2 [-webkit-overflow-scrolling:touch] sm:grid sm:snap-none sm:grid-cols-2 sm:overflow-visible sm:pb-0 lg:grid-cols-4">
+          <div className="flex snap-x snap-mandatory gap-3 overflow-x-auto pb-2 [-webkit-overflow-scrolling:touch] sm:grid sm:snap-none sm:grid-cols-2 sm:gap-6 sm:overflow-visible sm:pb-0 lg:grid-cols-4">
             {stats.map((s) => {
               const animatedValue =
                 s.id === 'opportunities' ? opportunitiesValue : s.id === 'partners' ? partnersValue : undefined;
@@ -128,7 +128,7 @@ export function InternshipHighlightsSection() {
               return (
                 <div
                   key={s.id}
-                  className="group h-[120px] w-[85%] min-w-[220px] shrink-0 snap-start rounded-2xl border border-white/10 bg-white/10 p-5 shadow-[0_16px_45px_rgba(0,0,0,0.25)] backdrop-blur-xl sm:h-auto sm:w-auto sm:min-w-0 sm:shrink sm:snap-align-none"
+                  className="group h-[110px] w-[82%] min-w-[200px] shrink-0 snap-start rounded-2xl border border-white/10 bg-white/10 p-4 shadow-[0_16px_45px_rgba(0,0,0,0.25)] backdrop-blur-xl sm:h-auto sm:w-auto sm:min-w-0 sm:shrink sm:snap-align-none sm:p-5"
                 >
                   <div className="flex h-full flex-col justify-between">
                     <div className="text-[11px] font-semibold uppercase tracking-wide text-[#eaeeff]/80">
@@ -137,14 +137,14 @@ export function InternshipHighlightsSection() {
 
                     <div className="relative -mt-1">
                       <div className="pointer-events-none absolute -left-2 -top-3 h-16 w-28 rounded-full bg-[radial-gradient(circle_at_center,rgba(249,248,113,0.18),transparent_65%)] blur-md" />
-                      <div className="text-3xl font-extrabold tracking-tight text-[#f9f871]">
+                      <div className="text-2xl font-extrabold tracking-tight text-[#f9f871] sm:text-3xl">
                         {s.display(animatedValue)}
                       </div>
                     </div>
 
                     <div>
-                      <div className="text-sm font-semibold text-[#eaeeff]">{s.label}</div>
-                      <div className="mt-2 h-px w-12 bg-white/10" />
+                      <div className="text-xs font-semibold text-[#eaeeff] sm:text-sm">{s.label}</div>
+                      <div className="mt-1.5 h-px w-12 bg-white/10 sm:mt-2" />
                     </div>
                   </div>
                 </div>

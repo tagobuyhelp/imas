@@ -10,7 +10,7 @@ export function InternshipFinalCTASection() {
   };
 
   return (
-    <section id="final-cta" className="relative overflow-hidden px-4 py-16 text-center text-white">
+    <section id="final-cta" className="relative overflow-hidden px-4 py-12 text-center text-white sm:py-16">
       <div className="absolute inset-0">
         <div className="final-cta-gradient absolute inset-0 bg-[linear-gradient(135deg,#143674,#6e1628)]" />
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(900px_circle_at_50%_30%,rgba(249,248,113,0.12),transparent_55%)]" />
@@ -19,22 +19,22 @@ export function InternshipFinalCTASection() {
       </div>
 
       <div className="relative mx-auto max-w-2xl">
-        <h2 className="text-2xl font-bold">Start Your Career Journey Today</h2>
-        <p className="mt-3 text-sm text-[#eaeeff]">
+        <h2 className="text-xl font-bold sm:text-2xl">Start Your Career Journey Today</h2>
+        <p className="mt-2 text-xs text-[#eaeeff] sm:mt-3 sm:text-sm">
           Join IMAS and gain real-world experience before you graduate.
         </p>
 
-        <div className="mt-6 flex flex-col gap-3">
+        <div className="mt-5 flex flex-col gap-3 sm:mt-6">
           <Button
             onClick={applyNow}
-            className="h-12 rounded-xl bg-[#f9f871] text-[#143674] hover:text-white font-semibold shadow-[0_16px_55px_rgba(0,0,0,0.25)] transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_45px_rgba(249,248,113,0.30)] active:scale-[0.99]"
+            className="h-11 rounded-xl bg-[#f9f871] text-[#143674] hover:text-white text-sm font-semibold shadow-[0_16px_55px_rgba(0,0,0,0.25)] transition-all duration-300 hover:scale-[1.02] hover:shadow-[0_0_45px_rgba(249,248,113,0.30)] active:scale-[0.99] sm:h-12 sm:text-base"
           >
             Apply Now
           </Button>
           <Button
             variant="outline"
             onClick={talkToCounselor}
-            className="h-12 rounded-xl border border-white/60 bg-white/5 text-white font-semibold transition-all duration-300 hover:bg-white/10 active:scale-[0.99]"
+            className="h-11 rounded-xl border border-white/60 bg-white/5 text-white text-sm font-semibold transition-all duration-300 hover:bg-white/10 active:scale-[0.99] sm:h-12 sm:text-base"
           >
             Talk to Counselor
           </Button>
