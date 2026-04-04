@@ -9,12 +9,6 @@
             "DOM.Iterable"
         ],
         "skipLibCheck": true,
-        "baseUrl": ".",
-        "paths": {
-            "@/*": [
-                "src/*"
-            ]
-        },
         "strict": true,
         "noImplicitOverride": true,
         "noUnusedLocals": false,

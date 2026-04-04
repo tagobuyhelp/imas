@@ -1,199 +1,210 @@
-PGDM Placements at IMAS Business School
+Internships at IMAS Business School
 
-Industry-Aligned Careers for Future Business Leaders
-The Post Graduate Diploma in Management (PGDM) programs at IMAS Business School are designed with
-a strong focus on industry employability and career outcomes.
-Through a combination of industry-oriented curriculum, corporate partnerships, internships, and career
-development training, the institute prepares students to enter leadership roles across multiple industries
-including technology, consulting, finance, analytics, healthcare, logistics, and digital business.
-The Corporate Relations &amp; Placement Cell actively engages with companies to facilitate campus
-recruitment opportunities and internships for PGDM students.
-PGDM Placement Highlights
-Placement Statistics (Indicative Trends)
-Placement Indicator Statistics
-Placement Assistance 100% Career
-Support
-Highest Salary Package ₹12 LPA
-Average Salary Package ₹4.5 – ₹6 LPA
-Internship
-Opportunities 500+ annually
-Recruiting Companies 120+
-Industry Sectors 15+
-Students graduating from the PGDM programs receive opportunities across corporate management,
-technology-driven roles, analytics, consulting, and healthcare administration.
-Our Students are working with Top Companies.
-Companies across diverse sectors recruit PGDM graduates from IMAS Business School.
-Technology &amp; IT Services
- Tata Consultancy Services
- Infosys
- Wipro
- Tech Mahindra
- HCL Technologies
-Consulting &amp; Professional Services
- Deloitte
- PwC
- EY
- KPMG
-Banking, Finance &amp; Fintech
- HDFC Bank
- ICICI Bank
- Axis Bank
- Kotak Mahindra Bank
+Real Industry Experience for Future Business Leaders
 
-Healthcare &amp; Hospital Management
- Apollo Hospitals
- Fortis Healthcare
- Manipal Hospitals
-Aviation, Logistics &amp; Retail
- IndiGo
- Bluedart
- Amazon
- Reliance Retail
+Internships are a critical component of the academic experience at IMAS Business School. The institute emphasizes experiential learning, corporate exposure, and real-world business applications to ensure students develop practical skills before entering the workforce.
 
-Internship Program
-All PGDM students at IMAS Business School participate in industry internships, which play a vital role in
-building professional experience.
-Benefits of internships include:
- Exposure to real corporate projects
- Practical learning and industry insights
- Professional networking opportunities
- Increased chances of pre-placement offers (PPO)
-Career Development &amp; Employability Training
-IMAS Business School provides continuous career preparation support through structured training
-programs.
+Through its Corporate Relations & Placement Cell, IMAS facilitates industry internships, live projects, and corporate training opportunities that help students apply classroom knowledge to real business challenges.
 
-Career Development Initiatives
- Resume and LinkedIn profile building
- Aptitude and analytical skill development
- Mock interviews and group discussions
- Corporate communication training
- Industry expert sessions and guest lectures
- Professional certification programs
-These initiatives ensure that PGDM students develop industry-ready professional competencies.
-Placement Process
-The placement process for PGDM students follows a structured approach.
-1. Student Registration – Students submit their placement profiles to the Placement Cell.
-2. Corporate Invitations – Companies are invited for campus recruitment drives.
-3. Pre-Placement Talks – Recruiters present company details and job roles.
-4. Selection Process – Includes aptitude tests, group discussions, and interviews.
-5. Final Offers – Selected students receive job offers from recruiting companies.
-Why Recruit PGDM Graduates from IMAS Business School
+Internships allow students to gain hands-on industry exposure, professional networking opportunities, and career clarity, significantly improving their employability.
 
-Organizations recruit PGDM graduates from IMAS because they possess:
- Industry-oriented management training
- Analytical and problem-solving capabilities
- Practical exposure through internships and projects
- Professional communication and leadership skills
- Adaptability to modern business environments
+Internship Highlights
+IMAS Internship Program Overview
+
+Internship Feature	Details
+Internship Participation	Mandatory for PGDM students
+Internship Duration	6–8 weeks (Summer Internship Program)
+Internship Opportunities	500+ annually
+Corporate Partners	100+ companies
+Live Projects	Available across multiple sectors
+
+Students gain exposure to industries such as technology, finance, consulting, healthcare, logistics, digital marketing, and analytics.
+
+Summer Internship Program (SIP)
+
+The Summer Internship Program (SIP) is an integral part of the PGDM curriculum at IMAS Business School.
+
+During the internship period, students work with companies on real business projects, allowing them to apply theoretical knowledge to practical scenarios.
+
+Key Objectives of the SIP
+•	Exposure to real corporate work environments
+•	Development of problem-solving and analytical skills
+•	Understanding business operations and decision-making
+•	Building professional networks
+•	Enhancing employability and career readiness
+
+Many students receive Pre-Placement Offers (PPO) from their internship organizations.
+
+Industries Offering Internship Opportunities
+Students from IMAS Business School receive internship opportunities in industries such as:
+•	Information Technology
+•	Banking & Financial Services
+•	Consulting
+•	Healthcare & Hospitals
+•	E-commerce & Retail
+•	Logistics & Supply Chain
+•	Aviation & Hospitality
+•	Data Analytics & Artificial Intelligence
+
+Benefits of Internships for Students
+
+Internships help students develop practical skills and professional experience before graduation.
+
+Key Benefits
+•	Real-world corporate exposure
+•	Hands-on industry experience
+•	Development of professional skills
+•	Networking with industry professionals
+•	Improved employability
+•	Opportunity for pre-placement offers
+
+Internship Support at IMAS Business School
+
+The Corporate Relations & Placement Cell supports students throughout the internship process.
+
+Support Services
+•	Internship opportunities with partner companies
+•	Resume development assistance
+•	Interview preparation
+•	Industry networking events
+•	Corporate mentorship programs
+
+Internship Process
+
+The internship process at IMAS Business School follows a structured approach.
+
+1.	Internship Orientation – Students receive guidance on internship preparation.
+2.	Profile Submission – Students submit their resumes and specialization preferences.
+3.	Corporate Selection Process – Companies conduct interviews or selection tests.
+4.	Internship Assignment – Students join organizations for project-based internships.
+5.	Project Evaluation – Students present their internship project and learning outcomes.
+
+Why Internships at IMAS Business School Stand Out
+
+Internships at IMAS are designed to ensure students gain practical exposure, industry experience, and career clarity.
+
+Key Advantages
+•	Industry-driven curriculum
+•	Corporate internship opportunities
+•	Real business projects
+•	Professional mentoring
+•	Pathway to full-time employment
+
+
+
+
+
+
+
 
 Frequently Asked Questions
 
-1. Does IMAS Business School provide placement assistance for PGDM students?
-Yes. IMAS Business School provides comprehensive placement assistance for PGDM students through its
-Corporate Relations &amp; Placement Cell. The institute organizes campus recruitment drives, internships,
-industry networking events, and career development programs to support students in securing
-employment opportunities.
-2. What is the average salary for PGDM graduates at IMAS Business School?
-The average salary for PGDM graduates typically ranges between ₹ 8 LPA and ₹ 12 LPA, depending on
-specialization, skill set, and recruiting company.
-3. Which PGDM specialization offers the best placement opportunities?
-Specializations such as Business Analytics, Artificial Intelligence &amp; Data Science, Fintech, and Logistics &amp;
-Supply Chain Management currently offer strong placement opportunities due to increasing demand for
-data-driven and technology-focused roles.
-4. Which companies recruit PGDM students from IMAS Business School?
-Recruiters include companies from sectors such as IT services, consulting, banking, healthcare, logistics,
-aviation, and e-commerce. These companies look for graduates with strong analytical, managerial, and
-technical skills.
-5. How does IMAS Business School prepare PGDM students for placements?
-The institute prepares students through structured training programs that include:
- Resume and LinkedIn profile development
- Mock interviews and group discussions
- Communication and presentation skills training
- Aptitude and analytical skill development
- Industry workshops and guest lectures
-6. Are internships included in the PGDM program?
-Yes. PGDM students participate in industry internships and live projects, which provide practical exposure
-to real business environments and improve employability.
-7. What job roles are offered to PGDM graduates during campus placements?
-Common roles offered during campus placements include:
- Management Trainee
- Business Analyst
- Marketing Executive
- Financial Analyst
+Are internships mandatory at IMAS Business School?
+Yes. Internships are an important component of the PGDM program and provide practical industry experience.
 
- HR Executive
- Supply Chain Analyst
- Data Analyst
- Healthcare Operations Executive
-8. Can PGDM students from IMAS Business School work in multinational companies?
-Yes. PGDM graduates with strong skills and industry exposure may receive opportunities with
-multinational corporations operating in India and global markets.
-9. What industries recruit PGDM graduates?
-PGDM graduates are recruited across multiple sectors, including:
- Information Technology
- Banking and Financial Services
- Consulting
- Healthcare Management
- Logistics and Supply Chain
- E-commerce and Retail
-10. Is there a dedicated placement cell at IMAS Business School?
-Yes. IMAS Business School has a Corporate Relations &amp; Placement Cell that actively connects students
-with recruiters, organizes placement drives, and facilitates internships.
-11. How early does placement preparation start for PGDM students?
-Placement preparation begins from the first year of the PGDM program, with training sessions, industry
-exposure, and skill development workshops conducted throughout the course.
-12. What skills improve placement chances for PGDM students?
-Recruiters look for graduates with skills such as:
- Analytical thinking
- Communication and presentation abilities
- Data interpretation and digital tools knowledge
- Leadership and teamwork
- Problem-solving and decision-making
-13. Are startups and technology companies invited for campus recruitment?
-Yes. In addition to established corporations, startups, fintech companies, analytics firms, and technology-
-driven businesses also recruit PGDM graduates.
-14. Can PGDM students apply for jobs outside campus placements?
-Yes. Students are encouraged to explore both campus recruitment opportunities and off-campus job
-applications, which increases their chances of securing the best career opportunities.
-15. Why should students choose IMAS Business School for PGDM placements?
-Students choose IMAS Business School because of:
- Industry-aligned PGDM specializations
- Strong corporate partnerships
+How long is the internship program?
+The Summer Internship Program usually lasts 6–8 weeks, depending on the organization and project.
 
- Internship-driven learning
- Professional skill development training
- Dedicated placement support
-These factors help students build successful careers in management, analytics, technology, finance, and
-healthcare sectors.
+Can internships lead to job offers?
+Yes. Many companies offer Pre-Placement Offers (PPOs) to students who perform well during their internships.
 
---------------------------------------------------------------------------------------------------------------
-Career Success Stories from IMAS Alumni
-Read about the achievements of IMAS graduates who have secured rewarding careers in fields such as
-management, analytics, finance, technology, and healthcare.
+What industries offer internships to IMAS students?
+Internship opportunities are available in industries such as technology, consulting, finance, analytics, healthcare, logistics, aviation, and retail.
 
-Arindam Chatterjee
-TCS
-Sayan Mukherjee
-Wipro
-Anirban Ghosh
-Infosys
-Abhishek Dutta
-Microsoft
-Debarghya Das
-PwC
-Ritam Bose
-PwC
-Sagnik Mitra
-Accenture
-Aditya Sharma
-Deloitte
-Nikhil Agarwal
-EY
-Ranjan Ghosh
-EY
-Rohan Mehta
+How does IMAS Business School help students secure internships?
+The institute provides internship support through its Corporate Relations & Placement Cell, which connects students with companies, organizes interviews, and provides career preparation training.
+------------------------------------------------------------------------------------------------------------------------------------------
+
+Internship Success Stories from IMAS Students
+
+Discover how IMAS students have gained valuable industry exposure through impactful internships across domains such as business analytics, finance, marketing, human resources, and technology. These experiences have helped them build practical skills, work on real-world projects, and pave the way for successful careers.
+
+ 
+•	Ritwick Mukherjee
+EXL Service 
+
+•	Kaushik Sen
+Genpact 
+
+•	Subhajit Roy
+Deloitte 
+
+•	Debanjan Bhattacharya
+EY 
+
+•	Sagnik Paul
+PwC 
+
+•	Ananya Chatterjee
+KPMG 
+
+•	Riya Banerjee
+Accenture 
+
+•	Sohini Ghosh
+Tata Consultancy Services 
+
+•	Priyanka Das
+Infosys 
+
+•	Moumita Mukherjee
+Wipro 
+
+•	Debopriya Sen
+Cognizant 
+
+•	Aritra Roy
+Amazon 
+
+•	Tuhin Bhattacharya
+Flipkart 
+
+•	Sayantan Paul
+Swiggy 
+
+•	Ravi Kumar
+Zomato 
+
+•	Amit Kumar Singh
+Meesho 
+
+
+•	Shalini Singh
+EXL Service
+
+•	Ankit Kumar
+Genpact 
+
+•	Rohit Agarwal
+Deloitte 
+
+•	Mohit Khandelwal
+EY 
+
+•	Pooja Agarwal
+PwC 
+
+•	Neha Poddar
 KPMG
-Sohini Banerjee
-Hindustan Unilever
-Debolina Ghosh
-ITC Limited
+
+•	Argho Ghosh
+Apollo Hospitals
+
+•	Anushuya Mondol
+Fortis Hospitals
+
+
+•	Sagarika Karmakar
+Medica
+•	Sourav Das
+ICICI Bank
+ 
+
+
+
+
+
+
+
+ 
+
