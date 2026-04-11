@@ -1,30 +1,82 @@
-import React from 'react';
 import { Button } from '../../ui/button';
 import { applyNow, downloadBrochure } from '../../../lib/utils';
+import { Users } from 'lucide-react';
 
 export function InternshipHeroSection() {
-  const logos = [
-    { name: 'Deloitte', src: '/uploads/deloitte-logo-416x274.avif' },
-    { name: 'EY' },
+  const logos: { name: string; src: string }[] = [
+    { name: 'Deloitte', src: '/uploads/deloitte.png' },
+    { name: 'EY', src: '/uploads/EY_logo_2019.svg.png' },
     { name: 'PwC', src: '/uploads/companies/PwC_Company_Logo.svg.png' },
     { name: 'KPMG', src: '/uploads/companies/KPMG.svg.png' },
-    { name: 'Accenture' },
+    { name: 'Accenture', src: '/uploads/companies/Accenture.png' },
     { name: 'Tata Consultancy Services', src: '/uploads/companies/Tata_Consultancy_Services_old_logo.svg.png' },
-    { name: 'Infosys', src: '/uploads/companies/infosys.png' },
-    { name: 'Amazon', src: '/uploads/Customer-logo_Amazon.png' }
-  ] as const;
+    { name: 'Infosys', src: '/uploads/companies/Infosys_logo.svg.png' },
+    { name: 'Amazon', src: '/uploads/Customer-logo_Amazon.png' },
+    { name: 'Flipkart', src: '/uploads/flipkart-logo.webp' },
+    { name: 'EXL Service', src: '/uploads/companies/EXL_Service_logo.png' },
+    { name: 'Genpact', src: '/uploads/companies/Genpact_logo.svg.png' },
+    { name: 'Wipro', src: '/uploads/companies/Wipro_new_logo.svg.png' },
+    { name: 'Cognizant', src: '/uploads/companies/cognizant logo.jpg' },
+    { name: 'Swiggy', src: '/uploads/swiggy-logo.svg' },
+    { name: 'Zomato', src: '/uploads/companies/Zomato-logo.png' },
+    { name: 'Meesho', src: '/uploads/companies/Meesho-Logo-Vector.svg-.png' },
+    { name: 'Apollo Hospitals', src: '/uploads/apollo-hospitals-logo-png-transparent.png' },
+    { name: 'Fortis', src: '/uploads/companies/Fortis-Logo.png' },
+    { name: 'Axis Bank', src: '/uploads/companies/Axis_Bank_logo.svg.png' },
+    { name: 'HDFC Bank', src: '/uploads/companies/HDFC-Bank-logo.png' },
+    { name: 'Blue Dart', src: '/uploads/companies/Blue_Dart_logo_transparent.png' },
+    { name: 'Tech Mahindra', src: '/uploads/companies/tech_mahindra.png' },
+    { name: 'Morgan Stanley', src: '/uploads/companies/morgan_stanley.png' },
+    { name: 'Nike', src: '/uploads/companies/nike.png' },
+    { name: 'Adani', src: '/uploads/companies/adani.png' },
+    { name: 'Jio', src: '/uploads/companies/jio.png' }
+  ];
 
   const scrollerItems = logos;
 
-  const internshipStudents = [
-    { src: '/uploads/internship/ritwick-mukherjee-exl-service.jpg' },
-    { src: '/uploads/internship/subhajit-roy-deloitte.jpg' },
-    { src: '/uploads/internship/riya-banerjee-accenture.jpg' },
-    { src: '/uploads/internship/tuhin-bhattacharya-flipkart.jpg' }
+  const companyLogoByName: Record<string, string> = {
+    Deloitte: '/uploads/deloitte.png',
+    EY: '/uploads/EY_logo_2019.svg.png',
+    PwC: '/uploads/companies/PwC_Company_Logo.svg.png',
+    KPMG: '/uploads/companies/KPMG.svg.png',
+    Accenture: '/uploads/companies/Accenture.png',
+    'EXL Service': '/uploads/companies/EXL_Service_logo.png',
+    Genpact: '/uploads/companies/Genpact_logo.svg.png',
+    'Tata Consultancy Services': '/uploads/companies/Tata_Consultancy_Services_old_logo.svg.png',
+    Infosys: '/uploads/companies/Infosys_logo.svg.png',
+    Wipro: '/uploads/companies/Wipro_new_logo.svg.png',
+    Cognizant: '/uploads/companies/cognizant logo.jpg',
+    Amazon: '/uploads/Customer-logo_Amazon.png',
+    Flipkart: '/uploads/flipkart-logo.webp',
+    Swiggy: '/uploads/swiggy-logo.svg',
+    Zomato: '/uploads/companies/Zomato-logo.png',
+    Meesho: '/uploads/companies/Meesho-Logo-Vector.svg-.png',
+    'Apollo Hospitals': '/uploads/apollo-hospitals-logo-png-transparent.png',
+    'Fortis Hospitals': '/uploads/companies/Fortis-Logo.png'
+  };
+
+  const marqueeStudents = [
+    { name: 'Ritwick Mukherjee', company: 'EXL Service', image: '/uploads/internship/ritwick-mukherjee-exl-service.jpg' },
+    { name: 'Kaushik Sen', company: 'Genpact', image: '/uploads/internship/kaushik-sen-genpact.jpg' },
+    { name: 'Subhajit Roy', company: 'Deloitte', image: '/uploads/internship/subhajit-roy-deloitte.jpg' },
+    { name: 'Debanjan Bhattacharya', company: 'EY', image: '/uploads/internship/debanjan-bhattacharya-ey.jpg' },
+    { name: 'Sagnik Paul', company: 'PwC', image: '/uploads/internship/sagnik-paul-pwc.jpg' },
+    { name: 'Ananya Chatterjee', company: 'KPMG', image: '/uploads/internship/ananya-chatterjee-kpmg.jpg' },
+    { name: 'Riya Banerjee', company: 'Accenture', image: '/uploads/internship/riya-banerjee-accenture.jpg' },
+    {
+      name: 'Sohini Ghosh',
+      company: 'Tata Consultancy Services',
+      image: '/uploads/internship/sohini-ghosh-tata-consultancy-services.jpg'
+    },
+    { name: 'Priyanka Das', company: 'Infosys', image: '/uploads/internship/priyanka-das-infosys.jpg' },
+    { name: 'Moumita Mukherjee', company: 'Wipro', image: '/uploads/internship/moumita-mukherjee-wipro.jpg' }
   ] as const;
 
+  const col1 = marqueeStudents.filter((_, idx) => idx % 2 === 0);
+  const col2 = marqueeStudents.filter((_, idx) => idx % 2 === 1);
+
   return (
-    <section className="relative overflow-hidden">
+    <section id="internships-hero" className="relative overflow-hidden">
       <div className="absolute inset-0">
         <div className="hero-gradient absolute inset-0 bg-[linear-gradient(135deg,#143674,#7e4287,#ca5481)]" />
         <div className="absolute inset-0 bg-[radial-gradient(900px_circle_at_25%_20%,rgba(38,193,211,0.25),transparent_55%)]" />
@@ -62,7 +114,7 @@ export function InternshipHeroSection() {
       </div>
 
       <div className="relative mx-auto max-w-[1260px] px-4 py-6 sm:py-12 lg:py-14">
-        <div className="grid grid-cols-1 items-center gap-5 lg:grid-cols-2 lg:gap-10">
+        <div className="grid grid-cols-1 items-center gap-5 md:grid-cols-[1.2fr_0.8fr] md:gap-8 lg:gap-10">
           <div className="text-center lg:text-left">
             <div className="inline-flex items-center rounded-full border border-white/15 bg-white/10 px-3 py-1 text-xs font-semibold text-white/90 backdrop-blur-md">
               INTERNSHIPS
@@ -95,87 +147,120 @@ export function InternshipHeroSection() {
             </div>
           </div>
 
-          <div className="order-3 mx-auto w-[80%] md:w-[60%] max-w-xl lg:order-2 lg:max-w-none">
-            <div className="relative overflow-hidden rounded-3xl border border-white/15 bg-white/5 shadow-[0_20px_80px_rgba(0,0,0,0.45)]">
-              <img
-                src="/uploads/internship/hero-main-visual.webp"
-                alt="Young professional working on laptop"
-                className="h-[200px] w-full object-cover sm:h-[340px] lg:h-[420px]"
-              />
-
-              <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(135deg,rgba(20,54,116,0.35),transparent_40%,rgba(202,84,129,0.18))]" />
-
-              <div className="hero-streak pointer-events-none absolute -bottom-1/2 left-10 h-[160%] w-24 rotate-12 bg-[linear-gradient(180deg,transparent,rgba(38,193,211,0.35),transparent)] blur-md" />
-
-              <svg
-                className="hero-network pointer-events-none absolute inset-0 h-full w-full"
-                viewBox="0 0 600 400"
-                preserveAspectRatio="none"
-              >
-                <g opacity="0.9">
-                  <path d="M90 120 L210 90 L320 150 L470 110" stroke="rgba(38,193,211,0.55)" strokeWidth="1.4" fill="none" />
-                  <path d="M140 260 L260 220 L360 260 L520 220" stroke="rgba(234,238,255,0.35)" strokeWidth="1.2" fill="none" />
-                  <path d="M210 90 L260 220" stroke="rgba(249,248,113,0.22)" strokeWidth="1.2" fill="none" />
-                  <path d="M320 150 L360 260" stroke="rgba(38,193,211,0.25)" strokeWidth="1.2" fill="none" />
-                </g>
-                {[
-                  { cx: 90, cy: 120, r: 4 },
-                  { cx: 210, cy: 90, r: 5 },
-                  { cx: 320, cy: 150, r: 4 },
-                  { cx: 470, cy: 110, r: 5 },
-                  { cx: 140, cy: 260, r: 4 },
-                  { cx: 260, cy: 220, r: 5 },
-                  { cx: 360, cy: 260, r: 4 },
-                  { cx: 520, cy: 220, r: 5 }
-                ].map((n, idx) => (
-                  <g key={idx} className="hero-node">
-                    <circle cx={n.cx} cy={n.cy} r={n.r} fill="rgba(38,193,211,0.9)" />
-                    <circle cx={n.cx} cy={n.cy} r={n.r * 2.5} fill="rgba(38,193,211,0.16)" />
-                  </g>
-                ))}
-              </svg>
-
-              <div className="hero-avatars pointer-events-none absolute bottom-3 left-3 sm:bottom-4 sm:left-4">
-                <div className="flex items-center rounded-full border border-white/15 bg-white/10 px-2.5 py-1.5 backdrop-blur-md">
-                  <div className="-space-x-3">
-                    {internshipStudents.map((s, idx) => (
+          <div className="order-3 md:hidden">
+            <div className="mt-5 overflow-hidden rounded-2xl border border-white/15 bg-white/5 backdrop-blur-md">
+              <div className="flex w-max gap-4 px-4 py-3 animate-scroll-left">
+                {[...marqueeStudents, ...marqueeStudents].map((a, i) => (
+                  <div
+                    key={`${a.name}-m-${i}`}
+                    className="w-[180px] overflow-hidden rounded-2xl bg-white shadow-[0_14px_40px_rgba(0,0,0,0.20)]"
+                  >
+                    <div className="relative">
                       <img
-                        key={idx}
-                        src={s.src}
-                        alt="IMAS internship student"
+                        src={a.image}
+                        alt={a.name}
+                        className="h-52 w-full object-cover"
                         loading="lazy"
-                        className="inline-block h-8 w-8 rounded-full object-cover ring-2 ring-white/20 sm:h-10 sm:w-10"
+                        onError={(e) => {
+                          const t = e.currentTarget as HTMLImageElement;
+                          t.style.display = 'none';
+                          const fallback = t.nextElementSibling as HTMLElement;
+                          if (fallback) fallback.style.display = 'flex';
+                        }}
                       />
-                    ))}
+                      <div className="hidden h-52 w-full items-center justify-center bg-slate-100">
+                        <Users className="h-10 w-10 text-slate-400" />
+                      </div>
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent" />
+                      <div className="absolute bottom-3 left-3 right-3">
+                        <div className="text-white font-bold text-sm leading-tight">{a.name}</div>
+                        {companyLogoByName[a.company] ? (
+                          <div className="mt-2 inline-flex items-center rounded-lg bg-white/90 px-2 py-1">
+                            <img
+                              src={companyLogoByName[a.company]}
+                              alt={a.company}
+                              className="h-4 w-auto max-w-[140px] object-contain"
+                              loading="lazy"
+                            />
+                          </div>
+                        ) : (
+                          <div className="text-white/90 text-xs">{a.company}</div>
+                        )}
+                      </div>
+                    </div>
                   </div>
-                </div>
+                ))}
               </div>
             </div>
           </div>
 
-          <div className="order-2 lg:order-3 lg:col-span-2">
-            <div className="relative overflow-hidden rounded-2xl border border-white/15 bg-white/5 backdrop-blur-md">
-              <div className="pointer-events-none absolute inset-y-0 left-0 w-10 bg-[linear-gradient(90deg,rgba(20,54,116,0.85),transparent)]" />
-              <div className="pointer-events-none absolute inset-y-0 right-0 w-10 bg-[linear-gradient(90deg,transparent,rgba(20,54,116,0.85))]" />
+          <div className="hidden md:block max-w-[420px] ml-auto">
+            <div className="grid grid-cols-2 gap-3 h-[520px]">
+              {[col1, col2].map((col, idx) => (
+                <div key={idx} className="overflow-hidden rounded-2xl">
+                  <div className={`${idx % 2 === 0 ? 'animate-vertical-up' : 'animate-vertical-down'} space-y-4`}>
+                    {[...col, ...col].map((a, i) => (
+                      <div
+                        key={`${a.name}-${i}`}
+                        className="rounded-2xl bg-white shadow-[0_18px_55px_rgba(0,0,0,0.25)] overflow-hidden"
+                      >
+                        <div className="relative">
+                          <img
+                            src={a.image}
+                            alt={a.name}
+                            className="w-full h-56 object-cover"
+                            loading="lazy"
+                            onError={(e) => {
+                              const t = e.currentTarget as HTMLImageElement;
+                              t.style.display = 'none';
+                              const fallback = t.nextElementSibling as HTMLElement;
+                              if (fallback) fallback.style.display = 'flex';
+                            }}
+                          />
+                          <div className="w-full h-56 bg-slate-100 hidden items-center justify-center">
+                            <Users className="h-10 w-10 text-slate-400" />
+                          </div>
+                          <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent" />
+                          <div className="absolute bottom-3 left-3 right-3">
+                            <div className="text-white font-bold text-sm leading-tight">{a.name}</div>
+                            {companyLogoByName[a.company] ? (
+                              <div className="mt-2 inline-flex items-center rounded-lg bg-white/90 px-2 py-1">
+                                <img
+                                  src={companyLogoByName[a.company]}
+                                  alt={a.company}
+                                  className="h-4 w-auto max-w-[150px] object-contain"
+                                  loading="lazy"
+                                />
+                              </div>
+                            ) : (
+                              <div className="text-white/90 text-xs">{a.company}</div>
+                            )}
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
 
+          <div className="order-2 md:order-3 md:col-span-2">
+            <div className="relative overflow-hidden rounded-2xl border border-white/15 bg-white backdrop-blur-md">
               <div className="flex items-center gap-3 px-4 py-2">
-                <div className="hidden text-xs font-semibold uppercase tracking-wide text-white/70 sm:block">
+                <div className="hidden text-xs font-semibold uppercase tracking-wide text-gray-600 sm:block">
                   Hiring Partners
                 </div>
                 <div className="relative flex-1 overflow-hidden">
                   <div className="hero-logo-track flex w-max items-center gap-8">
                     {[...scrollerItems, ...scrollerItems].map((l, idx) => (
                       <div key={`${l.name}-${idx}`} className="flex items-center">
-                        {'src' in l ? (
-                          <img
-                            src={l.src}
-                            alt={l.name}
-                            loading="lazy"
-                            className="h-4 w-auto max-w-[110px] opacity-70 grayscale brightness-0 invert sm:h-6"
-                          />
-                        ) : (
-                          <span className="text-xs font-semibold text-white/70">{l.name}</span>
-                        )}
+                        <img
+                          src={l.src}
+                          alt={l.name}
+                          loading="lazy"
+                          className="h-4 w-auto max-w-[120px] object-contain opacity-100 sm:h-6"
+                        />
                       </div>
                     ))}
                   </div>

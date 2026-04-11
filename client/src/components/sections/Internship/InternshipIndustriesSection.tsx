@@ -29,7 +29,7 @@ export function InternshipIndustriesSection() {
   ] as const;
 
   return (
-    <section className="bg-[#f1f1e6] px-4 py-10 sm:py-12">
+    <section id="industries" className="bg-[#f1f1e6] px-4 py-10 sm:py-12">
       <div className="mx-auto max-w-6xl">
         <h2 className="text-lg font-semibold text-[#143674] mb-5 sm:text-xl sm:mb-6">Explore Internship Industries</h2>
 

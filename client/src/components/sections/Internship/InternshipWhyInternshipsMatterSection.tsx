@@ -32,7 +32,7 @@ export function InternshipWhyInternshipsMatterSection() {
   ];
 
   return (
-    <section className="bg-[#f7f8ff] py-10 sm:py-16">
+    <section id="why-internships" className="bg-[#f7f8ff] py-10 sm:py-16">
       <div className="mx-auto max-w-6xl px-4">
         <div className="text-center">
           <h2 className="text-2xl font-bold text-[#143674] sm:text-3xl">Why Internships Matter</h2>

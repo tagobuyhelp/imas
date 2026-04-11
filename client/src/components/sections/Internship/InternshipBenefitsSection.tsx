@@ -12,7 +12,7 @@ export function InternshipBenefitsSection() {
   ];
 
   return (
-    <section className="bg-gradient-to-br from-[#143674] via-[#00bbcc] to-[#6dfacd] px-4 py-10 sm:py-12 text-white">
+    <section id="benefits" className="bg-gradient-to-br from-[#143674] via-[#00bbcc] to-[#6dfacd] px-4 py-10 sm:py-12 text-white">
       <div className="mx-auto max-w-6xl">
         <h2 className="mb-5 text-lg font-semibold sm:text-xl sm:mb-6">What You Gain</h2>
 

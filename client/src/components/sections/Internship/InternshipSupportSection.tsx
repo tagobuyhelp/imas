@@ -38,7 +38,7 @@ export function InternshipSupportSection() {
   ];
 
   return (
-    <section className="bg-[#eaeeff] px-4 py-10 sm:py-12">
+    <section id="support" className="bg-[#eaeeff] px-4 py-10 sm:py-12">
       <div className="mx-auto max-w-6xl">
         <div className="text-center sm:text-left">
           <div className="text-xs font-semibold uppercase tracking-wide text-[#444655]">

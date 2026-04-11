@@ -17,14 +17,36 @@ export function PlacementsAlumniStoriesSection() {
     { name: 'Rohan Mehta', company: 'KPMG', image: '/uploads/placement/rohan-mehta.png' },
     { name: 'Sohini Banerjee', company: 'Hindustan Unilever', image: '/uploads/placement/sohini-banerjee.png' },
     { name: 'Debolina Ghosh', company: 'ITC Limited', image: '/uploads/placement/debolina-ghosh.png' },
-    { name: 'Kaustav Sen', company: 'IMAS Alumni', image: '/uploads/placement/kaustav-sen.png' },
-    { name: 'Nitin Jaiswal', company: 'IMAS Alumni', image: '/uploads/placement/nitin-jaiswal.png' },
-    { name: 'Rahul Verma', company: 'IMAS Alumni', image: '/uploads/placement/rahul-verma.png' },
-    { name: 'Shanti Pradhan', company: 'IMAS Alumni', image: '/uploads/placement/shanti-pradhan.png' },
-    { name: 'Soumyadeep Roy', company: 'IMAS Alumni', image: '/uploads/placement/soumyadeep-roy.png' },
-    { name: 'Subhajit Sarkar', company: 'IMAS Alumni', image: '/uploads/placement/subhajit-sarkar.png' },
-    { name: 'Subhankar Biswas', company: 'IMAS Alumni', image: '/uploads/placement/subhankar-biswas.png' }
+    { name: 'Shanti Pradhan', company: 'PayTM', image: '/uploads/placement/shanti-pradhan.png' },
+    { name: 'Subhankar Biswas', company: 'RazorPay', image: '/uploads/placement/subhankar-biswas.png' },
+    { name: 'Rahul Verma', company: 'Amazon', image: '/uploads/placement/rahul-verma.png' },
+    { name: 'Subhajit Sarkar', company: 'Apollo Hospitals', image: '/uploads/placement/subhajit-sarkar.png' },
+    { name: 'Soumyadeep Roy', company: 'Fortis Healthcare', image: '/uploads/placement/soumyadeep-roy.png' },
+    { name: 'Kaustav Sen', company: 'Manipal Hospitals', image: '/uploads/placement/kaustav-sen.png' }
   ];
+
+  const companyLogoByName: Record<string, string> = {
+    TCS: '/uploads/companies/tcs.png',
+    Wipro: '/uploads/companies/Wipro_new_logo.svg.png',
+    Infosys: '/uploads/companies/Infosys_logo.svg.png',
+    Microsoft: '/uploads/purepng.com-microsoft-logologobrand-logoiconslogos-251519939132du80p.png',
+    PwC: '/uploads/companies/PwC_Company_Logo.svg.png',
+    Accenture: '/uploads/companies/Accenture.png',
+    Deloitte: '/uploads/deloitte.png',
+    EY: '/uploads/EY_logo_2019.svg.png',
+    KPMG: '/uploads/companies/KPMG.svg.png',
+    'Hindustan Unilever': '/uploads/companies/Hindustan_Unilever_Logo.svg.png',
+    'ITC Limited': '/uploads/ITC_Limited_Logo.svg.png',
+    PayTM: '/uploads/PaytmLogo.png',
+    RazorPay: '/uploads/Razorpay-Logo.jpg',
+    Amazon: '/uploads/Customer-logo_Amazon.png',
+    Indigo: '/uploads/companies/indigo.png',
+    'JW Marriott': '/uploads/companies/JWMarriott.svg.png',
+    'Apollo Hospitals': '/uploads/apollo-hospitals-logo-png-transparent.png',
+    'Fortis Healthcare': '/uploads/companies/Fortis-Logo.png',
+    'Manipal Hospitals': '/uploads/manipalhospitallogo.png',
+    'IMAS Alumni': '/uploads/logos/IMAS_LOGO_PNG.png'
+  };
 
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoScrolling, setIsAutoScrolling] = useState(true);
@@ -149,9 +171,24 @@ export function PlacementsAlumniStoriesSection() {
                       <div className="text-center">
                         <div className="text-lg font-extrabold text-gray-900 leading-snug truncate">{a.name}</div>
                         <div className="mt-1 flex justify-center">
-                          <div className={`inline-flex items-center rounded-full px-3 py-1 text-sm font-semibold ${IMAS_TAILWIND_CLASSES.BG_DARK_BLUE}/5 ${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE} ring-1 ring-[#143674]/10 truncate`}>
-                            {a.company}
-                          </div>
+                          {companyLogoByName[a.company] ? (
+                            <div
+                              className={`inline-flex items-center rounded-full bg-white px-3 py-1 ring-1 ring-[#143674]/10`}
+                            >
+                              <img
+                                src={companyLogoByName[a.company]}
+                                alt={a.company}
+                                className="h-5 w-auto max-w-[150px] object-contain"
+                                loading="lazy"
+                              />
+                            </div>
+                          ) : (
+                            <div
+                              className={`inline-flex items-center rounded-full px-3 py-1 text-sm font-semibold ${IMAS_TAILWIND_CLASSES.BG_DARK_BLUE}/5 ${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE} ring-1 ring-[#143674]/10 truncate`}
+                            >
+                              {a.company}
+                            </div>
+                          )}
                         </div>
                       </div>
                       <div className="grid grid-cols-2 gap-3">

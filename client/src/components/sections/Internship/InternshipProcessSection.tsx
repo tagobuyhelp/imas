@@ -76,7 +76,7 @@ export function InternshipProcessSection() {
   const ActiveIcon = activeStep?.icon ?? GraduationCap;
 
   return (
-    <section ref={sectionRef} className="bg-white px-4 py-10 sm:py-12">
+    <section id="internship-process" ref={sectionRef} className="bg-white px-4 py-10 sm:py-12">
       <div className="mx-auto max-w-6xl">
         <div className="text-center sm:text-left">
           <div className="text-xs font-semibold uppercase tracking-wide text-[#444655]">Simple 5-Step Process</div>

@@ -17,6 +17,18 @@ export function PlacementsHeroSection() {
     { name: 'Ranjan Ghosh', company: 'EY', image: '/uploads/placement/ranjan-ghosh.png' },
     { name: 'Rohan Mehta', company: 'KPMG', image: '/uploads/placement/rohan-mehta.png' }
   ];
+
+  const companyLogoByName: Record<string, string> = {
+    TCS: '/uploads/companies/tcs.png',
+    Wipro: '/uploads/companies/Wipro_new_logo.svg.png',
+    Microsoft: '/uploads/purepng.com-microsoft-logologobrand-logoiconslogos-251519939132du80p.png',
+    PwC: '/uploads/companies/PwC_Company_Logo.svg.png',
+    Accenture: '/uploads/companies/Accenture.png',
+    Deloitte: '/uploads/deloitte.png',
+    EY: '/uploads/EY_logo_2019.svg.png',
+    KPMG: '/uploads/companies/KPMG.svg.png'
+  };
+
   const col1 = alumni.filter((_, i) => i % 2 === 0);
   const col2 = alumni.filter((_, i) => i % 2 === 1);
 
@@ -42,7 +54,7 @@ export function PlacementsHeroSection() {
                 <div className="text-xs opacity-90">Career Support</div>
               </div>
               <div className="rounded-2xl bg-white/10 px-4 py-3 text-center ring-1 ring-white/20">
-                <div className="text-xl md:text-2xl font-extrabold">₹12 LPA</div>
+                <div className="text-xl md:text-2xl font-extrabold">₹18 LPA</div>
                 <div className="text-xs opacity-90">Highest Package</div>
               </div>
               <div className="rounded-2xl bg-white/10 px-4 py-3 text-center ring-1 ring-white/20">
@@ -90,7 +102,18 @@ export function PlacementsHeroSection() {
                         <div className="absolute inset-0 bg-gradient-to-t from-[#2e7bb3]/85 via-[#143674]/30 to-transparent"></div>
                         <div className="absolute bottom-3 left-3 right-3">
                           <div className="text-white font-bold text-sm leading-tight">{a.name}</div>
-                          <div className="text-white/90 text-xs">Kolkata, India</div>
+                          {companyLogoByName[a.company] ? (
+                            <div className="mt-2 inline-flex items-center rounded-lg bg-white/90 px-2 py-1">
+                              <img
+                                src={companyLogoByName[a.company]}
+                                alt={a.company}
+                                className="h-4 w-auto max-w-[140px] object-contain"
+                                loading="lazy"
+                              />
+                            </div>
+                          ) : (
+                            <div className="text-white/90 text-xs">{a.company}</div>
+                          )}
                         </div>
                       </div>
                     </div>
@@ -126,7 +149,18 @@ export function PlacementsHeroSection() {
                           <div className="absolute inset-0 bg-gradient-to-t from-[#2e7bb3]/85 via-[#143674]/30 to-transparent"></div>
                           <div className="absolute bottom-3 left-3 right-3">
                             <div className="text-white font-bold text-sm leading-tight">{a.name}</div>
-                            <div className="text-white/90 text-xs">Kolkata, India</div>
+                            {companyLogoByName[a.company] ? (
+                              <div className="mt-2 inline-flex items-center rounded-lg bg-white/90 px-2 py-1">
+                                <img
+                                  src={companyLogoByName[a.company]}
+                                  alt={a.company}
+                                  className="h-4 w-auto max-w-[150px] object-contain"
+                                  loading="lazy"
+                                />
+                              </div>
+                            ) : (
+                              <div className="text-white/90 text-xs">{a.company}</div>
+                            )}
                           </div>
                         </div>
                       </div>

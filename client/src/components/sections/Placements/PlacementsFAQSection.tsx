@@ -9,7 +9,7 @@ export function PlacementsFAQSection() {
     },
     {
       q: 'What is the average salary for PGDM graduates at IMAS Business School?',
-      a: 'The average salary for PGDM graduates typically ranges between ₹ 8 LPA and ₹ 12 LPA, depending on specialization, skill set, and recruiting company.'
+      a: 'The average salary for PGDM graduates typically ranges between ₹ 4.5 LPA and ₹ 6 LPA, depending on specialization, skill set, and recruiting company.'
     },
     {
       q: 'Which PGDM specialization offers the best placement opportunities?',

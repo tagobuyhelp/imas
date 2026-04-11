@@ -110,7 +110,7 @@ export function InternshipHighlightsSection() {
   const partnersValue = useCountUp({ start: isVisible, target: 100, durationMs: 900 });
 
   return (
-    <section ref={sectionRef} className="bg-[#143674] py-10 sm:py-16">
+    <section id="internship-highlights" ref={sectionRef} className="bg-[#143674] py-10 sm:py-16">
       <div className="mx-auto max-w-6xl px-4">
         <div className="text-center">
           <h2 className="text-2xl font-bold text-white sm:text-3xl">Internship Highlights</h2>

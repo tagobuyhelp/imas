@@ -39,7 +39,7 @@ export function InternshipSIPSection() {
   }, []);
 
   return (
-    <section className="bg-gradient-to-br from-[#143674] via-[#4c488f] to-[#7c5aa7] px-4 py-10 sm:py-12">
+    <section id="sip" className="bg-gradient-to-br from-[#143674] via-[#4c488f] to-[#7c5aa7] px-4 py-10 sm:py-12">
       <div className="mx-auto max-w-6xl">
         <h2 className="text-lg font-semibold text-white mb-5 sm:text-xl sm:mb-6">Summer Internship Program (SIP)</h2>
 

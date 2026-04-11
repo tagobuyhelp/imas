@@ -6,7 +6,7 @@ import { BarChart3, Briefcase, Building2, Globe, TrendingUp, Users } from 'lucid
 export function PlacementsHighlightsSection() {
   const stats = [
     { label: 'Placement Assistance', value: '100% Career Support', icon: Briefcase },
-    { label: 'Highest Salary Package', value: '₹12 LPA', icon: TrendingUp },
+    { label: 'Highest Salary Package', value: '₹18 LPA', icon: TrendingUp },
     { label: 'Average Salary Package', value: '₹4.5 – ₹6 LPA', icon: BarChart3 },
     { label: 'Internship Opportunities', value: '500+ annually', icon: Users },
     { label: 'Recruiting Companies', value: '120+', icon: Building2 },

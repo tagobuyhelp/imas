@@ -72,13 +72,20 @@ const getMenuItemsForPage = (page?: string) => {
         { label: 'Enquire Now', sectionId: 'apply' }
       ];
     case 'internships':
-      return [
-        { label: 'Internships', sectionId: 'internships-hero' },
-        { label: 'Outcomes', sectionId: 'outcomes' },
-        { label: 'Companies', sectionId: 'companies' },
-        { label: 'Roles', sectionId: 'roles' },
-        { label: 'Enquire Now', sectionId: 'cta' }
-      ];
+        return [
+          { label: 'Overview', sectionId: 'internships-hero' },
+          { label: 'Why', sectionId: 'why-internships' },
+          { label: 'Highlights', sectionId: 'internship-highlights' },
+          { label: 'SIP', sectionId: 'sip' },
+          { label: 'Process', sectionId: 'internship-process' },
+          { label: 'Industries', sectionId: 'industries' },
+          { label: 'Benefits', sectionId: 'benefits' },
+          { label: 'Why IMAS', sectionId: 'why-imas' },
+          { label: 'Support', sectionId: 'support' },
+          { label: 'Success', sectionId: 'success-stories' },
+          { label: 'FAQ', sectionId: 'faq' },
+          { label: 'Apply', sectionId: 'final-cta' }
+        ];
     case 'contact':
       return [
         { label: 'Contact', sectionId: 'contact-hero' },
@@ -104,6 +111,7 @@ const getMenuItemsForPage = (page?: string) => {
         { label: 'FAQ', sectionId: 'placements-faq' },
         { label: 'Success Stories', sectionId: 'placements-alumni' }
       ];
+    
     default:
       // Default menu for program detail pages
       return [
