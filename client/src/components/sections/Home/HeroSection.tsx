@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { format } from 'date-fns';
 import { Button } from '../../ui/button';
 import { Carousel } from '../../ui/carousel';
 import { IMAS_TAILWIND_CLASSES, IMAS_DATES } from '../../../lib/constants';
@@ -22,7 +21,7 @@ export function HeroSection() {
     const interval = setInterval(update, 60 * 1000);
     return () => clearInterval(interval);
   }, []);
-  const deadlineText = format(new Date(IMAS_DATES.APPLICATION_DEADLINE), 'dd MMMM, yyyy');
+  const deadlineText = '30 June, 2026';
   const [currentStat, setCurrentStat] = useState(0);
   
   // Sample carousel images - replace with actual IMAS images
@@ -225,7 +224,7 @@ export function HeroSection() {
                       <div className="bg-gradient-to-r from-red-50 to-orange-50 border border-red-200 p-2 rounded-lg">
                         <div className="flex items-center gap-1 mb-1">
                           <div className="w-1.5 h-1.5 bg-red-500 rounded-full animate-pulse"></div>
-                          <p className="text-[11px] sm:text-xs font-semibold text-red-700">Final Admission Phase I – Apply Before the Deadline! {deadlineText}</p>
+                          <p className="text-[11px] sm:text-xs font-semibold text-red-700">Final Admission Phase I – Apply Before the Extended to Deadline! 30th June , 2026</p>
                         </div>
                         <p className="text-xs sm:text-sm font-bold text-red-600">Application Deadline {deadlineText}</p>
                         <p className="text-[11px] sm:text-xs text-gray-700">
