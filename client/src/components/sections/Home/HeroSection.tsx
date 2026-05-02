@@ -224,7 +224,7 @@ export function HeroSection() {
                       <div className="bg-gradient-to-r from-red-50 to-orange-50 border border-red-200 p-2 rounded-lg">
                         <div className="flex items-center gap-1 mb-1">
                           <div className="w-1.5 h-1.5 bg-red-500 rounded-full animate-pulse"></div>
-                          <p className="text-[11px] sm:text-xs font-semibold text-red-700">Final Admission Phase I – Apply Before the Extended to Deadline! 30th June , 2026</p>
+                          <p className="text-[11px] sm:text-xs font-semibold text-red-700">Admission Phase I – Apply Before the Extended Deadline! 30th June , 2026</p>
                         </div>
                         <p className="text-xs sm:text-sm font-bold text-red-600">Application Deadline {deadlineText}</p>
                         <p className="text-[11px] sm:text-xs text-gray-700">
