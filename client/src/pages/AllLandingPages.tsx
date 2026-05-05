@@ -98,10 +98,10 @@ export const AllLandingPages: React.FC = () => {
             {/* Header */}
             <div className="text-center max-w-2xl mx-auto mb-14">
                 <h1 className="text-4xl font-bold text-gray-900">
-                    Explore IMAS Programs
+                    All Landing Pages
                 </h1>
                 <p className="mt-3 text-lg text-gray-600">
-                    Discover industry-oriented PGDM programs designed to shape future leaders.
+                    All Landing Pages for IMAS Business School.
                 </p>
             </div>
 
