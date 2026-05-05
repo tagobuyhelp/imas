@@ -49,6 +49,12 @@ const pages: Page[] = [
         link: "/best-pgdm-ba-college-in-kolkata",
         status: "new",
     },
+    {
+    title: "MBA Global Program",
+    desc: "Explore top-ranked PGDM MBA programs in Kolkata.",
+    link: "/mba-global-program",
+    status: "new",
+  },
 ];
 
 /**
