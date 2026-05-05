@@ -79,6 +79,9 @@ export function Footer() {
                 <a href="/statutory-committees" className={`flex items-center gap-2 text-gray-300 ${IMAS_TAILWIND_CLASSES.HOVER_TEXT_TEAL} transition-all duration-300 hover:translate-x-2 hover:bg-gray-800/30 rounded-lg p-2 text-sm group`}>
                   <HelpCircle className="h-4 w-4 group-hover:scale-110 transition-transform duration-300" /> Statutory Committees
                 </a>
+                <a href="/landing-pages" className={`flex items-center gap-2 text-gray-300 ${IMAS_TAILWIND_CLASSES.HOVER_TEXT_TEAL} transition-all duration-300 hover:translate-x-2 hover:bg-gray-800/30 rounded-lg p-2 text-sm group`}>
+                  <BookOpen className="h-4 w-4 group-hover:scale-110 transition-transform duration-300" /> All Landing Pages
+                </a>
               </div>
             </div>
 

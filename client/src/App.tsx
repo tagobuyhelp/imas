@@ -23,6 +23,7 @@ import { PgdmFintechLandingPage } from './pages/PgdmFintechLandingPage';
 import { PgdmMbaLandingPage } from './pages/PgdmMbaLandingPage';
 import { WorkingExecutivesLandingPage } from './pages/WorkingExecutivesLandingPage';
 import { PgdmBaLandingPage } from './pages/PgdmBaLandingPage';
+import { AllLandingPages } from './pages/AllLandingPages';
 // Removed admin and auth imports - components deleted
 import { Toaster } from './components/ui/toaster';
 import { BrochureModal } from './components/BrochureModal';
@@ -82,6 +83,7 @@ function AppContent(): React.JSX.Element {
         <Route path="/pgdm-executive-courses-kolkata/" element={<Navigate to="/programs/pgdm-operations-working-executive" replace />} />
         <Route path="/pgdm-business-analytics-college-kolkata" element={<Navigate to="/programs" replace />} />
         <Route path="/pgdm-business-analytics-college-kolkata/" element={<Navigate to="/programs" replace />} />
+        <Route path="/landing-pages" element={<AllLandingPages />} />
       </Routes>
     </Layout>
   );
