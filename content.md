@@ -1,166 +1,275 @@
+PGDM in AI & Data Science (AICTE Approved) – IMAS
+Best PGDM AI & Data Science College in Kolkata with Placement
 
-MBA Global Program (1+1 International Pathway) – IMAS
-Study in India + Abroad | Build a Global Career
+Build a High-Paying Career in AI, Data Science & Future Technologies
 
-Start Your MBA in India. Complete It Abroad. Build a Global Career.
+Looking for a PGDM in AI & Data Science in Kolkata? IMAS offers one of the best AI & Data Science PGDM programs in Eastern India, designed for students and working professionals aiming for careers in artificial intelligence, machine learning, and data-driven roles.
 
-Looking for a Global MBA program in Kolkata? IMAS offers a unique 1+1 MBA Global Program, where students complete Year 1 at IMAS and Year 2 at an international partner university.
-
-•	Study in India + International University
-•	Global Degree & Exposure
-•	International Internship & Career Opportunities
+•	Internship from Year 1
+•	Hands-on AI & Data Science Training
+•	Industry-Aligned Curriculum
 •	Strong Placement Support
 
-Key University Partners:
+₹ 6.50+ LPA Average Package | ₹18.00 LPA Highest Package
+👉 Also suitable for Working Professionals & Career Switchers
 
-•	University of Sunderland ,United Kingdom
-•	University of South Wales ,United Kingdom
-
+Approved by: AICTE
 👉 Admissions Open  | Limited Seats Available
 
-ABOUT MBA GLOBAL PROGRAM
+Our Achievements
 
-The MBA Global Program at IMAS is designed for students who want international education and global career opportunities without completing the entire course abroad.
+•	Top 10 Best B School in Kolkata 
+(Knowledge Review, 2026) 
 
-Students complete:
+•	Best Emerging Business School Award
+(Edulite Excellence Award, 2024) 
 
-•	Year 1 at IMAS (Kolkata) – Strong management foundation 
-•	Year 2 at Partner University Abroad – Global exposure & specialization 
+•	Best College for Innovation & Startup in Kolkata
+(Edulite Excellence Award, 2025) 
 
-This program is ideal for students searching:
-
-•	MBA abroad after 1 year in India 
-•	Global MBA programs in Kolkata 
-•	Study MBA in UK after studying in India 
-•	MBA with international degree and placement 
-
-PROGRAM STRUCTURE (1+1 MODEL)
-
-🇮🇳 Year 1 – IMAS Campus (India)
-
-Students develop core business knowledge:
-
-•	Marketing, Finance, HR & Operations 
-•	Business Communication & Leadership 
-•	Business Analytics & Decision Making 
-•	Industry Projects & Internships 
-
-👉 Prepares students for international academic transition
+•	Excellence in Management Education
+(Collegerank, 2024) 
 
 
+ABOUT PGDM AI & DATA SCIENCE
 
-Year 2 – International University
+Artificial Intelligence and Data Science are among the fastest-growing and highest-paying career domains globally. Companies across industries are investing heavily in AI-driven decision-making, automation, and data intelligence.
 
-Students transfer to partner universities such as:
-•	University of Sunderland 
-•	University of South Wales 
+The PGDM in AI & Data Science at IMAS is designed to equip students with both business understanding and advanced technical skills, making it one of the top AI & Data Science courses in Kolkata with placement.
 
-👉 Gain international academic experience and global exposure
+This program is ideal for students interested in:
 
-SPECIALIZATIONS 
+•	Artificial Intelligence & Machine Learning 
+•	Data Science & Big Data 
+•	Business Intelligence & Automation 
+•	Tech-driven managerial roles 
 
-Students can choose specializations based on university options:
+WHAT YOU WILL LEARN
 
-•	Marketing 
-•	International Business 
-•	Business Analytics 
-•	AI & Data Science
-•	Fintech
+The program builds strong foundations in both management and advanced data science skills, ensuring students are industry-ready.
 
-👉 Designed to match global industry demand
+Management Foundation
 
-INTERNATIONAL ADVANTAGE
+•	Management, Economics & Business Strategy 
+•	Marketing, Finance & Operations 
+•	Business Research & Analytics 
+•	Digital Transformation 
 
-This program provides:
+Core AI & Data Science Skills
+•	Python for Data Science 
+•	Machine Learning Algorithms 
+•	Data Analysis & Visualization 
+•	Big Data & Cloud Basics 
+•	AI Applications in Business 
+•	Deep Learning 
 
-•	Globally recognized MBA degree 
-•	Exposure to international faculty & curriculum 
-•	Opportunity to build global career pathways 
-•	Access to international job markets 
+PROGRAM STRUCTURE
 
-👉 Especially valuable for students aiming to work abroad after MBA
+Year 1 – Core Management
 
-PLACEMENT & CAREER OPPORTUNITIES
+ 
+Semester I
+•	Principles of Management 
+•	Managerial Economics 
+•	Financial Accounting 
+•	Business Statistics 
+•	Business Communication 
 
-Students can explore opportunities in:
+Semester II
+•	Marketing Management 
+•	Financial Management 
+•	Human Resource Management 
+•	Operations & Supply Chain 
+•	Business Research & Analytics 
+ 
 
-•	India (through IMAS placement support) 
-•	International markets (subject to visa policies) 
+👉 Mandatory Summer Internship (8–10 Weeks)
 
-Career Roles
+Year 2 – AI & Data Science Specialization
 
-•	Business Analyst 
-•	Marketing Executive 
-•	Financial Analyst 
-•	Data Scientist
-•	International Business Executive 
+ 
+Semester III
+•	Python Programming for Data Science 
+•	Machine Learning 
+•	Data Visualization 
+•	SQL & Database Systems 
+•	AI in Business 
+Semester IV
+•	Advanced Machine Learning 
+•	Big Data Analytics 
+•	AI Strategy & Applications 
+•	Capstone Project (Industry-Based) 
+ 
+
+TOOLS & SKILLS YOU WILL MASTER
+
+•	Python 
+•	Machine Learning Models 
+•	Power BI / Tableau 
+•	SQL 
+•	AI Tools & Frameworks 
+•	Data Visualization 
+
+PROGRAM FEATURES
+
+•	20+ Presentations for communication & leadership 
+•	AI & Data Science Tools Training 
+•	Advanced Excel & Analytics Training 
+•	Business Communication Training 
+•	Corporate Mentorship & Industry Visits 
+
+DESIGNED FOR WORKING PROFESSIONALS
+
+This program is also ideal for professionals looking to move into AI & data roles:
+
+•	Flexible Class Timings 
+•	Hybrid Learning Mode 
+•	Corporate Sponsored Discounts 
+•	Career Transition Opportunities 
+•	Practical Learning for real job application 
 
 
-CAMPUS & GLOBAL EXPERIENCE
 
-https://www.youtube.com/watch?v=rM3MWkhO6GA&t=2s
-https://www.youtube.com/watch?v=pkv_lBMq4JA
+PLACEMENT HIGHLIGHTS
 
+Among the best PGDM AI & Data Science colleges in Kolkata with placement
+
+•	₹6.50+ LPA Average Package 
+•	₹18.00 LPA Highest Package 
+•	465+ Placement Opportunities 
+•	Internship to Placement Conversion 
+
+Top sectors:
+
+•	IT & Tech Companies 
+•	AI & Data Science Firms 
+•	Consulting Companies 
+•	Startups & Product Companies 
+
+CAREER OPPORTUNITIES
+
+•	Data Scientist 
+•	AI Engineer 
+•	Machine Learning Engineer 
+•	Data Analyst 
+•	Business Intelligence Analyst 
+
+
+STUDENT TESTIMONIALS
+
+“The program helped me build real analytics skills with tools and projects.”
+
+Anurag Jain
+Data Analyst
+MBA / PGDM 2025
+
+
+
+
+“The hands-on training and internship exposure prepared me for corporate roles.”
+
+
+Siddharth Roy
+Business Analyst
+MBA/ PGDM  - 2025
+
+INDUSTRY TESTIMONIALS
+
+
+IMAS students demonstrate excellent adaptability, professionalism, and business understanding, reflecting strong institutional focus on corporate grooming and placement readiness programs.
+
+
+Mr. Avijit Basu
+NHRD
+
+Experiential learning at IMAS, including industry immersion programs, provides practical exposure and deep operational insights, enhancing overall student competency significantly.
+
+Mr. Sounak Sen
+KPMG
+
+international immersion programmes and academic collaborations.
+
+Gain global exposure through international immersion programs and academic collaborations with leading global institutions
+
+IMAS offers opportunities for students to gain exposure through partnerships with reputed international institutions such as:
+•	University of Sunderland, United Kingdom
+•	Lincoln University College , Malaysia
+•	SEGi University , Malaysia
+•	FPT University , Vietnam
+•	INTI International University , Malaysia
+•	Management Development Institute of Singapore , Singapore
+
+( Photographs of All this universities need to be shown)
+
+
+CAMPUS EXPERIENCE
+
+Video : https://www.youtube.com/watch?v=rM3MWkhO6GA
 
 •	Campus Life 
 •	Global Exposure 
 •	Student Activities 
 •	Industry Training 
 
-FACILITIES (INDIA CAMPUS)
+HOSTEL & CAMPUS FACILITIES
 
-•	Hostel (Boys & Girls) 
-•	Wi-Fi Campus 
-•	Modern Classrooms 
-•	Student Support Services 
+•	Separate hostels for boys & girls 
+•	Safe & secure campus 
+•	Wi-Fi enabled environment 
+•	Modern classrooms 
 
-SCHOLARSHIPS & FINANCIAL SUPPORT
+SCHOLARSHIPS & LOANS
+
+Study Now, Pay Later Options Available
 
 •	Merit-Based Scholarships 
+•	Govt. Schemes 
+•	Student Credit Card Facility 
 •	Education Loan Assistance 
-•	Guidance for international funding 
+
+
+Admission & Eligibility - PGDM Program
+
+Graduates in any discipline with valid CAT/XAT/MAT scores are eligible for admission to the PGDM Course. Candidates without valid scores will be required to take the IMASAT admission test conducted by IMAS. The selection process includes a Group Discussion and Personal Interview, providing a comprehensive evaluation of candidates. 
+
 
 ❓ FAQ
 
-Q1. How does the MBA Global Program work?
-Students complete Year 1 at IMAS and Year 2 at an international partner university.
+Q1. Does IMAS provide placement support?
+Yes, IMAS provides structured placement support with internships and AI/tech recruiters.
 
-Q2. Which universities are available in the UK?
-Students can study at the University of Sunderland and University of South Wales.
+Q2. Are internships included?
+Yes, a mandatory internship is part of the program.
 
-Q3. Will I receive an international degree?
-Yes, students receive a degree from the partner university abroad.
+Q3. What is the average salary?
+The average package is ₹6.50+ LPA depending on performance.
 
-Q4. Does IMAS provide placement support?
-Yes, placement support is provided in India along with international career guidance.
+Q4. What is the highest package?
+The highest package goes up to ₹20.00 LPA.
 
-Q5. Can I work abroad after completing the MBA?
-Yes, depending on visa policies and job opportunities in the chosen country.
+Q5. Is AI & Data Science a good career?
+Yes, it is one of the fastest-growing and highest-paying career fields globally.
 
-Q6. Is this program cost-effective compared to studying fully abroad?
-Yes, it reduces cost while still providing international exposure and degree.
+Q6. Does IMAS provide tools training?
+Yes, students are trained in Python, ML, SQL, and analytics tools.
 
-Q7. Are internships included?
-Yes, internship opportunities are part of the program.
+Q7. Is this program suitable for working professionals?
+Yes, with flexible timing and hybrid learning options.
 
-Q8. Does IMAS assist with visa process?
-Yes, full support is provided for admission and visa documentation.
+Q8. Does IMAS provide hostel facilities?
+Yes, for both boys and girls.
 
 Q9. Are scholarships available?
-Yes, scholarships and financial assistance options are available.
+Yes, merit-based and government schemes are available.
 
-Q10. Is this program suitable for students from Eastern India?
-Yes, it is ideal for students from West Bengal and nearby regions seeking global careers.
+Q10. Is PGDM AI better than MBA?
+It is more specialized and industry-focused in technology domains.
 
-
-
-
-
-Start Your Global MBA Journey with International University Exposure
+Secure Your Seat in the Best PGDM AI & Data Science College in Kolkata
 
 📞 Talk to Experts
 📥 Download Brochure
 📝 Apply Now
 
-👉 Admissions Open | Limited Seats | Global Career Opportunities
+👉 Admissions Open | Limited Seats | High Demand Program
 

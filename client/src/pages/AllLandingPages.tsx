@@ -20,6 +20,18 @@ type Page = {
  */
 const pages: Page[] = [
     {
+        title: 'PGDM in AI & Data Science',
+        desc: 'New compact template design for AI & Data Science.',
+        link: '/pgdm-ai-data-science',
+        status: 'new'
+    },
+    {
+        title: 'PGDM in Fintech (New Design)',
+        desc: 'New compact template design for Fintech.',
+        link: '/pgdm-fintech-new',
+        status: 'new'
+    },
+    {
         title: "PGDM Plus",
         desc: "Advanced PGDM program with industry-focused curriculum.",
         link: "/pgdm-plus",
@@ -53,6 +65,12 @@ const pages: Page[] = [
     title: "MBA Global Program",
     desc: "Explore top-ranked PGDM MBA programs in Kolkata.",
     link: "/mba-global-program",
+    status: "new",
+  },
+  {
+    title: "PGDM AI & Data Science",
+    desc: "Build a High-Paying Career in AI, Data Science & Future Technologies.",
+    link: "/pgdm-ai-data-science",
     status: "new",
   },
 ];
