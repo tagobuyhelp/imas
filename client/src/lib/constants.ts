@@ -71,9 +71,9 @@ export const IMAS_STATS = {
 
 // IMAS Key Dates
 export const IMAS_DATES = {
-    APPLICATION_DEADLINE: '2026-06-30T23:59:59',
+    APPLICATION_DEADLINE: '2026-09-30T23:59:59',
     COMMENCEMENT: 'December 2025',
-    INTAKE_PHASE: 'Phase 7',
+    INTAKE_PHASE: 'Phase II',
 } as const;
 
 // CSS Class Names for IMAS Colors
