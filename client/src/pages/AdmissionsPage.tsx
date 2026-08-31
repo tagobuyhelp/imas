@@ -506,7 +506,7 @@ export function AdmissionsPage(): React.JSX.Element {
                   <div className="pt-2">
                     <p className="text-xs text-gray-700">
                       Application Deadline
-                      <span className="font-bold text-red-600 ml-1 animate-pulse">30 June, 2026</span>
+                      <span className="font-bold text-red-600 ml-1 animate-pulse">30 November, 2026</span>
                     </p>
                   </div>
 
@@ -1298,7 +1298,7 @@ export function AdmissionsPage(): React.JSX.Element {
                                   <Target className="h-4 w-4 text-red-600" />
                                   <span className="text-sm font-medium">Final Deadline</span>
                                 </div>
-                                <span className="text-sm font-bold text-red-600">30 June, 2026</span>
+                                <span className="text-sm font-bold text-red-600">30 November, 2026</span>
                               </div>
                             </div>
                           </div>

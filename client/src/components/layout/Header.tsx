@@ -223,7 +223,7 @@ export function Header({ currentPage, onMenuToggle }: HeaderProps) {
         <div className="w-full px-6">
           <div className="flex items-center justify-between text-sm">
             <div className="flex items-center gap-4">
-              <span className="font-semibold text-[12px]  md:text-[14px]">Admission Phase II – Apply Before the Extended Deadline! 30th September, 2026</span>
+              <span className="font-semibold text-[12px]  md:text-[14px]">Admission Phase II – Apply Before the Extended Deadline! 30th November, 2026</span>
               <div className="flex items-center gap-2">
                 <Clock className="h-4 w-4" />
                 <span className="font-mono">
@@ -232,7 +232,7 @@ export function Header({ currentPage, onMenuToggle }: HeaderProps) {
               </div>
             </div>
             <div className="hidden md:flex items-center gap-3">
-              <span className="hidden lg:inline">Application Deadline 30 September, 2026</span>
+              <span className="hidden lg:inline">Application Deadline 30 November, 2026</span>
               <Button 
                 variant="ghost"
                 className="text-white hover:bg-white/10 px-3 py-1 text-xs sm:text-sm"
