@@ -325,7 +325,7 @@ export function Header({ currentPage, onMenuToggle }: HeaderProps) {
                     } ${isAdmissionsMegaMenuOpen ? IMAS_TAILWIND_CLASSES.TEXT_TEAL : ''}`}
                 >
                   <FileText className="h-4 w-4" />
-                  Admissions
+                  Courses
                   <ChevronDown className={`h-3 w-3 transition-transform duration-200 ${isAdmissionsMegaMenuOpen ? 'rotate-180' : ''}`} />
                 </button>
               </div>
@@ -400,13 +400,29 @@ export function Header({ currentPage, onMenuToggle }: HeaderProps) {
               </Button>
             </div>
 
-            {/* Mobile Menu Button */}
-            <button
-              onClick={onMenuToggle}
-              className={`lg:hidden p-2 ${IMAS_TAILWIND_CLASSES.HOVER_BG_MEDIUM_BLUE} rounded-lg transition-colors`}
-            >
-              <Menu className="h-6 w-6" />
-            </button>
+            {/* Mobile Actions */}
+            <div className="flex lg:hidden items-center gap-1 sm:gap-2">
+              <button
+                onClick={() => setIsAdmissionsMegaMenuOpen(!isAdmissionsMegaMenuOpen)}
+                className={`flex items-center gap-1 px-2 sm:px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium transition-colors ${
+                  isAdmissionsMegaMenuOpen 
+                    ? `bg-teal-500/10 ${IMAS_TAILWIND_CLASSES.TEXT_TEAL}` 
+                    : `text-white ${IMAS_TAILWIND_CLASSES.HOVER_BG_MEDIUM_BLUE}`
+                }`}
+              >
+                <FileText className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
+                Courses
+                <ChevronDown className={`h-3 w-3 transition-transform duration-200 ${isAdmissionsMegaMenuOpen ? 'rotate-180' : ''}`} />
+              </button>
+              
+              {/* Mobile Menu Button */}
+              <button
+                onClick={onMenuToggle}
+                className={`p-1.5 sm:p-2 ${IMAS_TAILWIND_CLASSES.HOVER_BG_MEDIUM_BLUE} rounded-lg transition-colors`}
+              >
+                <Menu className="h-5 w-5 sm:h-6 sm:w-6" />
+              </button>
+            </div>
           </div>
 
           {/* Mobile Scrollable Menu */}
@@ -469,6 +485,7 @@ export function Header({ currentPage, onMenuToggle }: HeaderProps) {
                     'Support': <Users className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
                     'Success': <Users className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
                     'Admissions': <FileText className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
+                    'Courses': <FileText className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
                     'Process': <FileText className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
                     'Apply': <FileText className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
                     'Apply Now': <FileText className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,

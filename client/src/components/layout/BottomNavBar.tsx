@@ -193,6 +193,7 @@ export function BottomNavBar({
       'Training': <BookOpen className="h-4 w-4" />,
       'FAQ': <FileText className="h-4 w-4" />,
       'Admissions': <FileText className="h-4 w-4" />,
+      'Courses': <FileText className="h-4 w-4" />,
       'Process': <FileText className="h-4 w-4" />,
       'Apply': <FileText className="h-4 w-4" />, 
       'Apply Now': <FileText className="h-4 w-4" />, 

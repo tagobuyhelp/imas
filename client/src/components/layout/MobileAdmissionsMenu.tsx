@@ -79,7 +79,7 @@ const MobileAdmissionsMenu: React.FC<MobileAdmissionsMenuProps> = ({
       >
         <div className="flex items-center gap-3">
           <FileText className="h-5 w-5" />
-          <span className="font-medium">Admissions</span>
+          <span className="font-medium">Courses</span>
         </div>
         <ChevronDown className={`h-4 w-4 transition-transform duration-200 ${isExpanded ? 'rotate-180' : ''}`} />
       </button>
