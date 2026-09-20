@@ -34,7 +34,7 @@ interface AdmissionFormData {
   };
   
   // Programme Information
-  programme: string;
+  program: string;
   preferredBatch: '2026-2028' | '2027-2029';
   
   // Educational Background
@@ -83,7 +83,7 @@ export function AdmissionsPage(): React.JSX.Element {
       pincode: '',
       country: 'India'
     },
-    programme: '',
+    program: '',
     preferredBatch: '2026-2028',
     education: {
       graduation: {
@@ -202,8 +202,8 @@ export function AdmissionsPage(): React.JSX.Element {
     }
 
     // Programme Information
-    if (!formData.programme) {
-      errors['programme'] = 'Please select a programme';
+    if (!formData.program) {
+      errors['program'] = 'Please select a programme';
     }
 
     if (!formData.preferredBatch) {
@@ -257,7 +257,8 @@ export function AdmissionsPage(): React.JSX.Element {
       formData_submit.append('alternatePhone', formData.alternatePhone || '');
       formData_submit.append('dateOfBirth', formData.dateOfBirth);
       formData_submit.append('gender', formData.gender);
-      formData_submit.append('programme', formData.programme);
+      formData_submit.append('program', formData.program);
+      formData_submit.append('programme', formData.program);
       formData_submit.append('preferredBatch', formData.preferredBatch);
       
       // Address fields
@@ -292,7 +293,7 @@ export function AdmissionsPage(): React.JSX.Element {
       
       // FormSubmit.co configuration
       formData_submit.append('_replyto', formData.email);
-      formData_submit.append('_subject', `Admission Application: ${formData.name} - ${formData.programme}`);
+      formData_submit.append('_subject', `Admission Application: ${formData.name} - ${formData.program}`);
       formData_submit.append('_captcha', 'false');
       formData_submit.append('_template', 'table');
       
@@ -329,7 +330,7 @@ export function AdmissionsPage(): React.JSX.Element {
           pincode: '',
           country: ''
         },
-        programme: '',
+        program: '',
         preferredBatch: '2026-2028',
         education: {
           graduation: {
@@ -1031,20 +1032,20 @@ export function AdmissionsPage(): React.JSX.Element {
                                 Programme *
                               </label>
                               <div className="relative">
-                                <GraduationCap className={`absolute left-3 top-3 h-5 w-5 z-10 transition-colors duration-200 ${formErrors['programme'] ? 'text-red-400' : formData.programme ? 'text-[#143674]' : 'text-gray-400'}`} />
+                                <GraduationCap className={`absolute left-3 top-3 h-5 w-5 z-10 transition-colors duration-200 ${formErrors['program'] ? 'text-red-400' : formData.program ? 'text-[#143674]' : 'text-gray-400'}`} />
                                 <select
-                                  name="programme"
-                                  value={formData.programme}
+                                  name="program"
+                                  value={formData.program}
                                   onChange={handleInputChange}
-                                  className={`w-full pl-10 pr-10 py-3 border rounded-xl focus:ring-2 focus:border-transparent appearance-none bg-white transition-all duration-200 cursor-pointer ${formErrors['programme']
+                                  className={`w-full pl-10 pr-10 py-3 border rounded-xl focus:ring-2 focus:border-transparent appearance-none bg-white transition-all duration-200 cursor-pointer ${formErrors['program']
                                       ? 'border-red-300 focus:ring-red-200 bg-red-50/50'
-                                      : formData.programme
+                                      : formData.program
                                         ? 'border-[#143674] focus:ring-[#143674]/20'
                                         : 'border-gray-300 focus:ring-[#143674]/20'
                                     }`}
                                   required
                                 >
-                                  <option value="">Choose your ideal program...</option>
+                                  <option value="">Choose your ideal programme...</option>
                                   {programsData.map((program) => (
                                     <option key={program.id} value={program.slug}>
                                       {program.name} ({program.duration})
@@ -1052,12 +1053,12 @@ export function AdmissionsPage(): React.JSX.Element {
                                   ))}
                                 </select>
                                 <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
-                                  <ArrowRight className={`h-4 w-4 rotate-90 transition-colors duration-200 ${formErrors['programme'] ? 'text-red-400' : 'text-gray-400'}`} />
+                                  <ArrowRight className={`h-4 w-4 rotate-90 transition-colors duration-200 ${formErrors['program'] ? 'text-red-400' : 'text-gray-400'}`} />
                                 </div>
-                                {formErrors['programme'] && (
+                                {formErrors['program'] && (
                                   <p className="mt-1 text-sm text-red-600 flex items-center gap-1">
                                     <span className="w-1 h-1 bg-red-600 rounded-full"></span>
-                                    {formErrors['programme']}
+                                    {formErrors['program']}
                                   </p>
                                 )}
                               </div>

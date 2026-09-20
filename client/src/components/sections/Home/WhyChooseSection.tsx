@@ -316,7 +316,7 @@ export function WhyChooseSection() {
       id: 'difference',
       title: 'AICTE-Approved Programmes',
       subtitle: 'at IMAS COLLEGE KOLKATA',
-      image: '/uploads/aicte-programmes.jpg',
+      image: '/uploads/aicte-programs.jpg',
       description: 'Learn about our government-recognised management courses',
       videoUrl: '#',
       content: {

@@ -108,7 +108,7 @@ export function PgdmBaLandingPage(): React.JSX.Element {
   ]
 
   const year1Sem1 = [
-    'Principles of Management & Organisational Behavior',
+    'Principles of Management & Organisational Behaviour',
     'Managerial Economics',
     'Financial Accounting & Analysis',
     'Business Statistics & Quantitative Techniques',

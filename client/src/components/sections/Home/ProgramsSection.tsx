@@ -391,7 +391,7 @@ export function ProgramsSection() {
   };
 
   return (
-    <section id="about-the-programme" className="py-8 sm:py-16 bg-gradient-to-br from-gray-50 to-white" aria-labelledby="programmes-heading">
+    <section id="about-the-program" className="py-8 sm:py-16 bg-gradient-to-br from-gray-50 to-white" aria-labelledby="programs-heading">
       <div className="max-w-[1460px] mx-auto px-4">
         {/* Section Header */}
         <header className="text-center mb-6 sm:mb-12">

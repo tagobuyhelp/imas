@@ -31,7 +31,7 @@ export function ProgramsPage() {
       phase: 'Phase 2',
       title: 'Marketing Specialisation',
       duration: '6 Months',
-      topics: ['Consumer Behavior & Neuromarketing', 'Integrated Marketing Communication', 'Brand Strategy & Positioning', 'Digital & Performance Marketing']
+      topics: ['Consumer Behaviour & Neuromarketing', 'Integrated Marketing Communication', 'Brand Strategy & Positioning', 'Digital & Performance Marketing']
     },
     {
       phase: 'Phase 3',

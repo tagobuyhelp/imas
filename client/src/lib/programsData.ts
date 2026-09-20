@@ -369,7 +369,7 @@ export const programsData: Program[] = [
         format: 'full-time',
         location: 'Newtown, Kolkata',
         commencement: '19th Sep 2026',
-        description: 'The PGDM Plus in Marketing Management at IMAS Kolkata is a comprehensive 2-year programme designed to create marketing leaders who can navigate the complexities of modern consumer behavior, digital transformation, and global brand management. This AICTE-approved programme combines theoretical foundations with practical applications, ensuring graduates are industry-ready from day one.',
+        description: 'The PGDM Plus in Marketing Management at IMAS Kolkata is a comprehensive 2-year programme designed to create marketing leaders who can navigate the complexities of modern consumer behaviour, digital transformation, and global brand management. This AICTE-approved programme combines theoretical foundations with practical applications, ensuring graduates are industry-ready from day one.',
         overview: 'The PGDM Plus in Marketing Management at IMAS Kolkata is a transformative 2-year full-time programme designed for aspiring marketers who want to master branding, digital strategy, consumer psychology, and sales leadership.',
         highlights: [
             'Two-Year Full-Time PGDM Plus (AICTE Approved)',
@@ -391,7 +391,7 @@ export const programsData: Program[] = [
             'Marketing Strategy & Planning',
             'Digital Marketing & E-commerce',
             'Brand Management & Brand Equity',
-            'Consumer Behavior & Neuromarketing',
+            'Consumer Behaviour & Neuromarketing',
             'Market Research & Data Analytics',
             'Sales Management & Channel Strategy',
             'Integrated Marketing Communication',
@@ -458,7 +458,7 @@ export const programsData: Program[] = [
                     phase: 'Phase 2',
                     title: 'Marketing Specialisation',
                     duration: '6 Months',
-                    topics: ['Consumer Behavior & Neuromarketing', 'Integrated Marketing Communication', 'Brand Strategy & Positioning', 'Digital & Performance Marketing']
+                    topics: ['Consumer Behaviour & Neuromarketing', 'Integrated Marketing Communication', 'Brand Strategy & Positioning', 'Digital & Performance Marketing']
                 },
                 {
                     phase: 'Phase 3',
@@ -535,7 +535,7 @@ export const programsData: Program[] = [
             'Fintech & Digital Payments',
             'Financial Statement Analysis',
             'Treasury & Cash Management',
-            'Behavioral Finance & Market Psychology',
+            'Behavioural Finance & Market Psychology',
             'Regulatory Framework & Compliance'
         ],
         careerOpportunities: [
@@ -634,7 +634,7 @@ export const programsData: Program[] = [
         location: 'Newtown, Kolkata',
         commencement: '19th Sep 2026',
         description: 'The PGDM Plus in Human Resource Management at IMAS Kolkata is a comprehensive 2-year programme designed to create HR leaders who can navigate the complexities of modern workforce management, organisational development, and strategic human capital planning. This AICTE-approved programme combines rigorous academic learning with practical industry exposure, preparing students to become strategic HR business partners who drive organisational success through people-centric initiatives.',
-        overview: 'The PGDM Plus in Human Resource Management at IMAS Kolkata is a transformative 2-year full-time programme designed for aspiring HR professionals who want to master talent management, organisational behavior, people analytics, and strategic HR leadership.',
+        overview: 'The PGDM Plus in Human Resource Management at IMAS Kolkata is a transformative 2-year full-time programme designed for aspiring HR professionals who want to master talent management, organisational behaviour, people analytics, and strategic HR leadership.',
         highlights: [
             'Two-Year Full-Time PGDM Plus – HR Specialisation (AICTE Approved)',
             'Strategic HR Management & People Analytics with real-world applications',
@@ -660,7 +660,7 @@ export const programsData: Program[] = [
             'Performance Management & Appraisal Systems',
             'Compensation & Benefits Design',
             'HR Analytics & People Data Science',
-            'Organisational Behavior & Psychology',
+            'Organisational Behaviour & Psychology',
             'Industrial Relations & Labour Laws',
             'Change Management & Organisational Development',
             'Employee Engagement & Retention Strategies',
@@ -713,7 +713,7 @@ export const programsData: Program[] = [
                     phase: 'Phase 1',
                     title: 'Foundation & Core HR',
                     duration: '6 Months',
-                    topics: ['HR Fundamentals', 'Organisational Behavior', 'Business Communication', 'Management Principles']
+                    topics: ['HR Fundamentals', 'Organisational Behaviour', 'Business Communication', 'Management Principles']
                 },
                 {
                     phase: 'Phase 2',
@@ -1459,7 +1459,7 @@ export const programsData: Program[] = [
             'Financial Management & Business Strategy',
             'Operations Excellence & Process Optimisation',
             'Marketing Strategy & Brand Management',
-            'Human Resource Management & Organisational Behavior',
+            'Human Resource Management & Organisational Behaviour',
             'Healthcare Administration & Medical Management',
             'Supply Chain & Logistics Management',
             'Agri Business & Rural Development',
@@ -1599,7 +1599,7 @@ export const programsData: Program[] = [
             'Portfolio Management & Asset Allocation',
             'Financial Analytics & Modeling',
             'International Finance & Treasury',
-            'Behavioral Finance & Investment Psychology',
+            'Behavioural Finance & Investment Psychology',
             'Financial Technology & Fintech',
             'Regulatory Framework & Compliance',
             'Wealth Management & Private Banking',
@@ -1707,7 +1707,7 @@ export const programsData: Program[] = [
         location: 'Kolkata',
         commencement: 'July 2026',
         description: 'A comprehensive 2-year PGDM programme in Human Resource Management designed for working professionals, combining online learning with weekend classroom sessions.',
-        overview: 'This programme is specifically designed for working professionals who want to advance their careers in Human Resource Management. The Blended learning format allows students to continue working while pursuing their management education. The curriculum covers all aspects of modern HR practices including talent management, organisational behavior, compensation management, and strategic HR planning.',
+        overview: 'This programme is specifically designed for working professionals who want to advance their careers in Human Resource Management. The Blended learning format allows students to continue working while pursuing their management education. The curriculum covers all aspects of modern HR practices including talent management, organisational behaviour, compensation management, and strategic HR planning.',
         highlights: [
             'Blended Learning Format with Weekend Classes for Working Professionals',
             'Industry-Relevant HR Curriculum with Strategic Management Focus',
@@ -1732,7 +1732,7 @@ export const programsData: Program[] = [
             'Performance Management & Appraisal Systems',
             'Compensation & Benefits Design',
             'HR Analytics & People Data Science',
-            'Organisational Behavior & Psychology',
+            'Organisational Behaviour & Psychology',
             'Industrial Relations & Labour Laws',
             'Change Management & Organisational Development',
             'Employee Engagement & Retention Strategies',
@@ -1786,7 +1786,7 @@ export const programsData: Program[] = [
                     phase: 'Phase 1',
                     title: 'Foundation & Core HR',
                     duration: '6 Months',
-                    topics: ['Principles of Management', 'Organisational Behavior', 'HR Fundamentals', 'Business Communication']
+                    topics: ['Principles of Management', 'Organisational Behaviour', 'HR Fundamentals', 'Business Communication']
                 },
                 {
                     phase: 'Phase 2',

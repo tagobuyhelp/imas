@@ -117,7 +117,7 @@ export function PgdmMbaLandingPage(): React.JSX.Element {
         {
             label: 'Human Resource',
             icon: 'group',
-            desc: 'Talent Management, HR Analytics & Organisational Behavior',
+            desc: 'Talent Management, HR Analytics & Organisational Behaviour',
             ideal: 'People management & organisational development',
         },
         {
@@ -776,7 +776,7 @@ export function PgdmMbaLandingPage(): React.JSX.Element {
                         </div>
 
                         <div className="grid gap-2 grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3">
-                            {specialisations.map((spec) => (
+                            {specializations.map((spec) => (
                                 <div
                                     key={spec.label}
                                     className="group flex flex-col gap-2.5 rounded-2xl bg-white p-4 shadow-sm ring-1 ring-slate-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"

@@ -29,7 +29,7 @@ export function ProgramDetailPage() {
         window.scrollTo(0, 0);
     }, [slug]);
 
-    if (!programme) {
+    if (!program) {
         return (
             <div className="min-h-screen flex items-center justify-center">
                 <div className="text-center">
@@ -44,7 +44,7 @@ export function ProgramDetailPage() {
     }
 
     const handleCTAAction = (action: string) => {
-        console.log('[ProgramDetailPage] CTA clicked', { action, programme: program?.name });
+        console.log('[ProgramDetailPage] CTA clicked', { action, program: program?.name });
         switch (action) {
             case 'apply':
                 if (typeof (window as any).openNpfPopup === 'function') {
