@@ -104,11 +104,11 @@ export function PgdmBaLandingPage(): React.JSX.Element {
     'SQL & Data Warehousing',
     'Business Intelligence & Dashboards',
     'AI Applications in Analytics',
-    'Decision Modeling & Optimization',
+    'Decision Modeling & Optimisation',
   ]
 
   const year1Sem1 = [
-    'Principles of Management & Organizational Behavior',
+    'Principles of Management & Organisational Behavior',
     'Managerial Economics',
     'Financial Accounting & Analysis',
     'Business Statistics & Quantitative Techniques',
@@ -129,8 +129,8 @@ export function PgdmBaLandingPage(): React.JSX.Element {
     'Data Analytics for Managers',
     'Predictive Analytics',
     'SQL & Data Warehousing',
-    'Business Intelligence & Visualization',
-    'Decision Modeling & Optimization',
+    'Business Intelligence & Visualisation',
+    'Decision Modeling & Optimisation',
     'Domain Analytics (Marketing / Finance / HR / Operations)',
   ]
 
@@ -188,7 +188,7 @@ export function PgdmBaLandingPage(): React.JSX.Element {
 
   const testimonials = [
     {
-      quote: 'The program helped me build real analytics skills with tools and projects.',
+      quote: 'The programme helped me build real analytics skills with tools and projects.',
       name: 'Anurag Jain',
       role: 'Data Analyst',
       batch: 'MBA / PGDM 2025',
@@ -203,7 +203,7 @@ export function PgdmBaLandingPage(): React.JSX.Element {
     },
     {
       quote:
-        'IMAS students demonstrate excellent adaptability, professionalism, and business understanding, reflecting strong institutional focus on corporate grooming and placement readiness programs.',
+        'IMAS students demonstrate excellent adaptability, professionalism, and business understanding, reflecting strong institutional focus on corporate grooming and placement readiness programmes.',
       name: 'Mr. Avijit Basu',
       role: 'NHRD',
       batch: 'Industry Partner',
@@ -211,7 +211,7 @@ export function PgdmBaLandingPage(): React.JSX.Element {
     },
     {
       quote:
-        'Experiential learning at IMAS, including industry immersion programs, provides practical exposure and deep operational insights, enhancing overall student competency significantly.',
+        'Experiential learning at IMAS, including industry immersion programmes, provides practical exposure and deep operational insights, enhancing overall student competency significantly.',
       name: 'Mr. Sounak Sen',
       role: 'KPMG',
       batch: 'Industry Partner',
@@ -235,7 +235,7 @@ export function PgdmBaLandingPage(): React.JSX.Element {
     { q: 'What is the highest package?', a: 'The highest package goes up to ₹18.00 LPA.' },
     { q: 'Is Business Analytics a good career?', a: 'Yes, it is one of the fastest-growing and highest-paying career domains.' },
     { q: 'Does IMAS provide tools training?', a: 'Yes, students are trained in Excel, SQL, Power BI, and analytics tools.' },
-    { q: 'Is this program suitable for working professionals?', a: 'Yes, with flexible timing and hybrid learning options.' },
+    { q: 'Is this programme suitable for working professionals?', a: 'Yes, with flexible timing and hybrid learning options.' },
     { q: 'Does IMAS provide hostel facilities?', a: 'Yes, for both boys and girls.' },
     { q: 'Are scholarships available?', a: 'Yes, merit-based and government schemes are available.' },
     { q: 'Is PGDM in Business Analytics a good career option after graduation?', a: 'It is more industry-focused with practical analytics skills.' },
@@ -291,12 +291,14 @@ export function PgdmBaLandingPage(): React.JSX.Element {
       <header className="sticky top-0 z-40 border-b border-white/10 bg-slate-900/80 backdrop-blur shadow-lg">
         <div className="mx-auto flex max-w-[1550px] items-center justify-between px-4 py-3">
           <div className="flex items-center gap-2">
-            <img src="/uploads/logos/imas.png" alt="IMAS International Management & Analytics School" className="h-10 w-auto xl:h-12" />
+            <a href="/" className="inline-block hover:opacity-90 transition-opacity">
+              <img src="/uploads/logos/imas.png" alt="IMAS International Management & Analytics School" className="h-10 w-auto xl:h-12" />
+            </a>
           </div>
 
           <nav className="hidden items-center gap-5 text-sm text-slate-200 md:flex">
             {[
-              { href: '#about-imas', icon: 'menu_book', label: 'Program Overview' },
+              { href: '#about-imas', icon: 'menu_book', label: 'Programme Overview' },
               { href: '#curriculum', icon: 'layers', label: 'Curriculum' },
               { href: '#tools', icon: 'query_stats', label: 'Tools' },
               { href: '#placements', icon: 'work', label: 'Placements' },
@@ -362,7 +364,9 @@ export function PgdmBaLandingPage(): React.JSX.Element {
       >
         <div className="flex flex-col h-full">
           <div className="flex items-center justify-between p-4 border-b border-gray-200">
-            <img src="/uploads/logos/imas.png" alt="IMAS" className="h-10 w-auto" />
+            <a href="/" className="inline-block">
+              <img src="/uploads/logos/imas.png" alt="IMAS" className="h-10 w-auto" />
+            </a>
             <Button variant="ghost" size="sm" onClick={() => setMobileMenuOpen(false)} className="text-gray-600 hover:text-gray-900">
               <ChevronDown className="h-5 w-5 rotate-180" />
             </Button>
@@ -370,7 +374,7 @@ export function PgdmBaLandingPage(): React.JSX.Element {
           <nav className="flex-1 p-4 overflow-y-auto">
             <ul className="space-y-1.5">
               {[
-                { href: '#about-imas', icon: BookOpen, label: 'Program Overview' },
+                { href: '#about-imas', icon: BookOpen, label: 'Programme Overview' },
                 { href: '#curriculum', icon: Layers, label: 'Curriculum' },
                 { href: '#tools', icon: BarChart2, label: 'Tools' },
                 { href: '#placements', icon: Briefcase, label: 'Placements' },
@@ -458,7 +462,7 @@ export function PgdmBaLandingPage(): React.JSX.Element {
             </div>
 
             <p className="max-w-xl text-xs leading-snug text-gray-200 sm:text-sm">
-              Looking for a PGDM in Business Analytics in Kolkata? IMAS offers one of the best PGDM Business Analytics programs in Kolkata, designed for students and working professionals aiming for careers in analytics, consulting, and data-driven decision-making.
+              Looking for a PGDM in Business Analytics in Kolkata? IMAS offers one of the best PGDM Business Analytics programmes in Kolkata, designed for students and working professionals aiming for careers in analytics, consulting, and data-driven decision-making.
             </p>
 
             <div className="relative overflow-hidden">
@@ -584,7 +588,7 @@ export function PgdmBaLandingPage(): React.JSX.Element {
                 </div>
 
                 <div>
-                  <div className="text-sm font-semibold text-slate-900">This program is ideal for students interested in:</div>
+                  <div className="text-sm font-semibold text-slate-900">This programme is ideal for students interested in:</div>
                   <div className="mt-3 grid gap-3 sm:grid-cols-2">
                     {idealFor.map((t) => (
                       <div key={t} className="rounded-2xl bg-slate-50 px-4 py-3 text-sm font-semibold text-slate-900 ring-1 ring-slate-200">
@@ -602,7 +606,7 @@ export function PgdmBaLandingPage(): React.JSX.Element {
                       <BarChart2 className="h-4 w-4" />
                     </span>
                     <div>
-                      <div className="text-base font-bold">Placement-Driven Analytics Program</div>
+                      <div className="text-base font-bold">Placement-Driven Analytics Programme</div>
                       <div className="text-[11px] opacity-85">Curriculum + tools + projects</div>
                     </div>
                   </div>
@@ -764,7 +768,7 @@ export function PgdmBaLandingPage(): React.JSX.Element {
               </div>
 
               <div className="mt-6 rounded-2xl bg-slate-50 p-4 ring-1 ring-slate-200">
-                <div className="text-sm font-semibold text-slate-900">Program Structure</div>
+                <div className="text-sm font-semibold text-slate-900">Programme Structure</div>
                 <div className="mt-3 grid gap-3 lg:grid-cols-2">
                   <div className="rounded-2xl bg-white p-4 ring-1 ring-slate-200">
                     <div className="text-sm font-semibold text-slate-900">Year 1 – Core Management</div>
@@ -798,7 +802,7 @@ export function PgdmBaLandingPage(): React.JSX.Element {
                   </div>
 
                   <div className="rounded-2xl bg-white p-4 ring-1 ring-slate-200">
-                    <div className="text-sm font-semibold text-slate-900">Year 2 – Business Analytics Specialization</div>
+                    <div className="text-sm font-semibold text-slate-900">Year 2 – Business Analytics Specialisation</div>
                     <div className="mt-3 grid gap-3 sm:grid-cols-2">
                       <div className="rounded-xl bg-slate-50 p-3 ring-1 ring-slate-200">
                         <div className="text-xs font-semibold text-slate-900">Semester III</div>
@@ -841,7 +845,7 @@ export function PgdmBaLandingPage(): React.JSX.Element {
                 </div>
 
                 <div className="rounded-2xl bg-white p-4 shadow-sm ring-1 ring-slate-200">
-                  <div className="text-sm font-semibold text-slate-900">Program Features</div>
+                  <div className="text-sm font-semibold text-slate-900">Programme Features</div>
                   <ul className="mt-3 space-y-2">
                     {programFeatures.map((t) => (
                       <li key={t} className="flex items-start gap-2 text-[13px] text-slate-700 sm:text-sm">
@@ -1023,7 +1027,7 @@ export function PgdmBaLandingPage(): React.JSX.Element {
             <div className="relative mt-1 h-1 w-24 rounded-full bg-gradient-to-r from-cyan-400 to-sky-300 mb-4" />
 
             <p className="relative text-xs sm:text-sm opacity-90 max-w-2xl mb-6">
-              Gain global exposure through international immersion programs and academic collaborations with leading global institutions.
+              Gain global exposure through international immersion programmes and academic collaborations with leading global institutions.
             </p>
 
             <div className="relative grid gap-3 grid-cols-2 sm:grid-cols-3 md:grid-cols-6">
@@ -1123,7 +1127,7 @@ export function PgdmBaLandingPage(): React.JSX.Element {
                 <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-r from-sky-500 to-blue-700 text-white">
                   <span className="material-symbols-outlined text-[18px]">checklist</span>
                 </span>
-                <h2 className="text-base sm:text-lg font-bold bg-gradient-to-r from-slate-900 to-sky-700 bg-clip-text text-transparent">Admission & Eligibility - PGDM Program</h2>
+                <h2 className="text-base sm:text-lg font-bold bg-gradient-to-r from-slate-900 to-sky-700 bg-clip-text text-transparent">Admission & Eligibility - PGDM Programme</h2>
               </div>
               <div className="h-1 w-20 rounded-full bg-gradient-to-r from-cyan-400 to-sky-600 mb-4" />
               <p className="text-[13px] sm:text-sm text-slate-700 leading-relaxed">

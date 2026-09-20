@@ -6,11 +6,11 @@ export function InternshipFAQSection() {
   const faqs = [
     {
       question: 'Are internships mandatory at IMAS Business School?',
-      answer: 'Yes, internships are a core part of the PGDM program.'
+      answer: 'Yes, internships are a core part of the PGDM programme.'
     },
     {
-      question: 'How long is the internship program?',
-      answer: 'The Summer Internship Program lasts 6–8 weeks.'
+      question: 'How long is the internship programme?',
+      answer: 'The Summer Internship Programme lasts 6–8 weeks.'
     },
     {
       question: 'Can internships lead to job offers?',

@@ -111,10 +111,10 @@ export function PgdmPlusLandingPage(): React.JSX.Element {
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 via-slate-50 to-slate-100 text-slate-900 scroll-smooth">
       <Helmet>
-        <title>PGDM Plus Program | IMAS Kolkata</title>
-        <meta name="description" content="Strength Your Future with a Transformative Management Program at IMAS. AICTE approved full-time PGDM Plus program with internships, global exposure, and 100% placement assistance." />
+        <title>PGDM Plus Programme | IMAS Kolkata</title>
+        <meta name="description" content="Strength Your Future with a Transformative Management Programme at IMAS. AICTE approved full-time PGDM Plus programme with internships, global exposure, and 100% placement assistance." />
         <link rel="canonical" href={canonicalUrl} />
-        <meta property="og:title" content="PGDM Plus Program | IMAS Kolkata" />
+        <meta property="og:title" content="PGDM Plus Programme | IMAS Kolkata" />
         <meta property="og:description" content="AICTE approved full-time PGDM Plus with modern campus, corporate partnerships, international collaborations, and practical exposure." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={canonicalUrl} />
@@ -124,8 +124,8 @@ export function PgdmPlusLandingPage(): React.JSX.Element {
         <meta property="og:site_name" content="IMAS Kolkata" />
         <meta property="og:locale" content="en_US" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="PGDM Plus Program | IMAS Kolkata" />
-        <meta name="twitter:description" content="Transformative management program with global exposure, internships, and 100% placement assistance." />
+        <meta name="twitter:title" content="PGDM Plus Programme | IMAS Kolkata" />
+        <meta name="twitter:description" content="Transformative management programme with global exposure, internships, and 100% placement assistance." />
         <meta name="twitter:image" content="https://www.imas.ac.in/uploads/IMASBUILDING.jpeg" />
       </Helmet>
 
@@ -145,14 +145,16 @@ export function PgdmPlusLandingPage(): React.JSX.Element {
       <header className="sticky top-0 z-40  bg-slate-800 backdrop-blur shadow-md/70">
         <div className="mx-auto flex max-w-[1550px] items-center justify-between px-4 py-3">
           <div className="flex items-center gap-2">
-            <img
+            <a href="/" className="inline-block hover:opacity-90 transition-opacity">
+              <img
                 src="/uploads/logos/imas.png"
                 alt="IMAS International Management & Analytics School"
                 className="h-10 w-auto xl:h-12"
               />
+            </a>
           </div>
           <nav className="hidden items-center gap-6 text-sm text-slate-300 md:flex">
-            <a href="#about-imas" className="flex items-center gap-1 hover:text-[#2e7bb3] transition-colors duration-200"><BookOpen className="h-4 w-4" /><span>Program Overview</span></a>
+            <a href="#about-imas" className="flex items-center gap-1 hover:text-[#2e7bb3] transition-colors duration-200"><BookOpen className="h-4 w-4" /><span>Programme Overview</span></a>
             <a href="#specialisations" className="flex items-center gap-1 hover:text-[#2e7bb3] transition-colors duration-200"><Layers className="h-4 w-4" /><span>Specialisations</span></a>
             <a href="#international-immersion" className="flex items-center gap-1 hover:text-[#2e7bb3] transition-colors duration-200"><Globe className="h-4 w-4" /><span>International Immersion</span></a>
             <a href="#placements" className="flex items-center gap-1 hover:text-[#2e7bb3] transition-colors duration-200"><Briefcase className="h-4 w-4" /><span>Placements</span></a>
@@ -202,11 +204,13 @@ export function PgdmPlusLandingPage(): React.JSX.Element {
           {/* Header */}
           <div className="flex items-center justify-between p-4 border-b border-gray-200">
             <div className="flex items-center gap-3">
-              <img
-                src="/uploads/logos/imas.png"
-                alt="IMAS International Management & Analytics School"
-                className="h-10 w-auto"
-              />
+              <a href="/" className="inline-block">
+                <img
+                  src="/uploads/logos/imas.png"
+                  alt="IMAS International Management & Analytics School"
+                  className="h-10 w-auto"
+                />
+              </a>
             </div>
             <Button variant="ghost" size="sm" onClick={() => setMobileMenuOpen(false)} className="text-gray-600 hover:text-gray-900">
               <ChevronDown className="h-5 w-5 rotate-180" />
@@ -219,7 +223,7 @@ export function PgdmPlusLandingPage(): React.JSX.Element {
               <li>
                 <a href="#about-imas" onClick={() => setMobileMenuOpen(false)} className="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-left text-gray-700 hover:text-[#2e7bb3] hover:bg-slate-50 transition-colors">
                   <BookOpen className="h-5 w-5" />
-                  <span className="font-medium">Program Overview</span>
+                  <span className="font-medium">Programme Overview</span>
                 </a>
               </li>
               <li>
@@ -318,10 +322,10 @@ export function PgdmPlusLandingPage(): React.JSX.Element {
             </div>
             <div className="space-y-3">
               <h1 className="text-2xl sm:text-4xl lg:text-[2.6rem] font-bold tracking-tight text-white drop-shadow-md">
-                MBA / PGDM (Full-Time) – PGDM Plus Program
+                MBA / PGDM (Full-Time) – PGDM Plus Programme
               </h1>
               <p className="text-xs sm:text-lg font-medium text-gray-200/95 drop-shadow">
-                Strength Your Future with a Transformative Management Program at IMAS.
+                Strength Your Future with a Transformative Management Programme at IMAS.
               </p>
               <div className="flex items-center gap-0.5 sm:gap-1 text-xs font-semibold text-white" aria-label="Student rating">
                 <Star className="h-3 w-3 sm:h-4 sm:w-4 text-yellow-400" fill="currentColor" />
@@ -524,10 +528,10 @@ export function PgdmPlusLandingPage(): React.JSX.Element {
                 { label: 'High placements with top recruiters in India', icon: 'business_center' },
                 { label: 'Cutting-edge curriculum aligned with digital trends', icon: 'psychology' },
                 { label: 'Modern AC digital campus infrastructure', icon: 'apartment' },
-                { label: 'Personality & grooming programs', icon: 'emoji_events' },
+                { label: 'Personality & grooming programmes', icon: 'emoji_events' },
                 { label: 'Academic + industry expert faculty', icon: 'engineering' },
                 { label: 'Scholarships & financial support', icon: 'volunteer_activism' },
-                { label: 'International Immersion Program', icon: 'flight_takeoff' },
+                { label: 'International Immersion Programme', icon: 'flight_takeoff' },
                 { label: "Prime campus location in Newtown Smart City Zone", icon: 'location_city' },
               ].map((f) => (
                 <div key={f.label} className="group inline-flex items-start gap-3 rounded-2xl bg-white p-4 text-xs sm:text-sm shadow-sm ring-1 ring-slate-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-md">
@@ -651,7 +655,7 @@ export function PgdmPlusLandingPage(): React.JSX.Element {
               { label: 'Business Analytics', icon: 'query_stats' },
               { label: 'Artificial Intelligence & Data Science', icon: 'smart_toy' },
               { label: 'FinTech', icon: 'credit_card' },
-              { label: 'Hospital & Healthcare Management', icon: 'local_hospital' },
+              { label: 'Hospital Administration & Healthcare Management', icon: 'local_hospital' },
               { label: 'Innovation, Entrepreneurship & Venture Development (IEV)', icon: 'rocket_launch' },
             ].map((spec) => (
               <div
@@ -693,7 +697,7 @@ export function PgdmPlusLandingPage(): React.JSX.Element {
                     <span className="material-symbols-outlined text-[18px]">workspace_premium</span>
                   </span>
                   <div>
-                    <div className="text-lg sm:text-2xl font-bold font-sans bg-gradient-to-r from-slate-900 to-sky-700 bg-clip-text text-transparent">Program Features</div>
+                    <div className="text-lg sm:text-2xl font-bold font-sans bg-gradient-to-r from-slate-900 to-sky-700 bg-clip-text text-transparent">Programme Features</div>
                     <p className="text-[11px] sm:text-xs text-slate-600">The PGDM Plus programme integrates globally recognised certifications with strong practical exposure and corporate engagement.</p>
                   </div>
                 </div>
@@ -745,7 +749,7 @@ export function PgdmPlusLandingPage(): React.JSX.Element {
                       <li className="flex items-center gap-2"><CheckCircle className="h-3.5 w-3.5 text-emerald-600" /><span className="text-sm text-slate-700">Live Business Projects</span></li>
                       <li className="flex items-center gap-2"><CheckCircle className="h-3.5 w-3.5 text-emerald-600" /><span className="text-sm text-slate-700">Winter & Summer Internships</span></li>
                       <li className="flex items-center gap-2"><CheckCircle className="h-3.5 w-3.5 text-emerald-600" /><span className="text-sm text-slate-700">20+ Presentations Each Semester</span></li>
-                      <li className="flex items-center gap-2"><CheckCircle className="h-3.5 w-3.5 text-emerald-600" /><span className="text-sm text-slate-700">Corporate Mentorship Program</span></li>
+                      <li className="flex items-center gap-2"><CheckCircle className="h-3.5 w-3.5 text-emerald-600" /><span className="text-sm text-slate-700">Corporate Mentorship Programme</span></li>
                       <li className="flex items-center gap-2"><CheckCircle className="h-3.5 w-3.5 text-emerald-600" /><span className="text-sm text-slate-700">Industry Visits</span></li>
                       <li className="flex items-center gap-2"><CheckCircle className="h-3.5 w-3.5 text-emerald-600" /><span className="text-sm text-slate-700">Basic & Advanced Communication Training</span></li>
                     </ul>
@@ -754,7 +758,7 @@ export function PgdmPlusLandingPage(): React.JSX.Element {
 
                 <Button onClick={onDownload} className="mt-6 inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-sky-600 to-blue-700 px-5 py-2.5 text-sm font-semibold text-white shadow-md hover:from-sky-500 hover:to-blue-600">
                   <span className="material-symbols-outlined text-[18px]">description</span>
-                  Download  Program Brochure
+                  Download  Programme Brochure
                   <ArrowRight className="h-4 w-4" />
                 </Button>
               </div>
@@ -820,12 +824,12 @@ export function PgdmPlusLandingPage(): React.JSX.Element {
                 <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-[#26c1d3]/20">
                   <Target className="h-4 w-4 text-[#2e7bb3]" />
                 </span>
-                <span>MBA / PGDM Program Objectives</span>
+                <span>MBA / PGDM Programme Objectives</span>
               </div>
               <div className="mt-1 h-1 w-28 rounded-full bg-gradient-to-r from-cyan-400 to-sky-600" />
               <p className="mt-2 text-xs text-slate-700 sm:text-sm">What transformation will students achieve through a future-ready, industry-aligned learning experience.</p>
             </div>
-            <Button onClick={onDownload} variant="outline" className="hidden md:inline-flex items-center gap-2 rounded-full border border-[#26c1d3] px-4 py-2 text-xs font-semibold text-[#2e7bb3] hover:bg-[#26c1d3]/10"><Download className="h-4 w-4" />Download Program Outcome Brochure</Button>
+            <Button onClick={onDownload} variant="outline" className="hidden md:inline-flex items-center gap-2 rounded-full border border-[#26c1d3] px-4 py-2 text-xs font-semibold text-[#2e7bb3] hover:bg-[#26c1d3]/10"><Download className="h-4 w-4" />Download Programme Outcome Brochure</Button>
           </div>
 
           <div
@@ -855,7 +859,7 @@ export function PgdmPlusLandingPage(): React.JSX.Element {
           </div>
 
           <div className="mt-4 md:hidden">
-            <Button onClick={onDownload} variant="outline" className="inline-flex items-center gap-2 rounded-full border border-[#26c1d3] px-4 py-2 text-xs font-semibold text-[#2e7bb3] hover:bg-[#26c1d3]/10"><Download className="h-4 w-4" />Download Program Outcome Brochure</Button>
+            <Button onClick={onDownload} variant="outline" className="inline-flex items-center gap-2 rounded-full border border-[#26c1d3] px-4 py-2 text-xs font-semibold text-[#2e7bb3] hover:bg-[#26c1d3]/10"><Download className="h-4 w-4" />Download Programme Outcome Brochure</Button>
           </div>
         </div>
       </section>
@@ -885,7 +889,7 @@ export function PgdmPlusLandingPage(): React.JSX.Element {
                 <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-[#26c1d3]/20">
                   <span className="material-symbols-outlined text-[20px] text-[#2e7bb3]">public</span>
                 </span>
-                <span>International Immersion Program</span>
+                <span>International Immersion Programme</span>
               </div>
               <div className="mt-1 h-1 w-28 rounded-full bg-gradient-to-r from-cyan-400 to-sky-600" />
             </div>
@@ -1260,7 +1264,7 @@ export function PgdmPlusLandingPage(): React.JSX.Element {
             {[
               {
                 q: 'What is the eligibility for the MBA / PGDM (PGDM Plus) programme?',
-                a: 'Applicants must have a Bachelor’s degree in any discipline from a recognized university. Final-year students may also apply, subject to fulfilling eligibility criteria at the time of admission.',
+                a: 'Applicants must have a Bachelor’s degree in any discipline from a recognised university. Final-year students may also apply, subject to fulfilling eligibility criteria at the time of admission.',
               },
               {
                 q: 'Is the programme AICTE approved?',
@@ -1279,8 +1283,8 @@ export function PgdmPlusLandingPage(): React.JSX.Element {
                 a: 'IMAS provides assistance and guidance in finding safe and convenient accommodation near the campus. Hostel availability is subject to location and availability.',
               },
               {
-                q: 'How does the International Immersion Program work?',
-                a: 'The International Immersion Program offers students global exposure through international academic interactions, faculty-led sessions, and industry visits. Program details are shared with students prior to participation.',
+                q: 'How does the International Immersion Programme work?',
+                a: 'The International Immersion Programme offers students global exposure through international academic interactions, faculty-led sessions, and industry visits. Programme details are shared with students prior to participation.',
               },
             ].map(({ q, a }) => (
               <details

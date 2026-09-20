@@ -217,16 +217,18 @@ export function PgdmFintechLandingPage(): React.JSX.Element {
       <header className="sticky top-0 z-40 bg-slate-800 backdrop-blur shadow-md/70">
         <div className="mx-auto flex max-w-[1550px] items-center justify-between px-4 py-3">
           <div className="flex items-center gap-2">
-            <img
-              src="/uploads/logos/imas.png"
-              alt="IMAS International Management & Analytics School"
-              className="h-10 w-auto xl:h-12"
-            />
+            <a href="/" className="inline-block hover:opacity-90 transition-opacity">
+              <img
+                src="/uploads/logos/imas.png"
+                alt="IMAS International Management & Analytics School"
+                className="h-10 w-auto xl:h-12"
+              />
+            </a>
           </div>
           <nav className="hidden items-center gap-6 text-sm text-slate-300 md:flex">
             <a href="#about-imas" className="flex items-center gap-1 hover:text-[#2e7bb3] transition-colors duration-200"><BookOpen className="h-4 w-4" /><span>Overview</span></a>
             <a href="#fintech-learning" className="flex items-center gap-1 hover:text-[#2e7bb3] transition-colors duration-200"><Layers className="h-4 w-4" /><span>FinTech Learning</span></a>
-            <a href="#program-features" className="flex items-center gap-1 hover:text-[#2e7bb3] transition-colors duration-200"><Award className="h-4 w-4" /><span>Program Features</span></a>
+            <a href="#programme-features" className="flex items-center gap-1 hover:text-[#2e7bb3] transition-colors duration-200"><Award className="h-4 w-4" /><span>Programme Features</span></a>
             <a href="#modes" className="flex items-center gap-1 hover:text-[#2e7bb3] transition-colors duration-200"><Layers className="h-4 w-4" /><span>Modes</span></a>
             <a href="#international-immersion" className="flex items-center gap-1 hover:text-[#2e7bb3] transition-colors duration-200"><Globe className="h-4 w-4" /><span>Immersion</span></a>
             <a href="#placements" className="flex items-center gap-1 hover:text-[#2e7bb3] transition-colors duration-200"><Briefcase className="h-4 w-4" /><span>Placements</span></a>
@@ -258,7 +260,9 @@ export function PgdmFintechLandingPage(): React.JSX.Element {
         <div className="flex flex-col h-full">
           <div className="flex items-center justify-between p-4 border-b border-gray-200">
             <div className="flex items-center gap-3">
-              <img src="/uploads/logos/imas.png" alt="IMAS International Management & Analytics School" className="h-10 w-auto" />
+              <a href="/" className="inline-block">
+                <img src="/uploads/logos/imas.png" alt="IMAS International Management & Analytics School" className="h-10 w-auto" />
+              </a>
             </div>
             <Button variant="ghost" size="sm" onClick={() => setMobileMenuOpen(false)} className="text-gray-600 hover:text-gray-900">
               <ChevronDown className="h-5 w-5 rotate-180" />
@@ -266,7 +270,7 @@ export function PgdmFintechLandingPage(): React.JSX.Element {
           </div>
           <nav className="flex-1 p-6 overflow-y-auto">
             <ul className="space-y-2">
-              <li><a href="#about-imas" onClick={() => setMobileMenuOpen(false)} className="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-left text-gray-700 hover:text-[#2e7bb3] hover:bg-slate-50 transition-colors"><BookOpen className="h-5 w-5" /><span className="font-medium">Program Overview</span></a></li>
+              <li><a href="#about-imas" onClick={() => setMobileMenuOpen(false)} className="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-left text-gray-700 hover:text-[#2e7bb3] hover:bg-slate-50 transition-colors"><BookOpen className="h-5 w-5" /><span className="font-medium">Programme Overview</span></a></li>
               <li><a href="#specialisations" onClick={() => setMobileMenuOpen(false)} className="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-left text-gray-700 hover:text-[#2e7bb3] hover:bg-slate-50 transition-colors"><Layers className="h-5 w-5" /><span className="font-medium">Specialisations</span></a></li>
               <li><a href="#international-immersion" onClick={() => setMobileMenuOpen(false)} className="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-left text-gray-700 hover:text-[#2e7bb3] hover:bg-slate-50 transition-colors"><Globe className="h-5 w-5" /><span className="font-medium">International Immersion</span></a></li>
               <li><a href="#placements" onClick={() => setMobileMenuOpen(false)} className="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-left text-gray-700 hover:text-[#2e7bb3] hover:bg-slate-50 transition-colors"><Briefcase className="h-5 w-5" /><span className="font-medium">Placements</span></a></li>
@@ -433,7 +437,7 @@ export function PgdmFintechLandingPage(): React.JSX.Element {
                     </span>
                   ))}
                 </div>
-                <p className="text-xs leading-relaxed text-slate-700 sm:text-sm">IMAS Kolkata is a dynamic business school located in Newtown, Kolkata, offering industry-focused programs and practical exposure through internships and projects.</p>
+                <p className="text-xs leading-relaxed text-slate-700 sm:text-sm">IMAS Kolkata is a dynamic business school located in Newtown, Kolkata, offering industry-focused programmes and practical exposure through internships and projects.</p>
                 <p className="text-xs leading-relaxed text-slate-700 sm:text-sm">Students unlock potential through future-ready learning environments, industry-linked curriculum, and active corporate engagement.</p>
                 <div className="mt-3 grid grid-cols-2 gap-3 sm:grid-cols-2">
                   {[
@@ -605,7 +609,7 @@ export function PgdmFintechLandingPage(): React.JSX.Element {
                 <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-[#26c1d3]/20">
                   <span className="material-symbols-outlined text-[18px]">menu_book</span>
                 </span>
-                <span>Program Modes Explained</span>
+                <span>Programme Modes Explained</span>
               </div>
               <div className="mt-1 h-1 w-32 rounded-full bg-gradient-to-r from-cyan-400 to-sky-600" />
               <p className="mt-2 text-xs text-slate-700 sm:text-sm">Choose the learning model that fits your lifestyle and goals.</p>
@@ -785,7 +789,7 @@ export function PgdmFintechLandingPage(): React.JSX.Element {
                     <span className="material-symbols-outlined text-[18px]">workspace_premium</span>
                   </span>
                   <div>
-                    <div className="text-lg sm:text-2xl font-bold font-sans bg-gradient-to-r from-slate-900 to-sky-700 bg-clip-text text-transparent">PGDM+ Program Features</div>
+                    <div className="text-lg sm:text-2xl font-bold font-sans bg-gradient-to-r from-slate-900 to-sky-700 bg-clip-text text-transparent">PGDM+ Programme Features</div>
                     <p className="text-[11px] sm:text-xs text-slate-600">Skill-building, real corporate learning & globally recognised certifications. Enhance your employability with tools, training & practical exposure.</p>
                   </div>
                 </div>
@@ -837,7 +841,7 @@ export function PgdmFintechLandingPage(): React.JSX.Element {
                       <li className="flex items-center gap-2"><CheckCircle className="h-3.5 w-3.5 text-emerald-600" /><span className="text-sm text-slate-700">Live Business Projects</span></li>
                       <li className="flex items-center gap-2"><CheckCircle className="h-3.5 w-3.5 text-emerald-600" /><span className="text-sm text-slate-700">Winter & Summer Internships</span></li>
                       <li className="flex items-center gap-2"><CheckCircle className="h-3.5 w-3.5 text-emerald-600" /><span className="text-sm text-slate-700">20+ Presentations Each Semester</span></li>
-                      <li className="flex items-center gap-2"><CheckCircle className="h-3.5 w-3.5 text-emerald-600" /><span className="text-sm text-slate-700">Corporate Mentorship Program</span></li>
+                      <li className="flex items-center gap-2"><CheckCircle className="h-3.5 w-3.5 text-emerald-600" /><span className="text-sm text-slate-700">Corporate Mentorship Programme</span></li>
                       <li className="flex items-center gap-2"><CheckCircle className="h-3.5 w-3.5 text-emerald-600" /><span className="text-sm text-slate-700">Industry Visits</span></li>
                       <li className="flex items-center gap-2"><CheckCircle className="h-3.5 w-3.5 text-emerald-600" /><span className="text-sm text-slate-700">Communication Training</span></li>
                     </ul>
@@ -1387,7 +1391,7 @@ export function PgdmFintechLandingPage(): React.JSX.Element {
               },
               {
                 q: 'Is there an international immersion component?',
-                a: 'Yes, the programme includes an optional International Immersion Program, offering global exposure through overseas academic interactions, expert sessions, and industry insights. Details are shared prior to participation.',
+                a: 'Yes, the programme includes an optional International Immersion Programme, offering global exposure through overseas academic interactions, expert sessions, and industry insights. Details are shared prior to participation.',
               },
               {
                 q: 'What certifications are included in the program?',

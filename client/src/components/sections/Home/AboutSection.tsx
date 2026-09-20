@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Award, Users, Globe, BookOpen, MapPin, Building, Target, ArrowRight, CheckCircle, Info, MapPin as MapPinIcon, Star, Camera } from 'lucide-react';
+import { Award, Users, Globe, BookOpen, Building, Target, ArrowRight, CheckCircle, Info, MapPin as MapPinIcon, Star, Camera } from 'lucide-react';
 import { IMAS_TAILWIND_CLASSES } from '../../../lib/constants';
 import { useNavigate } from 'react-router-dom';
 
@@ -11,8 +11,8 @@ export function AboutSection() {
     {
       icon: Award,
       title: 'AICTE Approved',
-      description: 'All programs officially recognized',
-      highlight: 'Government Recognized'
+      description: 'All programmes officially recognised',
+      highlight: 'Government Recognised'
     },
     {
       icon: Users,
@@ -72,7 +72,7 @@ export function AboutSection() {
                   <div>
                     <h3 className="text-lg font-bold text-gray-800">About IMAS Kolkata</h3>
                     <div className={`inline-block px-2 py-1 rounded-full text-xs font-medium ${IMAS_TAILWIND_CLASSES.BG_DARK_BLUE}/10 ${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE}`}>
-                      Established 2021
+                      Established 2020
                     </div>
                   </div>
                 </div>
@@ -84,10 +84,10 @@ export function AboutSection() {
                     <span className={`${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE} font-semibold`}>Artificial Intelligence</span>,{' '}
                     <span className={`${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE} font-semibold`}>Data Science</span>,{' '}
                     <span className={`${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE} font-semibold`}>Fintech</span>, and{' '}
-                    <span className={`${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE} font-semibold`}>Innovation, Entrepreneurship & Venture Development</span>.
+                    <span className={`${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE} font-semibold`}>Logistics & Supply Chain Management</span>.
                   </p>
                   <p>
-                    Established in <strong>2021</strong> under the <strong>Institute of Advance Education & Research</strong>, IMAS stands tall among the{' '}
+                    Established in <strong>2020</strong> under the <strong>Institute of Advance Education & Research</strong>, IMAS stands tall among the{' '}
                     <strong>best business schools in Kolkata</strong>, driving academic excellence with a global perspective.
                   </p>
                 </div>
@@ -115,7 +115,7 @@ export function AboutSection() {
                   </p>
 
                   <p>
-                    IMAS is approved by <strong>AICTE</strong>, ensuring credibility and quality across all its programs.
+                    IMAS is approved by <strong>AICTE</strong>, ensuring credibility and quality across all its programmes.
                   </p>
                 </div>
               </div>
@@ -162,10 +162,6 @@ export function AboutSection() {
                   </div>
                 </div>
               </div>
-
-
-
-
             </div>
           </div>
         </div>
@@ -278,7 +274,7 @@ export function AboutSection() {
             Premier Business School in Kolkata
           </h2>
           <p className="text-sm sm:text-base md:text-lg text-gray-600 max-w-3xl mx-auto px-2">
-            Redefining management education with cutting-edge programs and industry-focused curriculum
+            Redefining management education with cutting-edge programmes and industry-focused curriculum
           </p>
         </div>
 

@@ -19,7 +19,7 @@ export function InternshipProcessSection() {
     {
       id: 'submission',
       title: 'Profile Submission',
-      description: 'Submit resumes and specialization preferences',
+      description: 'Submit resumes and specialisation preferences',
       icon: FileText
     },
     {
@@ -31,7 +31,7 @@ export function InternshipProcessSection() {
     {
       id: 'assignment',
       title: 'Internship Assignment',
-      description: 'Students join organizations for project-based internships',
+      description: 'Students join organisations for project-based internships',
       icon: Briefcase
     },
     {

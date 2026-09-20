@@ -91,25 +91,25 @@ export function MbaGlobalLandingPage(): React.JSX.Element {
   ]
 
   const faqs = [
-    { q: 'How does the MBA Global Program work?', a: 'Students complete Year 1 at IMAS and Year 2 at an international partner university.' },
+    { q: 'How does the MBA Global Programme work?', a: 'Students complete Year 1 at IMAS and Year 2 at an international partner university.' },
     { q: 'Which universities are available in the UK?', a: 'Students can study at the University of Sunderland and University of South Wales.' },
     { q: 'Will I receive an international degree?', a: 'Yes, students receive a degree from the partner university abroad.' },
     { q: 'Does IMAS provide placement support?', a: 'Yes, placement support is provided in India along with international career guidance.' },
     { q: 'Can I work abroad after completing the MBA?', a: 'Yes, depending on visa policies and job opportunities in the chosen country.' },
-    { q: 'Is this program cost-effective compared to studying fully abroad?', a: 'Yes, it reduces cost while still providing international exposure and degree.' },
+    { q: 'Is this programme cost-effective compared to studying fully abroad?', a: 'Yes, it reduces cost while still providing international exposure and degree.' },
     { q: 'Are internships included?', a: 'Yes, internship opportunities are part of the program.' },
     { q: 'Does IMAS assist with visa process?', a: 'Yes, full support is provided for admission and visa documentation.' },
     { q: 'Are scholarships available?', a: 'Yes, scholarships and financial assistance options are available.' },
-    { q: 'Is this program suitable for students from Eastern India?', a: 'Yes, it is ideal for students from West Bengal and nearby regions seeking global careers.' },
+    { q: 'Is this programme suitable for students from Eastern India?', a: 'Yes, it is ideal for students from West Bengal and nearby regions seeking global careers.' },
   ]
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 via-slate-50 to-slate-100 text-slate-900 scroll-smooth">
       <Helmet>
-        <title>MBA Global Program (1+1 International Pathway) | Study in India + Abroad | IMAS</title>
-        <meta name="description" content="MBA Global Program at IMAS Kolkata â€“ 1+1 International Pathway. Year 1 in India, Year 2 at UK partner university. Global degree, international exposure & career opportunities." />
+        <title>MBA Global Programme (1+1 International Pathway) | Study in India + Abroad | IMAS</title>
+        <meta name="description" content="MBA Global Programme at IMAS Kolkata â€“ 1+1 International Pathway. Year 1 in India, Year 2 at UK partner university. Global degree, international exposure & career opportunities." />
         <link rel="canonical" href={canonicalUrl} />
-        <meta property="og:title" content="MBA Global Program (1+1 International Pathway) | IMAS" />
+        <meta property="og:title" content="MBA Global Programme (1+1 International Pathway) | IMAS" />
         <meta property="og:description" content="Study in India + Abroad. Build a Global Career with IMAS MBA Global Program." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={canonicalUrl} />
@@ -119,8 +119,8 @@ export function MbaGlobalLandingPage(): React.JSX.Element {
         <meta property="og:site_name" content="IMAS Kolkata" />
         <meta property="og:locale" content="en_US" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="MBA Global Program (1+1 International Pathway) | IMAS" />
-        <meta name="twitter:description" content="1+1 MBA Global Program - Year 1 India, Year 2 UK. International degree & placements." />
+        <meta name="twitter:title" content="MBA Global Programme (1+1 International Pathway) | IMAS" />
+        <meta name="twitter:description" content="1+1 MBA Global Programme - Year 1 India, Year 2 UK. International degree & placements." />
         <meta name="twitter:image" content="https://www.imas.ac.in/uploads/IMASBUILDING.jpeg" />
       </Helmet>
 
@@ -133,7 +133,7 @@ export function MbaGlobalLandingPage(): React.JSX.Element {
         <div className="relative mx-auto flex max-w-[1550px] items-center justify-between px-4 py-2">
           <p className="flex items-center gap-2 font-medium min-w-0">
             <CheckCircle className="h-4 w-4 animate-pulse flex-shrink-0" />
-            <span className="truncate">MBA Global Program • 1+1 International Pathway • Admissions Open 2026 • Limited Seats</span>
+            <span className="truncate">MBA Global Programme • 1+1 International Pathway • Admissions Open 2026 • Limited Seats</span>
           </p>
           <a href={`tel:${IMAS_CONTACT.PHONE}`} className="hidden items-center gap-1 rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs text-white/95 hover:bg-white/15 md:inline-flex">
             <Phone className="h-4 w-4" />
@@ -146,12 +146,14 @@ export function MbaGlobalLandingPage(): React.JSX.Element {
       <header className="sticky top-0 z-40 border-b border-white/10 bg-slate-900/80 backdrop-blur shadow-lg">
         <div className="mx-auto flex max-w-[1550px] items-center justify-between px-4 py-3">
           <div className="flex items-center gap-2">
-            <img src="/uploads/logos/imas.png" alt="IMAS International Management & Analytics School" className="h-10 w-auto xl:h-12" />
+            <a href="/" className="inline-block hover:opacity-90 transition-opacity">
+              <img src="/uploads/logos/imas.png" alt="IMAS International Management & Analytics School" className="h-10 w-auto xl:h-12" />
+            </a>
           </div>
           <nav className="hidden items-center gap-5 text-sm text-slate-200 md:flex">
             {[
-              { href: '#about-program', icon: BookOpen, label: 'Program Overview' },
-              { href: '#program-structure', icon: Layers, label: 'Structure' },
+              { href: '#about-programme', icon: BookOpen, label: 'Programme Overview' },
+              { href: '#programme-structure', icon: Layers, label: 'Structure' },
               { href: '#specialisations', icon: School, label: 'Specialisations' },
               { href: '#international-advantage', icon: Globe, label: 'Global Advantage' },
               { href: '#placements', icon: Briefcase, label: 'Careers' },
@@ -181,8 +183,8 @@ export function MbaGlobalLandingPage(): React.JSX.Element {
         <div className={`overflow-hidden border-t border-white/10 bg-slate-900 shadow-xl transition-all duration-300 ease-in-out md:hidden ${mobileMenuOpen ? 'max-h-[400px] opacity-100' : 'max-h-0 opacity-0'}`}>
           <nav className="flex flex-col space-y-1 px-4 py-4 text-sm text-slate-200">
             {[
-              { href: '#about-program', icon: BookOpen, label: 'Program Overview' },
-              { href: '#program-structure', icon: Layers, label: 'Structure' },
+              { href: '#about-programme', icon: BookOpen, label: 'Programme Overview' },
+              { href: '#programme-structure', icon: Layers, label: 'Structure' },
               { href: '#specialisations', icon: School, label: 'Specialisations' },
               { href: '#international-advantage', icon: Globe, label: 'Global Advantage' },
               { href: '#placements', icon: Briefcase, label: 'Careers' },
@@ -221,7 +223,7 @@ export function MbaGlobalLandingPage(): React.JSX.Element {
                 Build a Global Career.
               </h1>
               <p className="text-[10px] sm:text-lg lg:text-xl font-medium text-sky-100/90 drop-shadow max-w-full sm:max-w-3xl leading-tight sm:leading-relaxed">
-                Looking for a Global MBA program in Kolkata? IMAS offers a unique <span className="text-white font-bold">1+1 MBA Global Program</span>, where students complete Year 1 at IMAS and Year 2 at an international partner university.
+                Looking for a Global MBA programme in Kolkata? IMAS offers a unique <span className="text-white font-bold">1+1 MBA Global Programme</span>, where students complete Year 1 at IMAS and Year 2 at an international partner university.
               </p>
               <div className="flex items-center gap-1 sm:gap-1.5 text-[10px] sm:text-xs font-semibold text-white mt-1 sm:mt-2" aria-label="Student rating">
                 {[...Array(5)].map((_, i) => (
@@ -341,11 +343,11 @@ export function MbaGlobalLandingPage(): React.JSX.Element {
       </section>
 
       {/* --- ABOUT --- */}
-      <section id="about-program" className="relative border-b border-slate-200 bg-slate-50 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]">
+      <section id="about-programme" className="relative border-b border-slate-200 bg-slate-50 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]">
         <div data-animate-on-scroll className="mx-auto max-w-[1550px] px-4 py-5 sm:py-6">
           <div className="grid gap-6 md:grid-cols-2 items-center">
             <div className="order-2 md:order-1 relative h-[250px] sm:h-[400px] overflow-hidden rounded-3xl shadow-xl ring-1 ring-slate-200">
-              <img src="/uploads/working/hero_image2.jpg" alt="MBA Global Program Overview" className="absolute inset-0 h-full w-full object-cover object-top transition-transform duration-700 hover:scale-105" onError={(e) => { const t = e.currentTarget as HTMLImageElement; t.style.display = 'none' }} />
+              <img src="/uploads/working/hero_image2.jpg" alt="MBA Global Programme Overview" className="absolute inset-0 h-full w-full object-cover object-top transition-transform duration-700 hover:scale-105" onError={(e) => { const t = e.currentTarget as HTMLImageElement; t.style.display = 'none' }} />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent" />
             </div>
             <div className="order-1 md:order-2 flex flex-col justify-center">
@@ -353,12 +355,12 @@ export function MbaGlobalLandingPage(): React.JSX.Element {
                 <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-gradient-to-r from-sky-500 to-blue-700 text-white">
                   <BookOpen className="h-4 w-4" />
                 </span>
-                <h2 className="text-base sm:text-2xl font-bold font-sans bg-gradient-to-r from-slate-900 to-sky-700 bg-clip-text text-transparent">About MBA Global Program</h2>
+                <h2 className="text-base sm:text-2xl font-bold font-sans bg-gradient-to-r from-slate-900 to-sky-700 bg-clip-text text-transparent">About MBA Global Programme</h2>
               </div>
               <div className="mb-4 h-1 w-20 rounded-full bg-gradient-to-r from-cyan-400 to-sky-600" />
               <div className="prose prose-sm max-w-none text-slate-700">
                 <p className="leading-relaxed">
-                  The MBA Global Program at IMAS is designed for students who want international education and global career opportunities without completing the entire course abroad.
+                  The MBA Global Programme at IMAS is designed for students who want international education and global career opportunities without completing the entire course abroad.
                 </p>
                 <div className="mt-4 rounded-2xl bg-white p-4 shadow-sm ring-1 ring-slate-200">
                   <h3 className="text-sm font-bold text-slate-900 mb-2">Students complete:</h3>
@@ -369,16 +371,16 @@ export function MbaGlobalLandingPage(): React.JSX.Element {
                     </li>
                     <li className="flex items-start gap-2">
                       <span className="mt-0.5 flex h-4 w-4 shrink-0 items-center justify-center rounded-full bg-sky-100 text-sky-600">2</span>
-                      <span className="text-sm font-medium">Year 2 at Partner University Abroad <span className="text-slate-500 font-normal block text-xs">Global exposure & specialization</span></span>
+                      <span className="text-sm font-medium">Year 2 at Partner University Abroad <span className="text-slate-500 font-normal block text-xs">Global exposure & specialisation</span></span>
                     </li>
                   </ul>
                 </div>
                 <div className="mt-4 bg-blue-50/50 rounded-2xl p-4 ring-1 ring-blue-100">
-                  <h3 className="text-sm font-bold text-blue-900 mb-3">This program is ideal for students searching:</h3>
+                  <h3 className="text-sm font-bold text-blue-900 mb-3">This programme is ideal for students searching:</h3>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                     {[
                       { label: 'MBA abroad after 1 year in India', value: 'Cost Effective' },
-                      { label: 'Global MBA programs in Kolkata', value: 'Local Start' },
+                      { label: 'Global MBA programmes in Kolkata', value: 'Local Start' },
                       { label: 'Study MBA in UK after India', value: 'UK Pathway' },
                       { label: 'International degree & placement', value: 'Global Career' }
                     ].map((i) => (
@@ -404,7 +406,7 @@ export function MbaGlobalLandingPage(): React.JSX.Element {
               <div className="flex flex-col gap-1 mb-4">
                 <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-sky-600">1+1 Model</span>
                 <h2 className="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-                  Program <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-600 to-blue-800">Structure</span>
+                  Programme <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-600 to-blue-800">Structure</span>
                 </h2>
                 <p className="text-sm sm:text-base font-medium text-slate-600 mt-1">Year 1 in India + Year 2 Abroad</p>
               </div>
@@ -443,7 +445,7 @@ export function MbaGlobalLandingPage(): React.JSX.Element {
                     </span>
                     <div>
                       <div className="text-sm font-bold text-white">Year 2 - International University</div>
-                      <div className="text-[11px] text-cyan-200">Global exposure & advanced specialization</div>
+                      <div className="text-[11px] text-cyan-200">Global exposure & advanced specialisation</div>
                     </div>
                   </div>
                   <div className="space-y-2">
@@ -482,10 +484,10 @@ export function MbaGlobalLandingPage(): React.JSX.Element {
                     <School className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
                   </span>
                   <h2 className="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-                    Program <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-800">Specialisations</span>
+                    Programme <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-800">Specialisations</span>
                   </h2>
                 </div>
-                <p className="text-sm sm:text-base font-medium text-slate-600 mt-2">Students can choose specializations based on university options:</p>
+                <p className="text-sm sm:text-base font-medium text-slate-600 mt-2">Students can choose specialisations based on university options:</p>
               </div>
             </div>
             <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
@@ -536,7 +538,7 @@ export function MbaGlobalLandingPage(): React.JSX.Element {
             <div className="relative mt-2 h-1.5 w-32 rounded-full bg-gradient-to-r from-cyan-400 via-sky-400 to-blue-500 mb-6" />
             <div className="relative grid gap-4 grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 mb-8">
               {[
-                { icon: ShieldCheck, label: 'Globally recognized MBA degree', desc: 'Internationally accepted qualification from UK universities' },
+                { icon: ShieldCheck, label: 'Globally recognised MBA degree', desc: 'Internationally accepted qualification from UK universities' },
                 { icon: Users, label: 'International faculty & curriculum', desc: 'Learn from world-class professors with global perspectives' },
                 { icon: Rocket, label: 'Global career pathways', desc: 'Build networks and access opportunities across the world' },
                 { icon: Briefcase, label: 'International job markets', desc: 'Especially valuable for students aiming to work abroad after MBA' },
@@ -911,7 +913,7 @@ export function MbaGlobalLandingPage(): React.JSX.Element {
             </span>
             <div>
               <h2 className="text-base sm:text-2xl font-bold bg-gradient-to-r from-slate-900 to-sky-700 bg-clip-text text-transparent">FAQ</h2>
-              <p className="text-[11px] sm:text-xs font-medium text-slate-600">Quick answers about MBA Global Program</p>
+              <p className="text-[11px] sm:text-xs font-medium text-slate-600">Quick answers about MBA Global Programme</p>
             </div>
           </div>
           <div className="mt-3 h-1 w-28 rounded-full bg-gradient-to-r from-cyan-400 to-sky-600" />

@@ -5,15 +5,15 @@ export function PlacementsFAQSection() {
   const faqs = [
     {
       q: 'Does IMAS Business School provide placement assistance for PGDM students?',
-      a: 'Yes. IMAS Business School provides comprehensive placement assistance for PGDM students through its Corporate Relations & Placement Cell. The institute organizes campus recruitment drives, internships, industry networking events, and career development programs to support students in securing employment opportunities.'
+      a: 'Yes. IMAS Business School provides comprehensive placement assistance for PGDM students through its Corporate Relations & Placement Cell. The institute organizes campus recruitment drives, internships, industry networking events, and career development programmes to support students in securing employment opportunities.'
     },
     {
       q: 'What is the average salary for PGDM graduates at IMAS Business School?',
-      a: 'The average salary for PGDM graduates typically ranges between ₹ 4.5 LPA and ₹ 6 LPA, depending on specialization, skill set, and recruiting company.'
+      a: 'The average salary for PGDM graduates typically ranges between ₹ 4.5 LPA and ₹ 6 LPA, depending on specialisation, skill set, and recruiting company.'
     },
     {
-      q: 'Which PGDM specialization offers the best placement opportunities?',
-      a: 'Specializations such as Business Analytics, Artificial Intelligence & Data Science, Fintech, and Logistics & Supply Chain Management currently offer strong placement opportunities due to increasing demand for data-driven and technology-focused roles.'
+      q: 'Which PGDM specialisation offers the best placement opportunities?',
+      a: 'Specialisations such as Business Analytics, Artificial Intelligence & Data Science, Fintech, and Logistics & Supply Chain Management currently offer strong placement opportunities due to increasing demand for data-driven and technology-focused roles.'
     },
     {
       q: 'Which companies recruit PGDM students from IMAS Business School?',
@@ -21,10 +21,10 @@ export function PlacementsFAQSection() {
     },
     {
       q: 'How does IMAS Business School prepare PGDM students for placements?',
-      a: 'The institute prepares students through structured training programs that include resume and LinkedIn profile development, mock interviews and group discussions, communication and presentation skills training, aptitude and analytical skill development, and industry workshops and guest lectures.'
+      a: 'The institute prepares students through structured training programmes that include resume and LinkedIn profile development, mock interviews and group discussions, communication and presentation skills training, aptitude and analytical skill development, and industry workshops and guest lectures.'
     },
     {
-      q: 'Are internships included in the PGDM program?',
+      q: 'Are internships included in the PGDM programme?',
       a: 'Yes. PGDM students participate in industry internships and live projects, which provide practical exposure to real business environments and improve employability.'
     },
     {
@@ -45,7 +45,7 @@ export function PlacementsFAQSection() {
     },
     {
       q: 'How early does placement preparation start for PGDM students?',
-      a: 'Placement preparation begins from the first year of the PGDM program, with training sessions, industry exposure, and skill development workshops conducted throughout the course.'
+      a: 'Placement preparation begins from the first year of the PGDM programme, with training sessions, industry exposure, and skill development workshops conducted throughout the course.'
     },
     {
       q: 'What skills improve placement chances for PGDM students?',
@@ -61,7 +61,7 @@ export function PlacementsFAQSection() {
     },
     {
       q: 'Why should students choose IMAS Business School for PGDM placements?',
-      a: 'Students choose IMAS Business School because of industry-aligned PGDM specializations, strong corporate partnerships, internship-driven learning, professional skill development training, and dedicated placement support. These factors help students build successful careers in management, analytics, technology, finance, and healthcare sectors.'
+      a: 'Students choose IMAS Business School because of industry-aligned PGDM specialisations, strong corporate partnerships, internship-driven learning, professional skill development training, and dedicated placement support. These factors help students build successful careers in management, analytics, technology, finance, and healthcare sectors.'
     }
   ];
 

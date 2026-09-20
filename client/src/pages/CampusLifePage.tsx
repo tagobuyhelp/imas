@@ -66,7 +66,7 @@ export function CampusLifePage() {
     },
     {
       name: "Radiance – Business Fest",
-      description: "Radiance is more than just a fest; it's a live business project. Managed like a real organization, Radiance involves dedicated teams across Sales, Marketing, Finance, HR, Operations, and Logistics, each responsible for executing a multi-day large-scale event. From inter-school competitions to cultural evenings, students gain hands-on expertise in planning, execution, and stakeholder management.",
+      description: "Radiance is more than just a fest; it's a live business project. Managed like a real organisation, Radiance involves dedicated teams across Sales, Marketing, Finance, HR, Operations, and Logistics, each responsible for executing a multi-day large-scale event. From inter-school competitions to cultural evenings, students gain hands-on expertise in planning, execution, and stakeholder management.",
       icon: Star,
       color: "bg-[#26c1d3]"
     },
@@ -347,7 +347,7 @@ export function CampusLifePage() {
               </div>
               <div className="p-4">
                 <h3 className="text-lg font-bold text-gray-800 mb-1">PGDM Excellence</h3>
-                <p className="text-gray-600 text-sm">Specialized programs for career advancement</p>
+                <p className="text-gray-600 text-sm">Specialised programs for career advancement</p>
               </div>
             </div>
 
@@ -426,7 +426,7 @@ export function CampusLifePage() {
               At IMAS, every milestone is a reason to celebrate. From winning prestigious competitions at IIMs and national fests to witnessing the excitement of student-led startup launches, the campus thrives on shared success.
             </p>
             <p className="text-base sm:text-lg leading-relaxed">
-              Birthdays, jam sessions, and informal gatherings add warmth and vibrancy to everyday life, while academic and cultural achievements are recognized with pride. These celebrations are more than just events — they embody the IMAS spirit of growing together, supporting one another, and fostering a strong sense of belonging.
+              Birthdays, jam sessions, and informal gatherings add warmth and vibrancy to everyday life, while academic and cultural achievements are recognised with pride. These celebrations are more than just events — they embody the IMAS spirit of growing together, supporting one another, and fostering a strong sense of belonging.
             </p>
           </div>
         </div>

@@ -111,10 +111,10 @@ export function WorkingExecutivesLandingPage(): React.JSX.Element {
   return (
     <div className="min-h-screen bg-gradient-to-b from-slate-50 via-slate-50 to-slate-100 text-slate-900 scroll-smooth">
       <Helmet>
-        <title>PGDM for Working Executives (2-Year Program) | IMAS Kolkata</title>
+        <title>PGDM for Working Executives (2-Year Programme) | IMAS Kolkata</title>
         <meta name="description" content="MBA/PGDM for working professionals with a flexible schedule to develop leadership qualities, management skills, and industry-relevant expertise while balancing career and education." />
         <link rel="canonical" href={canonicalUrl} />
-        <meta property="og:title" content="PGDM for Working Executives (2-Year Program) | IMAS Kolkata" />
+        <meta property="og:title" content="PGDM for Working Executives (2-Year Programme) | IMAS Kolkata" />
         <meta property="og:description" content="MBA/PGDM for working professionals with a flexible schedule to develop leadership qualities, management skills, and industry-relevant expertise while balancing career and education." />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={canonicalUrl} />
@@ -124,7 +124,7 @@ export function WorkingExecutivesLandingPage(): React.JSX.Element {
         <meta property="og:site_name" content="IMAS Kolkata" />
         <meta property="og:locale" content="en_US" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="PGDM for Working Executives (2-Year Program) | IMAS Kolkata" />
+        <meta name="twitter:title" content="PGDM for Working Executives (2-Year Programme) | IMAS Kolkata" />
         <meta name="twitter:description" content="MBA/PGDM for working professionals with a flexible schedule to develop leadership qualities, management skills, and industry-relevant expertise while balancing career and education." />
         <meta name="twitter:image" content="https://www.imas.ac.in/uploads/IMASBUILDING.jpeg" />
       </Helmet>
@@ -145,16 +145,18 @@ export function WorkingExecutivesLandingPage(): React.JSX.Element {
       <header className="sticky top-0 z-40  bg-slate-800 backdrop-blur shadow-md/70">
         <div className="mx-auto flex max-w-[1550px] items-center justify-between px-4 py-3">
           <div className="flex items-center gap-2">
-            <img
-              src="/uploads/logos/imas.png"
-              alt="IMAS International Management & Analytics School"
-              className="h-10 w-auto xl:h-12"
-            />
+            <a href="/" className="inline-block hover:opacity-90 transition-opacity">
+              <img
+                src="/uploads/logos/imas.png"
+                alt="IMAS International Management & Analytics School"
+                className="h-10 w-auto xl:h-12"
+              />
+            </a>
           </div>
           <nav className="hidden items-center gap-6 text-sm text-slate-300 md:flex">
             <a href="#about-imas" className="flex items-center gap-1 hover:text-[#2e7bb3] transition-colors duration-200">
               <span className="material-symbols-outlined text-[18px]">menu_book</span>
-              <span>Program Overview</span>
+              <span>Programme Overview</span>
             </a>
 
             <a href="#specialisations" className="flex items-center gap-1 hover:text-[#2e7bb3] transition-colors duration-200">
@@ -233,11 +235,13 @@ export function WorkingExecutivesLandingPage(): React.JSX.Element {
           {/* Header */}
           <div className="flex items-center justify-between p-4 border-b border-gray-200">
             <div className="flex items-center gap-3">
-              <img
-                src="/uploads/logos/imas.png"
-                alt="IMAS International Management & Analytics School"
-                className="h-10 w-auto"
-              />
+              <a href="/" className="inline-block">
+                <img
+                  src="/uploads/logos/imas.png"
+                  alt="IMAS International Management & Analytics School"
+                  className="h-10 w-auto"
+                />
+              </a>
             </div>
             <Button variant="ghost" size="sm" onClick={() => setMobileMenuOpen(false)} className="text-gray-600 hover:text-gray-900">
               <ChevronDown className="h-5 w-5 rotate-180" />
@@ -255,7 +259,7 @@ export function WorkingExecutivesLandingPage(): React.JSX.Element {
                   className="w-full flex items-center gap-3 px-4 py-3 rounded-lg text-left text-gray-700 hover:text-[#2e7bb3] hover:bg-slate-50 transition-colors"
                 >
                   <BookOpen className="h-5 w-5" />
-                  <span className="font-medium">Program Overview</span>
+                  <span className="font-medium">Programme Overview</span>
                 </a>
               </li>
 
@@ -477,7 +481,7 @@ export function WorkingExecutivesLandingPage(): React.JSX.Element {
                   </div>
                   <div className="h-1 w-32 rounded-full bg-gradient-to-r from-cyan-400 to-sky-600 mb-4" />
                   <p className="text-sm sm:text-base leading-relaxed text-slate-700">
-                    Flexible program designed for working professionals to build leadership, management skills, and
+                    Flexible programme designed for working professionals to build leadership, management skills, and
                     industry-ready expertise while continuing their careers.
                   </p>
                 </div>
@@ -602,7 +606,7 @@ export function WorkingExecutivesLandingPage(): React.JSX.Element {
                 { label: 'Continue your full-time job while studying', icon: 'business_center' },
                 { label: 'Blended online + weekend/evening classes', icon: 'cast_for_education' },
                 { label: 'Corporate trainers & industry mentors', icon: 'groups' },
-                { label: 'Dedicated program manager for support', icon: 'support_agent' },
+                { label: 'Dedicated programme manager for support', icon: 'support_agent' },
                 { label: 'Career-focused, industry-relevant curriculum', icon: 'menu_book' },
                 { label: 'Practical case studies + capstone projects', icon: 'work' },
                 { label: 'Suitable for Working Professionals', icon: 'badge' },
@@ -704,7 +708,7 @@ export function WorkingExecutivesLandingPage(): React.JSX.Element {
                   </div>
                   <div className="mt-1 h-1 w-24 rounded-full bg-gradient-to-r from-cyan-400 to-sky-600" />
                 </div>
-                <p className="mt-2 text-xs text-slate-700 sm:text-sm">IMAS is ideal for PGDM/MBA programs designed for mid-career working professionals. We offer specialisations in</p>
+                <p className="mt-2 text-xs text-slate-700 sm:text-sm">IMAS is ideal for PGDM/MBA programmes designed for mid-career working professionals. We offer specialisations in</p>
               </div>
               <p className="text-[11px] text-slate-500">Choose a focus area that aligns with your career goals.</p>
             </div>
@@ -767,7 +771,7 @@ export function WorkingExecutivesLandingPage(): React.JSX.Element {
                   </span>
                   <div>
                     <div className="bg-gradient-to-r from-slate-900 to-sky-700 bg-clip-text text-lg font-bold text-transparent sm:text-2xl">
-                      Executive Program Features
+                      Executive Programme Features
                     </div>
                     <p className="text-[11px] text-slate-600 sm:text-xs">
                       Best flexible blended PGDM for working professionals — designed
@@ -1564,7 +1568,7 @@ export function WorkingExecutivesLandingPage(): React.JSX.Element {
               {
                 q: 'What is the eligibility for the PGDM Working Executive programme?',
                 a:
-                  'Candidates must have a Bachelor’s degree in any discipline from a recognized university. Working professionals with relevant work experience are eligible to apply.',
+                  'Candidates must have a Bachelor’s degree in any discipline from a recognised university. Working professionals with relevant work experience are eligible to apply.',
               },
               {
                 q: 'Is the PGDM Working Executive programme AICTE approved?',
@@ -1586,9 +1590,9 @@ export function WorkingExecutivesLandingPage(): React.JSX.Element {
                   'As this is designed for working professionals, hostel facilities are not mandatory. However, IMAS can guide candidates toward nearby accommodation options if required.',
               },
               {
-                q: 'How does the International Immersion Program work?',
+                q: 'How does the International Immersion Programme work?',
                 a:
-                  'The International Immersion Program provides optional global exposure through international academic interactions, expert sessions, and industry visits. Participation details are shared with eligible students in advance.',
+                  'The International Immersion Programme provides optional global exposure through international academic interactions, expert sessions, and industry visits. Participation details are shared with eligible students in advance.',
               },
             ].map(({ q, a }) => (
               <details

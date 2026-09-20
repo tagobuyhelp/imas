@@ -39,7 +39,7 @@ const pages: Page[] = [
     },
     {
         title: "PGDM Fintech",
-        desc: "Specialized program in Financial Technology & digital finance.",
+        desc: "Specialised program in Financial Technology & digital finance.",
         link: "/pgdm-fintech",
         status: "live",
     },

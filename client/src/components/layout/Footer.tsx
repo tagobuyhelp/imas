@@ -26,11 +26,13 @@ export function Footer() {
           {/* Company Info - Enhanced */}
           <div className="text-left group">
             <div className="flex justify-start items-center gap-3 mb-4">
-              <img
-                src="/uploads/logos/imas.png"
-                alt="IMAS International Management & Analytics School"
-                className="h-10 md:h-12 w-auto transition-transform duration-300 group-hover:scale-105"
-              />
+              <a href="/" className="inline-block">
+                <img
+                  src="/uploads/logos/imas.png"
+                  alt="IMAS International Management & Analytics School"
+                  className="h-10 md:h-12 w-auto transition-transform duration-300 group-hover:scale-105"
+                />
+              </a>
               <div className="hidden md:flex items-center gap-1 text-teal-400">
                 <Star className="w-4 h-4 animate-pulse" />
                 <Star className="w-3 h-3 animate-pulse" style={{animationDelay: '0.5s'}} />
@@ -39,7 +41,7 @@ export function Footer() {
             </div>
             <div className="relative">
               <p className="text-sm md:text-base text-gray-300 max-w-md leading-relaxed mb-3">
-                🎓 Premier business school in Kolkata, redefining management education with industry-focused programs.
+                🎓 Premier business school in Kolkata, redefining management education with industry-focused programmes.
               </p>
               <div className="flex items-center gap-2 text-xs text-teal-400 font-medium">
                 <Award className="w-4 h-4" />
@@ -62,7 +64,7 @@ export function Footer() {
                   <Users className="h-4 w-4 group-hover:scale-110 transition-transform duration-300" /> About Us
                 </a>
                 <a href="/programs" className={`flex items-center gap-2 text-gray-300 ${IMAS_TAILWIND_CLASSES.HOVER_TEXT_TEAL} transition-all duration-300 hover:translate-x-2 hover:bg-gray-800/30 rounded-lg p-2 text-sm group`}>
-                  <GraduationCap className="h-4 w-4 group-hover:scale-110 transition-transform duration-300" /> Programs
+                  <GraduationCap className="h-4 w-4 group-hover:scale-110 transition-transform duration-300" /> Programmes
                 </a>
                 <a href="/faculty" className={`flex items-center gap-2 text-gray-300 ${IMAS_TAILWIND_CLASSES.HOVER_TEXT_TEAL} transition-all duration-300 hover:translate-x-2 hover:bg-gray-800/30 rounded-lg p-2 text-sm group`}>
                   <Award className="h-4 w-4 group-hover:scale-110 transition-transform duration-300" /> Faculty
@@ -162,7 +164,7 @@ export function Footer() {
                   <a href={IMAS_SOCIAL.LINKEDIN} className={`p-3 rounded-full bg-gradient-to-br from-blue-500 to-blue-600 text-white hover:from-blue-400 hover:to-blue-500 transition-all duration-300 hover:scale-110 hover:rotate-12 shadow-lg hover:shadow-blue-500/25 group`}>
                     <Linkedin className="h-4 w-4 group-hover:scale-110 transition-transform duration-300" />
                   </a>
-                  <a href={IMAS_SOCIAL.YOUTUBE} className={`p-3 rounded-full bg-gradient-to-br from-red-500 to-red-600 text-white hover:from-red-400 hover:to-red-500 transition-all duration-300 hover:scale-110 hover:rotate-12 shadow-lg hover:shadow-red-500/25 group`}>
+                  <a href={IMAS_SOCIAL.YOUTUBE} target="_blank" rel="noopener noreferrer" aria-label="IMAS YouTube Channel" className={`p-3 rounded-full bg-gradient-to-br from-red-500 to-red-600 text-white hover:from-red-400 hover:to-red-500 transition-all duration-300 hover:scale-110 hover:rotate-12 shadow-lg hover:shadow-red-500/25 group`}>
                     <Youtube className="h-4 w-4 group-hover:scale-110 transition-transform duration-300" />
                   </a>
                 </div>
@@ -177,7 +179,7 @@ export function Footer() {
           <div className="text-center space-y-3">
             <div className="flex items-center justify-center gap-2 text-xs md:text-sm text-gray-400">
               <Star className="w-3 h-3 text-teal-400" />
-              <span>© 2024 IMAS School of Business. All rights reserved.</span>
+              <span>© 2026 IMAS School of Business. All rights reserved.</span>
               <Star className="w-3 h-3 text-teal-400" />
             </div>
             <div className="flex items-center justify-center gap-2 text-xs text-gray-500">

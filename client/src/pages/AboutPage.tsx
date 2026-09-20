@@ -49,7 +49,7 @@ function AboutHeroSection() {
                             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
                                 <div className="space-y-4">
                                     <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                                        Our Industry Academic Team brings together top executives, business leaders, and seasoned professionals from globally renowned organizations to guide, mentor, and prepare our students for the competitive corporate world.
+                                        Our Industry Academic Team brings together top executives, business leaders, and seasoned professionals from globally renowned organisations to guide, mentor, and prepare our students for the competitive corporate world.
                                     </p>
                                 </div>
                                 <div className="space-y-4">

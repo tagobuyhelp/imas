@@ -29,14 +29,14 @@ export function ProgramDetailPage() {
         window.scrollTo(0, 0);
     }, [slug]);
 
-    if (!program) {
+    if (!programme) {
         return (
             <div className="min-h-screen flex items-center justify-center">
                 <div className="text-center">
-                    <h1 className="text-2xl font-bold text-primary-dark mb-4">Program Not Found</h1>
-                    <p className="text-muted-foreground mb-6">The program you're looking for doesn't exist.</p>
+                    <h1 className="text-2xl font-bold text-primary-dark mb-4">Programme Not Found</h1>
+                    <p className="text-muted-foreground mb-6">The programme you're looking for doesn't exist.</p>
                     <Link to="/programs">
-                        <Button>Back to Programs</Button>
+                        <Button>Back to Programmes</Button>
                     </Link>
                 </div>
             </div>
@@ -44,7 +44,7 @@ export function ProgramDetailPage() {
     }
 
     const handleCTAAction = (action: string) => {
-        console.log('[ProgramDetailPage] CTA clicked', { action, program: program?.name });
+        console.log('[ProgramDetailPage] CTA clicked', { action, programme: program?.name });
         switch (action) {
             case 'apply':
                 if (typeof (window as any).openNpfPopup === 'function') {
@@ -123,7 +123,7 @@ export function ProgramDetailPage() {
                 <meta name="author" content="International Management & Analytics School (IMAS)" />
                 <meta name="publisher" content="IMAS Kolkata" />
                 
-                {/* Program-specific structured data for better SEO */}
+                {/* Programme-specific structured data for better SEO */}
                 <script type="application/ld+json">
                     {JSON.stringify({
                         "@context": "https://schema.org",
@@ -288,7 +288,7 @@ export function ProgramDetailPage() {
                     </div>
                 </section>
 
-                {/* Program Highlights - Enhanced */}
+                {/* Programme Highlights - Enhanced */}
                 <section id="program-highlights" className="py-8 sm:py-12 lg:py-16 bg-gray-50 relative overflow-hidden">
                     {/* Background Elements */}
                     <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -318,7 +318,7 @@ export function ProgramDetailPage() {
                                     </div>
                                     <h3 className={`font-bold ${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE} mb-1 text-xs sm:text-sm tracking-wide`}>DURATION</h3>
                                     <p className={`text-lg sm:text-xl font-bold ${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE} mb-1 capitalize`}>{program.duration}</p>
-                                    <p className="text-xs text-gray-500">{program.format} Program</p>
+                                    <p className="text-xs text-gray-500">{program.format} Programme</p>
                                 </CardContent>
                             </Card>
 
@@ -367,7 +367,7 @@ export function ProgramDetailPage() {
                     <section id="overview" className="py-4 sm:py-6">
                         <div className="max-w-[1550px] mx-auto px-4 sm:px-6 lg:px-8">
                             <div className="space-y-6 sm:space-y-8">
-                                {/* Advanced Program Overview */}
+                                {/* Advanced Programme Overview */}
                                 <div className="relative">
                                     {/* Hero Overview Card */}
                                     <div className="bg-white rounded-3xl border border-gray-200/50 overflow-hidden backdrop-blur-sm">
@@ -425,7 +425,7 @@ export function ProgramDetailPage() {
                                                             Why Choose {program.name.split(' ').slice(0, 3).join(' ')} at IMAS?
                                                         </h3>
                                                         <p className="text-xs sm:text-sm opacity-90 max-w-xl mx-auto">
-                                                            Discover the unique advantages that set this program apart
+                                                            Discover the unique advantages that set this programme apart
                                                         </p>
                                                     </div>
                                                 </div>
@@ -559,7 +559,7 @@ export function ProgramDetailPage() {
 
                                 {program.curriculum && (
                     <div className="space-y-6">
-                        {/* Enhanced Program Duration Info */}
+                        {/* Enhanced Programme Duration Info */}
                         <div className="text-center">
                             <div className={`bg-[#143674]/10 rounded-2xl p-6 border border-[#143674]/20 shadow-sm`}>
                                 
@@ -731,7 +731,7 @@ export function ProgramDetailPage() {
                                             Study at Prestigious <span className={`${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE}`}>UK Universities</span>
                                         </h2>
                                         <p className="text-base sm:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                                            Our MBA Global program offers partnerships with renowned UK universities, providing you with international exposure and dual qualifications.
+                                            Our MBA Global programme offers partnerships with renowned UK universities, providing you with international exposure and dual qualifications.
                                         </p>
                                     </div>
 
@@ -811,7 +811,7 @@ export function ProgramDetailPage() {
                                                         />
                                                     </div>
                                                     <h3 className="text-lg font-bold text-gray-800 mb-2">University of South Wales</h3>
-                                                    <p className="text-sm text-gray-600 mb-4">A modern university with industry-focused programs and global outlook</p>
+                                                    <p className="text-sm text-gray-600 mb-4">A modern university with industry-focused programmes and global outlook</p>
                                                     <div className="flex flex-wrap justify-center gap-2">
                                                         <span className={`px-3 py-1 ${IMAS_TAILWIND_CLASSES.BG_DARK_BLUE}/10 ${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE} rounded-full text-xs font-semibold`}>Partner University</span>
                                                         <span className={`px-3 py-1 ${IMAS_TAILWIND_CLASSES.BG_TEAL}/10 ${IMAS_TAILWIND_CLASSES.TEXT_TEAL} rounded-full text-xs font-semibold`}>International Collaboration</span>
@@ -1010,7 +1010,7 @@ export function ProgramDetailPage() {
                                         Are You Ready?
                                     </h2>
                                     <p className="text-sm text-gray-600 max-w-2xl mx-auto">
-                                        Check if you meet the requirements to join this program
+                                        Check if you meet the requirements to join this programme
                                     </p>
                                 </div>
 
@@ -1263,7 +1263,7 @@ export function ProgramDetailPage() {
     );
 }
 
-// Generate static paths for all programs
+// Generate static paths for all programmes
 export const generateStaticParams = () => {
     return getAllProgramSlugs().map((slug) => ({
         slug,

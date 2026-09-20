@@ -48,9 +48,9 @@ const ICON_MAP = {
   agri: Briefcase,
 } as const;
 
-// Direct program image mapping based on program slugs
+// Direct programme image mapping based on programme slugs
 const PROGRAM_IMAGE_MAP = {
-  // PGDM Plus Programs
+  // PGDM Plus Programmes
   'pgdm-plus-marketing-management': '/uploads/PGDM_Plus_in_Marketing_Management.png',
   'pgdm-plus-financial-management': '/uploads/PGDM_Plus_in_Financial_Management.png',
   'pgdm-plus-human-resource-management': '/uploads/PGDM_Plus_in_Human_Resource_Management.png',
@@ -60,7 +60,7 @@ const PROGRAM_IMAGE_MAP = {
   'pgdm-plus-hospital-healthcare-management': '/uploads/PGDM_Plus_in_Hospital_&_Healthcare_Management.png',
   'pgdm-plus-innovation-entrepreneurship-venture-development': '/uploads/PGDM_Plus_in_Innovation_Entrepreneurship_&_Venture_Development.png',
   
-  // Working Executive Programs
+  // Working Executive Programmes
   'pgdm-marketing-working-executive': '/uploads/PGDM_in_Marketing_Working_Executive.png',
   'pgdm-finance-working-executive': '/uploads/PGDM_in_Finance_Working_Executive.png',
   'pgdm-hr-working-executive': '/uploads/PGDM_in_Human_Resource_Working_Executive.png',
@@ -72,7 +72,7 @@ const PROGRAM_IMAGE_MAP = {
   'pgdm-agri-working-executive': '/uploads/PGDM_in_Agri_Business_Management_Working_Executive.png',
   'pgdm-healthcare-working-executive': '/uploads/PGDM_in_Hospital_&_Healthcare_Management_Working_Executive.png',
   
-  // MBA Global Program
+  // MBA Global Programme
   'mba-global': '/uploads/mba_global.jpg',
 } as const;
 
@@ -97,17 +97,17 @@ export function ProgramsSection() {
   }, []);
 
   const getImageForProgram = useCallback((program: any): string => {
-    // Use heroImage if available, otherwise fallback to program-specific images
+    // Use heroImage if available, otherwise fallback to programme-specific images
     if (program.heroImage?.desktop) {
       return program.heroImage.desktop;
     }
     
-    // Direct program image mapping based on slug
+    // Direct programme image mapping based on slug
     if (program.slug && program.slug in PROGRAM_IMAGE_MAP) {
       return PROGRAM_IMAGE_MAP[program.slug as keyof typeof PROGRAM_IMAGE_MAP];
     }
     
-    // Fallback based on category for unmapped programs
+    // Fallback based on category for unmapped programmes
     if (program.category === 'mba-global') {
       return '/uploads/mba_global.jpg';
     }
@@ -137,7 +137,7 @@ export function ProgramsSection() {
     slug: program.slug
   }), [getImageForProgram, getIconForProgram]);
 
-  // Memoized program data to prevent unnecessary recalculations
+  // Memoized programme data to prevent unnecessary recalculations
   const programDetails = useMemo(() => {
     const regularPrograms = programsData
       .filter(program => program.category === 'pgdm-plus' || program.category === 'mba-global')
@@ -277,7 +277,7 @@ export function ProgramsSection() {
     return () => document.removeEventListener('keydown', handleKeyDown);
   }, [scrollToPrev, scrollToNext]);
 
-  // Component for program card to improve readability
+  // Component for programme card to improve readability
   const ProgramCard = ({ program, index }: { program: TransformedProgram; index: number }) => {
     const handleNavigateToProgram = useCallback(() => {
       const programSlug = program.slug || program.name.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
@@ -289,13 +289,13 @@ export function ProgramsSection() {
         className="bg-white rounded-lg sm:rounded-xl shadow-md sm:shadow-lg hover:shadow-lg sm:hover:shadow-xl transition-all duration-300 overflow-hidden group border border-gray-100 flex-shrink-0"
         style={{ width: `${CARD_WIDTH}px`, minWidth: `${CARD_WIDTH}px` }}
         role="article"
-        aria-labelledby={`program-title-${index}`}
+        aria-labelledby={`programme-title-${index}`}
       >
-        {/* Program Header */}
+        {/* Programme Header */}
         <div className="relative h-48 overflow-hidden">
           <img
             src={program.image}
-            alt={`${program.name} program`}
+            alt={`${program.name} programme`}
             className="w-full h-full object-cover"
             loading="lazy"
             onError={(e) => {
@@ -314,7 +314,7 @@ export function ProgramsSection() {
           </div>
 
           <div className="absolute bottom-3 sm:bottom-4 left-3 sm:left-4 right-3 sm:right-4">
-            <h3 id={`program-title-${index}`} className="text-base sm:text-lg font-bold text-white mb-1 line-clamp-2">
+            <h3 id={`programme-title-${index}`} className="text-base sm:text-lg font-bold text-white mb-1 line-clamp-2">
               {program.name}
             </h3>
             <div className="flex items-center gap-3 sm:gap-4 text-white/90 text-xs sm:text-sm">
@@ -331,7 +331,7 @@ export function ProgramsSection() {
           </div>
         </div>
 
-        {/* Program Content */}
+        {/* Programme Content */}
         <div className="p-4 sm:p-6">
           <p className="text-gray-600 text-xs sm:text-sm mb-3 sm:mb-4 line-clamp-1">
             {program.description.length > 80 ? `${program.description.substring(0, 80)}...` : program.description}
@@ -391,24 +391,24 @@ export function ProgramsSection() {
   };
 
   return (
-    <section id="about-the-program" className="py-8 sm:py-16 bg-gradient-to-br from-gray-50 to-white" aria-labelledby="programs-heading">
+    <section id="about-the-programme" className="py-8 sm:py-16 bg-gradient-to-br from-gray-50 to-white" aria-labelledby="programmes-heading">
       <div className="max-w-[1460px] mx-auto px-4">
         {/* Section Header */}
         <header className="text-center mb-6 sm:mb-12">
           <div className={`inline-block ${IMAS_TAILWIND_CLASSES.BG_DARK_BLUE}/10 ${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE} px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-semibold mb-3 sm:mb-4 border ${IMAS_TAILWIND_CLASSES.BORDER_DARK_BLUE}/20`}>
-            FLAGSHIP PROGRAMS
+            FLAGSHIP PROGRAMMES
           </div>
           <h2 id="programs-heading" className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800 mb-3 sm:mb-4 px-2">
             Transform Your Career with IMAS
           </h2>
           <p className="text-sm sm:text-base md:text-lg text-gray-600 max-w-3xl mx-auto px-2">
-            Choose from our comprehensive range of AICTE-approved programs designed to equip you with next-generation skills
+            Choose from our comprehensive range of AICTE-approved programmes designed to equip you with next-generation skills
           </p>
         </header>
 
-        {/* Program Type Tabs */}
+        {/* Programme Type Tabs */}
         <div className="flex justify-center mb-6 sm:mb-8">
-          <div className="bg-white rounded-lg p-1 shadow-md border border-gray-200 w-full max-w-sm" role="tablist" aria-label="Program types">
+          <div className="bg-white rounded-lg p-1 shadow-md border border-gray-200 w-full max-w-sm" role="tablist" aria-label="Programme types">
             <button
               onClick={() => setActiveTab('regular')}
               className={`w-1/2 px-3 sm:px-6 py-3 rounded-md font-semibold transition-all duration-300 text-sm sm:text-base ${activeTab === 'regular'
@@ -417,7 +417,7 @@ export function ProgramsSection() {
                 }`}
               role="tab"
               aria-selected={activeTab === 'regular'}
-              aria-controls="regular-programs"
+              aria-controls="regular-programmes"
               id="regular-tab"
             >
               <div className="flex items-center justify-center gap-1 sm:gap-2">
@@ -433,7 +433,7 @@ export function ProgramsSection() {
                 }`}
               role="tab"
               aria-selected={activeTab === 'executive'}
-              aria-controls="executive-programs"
+              aria-controls="executive-programmes"
               id="executive-tab"
             >
               <div className="flex items-center justify-center gap-1 sm:gap-2">
@@ -444,10 +444,10 @@ export function ProgramsSection() {
           </div>
         </div>
 
-        {/* Program Cards Carousel */}
-        <div className="relative mb-6 sm:mb-8" role="region" aria-labelledby={`${activeTab}-programs-heading`} aria-live="polite">
-          <h3 id={`${activeTab}-programs-heading`} className="sr-only">
-            {activeTab === 'regular' ? 'Regular' : 'Executive'} Programs Carousel
+        {/* Programme Cards Carousel */}
+        <div className="relative mb-6 sm:mb-8" role="region" aria-labelledby={`${activeTab}-programmes-heading`} aria-live="polite">
+          <h3 id={`${activeTab}-programmes-heading`} className="sr-only">
+            {activeTab === 'regular' ? 'Regular' : 'Executive'} Programmes Carousel
           </h3>
           
           {/* Navigation Arrows */}
@@ -455,7 +455,7 @@ export function ProgramsSection() {
             onClick={scrollToPrev}
             className={`absolute left-2 top-1/2 -translate-y-1/2 z-10 w-10 h-10 ${IMAS_TAILWIND_CLASSES.BG_DARK_BLUE} text-white rounded-full shadow-lg flex items-center justify-center transition-all duration-300 ${showLeftArrow ? 'opacity-100' : 'opacity-0 pointer-events-none'
               } hover:scale-110 active:scale-95 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500`}
-            aria-label="Previous programs"
+            aria-label="Previous programmes"
             disabled={!showLeftArrow}
           >
             <ChevronLeft className="h-5 w-5" aria-hidden="true" />
@@ -465,7 +465,7 @@ export function ProgramsSection() {
             onClick={scrollToNext}
             className={`absolute right-2 top-1/2 -translate-y-1/2 z-10 w-10 h-10 ${IMAS_TAILWIND_CLASSES.BG_DARK_BLUE} text-white rounded-full shadow-lg flex items-center justify-center transition-all duration-300 ${showRightArrow ? 'opacity-100' : 'opacity-0 pointer-events-none'
               } hover:scale-110 active:scale-95 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500`}
-            aria-label="Next programs"
+            aria-label="Next programmes"
             disabled={!showRightArrow}
           >
             <ChevronRight className="h-5 w-5" aria-hidden="true" />
@@ -478,17 +478,17 @@ export function ProgramsSection() {
             style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
             role="tabpanel"
             aria-labelledby={`${activeTab}-tab`}
-            id={`${activeTab}-programs`}
+            id={`${activeTab}-programmes`}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
           >
-            {programDetails[activeTab].map((program, index) => (
-              <ProgramCard key={`${activeTab}-${index}`} program={program} index={index} />
+            {programDetails[activeTab].map((programme, index) => (
+              <ProgramCard key={`${activeTab}-${index}`} program={programme} index={index} />
             ))}
           </div>
 
           {/* Carousel Indicators */}
-          <div className="flex justify-center mt-4 gap-2" role="group" aria-label="Program carousel indicators">
+          <div className="flex justify-center mt-4 gap-2" role="group" aria-label="Programme carousel indicators">
             {programDetails[activeTab].map((_, index) => (
               <button
                 key={index}
@@ -497,22 +497,22 @@ export function ProgramsSection() {
                   ? `${IMAS_TAILWIND_CLASSES.BG_DARK_BLUE} w-6`
                   : 'bg-gray-300 hover:bg-gray-400'
                   }`}
-                aria-label={`Go to program ${index + 1}`}
+                aria-label={`Go to programme ${index + 1}`}
                 aria-current={index === currentIndex ? 'true' : 'false'}
               />
             ))}
           </div>
         </div>
 
-        {/* View All Programs Button */}
+        {/* View All Programmes Button */}
         <div className="text-center mt-8">
           <Button
             onClick={() => window.open('/programs', '_self')}
             className={`${IMAS_TAILWIND_CLASSES.BG_DARK_BLUE} hover:bg-blue-800 text-white px-8 py-3 text-sm font-semibold transition-all duration-300 hover:scale-105 active:scale-95 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500`}
-            aria-label="View all programs in a new tab"
+            aria-label="View all programmes"
           >
             <BookOpen className="h-4 w-4 mr-2" aria-hidden="true" />
-            View All Programs
+            View All Programmes
           </Button>
         </div>
 

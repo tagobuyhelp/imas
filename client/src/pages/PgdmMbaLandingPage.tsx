@@ -117,8 +117,8 @@ export function PgdmMbaLandingPage(): React.JSX.Element {
         {
             label: 'Human Resource',
             icon: 'group',
-            desc: 'Talent Management, HR Analytics & Organizational Behavior',
-            ideal: 'People management & organizational development',
+            desc: 'Talent Management, HR Analytics & Organisational Behavior',
+            ideal: 'People management & organisational development',
         },
         {
             label: 'Logistics & Supply Chain',
@@ -157,11 +157,11 @@ export function PgdmMbaLandingPage(): React.JSX.Element {
     return (
         <div className="min-h-screen overflow-x-hidden bg-gradient-to-b from-slate-50 via-slate-50 to-slate-100 text-slate-900 scroll-smooth">
             <Helmet>
-                <title>PGDM / MBA Program (2-Year Full-Time) | Best MBA College in Kolkata | IMAS</title>
-                <meta name="description" content="Join IMAS – one of the best PGDM colleges in Kolkata with placement. AICTE-approved MBA/PGDM program with internship from Year 1, dual specialization, ₹6.50+ LPA average package & ₹18 LPA highest package." />
+                <title>PGDM / MBA Programme (2-Year Full-Time) | Best MBA College in Kolkata | IMAS</title>
+                <meta name="description" content="Join IMAS – one of the best PGDM colleges in Kolkata with placement. AICTE-approved MBA/PGDM programme with internship from Year 1, dual specialisation, ₹6.50+ LPA average package & ₹18 LPA highest package." />
                 <link rel="canonical" href={canonicalUrl} />
-                <meta property="og:title" content="PGDM / MBA Program | Best MBA College in Kolkata | IMAS" />
-                <meta property="og:description" content="AICTE-approved PGDM program in Kolkata with placement, internships and industry-aligned curriculum. ₹6.50+ LPA average package." />
+                <meta property="og:title" content="PGDM / MBA Programme | Best MBA College in Kolkata | IMAS" />
+                <meta property="og:description" content="AICTE-approved PGDM programme in Kolkata with placement, internships and industry-aligned curriculum. ₹6.50+ LPA average package." />
                 <meta property="og:type" content="website" />
                 <meta property="og:url" content={canonicalUrl} />
                 <meta property="og:image" content="https://www.imas.ac.in/uploads/IMASBUILDING.jpeg" />
@@ -170,8 +170,8 @@ export function PgdmMbaLandingPage(): React.JSX.Element {
                 <meta property="og:site_name" content="IMAS Kolkata" />
                 <meta property="og:locale" content="en_US" />
                 <meta name="twitter:card" content="summary_large_image" />
-                <meta name="twitter:title" content="PGDM / MBA Program | Best MBA College in Kolkata | IMAS" />
-                <meta name="twitter:description" content="AICTE-approved PGDM program in Kolkata. Placements, internships & industry exposure." />
+                <meta name="twitter:title" content="PGDM / MBA Programme | Best MBA College in Kolkata | IMAS" />
+                <meta name="twitter:description" content="AICTE-approved PGDM programme in Kolkata. Placements, internships & industry exposure." />
                 <meta name="twitter:image" content="https://www.imas.ac.in/uploads/IMASBUILDING.jpeg" />
             </Helmet>
 
@@ -200,11 +200,13 @@ export function PgdmMbaLandingPage(): React.JSX.Element {
             <header className="sticky top-0 z-40 border-b border-white/10 bg-slate-900/80 backdrop-blur shadow-lg">
                 <div className="mx-auto flex max-w-[1550px] items-center justify-between px-4 py-3">
                     <div className="flex items-center gap-2">
-                        <img
-                            src="/uploads/logos/imas.png"
-                            alt="IMAS International Management & Analytics School"
-                            className="h-10 w-auto xl:h-12"
-                        />
+                        <a href="/" className="inline-block hover:opacity-90 transition-opacity">
+                            <img
+                                src="/uploads/logos/imas.png"
+                                alt="IMAS International Management & Analytics School"
+                                className="h-10 w-auto xl:h-12"
+                            />
+                        </a>
                     </div>
 
                     <nav className="hidden items-center gap-5 text-sm text-slate-200 md:flex">
@@ -213,7 +215,7 @@ export function PgdmMbaLandingPage(): React.JSX.Element {
                             className="group relative flex items-center gap-1 rounded-md px-1.5 py-1 transition-colors duration-200 hover:text-white"
                         >
                             <span className="material-symbols-outlined text-[18px]">menu_book</span>
-                            <span>Program Overview</span>
+                            <span>Programme Overview</span>
                             <span className="pointer-events-none absolute -bottom-1 left-1.5 right-1.5 h-[2px] origin-left scale-x-0 rounded-full bg-gradient-to-r from-[#26c1d3] to-[#2e7bb3] transition-transform duration-200 group-hover:scale-x-100" />
                         </a>
                         <a
@@ -306,7 +308,9 @@ export function PgdmMbaLandingPage(): React.JSX.Element {
             >
                 <div className="flex flex-col h-full">
                     <div className="flex items-center justify-between p-4 border-b border-gray-200">
-                        <img src="/uploads/logos/imas.png" alt="IMAS" className="h-10 w-auto" />
+                        <a href="/" className="inline-block">
+                            <img src="/uploads/logos/imas.png" alt="IMAS" className="h-10 w-auto" />
+                        </a>
                         <Button variant="ghost" size="sm" onClick={() => setMobileMenuOpen(false)} className="text-gray-600 hover:text-gray-900">
                             <ChevronDown className="h-5 w-5 rotate-180" />
                         </Button>
@@ -314,7 +318,7 @@ export function PgdmMbaLandingPage(): React.JSX.Element {
                     <nav className="flex-1 p-4 overflow-y-auto">
                         <ul className="space-y-1.5">
                             {[
-                                { href: '#about-pgdm', icon: BookOpen, label: 'Program Overview' },
+                                { href: '#about-pgdm', icon: BookOpen, label: 'Programme Overview' },
                                 { href: '#specialisations', icon: Layers, label: 'Specialisations' },
                                 { href: '#placements', icon: Briefcase, label: 'Placements' },
                                 { href: '#life-at-imas', icon: Users, label: 'Life at IMAS' },
@@ -405,7 +409,7 @@ export function PgdmMbaLandingPage(): React.JSX.Element {
                         </div>
 
                         <p className="max-w-xl text-xs leading-snug text-gray-200 sm:text-sm">
-                            IMAS is one of the best PGDM colleges in Kolkata with placement — offering a career-driven, AICTE-approved PGDM program with internship from Year 1, dual specialization, and strong corporate exposure.
+                            IMAS is one of the best PGDM colleges in Kolkata with placement — offering a career-driven, AICTE-approved PGDM programme with internship from Year 1, dual specialisation, and strong corporate exposure.
                         </p>
 
                         {/* Marquee */}
@@ -413,7 +417,7 @@ export function PgdmMbaLandingPage(): React.JSX.Element {
                             <div ref={marqueeRef} className="scroller" data-speed="fast" data-direction="left">
                                 <div className="scroller__inner whitespace-nowrap text-xs font-medium text-white">
                                     <span className="inline-flex items-center gap-1 rounded-full bg-white/10 px-3 py-1 shadow-sm border-t border-b border-white/30"><GraduationCap className="h-4 w-4 text-white" /><span>Internship from Year 1</span></span>
-                                    <span className="inline-flex items-center gap-1 rounded-full bg-white/10 px-3 py-1 shadow-sm border-t border-b border-white/30"><Award className="h-4 w-4 text-white" /><span>Dual Specialization + Certifications</span></span>
+                                    <span className="inline-flex items-center gap-1 rounded-full bg-white/10 px-3 py-1 shadow-sm border-t border-b border-white/30"><Award className="h-4 w-4 text-white" /><span>Dual Specialisation + Certifications</span></span>
                                     <span className="inline-flex items-center gap-1 rounded-full bg-white/10 px-3 py-1 shadow-sm border-t border-b border-white/30"><CheckCircle className="h-4 w-4 text-white" /><span>Industry-Aligned Curriculum</span></span>
                                     <span className="inline-flex items-center gap-1 rounded-full bg-white/10 px-3 py-1 shadow-sm border-t border-b border-white/30"><Trophy className="h-4 w-4 text-white" /><span>Strong Placement Support</span></span>
                                 </div>
@@ -516,13 +520,13 @@ export function PgdmMbaLandingPage(): React.JSX.Element {
                                         <GraduationCap className="h-5 w-5 text-white" />
                                     </span>
                                     <h2 className="text-base sm:text-xl font-bold bg-gradient-to-r from-slate-900 to-sky-700 bg-clip-text text-transparent">
-                                        About the PGDM Program
+                                        About the PGDM Programme
                                     </h2>
                                 </div>
                                 <div className="h-1 w-32 rounded-full bg-gradient-to-r from-cyan-400 to-sky-600 mb-4" />
 
                                 <p className="break-words text-[13px] sm:text-sm leading-relaxed text-slate-700">
-                                    The PGDM program at IMAS Kolkata is designed to develop future business leaders through a combination of management fundamentals, practical learning, and industry exposure.
+                                    The PGDM programme at IMAS Kolkata is designed to develop future business leaders through a combination of management fundamentals, practical learning, and industry exposure.
                                 </p>
                                 <p className="break-words text-[13px] sm:text-sm leading-relaxed text-slate-800">
                                     Whether you're searching for a <strong>PGDM college in Kolkata with placement</strong>, the best PGDM course in West Bengal, or an MBA with internship — IMAS offers real-world business learning, case studies, live projects, and skill-based training.
@@ -617,7 +621,7 @@ export function PgdmMbaLandingPage(): React.JSX.Element {
                             </div>
                             <div className="mt-1 h-1 w-32 rounded-full bg-gradient-to-r from-cyan-400 to-sky-600" />
                             <p className="mt-2 text-xs text-slate-700 sm:text-sm">
-                                Top MBA colleges in Kolkata with placement — recognized for consistent results across sectors.
+                                Top MBA colleges in Kolkata with placement — recognised for consistent results across sectors.
                             </p>
                         </div>
 
@@ -625,8 +629,8 @@ export function PgdmMbaLandingPage(): React.JSX.Element {
                             {[
                                 { label: 'AICTE-Approved PGDM Programme', icon: 'verified' },
                                 { label: 'Internship from Year 1', icon: 'work_history' },
-                                { label: 'Dual Specialization + Certifications', icon: 'layers' },
-                                { label: 'Corporate Connect Program', icon: 'business_center' },
+                                { label: 'Dual Specialisation + Certifications', icon: 'layers' },
+                                { label: 'Corporate Connect Programme', icon: 'business_center' },
                                 { label: '20+ Structured Presentations Across Semesters', icon: 'presenter' },
                                 { label: 'Six Sigma (Green Belt) Certification Included', icon: 'workspace_premium' },
                                 { label: 'Business Communication Training', icon: 'record_voice_over' },
@@ -765,14 +769,14 @@ export function PgdmMbaLandingPage(): React.JSX.Element {
                                 </div>
                                 <div className="mt-1 h-1 w-24 rounded-full bg-gradient-to-r from-cyan-400 to-sky-600" />
                                 <p className="mt-2 text-xs text-slate-700 sm:text-sm">
-                                    Choose from industry-relevant PGDM specializations aligned with job market demand:
+                                    Choose from industry-relevant PGDM specialisations aligned with job market demand:
                                 </p>
                             </div>
                             <p className="text-[11px] text-slate-500">Choose a focus area that aligns with your career goals.</p>
                         </div>
 
                         <div className="grid gap-2 grid-cols-1 xs:grid-cols-2 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3">
-                            {specializations.map((spec) => (
+                            {specialisations.map((spec) => (
                                 <div
                                     key={spec.label}
                                     className="group flex flex-col gap-2.5 rounded-2xl bg-white p-4 shadow-sm ring-1 ring-slate-200 transition-all duration-300 hover:-translate-y-1 hover:shadow-md"
@@ -840,7 +844,7 @@ export function PgdmMbaLandingPage(): React.JSX.Element {
                                 </span>
                                 <div>
                                     <h2 className="text-base sm:text-xl font-bold bg-gradient-to-r from-slate-900 to-sky-700 bg-clip-text text-transparent">
-                                        Program Features
+                                        Programme Features
                                     </h2>
                                     <p className="text-[11px] sm:text-xs font-medium text-slate-600">
                                         Skill development and corporate readiness
@@ -860,7 +864,7 @@ export function PgdmMbaLandingPage(): React.JSX.Element {
                                 {
                                     title: 'Industry Certifications',
                                     icon: 'workspace_premium',
-                                    desc: 'The program includes Six Sigma (Green Belt) certification and Advanced Excel training, which are highly valued in analytics, consulting, and operations roles.',
+                                    desc: 'The programme includes Six Sigma (Green Belt) certification and Advanced Excel training, which are highly valued in analytics, consulting, and operations roles.',
                                 },
                                 {
                                     title: 'Business Communication Training',
@@ -868,7 +872,7 @@ export function PgdmMbaLandingPage(): React.JSX.Element {
                                     desc: 'Students undergo basic and advanced business communication training, helping them excel in interviews, group discussions, and workplace communication.',
                                 },
                                 {
-                                    title: 'Corporate Connect Program',
+                                    title: 'Corporate Connect Programme',
                                     icon: 'business_center',
                                     desc: 'Through industry visits and corporate mentorship, students gain real exposure to business environments and interact with industry professionals.',
                                 },
@@ -911,7 +915,7 @@ export function PgdmMbaLandingPage(): React.JSX.Element {
                                 <div>
                                     <div className="text-base sm:text-xl font-bold">Placement Highlights</div>
                                     <div className="text-[11px] sm:text-xs opacity-80">
-                                        IMAS is recognized among the best MBA colleges in Kolkata with placement support
+                                        IMAS is recognised among the best MBA colleges in Kolkata with placement support
                                     </div>
                                 </div>
                             </div>
@@ -1038,7 +1042,7 @@ export function PgdmMbaLandingPage(): React.JSX.Element {
                     <div className="mt-4 flex max-w-full gap-3 overflow-x-auto pb-2 overscroll-x-contain snap-x snap-mandatory sm:mt-6 sm:grid sm:grid-cols-2 lg:grid-cols-4 sm:gap-4 sm:overflow-visible sm:snap-none">
                         {[
                             {
-                                quote: 'The program helped me build real analytics skills with tools and live projects.',
+                                quote: 'The programme helped me build real analytics skills with tools and live projects.',
                                 name: 'Anurag Jain',
                                 role: 'Data Analyst',
                                 batch: 'MBA / PGDM 2025',
@@ -1126,7 +1130,7 @@ export function PgdmMbaLandingPage(): React.JSX.Element {
 
                         {/* Enhanced description */}
                         <p className="relative text-sm sm:text-base opacity-95 max-w-3xl mb-8 leading-relaxed">
-                            Embark on transformative global journeys with our international immersion programs. 
+                            Embark on transformative global journeys with our international immersion programmes. 
                             Experience diverse cultures, build global networks, and gain invaluable cross-cultural 
                             perspectives through academic collaborations with world-renowned institutions.
                         </p>
@@ -1449,7 +1453,7 @@ export function PgdmMbaLandingPage(): React.JSX.Element {
 
                             <div className="mt-5 space-y-3">
                                 {[
-                                    'Bachelor\'s degree in any discipline from a recognized university',
+                                    'Bachelor\'s degree in any discipline from a recognised university',
                                     'Valid CAT / XAT / MAT score OR IMASAT test',
                                     'Group Discussion & Personal Interview',
                                 ].map((req) => (
@@ -1683,7 +1687,7 @@ export function PgdmMbaLandingPage(): React.JSX.Element {
                         <div className="relative flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
                             <div className="max-w-2xl">
                                 <h2 className="text-base sm:text-xl font-bold">Secure Your Seat in the Best PGDM College in Kolkata</h2>
-                                <p className="mt-1 text-xs sm:text-sm opacity-90">Admissions Open • Limited Seats • High Placement Programs</p>
+                                <p className="mt-1 text-xs sm:text-sm opacity-90">Admissions Open • Limited Seats • High Placement Programmes</p>
                             </div>
                             <div className="flex flex-col sm:flex-row gap-2">
                                 <a
@@ -1739,7 +1743,7 @@ export function PgdmMbaLandingPage(): React.JSX.Element {
                         {[
                             {
                                 q: 'What is the eligibility for the PGDM programme at IMAS?',
-                                a: 'Candidates must have a Bachelor\'s degree in any discipline from a recognized university. Valid CAT / XAT / MAT scores are required, or candidates may appear for the IMASAT admission test conducted by IMAS.',
+                                a: 'Candidates must have a Bachelor\'s degree in any discipline from a recognised university. Valid CAT / XAT / MAT scores are required, or candidates may appear for the IMASAT admission test conducted by IMAS.',
                             },
                             {
                                 q: 'Is the PGDM programme at IMAS AICTE approved?',
@@ -1751,10 +1755,10 @@ export function PgdmMbaLandingPage(): React.JSX.Element {
                             },
                             {
                                 q: 'Does IMAS offer internships during the programme?',
-                                a: 'Yes, internships are available from Year 1. The program is designed to give students early and sustained corporate exposure.',
+                                a: 'Yes, internships are available from Year 1. The programme is designed to give students early and sustained corporate exposure.',
                             },
                             {
-                                q: 'What specializations are available in the PGDM programme?',
+                                q: 'What specialisations are available in the PGDM programme?',
                                 a: 'Students can choose from Marketing, Finance, Human Resource, Logistics & Supply Chain Management, and Hospital Management & Healthcare Administration. Add-on certifications in Business Analytics, Fintech, and AI & Data Science are also available.',
                             },
                             {

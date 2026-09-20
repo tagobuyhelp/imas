@@ -46,7 +46,7 @@ export function PlacementsHeroSection() {
             </div>
             <h1 className="text-3xl md:text-5xl font-bold mb-4 leading-tight">Industry-Aligned Careers for Future Business Leaders</h1>
             <p className="text-base md:text-lg text-gray-200 max-w-2xl leading-relaxed">
-              Programs designed with strong industry employability, corporate partnerships, internships, and career development training.
+              Programmes designed with strong industry employability, corporate partnerships, internships, and career development training.
             </p>
             <div className="mt-6 grid grid-cols-2 md:grid-cols-4 gap-3 max-w-xl">
               <div className="rounded-2xl bg-white/10 px-4 py-3 text-center ring-1 ring-white/20">
@@ -73,7 +73,7 @@ export function PlacementsHeroSection() {
               </Button>
               <a href="/programs">
                 <Button variant="outline" className="border-white/60 text-black hover:bg-white/10 ">
-                  View Programs
+                  View Programmes
                 </Button>
               </a>
             </div>

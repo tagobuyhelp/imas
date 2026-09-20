@@ -118,7 +118,7 @@ export function ContactPage(): React.JSX.Element {
               <div>
                 <h2 className="text-3xl font-bold text-gray-900 mb-6">Get in Touch</h2>
                 <p className="text-lg text-gray-600 mb-8">
-                  Ready to transform your career? Contact us today to learn more about our programs and admission process.
+                  Ready to transform your career? Contact us today to learn more about our programmes and admission process.
                 </p>
               </div>
 
@@ -358,7 +358,7 @@ export function ContactPage(): React.JSX.Element {
               className="bg-white text-[#143674] hover:bg-gray-100 px-8 py-3 text-lg font-semibold transition-all duration-300 hover:scale-105 shadow-lg"
             >
               <BookOpen className="mr-2 h-5 w-5" />
-              Explore Programs
+              Explore Programmes
             </Button>
 
             <Button

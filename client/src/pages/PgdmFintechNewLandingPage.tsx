@@ -93,7 +93,7 @@ export function PgdmFintechNewLandingPage(): React.JSX.Element {
     { q: 'What is the highest package offered?', a: 'The highest package goes up to ₹18.00 LPA.' },
     { q: 'Is Fintech a good career option?', a: 'Yes, fintech is one of the fastest-growing and high-paying sectors globally.' },
     { q: 'Does IMAS provide tools training?', a: 'Yes, students are trained in financial analytics tools, Excel, and fintech systems.' },
-    { q: 'Is this program suitable for working professionals?', a: 'Yes, with flexible timing and hybrid learning options.' },
+    { q: 'Is this programme suitable for working professionals?', a: 'Yes, with flexible timing and hybrid learning options.' },
     { q: 'Does IMAS provide hostel facilities?', a: 'Yes, for both boys and girls.' },
     { q: 'Are scholarships available?', a: 'Yes, merit-based and government schemes are available.' },
     { q: 'Is PGDM Fintech better than MBA Finance?', a: 'It is more industry-focused with integration of finance and technology.' },
@@ -103,7 +103,7 @@ export function PgdmFintechNewLandingPage(): React.JSX.Element {
     <div className="min-h-screen bg-gradient-to-b from-slate-50 via-slate-50 to-slate-100 text-slate-900 scroll-smooth">
       <Helmet>
         <title>PGDM in Fintech | Best Fintech College in Kolkata | IMAS</title>
-        <meta name="description" content="PGDM in Fintech at IMAS Kolkata. AICTE Approved. Best Fintech PGDM program in Eastern India. ₹18 LPA Highest Package." />
+        <meta name="description" content="PGDM in Fintech at IMAS Kolkata. AICTE Approved. Best Fintech PGDM programme in Eastern India. ₹18 LPA Highest Package." />
         <link rel="canonical" href={canonicalUrl} />
         <meta property="og:title" content="PGDM in Fintech | IMAS Kolkata" />
         <meta property="og:description" content="Build a High-Paying Career in Finance, Fintech & Digital Banking." />
@@ -142,12 +142,14 @@ export function PgdmFintechNewLandingPage(): React.JSX.Element {
       <header className="sticky top-0 z-40 border-b border-white/10 bg-slate-900/80 backdrop-blur shadow-lg">
         <div className="mx-auto flex max-w-[1550px] items-center justify-between px-4 py-3">
           <div className="flex items-center gap-2">
-            <img src="/uploads/logos/imas.png" alt="IMAS International Management & Analytics School" className="h-10 w-auto xl:h-12" />
+            <a href="/" className="inline-block hover:opacity-90 transition-opacity">
+              <img src="/uploads/logos/imas.png" alt="IMAS International Management & Analytics School" className="h-10 w-auto xl:h-12" />
+            </a>
           </div>
           <nav className="hidden items-center gap-5 text-sm text-slate-200 lg:flex">
             {[
-              { href: '#about-program', icon: BookOpen, label: 'Overview' },
-              { href: '#program-structure', icon: Layers, label: 'Structure' },
+              { href: '#about-programme', icon: BookOpen, label: 'Overview' },
+              { href: '#programme-structure', icon: Layers, label: 'Structure' },
               { href: '#global', icon: Globe, label: 'Global' },
               { href: '#placements', icon: Briefcase, label: 'Placements' },
               { href: '#admissions-2026', icon: CheckCircle, label: 'Admissions' },
@@ -176,8 +178,8 @@ export function PgdmFintechNewLandingPage(): React.JSX.Element {
         <div className={`overflow-hidden border-t border-white/10 bg-slate-900 shadow-xl transition-all duration-300 ease-in-out lg:hidden ${mobileMenuOpen ? 'max-h-[500px] opacity-100' : 'max-h-0 opacity-0'}`}>
           <nav className="flex flex-col space-y-1 px-4 py-4 text-sm text-slate-200">
             {[
-              { href: '#about-program', icon: BookOpen, label: 'Overview' },
-              { href: '#program-structure', icon: Layers, label: 'Structure' },
+              { href: '#about-programme', icon: BookOpen, label: 'Overview' },
+              { href: '#programme-structure', icon: Layers, label: 'Structure' },
               { href: '#global', icon: Globe, label: 'Global Exposure' },
               { href: '#placements', icon: Briefcase, label: 'Placements' },
               { href: '#campus-facilities', icon: Building2, label: 'Campus & Facilities' },
@@ -209,7 +211,7 @@ export function PgdmFintechNewLandingPage(): React.JSX.Element {
             <div className="flex-1 md:col-span-8 space-y-1.5 sm:space-y-4">
               <div className="inline-flex items-center gap-1.5 sm:gap-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 px-2.5 py-0.5 sm:px-3 sm:py-1 text-[11px] sm:text-xs font-medium text-white shadow-sm">
                 <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-green-400 rounded-full animate-pulse" />
-                <span>AICTE Approved PGDM Program</span>
+                <span>AICTE Approved PGDM Programme</span>
               </div>
 
               <div className="space-y-1.5 sm:space-y-4">
@@ -218,7 +220,7 @@ export function PgdmFintechNewLandingPage(): React.JSX.Element {
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-300 via-sky-200 to-white">Finance, Fintech & Digital Banking.</span>
                 </h1>
                 <p className="text-[10px] sm:text-lg lg:text-xl font-medium text-sky-100/90 drop-shadow max-w-full sm:max-w-3xl leading-tight sm:leading-relaxed">
-                  Looking for a <span className="text-white font-bold">PGDM in Fintech</span> in Kolkata? IMAS offers one of the best PGDM Fintech programs in Eastern India with Placement & Industry Exposure, designed for students and working professionals.
+                  Looking for a <span className="text-white font-bold">PGDM in Fintech</span> in Kolkata? IMAS offers one of the best PGDM Fintech programmes in Eastern India with Placement & Industry Exposure, designed for students and working professionals.
                 </p>
                 <div className="flex items-center gap-1 sm:gap-1.5 text-[10px] sm:text-xs font-semibold text-white mt-1 sm:mt-2" aria-label="Student rating">
                   {[...Array(5)].map((_, i) => (
@@ -345,7 +347,7 @@ export function PgdmFintechNewLandingPage(): React.JSX.Element {
       </section>
 
       {/* --- ABOUT --- */}
-      <section id="about-program" className="relative border-b border-slate-200 bg-slate-50 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]">
+      <section id="about-programme" className="relative border-b border-slate-200 bg-slate-50 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:24px_24px]">
         <div data-animate-on-scroll className="mx-auto max-w-[1550px] px-4 py-5 sm:py-6">
           <div className="grid gap-6 md:grid-cols-2 items-center">
             <div className="order-2 md:order-1 relative h-[250px] sm:h-[400px] overflow-hidden rounded-3xl shadow-xl ring-1 ring-slate-200">
@@ -396,7 +398,7 @@ export function PgdmFintechNewLandingPage(): React.JSX.Element {
           <div className="flex flex-col gap-1 mb-6 text-center sm:text-left">
             <span className="text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-sky-600">What You Will Learn</span>
             <h2 className="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
-              Program <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-600 to-blue-800">Structure</span>
+              Programme <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-600 to-blue-800">Structure</span>
             </h2>
             <p className="text-sm sm:text-base font-medium text-slate-600 mt-1">Integrates finance concepts with modern technology, preparing students for roles in the evolving financial ecosystem.</p>
             <div className="mx-auto sm:mx-0 mt-4 h-1.5 w-24 rounded-full bg-gradient-to-r from-cyan-400 via-sky-500 to-blue-600 shadow-sm" />
@@ -438,7 +440,7 @@ export function PgdmFintechNewLandingPage(): React.JSX.Element {
             <div className="space-y-4">
                <div className="flex items-center gap-3 pb-2 border-b-2 border-slate-100">
                   <div className="bg-gradient-to-br from-[#0b1c3a] to-[#143674] text-white h-10 w-10 rounded-full flex items-center justify-center font-bold text-lg">2</div>
-                  <h3 className="text-xl font-bold text-slate-800">Year 2 – Fintech Specialization</h3>
+                  <h3 className="text-xl font-bold text-slate-800">Year 2 – Fintech Specialisation</h3>
                </div>
                
                <div className="grid sm:grid-cols-2 gap-4">
@@ -498,7 +500,7 @@ export function PgdmFintechNewLandingPage(): React.JSX.Element {
 
                {/* PROGRAM FEATURES */}
                <div className="rounded-3xl bg-white p-6 shadow-sm ring-1 ring-slate-200">
-                  <h3 className="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2"><Award className="text-amber-500 w-6 h-6" /> Program Features</h3>
+                  <h3 className="text-xl font-bold text-slate-900 mb-4 flex items-center gap-2"><Award className="text-amber-500 w-6 h-6" /> Programme Features</h3>
                   <div className="grid sm:grid-cols-2 gap-4">
                      {[
                         '20+ Presentations for communication & leadership',
@@ -623,7 +625,7 @@ export function PgdmFintechNewLandingPage(): React.JSX.Element {
                   <div className="flex flex-nowrap gap-4 overflow-x-auto pb-6 -mx-4 px-4 md:mx-0 md:px-0 scrollbar-hide snap-x snap-mandatory md:flex-col md:space-y-4 md:overflow-x-visible md:pb-0">
                      <div className="min-w-[300px] md:min-w-0 snap-start bg-white/5 border border-white/10 rounded-2xl p-5 backdrop-blur-sm transition-all duration-300 hover:bg-white/10 hover:-translate-y-1">
                         <Quote className="text-white/20 w-8 h-8 mb-3" />
-                        <p className="text-sm text-slate-200 italic mb-4">"The program helped me build real analytics skills with tools and projects."</p>
+                        <p className="text-sm text-slate-200 italic mb-4">"The programme helped me build real analytics skills with tools and projects."</p>
                         <div className="flex items-center gap-3">
                            <div className="w-10 h-10 rounded-full bg-gradient-to-br from-cyan-400 to-blue-500 flex items-center justify-center text-white font-bold">AJ</div>
                            <div>
@@ -654,7 +656,7 @@ export function PgdmFintechNewLandingPage(): React.JSX.Element {
                   <div className="flex flex-nowrap gap-4 overflow-x-auto pb-6 -mx-4 px-4 md:mx-0 md:px-0 scrollbar-hide snap-x snap-mandatory md:flex-col md:space-y-4 md:overflow-x-visible md:pb-0">
                      <div className="min-w-[300px] md:min-w-0 snap-start bg-white/5 border border-white/10 rounded-2xl p-5 backdrop-blur-sm transition-all duration-300 hover:bg-white/10 hover:-translate-y-1">
                         <Quote className="text-white/20 w-8 h-8 mb-3" />
-                        <p className="text-sm text-slate-200 italic mb-4">"IMAS students demonstrate excellent adaptability, professionalism, and business understanding, reflecting strong institutional focus on corporate grooming and placement readiness programs."</p>
+                        <p className="text-sm text-slate-200 italic mb-4">"IMAS students demonstrate excellent adaptability, professionalism, and business understanding, reflecting strong institutional focus on corporate grooming and placement readiness programmes."</p>
                         <div className="flex items-center gap-3">
                            <div className="w-10 h-10 rounded-full bg-slate-700 flex items-center justify-center text-white font-bold"><Building2 className="w-5 h-5" /></div>
                            <div>
@@ -666,7 +668,7 @@ export function PgdmFintechNewLandingPage(): React.JSX.Element {
 
                      <div className="min-w-[300px] md:min-w-0 snap-start bg-white/5 border border-white/10 rounded-2xl p-5 backdrop-blur-sm transition-all duration-300 hover:bg-white/10 hover:-translate-y-1">
                         <Quote className="text-white/20 w-8 h-8 mb-3" />
-                        <p className="text-sm text-slate-200 italic mb-4">"Experiential learning at IMAS, including industry immersion programs, provides practical exposure and deep operational insights, enhancing overall student competency significantly."</p>
+                        <p className="text-sm text-slate-200 italic mb-4">"Experiential learning at IMAS, including industry immersion programmes, provides practical exposure and deep operational insights, enhancing overall student competency significantly."</p>
                         <div className="flex items-center gap-3">
                            <div className="w-10 h-10 rounded-full bg-slate-700 flex items-center justify-center text-white font-bold"><Building2 className="w-5 h-5" /></div>
                            <div>
@@ -689,7 +691,7 @@ export function PgdmFintechNewLandingPage(): React.JSX.Element {
                   <Globe className="w-8 h-8" />
                </div>
                <h2 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-3">International Immersion Programmes</h2>
-               <p className="text-sm text-slate-600">Gain global exposure through international immersion programs and academic collaborations with leading global institutions.</p>
+               <p className="text-sm text-slate-600">Gain global exposure through international immersion programmes and academic collaborations with leading global institutions.</p>
             </div>
 
             <div className="flex flex-nowrap gap-4 overflow-x-auto pb-6 -mx-4 px-4 sm:mx-0 sm:px-0 scrollbar-hide snap-x snap-mandatory sm:grid sm:grid-cols-2 md:grid-cols-3 sm:overflow-x-visible sm:pb-0">
@@ -893,7 +895,7 @@ export function PgdmFintechNewLandingPage(): React.JSX.Element {
             </span>
             <div>
               <h2 className="text-base sm:text-2xl font-bold bg-gradient-to-r from-slate-900 to-sky-700 bg-clip-text text-transparent">FAQ</h2>
-              <p className="text-[11px] sm:text-xs font-medium text-slate-600">Quick answers about PGDM Fintech Program</p>
+              <p className="text-[11px] sm:text-xs font-medium text-slate-600">Quick answers about PGDM Fintech Programme</p>
             </div>
           </div>
           <div className="mt-3 h-1 w-28 rounded-full bg-gradient-to-r from-cyan-400 to-sky-600" />

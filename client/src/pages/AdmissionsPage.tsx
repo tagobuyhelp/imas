@@ -33,8 +33,8 @@ interface AdmissionFormData {
     country: string;
   };
   
-  // Program Information
-  program: string;
+  // Programme Information
+  programme: string;
   preferredBatch: '2026-2028' | '2027-2029';
   
   // Educational Background
@@ -83,7 +83,7 @@ export function AdmissionsPage(): React.JSX.Element {
       pincode: '',
       country: 'India'
     },
-    program: '',
+    programme: '',
     preferredBatch: '2026-2028',
     education: {
       graduation: {
@@ -201,9 +201,9 @@ export function AdmissionsPage(): React.JSX.Element {
       errors['address.pincode'] = 'Please enter a valid pincode';
     }
 
-    // Program Information
-    if (!formData.program) {
-      errors['program'] = 'Please select a program';
+    // Programme Information
+    if (!formData.programme) {
+      errors['programme'] = 'Please select a programme';
     }
 
     if (!formData.preferredBatch) {
@@ -257,7 +257,7 @@ export function AdmissionsPage(): React.JSX.Element {
       formData_submit.append('alternatePhone', formData.alternatePhone || '');
       formData_submit.append('dateOfBirth', formData.dateOfBirth);
       formData_submit.append('gender', formData.gender);
-      formData_submit.append('program', formData.program);
+      formData_submit.append('programme', formData.programme);
       formData_submit.append('preferredBatch', formData.preferredBatch);
       
       // Address fields
@@ -292,7 +292,7 @@ export function AdmissionsPage(): React.JSX.Element {
       
       // FormSubmit.co configuration
       formData_submit.append('_replyto', formData.email);
-      formData_submit.append('_subject', `Admission Application: ${formData.name} - ${formData.program}`);
+      formData_submit.append('_subject', `Admission Application: ${formData.name} - ${formData.programme}`);
       formData_submit.append('_captcha', 'false');
       formData_submit.append('_template', 'table');
       
@@ -329,7 +329,7 @@ export function AdmissionsPage(): React.JSX.Element {
           pincode: '',
           country: ''
         },
-        program: '',
+        programme: '',
         preferredBatch: '2026-2028',
         education: {
           graduation: {
@@ -380,11 +380,11 @@ export function AdmissionsPage(): React.JSX.Element {
   return (
     <>
       <Helmet>
-        <title>Admissions - Apply to IMAS Business School | PGDM Programs</title>
-        <meta name="description" content="Apply to IMAS - India's leading business school. Join our PGDM programs with 97% placement rate and excellent career outcomes. Start your application today." />
+        <title>Admissions - Apply to IMAS Business School | PGDM Programmes</title>
+        <meta name="description" content="Apply to IMAS - India's leading business school. Join our PGDM programmes with 97% placement rate and excellent career outcomes. Start your application today." />
         <meta name="keywords" content="IMAS admissions, PGDM application, business school admission, MBA application, management courses" />
         <meta property="og:title" content="Admissions - Apply to IMAS Business School" />
-        <meta property="og:description" content="Transform your career with IMAS. Apply now for our industry-leading PGDM programs." />
+        <meta property="og:description" content="Transform your career with IMAS. Apply now for our industry-leading PGDM programmes." />
         <meta property="og:type" content="website" />
         <link rel="canonical" href="https://imas.ac.in/admissions" />
       </Helmet>
@@ -415,7 +415,7 @@ export function AdmissionsPage(): React.JSX.Element {
                 </h1>
 
                 <p className="text-base sm:text-lg lg:text-xl mb-6 opacity-95 leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-                  Join India's leading business school and unlock your potential with our industry-focused PGDM programs
+                  Join India's leading business school and unlock your potential with our industry-focused PGDM programmes
                 </p>
 
                 {/* Key Highlights Carousel */}
@@ -429,7 +429,7 @@ export function AdmissionsPage(): React.JSX.Element {
                         ₹25L Average Package
                       </span>
                       <span className={`border ${IMAS_TAILWIND_CLASSES.BORDER_MEDIUM_BLUE} ${IMAS_TAILWIND_CLASSES.TEXT_MEDIUM_BLUE} px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-semibold flex-shrink-0 bg-white/10`}>
-                        AICTE Approved Programs
+                        AICTE Approved Programmes
                       </span>
                       <span className={`border ${IMAS_TAILWIND_CLASSES.BORDER_MEDIUM_BLUE} ${IMAS_TAILWIND_CLASSES.TEXT_MEDIUM_BLUE} px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-semibold flex-shrink-0 bg-white/10`}>
                         Industry Expert Faculty
@@ -480,7 +480,7 @@ export function AdmissionsPage(): React.JSX.Element {
                   <div className="border-b border-gray-200 pb-3">
                     <p className="text-gray-500 text-xs">IMAS 2026</p>
                     <h2 className="text-lg font-bold text-gray-800 leading-tight mt-1">
-                      Admissions Open for PGDM Programs
+                      Admissions Open for PGDM Programmes
                     </h2>
                   </div>
 
@@ -1022,23 +1022,23 @@ export function AdmissionsPage(): React.JSX.Element {
                           </div>
                         </div>
 
-                        {/* Program Information */}
+                        {/* Programme Information */}
                         <div className="space-y-4">
-                          <h3 className="text-lg font-semibold text-gray-800">Program Information</h3>
+                          <h3 className="text-lg font-semibold text-gray-800">Programme Information</h3>
                           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                             <div>
                               <label className="block text-sm font-semibold text-gray-700 mb-2">
-                                Program *
+                                Programme *
                               </label>
                               <div className="relative">
-                                <GraduationCap className={`absolute left-3 top-3 h-5 w-5 z-10 transition-colors duration-200 ${formErrors['program'] ? 'text-red-400' : formData.program ? 'text-[#143674]' : 'text-gray-400'}`} />
+                                <GraduationCap className={`absolute left-3 top-3 h-5 w-5 z-10 transition-colors duration-200 ${formErrors['programme'] ? 'text-red-400' : formData.programme ? 'text-[#143674]' : 'text-gray-400'}`} />
                                 <select
-                                  name="program"
-                                  value={formData.program}
+                                  name="programme"
+                                  value={formData.programme}
                                   onChange={handleInputChange}
-                                  className={`w-full pl-10 pr-10 py-3 border rounded-xl focus:ring-2 focus:border-transparent appearance-none bg-white transition-all duration-200 cursor-pointer ${formErrors['program']
+                                  className={`w-full pl-10 pr-10 py-3 border rounded-xl focus:ring-2 focus:border-transparent appearance-none bg-white transition-all duration-200 cursor-pointer ${formErrors['programme']
                                       ? 'border-red-300 focus:ring-red-200 bg-red-50/50'
-                                      : formData.program
+                                      : formData.programme
                                         ? 'border-[#143674] focus:ring-[#143674]/20'
                                         : 'border-gray-300 focus:ring-[#143674]/20'
                                     }`}
@@ -1052,12 +1052,12 @@ export function AdmissionsPage(): React.JSX.Element {
                                   ))}
                                 </select>
                                 <div className="absolute inset-y-0 right-0 flex items-center pr-3 pointer-events-none">
-                                  <ArrowRight className={`h-4 w-4 rotate-90 transition-colors duration-200 ${formErrors['program'] ? 'text-red-400' : 'text-gray-400'}`} />
+                                  <ArrowRight className={`h-4 w-4 rotate-90 transition-colors duration-200 ${formErrors['programme'] ? 'text-red-400' : 'text-gray-400'}`} />
                                 </div>
-                                {formErrors['program'] && (
+                                {formErrors['programme'] && (
                                   <p className="mt-1 text-sm text-red-600 flex items-center gap-1">
                                     <span className="w-1 h-1 bg-red-600 rounded-full"></span>
-                                    {formErrors['program']}
+                                    {formErrors['programme']}
                                   </p>
                                 )}
                               </div>
@@ -1251,7 +1251,7 @@ export function AdmissionsPage(): React.JSX.Element {
                             </div>
                             <div>
                               <h3 className="text-lg font-semibold text-gray-800 mb-1 group-hover:text-[#143674] transition-colors">AICTE Approved</h3>
-                              <p className="text-gray-600 text-sm leading-relaxed">Recognized programs with industry-relevant curriculum and government accreditation</p>
+                              <p className="text-gray-600 text-sm leading-relaxed">Recognised programmes with industry-relevant curriculum and government accreditation</p>
                             </div>
                           </div>
 
@@ -1281,7 +1281,7 @@ export function AdmissionsPage(): React.JSX.Element {
                             </div>
                             <div>
                               <h3 className="text-lg font-semibold text-gray-800 mb-1 group-hover:text-[#143674] transition-colors">Global Exposure</h3>
-                              <p className="text-gray-600 text-sm leading-relaxed">International partnerships, exchange programs, and global business perspectives</p>
+                              <p className="text-gray-600 text-sm leading-relaxed">International partnerships, exchange programmes, and global business perspectives</p>
                             </div>
                           </div>
                         </div>

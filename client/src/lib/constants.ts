@@ -33,11 +33,11 @@ export const IMAS_SOCIAL = {
     FACEBOOK: 'https://www.facebook.com/imasbschoolindia/',
     INSTAGRAM: 'https://www.instagram.com/imasbschool/',
     LINKEDIN: 'https://www.linkedin.com/company/imasbschool/',
-    YOUTUBE: '#',
+    YOUTUBE: 'https://www.youtube.com/@IMASBSchool',
     TWITTER: '#',
 } as const;
 
-// IMAS Programs
+// IMAS Programmes
 export const IMAS_PROGRAMS = {
     REGULAR: [
         'Post Graduate Diploma in Management (PGDM)',
@@ -45,10 +45,10 @@ export const IMAS_PROGRAMS = {
         'PGDM in Business Analytics Kolkata',
         'PGDM in Artificial Intelligence & Data Science',
         'PGDM in Fintech',
-        'PGDM in Innovation, Entrepreneurship & Venture Development (IEV)',
+        'PGDM in Logistics & Supply Chain Management',
     ],
     EXECUTIVE: [
-        'PGDM in Hospital & Healthcare Administration',
+        'PGDM in Hospital Administration & Healthcare Management',
         'PGDM in Business Analytics (PGDM-BA)',
         'PGDM in AI & Data Science',
         'PGDM in Fintech',

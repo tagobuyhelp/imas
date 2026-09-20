@@ -23,7 +23,7 @@ export const faqData: FAQSection[] = [
     id: 'degree-certification',
     title: 'Degree & Certification',
     icon: CheckCircle,
-    description: 'Information about degrees and certifications for all IMAS programs',
+    description: 'Information about degrees and certifications for all IMAS programmes',
     items: [
       // MBA Global
       {
@@ -33,19 +33,19 @@ export const faqData: FAQSection[] = [
         popular: true,
       },
       {
-        question: 'Is the MBA Global degree recognized internationally?',
+        question: 'Is the MBA Global degree recognised internationally?',
         answer:
-          'Yes, the MBA Global program offers a UK pathway, ensuring international recognition of your MBA degree.',
+          'Yes, the MBA Global programme offers a UK pathway, ensuring international recognition of your MBA degree.',
       },
       {
         question: 'What is the duration of the MBA Global program?',
         answer:
-          'The MBA Global program spans two years, with the initial year completed at IMAS Kolkata and the subsequent year at a partner UK university.',
+          'The MBA Global programme spans two years, with the initial year completed at IMAS Kolkata and the subsequent year at a partner UK university.',
       },
       {
         question: 'Are there any prerequisites to enroll in MBA Global?',
         answer:
-          'Applicants must have completed their graduation with 70% or above. Specific eligibility criteria can be found in the program brochure.',
+          'Applicants must have completed their graduation with 70% or above. Specific eligibility criteria can be found in the programme brochure.',
       },
       {
         question: 'Can I obtain a digital copy of my certificate for MBA Global?',
@@ -59,19 +59,19 @@ export const faqData: FAQSection[] = [
           'Graduates receive a Post Graduate Diploma in Management (PGDM) from IMAS, which is AICTE-approved in India.',
       },
       {
-        question: 'Is the PGDM Executive degree recognized internationally?',
+        question: 'Is the PGDM Executive degree recognised internationally?',
         answer:
-          'While the PGDM is AICTE-approved in India, the program does not explicitly mention international recognition.',
+          'While the PGDM is AICTE-approved in India, the programme does not explicitly mention international recognition.',
       },
       {
         question: 'What is the duration of the PGDM Executive program?',
         answer:
-          'The PGDM Executive program spans two years, designed to accommodate the schedules of working professionals.',
+          'The PGDM Executive programme spans two years, designed to accommodate the schedules of working professionals.',
       },
       {
         question: 'Are there any prerequisites to enroll in PGDM Executive?',
         answer:
-          'Applicants must have completed their graduation. Specific eligibility criteria can be found in the program brochure.',
+          'Applicants must have completed their graduation. Specific eligibility criteria can be found in the programme brochure.',
       },
       {
         question: 'Can I obtain a digital copy of my certificate for PGDM Executive?',
@@ -85,19 +85,19 @@ export const faqData: FAQSection[] = [
           'Graduates receive a Post Graduate Diploma in Management (PGDM) from IMAS, which is AICTE-approved in India.',
       },
       {
-        question: 'Is the PGDM Regular degree recognized internationally?',
+        question: 'Is the PGDM Regular degree recognised internationally?',
         answer:
-          'The PGDM is AICTE-approved in India. While the program does not explicitly mention international recognition.',
+          'The PGDM is AICTE-approved in India. While the programme does not explicitly mention international recognition.',
       },
       {
         question: 'What is the duration of the PGDM Regular program?',
         answer:
-          'The PGDM Regular program spans two years, designed to provide a comprehensive management education.',
+          'The PGDM Regular programme spans two years, designed to provide a comprehensive management education.',
       },
       {
         question: 'Are there any prerequisites to enroll in PGDM Regular?',
         answer:
-          'Applicants must have completed their graduation with at least 50% aggregate marks. Specific eligibility criteria can be found in the program brochure.',
+          'Applicants must have completed their graduation with at least 50% aggregate marks. Specific eligibility criteria can be found in the programme brochure.',
       },
       {
         question: 'Can I obtain a digital copy of my certificate for PGDM Regular?',
@@ -115,79 +115,79 @@ export const faqData: FAQSection[] = [
       {
         question: 'Who is eligible to apply for the MBA Global program?',
         answer:
-          'Graduates from any discipline are eligible. For detailed eligibility criteria, please refer to the program brochure.',
+          'Graduates from any discipline are eligible. For detailed eligibility criteria, please refer to the programme brochure.',
         popular: true,
       },
       {
         question: 'Is prior work experience required for MBA Global?',
         answer:
-          'The program does not explicitly mention a requirement for work experience. However, applicants with relevant experience may find the program beneficial.',
+          'The programme does not explicitly mention a requirement for work experience. However, applicants with relevant experience may find the programme beneficial.',
       },
       {
         question: 'What is the minimum educational qualification for MBA Global?',
         answer:
-          'A graduate degree with 70% aggregate marks from a recognized institution is required.',
+          'A graduate degree with 70% aggregate marks from a recognised institution is required.',
       },
       {
         question: 'Are there any age restrictions for MBA Global?',
-        answer: 'The program does not specify any age restrictions.',
+        answer: 'The programme does not specify any age restrictions.',
       },
       {
         question: 'Can international students apply for MBA Global?',
         answer:
-          'Yes, the program is open to international students, especially with the UK pathway option.',
+          'Yes, the programme is open to international students, especially with the UK pathway option.',
       },
 
       // PGDM Executive
       {
         question: 'Who is eligible to apply for the PGDM Executive program?',
         answer:
-          'Graduates from any discipline with work experience are eligible. For detailed eligibility criteria, please refer to the program brochure.',
+          'Graduates from any discipline with work experience are eligible. For detailed eligibility criteria, please refer to the programme brochure.',
         popular: true,
       },
       {
         question: 'Is prior work experience required for PGDM Executive?',
-        answer: 'Yes, the program requires 2–3 years of professional work experience.',
+        answer: 'Yes, the programme requires 2–3 years of professional work experience.',
       },
       {
         question: 'What is the minimum educational qualification for PGDM Executive?',
         answer:
-          'A graduate degree with at least 50% aggregate marks from a recognized institution is required.',
+          'A graduate degree with at least 50% aggregate marks from a recognised institution is required.',
       },
       {
         question: 'Are there any age restrictions for PGDM Executive?',
-        answer: 'The program does not specify any age restrictions.',
+        answer: 'The programme does not specify any age restrictions.',
       },
       {
         question: 'Can international students apply for PGDM Executive?',
         answer:
-          'Yes, the program is open to international students, provided they possess a student visa for studying in India.',
+          'Yes, the programme is open to international students, provided they possess a student visa for studying in India.',
       },
 
       // PGDM Regular
       {
         question: 'Who is eligible to apply for the PGDM Regular program?',
         answer:
-          'Graduates from any discipline are eligible. For detailed eligibility criteria, please refer to the program brochure.',
+          'Graduates from any discipline are eligible. For detailed eligibility criteria, please refer to the programme brochure.',
       },
       {
         question: 'Is prior work experience required for PGDM Regular?',
         answer:
-          'The program does not explicitly mention a requirement for work experience. However, applicants with relevant experience may find the program beneficial.',
+          'The programme does not explicitly mention a requirement for work experience. However, applicants with relevant experience may find the programme beneficial.',
       },
       {
         question: 'What is the minimum educational qualification for PGDM Regular?',
         answer:
-          'A graduate degree with at least 50% aggregate marks from a recognized institution is required.',
+          'A graduate degree with at least 50% aggregate marks from a recognised institution is required.',
       },
       {
         question: 'Are there any age restrictions for PGDM Regular?',
-        answer: 'The program does not specify any age restrictions.',
+        answer: 'The programme does not specify any age restrictions.',
       },
       {
         question: 'Can international students apply for PGDM Regular?',
         answer:
-          'Yes, the program is open to international students, provided they possess a student visa for studying in India.',
+          'Yes, the programme is open to international students, provided they possess a student visa for studying in India.',
       },
     ],
   },
@@ -197,17 +197,17 @@ export const faqData: FAQSection[] = [
     icon: Clock,
     description: 'Application timeline and procedures',
     items: [
-      // Common process for all programs
+      // Common process for all programmes
       {
-        question: 'How can I apply for IMAS programs?',
+        question: 'How can I apply for IMAS programmes?',
         answer:
-          'Applications can be submitted online through the official IMAS website for all programs (MBA Global, PGDM Executive, and PGDM Regular).',
+          'Applications can be submitted online through the official IMAS website for all programmes (MBA Global, PGDM Executive, and PGDM Regular).',
         popular: true,
       },
       {
         question: 'Is there an online application form?',
         answer:
-          'Yes, the application form is available on the IMAS website for all programs.',
+          'Yes, the application form is available on the IMAS website for all programmes.',
       },
       {
         question: 'What documents are required for application?',
@@ -217,7 +217,7 @@ export const faqData: FAQSection[] = [
       {
         question: 'Is there an application fee?',
         answer:
-          'Yes, there is an application fee of ₹500 to apply for all IMAS programs.',
+          'Yes, there is an application fee of ₹500 to apply for all IMAS programmes.',
       },
       {
         question: 'How long does it take to process my application?',
@@ -235,19 +235,19 @@ export const faqData: FAQSection[] = [
       {
         question: 'Why choose IMAS Kolkata for your management education?',
         answer:
-          'IMAS Kolkata is a premier business school offering AICTE-approved PGDM programs with 100% placement rate, ₹18.5 LPA highest package, and ₹8–12 LPA average package. We provide industry-focused curriculum, international exposure, state-of-the-art facilities, and strong industry partnerships with top companies for guaranteed career success.',
+          'IMAS Kolkata is a premier business school offering AICTE-approved PGDM programmes with 100% placement rate, ₹18.5 LPA highest package, and ₹8–12 LPA average package. We provide industry-focused curriculum, international exposure, state-of-the-art facilities, and strong industry partnerships with top companies for guaranteed career success.',
         popular: true,
       },
       {
         question: 'What are the placement statistics at IMAS Kolkata?',
         answer:
-          'IMAS Kolkata boasts 100% placement rate with ₹18.5 LPA highest package and ₹8–12 LPA average package. Over 2575+ students have been empowered through our programs. Our graduates work with top companies like TCS, Wipro, Infosys, HDFC Bank, ICICI Bank, and leading startups.',
+          'IMAS Kolkata boasts 100% placement rate with ₹18.5 LPA highest package and ₹8–12 LPA average package. Over 2575+ students have been empowered through our programmes. Our graduates work with top companies like TCS, Wipro, Infosys, HDFC Bank, ICICI Bank, and leading startups.',
         popular: true,
       },
       {
         question: 'What makes IMAS different from other business schools?',
         answer:
-          'IMAS stands out with its industry-focused curriculum, 100% placement guarantee, international immersion programs, state-of-the-art campus facilities, experienced faculty from IIMs and top institutions, strong industry partnerships, and comprehensive skill development programs including soft skills, leadership, and entrepreneurship training.',
+          'IMAS stands out with its industry-focused curriculum, 100% placement guarantee, international immersion programmes, state-of-the-art campus facilities, experienced faculty from IIMs and top institutions, strong industry partnerships, and comprehensive skill development programmes including soft skills, leadership, and entrepreneurship training.',
       },
     ],
   },
@@ -325,7 +325,7 @@ export function FAQ({ className = '' }: FAQProps) {
             <span className={`block ${IMAS_TAILWIND_CLASSES.TEXT_TEAL}`}>We Have Answers</span>
           </h2>
           <p className="text-base lg:text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Find answers to the most commonly asked questions about IMAS programs, admissions, and campus life
+            Find answers to the most commonly asked questions about IMAS programmes, admissions, and campus life
           </p>
         </div>
 

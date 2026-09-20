@@ -17,7 +17,7 @@ export function PlacementsInternshipAndTrainingSection() {
     'Mock interviews and group discussions',
     'Corporate communication training',
     'Industry expert sessions and guest lectures',
-    'Professional certification programs'
+    'Professional certification programmes'
   ];
 
   const placementProcess = [
@@ -44,7 +44,7 @@ export function PlacementsInternshipAndTrainingSection() {
             <CardHeader className="pb-2">
               <div className="flex items-center gap-3">
                 <Briefcase className={`${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE} h-6 w-6`} />
-                <CardTitle className="text-lg text-gray-900">Internship Program</CardTitle>
+                <CardTitle className="text-lg text-gray-900">Internship Programme</CardTitle>
               </div>
             </CardHeader>
             <CardContent>
@@ -72,7 +72,7 @@ export function PlacementsInternshipAndTrainingSection() {
             </CardHeader>
             <CardContent>
               <p className="text-gray-700 mb-4">
-                IMAS Business School provides continuous career preparation support through structured training programs.
+                IMAS Business School provides continuous career preparation support through structured training programmes.
               </p>
               <div className="text-sm font-semibold text-gray-800 mb-2">Career Development Initiatives</div>
               <ul className="space-y-2 text-gray-700">
@@ -113,7 +113,7 @@ export function PlacementsInternshipAndTrainingSection() {
               </div>
             </CardHeader>
             <CardContent>
-              <p className="text-gray-700 mb-4">Organizations recruit PGDM graduates from IMAS because they possess:</p>
+              <p className="text-gray-700 mb-4">Organisations recruit PGDM graduates from IMAS because they possess:</p>
               <ul className="space-y-2 text-gray-700">
                 {whyRecruit.map((w) => (
                   <li key={w} className="flex items-start gap-2">

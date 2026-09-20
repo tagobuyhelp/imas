@@ -22,11 +22,11 @@ export function InternshipPage() {
         <title>Internships at IMAS Business School | SIP &amp; Corporate Exposure</title>
         <meta
           name="description"
-          content="Explore internships at IMAS Business School: mandatory PGDM internships, Summer Internship Program (6–8 weeks), 500+ opportunities annually, and success stories from learners."
+          content="Explore internships at IMAS Business School: mandatory PGDM internships, Summer Internship Programme (6–8 weeks), 500+ opportunities annually, and success stories from learners."
         />
         <meta
           name="keywords"
-          content="IMAS internship, Summer Internship Program, SIP, PGDM internships, corporate exposure, pre-placement offers"
+          content="IMAS internship, Summer Internship Programme, SIP, PGDM internships, corporate exposure, pre-placement offers"
         />
         <link rel="canonical" href="https://www.imas.ac.in/internships" />
       </Helmet>

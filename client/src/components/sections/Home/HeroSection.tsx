@@ -193,12 +193,12 @@ export function HeroSection() {
                       />
                     </div>
 
-                    {/* Program Info */}
+                    {/* Programme Info */}
                     <div className="space-y-3 sm:space-y-4">
                       <div className="flex items-center justify-between">
                         <div>
                           <p className="text-gray-500 text-xs sm:text-sm font-medium">IMAS 2026</p>
-                          <h3 className="text-lg sm:text-xl font-bold text-gray-800">PGDM Program</h3>
+                          <h3 className="text-lg sm:text-xl font-bold text-gray-800">PGDM Programme</h3>
                         </div>
                         <div className="text-right">
                           <p className="text-xl sm:text-2xl font-bold text-teal-600">₹18.5 LPA</p>

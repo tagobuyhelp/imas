@@ -56,20 +56,16 @@ export function InternshipHeroSection() {
   };
 
   const marqueeStudents = [
-    { name: 'Ritwick Mukherjee', company: 'EXL Service', image: '/uploads/internship/ritwick-mukherjee-exl-service.jpg' },
-    { name: 'Kaushik Sen', company: 'Genpact', image: '/uploads/internship/kaushik-sen-genpact.jpg' },
-    { name: 'Subhajit Roy', company: 'Deloitte', image: '/uploads/internship/subhajit-roy-deloitte.jpg' },
-    { name: 'Debanjan Bhattacharya', company: 'EY', image: '/uploads/internship/debanjan-bhattacharya-ey.jpg' },
-    { name: 'Sagnik Paul', company: 'PwC', image: '/uploads/internship/sagnik-paul-pwc.jpg' },
-    { name: 'Ananya Chatterjee', company: 'KPMG', image: '/uploads/internship/ananya-chatterjee-kpmg.jpg' },
-    { name: 'Riya Banerjee', company: 'Accenture', image: '/uploads/internship/riya-banerjee-accenture.jpg' },
-    {
-      name: 'Sohini Ghosh',
-      company: 'Tata Consultancy Services',
-      image: '/uploads/internship/sohini-ghosh-tata-consultancy-services.jpg'
-    },
-    { name: 'Priyanka Das', company: 'Infosys', image: '/uploads/internship/priyanka-das-infosys.jpg' },
-    { name: 'Moumita Mukherjee', company: 'Wipro', image: '/uploads/internship/moumita-mukherjee-wipro.jpg' }
+    { name: 'Debopriya Sen', company: 'Cognizant', image: '/uploads/internship/debopriya-sen-cognizant.jpg' },
+    { name: 'Aritra Roy', company: 'Amazon', image: '/uploads/internship/aritra-roy-amazon.jpg' },
+    { name: 'Tuhin Bhattacharya', company: 'Flipkart', image: '/uploads/internship/tuhin-bhattacharya-flipkart.jpg' },
+    { name: 'Sayantan Paul', company: 'Swiggy', image: '/uploads/internship/sayantan-paul-swiggy.jpg' },
+    { name: 'Ravi Kumar', company: 'Zomato', image: '/uploads/internship/ravi-kumar-zomato.jpg' },
+    { name: 'Amit Kumar Singh', company: 'Meesho', image: '/uploads/internship/amit-kumar-singh-meesho.jpg' },
+    { name: 'Shalini Singh', company: 'EXL Service', image: '/uploads/internship/shalini-singh-exl-service.jpg' },
+    { name: 'Ankit Kumar', company: 'Genpact', image: '/uploads/internship/ankit-kumar-genpact.jpg' },
+    { name: 'Rohit Agarwal', company: 'Deloitte', image: '/uploads/internship/rohit-agarwal-deloitte.jpg' },
+    { name: 'Mohit Khandelwal', company: 'EY', image: '/uploads/internship/mohit-khandelwal-ey.jpg' }
   ] as const;
 
   const col1 = marqueeStudents.filter((_, idx) => idx % 2 === 0);

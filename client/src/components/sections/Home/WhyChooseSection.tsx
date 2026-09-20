@@ -181,7 +181,7 @@ const CareerContent = () => (
         CAREER & PLACEMENTS
       </h3>
       <p className="text-gray-700 text-[11px] sm:text-xs md:text-sm max-w-2xl mx-auto leading-6">
-        Recognized as a top MBA placement college in Kolkata.
+        Recognised as a top MBA placement college in Kolkata.
       </p>
     </div>
     <div className="bg-gradient-to-r from-blue-50 to-cyan-50 rounded-xl p-4 border border-blue-200">
@@ -244,7 +244,7 @@ export function WhyChooseSection() {
     },
     {
       id: 'difference',
-      title: 'AICTE-Approved Programs',
+      title: 'AICTE-Approved Programmes',
       icon: Star
     },
     {
@@ -302,7 +302,7 @@ export function WhyChooseSection() {
           {
             number: '12,456+',
             title: 'Courses Delivered',
-            subtitle: 'PGDM & MBA Programs Completed'
+            subtitle: 'PGDM & MBA Programmes Completed'
           },
           {
             number: '2575+',
@@ -314,10 +314,10 @@ export function WhyChooseSection() {
     },
     {
       id: 'difference',
-      title: 'AICTE-Approved Programs',
+      title: 'AICTE-Approved Programmes',
       subtitle: 'at IMAS COLLEGE KOLKATA',
-      image: '/uploads/aicte-programs.jpg',
-      description: 'Learn about our government-recognized management courses',
+      image: '/uploads/aicte-programmes.jpg',
+      description: 'Learn about our government-recognised management courses',
       videoUrl: '#',
       content: {
         type: 'benefits',
@@ -356,7 +356,7 @@ export function WhyChooseSection() {
       content: {
         type: 'text',
         title: 'Global Partnerships',
-        description: 'We have strategic partnerships with leading universities in Europe and Asia, providing our students with international exposure, exchange programs, and dual certification opportunities. This global perspective enhances their career prospects worldwide.'
+        description: 'We have strategic partnerships with leading universities in Europe and Asia, providing our students with international exposure, exchange programmes, and dual certification opportunities. This global perspective enhances their career prospects worldwide.'
       }
     },
     {

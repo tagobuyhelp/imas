@@ -29,7 +29,7 @@ export function ProgramsPage() {
     },
     {
       phase: 'Phase 2',
-      title: 'Marketing Specialization',
+      title: 'Marketing Specialisation',
       duration: '6 Months',
       topics: ['Consumer Behavior & Neuromarketing', 'Integrated Marketing Communication', 'Brand Strategy & Positioning', 'Digital & Performance Marketing']
     },
@@ -77,7 +77,7 @@ export function ProgramsPage() {
     {
       icon: Shield,
       title: 'AICTE Approved',
-      description: 'All our programs are AICTE-approved, ensuring quality education and recognition'
+      description: 'All our programmes are AICTE-approved, ensuring quality education and recognition'
     },
     {
       icon: Users,
@@ -139,7 +139,7 @@ export function ProgramsPage() {
         <div className="absolute inset-0 z-0">
           <img
             src="/uploads/imas_hero_image1.webp"
-            alt="IMAS Programs Hero"
+            alt="IMAS Programmes Hero"
             className="w-full h-full object-cover"
             loading="eager"
             onError={(e) => {
@@ -168,10 +168,10 @@ export function ProgramsPage() {
 
         <div className="max-w-[1260px] mx-auto px-4 py-6 sm:py-8 lg:py-10 relative z-20 w-full">
           <div className="text-center space-y-3 sm:space-y-4 lg:space-y-6 animate-fade-in-up">
-            {/* Program Title - Mobile Optimized */}
+            {/* Programme Title - Mobile Optimized */}
             <div className="animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
               <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-2 sm:mb-3 lg:mb-4 leading-tight text-white">
-                Our Programs
+                Our Programmes
               </h1>
               <p className={`text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl ${IMAS_TAILWIND_CLASSES.TEXT_TEAL} mb-3 sm:mb-4 lg:mb-6 animate-pulse font-medium px-2 sm:px-0`}>
                 India's Only B-School Powered by Industry Experts & Designed for Tomorrow's Leaders
@@ -233,7 +233,7 @@ export function ProgramsPage() {
         </div>
       </section>
 
-      {/* Program Highlights - Mobile Optimized */}
+      {/* Programme Highlights - Mobile Optimized */}
       <section id="program-highlights" className="py-6 sm:py-12 lg:py-16 bg-gradient-to-br from-slate-50 via-blue-50/30 to-teal-50/30 relative overflow-hidden">
         {/* Background Pattern */}
         <div className="absolute inset-0 opacity-5">
@@ -251,7 +251,7 @@ export function ProgramsPage() {
               Everything You Need to Know
             </h2>
             <p className="text-sm sm:text-base lg:text-lg text-gray-600 max-w-2xl mx-auto px-2 sm:px-0">
-              Comprehensive details about our flagship programs designed for future leaders
+              Comprehensive details about our flagship programmes designed for future leaders
             </p>
           </div>
 
@@ -354,7 +354,7 @@ export function ProgramsPage() {
         </div>
       </section>
 
-      {/* Programs Section from HomePage */}
+      {/* Programmes Section from HomePage */}
       <ProgramsSection />
 
       {/* Why Choose IMAS Section - Mobile Friendly */}

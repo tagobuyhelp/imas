@@ -6,7 +6,7 @@ export function PlacementsAlumniStoriesSection() {
   const alumni = [
     { name: 'Arindam Chatterjee', company: 'TCS', image: '/uploads/placement/arindam-chatterjee.png' },
     { name: 'Sayan Mukherjee', company: 'Wipro', image: '/uploads/placement/sayan-mukherjee.png' },
-    { name: 'Anirban Ghosh', company: 'Infosys', image: '/uploads/placement/arindam-chatterjee.png' },
+    { name: 'Anirban Ghosh', company: 'Infosys', image: '/uploads/placement/nitin-jaiswal.png' },
     { name: 'Abhishek Dutta', company: 'Microsoft', image: '/uploads/placement/abhishek-dutta.png' },
     { name: 'Debarghya Das', company: 'PwC', image: '/uploads/placement/debarghya-das.png' },
     { name: 'Ritam Bose', company: 'PwC', image: '/uploads/placement/ritam-bose.png' },
