@@ -245,7 +245,7 @@ export function ProgramsPage() {
           {/* Section Header - Compact on Mobile */}
           <div className="text-center mb-6 sm:mb-12">
             <div className={`inline-block ${IMAS_TAILWIND_CLASSES.BG_DARK_BLUE}/10 ${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE} px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-semibold mb-2 sm:mb-4 border ${IMAS_TAILWIND_CLASSES.BORDER_DARK_BLUE}/20`}>
-              PROGRAM OVERVIEW
+              PROGRAMME OVERVIEW
             </div>
             <h2 className="text-xl sm:text-2xl lg:text-3xl xl:text-4xl font-bold text-gray-800 mb-2 sm:mb-4">
               Everything You Need to Know

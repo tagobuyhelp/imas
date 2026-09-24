@@ -11,7 +11,7 @@ export function AicteMandatoryDisclosurePage() {
         'Name & Address of the Institution',
         'AICTE Approval Letters (Current & Previous Years)',
         'Affiliation & Accreditation Status',
-        'Programs Offered & Intake Capacity',
+        'Programmes Offered & Intake Capacity',
         'Faculty Details with Qualifications & Experience',
         'Infrastructure & Facilities',
         'Admission Process & Eligibility',

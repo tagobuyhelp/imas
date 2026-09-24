@@ -331,7 +331,7 @@ export function CampusLifePage() {
                 />
               </div>
               <div className="p-4">
-                <h3 className="text-lg font-bold text-gray-800 mb-1">Global MBA Program</h3>
+                <h3 className="text-lg font-bold text-gray-800 mb-1">Global MBA Programme</h3>
                 <p className="text-gray-600 text-sm">International exposure and diverse perspectives</p>
               </div>
             </div>
@@ -347,7 +347,7 @@ export function CampusLifePage() {
               </div>
               <div className="p-4">
                 <h3 className="text-lg font-bold text-gray-800 mb-1">PGDM Excellence</h3>
-                <p className="text-gray-600 text-sm">Specialised programs for career advancement</p>
+                <p className="text-gray-600 text-sm">Specialised programmes for career advancement</p>
               </div>
             </div>
 
@@ -457,7 +457,7 @@ export function CampusLifePage() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-8 sm:mb-12">
             <div className={`inline-block ${IMAS_TAILWIND_CLASSES.BG_DARK_BLUE} text-white px-4 py-2 rounded-full text-sm font-semibold mb-4 shadow-lg`}>
-              STUDENT ORGANIZATIONS
+              STUDENT ORGANISATIONS
             </div>
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-4">
               A Peek into Our Business <span className={`${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE}`}>Clubs & Societies</span>

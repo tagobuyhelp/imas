@@ -309,7 +309,7 @@ export function CampusTourPage() {
                 <GraduationCap className="h-6 w-6 text-[#26c1d3]" />
                 <span className="font-semibold text-gray-800">World-Class Learning</span>
               </div>
-              <p className="text-gray-600 text-sm">Industry-aligned programs and expert faculty.</p>
+              <p className="text-gray-600 text-sm">Industry-aligned programmes and expert faculty.</p>
             </div>
             <div className="p-5 bg-gray-50 rounded-xl border border-gray-200 shadow-sm">
               <div className="flex items-center gap-3 mb-3">

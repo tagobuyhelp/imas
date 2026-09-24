@@ -1432,8 +1432,8 @@ export const programsData: Program[] = [
         format: 'blended',
         location: 'Newtown, Kolkata',
         commencement: '19th Sep 2026',
-        description: 'The PGDM (Executive) programme at IMAS Kolkata offers multiple specialisations including Marketing, HR, Finance, Hospital Administration & Healthcare Management, Business Analytics, AI & Data Science, Fintech, Operations Management, Logistics & Supply Chain Management, and Agri Business Management. This comprehensive 2-year Blended programme is designed for working professionals seeking career advancement in their chosen specialisation.',
-        overview: 'The PGDM (Executive) programme at IMAS Kolkata is a flexible 2-year Blended programme offering diverse specialisations to working professionals. Choose from Marketing, HR, Finance, Healthcare Management, Business Analytics, AI & Data Science, Fintech, Operations, Logistics & Supply Chain, or Agri Business Management to advance your career while maintaining work-life balance.',
+        description: 'The PGDM (Executive) programme at IMAS Kolkata offers multiple specialisations including Marketing, HR, Finance, Hospital Administration & Healthcare Management, Business Analytics, AI & Data Science, Fintech, Operations Management, Logistics & Supply Chain Management, and Agri Business Management. This comprehensive 2-year blended programme is designed for working professionals seeking career advancement in their chosen specialisation.',
+        overview: 'The PGDM (Executive) programme at IMAS Kolkata is a flexible 2-year blended programme offering diverse specialisations to working professionals. Choose from Marketing, HR, Finance, Healthcare Management, Business Analytics, AI & Data Science, Fintech, Operations, Logistics & Supply Chain, or Agri Business Management to advance your career while maintaining work-life balance.',
         highlights: [
             'Two-Year Blended PGDM for Working Executives (AICTE Approved)',
             'Multiple Specialisations: Marketing, HR, Finance, Hospital Administration & Healthcare Management',
@@ -1572,8 +1572,8 @@ export const programsData: Program[] = [
         format: 'blended',
         location: 'Newtown, Kolkata',
         commencement: '19th Sep 2026',
-        description: 'The PGDM in Finance (Working Executive) at IMAS Kolkata is a specialised 2-year Blended programme designed for working professionals who want to advance their finance careers while continuing their current employment. This AICTE-approved programme combines weekend classes with online learning, covering corporate finance, investment banking, and financial analytics.',
-        overview: 'The PGDM in Finance (Working Executive) at IMAS Kolkata is a flexible 2-year Blended programme designed for working professionals who want to master advanced financial management, investment strategies, and corporate finance while maintaining their career momentum.',
+        description: 'The PGDM in Finance (Working Executive) at IMAS Kolkata is a specialised 2-year blended programme designed for working professionals who want to advance their finance careers while continuing their current employment. This AICTE-approved programme combines weekend classes with online learning, covering corporate finance, investment banking, and financial analytics.',
+        overview: 'The PGDM in Finance (Working Executive) at IMAS Kolkata is a flexible 2-year blended programme designed for working professionals who want to master advanced financial management, investment strategies, and corporate finance while maintaining their career momentum.',
         highlights: [
             'Two-Year Blended PGDM for Working Executives (AICTE Approved)',
             'Weekend Classes + Online Learning for Work-Life Balance',
@@ -1707,7 +1707,7 @@ export const programsData: Program[] = [
         location: 'Kolkata',
         commencement: 'July 2026',
         description: 'A comprehensive 2-year PGDM programme in Human Resource Management designed for working professionals, combining online learning with weekend classroom sessions.',
-        overview: 'This programme is specifically designed for working professionals who want to advance their careers in Human Resource Management. The Blended learning format allows students to continue working while pursuing their management education. The curriculum covers all aspects of modern HR practices including talent management, organisational behaviour, compensation management, and strategic HR planning.',
+        overview: 'This programme is specifically designed for working professionals who want to advance their careers in Human Resource Management. The blended learning format allows students to continue working while pursuing their management education. The curriculum covers all aspects of modern HR practices including talent management, organisational behaviour, compensation management, and strategic HR planning.',
         highlights: [
             'Blended Learning Format with Weekend Classes for Working Professionals',
             'Industry-Relevant HR Curriculum with Strategic Management Focus',
@@ -1840,7 +1840,7 @@ export const programsData: Program[] = [
         location: 'Kolkata',
         commencement: 'July 2026',
         description: 'A comprehensive 2-year PGDM programme in Business Analytics designed for working professionals, combining online learning with weekend classroom sessions to master data-driven decision making.',
-        overview: 'This programme is specifically designed for working professionals who want to advance their careers in Business Analytics and Data Science. The Blended learning format allows students to continue working while pursuing advanced analytics education. The curriculum covers statistical analysis, machine learning, business intelligence, and strategic analytics applications.',
+        overview: 'This programme is specifically designed for working professionals who want to advance their careers in Business Analytics and Data Science. The blended learning format allows students to continue working while pursuing advanced analytics education. The curriculum covers statistical analysis, machine learning, business intelligence, and strategic analytics applications.',
         highlights: [
             'Blended Learning Format with Weekend Classes for Working Professionals',
             'Industry-Relevant Analytics Curriculum with Hands-on Tools & Techniques',
@@ -1974,7 +1974,7 @@ export const programsData: Program[] = [
         location: 'Kolkata',
         commencement: 'July 2026',
         description: 'A comprehensive 2-year PGDM programme in Artificial Intelligence & Data Science designed for working professionals, combining online learning with weekend classroom sessions to master AI technologies and applications.',
-        overview: 'This programme is specifically designed for working professionals who want to advance their careers in Artificial Intelligence and Data Science. The Blended learning format allows students to continue working while pursuing cutting-edge AI education. The curriculum covers machine learning, deep learning, natural language processing, computer vision, and AI ethics.',
+        overview: 'This programme is specifically designed for working professionals who want to advance their careers in Artificial Intelligence and Data Science. The blended learning format allows students to continue working while pursuing cutting-edge AI education. The curriculum covers machine learning, deep learning, natural language processing, computer vision, and AI ethics.',
         highlights: [
             'Blended Learning Format with Weekend Classes for Working Professionals',
             'Industry-Relevant AI Curriculum with Hands-on Python, TensorFlow & PyTorch',
@@ -2108,7 +2108,7 @@ export const programsData: Program[] = [
         location: 'Kolkata',
         commencement: 'July 2026',
         description: 'A comprehensive 2-year PGDM programme in Fintech designed for working professionals, combining online learning with weekend classroom sessions to master financial technology innovations and digital banking.',
-        overview: 'This programme is specifically designed for working professionals who want to advance their careers in Financial Technology. The Blended learning format allows students to continue working while pursuing cutting-edge fintech education. The curriculum covers blockchain, cryptocurrency, digital payments, robo-advisory, and regulatory technology.',
+        overview: 'This programme is specifically designed for working professionals who want to advance their careers in Financial Technology. The blended learning format allows students to continue working while pursuing cutting-edge fintech education. The curriculum covers blockchain, cryptocurrency, digital payments, robo-advisory, and regulatory technology.',
         highlights: [
             'Blended Learning Format with Weekend Classes for Working Professionals',
             'Industry-Relevant Fintech Curriculum with Blockchain & Cryptocurrency',
@@ -2242,7 +2242,7 @@ export const programsData: Program[] = [
         location: 'Kolkata',
         commencement: 'July 2026',
         description: 'A comprehensive 2-year PGDM programme in Logistics & Supply Chain Management designed for working professionals, combining online learning with weekend classroom sessions to master supply chain optimisation and logistics management.',
-        overview: 'This programme is specifically designed for working professionals who want to advance their careers in Logistics and Supply Chain Management. The Blended learning format allows students to continue working while pursuing cutting-edge supply chain education. The curriculum covers procurement, inventory management, transportation, warehousing, and global supply chain strategies.',
+        overview: 'This programme is specifically designed for working professionals who want to advance their careers in Logistics and Supply Chain Management. The blended learning format allows students to continue working while pursuing cutting-edge supply chain education. The curriculum covers procurement, inventory management, transportation, warehousing, and global supply chain strategies.',
         highlights: [
             'Blended Learning Format with Weekend Classes for Working Professionals',
             'Industry-Relevant Supply Chain Curriculum with Global Best Practices',
@@ -2376,7 +2376,7 @@ export const programsData: Program[] = [
         location: 'Kolkata',
         commencement: 'July 2026',
         description: 'A comprehensive 2-year PGDM programme in Operations Management designed for working professionals, combining online learning with weekend classroom sessions to master operational excellence and process optimisation.',
-        overview: 'This programme is specifically designed for working professionals who want to advance their careers in Operations Management. The Blended learning format allows students to continue working while pursuing cutting-edge operations education. The curriculum covers production planning, quality management, lean manufacturing, process improvement, and operational strategy.',
+        overview: 'This programme is specifically designed for working professionals who want to advance their careers in Operations Management. The blended learning format allows students to continue working while pursuing cutting-edge operations education. The curriculum covers production planning, quality management, lean manufacturing, process improvement, and operational strategy.',
         highlights: [
             'Blended Learning Format with Weekend Classes for Working Professionals',
             'Industry-Relevant Operations Curriculum with Lean & Six Sigma Methodologies',
@@ -2510,7 +2510,7 @@ export const programsData: Program[] = [
         location: 'Kolkata',
         commencement: 'July 2026',
         description: 'A comprehensive 2-year PGDM programme in Agri Business Management designed for working professionals, combining online learning with weekend classroom sessions to master agricultural value chain management and sustainable farming practices.',
-        overview: 'This programme is specifically designed for working professionals who want to advance their careers in Agri Business Management. The Blended learning format allows students to continue working while pursuing cutting-edge agricultural business education. The curriculum covers farm management, agricultural finance, supply chain management, sustainable agriculture, and agri-tech innovations.',
+        overview: 'This programme is specifically designed for working professionals who want to advance their careers in Agri Business Management. The blended learning format allows students to continue working while pursuing cutting-edge agricultural business education. The curriculum covers farm management, agricultural finance, supply chain management, sustainable agriculture, and agri-tech innovations.',
         highlights: [
             'Blended Learning Format with Weekend Classes for Working Professionals',
             'Industry-Relevant Agri Business Curriculum with Sustainable Agriculture Focus',
@@ -2644,7 +2644,7 @@ export const programsData: Program[] = [
         location: 'Kolkata',
         commencement: 'July 2026',
         description: 'A comprehensive 2-year PGDM programme in Hospital Administration & Healthcare Management designed for working professionals, combining online learning with weekend classroom sessions to master healthcare administration and medical facility management.',
-        overview: 'This programme is specifically designed for working professionals who want to advance their careers in Healthcare Management. The Blended learning format allows students to continue working while pursuing cutting-edge healthcare administration education. The curriculum covers hospital operations, healthcare finance, medical technology management, healthcare policy, and patient care excellence.',
+        overview: 'This programme is specifically designed for working professionals who want to advance their careers in Healthcare Management. The blended learning format allows students to continue working while pursuing cutting-edge healthcare administration education. The curriculum covers hospital operations, healthcare finance, medical technology management, healthcare policy, and patient care excellence.',
         highlights: [
             'Blended Learning Format with Weekend Classes for Working Professionals',
             'Industry-Relevant Healthcare Curriculum with Hospital Administration Focus',

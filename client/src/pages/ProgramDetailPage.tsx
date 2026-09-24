@@ -21,6 +21,12 @@ export function ProgramDetailPage() {
     const { slug } = useParams<{ slug: string }>();
     const program = getProgramBySlug(slug || '');
 
+    const formatLabel = program?.format === 'full-time'
+        ? 'Full-time'
+        : program?.format === 'blended'
+        ? 'Blended'
+        : 'Global';
+
     const [curriculumIndex, setCurriculumIndex] = useState(0);
     const [partnerUniScrollPosition, setPartnerUniScrollPosition] = useState(0);
     const partnerUniScrollRef = useRef<HTMLDivElement>(null);
@@ -212,7 +218,7 @@ export function ProgramDetailPage() {
                                 <div className="inline-flex items-center space-x-1.5 text-xs text-white/80 bg-white/10 backdrop-blur-sm rounded-full px-3 py-1.5 border border-white/20">
                                     <Link to="/" className="hover:text-white transition-colors font-medium">Home</Link>
                                     <ArrowRight className="h-2.5 w-2.5" />
-                                    <Link to="/programs" className="hover:text-white transition-colors font-medium">Programs</Link>
+                                    <Link to="/programs" className="hover:text-white transition-colors font-medium">Programmes</Link>
                                     <ArrowRight className="h-2.5 w-2.5" />
                                     <span className="text-white font-semibold text-xs truncate max-w-[150px]">{program.name}</span>
                                 </div>
@@ -221,7 +227,7 @@ export function ProgramDetailPage() {
                             <div className="text-center lg:text-left">
                                 <div className="inline-flex items-center gap-1.5 bg-white/20 backdrop-blur-sm text-white px-3 py-1.5 rounded-full text-xs font-semibold mb-3 sm:mb-4 border border-white/30 shadow-lg animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
                                     <GraduationCap className="h-3 w-3" />
-                                    {program.category.toUpperCase()} PROGRAM
+                                    {program.category.toUpperCase()} PROGRAMME
                                 </div>
                                 
                                 <h1 className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold mb-3 sm:mb-4 leading-tight animate-fade-in-up text-white" style={{ animationDelay: '0.4s' }}>
@@ -300,10 +306,10 @@ export function ProgramDetailPage() {
                         {/* Enhanced Section Header */}
                         <div className="text-center mb-8 sm:mb-12">
                             <div className={`inline-block ${IMAS_TAILWIND_CLASSES.BG_DARK_BLUE}/10 ${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE} px-3 py-1.5 rounded-full text-xs font-semibold mb-3 border ${IMAS_TAILWIND_CLASSES.BORDER_DARK_BLUE}/20 shadow-lg backdrop-blur-sm`}>
-                                ✨ PROGRAM HIGHLIGHTS
+                                ✨ PROGRAMME HIGHLIGHTS
                             </div>
                             <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-800 mb-3 leading-tight">
-                                Why Choose This Program?
+                                Why Choose This Programme?
                             </h2>
                             <p className="text-sm sm:text-base text-gray-600 max-w-3xl mx-auto leading-relaxed">
                                 Comprehensive details about your learning journey and career outcomes
@@ -318,7 +324,7 @@ export function ProgramDetailPage() {
                                     </div>
                                     <h3 className={`font-bold ${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE} mb-1 text-xs sm:text-sm tracking-wide`}>DURATION</h3>
                                     <p className={`text-lg sm:text-xl font-bold ${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE} mb-1 capitalize`}>{program.duration}</p>
-                                    <p className="text-xs text-gray-500">{program.format} Programme</p>
+                                    <p className="text-xs text-gray-500">{formatLabel} Programme</p>
                                 </CardContent>
                             </Card>
 
@@ -383,7 +389,7 @@ export function ProgramDetailPage() {
                                                 {/* Enhanced Badge */}
                                                 <div className="inline-flex items-center gap-2 bg-[#143674] text-white px-4 py-2 rounded-full text-xs font-bold mb-4 animate-pulse">
                                                     <BookOpen className="w-3 h-3" />
-                                                    PROGRAM OVERVIEW
+                                                    PROGRAMME OVERVIEW
                                                     <div className="w-2 h-2 bg-white/50 rounded-full animate-ping"></div>
                                                 </div>
                                                 
@@ -506,7 +512,7 @@ export function ProgramDetailPage() {
                                                     </div>
                                                     <div className="flex items-center justify-between p-3 bg-gray-50 rounded-xl border border-gray-100/50">
                                                         <span className="text-sm font-medium text-gray-600">Format</span>
-                                                        <span className={`font-bold ${IMAS_TAILWIND_CLASSES.TEXT_MEDIUM_BLUE} text-right`}>{program.format}</span>
+                                                        <span className={`font-bold ${IMAS_TAILWIND_CLASSES.TEXT_MEDIUM_BLUE} text-right`}>{formatLabel}</span>
                                                     </div>
                                                     <div className="flex items-center justify-between p-3 bg-gray-50 rounded-xl border border-gray-100/50">
                                                         <span className="text-sm font-medium text-gray-600">Location</span>
@@ -574,7 +580,7 @@ export function ProgramDetailPage() {
                                         <div className="text-xs text-gray-600 font-medium text-center">Semesters</div>
                                     </div>
                                     <div className="bg-white/60 backdrop-blur-sm rounded-xl p-3 border border-white/50 text-center">
-                                        <div className={`text-lg font-bold ${IMAS_TAILWIND_CLASSES.TEXT_TEAL} text-center`}>{program.format}</div>
+                                        <div className={`text-lg font-bold ${IMAS_TAILWIND_CLASSES.TEXT_TEAL} text-center`}>{formatLabel}</div>
                                         <div className="text-xs text-gray-600 font-medium text-center">Format</div>
                                     </div>
                                     <div className="bg-white/60 backdrop-blur-sm rounded-xl p-3 border border-white/50 text-center">

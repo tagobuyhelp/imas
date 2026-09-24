@@ -33,37 +33,37 @@ const pages: Page[] = [
     },
     {
         title: "PGDM Plus",
-        desc: "Advanced PGDM program with industry-focused curriculum.",
+        desc: "Advanced PGDM programme with industry-focused curriculum.",
         link: "/pgdm-plus",
         status: "live",
     },
     {
         title: "PGDM Fintech",
-        desc: "Specialised program in Financial Technology & digital finance.",
+        desc: "Specialised programme in Financial Technology & digital finance.",
         link: "/pgdm-fintech",
         status: "live",
     },
     {
         title: "Best PGDM MBA College in Kolkata",
-        desc: "Explore top-ranked PGDM MBA programs in Kolkata.",
+        desc: "Explore top-ranked PGDM MBA programmes in Kolkata.",
         link: "/best-pgdm-mba-college-in-kolkata",
         status: "new",
     },
     {
-        title: "PGDM Working Executive Programs",
+        title: "PGDM Working Executive Programmes",
         desc: "Designed for professionals to upskill while working.",
         link: "/pgdm-working-executive-programs",
         status: "live",
     },
     {
         title: "Best PGDM BA College in Kolkata",
-        desc: "Top Business Analytics PGDM programs overview.",
+        desc: "Top Business Analytics PGDM programmes overview.",
         link: "/best-pgdm-ba-college-in-kolkata",
         status: "new",
     },
     {
-    title: "MBA Global Program",
-    desc: "Explore top-ranked PGDM MBA programs in Kolkata.",
+    title: "MBA Global Programme",
+    desc: "Explore top-ranked PGDM MBA programmes in Kolkata.",
     link: "/mba-global-program",
     status: "new",
   },
@@ -158,7 +158,7 @@ export const AllLandingPages: React.FC = () => {
                                     : "bg-blue-600 text-white hover:bg-blue-700"
                                 }`}
                         >
-                            {page.status === "dev" ? "Coming Soon" : "View Program →"}
+                            {page.status === "dev" ? "Coming Soon" : "View Programme →"}
                         </a>
                     </div>
                 ))}
@@ -167,7 +167,7 @@ export const AllLandingPages: React.FC = () => {
             {/* Bottom CTA */}
             <div className="text-center mt-16">
                 <p className="text-gray-600 mb-4">
-                    Not sure which program suits you?
+                    Not sure which programme suits you?
                 </p>
                 <button className="px-6 py-3 bg-teal-500 text-white rounded-xl font-medium hover:bg-teal-600 transition shadow-md">
                     Get Free Counseling

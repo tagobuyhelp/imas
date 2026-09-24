@@ -17,7 +17,7 @@ export function Sidebar({ currentPage, isOpen, onClose }: SidebarProps) {
 
   const navigationItems = [
     { href: '/', label: 'Home', page: 'home', icon: Home },
-    { href: '/programs', label: 'Programs', page: 'programs', icon: GraduationCap },
+    { href: '/programs', label: 'Programmes', page: 'programs', icon: GraduationCap },
     { href: '/faculty', label: 'Faculty', page: 'faculty', icon: Users },
     { href: '/events', label: 'Events', page: 'events', icon: Calendar },
     { href: '/internships', label: 'Internships', page: 'internships', icon: Briefcase },

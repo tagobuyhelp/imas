@@ -26,7 +26,7 @@ const MobileAdmissionsMenu: React.FC<MobileAdmissionsMenuProps> = ({
 
   const admissionsData = {
     'pgdm-plus': {
-      title: 'PGDM Plus Programs',
+      title: 'PGDM Plus Programmes',
       subtitle: '(for Fresh Graduates)',
       icon: <GraduationCap className="h-4 w-4" />,
       courses: plusPrograms.map(program => ({
@@ -35,7 +35,7 @@ const MobileAdmissionsMenu: React.FC<MobileAdmissionsMenuProps> = ({
       }))
     },
     'executive': {
-      title: 'PGDM Programs',
+      title: 'PGDM Programmes',
       subtitle: '(for Working Executives/Blended Mode)',
       icon: <Briefcase className="h-4 w-4" />,
       courses: executivePrograms.map(program => ({
@@ -44,7 +44,7 @@ const MobileAdmissionsMenu: React.FC<MobileAdmissionsMenuProps> = ({
       }))
     },
     'mba-global': {
-      title: 'MBA (Global) Program',
+      title: 'MBA (Global) Programme',
       subtitle: '',
       icon: <Globe className="h-4 w-4" />,
       courses: mbaPrograms.map(program => ({

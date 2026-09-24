@@ -27,7 +27,7 @@ export const faqData: FAQSection[] = [
     items: [
       // MBA Global
       {
-        question: 'What degree will I receive upon completing the MBA Global program?',
+        question: 'What degree will I receive upon completing the MBA Global programme?',
         answer:
           "Graduates receive a Post Graduate Diploma in Management (PGDM) from IMAS, which is AICTE-approved in India. Additionally, there's a pathway to complete an MBA from a UK university, such as Leeds Beckett University or Cardiff Metropolitan University, offering international recognition.",
         popular: true,
@@ -38,7 +38,7 @@ export const faqData: FAQSection[] = [
           'Yes, the MBA Global programme offers a UK pathway, ensuring international recognition of your MBA degree.',
       },
       {
-        question: 'What is the duration of the MBA Global program?',
+        question: 'What is the duration of the MBA Global programme?',
         answer:
           'The MBA Global programme spans two years, with the initial year completed at IMAS Kolkata and the subsequent year at a partner UK university.',
       },
@@ -49,12 +49,12 @@ export const faqData: FAQSection[] = [
       },
       {
         question: 'Can I obtain a digital copy of my certificate for MBA Global?',
-        answer: 'Yes, digital certificates are typically provided upon completion of the program.',
+        answer: 'Yes, digital certificates are typically provided upon completion of the programme.',
       },
 
       // PGDM Executive
       {
-        question: 'What degree will I receive upon completing the PGDM Executive program?',
+        question: 'What degree will I receive upon completing the PGDM Executive programme?',
         answer:
           'Graduates receive a Post Graduate Diploma in Management (PGDM) from IMAS, which is AICTE-approved in India.',
       },
@@ -64,7 +64,7 @@ export const faqData: FAQSection[] = [
           'While the PGDM is AICTE-approved in India, the programme does not explicitly mention international recognition.',
       },
       {
-        question: 'What is the duration of the PGDM Executive program?',
+        question: 'What is the duration of the PGDM Executive programme?',
         answer:
           'The PGDM Executive programme spans two years, designed to accommodate the schedules of working professionals.',
       },
@@ -75,12 +75,12 @@ export const faqData: FAQSection[] = [
       },
       {
         question: 'Can I obtain a digital copy of my certificate for PGDM Executive?',
-        answer: 'Yes, digital certificates are typically provided upon completion of the program.',
+        answer: 'Yes, digital certificates are typically provided upon completion of the programme.',
       },
 
       // PGDM Regular
       {
-        question: 'What degree will I receive upon completing the PGDM Regular program?',
+        question: 'What degree will I receive upon completing the PGDM Regular programme?',
         answer:
           'Graduates receive a Post Graduate Diploma in Management (PGDM) from IMAS, which is AICTE-approved in India.',
       },
@@ -90,7 +90,7 @@ export const faqData: FAQSection[] = [
           'The PGDM is AICTE-approved in India. While the programme does not explicitly mention international recognition.',
       },
       {
-        question: 'What is the duration of the PGDM Regular program?',
+        question: 'What is the duration of the PGDM Regular programme?',
         answer:
           'The PGDM Regular programme spans two years, designed to provide a comprehensive management education.',
       },
@@ -101,7 +101,7 @@ export const faqData: FAQSection[] = [
       },
       {
         question: 'Can I obtain a digital copy of my certificate for PGDM Regular?',
-        answer: 'Yes, digital certificates are typically provided upon completion of the program.',
+        answer: 'Yes, digital certificates are typically provided upon completion of the programme.',
       },
     ],
   },
@@ -113,7 +113,7 @@ export const faqData: FAQSection[] = [
     items: [
       // MBA Global
       {
-        question: 'Who is eligible to apply for the MBA Global program?',
+        question: 'Who is eligible to apply for the MBA Global programme?',
         answer:
           'Graduates from any discipline are eligible. For detailed eligibility criteria, please refer to the programme brochure.',
         popular: true,
@@ -140,7 +140,7 @@ export const faqData: FAQSection[] = [
 
       // PGDM Executive
       {
-        question: 'Who is eligible to apply for the PGDM Executive program?',
+        question: 'Who is eligible to apply for the PGDM Executive programme?',
         answer:
           'Graduates from any discipline with work experience are eligible. For detailed eligibility criteria, please refer to the programme brochure.',
         popular: true,
@@ -166,7 +166,7 @@ export const faqData: FAQSection[] = [
 
       // PGDM Regular
       {
-        question: 'Who is eligible to apply for the PGDM Regular program?',
+        question: 'Who is eligible to apply for the PGDM Regular programme?',
         answer:
           'Graduates from any discipline are eligible. For detailed eligibility criteria, please refer to the programme brochure.',
       },

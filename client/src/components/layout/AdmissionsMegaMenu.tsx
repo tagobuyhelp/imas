@@ -19,7 +19,7 @@ const AdmissionsMegaMenu: React.FC<AdmissionsMegaMenuProps> = ({ isOpen, onClose
 
   const admissionsData = {
     'pgdm-plus': {
-      title: 'PGDM Plus Programs (for Fresh Graduates)',
+      title: 'PGDM Plus Programmes (for Fresh Graduates)',
       icon: <GraduationCap className="h-5 w-5" />,
       courses: plusPrograms.map(program => ({
         name: program.name,
@@ -27,7 +27,7 @@ const AdmissionsMegaMenu: React.FC<AdmissionsMegaMenuProps> = ({ isOpen, onClose
       }))
     },
     'executive': {
-      title: 'PGDM Programs (for Working Executives/Blended Mode)',
+      title: 'PGDM Programmes (for Working Executives/Blended Mode)',
       icon: <Briefcase className="h-5 w-5" />,
       courses: executivePrograms.map(program => ({
         name: program.name,
@@ -35,7 +35,7 @@ const AdmissionsMegaMenu: React.FC<AdmissionsMegaMenuProps> = ({ isOpen, onClose
       }))
     },
     'mba-global': {
-      title: 'MBA (Global) Program',
+      title: 'MBA (Global) Programme',
       icon: <Globe className="h-5 w-5" />,
       courses: mbaPrograms.map(program => ({
         name: program.name,
@@ -73,7 +73,7 @@ const AdmissionsMegaMenu: React.FC<AdmissionsMegaMenuProps> = ({ isOpen, onClose
             <div className="flex items-center justify-between">
               <div>
                 <h2 className="text-2xl font-bold mb-2">Choose Your Path to Success</h2>
-                <p className="text-blue-100 text-sm">AICTE-Approved Programs • 100% Placement • Global Recognition</p>
+                <p className="text-blue-100 text-sm">AICTE-Approved Programmes • 100% Placement • Global Recognition</p>
               </div>
               <div className="hidden md:flex items-center gap-6 text-sm">
                 <div className="flex items-center gap-2">
@@ -113,7 +113,7 @@ const AdmissionsMegaMenu: React.FC<AdmissionsMegaMenuProps> = ({ isOpen, onClose
                         {category.title}
                       </h3>
                       <p className="text-xs text-gray-500">
-                        {category.courses.length} Program{category.courses.length > 1 ? 's' : ''} Available
+                        {category.courses.length} Programme{category.courses.length > 1 ? 's' : ''} Available
                       </p>
                     </div>
                   </div>
@@ -153,7 +153,7 @@ const AdmissionsMegaMenu: React.FC<AdmissionsMegaMenuProps> = ({ isOpen, onClose
                     className="inline-flex items-center gap-2 text-sm text-teal-600 hover:text-teal-700 font-semibold px-4 py-2 rounded-lg hover:bg-teal-50 transition-all duration-300 group/viewall"
                     onClick={onClose}
                   >
-                    <span>View All Programs</span>
+                    <span>View All Programmes</span>
                     <ArrowRight className="h-4 w-4 transform group-hover/viewall:translate-x-1 transition-transform duration-300" />
                   </Link>
                 </div>
