@@ -44,7 +44,7 @@ export function Layout({ children, currentPage }: LayoutProps) {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-background">
+    <div className="min-h-screen flex flex-col bg-background overflow-x-hidden w-full max-w-full">
       {/* Header */}
       <Header 
         onMenuToggle={handleMenuToggle} 

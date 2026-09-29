@@ -51,8 +51,9 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
-        serif: ['Times New Roman', 'Garamond', 'serif'], // IMAS Headlines
-        sans: ['Arial', 'Open Sans', 'sans-serif'], // IMAS Body Text
+        serif: ['"Playfair Display"', 'Georgia', 'serif'], // IMAS Headlines
+        sans: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'], // IMAS Body Text
+        cursive: ['"Caveat"', 'cursive'], // Handwriting
       },
       keyframes: {
         "accordion-down": {

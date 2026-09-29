@@ -1,7 +1,6 @@
 import React from 'react';
 import {
   HeroSection,
-  ProgramHighlightsSection,
   PlacementPartnersSection,
   PlacementStatsSection,
   LearnersSection,
@@ -19,9 +18,8 @@ import { FAQ } from '../components/FAQ';
 
 export function HomePage() {
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-white">
       <HeroSection />
-      <ProgramHighlightsSection />
       <PlacementPartnersSection />
       <PlacementStatsSection />
       <LearnersSection />

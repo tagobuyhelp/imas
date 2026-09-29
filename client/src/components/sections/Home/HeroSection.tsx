@@ -1,271 +1,214 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Button } from '../../ui/button';
-import { Carousel } from '../../ui/carousel';
-import { IMAS_TAILWIND_CLASSES, IMAS_DATES } from '../../../lib/constants';
-import { downloadBrochure, applyNow } from '../../../lib/utils';
-import { ArrowRight, Download, Play, Users, Award, Globe, BookOpen, TrendingUp } from 'lucide-react';
-
-import LoadNpfScript from "../../integrations/LoadNpfScript";
+import { 
+  ArrowRight, Play, Calendar, Users, TrendingUp,
+  Award, Sparkles, Globe, Briefcase, Building2
+} from 'lucide-react';
 
 export function HeroSection() {
-  const [daysLeft, setDaysLeft] = useState<number | null>(null);
+  const [activeCarouselDot, setActiveCarouselDot] = useState(0);
 
-  useEffect(() => {
-    const deadlineTs = new Date(IMAS_DATES.APPLICATION_DEADLINE).getTime();
-    const update = () => {
-      const now = Date.now();
-      const diffDays = Math.floor((deadlineTs - now) / (1000 * 60 * 60 * 24));
-      setDaysLeft(diffDays);
-    };
-    update();
-    const interval = setInterval(update, 60 * 1000);
-    return () => clearInterval(interval);
-  }, []);
-  const deadlineText = '30 November, 2026';
-  const [currentStat, setCurrentStat] = useState(0);
-  
-  // Sample carousel images - replace with actual IMAS images
   const carouselImages = [
     '/uploads/imas_hero_image_2.webp',
-    '/uploads/imas_hero_image1.webp',
     '/uploads/imas_hero_image3.webp',
   ];
 
-  const stats = [
-    { icon: Users, value: '1500+', label: 'Alumni Network' },
-    { icon: Award, value: '100%', label: 'Placement Rate' },
-    { icon: Globe, value: '15+', label: 'Industry Partners' },
-    { icon: BookOpen, value: '50+', label: 'Expert Faculty' }
-  ];
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentStat((prev) => (prev + 1) % stats.length);
-    }, 2000);
-    return () => clearInterval(interval);
-  }, []);
-
   return (
-    <section id="hero" className="relative min-h-screen overflow-hidden">
-      {/* Dynamic Gradient Background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-blue-900 to-teal-900">
-        <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
-      </div>
+    <section id="hero" className="relative min-h-[520px] lg:min-h-[560px] xl:min-h-[600px] bg-[#071d3d] overflow-hidden flex items-center">
+      {/* Background Campus Image with Students */}
+      <div 
+        className="absolute inset-0 bg-cover bg-[62%_20%] sm:bg-[60%_25%] lg:bg-[58%_20%] bg-no-repeat transition-all duration-700"
+        style={{ backgroundImage: "url('/uploads/hero_campus_bg.jpg')" }}
+      />
 
-      {/* Animated Geometric Shapes - Responsive */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className={`absolute top-10 sm:top-20 left-5 sm:left-10 w-16 h-16 sm:w-32 sm:h-32 ${IMAS_TAILWIND_CLASSES.BG_TEAL}/20 rounded-full blur-xl animate-pulse`}></div>
-        <div className={`absolute top-20 sm:top-40 right-10 sm:right-20 w-12 h-12 sm:w-24 sm:h-24 ${IMAS_TAILWIND_CLASSES.BG_MEDIUM_BLUE}/30 rounded-full blur-lg animate-bounce`} style={{ animationDelay: '1s' }}></div>
-        <div className={`absolute bottom-16 sm:bottom-32 left-1/4 sm:left-1/3 w-10 h-10 sm:w-20 sm:h-20 ${IMAS_TAILWIND_CLASSES.BG_DARK_BLUE}/25 rounded-full blur-md animate-ping`} style={{ animationDelay: '2s' }}></div>
-        
-        {/* Floating Elements - Hidden on mobile for performance */}
-        <div className="hidden sm:block absolute top-1/4 right-1/4 w-2 h-2 bg-white/40 rounded-full animate-float" style={{ animationDelay: '0.5s' }}></div>
-        <div className="hidden sm:block absolute top-1/3 left-1/4 w-1 h-1 bg-teal-400/60 rounded-full animate-float" style={{ animationDelay: '1.5s' }}></div>
-        <div className="hidden sm:block absolute bottom-1/3 right-1/3 w-3 h-3 bg-blue-400/50 rounded-full animate-float" style={{ animationDelay: '2.5s' }}></div>
-      </div>
+      {/* Dark Royal Navy Atmospheric Overlays: Solid deep navy on the left, rich blue tint */}
+      <div className="absolute inset-0 bg-[#071d3d]/25 mix-blend-multiply pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-r from-[#071d3d] via-[#071d3d]/95 via-38% sm:via-[#071d3d]/80 lg:via-[#071d3d]/45 to-transparent pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-t from-[#071d3d]/80 via-transparent to-transparent lg:hidden pointer-events-none" />
 
-      {/* Main Content */}
-      <div className="relative z-10  flex items-center">
-        <div className="w-full px-4 sm:px-6 py-6 sm:py-8">
-          <div className="max-w-7xl mx-auto">
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-center">
-              
-              {/* Left Section - Hero Content */}
-              <div className="lg:col-span-7 space-y-6 sm:space-y-8 order-2 lg:order-1">
-                
-                {/* Hero Badge */}
-                <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm text-white animate-fade-in-up">
-                  <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-green-400 rounded-full animate-pulse"></div>
-                  <span>Admissions Open for 2026-28</span>
+      {/* Main Content Container */}
+      <div className="relative z-10 w-full max-w-[1550px] mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-10 lg:py-12">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-center">
+          
+          {/* Left Column: Headline, Copy, Actions, Flourish */}
+          <div className="lg:col-span-7 xl:col-span-7 space-y-4 sm:space-y-5">
+            
+            {/* Eyebrow Tag - Styled as Elegant Badge */}
+            <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#00a8cc]/15 border border-[#38bdf8]/35 backdrop-blur-xs text-[11px] sm:text-xs font-bold tracking-[0.14em] text-[#7dd3fc] uppercase shadow-xs">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#38bdf8] animate-pulse shrink-0" />
+              <span>AI-ENABLED MANAGEMENT EDUCATION</span>
+            </div>
+
+            {/* Main Headline */}
+            <div className="space-y-1.5">
+              <h1 className="font-serif text-3xl sm:text-5xl lg:text-[54px] xl:text-[60px] font-bold text-white leading-[1.08] tracking-tight">
+                Shape Your<br />
+                <span className="font-serif bg-gradient-to-r from-[#00d2d3] via-[#00a8ff] to-[#2563eb] bg-clip-text text-transparent">
+                  Business Future
+                </span><br />
+                with Industry Experts
+              </h1>
+
+              <p className="text-sm sm:text-base text-slate-200 max-w-xl leading-relaxed pt-1 font-normal">
+                India's premier B-School where business education meets AI, analytics and real-world industry experience.
+              </p>
+            </div>
+
+            {/* CTA Buttons Row */}
+            <div className="flex flex-wrap items-center gap-3 sm:gap-4 pt-1">
+              {/* Explore Programs */}
+              <Button 
+                onClick={() => {
+                  const el = document.getElementById('about-the-program') || document.getElementById('programs-section');
+                  if (el) el.scrollIntoView({ behavior: 'smooth' });
+                  else window.location.href = '/courses';
+                }}
+                className="flex-1 sm:flex-initial justify-center bg-gradient-to-r from-[#00bcd4] via-[#00a8cc] to-[#1d4ed8] hover:from-[#00acc1] hover:to-[#1e40af] text-white px-5 sm:px-7 py-3 sm:py-3.5 rounded-xl text-sm sm:text-base font-semibold shadow-md hover:shadow-lg flex items-center gap-2 transition-all min-w-[150px]"
+              >
+                <span>Explore Programs</span>
+                <ArrowRight className="h-4 w-4" />
+              </Button>
+
+              {/* Apply Now */}
+              <Button 
+                variant="outline"
+                onClick={() => window.open('https://admission.imas.ac.in/', '_blank')}
+                className="flex-1 sm:flex-initial justify-center bg-[#0c2444]/90 hover:bg-[#102d55] border border-slate-300/40 hover:border-slate-200 text-white px-5 sm:px-7 py-3 sm:py-3.5 rounded-xl text-sm sm:text-base font-semibold shadow-sm transition-all min-w-[130px]"
+              >
+                Apply Now
+              </Button>
+
+              {/* Watch Campus Story */}
+              <button 
+                onClick={() => window.dispatchEvent(new Event('imas:openVideoModal'))}
+                className="w-full sm:w-auto justify-center sm:justify-start flex items-center gap-3 px-2 py-1 text-slate-200 hover:text-cyan-300 transition-colors group mt-1 sm:mt-0"
+              >
+                <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-[#0284c7] hover:bg-[#0369a1] text-white flex items-center justify-center transition-transform group-hover:scale-105 shadow-md shrink-0">
+                  <Play className="h-4 w-4 fill-white text-white ml-0.5" />
                 </div>
-
-                {/* Main Heading */}
-                <div className="space-y-3 sm:space-y-4 animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
-                  <h1 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
-                    Shape Your
-                    <span className={`block ${IMAS_TAILWIND_CLASSES.TEXT_TEAL} bg-gradient-to-r from-teal-400 to-blue-400 bg-clip-text text-transparent`}>
-                      Business Future
-                    </span>
-                    <span className="block text-xl sm:text-3xl md:text-4xl lg:text-5xl font-medium text-gray-300">
-                      with Industry Experts
-                    </span>
-                  </h1>
-                  
-                  <p className="text-base sm:text-xl text-gray-300 max-w-2xl leading-relaxed">
-                    India's premier B-School where AI meets traditional business education. 
-                    <span className="text-teal-400 font-semibold"> 100% placement assurance</span> with hands-on industry experience.
-                  </p>
+                <div className="text-left leading-tight">
+                  <span className="block text-xs text-slate-300 font-medium">Watch</span>
+                  <span className="block text-xs sm:text-sm font-bold text-white group-hover:text-cyan-300">Campus Story</span>
                 </div>
+              </button>
+            </div>
 
-                {/* Interactive Stats - Mobile Optimized */}
-                <div className="grid grid-cols-2 sm:flex sm:items-center gap-3 sm:gap-6 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
-                  {stats.map((stat, index) => {
-                    const Icon = stat.icon;
-                    return (
-                      <div 
-                        key={index}
-                        className={`flex items-center gap-2 sm:gap-3 p-2 sm:p-3 rounded-lg transition-all duration-500 cursor-pointer ${
-                          currentStat === index 
-                            ? 'bg-white/20 backdrop-blur-sm border border-white/30 scale-105' 
-                            : 'bg-white/5 hover:bg-white/10'
-                        }`}
-                        onClick={() => setCurrentStat(index)}
-                      >
-                        <Icon className={`w-4 h-4 sm:w-6 sm:h-6 ${currentStat === index ? 'text-teal-400' : 'text-gray-400'}`} />
-                        <div>
-                          <div className={`text-sm sm:text-lg font-bold ${currentStat === index ? 'text-white' : 'text-gray-300'}`}>
-                            {stat.value}
-                          </div>
-                          <div className={`text-xs ${currentStat === index ? 'text-gray-200' : 'text-gray-500'}`}>
-                            {stat.label}
-                          </div>
-                        </div>
-                      </div>
-                    );
-                  })}
-                </div>
-
-                {/* Scrolling Highlights - Mobile Optimized */}
-                <div className="relative overflow-hidden animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
-                  <div className="flex gap-3 sm:gap-4 animate-scroll-left whitespace-nowrap">
-                    {[
-                      'AICTE Approved', 'AI-Enhanced Learning', 'Global Partnerships', 
-                      'Industry Mentorship', 'Modern Infrastructure', 'Research Excellence',
-                      'AICTE Approved', 'AI-Enhanced Learning', 'Global Partnerships'
-                    ].map((highlight, index) => (
-                      <span 
-                        key={index}
-                        className="inline-flex items-center gap-1.5 sm:gap-2 bg-gradient-to-r from-teal-500/20 to-blue-500/20 backdrop-blur-sm border border-teal-400/30 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm text-teal-300 font-medium"
-                      >
-                        <div className="w-1 h-1 sm:w-1.5 sm:h-1.5 bg-teal-400 rounded-full"></div>
-                        {highlight}
+            {/* Key Institutional Pillars */}
+            <div className="pt-3 sm:pt-4 border-t border-white/10 mt-1">
+              <div className="grid grid-cols-2 sm:flex sm:flex-wrap items-center gap-2 sm:gap-2.5">
+                {[
+                  { label: 'AICTE Approved', icon: Award },
+                  { label: 'AI-Enhanced Learning', icon: Sparkles },
+                  { label: 'Global Partnerships', icon: Globe },
+                  { label: 'Industry Mentorship', icon: Briefcase },
+                  { label: 'Modern Infrastructure', icon: Building2 },
+                ].map((item, idx) => {
+                  const Icon = item.icon;
+                  return (
+                    <div 
+                      key={item.label}
+                      className={`flex items-center gap-2 px-2.5 sm:px-3 py-2 sm:py-1.5 rounded-lg bg-[#0c2444]/80 hover:bg-[#12315e] border border-slate-700/60 hover:border-[#38bdf8]/50 backdrop-blur-xs transition-all duration-200 shadow-xs group ${
+                        idx === 4 ? 'col-span-2 sm:col-span-1 justify-center sm:justify-start' : 'justify-center sm:justify-start'
+                      }`}
+                    >
+                      <Icon className="w-3.5 h-3.5 text-[#38bdf8] group-hover:text-cyan-300 shrink-0" />
+                      <span className="text-[11.5px] sm:text-[12.5px] font-semibold text-slate-200 group-hover:text-white transition-colors truncate sm:whitespace-nowrap">
+                        {item.label}
                       </span>
-                    ))}
-                  </div>
-                </div>
-
-                {/* CTA Buttons - Mobile Optimized */}
-                <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
-                  <Button 
-                    className="group bg-gradient-to-r from-teal-500 to-blue-600 hover:from-teal-600 hover:to-blue-700 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold rounded-xl shadow-2xl hover:shadow-teal-500/25 transform hover:scale-105 transition-all duration-300"
-                    onClick={applyNow}
-                  >
-                    Enquire Now
-                    <ArrowRight className="ml-2 w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
-                  </Button>
-                  
-                  <Button 
-                    variant="outline" 
-                    className="group border-2 border-white/30 bg-white/10 backdrop-blur-sm text-white hover:bg-white hover:text-gray-900 px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold rounded-xl transform hover:scale-105 transition-all duration-300"
-                    onClick={ () => window.open('https://admission.imas.ac.in/', '_blank')}
-                  >
-                    <Download className="mr-2 w-4 h-4 sm:w-5 sm:h-5 group-hover:animate-bounce" />
-                    Apply Now
-                  </Button>
-                  
-                  <Button 
-                    variant="ghost" 
-                    className="group text-white hover:text-teal-400 px-4 sm:px-6 py-3 sm:py-4 text-base sm:text-lg font-medium rounded-xl transition-all duration-300"
-                    onClick={() => window.dispatchEvent(new Event('imas:openVideoModal'))}
-                  >
-                    <Play className="mr-2 w-4 h-4 sm:w-5 sm:h-5 group-hover:scale-110 transition-transform" />
-                    <span className="hidden sm:inline">Watch Video</span>
-                    <span className="sm:hidden">Video</span>
-                  </Button>
-                </div>
-              </div>
-
-              {/* Right Section - Interactive Card - Mobile Optimized */}
-              <div className="lg:col-span-5 order-1 lg:order-2 animate-fade-in-up" style={{ animationDelay: '0.3s' }}>
-                <div className="relative max-w-md mx-auto lg:max-w-none">
-                  {/* Main Card */}
-                  <div className="bg-white/95 backdrop-blur-lg rounded-2xl p-4 sm:p-6 shadow-2xl border border-white/20">
-                    
-                    {/* Image Carousel */}
-                    <div className="h-32 sm:h-48 mb-4 sm:mb-6 rounded-xl overflow-hidden">
-                      <Carousel
-                        images={carouselImages}
-                        autoPlay={true}
-                        interval={4000}
-                        showControls={false}
-                        showIndicators={true}
-                        className="h-full"
-                      />
                     </div>
-
-                    {/* Programme Info */}
-                    <div className="space-y-3 sm:space-y-4">
-                      <div className="flex items-center justify-between">
-                        <div>
-                          <p className="text-gray-500 text-xs sm:text-sm font-medium">IMAS 2026</p>
-                          <h3 className="text-lg sm:text-xl font-bold text-gray-800">PGDM Programme</h3>
-                        </div>
-                        <div className="text-right">
-                          <p className="text-xl sm:text-2xl font-bold text-teal-600">₹18.5 LPA</p>
-                          <p className="text-xs sm:text-sm text-gray-500">Highest CTC</p>
-                        </div>
-                      </div>
-
-                      {/* Quick Stats Grid */}
-                      <div className="grid grid-cols-2 gap-2">
-                        <div className="bg-gradient-to-br from-teal-50 to-blue-50 p-2 rounded-lg text-center">
-                          <TrendingUp className="w-4 h-4 text-teal-600 mx-auto mb-1" />
-                          <div className="text-sm font-bold text-gray-800">24 Months</div>
-                          <div className="text-xs text-gray-600">Duration</div>
-                        </div>
-                        <div className="bg-gradient-to-br from-blue-50 to-purple-50 p-2 rounded-lg text-center">
-                          <Users className="w-4 h-4 text-blue-600 mx-auto mb-1" />
-                          <div className="text-sm font-bold text-gray-800">120 Seats</div>
-                          <div className="text-xs text-gray-600">Available</div>
-                        </div>
-                      </div>
-
-                      {/* Deadline Alert */}
-                      <div className="bg-gradient-to-r from-red-50 to-orange-50 border border-red-200 p-2 rounded-lg">
-                        <div className="flex items-center gap-1 mb-1">
-                          <div className="w-1.5 h-1.5 bg-red-500 rounded-full animate-pulse"></div>
-                          <p className="text-[11px] sm:text-xs font-semibold text-red-700">Admission Phase II – Apply Before the Extended Deadline! 30th November, 2026</p>
-                        </div>
-                        <p className="text-xs sm:text-sm font-bold text-red-600">Application Deadline {deadlineText}</p>
-                        <p className="text-[11px] sm:text-xs text-gray-700">
-                          {daysLeft !== null && daysLeft > 0
-                            ? `Only ${daysLeft} day${daysLeft === 1 ? '' : 's'} left to apply!`
-                            : 'Applications closed'}
-                        </p>
-                      </div>
-
-                      {/* CTA Buttons */}
-                      <div className="space-y-2 sm:space-y-3">
-                        <Button 
-                          variant="outline"
-                          className="w-full border-2 border-teal-600 text-teal-600 hover:bg-teal-600 hover:text-white py-2.5 sm:py-3 text-sm sm:text-base font-semibold rounded-lg shadow-md hover:shadow-lg transform hover:scale-[1.02] transition-all duration-300"
-                          onClick={applyNow}
-                        >
-                          Enquiry Now
-                          <ArrowRight className="ml-2 w-3 h-3 sm:w-4 sm:h-4" />
-                        </Button>
-                        
-                        <Button 
-                          className="w-full bg-gradient-to-r from-teal-600 to-blue-600 hover:from-teal-700 hover:to-blue-700 text-white py-2.5 sm:py-3 text-sm sm:text-base font-semibold rounded-lg shadow-lg hover:shadow-xl transform hover:scale-[1.02] transition-all duration-300"
-                          onClick={() => window.open('https://admission.imas.ac.in/', '_blank')}
-                        >
-                          Secure Your Seat Now
-                          <ArrowRight className="ml-2 w-3 h-3 sm:w-4 sm:h-4" />
-                        </Button>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Floating Elements around Card - Hidden on mobile */}
-                  <div className="hidden sm:block absolute -top-4 -right-4 w-8 h-8 bg-teal-400 rounded-full opacity-60 animate-bounce" style={{ animationDelay: '1s' }}></div>
-                  <div className="hidden sm:block absolute -bottom-4 -left-4 w-6 h-6 bg-blue-400 rounded-full opacity-40 animate-pulse" style={{ animationDelay: '2s' }}></div>
-                </div>
+                  );
+                })}
               </div>
             </div>
+
           </div>
+
+          {/* Right Column: Floating Featured Program Card */}
+          <div className="lg:col-span-5 xl:col-span-5 flex flex-col items-center lg:items-end justify-center relative pt-4 lg:pt-0">
+            
+            {/* Featured Program Card */}
+            <div className="bg-white rounded-2xl shadow-2xl p-4 sm:p-5 border border-slate-100 max-w-[340px] w-full transition-all duration-300 hover:shadow-cyan-500/10 hover:-translate-y-0.5">
+              
+              {/* Image with Pill Badge & Dots */}
+              <div className="relative rounded-xl overflow-hidden mb-3 bg-slate-100 aspect-[16/10]">
+                <img 
+                  src={carouselImages[activeCarouselDot]} 
+                  alt="IMAS PGDM Students in classroom" 
+                  className="w-full h-full object-cover transition-opacity duration-300"
+                />
+                
+                {/* FEATURED PROGRAM Badge (rendered only on slides 1+ since slide 0 has it baked in) */}
+                {activeCarouselDot > 0 && (
+                  <div className="absolute top-2.5 left-2.5 bg-[#d0f4f7] text-[#00838f] text-[9.5px] font-bold tracking-wider px-2.5 py-0.5 rounded shadow-xs uppercase">
+                    FEATURED PROGRAM
+                  </div>
+                )}
+
+                {/* 3 Carousel Dots */}
+                <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex items-center gap-1.5 bg-black/30 backdrop-blur-xs px-2 py-0.5 rounded-full">
+                  {carouselImages.map((_, i) => (
+                    <button
+                      key={i}
+                      onClick={() => setActiveCarouselDot(i)}
+                      className={`w-1.5 h-1.5 rounded-full transition-all ${
+                        activeCarouselDot === i ? 'bg-white w-3.5' : 'bg-white/60 hover:bg-white'
+                      }`}
+                      aria-label={`Slide ${i + 1}`}
+                    />
+                  ))}
+                </div>
+              </div>
+
+              {/* Title & Subtitle */}
+              <div className="mb-3">
+                <h3 className="font-serif text-2xl sm:text-3xl font-bold text-[#0c2340] leading-none">PGDM</h3>
+                <p className="text-xs text-[#1e3a8a] font-semibold mt-1">Post Graduate Diploma in Management</p>
+              </div>
+
+              {/* 3-Column Highlights Row */}
+              <div className="grid grid-cols-3 gap-2 py-2.5 border-y border-slate-100 text-center">
+                {/* Duration */}
+                <div className="flex flex-col items-center">
+                  <div className="flex items-center gap-1 text-[#0284c7] mb-0.5">
+                    <Calendar className="w-3.5 h-3.5" />
+                    <span className="text-xs sm:text-[13px] font-bold text-[#0c2340]">2 Years</span>
+                  </div>
+                  <span className="text-[10px] text-slate-500 font-medium">Duration</span>
+                </div>
+
+                {/* Seats */}
+                <div className="flex flex-col items-center border-x border-slate-100">
+                  <div className="flex items-center gap-1 text-[#0284c7] mb-0.5">
+                    <Users className="w-3.5 h-3.5" />
+                    <span className="text-xs sm:text-[13px] font-bold text-[#0c2340]">120</span>
+                  </div>
+                  <span className="text-[10px] text-slate-500 font-medium">Seats</span>
+                </div>
+
+                {/* Highest CTC */}
+                <div className="flex flex-col items-center">
+                  <div className="flex items-center gap-1 text-[#0284c7] mb-0.5">
+                    <TrendingUp className="w-3.5 h-3.5" />
+                    <span className="text-xs sm:text-[13px] font-bold text-[#0c2340]">₹18.5 LPA</span>
+                  </div>
+                  <span className="text-[10px] text-slate-500 font-medium">Highest CTC</span>
+                </div>
+              </div>
+
+              {/* Action Button */}
+              <Button 
+                onClick={() => window.location.href = '/courses/pgdm'}
+                className="w-full bg-gradient-to-r from-[#00bcd4] via-[#00a8cc] to-[#1d4ed8] hover:from-[#00acc1] hover:to-[#1e40af] text-white py-3 rounded-xl font-bold flex items-center justify-center gap-2 mt-3 text-xs sm:text-sm shadow-md transition-all"
+              >
+                <span>View Program Details</span>
+                <ArrowRight className="h-4 w-4" />
+              </Button>
+            </div>
+
+          </div>
+
         </div>
       </div>
     </section>
   );
 }
-

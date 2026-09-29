@@ -1,7 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '../ui/button';
-import { Menu, X, Clock, ChevronLeft, ChevronRight, Home, GraduationCap, Users, FileText, Calendar, Image, Phone, BookOpen, HelpCircle, ChevronDown, Briefcase, Camera } from 'lucide-react';
+import { 
+  Menu, X, Clock, ChevronDown, ChevronLeft, ChevronRight,
+  Megaphone, Phone, Mail, MapPin, Search, User, ArrowRight,
+  Home, BookOpen, Users, FileText, Briefcase, Camera, Calendar,
+  GraduationCap, HelpCircle
+} from 'lucide-react';
 import { Sidebar } from './Sidebar';
 import { IMAS_TAILWIND_CLASSES, IMAS_DATES } from '../../lib/constants';
 import { applyNow } from '../../lib/utils';
@@ -14,10 +19,10 @@ interface HeaderProps {
 
 export function Header({ currentPage, onMenuToggle }: HeaderProps) {
   const [timeLeft, setTimeLeft] = useState({
-    days: 0,
-    hours: 0,
-    minutes: 0,
-    seconds: 0
+    days: 73,
+    hours: 1,
+    minutes: 2,
+    seconds: 5
   });
   const [activeTab, setActiveTab] = useState('');
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -82,7 +87,6 @@ export function Header({ currentPage, onMenuToggle }: HeaderProps) {
           { label: 'Eligibility', sectionId: 'eligibility' },
           { label: 'Enquire Now', sectionId: 'apply' }
         ];
-
       case 'internships':
         return [
           { label: 'Overview', sectionId: 'internships-hero' },
@@ -98,7 +102,6 @@ export function Header({ currentPage, onMenuToggle }: HeaderProps) {
           { label: 'FAQ', sectionId: 'faq' },
           { label: 'Apply', sectionId: 'final-cta' }
         ];
-
       case 'contact':
         return [
           { label: 'Contact', sectionId: 'contact-hero' },
@@ -125,7 +128,6 @@ export function Header({ currentPage, onMenuToggle }: HeaderProps) {
           { label: 'Success Stories', sectionId: 'placements-alumni' }
         ];
       default:
-        // Default menu for program detail pages
         return [
           { label: 'Overview', sectionId: 'overview' },
           { label: 'Programme Highlights', sectionId: 'program-highlights' },
@@ -138,63 +140,6 @@ export function Header({ currentPage, onMenuToggle }: HeaderProps) {
   };
 
   const menuItems = getMenuItemsForPage(currentPage);
-
-  // Intersection Observer to detect active section
-  useEffect(() => {
-    const sectionIds = menuItems.map(item => item.sectionId);
-    const sections = sectionIds.map(id => document.getElementById(id)).filter(Boolean);
-    
-    if (sections.length === 0) return;
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting && entry.intersectionRatio > 0.5) {
-            const sectionId = entry.target.id;
-            const menuItem = menuItems.find(item => item.sectionId === sectionId);
-            if (menuItem && menuItem.label !== activeTab) {
-              setActiveTab(menuItem.label);
-            }
-          }
-        });
-      },
-      {
-        threshold: [0.5],
-        rootMargin: '-20% 0px -20% 0px'
-      }
-    );
-
-    sections.forEach(section => {
-      if (section) observer.observe(section);
-    });
-
-    return () => {
-      sections.forEach(section => {
-        if (section) observer.unobserve(section);
-      });
-    };
-  }, [activeTab, menuItems]);
-
-  // Initialize activeTab with first menu item when page changes
-  useEffect(() => {
-    if (menuItems.length > 0) {
-      setActiveTab(menuItems[0].label);
-    }
-  }, [currentPage, menuItems]);
-
-  const scrollLeft = () => {
-    if (scrollContainerRef.current) {
-      scrollContainerRef.current.scrollLeft -= 200;
-      setScrollPosition(scrollContainerRef.current.scrollLeft);
-    }
-  };
-
-  const scrollRight = () => {
-    if (scrollContainerRef.current) {
-      scrollContainerRef.current.scrollLeft += 200;
-      setScrollPosition(scrollContainerRef.current.scrollLeft);
-    }
-  };
 
   useEffect(() => {
     const targetDate = new Date(IMAS_DATES.APPLICATION_DEADLINE).getTime();
@@ -216,293 +161,291 @@ export function Header({ currentPage, onMenuToggle }: HeaderProps) {
     return () => clearInterval(timer);
   }, []);
 
+  const scrollLeft = () => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollLeft -= 200;
+      setScrollPosition(scrollContainerRef.current.scrollLeft);
+    }
+  };
+
+  const scrollRight = () => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollLeft += 200;
+      setScrollPosition(scrollContainerRef.current.scrollLeft);
+    }
+  };
+
   return (
     <>
-      {/* Top Banner */}
-      <div className={`${IMAS_TAILWIND_CLASSES.BG_TEAL} text-white py-3`}>
-        <div className="w-full px-6">
-          <div className="flex items-center justify-between text-sm">
-            <div className="flex items-center gap-4">
-              <span className="font-semibold text-[12px]  md:text-[14px]">Admission Phase II – Apply Before the Extended Deadline! 30th November, 2026</span>
-              <div className="flex items-center gap-2">
-                <Clock className="h-4 w-4" />
-                <span className="font-mono">
-                  {timeLeft.days}d {timeLeft.hours}h {timeLeft.minutes}m {timeLeft.seconds}s
+      {/* Top Announcement Bar - Obsidian Navy Matching Mock */}
+      <div className="bg-[#0c2440] text-white py-1.5 sm:py-2 text-xs border-b border-slate-800/80 overflow-hidden">
+        <div className="max-w-[1550px] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+          
+          {/* Mobile View: Clean compact row fitting 320px-414px perfectly */}
+          <div className="flex sm:hidden items-center justify-between w-full text-[11px]">
+            <div className="flex items-center gap-1.5 font-medium text-white truncate">
+              <Megaphone className="h-3 w-3 text-[#00bcd4] shrink-0" />
+              <span>Admissions <span className="font-semibold text-white">2026–28</span></span>
+            </div>
+            <div className="flex items-center gap-1 shrink-0 font-mono text-[10px]">
+              <span className="bg-[#193254] border border-[#274775] px-1 py-0.5 rounded text-white font-bold">{timeLeft.days}d</span>
+              <span className="bg-[#193254] border border-[#274775] px-1 py-0.5 rounded text-white font-bold">{String(timeLeft.hours).padStart(2, '0')}h</span>
+              <span className="bg-[#193254] border border-[#274775] px-1 py-0.5 rounded text-white font-bold">{String(timeLeft.minutes).padStart(2, '0')}m</span>
+              <span className="bg-[#193254] border border-[#274775] px-1 py-0.5 rounded text-cyan-300 font-bold">{String(timeLeft.seconds).padStart(2, '0')}s</span>
+            </div>
+          </div>
+
+          {/* Desktop/Tablet View */}
+          <div className="hidden sm:flex items-center gap-2 sm:gap-3 flex-wrap">
+            <div className="flex items-center gap-1.5 text-white font-medium">
+              <Megaphone className="h-3.5 w-3.5 text-white shrink-0" />
+              <span>Admissions Open <span className="text-white font-semibold">for 2026–28</span></span>
+            </div>
+            
+            <span className="text-slate-500">|</span>
+            
+            <span className="hidden md:inline text-slate-300">
+              Apply Before 30 November, 2026
+            </span>
+
+            {/* Countdown Badges */}
+            <div className="flex items-center gap-1.5 ml-1 sm:ml-2">
+              <div className="flex items-center">
+                <span className="bg-[#193254] border border-[#274775] text-white font-bold px-1.5 py-0.5 rounded text-[11px] min-w-[24px] text-center">
+                  {String(timeLeft.days).padStart(2, '0')}
                 </span>
+                <span className="text-slate-300 text-[11px] ml-1 mr-2">Days</span>
+              </div>
+              <div className="flex items-center">
+                <span className="bg-[#193254] border border-[#274775] text-white font-bold px-1.5 py-0.5 rounded text-[11px] min-w-[24px] text-center">
+                  {String(timeLeft.hours).padStart(2, '0')}
+                </span>
+                <span className="text-slate-300 text-[11px] ml-1 mr-2">Hrs</span>
+              </div>
+              <div className="flex items-center">
+                <span className="bg-[#193254] border border-[#274775] text-white font-bold px-1.5 py-0.5 rounded text-[11px] min-w-[24px] text-center">
+                  {String(timeLeft.minutes).padStart(2, '0')}
+                </span>
+                <span className="text-slate-300 text-[11px] ml-1 mr-2">Mins</span>
+              </div>
+              <div className="flex items-center">
+                <span className="bg-[#193254] border border-[#274775] text-white font-bold px-1.5 py-0.5 rounded text-[11px] min-w-[24px] text-center">
+                  {String(timeLeft.seconds).padStart(2, '0')}
+                </span>
+                <span className="text-slate-300 text-[11px] ml-1">Secs</span>
               </div>
             </div>
-            <div className="hidden md:flex items-center gap-3">
-              <span className="hidden lg:inline">Application Deadline 30 November, 2026</span>
-              <Button 
-                variant="ghost"
-                className="text-white hover:bg-white/10 px-3 py-1 text-xs sm:text-sm"
-                onClick={() => {
-                  try {
-                    applyNow();
-                  } catch (e) {
-                    window.dispatchEvent(new Event('imas:openEnquiryForm'));
-                  }
-                }}
-              >
-                <HelpCircle className="h-4 w-4 mr-2" />
-                Enquiry Now
-              </Button>
-              <Button 
-                variant="ghost"
-                className="text-white hover:bg-white/10 px-3 py-1 text-xs sm:text-sm"
-                onClick={() => window.open('/contact', '_blank')}
-              >
-                <Phone className="h-4 w-4 mr-2" />
-                Contact
-              </Button>
-            </div>
+          </div>
+
+          {/* Right: Contact & Quick Info */}
+          <div className="hidden lg:flex items-center gap-4 text-xs text-slate-300">
+            <a href="tel:+913340685700" className="flex items-center gap-1.5 hover:text-cyan-400 transition-colors">
+              <Phone className="h-3.5 w-3.5 text-[#00bcd4] shrink-0" />
+              <span>+91 33 4068 5700</span>
+            </a>
+            <span className="text-slate-600">|</span>
+            <button 
+              onClick={() => {
+                try {
+                  applyNow();
+                } catch (e) {
+                  window.dispatchEvent(new Event('imas:openEnquiryForm'));
+                }
+              }} 
+              className="flex items-center gap-1.5 hover:text-cyan-400 transition-colors"
+            >
+              <Mail className="h-3.5 w-3.5 text-slate-300 shrink-0" />
+              <span>Enquiry Now</span>
+            </button>
+            <span className="text-slate-600">|</span>
+            <Link to="/contact" className="flex items-center gap-1.5 hover:text-cyan-400 transition-colors">
+              <MapPin className="h-3.5 w-3.5 text-slate-300 shrink-0" />
+              <span>New Town, Kolkata</span>
+            </Link>
           </div>
         </div>
       </div>
 
-      {/* Main Header */}
-      <header className="bg-gray-900 text-white sticky top-0 z-50">
-        <div className="w-full px-6">
-          <div className="flex items-center justify-between h-14 xl:h-16">
-            {/* Logo */}
+      {/* Main Header - Clean White Matching Mock */}
+      <header className="bg-white text-slate-800 sticky top-0 z-50 border-b border-slate-100 shadow-sm transition-all duration-200">
+        <div className="max-w-[1550px] mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex items-center justify-between h-16 sm:h-18 lg:h-20 gap-2 sm:gap-3">
+            {/* Logo Group */}
             <Link 
               to="/"
-              className="flex items-center gap-3 hover:opacity-80 transition-opacity"
+              className="shrink-0 flex items-center gap-1 sm:gap-2.5 hover:opacity-90 transition-opacity"
             >
               <img
-                src="/uploads/logos/imas.png"
+                src="/uploads/logos/IMAS_LOGO_PNG.png"
                 alt="IMAS International Management & Analytics School"
-                className="h-10 w-auto xl:h-12"
+                className="h-8 sm:h-11 xl:h-12 w-auto object-contain shrink-0 max-w-none"
               />
+              <div className="h-6 sm:h-8 w-[1px] sm:w-[1.5px] bg-[#0c2340]/25 mx-0.5 sm:mx-1 shrink-0"></div>
+              <div className="flex flex-col items-start leading-none shrink-0 pl-0.5">
+                <span className="text-xs sm:text-base xl:text-lg font-bold text-[#0c2340] tracking-wider font-serif">AICTE</span>
+                <span className="text-[6.5px] sm:text-[7.5px] xl:text-[8.5px] font-bold text-[#0c2340] tracking-[0.18em] sm:tracking-[0.2em] mt-0.5">APPROVED</span>
+              </div>
             </Link>
 
             {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center gap-3 xl:gap-6 text-xs lg:text-sm xl:text-base">
+            <nav className="hidden lg:flex items-center gap-4 xl:gap-6 text-sm font-semibold text-slate-700 shrink-0">
               <Link
                 to="/"
-                className={`${IMAS_TAILWIND_CLASSES.HOVER_TEXT_TEAL} transition-colors flex-shrink-0 flex items-center gap-1 lg:gap-2 ${
-                  currentPage === 'home' ? IMAS_TAILWIND_CLASSES.TEXT_TEAL : ''
+                className={`relative py-1 transition-colors flex flex-col items-center ${
+                  currentPage === 'home' || !currentPage ? 'text-[#0c2340]' : 'hover:text-[#00a8cc]'
                 }`}
               >
-                <Home className="h-3.5 w-3.5 xl:h-4 xl:w-4" />
-                Home
+                <span>Home</span>
+                {(currentPage === 'home' || !currentPage) && (
+                  <span className="absolute -bottom-1.5 left-0 right-0 h-[3px] bg-[#00bcd4] rounded-full" />
+                )}
               </Link>
               
               <Link
                 to="/about"
-                className={`${IMAS_TAILWIND_CLASSES.HOVER_TEXT_TEAL} transition-colors flex-shrink-0 flex items-center gap-1 lg:gap-2 ${
-                  currentPage === 'about' ? IMAS_TAILWIND_CLASSES.TEXT_TEAL : ''
+                className={`transition-colors hover:text-[#00a8cc] ${
+                  currentPage === 'about' ? 'text-[#00a8cc]' : ''
                 }`}
               >
-                <BookOpen className="h-3.5 w-3.5 xl:h-4 xl:w-4" />
                 About
               </Link>
-              <Link
-                to="/faculty"
-                className={`${IMAS_TAILWIND_CLASSES.HOVER_TEXT_TEAL} transition-colors flex-shrink-0 flex items-center gap-1 lg:gap-2 ${
-                  currentPage === 'faculty' ? IMAS_TAILWIND_CLASSES.TEXT_TEAL : ''
-                }`}
-              >
-                <Users className="h-3.5 w-3.5 xl:h-4 xl:w-4" />
-                Faculty
-              </Link>
+
+              {/* Programs Dropdown */}
               <div className="relative">
                 <button
                   ref={admissionsButtonRef}
                   onMouseEnter={() => setIsAdmissionsMegaMenuOpen(true)}
                   onMouseLeave={() => {
-                    // Add a small delay to prevent flickering
                     setTimeout(() => {
                       if (!document.querySelector('.mega-menu:hover')) {
                         setIsAdmissionsMegaMenuOpen(false);
                       }
                     }, 100);
                   }}
-                  onClick={() => {
-                    setIsAdmissionsMegaMenuOpen(!isAdmissionsMegaMenuOpen);
-                  }}
-                  className={`${IMAS_TAILWIND_CLASSES.HOVER_TEXT_TEAL} transition-colors flex-shrink-0 flex items-center gap-1 lg:gap-2 ${currentPage === 'admissions' ? IMAS_TAILWIND_CLASSES.TEXT_TEAL : ''
-                    } ${isAdmissionsMegaMenuOpen ? IMAS_TAILWIND_CLASSES.TEXT_TEAL : ''}`}
+                  onClick={() => setIsAdmissionsMegaMenuOpen(!isAdmissionsMegaMenuOpen)}
+                  className={`transition-colors hover:text-[#00a8cc] flex items-center gap-1 ${
+                    currentPage === 'programs' || currentPage === 'admissions' || isAdmissionsMegaMenuOpen ? 'text-[#00a8cc]' : ''
+                  }`}
                 >
-                  <FileText className="h-4 w-4" />
-                  Courses
-                  <ChevronDown className={`h-3 w-3 transition-transform duration-200 ${isAdmissionsMegaMenuOpen ? 'rotate-180' : ''}`} />
+                  <span>Programs</span>
+                  <ChevronDown className={`h-3.5 w-3.5 transition-transform duration-200 ${isAdmissionsMegaMenuOpen ? 'rotate-180' : ''}`} />
                 </button>
               </div>
 
+              {/* Academics Dropdown */}
               <Link
-                to="/internships"
-                className={`${IMAS_TAILWIND_CLASSES.HOVER_TEXT_TEAL} transition-colors flex-shrink-0 flex items-center gap-1 lg:gap-2 ${
-                  currentPage === 'internships' ? IMAS_TAILWIND_CLASSES.TEXT_TEAL : ''
+                to="/faculty"
+                className={`transition-colors hover:text-[#00a8cc] flex items-center gap-1 ${
+                  currentPage === 'faculty' ? 'text-[#00a8cc]' : ''
                 }`}
               >
-                <Briefcase className="h-4 w-4" />
-                Internships
+                <span>Academics</span>
+                <ChevronDown className="h-3.5 w-3.5 text-slate-400" />
               </Link>
 
               <Link
                 to="/placements"
-                className={`${IMAS_TAILWIND_CLASSES.HOVER_TEXT_TEAL} transition-colors flex-shrink-0 flex items-center gap-1 lg:gap-2 ${
-                  currentPage === 'placements' ? IMAS_TAILWIND_CLASSES.TEXT_TEAL : ''
+                className={`transition-colors hover:text-[#00a8cc] ${
+                  currentPage === 'placements' ? 'text-[#00a8cc]' : ''
                 }`}
               >
-                <Briefcase className="h-4 w-4" />
                 Placements
               </Link>
 
               <Link
                 to="/campus-life"
-                className={`${IMAS_TAILWIND_CLASSES.HOVER_TEXT_TEAL} transition-colors flex-shrink-0 flex items-center gap-1 lg:gap-2 ${
-                  currentPage === 'campus-life' ? IMAS_TAILWIND_CLASSES.TEXT_TEAL : ''
+                className={`transition-colors hover:text-[#00a8cc] flex items-center gap-1 ${
+                  currentPage === 'campus-life' ? 'text-[#00a8cc]' : ''
                 }`}
               >
-                <Users className="h-4 w-4" />
-                Campus Life
-              </Link>
-
-              <Link
-                to="/campus-tour"
-                className={`${IMAS_TAILWIND_CLASSES.HOVER_TEXT_TEAL} transition-colors flex-shrink-0 flex items-center gap-1 lg:gap-2 ${
-                  currentPage === 'campus-tour' ? IMAS_TAILWIND_CLASSES.TEXT_TEAL : ''
-                }`}
-              >
-                <Camera className="h-4 w-4" />
-                Campus Tour
+                <span>Campus Life</span>
+                <ChevronDown className="h-3.5 w-3.5 text-slate-400" />
               </Link>
 
               <Link
                 to="/events"
-                className={`${IMAS_TAILWIND_CLASSES.HOVER_TEXT_TEAL} transition-colors flex-shrink-0 flex items-center gap-1 lg:gap-2 ${
-                  currentPage === 'events' ? IMAS_TAILWIND_CLASSES.TEXT_TEAL : ''
+                className={`transition-colors hover:text-[#00a8cc] flex items-center gap-1 ${
+                  currentPage === 'events' ? 'text-[#00a8cc]' : ''
                 }`}
               >
-                <Calendar className="h-4 w-4" />
-                Events
+                <span>Resources</span>
+                <ChevronDown className="h-3.5 w-3.5 text-slate-400" />
               </Link>
+
+              {/* Search Icon */}
+              <button 
+                onClick={() => window.dispatchEvent(new Event('imas:openSearch'))} 
+                className="text-slate-700 hover:text-[#00a8cc] transition-colors p-1"
+                aria-label="Search"
+              >
+                <Search className="h-4 w-4" />
+              </button>
             </nav>
 
             {/* Desktop CTA Buttons */}
-            <div className="hidden lg:flex items-center gap-2 xl:gap-3">
+            <div className="hidden lg:flex items-center gap-3 shrink-0">
               <Button 
-                variant="ghost" 
-                className={`text-white bg-gray-800 ${IMAS_TAILWIND_CLASSES.HOVER_TEXT_TEAL} hover:bg-gray-800 flex items-center gap-2 text-xs lg:text-sm xl:text-base px-2.5 lg:px-3 xl:px-4 py-1 lg:py-1.5 xl:py-2`}
+                variant="outline" 
+                className="border border-[#3b82f6]/70 hover:border-[#2563eb] text-[#0c2340] bg-white hover:bg-blue-50/40 flex items-center gap-2 text-sm font-semibold px-4 py-2 rounded-xl shadow-xs transition-all"
                 onClick={() => window.open('https://agorae.app/signin', '_blank')}
               >
-                <Calendar className="h-3.5 w-3.5 xl:h-4 xl:w-4" />
+                <User className="h-4 w-4 text-[#2563eb]" />
                 Student Login
               </Button>
               <Button 
-                className={`${IMAS_TAILWIND_CLASSES.GRADIENT_PRIMARY} hover:from-[#2e7bb3] hover:to-[#26c1d3] text-white text-xs lg:text-sm xl:text-base px-3 lg:px-4 xl:px-6 py-1 lg:py-1.5 xl:py-2 font-semibold hover:scale-105 transition-all duration-300 flex items-center gap-2`}
-                onClick={ () => window.open('https://admission.imas.ac.in/', '_blank')}
+                className="bg-gradient-to-r from-[#00bcd4] via-[#00a8cc] to-[#1d4ed8] hover:from-[#00acc1] hover:to-[#1e40af] text-white text-sm font-semibold px-5 py-2.5 rounded-xl flex items-center gap-2 shadow-sm hover:shadow-md transition-all duration-300"
+                onClick={() => window.open('https://admission.imas.ac.in/', '_blank')}
               >
-                <GraduationCap className="h-3.5 w-3.5 xl:h-4 xl:w-4" />
-                Apply Now
+                <span>Apply Now</span>
+                <ArrowRight className="h-4 w-4" />
               </Button>
             </div>
 
             {/* Mobile Actions */}
-            <div className="flex lg:hidden items-center gap-1 sm:gap-2">
-              <button
-                onClick={() => setIsAdmissionsMegaMenuOpen(!isAdmissionsMegaMenuOpen)}
-                className={`flex items-center gap-1 px-2 sm:px-3 py-1.5 rounded-lg text-xs sm:text-sm font-medium transition-colors ${
-                  isAdmissionsMegaMenuOpen 
-                    ? `bg-teal-500/10 ${IMAS_TAILWIND_CLASSES.TEXT_TEAL}` 
-                    : `text-white ${IMAS_TAILWIND_CLASSES.HOVER_BG_MEDIUM_BLUE}`
-                }`}
+            <div className="flex lg:hidden items-center gap-1.5 sm:gap-2 shrink-0">
+              <Button 
+                size="sm"
+                className="bg-gradient-to-r from-[#00bcd4] to-[#1d4ed8] text-white text-xs px-2.5 sm:px-3 py-1.5 rounded-lg font-semibold whitespace-nowrap shadow-xs"
+                onClick={() => window.open('https://admission.imas.ac.in/', '_blank')}
               >
-                <FileText className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
-                Courses
-                <ChevronDown className={`h-3 w-3 transition-transform duration-200 ${isAdmissionsMegaMenuOpen ? 'rotate-180' : ''}`} />
-              </button>
-              
-              {/* Mobile Menu Button */}
+                Apply Now
+              </Button>
               <button
                 onClick={onMenuToggle}
-                className={`p-1.5 sm:p-2 ${IMAS_TAILWIND_CLASSES.HOVER_BG_MEDIUM_BLUE} rounded-lg transition-colors`}
+                className="p-1.5 sm:p-2 hover:bg-slate-100 rounded-lg text-slate-700 transition-colors"
+                aria-label="Menu"
               >
-                <Menu className="h-5 w-5 sm:h-6 sm:w-6" />
+                <Menu className="h-6 w-6" />
               </button>
             </div>
           </div>
 
-          {/* Mobile Scrollable Menu */}
-          <div className="lg:hidden relative py-3 border-t border-gray-700">
+          {/* Mobile Scrollable Menu - Crisp Clean White with subtle badges */}
+          <div className="lg:hidden relative py-2 border-t border-slate-100 bg-white">
             {/* Scroll Left Arrow */}
             <button
               onClick={scrollLeft}
-              className={`absolute left-2 top-1/2 transform -translate-y-1/2 z-10 w-8 h-8 ${IMAS_TAILWIND_CLASSES.BG_DARK_BLUE} border ${IMAS_TAILWIND_CLASSES.BORDER_MEDIUM_BLUE} rounded-full flex items-center justify-center ${IMAS_TAILWIND_CLASSES.HOVER_BG_MEDIUM_BLUE} transition-colors`}
+              className="absolute left-1 top-1/2 transform -translate-y-1/2 z-10 w-6 h-6 bg-white shadow-sm border border-slate-200 rounded-full flex items-center justify-center text-slate-600 transition-colors"
+              aria-label="Scroll left"
             >
-              <ChevronLeft className="h-4 w-4 text-white" />
+              <ChevronLeft className="h-3.5 w-3.5" />
             </button>
 
             {/* Scroll Right Arrow */}
             <button
               onClick={scrollRight}
-              className={`absolute right-2 top-1/2 transform -translate-y-1/2 z-10 w-8 h-8 ${IMAS_TAILWIND_CLASSES.BG_DARK_BLUE} border ${IMAS_TAILWIND_CLASSES.BORDER_MEDIUM_BLUE} rounded-full flex items-center justify-center ${IMAS_TAILWIND_CLASSES.HOVER_BG_MEDIUM_BLUE} transition-colors`}
+              className="absolute right-1 top-1/2 transform -translate-y-1/2 z-10 w-6 h-6 bg-white shadow-sm border border-slate-200 rounded-full flex items-center justify-center text-slate-600 transition-colors"
+              aria-label="Scroll right"
             >
-              <ChevronRight className="h-4 w-4 text-white" />
+              <ChevronRight className="h-3.5 w-3.5" />
             </button>
 
             <div
               ref={scrollContainerRef}
-              className="flex gap-3 overflow-x-auto scrollbar-hide px-12"
+              className="flex gap-1.5 overflow-x-auto scrollbar-hide px-8 py-0.5"
               onScroll={(e) => setScrollPosition(e.currentTarget.scrollLeft)}
             >
               {menuItems.map((menuItem) => {
-                const getIcon = (label: string) => {
-                  // Map common labels to icons
-                  const iconMap: { [key: string]: React.ReactNode } = {
-                    'Home': <Home className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
-                    'Hero': <Home className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
-                    'Overview': <Home className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
-                    'Programs': <GraduationCap className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
-                    'Programmes': <GraduationCap className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
-                    'Program Highlights': <GraduationCap className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
-                    'Programme Highlights': <GraduationCap className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
-                    'Highlights': <GraduationCap className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
-                    'Curriculum': <BookOpen className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
-                    'Faculty': <Users className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
-                    'Academic Leaders': <Users className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
-                    'Industry Experts': <Users className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
-                    'Instructors & Mentors': <Users className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
-                    'Mentors': <Users className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
-                    'About': <BookOpen className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
-                    'About the program': <GraduationCap className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
-                    'About IMAS': <BookOpen className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
-                    'Campus Life': <Image className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
-
-                    'Careers': <Users className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
-                    'Eligibility': <FileText className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
-                    'Placement': <Users className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
-                    'Statistics': <Users className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
-                    'Recruiters': <Users className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
-                    'Success Stories': <Users className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
-                    'Training': <BookOpen className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
-                    'FAQ': <HelpCircle className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
-                    'Why': <BookOpen className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
-                    'SIP': <Briefcase className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
-                    'Industries': <Briefcase className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
-                    'Benefits': <GraduationCap className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
-                    'Why IMAS': <BookOpen className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
-                    'Support': <Users className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
-                    'Success': <Users className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
-                    'Admissions': <FileText className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
-                    'Courses': <FileText className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
-                    'Process': <FileText className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
-                    'Apply': <FileText className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
-                    'Apply Now': <FileText className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
-                    'Enquire Now': <FileText className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
-
-                    'Contact': <Phone className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
-                    'Information': <Phone className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
-                    'Location': <Phone className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
-                    'Form': <Phone className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
-                    'Vision': <BookOpen className="h-3.5 w-3.5 sm:h-4 sm:w-4" />,
-                    'Why Choose': <BookOpen className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
-                  };
-                  return iconMap[label] || <Home className="h-4 w-4" />;
-                };
-
                 const scrollToSection = (sectionId: string) => {
                   const element = document.getElementById(sectionId);
                   if (element) {
@@ -523,12 +466,12 @@ export function Header({ currentPage, onMenuToggle }: HeaderProps) {
                   <button
                     key={menuItem.label}
                     onClick={handleClick}
-                    className={`flex-shrink-0 px-3 py-2 rounded-lg text-sm font-medium transition-all duration-300 whitespace-nowrap flex items-center gap-2 ${activeTab === menuItem.label
-                        ? `${IMAS_TAILWIND_CLASSES.BG_TEAL} ${IMAS_TAILWIND_CLASSES.TEXT_DARK_BLUE} shadow-md`
-                        : `text-gray-300 ${IMAS_TAILWIND_CLASSES.HOVER_TEXT_TEAL} hover:bg-gray-800`
-                      }`}
+                    className={`flex-shrink-0 px-3 py-1 rounded-full text-xs font-medium transition-all duration-200 whitespace-nowrap ${
+                      activeTab === menuItem.label
+                        ? 'bg-gradient-to-r from-[#00bcd4] to-[#1d4ed8] text-white shadow-xs'
+                        : 'text-slate-600 hover:text-slate-900 bg-slate-50 border border-slate-200/60'
+                    }`}
                   >
-                    {getIcon(menuItem.label)}
                     {menuItem.label}
                   </button>
                 );
@@ -554,4 +497,3 @@ export function Header({ currentPage, onMenuToggle }: HeaderProps) {
     </>
   );
 }
-

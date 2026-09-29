@@ -67,7 +67,7 @@ export function PlacementsCompaniesSection() {
                       <img
                         src={l.logo}
                         alt={`${l.name} logo`}
-                        className="max-w-full max-h-full object-contain  opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+                        className="max-w-full max-h-full object-contain transition-all duration-300"
                         loading="lazy"
                       />
                     </div>
@@ -82,7 +82,7 @@ export function PlacementsCompaniesSection() {
                       <img
                         src={l.logo}
                         alt={`${l.name} logo`}
-                        className="max-w-full max-h-full object-contain  opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+                        className="max-w-full max-h-full object-contain transition-all duration-300"
                         loading="lazy"
                       />
                     </div>

@@ -37,8 +37,11 @@ export function StickyCTAFooter({
     const handleScroll = () => {
       const currentScrollY = window.scrollY;
       
-      // Hide footer when hero section is visible (scrollY < heroSectionHeight)
-      if (currentScrollY < heroSectionHeight) {
+      const heroEl = document.getElementById('hero');
+      const minHeight = heroEl ? heroEl.offsetHeight : heroSectionHeight;
+      
+      // Hide footer when hero section is visible (scrollY < minHeight)
+      if (currentScrollY < minHeight - 50) {
         setIsVisible(false);
         return;
       }
@@ -81,8 +84,8 @@ export function StickyCTAFooter({
     <>
       {/* Sticky CTA Footer */}
       <div 
-        className={`fixed bottom-0 left-0 right-0 bg-white/90 border-t border-gray-200 shadow-2xl z-50 transition-all duration-300 ease-in-out ${
-          isVisible ? 'translate-y-0' : 'translate-y-full'
+        className={`fixed bottom-0 left-0 right-0 bg-white/95 backdrop-blur-md border-t border-gray-200 shadow-2xl z-50 transition-all duration-300 ease-in-out ${
+          isVisible ? 'translate-y-0 opacity-100 pointer-events-auto' : 'translate-y-full opacity-0 pointer-events-none'
         }`}
       >
         <div className="max-w-6xl mx-auto">
