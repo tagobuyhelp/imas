@@ -153,7 +153,7 @@ const AdmissionsMegaMenu: React.FC<AdmissionsMegaMenuProps> = ({ isOpen, onClose
                     className="inline-flex items-center gap-2 text-sm text-teal-600 hover:text-teal-700 font-semibold px-4 py-2 rounded-lg hover:bg-teal-50 transition-all duration-300 group/viewall"
                     onClick={onClose}
                   >
-                    <span>View All Programmes</span>
+                    <span>View All Courses</span>
                     <ArrowRight className="h-4 w-4 transform group-hover/viewall:translate-x-1 transition-transform duration-300" />
                   </Link>
                 </div>

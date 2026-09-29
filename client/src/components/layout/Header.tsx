@@ -35,8 +35,8 @@ export function Header({ currentPage, onMenuToggle }: HeaderProps) {
     switch (page) {
       case 'programs':
         return [
-          { label: 'Programmes', sectionId: 'programs-hero' },
-          { label: 'Programme Highlights', sectionId: 'program-highlights' },
+          { label: 'Courses', sectionId: 'programs-hero' },
+          { label: 'Course Highlights', sectionId: 'program-highlights' },
           { label: 'Why Choose', sectionId: 'why-choose' },
           { label: 'Top Recruiters', sectionId: 'top-recruiters' },
           { label: 'Enquire Now', sectionId: 'cta' }
@@ -44,7 +44,7 @@ export function Header({ currentPage, onMenuToggle }: HeaderProps) {
       case 'program-detail':
         return [
           { label: 'Overview', sectionId: 'hero' },
-          { label: 'Programme Highlights', sectionId: 'program-highlights' },
+          { label: 'Course Highlights', sectionId: 'program-highlights' },
           { label: 'Curriculum', sectionId: 'curriculum' },
           { label: 'Careers', sectionId: 'careers' },
           { label: 'Eligibility', sectionId: 'eligibility' },
@@ -55,7 +55,7 @@ export function Header({ currentPage, onMenuToggle }: HeaderProps) {
       case 'home':
         return [
           { label: 'About', sectionId: 'about-imas' },
-          { label: 'Programmes', sectionId: 'about-the-program' },
+          { label: 'Courses', sectionId: 'about-the-program' },
           { label: 'Placement Stats', sectionId: 'placement-stats' },
           { label: 'Placement Partners', sectionId: 'placement-partners' },
           { label: 'Testimonials', sectionId: 'student-testimonials' },
@@ -327,7 +327,7 @@ export function Header({ currentPage, onMenuToggle }: HeaderProps) {
                     currentPage === 'programs' || currentPage === 'admissions' || isAdmissionsMegaMenuOpen ? 'text-[#00a8cc]' : ''
                   }`}
                 >
-                  <span>Programs</span>
+                  <span>Courses</span>
                   <ChevronDown className={`h-3.5 w-3.5 transition-transform duration-200 ${isAdmissionsMegaMenuOpen ? 'rotate-180' : ''}`} />
                 </button>
               </div>

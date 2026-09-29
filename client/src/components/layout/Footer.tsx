@@ -64,7 +64,7 @@ export function Footer() {
                   <Users className="h-4 w-4 group-hover:scale-110 transition-transform duration-300" /> About Us
                 </a>
                 <a href="/programs" className={`flex items-center gap-2 text-gray-300 ${IMAS_TAILWIND_CLASSES.HOVER_TEXT_TEAL} transition-all duration-300 hover:translate-x-2 hover:bg-gray-800/30 rounded-lg p-2 text-sm group`}>
-                  <GraduationCap className="h-4 w-4 group-hover:scale-110 transition-transform duration-300" /> Programmes
+                  <GraduationCap className="h-4 w-4 group-hover:scale-110 transition-transform duration-300" /> Courses
                 </a>
                 <a href="/faculty" className={`flex items-center gap-2 text-gray-300 ${IMAS_TAILWIND_CLASSES.HOVER_TEXT_TEAL} transition-all duration-300 hover:translate-x-2 hover:bg-gray-800/30 rounded-lg p-2 text-sm group`}>
                   <Award className="h-4 w-4 group-hover:scale-110 transition-transform duration-300" /> Faculty

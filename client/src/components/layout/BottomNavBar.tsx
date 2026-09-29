@@ -19,8 +19,8 @@ const getMenuItemsForPage = (page?: string) => {
   switch (page) {
     case 'programs':
       return [
-        { label: 'Programmes', sectionId: 'programs-hero' },
-        { label: 'Programme Highlights', sectionId: 'program-highlights' },
+        { label: 'Courses', sectionId: 'programs-hero' },
+        { label: 'Course Highlights', sectionId: 'program-highlights' },
         { label: 'Why Choose', sectionId: 'why-choose' },
         { label: 'Top Recruiters', sectionId: 'top-recruiters' },
         { label: 'Enquire Now', sectionId: 'cta' }
@@ -28,7 +28,7 @@ const getMenuItemsForPage = (page?: string) => {
     case 'program-detail':
       return [
         { label: 'Overview', sectionId: 'hero' },
-        { label: 'Programme Highlights', sectionId: 'program-highlights' },
+        { label: 'Course Highlights', sectionId: 'program-highlights' },
         { label: 'Curriculum', sectionId: 'curriculum' },
         { label: 'Careers', sectionId: 'careers' },
         { label: 'Eligibility', sectionId: 'eligibility' },
@@ -39,7 +39,7 @@ const getMenuItemsForPage = (page?: string) => {
     case 'home':
       return [
         { label: 'About', sectionId: 'about-imas' },
-        { label: 'Programmes', sectionId: 'about-the-program' },
+        { label: 'Courses', sectionId: 'about-the-program' },
         { label: 'Placement Stats', sectionId: 'placement-stats' },
         { label: 'Placement Partners', sectionId: 'placement-partners' },
         { label: 'Testimonials', sectionId: 'student-testimonials' },
@@ -173,6 +173,8 @@ export function BottomNavBar({
       'Overview': <Home className="h-4 w-4" />,
       'Programs': <GraduationCap className="h-4 w-4" />,
       'Programmes': <GraduationCap className="h-4 w-4" />,
+      'Courses': <GraduationCap className="h-4 w-4" />,
+      'Course Highlights': <GraduationCap className="h-4 w-4" />,
       'Program Highlights': <GraduationCap className="h-4 w-4" />,
       'Programme Highlights': <GraduationCap className="h-4 w-4" />,
       'Highlights': <GraduationCap className="h-4 w-4" />,
@@ -195,7 +197,6 @@ export function BottomNavBar({
       'Training': <BookOpen className="h-4 w-4" />,
       'FAQ': <FileText className="h-4 w-4" />,
       'Admissions': <FileText className="h-4 w-4" />,
-      'Courses': <FileText className="h-4 w-4" />,
       'Process': <FileText className="h-4 w-4" />,
       'Apply': <FileText className="h-4 w-4" />, 
       'Apply Now': <FileText className="h-4 w-4" />, 
