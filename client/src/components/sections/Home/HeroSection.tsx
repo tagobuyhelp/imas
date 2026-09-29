@@ -56,7 +56,7 @@ export function HeroSection() {
 
             {/* CTA Buttons Row */}
             <div className="flex flex-wrap items-center gap-3 sm:gap-4 pt-1">
-              {/* EXPLORE PROGRAMME */}
+              {/* Explore Programme */}
               <Button 
                 onClick={() => {
                   const el = document.getElementById('about-the-program') || document.getElementById('programs-section');
@@ -65,7 +65,7 @@ export function HeroSection() {
                 }}
                 className="flex-1 sm:flex-initial justify-center bg-gradient-to-r from-[#00bcd4] via-[#00a8cc] to-[#1d4ed8] hover:from-[#00acc1] hover:to-[#1e40af] text-white px-5 sm:px-7 py-3 sm:py-3.5 rounded-xl text-sm sm:text-base font-semibold shadow-md hover:shadow-lg flex items-center gap-2 transition-all min-w-[150px]"
               >
-                <span>EXPLORE PROGRAMME</span>
+                <span>Explore Programme</span>
                 <ArrowRight className="h-4 w-4" />
               </Button>
 
@@ -75,7 +75,7 @@ export function HeroSection() {
                 onClick={() => window.open('https://admission.imas.ac.in/', '_blank')}
                 className="flex-1 sm:flex-initial justify-center bg-[#0c2444]/90 hover:bg-[#102d55] border border-slate-300/40 hover:border-slate-200 text-white px-5 sm:px-7 py-3 sm:py-3.5 rounded-xl text-sm sm:text-base font-semibold shadow-sm transition-all min-w-[130px]"
               >
-                APPLY NOW
+                Apply Now
               </Button>
 
               {/* Watch Campus Story */}
