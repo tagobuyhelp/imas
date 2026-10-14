@@ -58,11 +58,11 @@ export function Header({ currentPage, onMenuToggle }: HeaderProps) {
           { label: 'Courses', sectionId: 'about-the-program' },
           { label: 'Placement Stats', sectionId: 'placement-stats' },
           { label: 'Placement Partners', sectionId: 'placement-partners' },
-          { label: 'Testimonials', sectionId: 'student-testimonials' },
           { label: 'Campus Life', sectionId: 'campus-life' },
           { label: 'Mentors', sectionId: 'instructors-mentors' },
           { label: 'Industry Collaborations', sectionId: 'industry-collaborations' },
           { label: 'Why Choose', sectionId: 'why-choose' },
+          { label: 'Testimonials', sectionId: 'student-testimonials' },
           { label: 'FAQ', sectionId: 'faq' },
           { label: 'Enquire Now', sectionId: 'final-cta' }
         ];

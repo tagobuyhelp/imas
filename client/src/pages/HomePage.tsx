@@ -22,7 +22,6 @@ export function HomePage() {
       <HeroSection />
       <PlacementPartnersSection />
       <PlacementStatsSection />
-      <LearnersSection />
       <AboutSection />
       <MentorsSection />
       <FacultySection />
@@ -30,6 +29,7 @@ export function HomePage() {
       <WhyChooseSection />
       <IndustryCollaborationsSection />
       <CampusLifeSection />
+      <LearnersSection />
       <FAQ />
       <FinalCTASection />
       <StickyCTAFooter heroSectionHeight={800} showFloatingButton={false} />
