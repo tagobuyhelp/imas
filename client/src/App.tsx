@@ -19,6 +19,7 @@ import { BoardOfGovernorsPage } from './pages/BoardOfGovernorsPage';
 import { StatutoryCommitteesPage } from './pages/StatutoryCommitteesPage';
 import { PlacementPage } from './pages/PlacementPage';
 import { PgdmPlusLandingPage } from './pages/PgdmPlusLandingPage';
+import { PgdmPlusNewLandingPage } from './pages/PgdmPlusNewLandingPage';
 import { PgdmFintechLandingPage } from './pages/PgdmFintechLandingPage';
 import { PgdmMbaLandingPage } from './pages/PgdmMbaLandingPage';
 import { WorkingExecutivesLandingPage } from './pages/WorkingExecutivesLandingPage';
@@ -48,13 +49,15 @@ function AppContent(): React.JSX.Element {
   };
 
   const currentPage = getCurrentPage();
-  const isStandalone = ['/pgdm-plus', '/pgdm-fintech', '/pgdm-admission-kolkata', '/best-pgdm-mba-college-in-kolkata', 
+  const isStandalone = ['/pgdm-plus', '/pgdm-plus-new', '/programs/pgdm-plus-new', '/pgdm-fintech', '/pgdm-admission-kolkata', '/best-pgdm-mba-college-in-kolkata', 
     '/pgdm-working-executive-programs', '/best-pgdm-ba-college-in-kolkata', '/mba-global-program', '/pgdm-ai-data-science', '/pgdm-fintech-new'].includes(location.pathname);
 
   if (isStandalone) {
     return (
       <Routes>
         <Route path="/pgdm-plus" element={<PgdmPlusLandingPage />} />
+        <Route path="/pgdm-plus-new" element={<PgdmPlusNewLandingPage />} />
+        <Route path="/programs/pgdm-plus-new" element={<PgdmPlusNewLandingPage />} />
         <Route path="/pgdm-fintech" element={<PgdmFintechLandingPage />} />
         <Route path="/best-pgdm-mba-college-in-kolkata" element={<PgdmMbaLandingPage />} />
         <Route path="/pgdm-working-executive-programs" element={<WorkingExecutivesLandingPage />} />

@@ -1,0 +1,573 @@
+=== PAGE / SECTION 1 ===
+IMAS Business School | PGDM Plus Website Development Specification
+Page 1
+IMAS BUSINESS SCHOOL
+PGDM PLUS
+Website Development & UI/UX Specification
+Developer Implementation Document
+2 Years \177 Full-Time \177 5 Specialisations \177 International Immersion
+Document Purpose
+Master developer hand-off for the IMAS Business School PGDM Plus programme page, covering UI/UX, interactions,
+curriculum architecture, responsive behaviour, CMS, SEO, media and conversion requirements.
+Critical principle: Build an interactive Business School programme experience, not a static
+prospectus converted into a webpage.
+
+=== PAGE / SECTION 2 ===
+IMAS Business School | PGDM Plus Website Development Specification
+Page 2
+1. Page Objective
+Create a premium, modern, highly interactive PGDM Plus programme landing page covering programme information,
+curriculum exploration, specialisations, expert testimonials, international exposure, placements, career pathways and
+admission conversion.
+2. Page URL & Global Direction
+Item
+Requirement
+URL
+/programs/pgdm-plus
+Positioning
+Premium Business School + Modern Management
+Education + Industry-Oriented + International + Career
+Focus
+Avoid
+Text-heavy layouts, crowded curriculum tables,
+excessive gradients, excessive animation
+3. Hero Section
+Full-width premium hero. H1: 
+Build Management Expertise. Develop Specialised Skills. Become
+Industry-Ready.
+Supporting copy: Two-year, full-time postgraduate management programme combining management fundamentals,
+specialised learning, practical tools, industry exposure and career preparation.
+Badges:
+ 2 Years | Full-Time | 5 Specialisations | Dual Specialisation Option | Summer Internship | International
+Immersion.
+n
+18.5 LPA
+100%
+Highest CTC
+Placement Assistance
+CTAs:
+ APPLY NOW | DOWNLOAD BROCHURE | TALK TO AN ADMISSIONS COUNSELLOR
+Mandatory wording: 100% Placement Assistance. Do not change to 100% Placement.
+4. Sticky CTA
+Desktop sticky bar: PGDM PLUS | 
+n
+18.5 LPA Highest CTC | 100% Placement Assistance | Apply Now. Mobile fixed
+bar: APPLY NOW | DOWNLOAD BROCHURE.
+5. Programme Snapshot
+Field
+Value
+Duration
+2 Years
+Mode
+Full-Time
+
+=== PAGE / SECTION 3 ===
+IMAS Business School | PGDM Plus Website Development Specification
+Page 3
+Field
+Value
+Structure
+4 Semesters
+Year 1
+Common Management Foundation
+Year 2
+Specialisation
+Internship
+8\22610 Weeks
+Specialisations
+5
+International Exposure
+International Immersion Programme
+Final Project
+Industry-Based Capstone
+6. Programme Architecture
+Use desktop horizontal / mobile vertical timeline: 
+YEAR 1
+ 
+\256
+ Common Management Foundation 
+\256
+ 
+8\22610 WEEK
+SUMMER INTERNSHIP
+ 
+\256
+ 
+YEAR 2
+ 
+\256
+ Specialisation 
+\256
+ 
+INDUSTRY-BASED CAPSTONE
+.
+7. Why PGDM Plus
+Management Foundation
+Strong base in management, economics, finance,
+marketing, HR, operations, research and
+communication.
+Specialised Expertise
+Deeper learning in one of five career-oriented
+specialisations.
+Practical Tools
+Business analytics, dashboards, CRM, modelling, HR
+systems, healthcare systems, ERP and SCM tools.
+Industry Exposure
+Internship, live projects, cases, simulations and
+capstone.
+Global Perspective
+International academic/business exposure through
+International Immersion.
+Career Preparation
+Communication, presentation, interview-readiness and
+employability skills.
+8. Expert Testimonials \227 YouTube Video Section
+Placement:
+ After Why PGDM Plus and before detailed curriculum. Create two CMS-controlled video cards.
+Component
+Requirement
+Video 01
+YouTube thumbnail/player 
+\256
+ Expert Name 
+\256
+Designation 
+\256
+ Organisation 
+\256
+ Expertise 
+\256
+ optional
+2-line description
+Video 02
+Same structure
+
+=== PAGE / SECTION 4 ===
+IMAS Business School | PGDM Plus Website Development Specification
+Page 4
+Component
+Requirement
+CMS fields
+Name, Designation, Organisation, Expertise, YouTube
+URL, Thumbnail, Description, Display Order,
+Active/Inactive
+Behaviour
+No autoplay. Lazy-load YouTube iframe on click.
+Desktop 2 columns; mobile stacked.
+Suggested themes
+Industry relevance of management education; future
+management careers and emerging skills.
+CTA: EXPLORE THE PGDM PLUS CURRICULUM 
+\256
+9. Specialisations
+Specialisation
+Description
+Career Areas
+Marketing Management
+Consumer behaviour, branding,
+digital marketing, sales and
+marketing analytics.
+Marketing, Brand, Digital, Sales,
+Business Development, CRM,
+Growth, CX
+Finance Management
+Corporate finance, investment
+analysis, valuation, risk and
+FinTech.
+Financial Analysis, Corporate
+Finance, Banking, Investment
+Research, Risk, Treasury
+Human Resource Management
+Talent, performance, HR analytics,
+leadership and organisational
+development.
+Talent Acquisition, HR Analytics,
+L
+&D;
+, Employee Relations, HRBP,
+Talent
+Hospital Administration &
+Healthcare Management
+Hospital operations, healthcare
+finance, quality and health
+informatics.
+Hospital Administration, Healthcare
+Operations, Quality, Health
+Informatics, Consulting
+Logistics & Supply Chain
+Management
+Procurement, logistics, inventory,
+transportation and supply-chain
+analytics.
+Supply Chain, Procurement,
+Logistics, Warehousing, Inventory,
+Transportation
+10. Dual Specialisation
+Create a distinct feature block: 
+DUAL SPECIALISATION OPTION
+. Copy: Build cross-functional management
+knowledge by combining permitted specialisation areas, subject to applicable programme and academic rules. Do not
+present it as a sixth specialisation.
+11. Curriculum \227 Critical Academic Logic
+NON-NEGOTIABLE:
+ Semester I + II are common to all specialisations. Semester III + IV are specialisation-specific.
+This distinction must be obvious in the UI.
+12. Year 1 Curriculum \227 Semester Tabs
+
+=== PAGE / SECTION 5 ===
+IMAS Business School | PGDM Plus Website Development Specification
+Page 5
+Create tabs 
+SEMESTER I | SEMESTER II
+. Label: 
+COMMON MANAGEMENT FOUNDATION \227 ALL
+SPECIALISATIONS
+. Client-side switching; no page reload.
+Semester I
+Semester II
+Principles of Management & Organisational Behaviour
+Marketing Management
+Managerial Economics
+Financial Management
+Financial Accounting & Analysis
+Human Resource Management
+Business Statistics & Quantitative Techniques
+Operations & Supply Chain Management
+Business Communication
+Business Research Methods & Analytics Lab
+Indian & Global Business Environment
+Digital Transformation & Emerging Technologies
+13. Summer Internship
+Immediately after Year 1: 
+8\22610 WEEK SUMMER INTERNSHIP \227 From Classroom Learning to Industry
+Exposure.
+ Cards: Industry Exposure | Practical Application | Professional Skills | Career Awareness.
+14. Year 2 \227 Specialisation + Semester Tabs
+Use two-level tabs. Level 1: 
+MARKETING | FINANCE | HR | HEALTHCARE | LOGISTICS & SCM
+. Level 2:
+SEMESTER III | SEMESTER IV
+.
+MARKETING
+Semester III
+Semester IV
+Consumer Behaviour & Neuromarketing
+Strategic Marketing Management
+Brand & Product Management
+Retail & E-Commerce Management
+Sales & Distribution Management
+International Marketing
+Digital & Social Media Marketing
+Services Marketing
+Marketing Analytics & CRM
+Marketing Simulation & Case Lab
+Integrated Marketing Communications
+Capstone Project \227 Industry-Based
+FINANCE
+Semester III
+Semester IV
+Corporate Finance
+Strategic Financial Management
+Financial Markets & Institutions
+Mergers, Acquisitions & Corporate Restructuring
+Cost & Management Accounting
+International Finance
+
+=== PAGE / SECTION 6 ===
+IMAS Business School | PGDM Plus Website Development Specification
+Page 6
+Semester III
+Semester IV
+Investment Analysis & Portfolio Management
+Risk Management & Derivatives
+Financial Modeling & Analysis
+FinTech Applications in Finance
+Business Valuation
+Capstone Project \227 Industry-Based
+HR
+Semester III
+Semester IV
+Talent Acquisition & Management
+Strategic Human Resource Management
+Training & Development
+Change Management
+Performance & Compensation Management
+Leadership & Succession Planning
+Labour Laws & Industrial Relations
+Employer Branding & Employee Engagement
+HR Analytics
+HR Simulation & Case Lab
+Organizational Development
+Capstone Project \227 Industry-Based
+HEALTHCARE
+Semester III
+Semester IV
+Healthcare Systems & Policies
+Strategic Hospital Management
+Hospital Operations Management
+Healthcare Laws & Ethics
+Healthcare Finance
+Public Health Management
+Medical Records & Health Informatics
+Digital Health & Telemedicine
+Quality Management & Patient Safety
+Hospital Case Study & Simulation Lab
+Healthcare Human Resource Management
+Capstone Project \227 Industry-Based
+LOGISTICS & SCM
+Semester III
+Semester IV
+Logistics Management
+Strategic Supply Chain Management
+Procurement & Vendor Management
+Global Logistics & International Trade
+Warehouse & Inventory Management
+Sustainable Supply Chain Management
+Transportation & Distribution Management
+Risk & Resilience Management
+Supply Chain Analytics
+SCM Simulation & Case Lab
+
+=== PAGE / SECTION 7 ===
+IMAS Business School | PGDM Plus Website Development Specification
+Page 7
+Semester III
+Semester IV
+ERP & SCM Systems
+Capstone Project \227 Industry-Based
+15. Experiential Learning
+Create six visual cards: LIVE PROJECTS | CASE STUDIES | SIMULATION LABS | SUMMER INTERNSHIP |
+INDUSTRY CAPSTONE | PRESENTATIONS & VIVA.
+16. Tools & Skills \227 Specialisation Tabs
+Mandatory tabs: MARKETING | FINANCE | HR | HEALTHCARE | LOGISTICS & SCM. Only selected specialisation
+content is visible.
+MARKETING
+Google Ads & Meta Ads \177 Marketing Analytics & Dashboards \177 Power BI \177 Google Analytics \177 HubSpot / Zoho CRM \177
+Campaign Planning & ROI Measurement \177 Customer Journey & Experience Mapping
+FINANCE
+Advanced Financial Modelling \227 Excel \177 Power BI \177 Valuation & Forecasting Models \177 Investment & Portfolio Analysis
+Tools \177 Risk & Derivatives Analysis Tools \177 FinTech Platforms & Applications
+HR
+Applicant Tracking Systems \177 HR Analytics & Dashboards \177 Excel / Power BI \177 Payroll & Compliance Systems \177
+Performance Management Tools \177 Employee Engagement & Survey Tools
+HEALTHCARE
+Hospital Information Systems \177 Healthcare Quality & NABH Tools \177 Healthcare Finance & Costing Tools \177 Patient
+Flow & Operations Dashboards \177 Medical Records & Health Informatics Systems
+LOGISTICS & SCM
+ERP / SAP \227 SCM Modules, Simulation Based \177 Supply Chain Analytics \177 Excel / Power BI \177 Inventory & Demand
+Planning Tools \177 Warehouse & Logistics Management Systems \177 Transportation & Network Optimisation Tools
+17. International Immersion \227 Destination Tabs
+Mandatory:
+ Create destination tabs, not four static paragraphs.
+Tabs:
+ DUBAI | SINGAPORE | THAILAND | BALI, INDONESIA.
+Layout:
+ desktop 50/50 image + content; mobile image 
+\256
+ content 
+\256
+ CTA. Include academic exposure, business
+exposure, international perspective and cultural experience.
+Qualification to display: International Immersion destinations, institutional visits and programme components are subject to the academic
+schedule, partner availability and applicable programme arrangements.
+18. Assessment Framework
+50%
+30%
+20%
+
+=== PAGE / SECTION 8 ===
+IMAS Business School | PGDM Plus Website Development Specification
+Page 8
+Theory Examination
+Tool / Lab / Skill-Based Work
+Viva / Project / Case Defense
+19. Placements & Career Support
+Placement must be one of the strongest visual sections and must not be buried.
+n
+18.5 LPA
+100%
+Highest CTC
+Placement Assistance
+Support cards: Resume Development | Interview Preparation | Group Discussion | Business Communication |
+Employability Preparation | Industry Exposure.
+20. Career Pathways \227 Specialisation Tabs
+Tabs: MARKETING | FINANCE | HR | HEALTHCARE | LOGISTICS & SCM. Clicking a tab changes career areas.
+MARKETING
+Marketing \177 Brand Management \177 Digital Marketing \177 Sales \177 Business Development \177 Growth Marketing \177 CRM \177
+Customer Experience
+FINANCE
+Financial Analysis \177 Corporate Finance \177 Banking \177 Investment Research \177 Risk Management \177 Treasury \177 Finance &
+MIS
+HR
+Talent Acquisition \177 HR Analytics \177 Learning & Development \177 Employee Relations \177 HR Business Partner \177 Talent
+Management
+HEALTHCARE
+Hospital Administration \177 Healthcare Operations \177 Quality & Patient Safety \177 Health Informatics \177 Healthcare
+Consulting \177 Public Health Management
+LOGISTICS & SCM
+Supply Chain Management \177 Procurement \177 Logistics \177 Warehousing \177 Inventory Management \177 Transportation \177
+Supply Chain Analytics
+21. Eligibility
+Display: \223Bachelor's degree from a recognised university/institution, subject to applicable programme and admission
+requirements.\224 Do not hard-code additional criteria until approved.
+22. Admission Process
+Four-step process: 
+01 APPLICATION 
+\256
+ 02 APPLICATION REVIEW 
+\256
+ 03 COUNSELLING / SELECTION 
+\256
+ 04
+ADMISSION CONFIRMATION
+. Desktop horizontal; mobile vertical.
+
+=== STREAM 9 ERROR: Ascii85 encoded byte sequences must end with b'~>' ===
+
+=== PAGE / SECTION 10 ===
+IMAS Business School | PGDM Plus Website Development Specification
+Page 10
+Element
+Implementation
+Meta Description
+Explore PGDM Plus at IMAS Business School \227 a
+2-year full-time management programme with 5
+specialisations, summer internship, practical tools,
+international immersion and placement assistance.
+H1
+PGDM Plus
+Keyword themes
+PGDM, PGDM Plus, PGDM Kolkata, PGDM in Kolkata,
+PGDM course, PGDM admission, PGDM curriculum,
+PGDM specialisations, PGDM placements
+Schema
+Course, FAQ, Breadcrumb and Organization schema
+where applicable
+29. Internal Linking
+Link to:
+/programs/pgdm-plus/marketing-management
+/programs/pgdm-plus/finance-management
+/programs/pgdm-plus/human-resource-management
+/programs/pgdm-plus/hospital-healthcare-management
+/programs/pgdm-plus/logistics-supply-chain-management
+30. Image Requirements
+Use high-quality licensed imagery for hero, each specialisation, internship, Dubai/Singapore/Thailand/Bali and
+placement/corporate environments. Avoid low-quality generic stock.
+31. Performance
+Compress images; use WebP/AVIF where supported; lazy-load below-fold images; minimise third-party scripts;
+optimise fonts; protect Core Web Vitals; prevent layout shifts.
+32. Accessibility
+Keyboard-accessible tabs; ARIA tab roles; visible focus; alt text; sufficient contrast; accessible accordions; accessible
+buttons; semantic heading hierarchy.
+33. CMS Requirements
+Make programme information, fees, eligibility, admission dates, placement metrics, curriculum, tools, immersion
+destinations, Expert Testimonials and FAQs editable without code changes.
+34. Content & Data Governance
+
+=== PAGE / SECTION 11 ===
+IMAS Business School | PGDM Plus Website Development Specification
+Page 11
+Developer must not independently modify factual claims. IMAS approval is required for placement statistics, fees,
+eligibility, admission criteria, regulatory statements, partner names, international details, CTC methodology, recruiter
+numbers and placement claims.
+35. Final Component Map
+Hero 
+\256
+ Placement Highlights 
+\256
+ Programme Snapshot 
+\256
+ Why PGDM Plus 
+\256
+ Expert Testimonials 
+\256
+ Programme
+Architecture 
+\256
+ Specialisations 
+\256
+ Dual Specialisation 
+\256
+ Year 1 Curriculum (Semester I/II tabs) 
+\256
+ Summer
+Internship 
+\256
+ Year 2 Curriculum (Specialisation + Semester III/IV nested tabs) 
+\256
+ Experiential Learning 
+\256
+ Tools &
+Skills (Specialisation tabs) 
+\256
+ International Immersion (Destination tabs) 
+\256
+ Assessment 
+\256
+ Placements 
+\256
+ Career
+Pathways (Specialisation tabs) 
+\256
+ Eligibility 
+\256
+ Admission 
+\256
+ Fees 
+\256
+ FAQs 
+\256
+ Final CTA.
+36. Non-Negotiable Development Requirements
+1.
+ Semester I and II must use tabs.
+2.
+ Semester I and II must be clearly labelled common to all specialisations.
+3.
+ Semester III and IV must be specialisation-specific.
+4.
+ Year 2 must use Specialisation Tabs + Semester Tabs.
+5.
+ Tools & Skills must use Specialisation Tabs.
+6.
+ International Immersion must use Destination Tabs.
+7.
+ Career Pathways should use Specialisation Tabs.
+8.
+ 
+n
+18.5 LPA Highest CTC must be highly visible.
+9.
+ 100% Placement Assistance must be highly visible.
+10.
+ Page must be fully responsive.
+11.
+ Page should be CMS-friendly.
+12.
+ Page must be SEO-ready.
+13.
+ Page must remain uncluttered despite complete curriculum information.
+14.
+ Two Expert Testimonial YouTube videos must be CMS-controlled, lazy-loaded and responsive.
+37. Final Design Philosophy
+DISCOVER 
+\256
+ UNDERSTAND 
+\256
+ EXPLORE 
+\256
+ TRUST 
+\256
+ APPLY
+The visitor should be able to understand the programme, curriculum, specialisation options, tools, practical exposure,
+international exposure, career pathways, placement support and admission process quickly.
+The final page must feel like a digital Business School programme experience, not a PDF prospectus placed
+on a website.
+DEVELOPER
+HAND-OFF
+This document is the master implementation specification for the PGDM Plus
+programme page. Implement UI/UX, content, interactions, responsive behaviour, CMS
+fields and SEO requirements against this specification and validate final factual data
+with IMAS before launch.
+
+=== STREAM 12 ERROR: Ascii85 encoded byte sequences must end with b'~>' ===

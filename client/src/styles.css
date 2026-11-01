@@ -736,3 +736,84 @@ html.npf-open {
 .animate-marquee:hover {
   animation-play-state: paused;
 }
+
+/* ========================================================= */
+/* SCROLL REVEAL & INTERACTIVE HOVER UTILITIES               */
+/* ========================================================= */
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Scroll-triggered Reveal Animations */
+.reveal-init {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-init.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-delay-100 { transition-delay: 100ms; }
+.reveal-delay-150 { transition-delay: 150ms; }
+.reveal-delay-200 { transition-delay: 200ms; }
+.reveal-delay-250 { transition-delay: 250ms; }
+.reveal-delay-300 { transition-delay: 300ms; }
+.reveal-delay-400 { transition-delay: 400ms; }
+
+/* Interactive Shimmer Button Sweep */
+.shimmer-hover {
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer-hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 80%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.35) 50%,
+    transparent 100%
+  );
+  transform: skewX(-20deg);
+  pointer-events: none;
+  transition: transform 0.75s ease-in-out;
+}
+
+.shimmer-hover:hover::before {
+  transform: translateX(350%) skewX(-20deg);
+}
+
+/* 3D Card Hover Elevation */
+.card-hover-lift {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease;
+}
+
+.card-hover-lift:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 35px -8px rgba(12, 35, 64, 0.12), 0 10px 15px -5px rgba(0, 188, 212, 0.08);
+}
+
+.card-hover-glow-cyan {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.35s ease;
+}
+
+.card-hover-glow-cyan:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px -10px rgba(0, 188, 212, 0.25), 0 0 20px 2px rgba(0, 188, 212, 0.18);
+  border-color: rgba(0, 188, 212, 0.7);
+}
+
+/* Scroll progress bar glow */
+.scroll-progress-glow {
+  box-shadow: 0 0 12px 2px rgba(0, 188, 212, 0.9), 0 0 5px 1px rgba(56, 189, 248, 0.7);
+}

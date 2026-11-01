@@ -20,6 +20,12 @@ type Page = {
  */
 const pages: Page[] = [
     {
+        title: 'PGDM Plus (New Master Spec - 2026)',
+        desc: 'New interactive specification with two-level curriculum tabs, YouTube video cards, dual specialisations, and immersion.',
+        link: '/pgdm-plus-new',
+        status: 'new'
+    },
+    {
         title: 'PGDM in AI & Data Science',
         desc: 'New compact template design for AI & Data Science.',
         link: '/pgdm-ai-data-science',
@@ -32,7 +38,7 @@ const pages: Page[] = [
         status: 'new'
     },
     {
-        title: "PGDM Plus",
+        title: "PGDM Plus (Existing)",
         desc: "Advanced PGDM programme with industry-focused curriculum.",
         link: "/pgdm-plus",
         status: "live",
