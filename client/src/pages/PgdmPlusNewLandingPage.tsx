@@ -17,6 +17,11 @@ type SpecialisationKey = 'marketing' | 'finance' | 'hr' | 'healthcare' | 'logist
 type DestinationKey = 'dubai' | 'singapore' | 'thailand' | 'bali'
 type GalleryFilter = 'all' | 'classrooms' | 'industrial' | 'events'
 
+// Clean modern Ampersand component for headlines and typography
+const Amp = ({ className = "ampersand font-sans font-bold text-[#0c2340] mx-1.5 inline-block" }: { className?: string }) => (
+  <span className={className} aria-label="and">&amp;</span>
+)
+
 const companyLogos = [
   { name: 'Swiggy', logo: '/uploads/swiggy-logo.svg', h: 'h-6' },
   { name: 'Google', logo: '/uploads/Google_logo_2013-2015-600x206.png', h: 'h-6' },
@@ -1582,7 +1587,7 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
               <span className="text-cyan-300 font-bold">Experiential Immersion Gallery</span>
             </div>
             <h2 className="font-display text-3xl sm:text-4xl lg:text-[42px] font-bold text-[#0c2340] tracking-tight mt-1">
-              Life at IMAS & <span className="font-display bg-gradient-to-r from-orange-500 via-yellow-500 to-amber-500 bg-clip-text text-transparent">Corporate Engagements</span>
+              Life at IMAS <Amp /> <span className="font-display bg-gradient-to-r from-orange-500 via-yellow-500 to-amber-500 bg-clip-text text-transparent">Corporate Engagements</span>
             </h2>
             <p className="text-sm sm:text-base text-slate-600 mt-2">
               Witness actual classroom environments, industrial factory visits, and executive seminars attended by IMAS PGDM students.
@@ -1654,7 +1659,7 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
               <span className="text-cyan-300 font-bold">Corporate Endorsements</span>
             </div>
             <h2 className="font-display text-3xl sm:text-4xl lg:text-[42px] font-bold text-[#0c2340] tracking-tight mt-1">
-              Expert Testimonials & <span className="font-display bg-gradient-to-r from-orange-500 via-yellow-500 to-amber-500 bg-clip-text text-transparent">Industry Voices</span>
+              Expert Testimonials <Amp /> <span className="font-display bg-gradient-to-r from-orange-500 via-yellow-500 to-amber-500 bg-clip-text text-transparent">Industry Voices</span>
             </h2>
             <p className="text-sm sm:text-base text-slate-600 mt-2">
               Hear what corporate leaders and hiring directors say about IMAS graduates and managerial preparedness.
@@ -1889,7 +1894,7 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
               Structured <span className="font-display bg-gradient-to-r from-orange-500 via-yellow-500 to-amber-500 bg-clip-text text-transparent">Curriculum by Semester</span>
             </h2>
             <p className="text-sm sm:text-base text-slate-600 mt-2">
-              <strong className="text-slate-900 font-semibold">Critical Academic Logic:</strong> Semester I & II are common management foundation to all specialisations. Semester III & IV are specialized and domain-specific.
+              <strong className="text-slate-900 font-semibold">Critical Academic Logic:</strong> Semester I <Amp className="ampersand font-sans font-bold text-slate-800 mx-1 inline-block" /> II are common management foundation to all specialisations. Semester III <Amp className="ampersand font-sans font-bold text-slate-800 mx-1 inline-block" /> IV are specialized and domain-specific.
             </p>
           </div>
 
@@ -1904,7 +1909,7 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
                     : 'text-slate-600 hover:text-[#0c2440]'
                 }`}
               >
-                Year 1: Foundation (Sem I & II)
+                Year 1: Foundation (Sem I <Amp className="ampersand font-sans font-bold mx-1 inline-block" /> II)
               </button>
               <button
                 onClick={() => setActiveCurriculumYear('year2')}
@@ -1914,7 +1919,7 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
                     : 'text-slate-600 hover:text-[#0c2440]'
                 }`}
               >
-                Year 2: Specialisation (Sem III & IV)
+                Year 2: Specialisation (Sem III <Amp className="ampersand font-sans font-bold mx-1 inline-block" /> IV)
               </button>
             </div>
           </div>
@@ -1944,10 +1949,10 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
                 <button
                   onClick={() => setActiveSem1Tab('sem2')}
                   className={`pb-3 px-6 text-sm font-bold border-b-2 transition-all ${
-                    activeSem1Tab === 'sem2' ? 'border-[#00bcd4] text-[#0c2440] font-black' : 'border-transparent text-slate-500 hover:text-[#0c2440]'
+                    activeSem1Tab === 'sem2' ? 'border-[#00bcd4] text-[#0c2340] font-black' : 'border-transparent text-slate-500 hover:text-[#0c2440]'
                   }`}
                 >
-                  Semester II (Functional Core & Lab)
+                  Semester II (Functional Core <Amp className="ampersand font-sans font-bold mx-1 inline-block" /> Lab)
                 </button>
               </div>
 
@@ -2044,7 +2049,7 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
                       activeSemYear2Tab === 'sem4' ? 'border-[#00bcd4] text-[#0c2440] font-black' : 'border-transparent text-slate-500 hover:text-[#0c2440]'
                     }`}
                   >
-                    Semester IV (Strategic & Capstone)
+                    Semester IV (Strategic <Amp className="ampersand font-sans font-bold mx-1 inline-block" /> Capstone)
                   </button>
                 </div>
               </div>
@@ -2133,7 +2138,7 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
               <span className="text-cyan-300 font-bold">Hands-On Mastery</span>
             </div>
             <h2 className="font-display text-3xl sm:text-4xl lg:text-[42px] font-bold text-[#0c2340] tracking-tight mt-1">
-              Tools & <span className="font-display bg-gradient-to-r from-orange-500 via-yellow-500 to-amber-500 bg-clip-text text-transparent">Technology Training</span>
+              Tools <Amp /> <span className="font-display bg-gradient-to-r from-orange-500 via-yellow-500 to-amber-500 bg-clip-text text-transparent">Technology Training</span>
             </h2>
             <p className="text-sm sm:text-base text-slate-600 mt-2">
               Master the specialized software suites, analytics platforms, and workflow technologies required by hiring managers.
@@ -2372,7 +2377,7 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
               <span className="text-cyan-300 font-bold">Corporate Success</span>
             </div>
             <h2 className="font-display text-3xl sm:text-4xl lg:text-[42px] font-bold text-[#0c2340] tracking-tight mt-1">
-              Placements & <span className="font-display bg-gradient-to-r from-orange-500 via-yellow-500 to-amber-500 bg-clip-text text-transparent">Career Support</span>
+              Placements <Amp /> <span className="font-display bg-gradient-to-r from-orange-500 via-yellow-500 to-amber-500 bg-clip-text text-transparent">Career Support</span>
             </h2>
             <p className="text-sm sm:text-base text-slate-600 mt-2">
               A comprehensive corporate relations ecosystem backed by verified compensation records and top tier national recruiters.
@@ -2449,7 +2454,7 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
               <span className="text-cyan-300 font-bold">Future Trajectories</span>
             </div>
             <h2 className="font-display text-3xl sm:text-4xl lg:text-[42px] font-bold text-[#0c2340] tracking-tight mt-1">
-              Career Pathways & <span className="font-display bg-gradient-to-r from-orange-500 via-yellow-500 to-amber-500 bg-clip-text text-transparent">Recruiting Sectors</span>
+              Career Pathways <Amp /> <span className="font-display bg-gradient-to-r from-orange-500 via-yellow-500 to-amber-500 bg-clip-text text-transparent">Recruiting Sectors</span>
             </h2>
             <p className="text-sm sm:text-base text-slate-600 mt-2">
               Explore corporate roles and marquee brands hiring graduates from your chosen discipline.
@@ -2520,7 +2525,7 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
               <span className="text-cyan-300 font-bold">Join IMAS</span>
             </div>
             <h2 className="font-display text-3xl sm:text-4xl lg:text-[42px] font-bold text-[#0c2340] tracking-tight mt-1">
-              Eligibility & <span className="font-display bg-gradient-to-r from-orange-500 via-yellow-500 to-amber-500 bg-clip-text text-transparent">Admission Process</span>
+              Eligibility <Amp /> <span className="font-display bg-gradient-to-r from-orange-500 via-yellow-500 to-amber-500 bg-clip-text text-transparent">Admission Process</span>
             </h2>
             <p className="text-sm sm:text-base text-slate-600 mt-2">
               A transparent, merit-focused four-stage selection process for aspiring business leaders.

@@ -817,3 +817,56 @@ html {
 .scroll-progress-glow {
   box-shadow: 0 0 12px 2px rgba(0, 188, 212, 0.9), 0 0 5px 1px rgba(56, 189, 248, 0.7);
 }
+
+/* ========================================================= */
+/* FIX AMPERSAND (&) FONT ACROSS HEADINGS & WEBSITE          */
+/* ========================================================= */
+
+/* Override Playfair Display's ornate cursive ampersand ligature by
+   remapping the single character U+0026 to clean modern sans-serif */
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 700 900;
+  src: local('Plus Jakarta Sans Bold'), local('Plus Jakarta Sans'), local('Inter Bold'), local('Inter'), local('Segoe UI Bold'), local('Segoe UI'), local('Arial');
+  unicode-range: U+0026;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 500 600;
+  src: local('Plus Jakarta Sans SemiBold'), local('Plus Jakarta Sans'), local('Inter'), local('Segoe UI'), local('Arial');
+  unicode-range: U+0026;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: normal;
+  font-weight: 100 400;
+  src: local('Plus Jakarta Sans'), local('Inter'), local('Segoe UI'), local('Arial');
+  unicode-range: U+0026;
+}
+
+@font-face {
+  font-family: 'Playfair Display';
+  font-style: italic;
+  font-weight: 100 900;
+  src: local('Plus Jakarta Sans'), local('Inter'), local('Segoe UI'), local('Arial');
+  unicode-range: U+0026;
+}
+
+/* Dedicated ampersand styling class */
+.ampersand,
+.pgdm-new-landing .ampersand {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  font-style: normal !important;
+  display: inline-block;
+}
+
+/* Card titles and sub-headings inside PGDM Plus landing use modern sans-serif */
+.pgdm-new-landing h3:not(.font-serif),
+.pgdm-new-landing h4:not(.font-serif) {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
