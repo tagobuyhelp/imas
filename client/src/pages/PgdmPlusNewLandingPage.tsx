@@ -512,75 +512,81 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
     }
   }
 
-  const toolsAndSkillsData: Record<SpecialisationKey, { title: string; tools: string[]; focus: string }> = {
+  interface ToolItem {
+    name: string
+    category: string
+    image: string
+  }
+
+  const toolsAndSkillsData: Record<SpecialisationKey, { title: string; focus: string; tools: ToolItem[] }> = {
     marketing: {
       title: 'Marketing & Digital Tech Suite',
       focus: 'Hands-on Campaign Planning, Attribution & Visualisation',
       tools: [
-        'Google Ads (Search, Display, Video)',
-        'Meta Ads Manager & Audience Insights',
-        'Power BI Marketing Dashboards',
-        'Google Analytics 4 (GA4)',
-        'HubSpot & Zoho CRM Suites',
-        'Campaign ROI Attribution Models',
-        'Customer Journey Mapping Tools',
-        'SEMrush & Digital Audit Tools'
+        { name: 'Google Ads', category: 'Search, Display & Video Ads', image: '/uploads/tools/google-ads.svg' },
+        { name: 'Meta Ads Manager', category: 'Audience Targeting & ROI', image: '/uploads/tools/meta.svg' },
+        { name: 'Power BI', category: 'Marketing ROI Dashboards', image: '/uploads/tools/power-bi.svg' },
+        { name: 'Google Analytics 4', category: 'Event & Conversion Tracking', image: '/uploads/tools/ga4.svg' },
+        { name: 'HubSpot CRM', category: 'Inbound Ingestion & Lead Flows', image: '/uploads/tools/hubspot.svg' },
+        { name: 'SEMrush', category: 'SEO, Keywords & Site Audits', image: '/uploads/tools/semrush.svg' },
+        { name: 'Zoho CRM', category: 'Customer Journey Pipelines', image: '/uploads/tools/zoho.svg' },
+        { name: 'Mailchimp', category: 'Email Automation & Drip Flows', image: '/uploads/tools/mailchimp.svg' }
       ]
     },
     finance: {
       title: 'Finance & Quantitative Toolset',
       focus: 'Institutional Valuation, Forecasting & Capital Modeling',
       tools: [
-        'Advanced Financial Modelling (Excel & VBA)',
-        'Power BI Financial Performance Reporting',
-        'DCF & LBO Corporate Valuation Models',
-        'Portfolio Optimization & Risk Tools',
-        'Derivatives & Option Pricing Simulators',
-        'FinTech Payment Gateway & Neo-banking Systems',
-        'Bloomberg & Reuters Terminal Simulators',
-        'Statistical Forecasting Packages'
+        { name: 'Advanced Excel & VBA', category: 'Financial Modeling & Macros', image: '/uploads/tools/excel.svg' },
+        { name: 'Power BI', category: 'Corporate Performance Reporting', image: '/uploads/tools/power-bi.svg' },
+        { name: 'Bloomberg Terminal', category: 'Capital Markets & Asset Pricing', image: '/uploads/tools/bloomberg.svg' },
+        { name: 'Python for Finance', category: 'Quant Risk & Algorithmic Models', image: '/uploads/tools/python.svg' },
+        { name: 'Tableau', category: 'Visual Portfolio Dashboards', image: '/uploads/tools/tableau.png' },
+        { name: 'TallyPrime ERP', category: 'Corporate Accounting & GST', image: '/uploads/tools/tally.png' },
+        { name: 'IBM SPSS', category: 'Statistical Time-Series & Risk', image: '/uploads/tools/ibm.svg' },
+        { name: 'Razorpay / FinTech', category: 'Payment Gateways & Neo-Banking', image: '/uploads/tools/razorpay.svg' }
       ]
     },
     hr: {
       title: 'Human Resource Tech & Analytics',
       focus: 'Talent Acquisition Systems & People Intelligence',
       tools: [
-        'Applicant Tracking Systems (ATS Platforms)',
-        'HR Analytics & Attrition Predictive Models',
-        'Excel & Power BI HR Dashboards',
-        'Payroll & Statutory Labour Compliance Systems',
-        'Performance Appraisal & KPI Tracking Suites',
-        'Employee Net Promoter & Engagement Survey Tools',
-        'HRIS & Workday-Style Workflow Systems',
-        'Psychometric & Competency Assessment Suites'
+        { name: 'Workday HCM', category: 'Enterprise HRIS & Workflow', image: '/uploads/tools/workday.svg' },
+        { name: 'LinkedIn Recruiter', category: 'Talent Pipeline & Sourcing', image: '/uploads/tools/linkedin.svg' },
+        { name: 'Power BI HR', category: 'Attrition & Headcount Analytics', image: '/uploads/tools/power-bi.svg' },
+        { name: 'Microsoft Excel', category: 'Comp & Benefit Analytics', image: '/uploads/tools/excel.svg' },
+        { name: 'BambooHR', category: 'Employee Experience & Onboarding', image: '/uploads/tools/bamboohr.svg' },
+        { name: 'Zoho People', category: 'Attendance & Leave HRMS', image: '/uploads/tools/zoho.svg' },
+        { name: 'Greenhouse ATS', category: 'Applicant Tracking & Hiring', image: '/uploads/tools/greenhouse.svg' },
+        { name: 'IBM Kenexa / Talent', category: 'Competency & Skill Assessments', image: '/uploads/tools/ibm.svg' }
       ]
     },
     healthcare: {
       title: 'Healthcare Informatics & Quality Systems',
       focus: 'Hospital Administration & Clinical Quality Standards',
       tools: [
-        'Hospital Information Management Systems (HIMS)',
-        'NABH Quality & Clinical Audit Toolkits',
-        'Healthcare Finance, Billing & TPA Claim Softwares',
-        'Patient Flow & Bed Occupancy Dashboards',
-        'Electronic Health Record (EHR) Systems',
-        'Telemedicine & Remote Consultation Platforms',
-        'Biomedical Asset & Equipment Tracking Softwares',
-        'Hospital Incident Reporting & Patient Safety Suites'
+        { name: 'Epic Systems (EHR)', category: 'Electronic Health Records', image: '/uploads/tools/epic.svg' },
+        { name: 'Oracle Cerner', category: 'Hospital Information (HIMS)', image: '/uploads/tools/cerner.svg' },
+        { name: 'GE Healthcare PACS', category: 'Biomedical Asset & Imaging', image: '/uploads/tools/ge-healthcare.svg' },
+        { name: 'Power BI Healthcare', category: 'Bed Occupancy & Patient Flow', image: '/uploads/tools/power-bi.svg' },
+        { name: 'Microsoft Excel', category: 'TPA Claims & Hospital Billing', image: '/uploads/tools/excel.svg' },
+        { name: 'Practo Telehealth', category: 'Digital Consultation & OPD', image: '/uploads/tools/practo.png' },
+        { name: 'Apollo Health HIMS', category: 'Clinical Operations & Audit', image: '/uploads/apollo-hospitals-logo-png-transparent.png' },
+        { name: 'Fortis Quality Suite', category: 'Patient Safety & Clinical Standards', image: '/uploads/fortis_logo.png' }
       ]
     },
     logistics: {
       title: 'Logistics, ERP & SCM Software',
       focus: 'End-to-End Enterprise Resource Planning & Optimization',
       tools: [
-        'SAP / ERP — SCM & Material Management Modules',
-        'Supply Chain Analytics & Demand Planning Suites',
-        'Advanced Excel & Power BI Logistics Dashboards',
-        'Warehouse Management Systems (WMS Software)',
-        'Transportation Management Systems (TMS Softwares)',
-        'Route Optimization & GIS Fleet Mapping Tools',
-        'Inventory Replenishment & Safety Stock Models',
-        'Global Freight & Customs Documentation Softwares'
+        { name: 'SAP S/4HANA (SCM)', category: 'Materials Mgmt & Supply Chain', image: '/uploads/tools/sap.svg' },
+        { name: 'Oracle SCM Cloud', category: 'Enterprise Procurement ERP', image: '/uploads/tools/oracle.svg' },
+        { name: 'Power BI Logistics', category: 'Demand Planning & Analytics', image: '/uploads/tools/power-bi.svg' },
+        { name: 'Microsoft Excel', category: 'Safety Stock & Reorder Models', image: '/uploads/tools/excel.svg' },
+        { name: 'DHL Express SCM', category: 'Global Freight & Express Network', image: '/uploads/dhl-1.svg' },
+        { name: 'Blue Dart Logistics', category: 'Domestic Hub & Linehaul TMS', image: '/uploads/460-4608309_blue-dart-logo-transparent-blue-dart-express-logo.png' },
+        { name: 'FedEx Global Trade', category: 'Cross-Border Customs & Freight', image: '/uploads/purepng.com-fedex-logologobrand-logoiconslogos-251519939539h7rji.png' },
+        { name: 'Delhivery Supply Chain', category: 'Warehouse & Automated Sortation', image: '/uploads/delhivery.png' }
       ]
     }
   }
@@ -855,7 +861,7 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
       {/* ========================================================= */}
       {/* 1. TOP ANNOUNCEMENT BAR (MATCHING MAIN HEADER REFERENCE) */}
       {/* ========================================================= */}
-      <div className="bg-[#0c2440] text-white py-1.5 sm:py-2 text-xs border-b border-amber-500/20 overflow-hidden">
+      <div className="bg-orange-800 text-white py-1.5 sm:py-2 text-xs border-b border-amber-500/20 overflow-hidden">
         <div className="max-w-[1550px] mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
           
           {/* Mobile View */}
@@ -1054,7 +1060,7 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
             <div className="lg:col-span-7 xl:col-span-7 space-y-3 sm:space-y-3.5">
               
               {/* Eyebrow Tag */}
-              <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#00a8cc] border border-[#38bdf8]/35 backdrop-blur-xs text-[10px] sm:text-[11px] font-bold tracking-[0.12em] text-white uppercase shadow-xs">
+              <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#0c2440] border border-[#00bcd4]/40 backdrop-blur-xs text-[10px] sm:text-[11px] font-bold tracking-[0.12em] text-white uppercase shadow-xs">
                 <span className="w-1.5 h-1.5 rounded-full bg-yellow-400 animate-pulse shrink-0" />
                 <span>AICTE APPROVED • 2-YEAR FULL-TIME POSTGRADUATE PROGRAMME</span>
               </div>
@@ -2350,16 +2356,26 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
                   </span>
                 </div>
 
-                <div className="grid grid-cols-2 gap-2 sm:gap-3">
+                <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3.5">
                   {current.tools.map((tool) => (
                     <div 
-                      key={tool} 
-                      className="p-2.5 sm:p-3.5 rounded-xl bg-white/[0.05] border border-white/10 flex items-center gap-2 sm:gap-3 hover:bg-cyan-500/15 hover:border-cyan-400/50 hover:scale-[1.02] hover:shadow-md transition-all duration-200 group cursor-default"
+                      key={tool.name} 
+                      className="p-3 sm:p-4 rounded-xl bg-white/[0.05] hover:bg-white/[0.12] border border-white/10 hover:border-cyan-400/50 flex flex-col items-center text-center transition-all duration-200 group cursor-default shadow-sm hover:shadow-cyan-500/10"
                     >
-                      <div className="h-7 w-7 sm:h-8 sm:w-8 rounded-lg bg-cyan-500/20 text-cyan-300 group-hover:bg-cyan-400 group-hover:text-slate-950 flex items-center justify-center flex-shrink-0 transition-colors">
-                        <Check className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
+                      <div className="h-12 w-12 sm:h-14 sm:w-14 rounded-xl bg-white p-2 sm:p-2.5 flex items-center justify-center mb-2.5 shadow-md group-hover:scale-105 transition-transform overflow-hidden">
+                        <img 
+                          src={tool.image} 
+                          alt={tool.name} 
+                          className="w-full h-full object-contain"
+                          loading="lazy" 
+                        />
                       </div>
-                      <span className="text-[11px] sm:text-sm font-semibold text-slate-100 group-hover:text-cyan-200 transition-colors truncate">{tool}</span>
+                      <span className="text-xs sm:text-sm font-bold text-white group-hover:text-cyan-200 transition-colors line-clamp-1">
+                        {tool.name}
+                      </span>
+                      <span className="text-[10px] sm:text-[11px] text-slate-300 font-medium mt-0.5 line-clamp-1">
+                        {tool.category}
+                      </span>
                     </div>
                   ))}
                 </div>
