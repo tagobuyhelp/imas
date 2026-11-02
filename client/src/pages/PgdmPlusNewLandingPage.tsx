@@ -1406,7 +1406,7 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
           </div>
 
           {/* 8 Bento Snapshot Cards: Mobile Horizontal Swipe, Desktop 4-Col Grid */}
-          <div className="flex overflow-x-auto pb-3 pt-1 gap-3 snap-x snap-mandatory scrollbar-hide md:grid md:grid-cols-4 md:gap-3.5 md:overflow-visible">
+          <div className="flex overflow-x-auto pb-3 pt-2 gap-3 snap-x snap-mandatory scrollbar-hide md:grid md:grid-cols-4 md:gap-3.5 md:overflow-visible">
             {programmeSnapshot.map((item, idx) => {
               const styles = getSnapshotThemeStyles(item.theme)
               return (
@@ -1511,7 +1511,7 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
           </div>
 
           {/* Desktop 4-Col Grid / Mobile Horizontal Swipe Timeline */}
-          <div className="flex overflow-x-auto pb-3 pt-0.5 gap-3 snap-x snap-mandatory scrollbar-hide md:grid md:grid-cols-4 md:gap-4 md:overflow-visible relative">
+          <div className="flex overflow-x-auto pb-3 pt-2 gap-3 snap-x snap-mandatory scrollbar-hide md:grid md:grid-cols-4 md:gap-4 md:overflow-visible relative">
             {[
               {
                 stage: 'YEAR 1',
@@ -1640,7 +1640,7 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
           </div>
 
           {/* 6 Strategic Pillar Cards: Mobile Horizontal Swipe, Desktop 3-Col Grid */}
-          <div className="flex overflow-x-auto pb-3 pt-0.5 gap-3 snap-x snap-mandatory scrollbar-hide md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-6 md:overflow-visible">
+          <div className="flex overflow-x-auto pb-3 pt-2 gap-3 snap-x snap-mandatory scrollbar-hide md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-6 md:overflow-visible">
             {whyPgdmPlusFeatures.map((item, idx) => {
               const styles = getSnapshotThemeStyles(item.theme)
               return (
@@ -1760,7 +1760,7 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
           </div>
 
           {/* Gallery Grid: Mobile Horizontal Swipe, Desktop 3-Col Grid */}
-          <div className="flex overflow-x-auto pb-3 gap-3 snap-x snap-mandatory scrollbar-hide sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:gap-6 sm:overflow-visible">
+          <div className="flex overflow-x-auto pb-3 pt-2 gap-3 snap-x snap-mandatory scrollbar-hide sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:gap-6 sm:overflow-visible">
             {filteredGallery.map((item, idx) => (
               <div 
                 key={idx} 
@@ -1815,7 +1815,7 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
             <ArrowRight className="w-3 h-3 text-cyan-600" />
           </div>
 
-          <div className="flex overflow-x-auto pb-3 gap-3.5 snap-x snap-mandatory scrollbar-hide md:grid md:grid-cols-2 md:gap-8 max-w-5xl mx-auto md:overflow-visible">
+          <div className="flex overflow-x-auto pb-3 pt-2 gap-3.5 snap-x snap-mandatory scrollbar-hide md:grid md:grid-cols-2 md:gap-8 max-w-5xl mx-auto md:overflow-visible">
             {expertVideos.map((video, idx) => (
               <div 
                 key={video.id} 
@@ -2112,11 +2112,11 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
               </div>
 
               {/* Subjects List: Mobile Horizontal Swipe, Desktop 2-Col Grid */}
-              <div className="flex overflow-x-auto pb-3 gap-2.5 snap-x snap-mandatory scrollbar-hide sm:grid sm:grid-cols-2 sm:gap-3 sm:overflow-visible">
+              <div className="flex overflow-x-auto pb-3 pt-2 gap-2.5 snap-x snap-mandatory scrollbar-hide sm:grid sm:grid-cols-2 sm:gap-3 sm:overflow-visible">
                 {year1Syllabus[activeSem1Tab].subjects.map((sub, i) => (
                   <div 
                     key={sub.name} 
-                    className="w-[230px] xs:w-[250px] sm:w-auto shrink-0 snap-start sm:shrink p-3.5 sm:p-4 rounded-xl bg-[#0c2440] text-white border border-[#1e3e6b] shadow-md hover:border-cyan-400 hover:shadow-cyan-500/20 hover:translate-x-1.5 transition-all duration-200 flex items-start gap-3 group"
+                    className="w-[230px] xs:w-[250px] sm:w-auto shrink-0 snap-start sm:shrink p-3.5 sm:p-4 rounded-xl bg-[#0c2440] text-white border border-[#1e3e6b] shadow-md hover:border-cyan-400 hover:shadow-cyan-500/20 sm:hover:translate-x-1.5 transition-all duration-200 flex items-start gap-3 group"
                   >
                     <span className="flex-shrink-0 h-6 w-6 rounded-md bg-white/10 group-hover:bg-[#00bcd4] text-cyan-300 group-hover:text-[#0c2440] text-xs font-bold flex items-center justify-center transition-colors">
                       0{i + 1}
@@ -2221,11 +2221,11 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
               </div>
 
               {/* Specialisation Subjects: Mobile Horizontal Swipe, Desktop 2-Col Grid */}
-              <div className="flex overflow-x-auto pb-3 gap-2.5 snap-x snap-mandatory scrollbar-hide sm:grid sm:grid-cols-2 sm:gap-3 sm:overflow-visible pt-1">
+              <div className="flex overflow-x-auto pb-3 pt-2 gap-2.5 snap-x snap-mandatory scrollbar-hide sm:grid sm:grid-cols-2 sm:gap-3 sm:overflow-visible">
                 {year2Syllabus[activeSpecialisation][activeSemYear2Tab].map((subjectName, i) => (
                   <div 
                     key={subjectName} 
-                    className="w-[230px] xs:w-[250px] sm:w-auto shrink-0 snap-start sm:shrink p-3.5 sm:p-4 rounded-xl bg-[#0c2440] text-white border border-[#1e3e6b] shadow-md hover:border-cyan-400 hover:shadow-cyan-500/20 hover:translate-x-1.5 transition-all duration-200 flex items-start gap-3 group"
+                    className="w-[230px] xs:w-[250px] sm:w-auto shrink-0 snap-start sm:shrink p-3.5 sm:p-4 rounded-xl bg-[#0c2440] text-white border border-[#1e3e6b] shadow-md hover:border-cyan-400 hover:shadow-cyan-500/20 sm:hover:translate-x-1.5 transition-all duration-200 flex items-start gap-3 group"
                   >
                     <span className="flex-shrink-0 h-6 w-6 rounded-md bg-white/10 group-hover:bg-[#00bcd4] text-cyan-300 group-hover:text-[#0c2440] text-xs font-bold flex items-center justify-center transition-colors">
                       0{i + 1}
@@ -2273,7 +2273,7 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
             <ArrowRight className="w-3.5 h-3.5 text-cyan-600" />
           </div>
 
-          <div className="flex overflow-x-auto pb-3 gap-3 snap-x snap-mandatory scrollbar-hide sm:grid sm:grid-cols-3 lg:grid-cols-6 sm:overflow-visible">
+          <div className="flex overflow-x-auto pb-3 pt-2 gap-3 snap-x snap-mandatory scrollbar-hide sm:grid sm:grid-cols-3 lg:grid-cols-6 sm:overflow-visible">
             {[
               { title: 'Live Projects', icon: Target, desc: 'Real enterprise challenges', beam: 'from-cyan-400 to-sky-500', iconColor: 'text-cyan-300', hoverBorder: 'hover:border-cyan-400', hoverShadow: 'hover:shadow-cyan-500/20' },
               { title: 'Case Studies', icon: FileText, desc: 'Harvard & IIM cases', beam: 'from-amber-400 to-yellow-500', iconColor: 'text-amber-300', hoverBorder: 'hover:border-amber-400', hoverShadow: 'hover:shadow-amber-500/20' },
@@ -2518,7 +2518,7 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
             <ArrowRight className="w-3 h-3 text-cyan-600" />
           </div>
 
-          <div className="flex overflow-x-auto pb-3 gap-3 snap-x snap-mandatory scrollbar-hide md:grid md:grid-cols-3 md:gap-6 max-w-4xl mx-auto md:overflow-visible">
+          <div className="flex overflow-x-auto pb-3 pt-2 gap-3 snap-x snap-mandatory scrollbar-hide md:grid md:grid-cols-3 md:gap-6 max-w-4xl mx-auto md:overflow-visible">
             <div className="w-[220px] xs:w-[250px] shrink-0 snap-start md:w-auto md:shrink p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-[#0c2440] text-white border border-[#1e3e6b] text-center shadow-xl card-hover-lift hover:border-amber-400 hover:shadow-amber-500/20 transition-all duration-300 reveal-init reveal-delay-100 relative overflow-hidden">
               <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-amber-400 to-yellow-500" />
               <div className="font-display text-3xl sm:text-4xl md:text-5xl font-black text-amber-400 tracking-tight mb-1 sm:mb-2">50%</div>
@@ -2569,7 +2569,7 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
           </div>
 
           {/* Primary High-Visibility Metric Cards: Mobile Horizontal Swipe, Desktop 4-Col Grid */}
-          <div className="flex overflow-x-auto pb-3 gap-3 snap-x snap-mandatory scrollbar-hide sm:grid sm:grid-cols-2 lg:grid-cols-4 sm:gap-4 max-w-5xl mx-auto mb-6 sm:mb-12 sm:overflow-visible">
+          <div className="flex overflow-x-auto pb-3 pt-2 gap-3 snap-x snap-mandatory scrollbar-hide sm:grid sm:grid-cols-2 lg:grid-cols-4 sm:gap-4 max-w-5xl mx-auto mb-6 sm:mb-12 sm:overflow-visible">
             <div className="w-[190px] xs:w-[220px] sm:w-auto shrink-0 snap-start sm:shrink p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-[#0c2440] text-white border border-[#1e3e6b] text-center shadow-xl card-hover-lift hover:border-amber-400 hover:shadow-amber-500/20 group relative overflow-hidden">
               <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-amber-400 to-yellow-500" />
               <div className="text-[10px] sm:text-xs font-bold uppercase text-amber-400 tracking-wider">Highest Package</div>
@@ -2611,7 +2611,7 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
               <ArrowRight className="w-3.5 h-3.5 text-cyan-600" />
             </div>
 
-            <div className="flex overflow-x-auto pb-3 gap-3 snap-x snap-mandatory scrollbar-hide sm:grid sm:grid-cols-3 lg:grid-cols-6 sm:overflow-visible">
+            <div className="flex overflow-x-auto pb-3 pt-2 gap-3 snap-x snap-mandatory scrollbar-hide sm:grid sm:grid-cols-3 lg:grid-cols-6 sm:overflow-visible">
               {[
                 { title: 'Resume Development', desc: 'ATS-friendly industry profile engineering', hoverBorder: 'hover:border-cyan-400' },
                 { title: 'Interview Preparation', desc: 'Mock technical & behavioral panels', hoverBorder: 'hover:border-amber-400' },
@@ -2693,7 +2693,7 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
                     <span>Key Recruiter Organizations:</span>
                     <span className="sm:hidden text-[10px] text-cyan-300/80 font-normal">Swipe logos →</span>
                   </h4>
-                  <div className="flex overflow-x-auto pb-2 gap-2.5 snap-x snap-mandatory scrollbar-hide sm:grid sm:grid-cols-4 sm:overflow-visible">
+                  <div className="flex overflow-x-auto pb-2 pt-1.5 gap-2.5 snap-x snap-mandatory scrollbar-hide sm:grid sm:grid-cols-4 sm:overflow-visible">
                     {pathway.recruiters.map((rec) => (
                       <div
                         key={rec.name}
@@ -2758,7 +2758,7 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
           </div>
 
           {/* 4-Step Process Timeline: Mobile Horizontal Swipe, Desktop 4-Col Grid */}
-          <div className="flex overflow-x-auto pb-3 gap-3 snap-x snap-mandatory scrollbar-hide sm:grid sm:grid-cols-2 lg:grid-cols-4 sm:overflow-visible max-w-5xl mx-auto">
+          <div className="flex overflow-x-auto pb-3 pt-2 gap-3 snap-x snap-mandatory scrollbar-hide sm:grid sm:grid-cols-2 lg:grid-cols-4 sm:overflow-visible max-w-5xl mx-auto">
             {[
               { ...admissionSteps[0], beam: 'from-cyan-400 to-sky-500', stepColor: 'text-cyan-400 group-hover:text-cyan-300' },
               { ...admissionSteps[1], beam: 'from-amber-400 to-yellow-500', stepColor: 'text-amber-400 group-hover:text-amber-300' },
