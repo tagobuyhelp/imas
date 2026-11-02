@@ -983,7 +983,7 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
       {/* ========================================================= */}
       {/* 3. HERO SECTION (INSEAD/CAMBRIDGE/ATLAS + IMAS HERO STYLE) */}
       {/* ========================================================= */}
-      <section id="hero" className="relative min-h-[560px] lg:min-h-[640px] bg-[#071d3d] overflow-hidden flex items-center">
+      <section id="hero" className="relative min-h-0 bg-[#071d3d] overflow-hidden flex items-center">
         {/* Background Campus Image with Students */}
         <div 
           className="absolute inset-0 bg-cover bg-[62%_20%] sm:bg-[60%_25%] lg:bg-[58%_20%] bg-no-repeat transition-all duration-700 opacity-50"
@@ -995,36 +995,36 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
         <div className="absolute inset-0 bg-gradient-to-r from-[#071d3d] via-[#071d3d]/95 via-42% sm:via-[#071d3d]/85 lg:via-[#071d3d]/60 to-transparent pointer-events-none" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#071d3d]/90 via-transparent to-transparent lg:hidden pointer-events-none" />
 
-        {/* Hero Content Container */}
-        <div className="relative z-10 w-full max-w-[1550px] mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 lg:py-16">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+        {/* Hero Content Container (Streamlined 40% height reduction) */}
+        <div className="relative z-10 w-full max-w-[1550px] mx-auto px-4 sm:px-6 lg:px-8 py-5 sm:py-6 lg:py-8">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 lg:gap-8 items-center">
             
             {/* Left Column: Headline, Copy, Badges, CTAs */}
-            <div className="lg:col-span-7 xl:col-span-7 space-y-5">
+            <div className="lg:col-span-7 xl:col-span-7 space-y-3 sm:space-y-3.5">
               
               {/* Eyebrow Tag */}
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-[#00a8cc] border border-[#38bdf8]/35 backdrop-blur-xs text-[11px] sm:text-xs font-bold tracking-[0.14em] text-white uppercase shadow-xs">
+              <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#00a8cc] border border-[#38bdf8]/35 backdrop-blur-xs text-[10px] sm:text-[11px] font-bold tracking-[0.12em] text-white uppercase shadow-xs">
                 <span className="w-1.5 h-1.5 rounded-full bg-yellow-400 animate-pulse shrink-0" />
                 <span>AICTE APPROVED • 2-YEAR FULL-TIME POSTGRADUATE PROGRAMME</span>
               </div>
 
               {/* Master Display Headline (INSEAD/Cambridge Editorial + IMAS Hero Gradient) */}
-              <div className="space-y-2">
-                <h1 className="font-display text-3xl sm:text-5xl lg:text-[52px] xl:text-[58px] font-bold text-white leading-[1.12] tracking-tight">
-                  Build Management Expertise.<br />
+              <div className="space-y-1 sm:space-y-1.5">
+                <h1 className="font-display text-2xl sm:text-4xl lg:text-[38px] xl:text-[42px] font-bold text-white leading-[1.15] tracking-tight">
+                  Build Management Expertise.{' '}
                   <span className="font-display bg-gradient-to-r from-orange-500 via-yellow-500 to-yellow-500 bg-clip-text text-transparent">
                     Develop Specialised Skills.
-                  </span><br />
+                  </span><br className="hidden sm:inline" />{' '}
                   Become Industry-Ready.
                 </h1>
 
-                <p className="text-sm sm:text-base text-slate-200 max-w-2xl leading-relaxed pt-1 font-normal">
+                <p className="text-xs sm:text-[13px] text-slate-200 max-w-xl leading-relaxed font-normal">
                   Two-year, full-time postgraduate management programme combining management fundamentals, specialised learning, practical tools, industry exposure and career preparation.
                 </p>
               </div>
 
               {/* Key Programme Badges from Spec */}
-              <div className="flex flex-wrap items-center gap-2 text-xs font-semibold text-slate-200">
+              <div className="flex flex-wrap items-center gap-1.5 text-[11px] font-semibold text-slate-200">
                 {[
                   '2 Years Full-Time',
                   '5 Specialisations',
@@ -1032,77 +1032,77 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
                   'Summer Internship',
                   'International Immersion'
                 ].map((b) => (
-                  <span key={b} className="inline-flex items-center gap-1.5 px-3 py-1 rounded-lg bg-[#0c2444]/80 border border-slate-700/60 backdrop-blur-xs">
-                    <Check className="h-3.5 w-3.5 text-[#00d2d3]" /> {b}
+                  <span key={b} className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-md bg-[#0c2444]/80 border border-slate-700/60 backdrop-blur-xs">
+                    <Check className="h-3 w-3 text-[#00d2d3]" /> {b}
                   </span>
                 ))}
               </div>
 
               {/* Mandatory Placement Metrics Row (Strictly '100% Placement Assistance') */}
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 pt-1">
-                <div className="p-3.5 sm:p-4 rounded-xl bg-gradient-to-br from-amber-500/20 via-amber-500/10 to-transparent border border-amber-500/30 card-hover-lift hover:border-amber-400/60 hover:shadow-amber-500/20 group cursor-default">
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-2.5 pt-0.5">
+                <div className="p-2 sm:p-2.5 rounded-lg bg-gradient-to-br from-amber-500/20 via-amber-500/10 to-transparent border border-amber-500/30 card-hover-lift hover:border-amber-400/60 hover:shadow-amber-500/20 group cursor-default">
                   <div className="flex items-center justify-between text-amber-400 mb-0.5">
-                    <Trophy className="h-4 w-4 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300" />
-                    <span className="text-[10px] uppercase font-bold tracking-wider">Top Compensation</span>
+                    <Trophy className="h-3.5 w-3.5 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300" />
+                    <span className="text-[9px] uppercase font-bold tracking-wider">Top Compensation</span>
                   </div>
-                  <div className="font-display text-2xl sm:text-3xl font-black text-white tracking-tight group-hover:text-amber-300 transition-colors">₹18.5 LPA</div>
-                  <div className="text-[11px] text-amber-200 font-medium">Highest CTC Achieved</div>
+                  <div className="font-display text-lg sm:text-xl lg:text-2xl font-black text-white tracking-tight group-hover:text-amber-300 transition-colors">₹18.5 LPA</div>
+                  <div className="text-[10px] text-amber-200 font-medium">Highest CTC Achieved</div>
                 </div>
 
-                <div className="p-3.5 sm:p-4 rounded-xl bg-gradient-to-br from-[#00bcd4]/20 via-[#00bcd4]/10 to-transparent border border-[#00bcd4]/30 card-hover-lift hover:border-cyan-400/60 hover:shadow-cyan-500/20 group cursor-default">
+                <div className="p-2 sm:p-2.5 rounded-lg bg-gradient-to-br from-[#00bcd4]/20 via-[#00bcd4]/10 to-transparent border border-[#00bcd4]/30 card-hover-lift hover:border-cyan-400/60 hover:shadow-cyan-500/20 group cursor-default">
                   <div className="flex items-center justify-between text-cyan-400 mb-0.5">
-                    <ShieldCheck className="h-4 w-4 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300" />
-                    <span className="text-[10px] uppercase font-bold tracking-wider">Commitment</span>
+                    <ShieldCheck className="h-3.5 w-3.5 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300" />
+                    <span className="text-[9px] uppercase font-bold tracking-wider">Commitment</span>
                   </div>
-                  <div className="font-display text-2xl sm:text-3xl font-black text-white tracking-tight group-hover:text-cyan-300 transition-colors">100%</div>
-                  <div className="text-[11px] text-cyan-200 font-medium">Placement Assistance</div>
+                  <div className="font-display text-lg sm:text-xl lg:text-2xl font-black text-white tracking-tight group-hover:text-cyan-300 transition-colors">100%</div>
+                  <div className="text-[10px] text-cyan-200 font-medium">Placement Assistance</div>
                 </div>
 
-                <div className="col-span-2 sm:col-span-1 p-3.5 sm:p-4 rounded-xl bg-gradient-to-br from-blue-500/20 via-blue-500/10 to-transparent border border-blue-500/30 card-hover-lift hover:border-blue-400/60 hover:shadow-blue-500/20 group cursor-default">
+                <div className="col-span-2 sm:col-span-1 p-2 sm:p-2.5 rounded-lg bg-gradient-to-br from-blue-500/20 via-blue-500/10 to-transparent border border-blue-500/30 card-hover-lift hover:border-blue-400/60 hover:shadow-blue-500/20 group cursor-default">
                   <div className="flex items-center justify-between text-blue-400 mb-0.5">
-                    <Building2 className="h-4 w-4 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300" />
-                    <span className="text-[10px] uppercase font-bold tracking-wider">Network</span>
+                    <Building2 className="h-3.5 w-3.5 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300" />
+                    <span className="text-[9px] uppercase font-bold tracking-wider">Network</span>
                   </div>
-                  <div className="font-display text-2xl sm:text-3xl font-black text-white tracking-tight group-hover:text-blue-300 transition-colors">200+</div>
-                  <div className="text-[11px] text-blue-200 font-medium">Corporate Recruiters</div>
+                  <div className="font-display text-lg sm:text-xl lg:text-2xl font-black text-white tracking-tight group-hover:text-blue-300 transition-colors">200+</div>
+                  <div className="text-[10px] text-blue-200 font-medium">Corporate Recruiters</div>
                 </div>
               </div>
 
               {/* Hero Action Buttons */}
-              <div className="flex flex-wrap items-center gap-3 sm:gap-4 pt-1">
+              <div className="flex flex-wrap items-center gap-2.5 sm:gap-3 pt-0.5">
                 <Button 
                   onClick={handleOpenEnquiry}
-                  className="flex-1 sm:flex-initial justify-center bg-gradient-to-r from-yellow-500 via-[#00a8cc] to-[#1d4ed8] hover:from-[#00acc1] hover:to-[#1e40af] text-white px-6 sm:px-8 py-3.5 rounded-xl text-sm sm:text-base font-bold shadow-md hover:shadow-cyan-500/20 flex items-center gap-2 transition-all min-w-[150px] shimmer-hover active:scale-95 group"
+                  className="flex-1 sm:flex-initial justify-center bg-gradient-to-r from-yellow-500 via-[#00a8cc] to-[#1d4ed8] hover:from-[#00acc1] hover:to-[#1e40af] text-white px-5 sm:px-6 h-9 sm:h-10 rounded-lg text-xs sm:text-sm font-bold shadow-md hover:shadow-cyan-500/20 flex items-center gap-1.5 transition-all shimmer-hover active:scale-95 group"
                 >
                   <span>Apply Now</span>
-                  <ArrowRight className="h-4 w-4 group-hover:translate-x-1.5 transition-transform duration-300" />
+                  <ArrowRight className="h-3.5 w-3.5 group-hover:translate-x-1.5 transition-transform duration-300" />
                 </Button>
 
                 <Button 
                   variant="outline"
                   onClick={handleDownloadBrochure}
-                  className="flex-1 sm:flex-initial justify-center bg-[#0c2444]/90 hover:bg-[#102d55] border border-slate-300/40 hover:border-slate-200 text-white px-5 sm:px-7 py-3.5 rounded-xl text-sm sm:text-base font-bold shadow-sm transition-all min-w-[150px] shimmer-hover active:scale-95 group"
+                  className="flex-1 sm:flex-initial justify-center bg-[#0c2444]/90 hover:bg-[#102d55] border border-slate-300/40 hover:border-slate-200 text-white px-4 sm:px-5 h-9 sm:h-10 rounded-lg text-xs sm:text-sm font-bold shadow-sm transition-all shimmer-hover active:scale-95 group"
                 >
-                  <Download className="mr-1.5 h-4 w-4 text-[#00bcd4] group-hover:translate-y-0.5 transition-transform duration-300" /> Brochure
+                  <Download className="mr-1.5 h-3.5 w-3.5 text-[#00bcd4] group-hover:translate-y-0.5 transition-transform duration-300" /> Brochure
                 </Button>
 
                 <button 
                   onClick={handleOpenVideoModal}
-                  className="w-full sm:w-auto justify-center sm:justify-start flex items-center gap-3 px-2 py-1 text-slate-200 hover:text-cyan-300 transition-colors group mt-1 sm:mt-0 cursor-pointer"
+                  className="w-full sm:w-auto justify-center sm:justify-start flex items-center gap-2.5 px-2 py-0.5 text-slate-200 hover:text-cyan-300 transition-colors group cursor-pointer"
                 >
-                  <div className="relative w-10 h-10 sm:w-11 sm:h-11 rounded-full bg-[#0284c7] hover:bg-[#0369a1] text-white flex items-center justify-center transition-transform group-hover:scale-110 shadow-md shrink-0 before:absolute before:inset-0 before:rounded-full before:bg-cyan-400/40 before:animate-ping before:opacity-75">
-                    <Play className="h-4 w-4 fill-white text-white ml-0.5 relative z-10" />
+                  <div className="relative w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-[#0284c7] hover:bg-[#0369a1] text-white flex items-center justify-center transition-transform group-hover:scale-110 shadow-md shrink-0 before:absolute before:inset-0 before:rounded-full before:bg-cyan-400/40 before:animate-ping before:opacity-75">
+                    <Play className="h-3.5 w-3.5 fill-white text-white ml-0.5 relative z-10" />
                   </div>
                   <div className="text-left leading-tight">
-                    <span className="block text-xs text-slate-300 font-medium">Watch</span>
-                    <span className="block text-xs sm:text-sm font-bold text-white group-hover:text-cyan-300 transition-colors">Campus Video</span>
+                    <span className="block text-[10px] text-slate-300 font-medium">Watch</span>
+                    <span className="block text-xs font-bold text-white group-hover:text-cyan-300 transition-colors">Campus Video</span>
                   </div>
                 </button>
               </div>
 
               {/* Key Institutional Pillars (Matching Main Hero) */}
-              <div className="pt-3 border-t border-white/10 mt-1">
-                <div className="grid grid-cols-2 sm:flex sm:flex-wrap items-center gap-2 sm:gap-2.5">
+              <div className="pt-2 border-t border-white/10 mt-0.5">
+                <div className="grid grid-cols-2 sm:flex sm:flex-wrap items-center gap-1.5 sm:gap-2">
                   {[
                     { label: 'AICTE Approved', icon: Award },
                     { label: 'AI-Enhanced Learning', icon: Sparkles },
@@ -1114,12 +1114,12 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
                     return (
                       <div 
                         key={item.label}
-                        className={`flex items-center gap-2 px-2.5 sm:px-3 py-1.5 rounded-lg bg-[#0c2444]/80 hover:bg-[#12315e] border border-slate-700/60 hover:border-[#38bdf8]/50 backdrop-blur-xs transition-all duration-200 shadow-xs group cursor-default ${
+                        className={`flex items-center gap-1.5 px-2 py-1 rounded-md bg-[#0c2444]/80 hover:bg-[#12315e] border border-slate-700/60 hover:border-[#38bdf8]/50 backdrop-blur-xs transition-all duration-200 shadow-xs group cursor-default ${
                           idx === 4 ? 'col-span-2 sm:col-span-1 justify-center sm:justify-start' : 'justify-center sm:justify-start'
                         }`}
                       >
-                        <Icon className="w-3.5 h-3.5 text-[#38bdf8] group-hover:text-cyan-300 shrink-0" />
-                        <span className="text-[11.5px] sm:text-[12px] font-semibold text-slate-200 group-hover:text-white transition-colors truncate">
+                        <Icon className="w-3 h-3 text-[#38bdf8] group-hover:text-cyan-300 shrink-0" />
+                        <span className="text-[11px] font-semibold text-slate-200 group-hover:text-white transition-colors truncate">
                           {item.label}
                         </span>
                       </div>
@@ -1131,12 +1131,12 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
             </div>
 
             {/* Right Column: Featured Programme / Live Campus Slider Card (Matching Main Hero) */}
-            <div className="lg:col-span-5 xl:col-span-5 flex flex-col items-center lg:items-end justify-center relative pt-4 lg:pt-0">
+            <div className="lg:col-span-5 xl:col-span-5 flex flex-col items-center lg:items-end justify-center relative pt-3 lg:pt-0">
               
-              <div className="bg-white rounded-2xl shadow-2xl p-4 sm:p-5 border border-slate-100 max-w-[360px] w-full transition-all duration-500 card-hover-glow-cyan group">
+              <div className="bg-white rounded-xl shadow-2xl p-3 sm:p-3.5 border border-slate-100 max-w-[310px] sm:max-w-[325px] w-full transition-all duration-500 card-hover-glow-cyan group">
                 
                 {/* Image with Pill Badge & Carousel Dots */}
-                <div className="relative rounded-xl overflow-hidden mb-3 bg-slate-100 aspect-[16/11]">
+                <div className="relative rounded-lg overflow-hidden mb-2 bg-slate-100 aspect-[16/9]">
                   <img 
                     src={heroSliderImages[activeCarouselDot].src} 
                     alt={heroSliderImages[activeCarouselDot].label} 
@@ -1144,25 +1144,25 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
                   />
                   
                   {/* FEATURED Badge */}
-                  <div className="absolute top-2.5 left-2.5 bg-[#d0f4f7] text-[#00838f] text-[9.5px] font-bold tracking-wider px-2.5 py-0.5 rounded shadow-xs uppercase">
+                  <div className="absolute top-2 left-2 bg-[#0c2440]/90 text-cyan-300 border border-cyan-400/40 text-[9px] font-bold tracking-wider px-2 py-0.5 rounded shadow-xs uppercase">
                     FEATURED PROGRAMME
                   </div>
 
                   {/* Caption on image */}
-                  <div className="absolute bottom-6 left-2 right-2 text-center">
-                    <span className="text-[10.5px] font-semibold text-white bg-black/60 backdrop-blur-xs px-2 py-0.5 rounded-md">
+                  <div className="absolute bottom-5 left-2 right-2 text-center">
+                    <span className="text-[10px] font-semibold text-white bg-black/60 backdrop-blur-xs px-2 py-0.5 rounded-md">
                       {heroSliderImages[activeCarouselDot].label}
                     </span>
                   </div>
 
                   {/* Carousel Dots */}
-                  <div className="absolute bottom-2 left-1/2 transform -translate-x-1/2 flex items-center gap-1.5 bg-black/35 backdrop-blur-xs px-2 py-0.5 rounded-full">
+                  <div className="absolute bottom-1.5 left-1/2 transform -translate-x-1/2 flex items-center gap-1 bg-black/35 backdrop-blur-xs px-2 py-0.5 rounded-full">
                     {heroSliderImages.map((_, i) => (
                       <button
                         key={i}
                         onClick={() => setActiveCarouselDot(i)}
-                        className={`h-1.5 rounded-full transition-all ${
-                          activeCarouselDot === i ? 'bg-white w-3.5' : 'bg-white/60 hover:bg-white w-1.5'
+                        className={`h-1 rounded-full transition-all ${
+                          activeCarouselDot === i ? 'bg-white w-3' : 'bg-white/60 hover:bg-white w-1'
                         }`}
                         aria-label={`Slide ${i + 1}`}
                       />
@@ -1171,48 +1171,48 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
                 </div>
 
                 {/* Title & Subtitle */}
-                <div className="mb-3">
+                <div className="mb-2">
                   <div className="flex items-center justify-between">
-                    <h3 className="font-display text-2xl sm:text-3xl font-bold text-[#0c2340] leading-none">PGDM Plus</h3>
-                    <span className="text-[10px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
+                    <h3 className="font-display text-xl sm:text-2xl font-bold text-[#0c2340] leading-none">PGDM Plus</h3>
+                    <span className="text-[9px] font-bold text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded border border-emerald-200">
                       Phase II Intake
                     </span>
                   </div>
-                  <p className="text-xs text-[#1e3a8a] font-semibold mt-1">Post Graduate Diploma in Management (2 Years)</p>
+                  <p className="text-[11px] text-[#1e3a8a] font-semibold mt-0.5">Post Graduate Diploma in Management (2 Years)</p>
                 </div>
 
                 {/* 3-Column Highlights Row */}
-                <div className="grid grid-cols-3 gap-2 py-2.5 border-y border-slate-100 text-center">
+                <div className="grid grid-cols-3 gap-1.5 py-1.5 border-y border-slate-100 text-center">
                   <div>
-                    <span className="block text-[10px] text-slate-400 font-medium">Duration</span>
-                    <span className="block text-xs font-bold text-slate-800">2 Years</span>
+                    <span className="block text-[9px] text-slate-400 font-medium">Duration</span>
+                    <span className="block text-[11px] font-bold text-slate-800">2 Years</span>
                   </div>
                   <div className="border-x border-slate-100">
-                    <span className="block text-[10px] text-slate-400 font-medium">Mode</span>
-                    <span className="block text-xs font-bold text-slate-800">Full-Time</span>
+                    <span className="block text-[9px] text-slate-400 font-medium">Mode</span>
+                    <span className="block text-[11px] font-bold text-slate-800">Full-Time</span>
                   </div>
                   <div>
-                    <span className="block text-[10px] text-slate-400 font-medium">Internship</span>
-                    <span className="block text-xs font-bold text-teal-600">8–10 Wks</span>
+                    <span className="block text-[9px] text-slate-400 font-medium">Internship</span>
+                    <span className="block text-[11px] font-bold text-teal-600">8–10 Wks</span>
                   </div>
                 </div>
 
                 {/* Quick Enquire Button inside Card */}
-                <div className="mt-3.5 space-y-2">
+                <div className="mt-2 space-y-1.5">
                   <Button
                     onClick={handleOpenEnquiry}
-                    className="w-full bg-gradient-to-r from-yellow-500 to-blue-600 hover:bg-[#143674] text-white font-bold text-xs py-2.5 rounded-xl transition-all"
+                    className="w-full bg-gradient-to-r from-yellow-500 via-[#00a8cc] to-[#1d4ed8] hover:from-[#00acc1] hover:to-[#1e40af] text-white font-bold text-xs py-2 rounded-lg transition-all"
                   >
                     Enquire for Admission 2026
                   </Button>
-                  <div className="flex items-center justify-between text-[11px] text-slate-500 pt-1">
+                  <div className="flex items-center justify-between text-[10px] text-slate-500 pt-0.5">
                     <div className="flex items-center gap-1 text-amber-500">
                       {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="h-3 w-3 fill-amber-400 text-amber-400" />
+                        <Star key={i} className="h-2.5 w-2.5 fill-amber-400 text-amber-400" />
                       ))}
-                      <span className="font-bold text-slate-700 ml-1">4.9/5</span>
+                      <span className="font-bold text-slate-700 ml-0.5">4.9/5</span>
                     </div>
-                    <span className="text-[10px] text-slate-400">Campus: Newtown</span>
+                    <span className="text-[9.5px] text-slate-400">Campus: Newtown</span>
                   </div>
                 </div>
 
