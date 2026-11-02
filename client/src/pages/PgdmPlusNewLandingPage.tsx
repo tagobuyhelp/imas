@@ -1477,7 +1477,7 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
       {/* ========================================================= */}
       {/* 6. PROGRAMME ARCHITECTURE (INTERACTIVE TIMELINE)          */}
       {/* ========================================================= */}
-      <section id="architecture" className="py-16 bg-[#071d3d] text-white border-b border-slate-800 relative overflow-hidden">
+      <section id="architecture" className="py-10 sm:py-16 bg-[#071d3d] text-white border-b border-slate-800 relative overflow-hidden">
         {/* Background Campus Image with Deep Navy Gradient Overlay */}
         <div 
           className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-35 pointer-events-none"
@@ -1490,28 +1490,28 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
         <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none" />
 
         <div className="max-w-[1550px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center max-w-3xl mx-auto mb-12 reveal-init">
+          <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-12 reveal-init">
             {/* Eyebrow Badge Matching Dark Sections */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/10 border border-white/20 text-xs font-bold tracking-[0.14em] text-white uppercase shadow-md mb-3 backdrop-blur-xs">
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-[11px] sm:text-xs font-bold tracking-[0.14em] text-white uppercase shadow-md mb-2 sm:mb-3 backdrop-blur-xs">
               <span className="w-1.5 h-1.5 rounded-full bg-yellow-400 animate-pulse shrink-0" />
               <span className="text-cyan-300 font-bold">Two-Year Progressive Blueprint</span>
             </div>
-            <h2 className="font-display text-3xl sm:text-4xl lg:text-[42px] font-bold text-white tracking-tight mt-1">
+            <h2 className="font-display text-2xl sm:text-4xl lg:text-[42px] font-bold text-white tracking-tight mt-1">
               Programme <span className="font-display bg-gradient-to-r from-orange-400 via-yellow-400 to-amber-300 bg-clip-text text-transparent">Architecture</span>
             </h2>
-            <p className="text-sm sm:text-base text-slate-300 mt-2">
+            <p className="text-xs sm:text-base text-slate-300 mt-1.5 sm:mt-2">
               Structured progressive path from foundational general management to corporate specialisation and industry capstone defense.
             </p>
           </div>
 
           {/* Mobile Swipe Hint */}
-          <div className="flex md:hidden items-center justify-end gap-1.5 text-[11px] text-cyan-300/80 font-medium -mt-6 mb-3 px-1">
+          <div className="flex md:hidden items-center justify-end gap-1 text-[10px] text-cyan-300/80 font-medium -mt-3 mb-2 px-1">
             <span>Swipe 4-phase timeline</span>
-            <ArrowRight className="w-3.5 h-3.5 text-yellow-400" />
+            <ArrowRight className="w-3 h-3 text-yellow-400" />
           </div>
 
           {/* Desktop 4-Col Grid / Mobile Horizontal Swipe Timeline */}
-          <div className="flex overflow-x-auto pb-4 pt-1 gap-4 snap-x snap-mandatory scrollbar-hide md:grid md:grid-cols-4 md:overflow-visible relative">
+          <div className="flex overflow-x-auto pb-3 pt-0.5 gap-3 snap-x snap-mandatory scrollbar-hide md:grid md:grid-cols-4 md:gap-4 md:overflow-visible relative">
             {[
               {
                 stage: 'YEAR 1',
@@ -1576,23 +1576,23 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
             ].map((step, idx) => (
               <div 
                 key={step.stage} 
-                className={`w-[85vw] max-w-[310px] shrink-0 snap-start md:w-auto md:max-w-none md:shrink relative p-6 rounded-2xl bg-white text-slate-900 border border-slate-100 shadow-xl card-hover-lift ${step.hoverBorder} ${step.hoverShadow} transition-all flex flex-col justify-between group overflow-hidden reveal-init reveal-delay-${idx * 100 + 100}`}
+                className={`w-[240px] xs:w-[260px] md:w-auto shrink-0 snap-start md:shrink relative p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-white text-slate-900 border border-slate-100 shadow-xl card-hover-lift ${step.hoverBorder} ${step.hoverShadow} transition-all flex flex-col justify-between group overflow-hidden reveal-init reveal-delay-${idx * 100 + 100}`}
               >
                 <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${step.beam} scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left`} />
                 <div>
-                  <div className="flex items-center justify-between mb-4">
-                    <span className={`text-xs font-black tracking-widest px-2.5 py-1 rounded-md border ${step.badgeStyle}`}>
+                  <div className="flex items-center justify-between mb-2.5 sm:mb-4">
+                    <span className={`text-[10px] sm:text-xs font-black tracking-widest px-2 py-0.5 sm:px-2.5 sm:py-1 rounded-md border ${step.badgeStyle}`}>
                       {step.stage}
                     </span>
-                    <span className="text-[11px] text-slate-500 font-semibold">{step.period}</span>
+                    <span className="text-[10px] sm:text-[11px] text-slate-500 font-semibold">{step.period}</span>
                   </div>
-                  <div className={`h-10 w-10 rounded-xl bg-slate-100 flex items-center justify-center ${step.iconColor} mb-3 group-hover:scale-110 group-hover:rotate-6 ${step.iconBgHover} group-hover:text-white transition-all duration-300`}>
-                    <step.icon className="h-5 w-5" />
+                  <div className={`h-8 w-8 sm:h-10 sm:w-10 rounded-lg sm:rounded-xl bg-slate-100 flex items-center justify-center ${step.iconColor} mb-2 sm:mb-3 group-hover:scale-110 group-hover:rotate-6 ${step.iconBgHover} group-hover:text-white transition-all duration-300`}>
+                    <step.icon className="h-4 w-4 sm:h-5 sm:w-5" />
                   </div>
-                  <h3 className={`text-lg font-bold text-[#0c2340] mb-2 ${step.textHover} transition-colors`}>{step.title}</h3>
-                  <p className="text-xs text-slate-600 leading-relaxed font-normal">{step.desc}</p>
+                  <h3 className={`text-sm sm:text-base md:text-lg font-bold text-[#0c2340] mb-1 sm:mb-2 ${step.textHover} transition-colors`}>{step.title}</h3>
+                  <p className="text-[11px] sm:text-xs text-slate-600 leading-relaxed font-normal">{step.desc}</p>
                 </div>
-                <div className="mt-4 pt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold">
+                <div className="mt-3 sm:mt-4 pt-2.5 sm:pt-3 border-t border-slate-100 flex items-center justify-between text-[11px] sm:text-xs font-bold">
                   <span className={step.textHover}>{step.highlight}</span>
                   <span className={`text-slate-400 font-bold ${step.textHover} transition-colors`}>Step 0{idx + 1}</span>
                 </div>
@@ -1607,46 +1607,46 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
       {/* =====      {/* ========================================================= */}
       {/* 7. WHY PGDM PLUS (THE IMAS ADVANTAGE)                     */}
       {/* ========================================================= */}
-      <section id="features" className="py-16 sm:py-20 bg-white border-b border-slate-200 relative overflow-hidden">
+      <section id="features" className="py-10 sm:py-20 bg-white border-b border-slate-200 relative overflow-hidden">
         {/* Subtle Ambient Glows Matching Hero */}
         <div className="absolute -top-24 -right-24 w-96 h-96 bg-amber-500/5 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl pointer-events-none" />
 
         <div className="max-w-[1550px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center max-w-3xl mx-auto mb-12 reveal-init">
+          <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-12 reveal-init">
             {/* Eyebrow Tag with Pulsing Yellow Dot */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#0c2440] border border-[#00bcd4]/40 text-xs font-bold tracking-[0.14em] text-white uppercase shadow-md mb-3">
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#0c2440] border border-[#00bcd4]/40 text-[11px] sm:text-xs font-bold tracking-[0.14em] text-white uppercase shadow-md mb-2 sm:mb-3">
               <span className="w-1.5 h-1.5 rounded-full bg-yellow-400 animate-pulse shrink-0" />
               <span className="text-cyan-300 font-bold">The IMAS Advantage</span>
             </div>
 
             {/* Master Headline with Hero Gradient Highlight */}
-            <h2 className="font-display text-3xl sm:text-4xl lg:text-[42px] font-bold text-[#0c2340] tracking-tight">
+            <h2 className="font-display text-2xl sm:text-4xl lg:text-[42px] font-bold text-[#0c2340] tracking-tight">
               Why Choose{' '}
               <span className="font-display bg-gradient-to-r from-orange-500 via-yellow-500 to-amber-500 bg-clip-text text-transparent">
                 PGDM Plus?
               </span>
             </h2>
 
-            <p className="text-sm sm:text-base text-slate-600 mt-2.5 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-xs sm:text-base text-slate-600 mt-1.5 sm:mt-2.5 max-w-2xl mx-auto leading-relaxed">
               Six strategic pillars that distinguish the IMAS PGDM Plus from traditional business degrees.
             </p>
           </div>
 
           {/* Mobile Swipe Hint */}
-          <div className="flex md:hidden items-center justify-end gap-1.5 text-[11px] text-slate-500 font-medium -mt-6 mb-3 px-1">
+          <div className="flex md:hidden items-center justify-end gap-1 text-[10px] text-slate-500 font-medium -mt-3 mb-2 px-1">
             <span>Swipe 6 strategic pillars</span>
-            <ArrowRight className="w-3.5 h-3.5 text-cyan-600" />
+            <ArrowRight className="w-3 h-3 text-cyan-600" />
           </div>
 
           {/* 6 Strategic Pillar Cards: Mobile Horizontal Swipe, Desktop 3-Col Grid */}
-          <div className="flex overflow-x-auto pb-4 pt-1 gap-4 snap-x snap-mandatory scrollbar-hide md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-6 md:overflow-visible">
+          <div className="flex overflow-x-auto pb-3 pt-0.5 gap-3 snap-x snap-mandatory scrollbar-hide md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-6 md:overflow-visible">
             {whyPgdmPlusFeatures.map((item, idx) => {
               const styles = getSnapshotThemeStyles(item.theme)
               return (
                 <div 
                   key={item.title} 
-                  className={`w-[85vw] max-w-[330px] shrink-0 snap-start md:w-auto md:max-w-none md:shrink p-5 sm:p-7 rounded-2xl ${styles.cardBg} text-white border ${styles.border} shadow-xl card-hover-lift transition-all duration-300 group relative overflow-hidden reveal-init reveal-delay-${(idx % 3) * 100 + 100}`}
+                  className={`w-[240px] xs:w-[260px] md:w-auto shrink-0 snap-start md:shrink p-4 sm:p-6 lg:p-7 rounded-xl sm:rounded-2xl ${styles.cardBg} text-white border ${styles.border} shadow-xl card-hover-lift transition-all duration-300 group relative overflow-hidden reveal-init reveal-delay-${(idx % 3) * 100 + 100}`}
                 >
                   {/* Background Image with Clean Dark Gradient Vignette */}
                   <div 
@@ -1659,19 +1659,19 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
                   <div className={`absolute top-0 left-0 right-0 h-1 ${styles.beam} scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left z-20`} />
                   
                   <div className="relative z-10">
-                    <div className="flex items-center justify-between mb-5">
-                      <div className={`h-12 w-12 rounded-xl ${styles.iconBox} flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-all duration-300`}>
-                        <item.icon className="h-6 w-6" />
+                    <div className="flex items-center justify-between mb-3 sm:mb-5">
+                      <div className={`h-9 w-9 sm:h-12 sm:w-12 rounded-lg sm:rounded-xl ${styles.iconBox} flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-all duration-300`}>
+                        <item.icon className="h-4.5 w-4.5 sm:h-6 sm:w-6" />
                       </div>
-                      <span className={`text-[11px] font-bold ${styles.tag} px-3 py-1 rounded-lg border transition-colors`}>
+                      <span className={`text-[10px] sm:text-[11px] font-bold ${styles.tag} px-2.5 py-0.5 sm:px-3 sm:py-1 rounded-md sm:rounded-lg border transition-colors`}>
                         {item.tag}
                       </span>
                     </div>
 
-                    <h3 className={`text-xl font-bold text-white mb-2.5 ${styles.valueHover} transition-colors tracking-tight`}>
+                    <h3 className={`text-sm sm:text-lg lg:text-xl font-bold text-white mb-1.5 sm:mb-2.5 ${styles.valueHover} transition-colors tracking-tight`}>
                       {item.title}
                     </h3>
-                    <p className="text-sm text-slate-300 leading-relaxed font-normal">{item.desc}</p>
+                    <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-normal">{item.desc}</p>
                   </div>
                 </div>
               )
@@ -1679,31 +1679,31 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
           </div>
 
           {/* Bottom Trust & Action Banner Matching Hero */}
-          <div className="mt-10 pt-6 border-t border-slate-200/90 flex flex-wrap items-center justify-between gap-4 bg-slate-50/80 backdrop-blur-xs p-4 sm:p-5 rounded-2xl border border-slate-200/80 shadow-xs">
-            <div className="flex flex-wrap items-center gap-3">
-              <div className="flex items-center gap-1 text-amber-500">
+          <div className="mt-6 sm:mt-10 pt-4 sm:pt-6 border-t border-slate-200/90 flex flex-wrap items-center justify-between gap-3 sm:gap-4 bg-slate-50/80 backdrop-blur-xs p-3.5 sm:p-5 rounded-xl sm:rounded-2xl border border-slate-200/80 shadow-xs">
+            <div className="flex flex-wrap items-center gap-2 sm:gap-3">
+              <div className="flex items-center gap-0.5 sm:gap-1 text-amber-500">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="h-4 w-4 fill-amber-400 text-amber-400" />
+                  <Star key={i} className="h-3.5 w-3.5 sm:h-4 sm:w-4 fill-amber-400 text-amber-400" />
                 ))}
               </div>
-              <span className="text-xs font-bold text-slate-700">
+              <span className="text-[11px] sm:text-xs font-bold text-slate-700">
                 100% Placement Assistance • 200+ Corporate Recruiters • Highest CTC ₹18.5 LPA
               </span>
             </div>
 
-            <div className="flex items-center gap-3 w-full sm:w-auto justify-end">
+            <div className="flex items-center gap-2 sm:gap-3 w-full sm:w-auto justify-end">
               <Button
                 onClick={handleDownloadBrochure}
                 variant="outline"
                 size="sm"
-                className="flex-1 sm:flex-initial border-slate-300 hover:border-slate-400 text-slate-700 hover:text-[#0c2440] hover:bg-white rounded-xl text-xs font-semibold px-4 transition-all"
+                className="flex-1 sm:flex-initial border-slate-300 hover:border-slate-400 text-slate-700 hover:text-[#0c2440] hover:bg-white rounded-lg sm:rounded-xl text-[11px] sm:text-xs font-semibold px-3 sm:px-4 h-8 sm:h-9 transition-all"
               >
                 <Download className="mr-1.5 h-3.5 w-3.5 text-[#00bcd4]" /> Download Brochure
               </Button>
               <Button
                 onClick={handleOpenEnquiry}
                 size="sm"
-                className="flex-1 sm:flex-initial bg-gradient-to-r from-yellow-500 via-[#00a8cc] to-[#1d4ed8] hover:from-[#00acc1] hover:to-[#1e40af] text-white rounded-xl text-xs font-bold px-5 shadow-sm shimmer-hover active:scale-95 transition-all"
+                className="flex-1 sm:flex-initial bg-gradient-to-r from-yellow-500 via-[#00a8cc] to-[#1d4ed8] hover:from-[#00acc1] hover:to-[#1e40af] text-white rounded-lg sm:rounded-xl text-[11px] sm:text-xs font-bold px-4 sm:px-5 h-8 sm:h-9 shadow-sm shimmer-hover active:scale-95 transition-all"
               >
                 Apply for PGDM Plus <ArrowRight className="ml-1.5 h-3.5 w-3.5" />
               </Button>
@@ -1715,24 +1715,24 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
       {/* ========================================================= */}
       {/* 8. REAL CAMPUS LIFE & INDUSTRIAL VISITS GALLERY (GALLERY) */}
       {/* ========================================================= */}
-      <section id="gallery" className="py-16 bg-slate-50 border-b border-slate-200 overflow-hidden">
+      <section id="gallery" className="py-10 sm:py-16 bg-slate-50 border-b border-slate-200 overflow-hidden">
         <div className="max-w-[1550px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-10">
+          <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-10">
             {/* Eyebrow Tag with Pulsing Yellow Dot */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#0c2440] border border-[#00bcd4]/40 text-xs font-bold tracking-[0.14em] text-white uppercase shadow-md mb-3">
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#0c2440] border border-[#00bcd4]/40 text-[11px] sm:text-xs font-bold tracking-[0.14em] text-white uppercase shadow-md mb-2 sm:mb-3">
               <span className="w-1.5 h-1.5 rounded-full bg-yellow-400 animate-pulse shrink-0" />
               <span className="text-cyan-300 font-bold">Experiential Immersion Gallery</span>
             </div>
-            <h2 className="font-display text-3xl sm:text-4xl lg:text-[42px] font-bold text-[#0c2340] tracking-tight mt-1">
+            <h2 className="font-display text-2xl sm:text-4xl lg:text-[42px] font-bold text-[#0c2340] tracking-tight mt-1">
               Life at IMAS <Amp /> <span className="font-display bg-gradient-to-r from-orange-500 via-yellow-500 to-amber-500 bg-clip-text text-transparent">Corporate Engagements</span>
             </h2>
-            <p className="text-sm sm:text-base text-slate-600 mt-2">
+            <p className="text-xs sm:text-base text-slate-600 mt-1.5 sm:mt-2">
               Witness actual classroom environments, industrial factory visits, and executive seminars attended by IMAS PGDM students.
             </p>
           </div>
 
           {/* Filter Pills */}
-          <div className="flex justify-center gap-2 mb-8 flex-wrap reveal-init">
+          <div className="flex justify-center gap-1.5 sm:gap-2 mb-5 sm:mb-8 flex-wrap reveal-init">
             {[
               { id: 'all' as GalleryFilter, label: 'All Photos' },
               { id: 'classrooms' as GalleryFilter, label: 'Auditorium & Classrooms' },
@@ -1742,7 +1742,7 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
               <button
                 key={f.id}
                 onClick={() => setGalleryFilter(f.id)}
-                className={`px-4 py-2 rounded-xl text-xs font-bold transition-all border hover:scale-105 active:scale-95 cursor-pointer ${
+                className={`px-3 py-1.5 sm:px-4 sm:py-2 rounded-lg sm:rounded-xl text-[11px] sm:text-xs font-bold transition-all border hover:scale-105 active:scale-95 cursor-pointer ${
                   galleryFilter === f.id
                     ? 'bg-gradient-to-r from-[#0c2440] via-[#103258] to-[#0c2440] text-cyan-300 border-[#00bcd4]/60 shadow-md font-black'
                     : 'bg-white text-slate-700 border-slate-200 hover:border-cyan-400 hover:text-cyan-700 shadow-xs'
@@ -1754,17 +1754,17 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
           </div>
 
           {/* Mobile Swipe Hint */}
-          <div className="flex sm:hidden items-center justify-end gap-1.5 text-[11px] text-slate-500 font-medium -mt-4 mb-3 px-1">
+          <div className="flex sm:hidden items-center justify-end gap-1 text-[10px] text-slate-500 font-medium -mt-3 mb-2 px-1">
             <span>Swipe campus gallery</span>
-            <ArrowRight className="w-3.5 h-3.5 text-cyan-600" />
+            <ArrowRight className="w-3 h-3 text-cyan-600" />
           </div>
 
           {/* Gallery Grid: Mobile Horizontal Swipe, Desktop 3-Col Grid */}
-          <div className="flex overflow-x-auto pb-4 gap-4 snap-x snap-mandatory scrollbar-hide sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:gap-6 sm:overflow-visible">
+          <div className="flex overflow-x-auto pb-3 gap-3 snap-x snap-mandatory scrollbar-hide sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:gap-6 sm:overflow-visible">
             {filteredGallery.map((item, idx) => (
               <div 
                 key={idx} 
-                className={`w-[82vw] max-w-[310px] shrink-0 snap-start sm:w-auto sm:max-w-none sm:shrink rounded-2xl overflow-hidden bg-white border border-slate-200/90 shadow-sm card-hover-lift hover:border-[#00bcd4]/60 hover:shadow-2xl transition-all duration-500 group cursor-pointer reveal-init reveal-delay-${(idx % 3) * 100 + 100}`}
+                className={`w-[240px] xs:w-[270px] shrink-0 snap-start sm:w-auto sm:shrink rounded-xl sm:rounded-2xl overflow-hidden bg-white border border-slate-200/90 shadow-sm card-hover-lift hover:border-[#00bcd4]/60 hover:shadow-2xl transition-all duration-500 group cursor-pointer reveal-init reveal-delay-${(idx % 3) * 100 + 100}`}
               >
                 <div className="relative aspect-[16/10] overflow-hidden bg-slate-100">
                   <img
@@ -1773,16 +1773,16 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ease-out"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-80 group-hover:opacity-90 transition-opacity" />
-                  <span className="absolute top-3 left-3 px-2.5 py-0.5 rounded-md text-[10px] font-bold bg-[#0c2440]/80 backdrop-blur-xs text-white border border-white/20 uppercase tracking-wider group-hover:border-cyan-400/60 transition-colors">
+                  <span className="absolute top-2.5 left-2.5 sm:top-3 sm:left-3 px-2 sm:px-2.5 py-0.5 rounded-md text-[9px] sm:text-[10px] font-bold bg-[#0c2440]/80 backdrop-blur-xs text-white border border-white/20 uppercase tracking-wider group-hover:border-cyan-400/60 transition-colors">
                     {item.category}
                   </span>
-                  <div className="absolute top-3 right-3 w-8 h-8 rounded-full bg-white/20 backdrop-blur-md text-white flex items-center justify-center opacity-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300">
-                    <Camera className="h-4 w-4 text-cyan-300" />
+                  <div className="absolute top-2.5 right-2.5 sm:top-3 sm:right-3 w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white/20 backdrop-blur-md text-white flex items-center justify-center opacity-0 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300">
+                    <Camera className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-cyan-300" />
                   </div>
                 </div>
-                <div className="p-4">
-                  <h4 className="font-bold text-sm text-slate-900 group-hover:text-[#00a8cc] transition-colors">{item.title}</h4>
-                  <p className="text-xs text-slate-500 mt-1 leading-relaxed">{item.desc}</p>
+                <div className="p-3 sm:p-4">
+                  <h4 className="font-bold text-xs sm:text-sm text-slate-900 group-hover:text-[#00a8cc] transition-colors">{item.title}</h4>
+                  <p className="text-[11px] sm:text-xs text-slate-500 mt-1 leading-relaxed">{item.desc}</p>
                 </div>
               </div>
             ))}
@@ -1793,33 +1793,33 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
       {/* ========================================================= */}
       {/* 9. EXPERT TESTIMONIALS (YOUTUBE VIDEOS)                  */}
       {/* ========================================================= */}
-      <section className="py-16 bg-white border-b border-slate-200 overflow-hidden">
+      <section className="py-10 sm:py-16 bg-white border-b border-slate-200 overflow-hidden">
         <div className="max-w-[1550px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-12 reveal-init">
+          <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-12 reveal-init">
             {/* Eyebrow Tag with Pulsing Yellow Dot */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#0c2440] border border-[#00bcd4]/40 text-xs font-bold tracking-[0.14em] text-white uppercase shadow-md mb-3">
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#0c2440] border border-[#00bcd4]/40 text-[11px] sm:text-xs font-bold tracking-[0.14em] text-white uppercase shadow-md mb-2 sm:mb-3">
               <span className="w-1.5 h-1.5 rounded-full bg-yellow-400 animate-pulse shrink-0" />
               <span className="text-cyan-300 font-bold">Corporate Endorsements</span>
             </div>
-            <h2 className="font-display text-3xl sm:text-4xl lg:text-[42px] font-bold text-[#0c2340] tracking-tight mt-1">
+            <h2 className="font-display text-2xl sm:text-4xl lg:text-[42px] font-bold text-[#0c2340] tracking-tight mt-1">
               Expert Testimonials <Amp /> <span className="font-display bg-gradient-to-r from-orange-500 via-yellow-500 to-amber-500 bg-clip-text text-transparent">Industry Voices</span>
             </h2>
-            <p className="text-sm sm:text-base text-slate-600 mt-2">
+            <p className="text-xs sm:text-base text-slate-600 mt-1.5 sm:mt-2">
               Hear what corporate leaders and hiring directors say about IMAS graduates and managerial preparedness.
             </p>
           </div>
 
           {/* Mobile Swipe Hint */}
-          <div className="flex md:hidden items-center justify-end gap-1.5 text-[11px] text-slate-500 font-medium -mt-6 mb-3 px-1">
+          <div className="flex md:hidden items-center justify-end gap-1 text-[10px] text-slate-500 font-medium -mt-3 mb-2 px-1">
             <span>Swipe video testimonials</span>
-            <ArrowRight className="w-3.5 h-3.5 text-cyan-600" />
+            <ArrowRight className="w-3 h-3 text-cyan-600" />
           </div>
 
-          <div className="flex overflow-x-auto pb-4 gap-4 snap-x snap-mandatory scrollbar-hide md:grid md:grid-cols-2 md:gap-8 max-w-5xl mx-auto md:overflow-visible">
+          <div className="flex overflow-x-auto pb-3 gap-3.5 snap-x snap-mandatory scrollbar-hide md:grid md:grid-cols-2 md:gap-8 max-w-5xl mx-auto md:overflow-visible">
             {expertVideos.map((video, idx) => (
               <div 
                 key={video.id} 
-                className={`w-[85vw] max-w-[340px] shrink-0 snap-start md:w-auto md:max-w-none md:shrink rounded-2xl border border-slate-200 bg-slate-900 text-white overflow-hidden shadow-lg card-hover-glow-cyan flex flex-col justify-between group reveal-init reveal-delay-${idx * 150 + 100}`}
+                className={`w-[270px] xs:w-[300px] shrink-0 snap-start md:w-auto md:shrink rounded-xl sm:rounded-2xl border border-slate-200 bg-slate-900 text-white overflow-hidden shadow-lg card-hover-glow-cyan flex flex-col justify-between group reveal-init reveal-delay-${idx * 150 + 100}`}
               >
                 {/* Video Player or Lazy Thumbnail */}
                 <div className="relative aspect-video bg-black flex items-center justify-center group cursor-pointer overflow-hidden" onClick={() => setActiveVideo(video.youtubeId)}>
@@ -2496,48 +2496,48 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
       {/* ========================================================= */}
       {/* 18. ASSESSMENT FRAMEWORK                                  */}
       {/* ========================================================= */}
-      <section className="py-14 bg-slate-50 border-b border-slate-200 overflow-hidden">
+      <section className="py-10 sm:py-14 bg-slate-50 border-b border-slate-200 overflow-hidden">
         <div className="max-w-[1550px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-10 reveal-init">
+          <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-10 reveal-init">
             {/* Eyebrow Tag with Pulsing Yellow Dot */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#0c2440] border border-[#00bcd4]/40 text-xs font-bold tracking-[0.14em] text-white uppercase shadow-md mb-3">
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#0c2440] border border-[#00bcd4]/40 text-[11px] sm:text-xs font-bold tracking-[0.14em] text-white uppercase shadow-md mb-2 sm:mb-3">
               <span className="w-1.5 h-1.5 rounded-full bg-yellow-400 animate-pulse shrink-0" />
               <span className="text-cyan-300 font-bold">Evaluation Methodology</span>
             </div>
-            <h2 className="font-display text-3xl sm:text-4xl lg:text-[42px] font-bold text-[#0c2340] tracking-tight mt-1">
+            <h2 className="font-display text-2xl sm:text-4xl lg:text-[42px] font-bold text-[#0c2340] tracking-tight mt-1">
               Holistic <span className="font-display bg-gradient-to-r from-orange-500 via-yellow-500 to-amber-500 bg-clip-text text-transparent">Assessment Framework</span>
             </h2>
-            <p className="text-sm sm:text-base text-slate-600 mt-2">
+            <p className="text-xs sm:text-base text-slate-600 mt-1.5 sm:mt-2">
               Balanced evaluation weighting conceptual theoretical rigor, software mastery, and strategic viva defense.
             </p>
           </div>
 
           {/* Mobile Swipe Hint */}
-          <div className="flex md:hidden items-center justify-end gap-1.5 text-[11px] text-slate-500 font-medium -mt-4 mb-3 px-1">
+          <div className="flex md:hidden items-center justify-end gap-1 text-[10px] text-slate-500 font-medium -mt-3 mb-2 px-1">
             <span>Swipe assessment weights</span>
-            <ArrowRight className="w-3.5 h-3.5 text-cyan-600" />
+            <ArrowRight className="w-3 h-3 text-cyan-600" />
           </div>
 
-          <div className="flex overflow-x-auto pb-4 gap-4 snap-x snap-mandatory scrollbar-hide md:grid md:grid-cols-3 md:gap-6 max-w-4xl mx-auto md:overflow-visible">
-            <div className="w-[78vw] max-w-[280px] shrink-0 snap-start md:w-auto md:max-w-none md:shrink p-6 rounded-2xl bg-[#0c2440] text-white border border-[#1e3e6b] text-center shadow-xl card-hover-lift hover:border-amber-400 hover:shadow-amber-500/20 transition-all duration-300 reveal-init reveal-delay-100 relative overflow-hidden">
+          <div className="flex overflow-x-auto pb-3 gap-3 snap-x snap-mandatory scrollbar-hide md:grid md:grid-cols-3 md:gap-6 max-w-4xl mx-auto md:overflow-visible">
+            <div className="w-[220px] xs:w-[250px] shrink-0 snap-start md:w-auto md:shrink p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-[#0c2440] text-white border border-[#1e3e6b] text-center shadow-xl card-hover-lift hover:border-amber-400 hover:shadow-amber-500/20 transition-all duration-300 reveal-init reveal-delay-100 relative overflow-hidden">
               <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-amber-400 to-yellow-500" />
-              <div className="font-display text-4xl sm:text-5xl font-black text-amber-400 tracking-tight mb-2">50%</div>
-              <h3 className="text-base font-bold text-white mb-1">Theory Examination</h3>
-              <p className="text-xs text-slate-300 font-normal">Conceptual mastery, case solutions, analytical business reasoning, and written end-term exams.</p>
+              <div className="font-display text-3xl sm:text-4xl md:text-5xl font-black text-amber-400 tracking-tight mb-1 sm:mb-2">50%</div>
+              <h3 className="text-sm sm:text-base font-bold text-white mb-0.5 sm:mb-1">Theory Examination</h3>
+              <p className="text-[11px] sm:text-xs text-slate-300 font-normal">Conceptual mastery, case solutions, analytical business reasoning, and written end-term exams.</p>
             </div>
 
-            <div className="w-[78vw] max-w-[280px] shrink-0 snap-start md:w-auto md:max-w-none md:shrink p-6 rounded-2xl bg-[#0c2440] text-white border border-[#1e3e6b] text-center shadow-xl card-hover-lift hover:border-cyan-400 hover:shadow-cyan-500/20 transition-all duration-300 reveal-init reveal-delay-200 relative overflow-hidden">
+            <div className="w-[220px] xs:w-[250px] shrink-0 snap-start md:w-auto md:shrink p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-[#0c2440] text-white border border-[#1e3e6b] text-center shadow-xl card-hover-lift hover:border-cyan-400 hover:shadow-cyan-500/20 transition-all duration-300 reveal-init reveal-delay-200 relative overflow-hidden">
               <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-cyan-400 to-sky-500" />
-              <div className="font-display text-4xl sm:text-5xl font-black text-cyan-400 tracking-tight mb-2">30%</div>
-              <h3 className="text-base font-bold text-white mb-1">Tool / Lab / Skill Work</h3>
-              <p className="text-xs text-slate-300 font-normal">Continuous lab evaluations, Power BI dashboards, advanced Excel modeling, and live software audits.</p>
+              <div className="font-display text-3xl sm:text-4xl md:text-5xl font-black text-cyan-400 tracking-tight mb-1 sm:mb-2">30%</div>
+              <h3 className="text-sm sm:text-base font-bold text-white mb-0.5 sm:mb-1">Tool / Lab / Skill Work</h3>
+              <p className="text-[11px] sm:text-xs text-slate-300 font-normal">Continuous lab evaluations, Power BI dashboards, advanced Excel modeling, and live software audits.</p>
             </div>
 
-            <div className="w-[78vw] max-w-[280px] shrink-0 snap-start md:w-auto md:max-w-none md:shrink p-6 rounded-2xl bg-[#0c2440] text-white border border-[#1e3e6b] text-center shadow-xl card-hover-lift hover:border-sky-400 hover:shadow-blue-500/20 transition-all duration-300 reveal-init reveal-delay-300 relative overflow-hidden">
+            <div className="w-[220px] xs:w-[250px] shrink-0 snap-start md:w-auto md:shrink p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-[#0c2440] text-white border border-[#1e3e6b] text-center shadow-xl card-hover-lift hover:border-sky-400 hover:shadow-blue-500/20 transition-all duration-300 reveal-init reveal-delay-300 relative overflow-hidden">
               <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-400 to-indigo-500" />
-              <div className="font-display text-4xl sm:text-5xl font-black text-sky-400 tracking-tight mb-2">20%</div>
-              <h3 className="text-base font-bold text-white mb-1">Viva / Project Defense</h3>
-              <p className="text-xs text-slate-300 font-normal">Summer internship viva voce, 20+ presentations, and final industry-based capstone project defense.</p>
+              <div className="font-display text-3xl sm:text-4xl md:text-5xl font-black text-sky-400 tracking-tight mb-1 sm:mb-2">20%</div>
+              <h3 className="text-sm sm:text-base font-bold text-white mb-0.5 sm:mb-1">Viva / Project Defense</h3>
+              <p className="text-[11px] sm:text-xs text-slate-300 font-normal">Summer internship viva voce, 20+ presentations, and final industry-based capstone project defense.</p>
             </div>
           </div>
         </div>
@@ -2546,56 +2546,56 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
       {/* ========================================================= */}
       {/* 19. PLACEMENTS & CAREER SUPPORT                           */}
       {/* ========================================================= */}
-      <section id="placements" className="py-16 bg-white border-b border-slate-200 overflow-hidden">
+      <section id="placements" className="py-10 sm:py-16 bg-white border-b border-slate-200 overflow-hidden">
         <div className="max-w-[1550px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-12 reveal-init">
+          <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-12 reveal-init">
             {/* Eyebrow Tag with Pulsing Yellow Dot */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#0c2440] border border-[#00bcd4]/40 text-xs font-bold tracking-[0.14em] text-white uppercase shadow-md mb-3">
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#0c2440] border border-[#00bcd4]/40 text-[11px] sm:text-xs font-bold tracking-[0.14em] text-white uppercase shadow-md mb-2 sm:mb-3">
               <span className="w-1.5 h-1.5 rounded-full bg-yellow-400 animate-pulse shrink-0" />
               <span className="text-cyan-300 font-bold">Corporate Success</span>
             </div>
-            <h2 className="font-display text-3xl sm:text-4xl lg:text-[42px] font-bold text-[#0c2340] tracking-tight mt-1">
+            <h2 className="font-display text-2xl sm:text-4xl lg:text-[42px] font-bold text-[#0c2340] tracking-tight mt-1">
               Placements <Amp /> <span className="font-display bg-gradient-to-r from-orange-500 via-yellow-500 to-amber-500 bg-clip-text text-transparent">Career Support</span>
             </h2>
-            <p className="text-sm sm:text-base text-slate-600 mt-2">
+            <p className="text-xs sm:text-base text-slate-600 mt-1.5 sm:mt-2">
               A comprehensive corporate relations ecosystem backed by verified compensation records and top tier national recruiters.
             </p>
           </div>
 
           {/* Mobile Swipe Hint */}
-          <div className="flex sm:hidden items-center justify-end gap-1.5 text-[11px] text-slate-500 font-medium -mt-6 mb-3 px-1">
+          <div className="flex sm:hidden items-center justify-end gap-1 text-[10px] text-slate-500 font-medium -mt-3 mb-2 px-1">
             <span>Swipe placement records</span>
-            <ArrowRight className="w-3.5 h-3.5 text-cyan-600" />
+            <ArrowRight className="w-3 h-3 text-cyan-600" />
           </div>
 
           {/* Primary High-Visibility Metric Cards: Mobile Horizontal Swipe, Desktop 4-Col Grid */}
-          <div className="flex overflow-x-auto pb-4 gap-3.5 snap-x snap-mandatory scrollbar-hide sm:grid sm:grid-cols-2 lg:grid-cols-4 sm:gap-4 max-w-5xl mx-auto mb-8 sm:mb-12 sm:overflow-visible">
-            <div className="w-[230px] xs:w-[250px] sm:w-auto shrink-0 snap-start sm:shrink p-6 rounded-2xl bg-[#0c2440] text-white border border-[#1e3e6b] text-center shadow-xl card-hover-lift hover:border-amber-400 hover:shadow-amber-500/20 group relative overflow-hidden">
+          <div className="flex overflow-x-auto pb-3 gap-3 snap-x snap-mandatory scrollbar-hide sm:grid sm:grid-cols-2 lg:grid-cols-4 sm:gap-4 max-w-5xl mx-auto mb-6 sm:mb-12 sm:overflow-visible">
+            <div className="w-[190px] xs:w-[220px] sm:w-auto shrink-0 snap-start sm:shrink p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-[#0c2440] text-white border border-[#1e3e6b] text-center shadow-xl card-hover-lift hover:border-amber-400 hover:shadow-amber-500/20 group relative overflow-hidden">
               <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-amber-400 to-yellow-500" />
-              <div className="text-xs font-bold uppercase text-amber-400 tracking-wider">Highest Package</div>
-              <div className="font-display text-3xl sm:text-4xl font-black text-white tracking-tight my-1 group-hover:text-amber-300 transition-colors">₹18.5 LPA</div>
-              <p className="text-xs text-slate-300 font-medium">Top Performer Compensation</p>
+              <div className="text-[10px] sm:text-xs font-bold uppercase text-amber-400 tracking-wider">Highest Package</div>
+              <div className="font-display text-2xl sm:text-3xl lg:text-4xl font-black text-white tracking-tight my-0.5 sm:my-1 group-hover:text-amber-300 transition-colors">₹18.5 LPA</div>
+              <p className="text-[11px] sm:text-xs text-slate-300 font-medium">Top Performer Compensation</p>
             </div>
 
-            <div className="w-[230px] xs:w-[250px] sm:w-auto shrink-0 snap-start sm:shrink p-6 rounded-2xl bg-[#0c2440] text-white border border-[#1e3e6b] text-center shadow-xl card-hover-lift hover:border-cyan-400 hover:shadow-cyan-500/20 group relative overflow-hidden">
+            <div className="w-[190px] xs:w-[220px] sm:w-auto shrink-0 snap-start sm:shrink p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-[#0c2440] text-white border border-[#1e3e6b] text-center shadow-xl card-hover-lift hover:border-cyan-400 hover:shadow-cyan-500/20 group relative overflow-hidden">
               <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-cyan-400 to-sky-500" />
-              <div className="text-xs font-bold uppercase text-cyan-400 tracking-wider">Support Commitment</div>
-              <div className="font-display text-3xl sm:text-4xl font-black text-white tracking-tight my-1 group-hover:text-cyan-300 transition-colors">100%</div>
-              <p className="text-xs text-slate-300 font-medium">Placement Assistance (Mandatory)</p>
+              <div className="text-[10px] sm:text-xs font-bold uppercase text-cyan-400 tracking-wider">Support Commitment</div>
+              <div className="font-display text-2xl sm:text-3xl lg:text-4xl font-black text-white tracking-tight my-0.5 sm:my-1 group-hover:text-cyan-300 transition-colors">100%</div>
+              <p className="text-[11px] sm:text-xs text-slate-300 font-medium">Placement Assistance (Mandatory)</p>
             </div>
 
-            <div className="w-[230px] xs:w-[250px] sm:w-auto shrink-0 snap-start sm:shrink p-6 rounded-2xl bg-[#0c2440] text-white border border-[#1e3e6b] text-center shadow-xl card-hover-lift hover:border-blue-400 hover:shadow-blue-500/20 group relative overflow-hidden">
+            <div className="w-[190px] xs:w-[220px] sm:w-auto shrink-0 snap-start sm:shrink p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-[#0c2440] text-white border border-[#1e3e6b] text-center shadow-xl card-hover-lift hover:border-blue-400 hover:shadow-blue-500/20 group relative overflow-hidden">
               <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-400 to-indigo-500" />
-              <div className="text-xs font-bold uppercase text-sky-400 tracking-wider">Average Package</div>
-              <div className="font-display text-3xl sm:text-4xl font-black text-white tracking-tight my-1 group-hover:text-sky-300 transition-colors">₹6.50+ LPA</div>
-              <p className="text-xs text-slate-300 font-medium">Across All 5 Disciplines</p>
+              <div className="text-[10px] sm:text-xs font-bold uppercase text-sky-400 tracking-wider">Average Package</div>
+              <div className="font-display text-2xl sm:text-3xl lg:text-4xl font-black text-white tracking-tight my-0.5 sm:my-1 group-hover:text-sky-300 transition-colors">₹6.50+ LPA</div>
+              <p className="text-[11px] sm:text-xs text-slate-300 font-medium">Across All 5 Disciplines</p>
             </div>
 
-            <div className="w-[230px] xs:w-[250px] sm:w-auto shrink-0 snap-start sm:shrink p-6 rounded-2xl bg-[#0c2440] text-white border border-[#1e3e6b] text-center shadow-xl card-hover-lift hover:border-orange-400 hover:shadow-orange-500/20 group relative overflow-hidden">
+            <div className="w-[190px] xs:w-[220px] sm:w-auto shrink-0 snap-start sm:shrink p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-[#0c2440] text-white border border-[#1e3e6b] text-center shadow-xl card-hover-lift hover:border-orange-400 hover:shadow-orange-500/20 group relative overflow-hidden">
               <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-orange-400 to-amber-500" />
-              <div className="text-xs font-bold uppercase text-orange-400 tracking-wider">Hiring Network</div>
-              <div className="font-display text-3xl sm:text-4xl font-black text-white tracking-tight my-1 group-hover:text-orange-300 transition-colors">465+</div>
-              <p className="text-xs text-slate-300 font-medium">Annual Placement Opportunities</p>
+              <div className="text-[10px] sm:text-xs font-bold uppercase text-orange-400 tracking-wider">Hiring Network</div>
+              <div className="font-display text-2xl sm:text-3xl lg:text-4xl font-black text-white tracking-tight my-0.5 sm:my-1 group-hover:text-orange-300 transition-colors">465+</div>
+              <p className="text-[11px] sm:text-xs text-slate-300 font-medium">Annual Placement Opportunities</p>
             </div>
           </div>
 
@@ -2718,33 +2718,33 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
       {/* ========================================================= */}
       {/* 21 & 22. ELIGIBILITY & 4-STEP ADMISSION PROCESS          */}
       {/* ========================================================= */}
-      <section id="admissions" className="py-16 bg-white border-b border-slate-200 overflow-hidden">
+      <section id="admissions" className="py-10 sm:py-16 bg-white border-b border-slate-200 overflow-hidden">
         <div className="max-w-[1550px] mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-12 reveal-init">
+          <div className="text-center max-w-3xl mx-auto mb-6 sm:mb-12 reveal-init">
             {/* Eyebrow Tag with Pulsing Yellow Dot */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#0c2440] border border-[#00bcd4]/40 text-xs font-bold tracking-[0.14em] text-white uppercase shadow-md mb-3">
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#0c2440] border border-[#00bcd4]/40 text-[11px] sm:text-xs font-bold tracking-[0.14em] text-white uppercase shadow-md mb-2 sm:mb-3">
               <span className="w-1.5 h-1.5 rounded-full bg-yellow-400 animate-pulse shrink-0" />
               <span className="text-cyan-300 font-bold">Join IMAS</span>
             </div>
-            <h2 className="font-display text-3xl sm:text-4xl lg:text-[42px] font-bold text-[#0c2340] tracking-tight mt-1">
+            <h2 className="font-display text-2xl sm:text-4xl lg:text-[42px] font-bold text-[#0c2340] tracking-tight mt-1">
               Eligibility <Amp /> <span className="font-display bg-gradient-to-r from-orange-500 via-yellow-500 to-amber-500 bg-clip-text text-transparent">Admission Process</span>
             </h2>
-            <p className="text-sm sm:text-base text-slate-600 mt-2">
+            <p className="text-xs sm:text-base text-slate-600 mt-1.5 sm:mt-2">
               A transparent, merit-focused four-stage selection process for aspiring business leaders.
             </p>
           </div>
 
           {/* Eligibility Card (Deep Blue Card on White Bg) */}
-          <div className="max-w-3xl mx-auto mb-12 p-6 rounded-2xl bg-[#0c2440] text-white border border-[#1e3e6b] shadow-xl card-hover-lift hover:border-cyan-400 hover:shadow-cyan-500/20 transition-all duration-300 reveal-init relative overflow-hidden">
+          <div className="max-w-3xl mx-auto mb-6 sm:mb-12 p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-[#0c2440] text-white border border-[#1e3e6b] shadow-xl card-hover-lift hover:border-cyan-400 hover:shadow-cyan-500/20 transition-all duration-300 reveal-init relative overflow-hidden">
             <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-cyan-400 via-yellow-400 to-amber-500" />
-            <div className="flex items-start gap-3">
-              <CheckCircle2 className="h-6 w-6 text-amber-400 flex-shrink-0 mt-0.5" />
+            <div className="flex items-start gap-2.5 sm:gap-3">
+              <CheckCircle2 className="h-5 w-5 sm:h-6 sm:w-6 text-amber-400 flex-shrink-0 mt-0.5" />
               <div>
-                <h3 className="text-base font-bold text-white">Minimum Academic Eligibility Criteria</h3>
-                <p className="text-sm text-slate-200 mt-1 leading-relaxed font-normal">
+                <h3 className="text-sm sm:text-base font-bold text-white">Minimum Academic Eligibility Criteria</h3>
+                <p className="text-xs sm:text-sm text-slate-200 mt-1 leading-relaxed font-normal">
                   "Bachelor's degree from a recognised university/institution, subject to applicable programme and admission requirements."
                 </p>
-                <p className="text-xs text-cyan-300 mt-2">
+                <p className="text-[11px] sm:text-xs text-cyan-300 mt-1.5 sm:mt-2">
                   * Final-year graduation candidates awaiting results are also eligible to apply provisionally. Valid entrance scores (CAT, MAT, XAT, CMAT, ATMA or IMAS Entrance) are accepted.
                 </p>
               </div>
@@ -2752,13 +2752,13 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
           </div>
 
           {/* Mobile Swipe Hint */}
-          <div className="flex sm:hidden items-center justify-end gap-1.5 text-[11px] text-slate-500 font-medium -mt-6 mb-3 px-1">
+          <div className="flex sm:hidden items-center justify-end gap-1 text-[10px] text-slate-500 font-medium -mt-3 mb-2 px-1">
             <span>Swipe 4-step admission process</span>
-            <ArrowRight className="w-3.5 h-3.5 text-cyan-600" />
+            <ArrowRight className="w-3 h-3 text-cyan-600" />
           </div>
 
           {/* 4-Step Process Timeline: Mobile Horizontal Swipe, Desktop 4-Col Grid */}
-          <div className="flex overflow-x-auto pb-4 gap-4 snap-x snap-mandatory scrollbar-hide sm:grid sm:grid-cols-2 lg:grid-cols-4 sm:overflow-visible max-w-5xl mx-auto">
+          <div className="flex overflow-x-auto pb-3 gap-3 snap-x snap-mandatory scrollbar-hide sm:grid sm:grid-cols-2 lg:grid-cols-4 sm:overflow-visible max-w-5xl mx-auto">
             {[
               { ...admissionSteps[0], beam: 'from-cyan-400 to-sky-500', stepColor: 'text-cyan-400 group-hover:text-cyan-300' },
               { ...admissionSteps[1], beam: 'from-amber-400 to-yellow-500', stepColor: 'text-amber-400 group-hover:text-amber-300' },
@@ -2767,16 +2767,16 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
             ].map((s, idx) => (
               <div 
                 key={s.step} 
-                className={`w-[80vw] max-w-[290px] shrink-0 snap-start sm:w-auto sm:max-w-none sm:shrink p-6 rounded-2xl bg-[#0c2440] text-white border border-[#1e3e6b] relative flex flex-col justify-between shadow-xl card-hover-lift hover:border-cyan-400 hover:shadow-cyan-500/20 transition-all duration-300 group reveal-init reveal-delay-${idx * 100 + 100} overflow-hidden`}
+                className={`w-[230px] xs:w-[260px] shrink-0 snap-start sm:w-auto sm:shrink p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-[#0c2440] text-white border border-[#1e3e6b] relative flex flex-col justify-between shadow-xl card-hover-lift hover:border-cyan-400 hover:shadow-cyan-500/20 transition-all duration-300 group reveal-init reveal-delay-${idx * 100 + 100} overflow-hidden`}
               >
                 <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${s.beam}`} />
                 <div>
                   <div className="flex items-center justify-between mb-2">
-                    <span className={`text-2xl font-black ${s.stepColor} font-mono transition-colors`}>{s.step}</span>
-                    <span className="text-[10px] uppercase font-bold text-slate-900 bg-white px-2 py-0.5 rounded">Stage {idx + 1}</span>
+                    <span className={`text-xl sm:text-2xl font-black ${s.stepColor} font-mono transition-colors`}>{s.step}</span>
+                    <span className="text-[9px] sm:text-[10px] uppercase font-bold text-slate-900 bg-white px-1.5 sm:px-2 py-0.5 rounded">Stage {idx + 1}</span>
                   </div>
-                  <h4 className="text-base font-bold text-white mb-2 group-hover:text-cyan-200 transition-colors">{s.title}</h4>
-                  <p className="text-xs text-slate-300 leading-relaxed font-normal">{s.desc}</p>
+                  <h4 className="text-sm sm:text-base font-bold text-white mb-1.5 sm:mb-2 group-hover:text-cyan-200 transition-colors">{s.title}</h4>
+                  <p className="text-[11px] sm:text-xs text-slate-300 leading-relaxed font-normal">{s.desc}</p>
                 </div>
                 <div className="mt-4 pt-3 border-t border-white/10 flex items-center justify-between text-[11px] text-cyan-300 font-semibold">
                   <span>Stage {s.step} Selection</span>
