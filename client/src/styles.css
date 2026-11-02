@@ -486,13 +486,17 @@ img[src*="imas_hero_image1.webp"] {
   background: linear-gradient(135deg, var(--imas-medium-blue) 0%, var(--imas-teal) 100%);
 }
 
-/* Hide scrollbars for carousel */
-.scrollbar-hide {
+/* Hide scrollbars for carousel & mobile horizontal cards */
+.scrollbar-hide,
+.scrollbar-none,
+.no-scrollbar {
   -ms-overflow-style: none;  /* Internet Explorer 10+ */
   scrollbar-width: none;  /* Firefox */
 }
 
-.scrollbar-hide::-webkit-scrollbar {
+.scrollbar-hide::-webkit-scrollbar,
+.scrollbar-none::-webkit-scrollbar,
+.no-scrollbar::-webkit-scrollbar {
   display: none;  /* Safari and Chrome */
 }
 

@@ -1182,38 +1182,38 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
             </div>
 
             {/* Right Column: Featured Programme / Live Campus Slider Card (Matching Main Hero) */}
-            <div className="lg:col-span-5 xl:col-span-5 flex flex-col items-center lg:items-end justify-center relative pt-3 lg:pt-0">
+            <div className="lg:col-span-5 xl:col-span-5 flex flex-col items-center lg:items-end justify-center relative pt-3 lg:pt-0 w-full">
               
-              <div className="bg-white rounded-xl shadow-2xl p-3 sm:p-3.5 border border-slate-100 max-w-[310px] sm:max-w-[325px] w-full transition-all duration-500 card-hover-glow-cyan group">
+              <div className="bg-white rounded-xl shadow-2xl p-2.5 sm:p-3.5 border border-slate-100 w-full max-w-md sm:max-w-xl lg:max-w-[325px] transition-all duration-500 card-hover-glow-cyan group flex flex-row lg:flex-col">
                 
                 {/* Image with Pill Badge & Carousel Dots */}
-                <div className="relative rounded-lg overflow-hidden mb-2 bg-slate-100 aspect-[16/9]">
+                <div className="relative rounded-lg overflow-hidden bg-slate-100 w-[115px] xs:w-[140px] sm:w-[185px] md:w-[205px] lg:w-full shrink-0 self-stretch lg:self-auto min-h-[145px] sm:min-h-[160px] lg:min-h-0 lg:aspect-[16/9] lg:mb-2">
                   <img 
                     src={heroSliderImages[activeCarouselDot].src} 
                     alt={heroSliderImages[activeCarouselDot].label} 
-                    className="w-full h-full object-cover transition-opacity duration-300 group-hover:scale-108 transition-transform duration-700 ease-out"
+                    className="absolute inset-0 w-full h-full object-cover transition-opacity duration-300 group-hover:scale-108 transition-transform duration-700 ease-out"
                   />
                   
                   {/* FEATURED Badge */}
-                  <div className="absolute top-2 left-2 bg-[#0c2440]/90 text-cyan-300 border border-cyan-400/40 text-[9px] font-bold tracking-wider px-2 py-0.5 rounded shadow-xs uppercase">
-                    FEATURED PROGRAMME
+                  <div className="absolute top-1.5 left-1.5 sm:top-2 sm:left-2 bg-[#0c2440]/90 text-cyan-300 border border-cyan-400/40 text-[7px] xs:text-[8px] sm:text-[9px] font-bold tracking-wider px-1.5 py-0.5 rounded shadow-xs uppercase z-10">
+                    <span className="hidden xs:inline">FEATURED </span>PROGRAMME
                   </div>
 
                   {/* Caption on image */}
-                  <div className="absolute bottom-5 left-2 right-2 text-center">
-                    <span className="text-[10px] font-semibold text-white bg-black/60 backdrop-blur-xs px-2 py-0.5 rounded-md">
+                  <div className="absolute bottom-4 sm:bottom-5 left-1 right-1 text-center z-10">
+                    <span className="text-[7.5px] xs:text-[8.5px] sm:text-[10px] font-semibold text-white bg-black/60 backdrop-blur-xs px-1.5 py-0.5 rounded-md truncate max-w-full inline-block">
                       {heroSliderImages[activeCarouselDot].label}
                     </span>
                   </div>
 
                   {/* Carousel Dots */}
-                  <div className="absolute bottom-1.5 left-1/2 transform -translate-x-1/2 flex items-center gap-1 bg-black/35 backdrop-blur-xs px-2 py-0.5 rounded-full">
+                  <div className="absolute bottom-1 sm:bottom-1.5 left-1/2 transform -translate-x-1/2 flex items-center gap-1 bg-black/40 backdrop-blur-xs px-1.5 py-0.5 rounded-full z-10">
                     {heroSliderImages.map((_, i) => (
                       <button
                         key={i}
                         onClick={() => setActiveCarouselDot(i)}
                         className={`h-1 rounded-full transition-all ${
-                          activeCarouselDot === i ? 'bg-white w-3' : 'bg-white/60 hover:bg-white w-1'
+                          activeCarouselDot === i ? 'bg-white w-2.5 sm:w-3' : 'bg-white/60 hover:bg-white w-1'
                         }`}
                         aria-label={`Slide ${i + 1}`}
                       />
@@ -1221,49 +1221,52 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
                   </div>
                 </div>
 
-                {/* Title & Subtitle */}
-                <div className="mb-2">
-                  <div className="flex items-center justify-between">
-                    <h3 className="font-display text-xl sm:text-2xl font-bold text-[#0c2340] leading-none">PGDM Plus</h3>
-                    <span className="text-[9px] font-bold text-emerald-700 bg-emerald-50 px-1.5 py-0.5 rounded border border-emerald-200">
-                      Phase II Intake
-                    </span>
-                  </div>
-                  <p className="text-[11px] text-[#1e3a8a] font-semibold mt-0.5">Post Graduate Diploma in Management (2 Years)</p>
-                </div>
-
-                {/* 3-Column Highlights Row */}
-                <div className="grid grid-cols-3 gap-1.5 py-1.5 border-y border-slate-100 text-center">
-                  <div>
-                    <span className="block text-[9px] text-slate-400 font-medium">Duration</span>
-                    <span className="block text-[11px] font-bold text-slate-800">2 Years</span>
-                  </div>
-                  <div className="border-x border-slate-100">
-                    <span className="block text-[9px] text-slate-400 font-medium">Mode</span>
-                    <span className="block text-[11px] font-bold text-slate-800">Full-Time</span>
-                  </div>
-                  <div>
-                    <span className="block text-[9px] text-slate-400 font-medium">Internship</span>
-                    <span className="block text-[11px] font-bold text-teal-600">8–10 Wks</span>
-                  </div>
-                </div>
-
-                {/* Quick Enquire Button inside Card */}
-                <div className="mt-2 space-y-1.5">
-                  <Button
-                    onClick={handleOpenEnquiry}
-                    className="w-full bg-gradient-to-r from-yellow-500 via-[#00a8cc] to-[#1d4ed8] hover:from-[#00acc1] hover:to-[#1e40af] text-white font-bold text-xs py-2 rounded-lg transition-all"
-                  >
-                    Enquire for Admission 2026
-                  </Button>
-                  <div className="flex items-center justify-between text-[10px] text-slate-500 pt-0.5">
-                    <div className="flex items-center gap-1 text-amber-500">
-                      {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="h-2.5 w-2.5 fill-amber-400 text-amber-400" />
-                      ))}
-                      <span className="font-bold text-slate-700 ml-0.5">4.9/5</span>
+                {/* Content Container (Right on small devices, below image on desktop) */}
+                <div className="flex-1 min-w-0 flex flex-col justify-between pl-2.5 sm:pl-3.5 lg:pl-0">
+                  {/* Title & Subtitle */}
+                  <div className="mb-1 sm:mb-2">
+                    <div className="flex items-center justify-between gap-1">
+                      <h3 className="font-display text-base xs:text-lg sm:text-2xl font-bold text-[#0c2340] leading-none">PGDM Plus</h3>
+                      <span className="text-[7.5px] xs:text-[8px] sm:text-[9px] font-bold text-emerald-700 bg-emerald-50 px-1 sm:px-1.5 py-0.5 rounded border border-emerald-200 shrink-0">
+                        Phase II Intake
+                      </span>
                     </div>
-                    <span className="text-[9.5px] text-slate-400">Campus: Newtown</span>
+                    <p className="text-[9.5px] xs:text-[10px] sm:text-[11px] text-[#1e3a8a] font-semibold mt-0.5 truncate">Post Graduate Diploma in Management (2 Years)</p>
+                  </div>
+
+                  {/* 3-Column Highlights Row */}
+                  <div className="grid grid-cols-3 gap-1 py-1 sm:py-1.5 border-y border-slate-100 text-center my-0.5 sm:my-1">
+                    <div>
+                      <span className="block text-[7.5px] xs:text-[8.5px] sm:text-[9px] text-slate-400 font-medium">Duration</span>
+                      <span className="block text-[9.5px] xs:text-[10px] sm:text-[11px] font-bold text-slate-800">2 Years</span>
+                    </div>
+                    <div className="border-x border-slate-100">
+                      <span className="block text-[7.5px] xs:text-[8.5px] sm:text-[9px] text-slate-400 font-medium">Mode</span>
+                      <span className="block text-[9.5px] xs:text-[10px] sm:text-[11px] font-bold text-slate-800">Full-Time</span>
+                    </div>
+                    <div>
+                      <span className="block text-[7.5px] xs:text-[8.5px] sm:text-[9px] text-slate-400 font-medium">Internship</span>
+                      <span className="block text-[9.5px] xs:text-[10px] sm:text-[11px] font-bold text-teal-600">8–10 Wks</span>
+                    </div>
+                  </div>
+
+                  {/* Quick Enquire Button inside Card */}
+                  <div className="mt-1 sm:mt-2 space-y-1 sm:space-y-1.5">
+                    <Button
+                      onClick={handleOpenEnquiry}
+                      className="w-full bg-gradient-to-r from-yellow-500 via-[#00a8cc] to-[#1d4ed8] hover:from-[#00acc1] hover:to-[#1e40af] text-white font-bold text-[10.5px] sm:text-xs py-1.5 sm:py-2 h-auto rounded-lg transition-all shadow-xs leading-tight"
+                    >
+                      Enquire for Admission 2026
+                    </Button>
+                    <div className="flex items-center justify-between text-[9px] sm:text-[10px] text-slate-500 pt-0.5">
+                      <div className="flex items-center gap-0.5 sm:gap-1 text-amber-500">
+                        {[...Array(5)].map((_, i) => (
+                          <Star key={i} className="h-2 w-2 xs:h-2.5 xs:w-2.5 fill-amber-400 text-amber-400" />
+                        ))}
+                        <span className="font-bold text-slate-700 ml-0.5 text-[8.5px] sm:text-[9.5px]">4.9/5</span>
+                      </div>
+                      <span className="text-[8px] xs:text-[8.5px] sm:text-[9.5px] text-slate-400">Campus: Newtown</span>
+                    </div>
                   </div>
                 </div>
 
@@ -1356,14 +1359,20 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
             </p>
           </div>
 
-          {/* 8 Bento Snapshot Cards with Hero Consistency (Streamlined 30% Height Reduction) */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-3.5">
+          {/* Mobile Swipe Hint */}
+          <div className="flex md:hidden items-center justify-end gap-1.5 text-[11px] text-slate-500 font-medium -mt-3 mb-2 px-1">
+            <span>Swipe for 8 parameters</span>
+            <ArrowRight className="w-3.5 h-3.5 text-cyan-600" />
+          </div>
+
+          {/* 8 Bento Snapshot Cards: Mobile Horizontal Swipe, Desktop 4-Col Grid */}
+          <div className="flex overflow-x-auto pb-3 pt-1 gap-3 snap-x snap-mandatory scrollbar-hide md:grid md:grid-cols-4 md:gap-3.5 md:overflow-visible">
             {programmeSnapshot.map((item, idx) => {
               const styles = getSnapshotThemeStyles(item.theme)
               return (
                 <div 
                   key={item.label} 
-                  className={`p-3.5 sm:p-4 rounded-xl ${styles.cardBg} text-white border ${styles.border} shadow-lg card-hover-lift transition-all duration-300 group relative overflow-hidden reveal-init reveal-delay-${(idx % 4) * 100 + 100}`}
+                  className={`w-[220px] xs:w-[250px] md:w-auto shrink-0 snap-start md:shrink p-3.5 sm:p-4 rounded-xl ${styles.cardBg} text-white border ${styles.border} shadow-lg card-hover-lift transition-all duration-300 group relative overflow-hidden reveal-init reveal-delay-${(idx % 4) * 100 + 100}`}
                 >
                   {/* Background Image with Clean Dark Gradient Vignette */}
                   <div 
@@ -1455,8 +1464,14 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
             </p>
           </div>
 
-          {/* Desktop Horizontal / Mobile Vertical Timeline */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-4 relative">
+          {/* Mobile Swipe Hint */}
+          <div className="flex md:hidden items-center justify-end gap-1.5 text-[11px] text-cyan-300/80 font-medium -mt-6 mb-3 px-1">
+            <span>Swipe 4-phase timeline</span>
+            <ArrowRight className="w-3.5 h-3.5 text-yellow-400" />
+          </div>
+
+          {/* Desktop 4-Col Grid / Mobile Horizontal Swipe Timeline */}
+          <div className="flex overflow-x-auto pb-4 pt-1 gap-4 snap-x snap-mandatory scrollbar-hide md:grid md:grid-cols-4 md:overflow-visible relative">
             {[
               {
                 stage: 'YEAR 1',
@@ -1521,7 +1536,7 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
             ].map((step, idx) => (
               <div 
                 key={step.stage} 
-                className={`relative p-6 rounded-2xl bg-white text-slate-900 border border-slate-100 shadow-xl card-hover-lift ${step.hoverBorder} ${step.hoverShadow} transition-all flex flex-col justify-between group overflow-hidden reveal-init reveal-delay-${idx * 100 + 100}`}
+                className={`w-[85vw] max-w-[310px] shrink-0 snap-start md:w-auto md:max-w-none md:shrink relative p-6 rounded-2xl bg-white text-slate-900 border border-slate-100 shadow-xl card-hover-lift ${step.hoverBorder} ${step.hoverShadow} transition-all flex flex-col justify-between group overflow-hidden reveal-init reveal-delay-${idx * 100 + 100}`}
               >
                 <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${step.beam} scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left`} />
                 <div>
@@ -1578,14 +1593,20 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
             </p>
           </div>
 
-          {/* 6 Strategic Pillar Cards with Hero Consistency */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* Mobile Swipe Hint */}
+          <div className="flex md:hidden items-center justify-end gap-1.5 text-[11px] text-slate-500 font-medium -mt-6 mb-3 px-1">
+            <span>Swipe 6 strategic pillars</span>
+            <ArrowRight className="w-3.5 h-3.5 text-cyan-600" />
+          </div>
+
+          {/* 6 Strategic Pillar Cards: Mobile Horizontal Swipe, Desktop 3-Col Grid */}
+          <div className="flex overflow-x-auto pb-4 pt-1 gap-4 snap-x snap-mandatory scrollbar-hide md:grid md:grid-cols-2 lg:grid-cols-3 md:gap-6 md:overflow-visible">
             {whyPgdmPlusFeatures.map((item, idx) => {
               const styles = getSnapshotThemeStyles(item.theme)
               return (
                 <div 
                   key={item.title} 
-                  className={`p-6 sm:p-7 rounded-2xl ${styles.cardBg} text-white border ${styles.border} shadow-xl card-hover-lift transition-all duration-300 group relative overflow-hidden reveal-init reveal-delay-${(idx % 3) * 100 + 100}`}
+                  className={`w-[85vw] max-w-[330px] shrink-0 snap-start md:w-auto md:max-w-none md:shrink p-5 sm:p-7 rounded-2xl ${styles.cardBg} text-white border ${styles.border} shadow-xl card-hover-lift transition-all duration-300 group relative overflow-hidden reveal-init reveal-delay-${(idx % 3) * 100 + 100}`}
                 >
                   {/* Background Image with Clean Dark Gradient Vignette */}
                   <div 
@@ -1654,7 +1675,7 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
       {/* ========================================================= */}
       {/* 8. REAL CAMPUS LIFE & INDUSTRIAL VISITS GALLERY (GALLERY) */}
       {/* ========================================================= */}
-      <section id="gallery" className="py-16 bg-slate-50 border-b border-slate-200">
+      <section id="gallery" className="py-16 bg-slate-50 border-b border-slate-200 overflow-hidden">
         <div className="max-w-[1550px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-10">
             {/* Eyebrow Tag with Pulsing Yellow Dot */}
@@ -1692,12 +1713,18 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
             ))}
           </div>
 
-          {/* Gallery Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {/* Mobile Swipe Hint */}
+          <div className="flex sm:hidden items-center justify-end gap-1.5 text-[11px] text-slate-500 font-medium -mt-4 mb-3 px-1">
+            <span>Swipe campus gallery</span>
+            <ArrowRight className="w-3.5 h-3.5 text-cyan-600" />
+          </div>
+
+          {/* Gallery Grid: Mobile Horizontal Swipe, Desktop 3-Col Grid */}
+          <div className="flex overflow-x-auto pb-4 gap-4 snap-x snap-mandatory scrollbar-hide sm:grid sm:grid-cols-2 lg:grid-cols-3 sm:gap-6 sm:overflow-visible">
             {filteredGallery.map((item, idx) => (
               <div 
                 key={idx} 
-                className={`rounded-2xl overflow-hidden bg-white border border-slate-200/90 shadow-sm card-hover-lift hover:border-[#00bcd4]/60 hover:shadow-2xl transition-all duration-500 group cursor-pointer reveal-init reveal-delay-${(idx % 3) * 100 + 100}`}
+                className={`w-[82vw] max-w-[310px] shrink-0 snap-start sm:w-auto sm:max-w-none sm:shrink rounded-2xl overflow-hidden bg-white border border-slate-200/90 shadow-sm card-hover-lift hover:border-[#00bcd4]/60 hover:shadow-2xl transition-all duration-500 group cursor-pointer reveal-init reveal-delay-${(idx % 3) * 100 + 100}`}
               >
                 <div className="relative aspect-[16/10] overflow-hidden bg-slate-100">
                   <img
@@ -1726,7 +1753,7 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
       {/* ========================================================= */}
       {/* 9. EXPERT TESTIMONIALS (YOUTUBE VIDEOS)                  */}
       {/* ========================================================= */}
-      <section className="py-16 bg-white border-b border-slate-200">
+      <section className="py-16 bg-white border-b border-slate-200 overflow-hidden">
         <div className="max-w-[1550px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-12 reveal-init">
             {/* Eyebrow Tag with Pulsing Yellow Dot */}
@@ -1742,11 +1769,17 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+          {/* Mobile Swipe Hint */}
+          <div className="flex md:hidden items-center justify-end gap-1.5 text-[11px] text-slate-500 font-medium -mt-6 mb-3 px-1">
+            <span>Swipe video testimonials</span>
+            <ArrowRight className="w-3.5 h-3.5 text-cyan-600" />
+          </div>
+
+          <div className="flex overflow-x-auto pb-4 gap-4 snap-x snap-mandatory scrollbar-hide md:grid md:grid-cols-2 md:gap-8 max-w-5xl mx-auto md:overflow-visible">
             {expertVideos.map((video, idx) => (
               <div 
                 key={video.id} 
-                className={`rounded-2xl border border-slate-200 bg-slate-900 text-white overflow-hidden shadow-lg card-hover-glow-cyan flex flex-col justify-between group reveal-init reveal-delay-${idx * 150 + 100}`}
+                className={`w-[85vw] max-w-[340px] shrink-0 snap-start md:w-auto md:max-w-none md:shrink rounded-2xl border border-slate-200 bg-slate-900 text-white overflow-hidden shadow-lg card-hover-glow-cyan flex flex-col justify-between group reveal-init reveal-delay-${idx * 150 + 100}`}
               >
                 {/* Video Player or Lazy Thumbnail */}
                 <div className="relative aspect-video bg-black flex items-center justify-center group cursor-pointer overflow-hidden" onClick={() => setActiveVideo(video.youtubeId)}>
@@ -1958,7 +1991,7 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
       {/* ========================================================= */}
       {/* 11, 12, 13, 14. CURRICULUM ARCHITECTURE (TABS)           */}
       {/* ========================================================= */}
-      <section id="curriculum" className="py-16 bg-white border-b border-slate-200">
+      <section id="curriculum" className="py-16 bg-white border-b border-slate-200 overflow-hidden">
         <div className="max-w-[1550px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-10 reveal-init">
             {/* Eyebrow Tag with Pulsing Yellow Dot */}
@@ -2032,12 +2065,18 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
                 </button>
               </div>
 
-              {/* Subjects List (Deep Blue Cards on White Bg) */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              {/* Mobile Swipe Hint */}
+              <div className="flex sm:hidden items-center justify-end gap-1 text-[10px] text-slate-500 font-medium mb-1">
+                <span>Swipe 6 semester subjects</span>
+                <ArrowRight className="w-3 h-3 text-cyan-600" />
+              </div>
+
+              {/* Subjects List: Mobile Horizontal Swipe, Desktop 2-Col Grid */}
+              <div className="flex overflow-x-auto pb-3 gap-2.5 snap-x snap-mandatory scrollbar-hide sm:grid sm:grid-cols-2 sm:gap-3 sm:overflow-visible">
                 {year1Syllabus[activeSem1Tab].subjects.map((sub, i) => (
                   <div 
                     key={sub.name} 
-                    className="p-4 rounded-xl bg-[#0c2440] text-white border border-[#1e3e6b] shadow-md hover:border-cyan-400 hover:shadow-cyan-500/20 hover:translate-x-1.5 transition-all duration-200 flex items-start gap-3 group"
+                    className="w-[230px] xs:w-[250px] sm:w-auto shrink-0 snap-start sm:shrink p-3.5 sm:p-4 rounded-xl bg-[#0c2440] text-white border border-[#1e3e6b] shadow-md hover:border-cyan-400 hover:shadow-cyan-500/20 hover:translate-x-1.5 transition-all duration-200 flex items-start gap-3 group"
                   >
                     <span className="flex-shrink-0 h-6 w-6 rounded-md bg-white/10 group-hover:bg-[#00bcd4] text-cyan-300 group-hover:text-[#0c2440] text-xs font-bold flex items-center justify-center transition-colors">
                       0{i + 1}
@@ -2067,14 +2106,19 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
                   </Button>
                 </div>
 
-                <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
+                {/* Mobile Swipe Hint */}
+                <div className="flex sm:hidden items-center justify-end gap-1 text-[10px] text-amber-800 font-medium mb-1">
+                  <span>Swipe 4 highlights</span>
+                  <ArrowRight className="w-3 h-3 text-amber-700" />
+                </div>
+                <div className="flex overflow-x-auto pb-2 gap-2.5 snap-x snap-mandatory scrollbar-hide sm:grid sm:grid-cols-4 sm:gap-3 pt-1 sm:overflow-visible">
                   {[
                     { title: 'Industry Exposure', desc: 'Direct corporate workspace immersion' },
                     { title: 'Practical Application', desc: 'Execute live management analytics models' },
                     { title: 'Professional Skills', desc: 'Cross-functional teamwork & leadership' },
                     { title: 'Career Awareness', desc: 'Pre-Placement Offer (PPO) opportunities' }
                   ].map((card) => (
-                    <div key={card.title} className="p-3 bg-white/80 rounded-xl border border-amber-200/60">
+                    <div key={card.title} className="w-[170px] sm:w-auto shrink-0 snap-start sm:shrink p-3 bg-white/80 rounded-xl border border-amber-200/60">
                       <div className="font-bold text-xs text-slate-900">{card.title}</div>
                       <div className="text-[11px] text-slate-500 mt-0.5">{card.desc}</div>
                     </div>
@@ -2130,12 +2174,18 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
                 </div>
               </div>
 
-              {/* Specialisation Subjects (Deep Blue Cards on White Bg) */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+              {/* Mobile Swipe Hint */}
+              <div className="flex sm:hidden items-center justify-end gap-1 text-[10px] text-slate-500 font-medium mb-1">
+                <span>Swipe semester subjects</span>
+                <ArrowRight className="w-3 h-3 text-cyan-600" />
+              </div>
+
+              {/* Specialisation Subjects: Mobile Horizontal Swipe, Desktop 2-Col Grid */}
+              <div className="flex overflow-x-auto pb-3 gap-2.5 snap-x snap-mandatory scrollbar-hide sm:grid sm:grid-cols-2 sm:gap-3 sm:overflow-visible pt-1">
                 {year2Syllabus[activeSpecialisation][activeSemYear2Tab].map((subjectName, i) => (
                   <div 
                     key={subjectName} 
-                    className="p-4 rounded-xl bg-[#0c2440] text-white border border-[#1e3e6b] shadow-md hover:border-cyan-400 hover:shadow-cyan-500/20 hover:translate-x-1.5 transition-all duration-200 flex items-start gap-3 group"
+                    className="w-[230px] xs:w-[250px] sm:w-auto shrink-0 snap-start sm:shrink p-3.5 sm:p-4 rounded-xl bg-[#0c2440] text-white border border-[#1e3e6b] shadow-md hover:border-cyan-400 hover:shadow-cyan-500/20 hover:translate-x-1.5 transition-all duration-200 flex items-start gap-3 group"
                   >
                     <span className="flex-shrink-0 h-6 w-6 rounded-md bg-white/10 group-hover:bg-[#00bcd4] text-cyan-300 group-hover:text-[#0c2440] text-xs font-bold flex items-center justify-center transition-colors">
                       0{i + 1}
@@ -2161,7 +2211,7 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
       {/* ========================================================= */}
       {/* 15. EXPERIENTIAL LEARNING FRAMEWORK                       */}
       {/* ========================================================= */}
-      <section className="py-14 bg-slate-50 border-b border-slate-200">
+      <section className="py-14 bg-slate-50 border-b border-slate-200 overflow-hidden">
         <div className="max-w-[1550px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-10 reveal-init">
             {/* Eyebrow Tag with Pulsing Yellow Dot */}
@@ -2177,7 +2227,13 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-3">
+          {/* Mobile Swipe Hint */}
+          <div className="flex sm:hidden items-center justify-end gap-1.5 text-[11px] text-slate-500 font-medium -mt-4 mb-2.5 px-1">
+            <span>Swipe 6 learning pillars</span>
+            <ArrowRight className="w-3.5 h-3.5 text-cyan-600" />
+          </div>
+
+          <div className="flex overflow-x-auto pb-3 gap-3 snap-x snap-mandatory scrollbar-hide sm:grid sm:grid-cols-3 lg:grid-cols-6 sm:overflow-visible">
             {[
               { title: 'Live Projects', icon: Target, desc: 'Real enterprise challenges', beam: 'from-cyan-400 to-sky-500', iconColor: 'text-cyan-300', hoverBorder: 'hover:border-cyan-400', hoverShadow: 'hover:shadow-cyan-500/20' },
               { title: 'Case Studies', icon: FileText, desc: 'Harvard & IIM cases', beam: 'from-amber-400 to-yellow-500', iconColor: 'text-amber-300', hoverBorder: 'hover:border-amber-400', hoverShadow: 'hover:shadow-amber-500/20' },
@@ -2188,7 +2244,7 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
             ].map((card, idx) => (
               <div 
                 key={card.title} 
-                className={`p-4 rounded-2xl bg-[#0c2440] text-white border border-[#1e3e6b] text-center shadow-xl card-hover-lift ${card.hoverBorder} ${card.hoverShadow} transition-all duration-300 group reveal-init reveal-delay-${idx * 100} relative overflow-hidden`}
+                className={`w-[165px] xs:w-[185px] sm:w-auto shrink-0 snap-start sm:shrink p-4 rounded-2xl bg-[#0c2440] text-white border border-[#1e3e6b] text-center shadow-xl card-hover-lift ${card.hoverBorder} ${card.hoverShadow} transition-all duration-300 group reveal-init reveal-delay-${idx * 100} relative overflow-hidden`}
               >
                 <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${card.beam} scale-x-0 group-hover:scale-x-100 transition-transform duration-300`} />
                 <div className={`h-10 w-10 mx-auto rounded-xl bg-white/10 ${card.iconColor} flex items-center justify-center mb-2 group-hover:bg-white group-hover:text-[#0c2440] group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-xs`}>
@@ -2254,16 +2310,16 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
                   </span>
                 </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                <div className="grid grid-cols-2 gap-2 sm:gap-3">
                   {current.tools.map((tool) => (
                     <div 
                       key={tool} 
-                      className="p-3.5 rounded-xl bg-white/[0.05] border border-white/10 flex items-center gap-3 hover:bg-cyan-500/15 hover:border-cyan-400/50 hover:scale-[1.02] hover:shadow-md transition-all duration-200 group cursor-default"
+                      className="p-2.5 sm:p-3.5 rounded-xl bg-white/[0.05] border border-white/10 flex items-center gap-2 sm:gap-3 hover:bg-cyan-500/15 hover:border-cyan-400/50 hover:scale-[1.02] hover:shadow-md transition-all duration-200 group cursor-default"
                     >
-                      <div className="h-8 w-8 rounded-lg bg-cyan-500/20 text-cyan-300 group-hover:bg-cyan-400 group-hover:text-slate-950 flex items-center justify-center flex-shrink-0 transition-colors">
-                        <Check className="h-4 w-4" />
+                      <div className="h-7 w-7 sm:h-8 sm:w-8 rounded-lg bg-cyan-500/20 text-cyan-300 group-hover:bg-cyan-400 group-hover:text-slate-950 flex items-center justify-center flex-shrink-0 transition-colors">
+                        <Check className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
                       </div>
-                      <span className="text-xs sm:text-sm font-semibold text-slate-100 group-hover:text-cyan-200 transition-colors">{tool}</span>
+                      <span className="text-[11px] sm:text-sm font-semibold text-slate-100 group-hover:text-cyan-200 transition-colors truncate">{tool}</span>
                     </div>
                   ))}
                 </div>
@@ -2400,7 +2456,7 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
       {/* ========================================================= */}
       {/* 18. ASSESSMENT FRAMEWORK                                  */}
       {/* ========================================================= */}
-      <section className="py-14 bg-slate-50 border-b border-slate-200">
+      <section className="py-14 bg-slate-50 border-b border-slate-200 overflow-hidden">
         <div className="max-w-[1550px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-10 reveal-init">
             {/* Eyebrow Tag with Pulsing Yellow Dot */}
@@ -2416,22 +2472,28 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-            <div className="p-6 rounded-2xl bg-[#0c2440] text-white border border-[#1e3e6b] text-center shadow-xl card-hover-lift hover:border-amber-400 hover:shadow-amber-500/20 transition-all duration-300 reveal-init reveal-delay-100 relative overflow-hidden">
+          {/* Mobile Swipe Hint */}
+          <div className="flex md:hidden items-center justify-end gap-1.5 text-[11px] text-slate-500 font-medium -mt-4 mb-3 px-1">
+            <span>Swipe assessment weights</span>
+            <ArrowRight className="w-3.5 h-3.5 text-cyan-600" />
+          </div>
+
+          <div className="flex overflow-x-auto pb-4 gap-4 snap-x snap-mandatory scrollbar-hide md:grid md:grid-cols-3 md:gap-6 max-w-4xl mx-auto md:overflow-visible">
+            <div className="w-[78vw] max-w-[280px] shrink-0 snap-start md:w-auto md:max-w-none md:shrink p-6 rounded-2xl bg-[#0c2440] text-white border border-[#1e3e6b] text-center shadow-xl card-hover-lift hover:border-amber-400 hover:shadow-amber-500/20 transition-all duration-300 reveal-init reveal-delay-100 relative overflow-hidden">
               <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-amber-400 to-yellow-500" />
               <div className="font-display text-4xl sm:text-5xl font-black text-amber-400 tracking-tight mb-2">50%</div>
               <h3 className="text-base font-bold text-white mb-1">Theory Examination</h3>
               <p className="text-xs text-slate-300 font-normal">Conceptual mastery, case solutions, analytical business reasoning, and written end-term exams.</p>
             </div>
 
-            <div className="p-6 rounded-2xl bg-[#0c2440] text-white border border-[#1e3e6b] text-center shadow-xl card-hover-lift hover:border-cyan-400 hover:shadow-cyan-500/20 transition-all duration-300 reveal-init reveal-delay-200 relative overflow-hidden">
+            <div className="w-[78vw] max-w-[280px] shrink-0 snap-start md:w-auto md:max-w-none md:shrink p-6 rounded-2xl bg-[#0c2440] text-white border border-[#1e3e6b] text-center shadow-xl card-hover-lift hover:border-cyan-400 hover:shadow-cyan-500/20 transition-all duration-300 reveal-init reveal-delay-200 relative overflow-hidden">
               <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-cyan-400 to-sky-500" />
               <div className="font-display text-4xl sm:text-5xl font-black text-cyan-400 tracking-tight mb-2">30%</div>
               <h3 className="text-base font-bold text-white mb-1">Tool / Lab / Skill Work</h3>
               <p className="text-xs text-slate-300 font-normal">Continuous lab evaluations, Power BI dashboards, advanced Excel modeling, and live software audits.</p>
             </div>
 
-            <div className="p-6 rounded-2xl bg-[#0c2440] text-white border border-[#1e3e6b] text-center shadow-xl card-hover-lift hover:border-sky-400 hover:shadow-blue-500/20 transition-all duration-300 reveal-init reveal-delay-300 relative overflow-hidden">
+            <div className="w-[78vw] max-w-[280px] shrink-0 snap-start md:w-auto md:max-w-none md:shrink p-6 rounded-2xl bg-[#0c2440] text-white border border-[#1e3e6b] text-center shadow-xl card-hover-lift hover:border-sky-400 hover:shadow-blue-500/20 transition-all duration-300 reveal-init reveal-delay-300 relative overflow-hidden">
               <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-400 to-indigo-500" />
               <div className="font-display text-4xl sm:text-5xl font-black text-sky-400 tracking-tight mb-2">20%</div>
               <h3 className="text-base font-bold text-white mb-1">Viva / Project Defense</h3>
@@ -2444,7 +2506,7 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
       {/* ========================================================= */}
       {/* 19. PLACEMENTS & CAREER SUPPORT                           */}
       {/* ========================================================= */}
-      <section id="placements" className="py-16 bg-white border-b border-slate-200">
+      <section id="placements" className="py-16 bg-white border-b border-slate-200 overflow-hidden">
         <div className="max-w-[1550px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-12 reveal-init">
             {/* Eyebrow Tag with Pulsing Yellow Dot */}
@@ -2460,30 +2522,36 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
             </p>
           </div>
 
-          {/* Primary High-Visibility Metric Cards (Deep Blue on White Bg) */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto mb-12">
-            <div className="p-6 rounded-2xl bg-[#0c2440] text-white border border-[#1e3e6b] text-center shadow-xl card-hover-lift hover:border-amber-400 hover:shadow-amber-500/20 group relative overflow-hidden">
+          {/* Mobile Swipe Hint */}
+          <div className="flex sm:hidden items-center justify-end gap-1.5 text-[11px] text-slate-500 font-medium -mt-6 mb-3 px-1">
+            <span>Swipe placement records</span>
+            <ArrowRight className="w-3.5 h-3.5 text-cyan-600" />
+          </div>
+
+          {/* Primary High-Visibility Metric Cards: Mobile Horizontal Swipe, Desktop 4-Col Grid */}
+          <div className="flex overflow-x-auto pb-4 gap-3.5 snap-x snap-mandatory scrollbar-hide sm:grid sm:grid-cols-2 lg:grid-cols-4 sm:gap-4 max-w-5xl mx-auto mb-8 sm:mb-12 sm:overflow-visible">
+            <div className="w-[230px] xs:w-[250px] sm:w-auto shrink-0 snap-start sm:shrink p-6 rounded-2xl bg-[#0c2440] text-white border border-[#1e3e6b] text-center shadow-xl card-hover-lift hover:border-amber-400 hover:shadow-amber-500/20 group relative overflow-hidden">
               <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-amber-400 to-yellow-500" />
               <div className="text-xs font-bold uppercase text-amber-400 tracking-wider">Highest Package</div>
               <div className="font-display text-3xl sm:text-4xl font-black text-white tracking-tight my-1 group-hover:text-amber-300 transition-colors">₹18.5 LPA</div>
               <p className="text-xs text-slate-300 font-medium">Top Performer Compensation</p>
             </div>
 
-            <div className="p-6 rounded-2xl bg-[#0c2440] text-white border border-[#1e3e6b] text-center shadow-xl card-hover-lift hover:border-cyan-400 hover:shadow-cyan-500/20 group relative overflow-hidden">
+            <div className="w-[230px] xs:w-[250px] sm:w-auto shrink-0 snap-start sm:shrink p-6 rounded-2xl bg-[#0c2440] text-white border border-[#1e3e6b] text-center shadow-xl card-hover-lift hover:border-cyan-400 hover:shadow-cyan-500/20 group relative overflow-hidden">
               <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-cyan-400 to-sky-500" />
               <div className="text-xs font-bold uppercase text-cyan-400 tracking-wider">Support Commitment</div>
               <div className="font-display text-3xl sm:text-4xl font-black text-white tracking-tight my-1 group-hover:text-cyan-300 transition-colors">100%</div>
               <p className="text-xs text-slate-300 font-medium">Placement Assistance (Mandatory)</p>
             </div>
 
-            <div className="p-6 rounded-2xl bg-[#0c2440] text-white border border-[#1e3e6b] text-center shadow-xl card-hover-lift hover:border-blue-400 hover:shadow-blue-500/20 group relative overflow-hidden">
+            <div className="w-[230px] xs:w-[250px] sm:w-auto shrink-0 snap-start sm:shrink p-6 rounded-2xl bg-[#0c2440] text-white border border-[#1e3e6b] text-center shadow-xl card-hover-lift hover:border-blue-400 hover:shadow-blue-500/20 group relative overflow-hidden">
               <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-400 to-indigo-500" />
               <div className="text-xs font-bold uppercase text-sky-400 tracking-wider">Average Package</div>
               <div className="font-display text-3xl sm:text-4xl font-black text-white tracking-tight my-1 group-hover:text-sky-300 transition-colors">₹6.50+ LPA</div>
               <p className="text-xs text-slate-300 font-medium">Across All 5 Disciplines</p>
             </div>
 
-            <div className="p-6 rounded-2xl bg-[#0c2440] text-white border border-[#1e3e6b] text-center shadow-xl card-hover-lift hover:border-orange-400 hover:shadow-orange-500/20 group relative overflow-hidden">
+            <div className="w-[230px] xs:w-[250px] sm:w-auto shrink-0 snap-start sm:shrink p-6 rounded-2xl bg-[#0c2440] text-white border border-[#1e3e6b] text-center shadow-xl card-hover-lift hover:border-orange-400 hover:shadow-orange-500/20 group relative overflow-hidden">
               <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-orange-400 to-amber-500" />
               <div className="text-xs font-bold uppercase text-orange-400 tracking-wider">Hiring Network</div>
               <div className="font-display text-3xl sm:text-4xl font-black text-white tracking-tight my-1 group-hover:text-orange-300 transition-colors">465+</div>
@@ -2496,7 +2564,14 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
             <h3 className="text-xs font-bold uppercase tracking-wider text-slate-500 text-center mb-6 reveal-init">
               Our 6-Pillar Employability Enhancement Program
             </h3>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-3">
+            
+            {/* Mobile Swipe Hint */}
+            <div className="flex sm:hidden items-center justify-end gap-1.5 text-[11px] text-slate-500 font-medium -mt-2 mb-2 px-1">
+              <span>Swipe 6 preparation pillars</span>
+              <ArrowRight className="w-3.5 h-3.5 text-cyan-600" />
+            </div>
+
+            <div className="flex overflow-x-auto pb-3 gap-3 snap-x snap-mandatory scrollbar-hide sm:grid sm:grid-cols-3 lg:grid-cols-6 sm:overflow-visible">
               {[
                 { title: 'Resume Development', desc: 'ATS-friendly industry profile engineering', hoverBorder: 'hover:border-cyan-400' },
                 { title: 'Interview Preparation', desc: 'Mock technical & behavioral panels', hoverBorder: 'hover:border-amber-400' },
@@ -2507,7 +2582,7 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
               ].map((p, idx) => (
                 <div 
                   key={p.title} 
-                  className={`p-4 rounded-xl bg-[#0c2440] text-white border border-[#1e3e6b] text-center shadow-md card-hover-lift ${p.hoverBorder} group reveal-init reveal-delay-${idx * 100} transition-all duration-300`}
+                  className={`w-[170px] xs:w-[190px] sm:w-auto shrink-0 snap-start sm:shrink p-4 rounded-xl bg-[#0c2440] text-white border border-[#1e3e6b] text-center shadow-md card-hover-lift ${p.hoverBorder} group reveal-init reveal-delay-${idx * 100} transition-all duration-300`}
                 >
                   <div className="text-xs font-bold text-white group-hover:text-cyan-300 transition-colors">{p.title}</div>
                   <div className="text-[11px] text-slate-300 mt-1 font-normal">{p.desc}</div>
@@ -2574,12 +2649,15 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
                 </div>
 
                 <div>
-                  <h4 className="text-xs font-bold uppercase tracking-wider text-amber-300 mb-3">Key Recruiter Organizations:</h4>
-                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
+                  <h4 className="text-xs font-bold uppercase tracking-wider text-amber-300 mb-3 flex items-center justify-between">
+                    <span>Key Recruiter Organizations:</span>
+                    <span className="sm:hidden text-[10px] text-cyan-300/80 font-normal">Swipe logos →</span>
+                  </h4>
+                  <div className="flex overflow-x-auto pb-2 gap-2.5 snap-x snap-mandatory scrollbar-hide sm:grid sm:grid-cols-4 sm:overflow-visible">
                     {pathway.recruiters.map((rec) => (
                       <div
                         key={rec.name}
-                        className="bg-white rounded-xl p-2 sm:p-2.5 flex items-center justify-center h-12 shadow-xs border border-slate-200/90 hover:scale-105 transition-all duration-200 cursor-default"
+                        className="w-[130px] sm:w-auto shrink-0 snap-start sm:shrink bg-white rounded-xl p-2 sm:p-2.5 flex items-center justify-center h-12 shadow-xs border border-slate-200/90 hover:scale-105 transition-all duration-200 cursor-default"
                         title={rec.name}
                       >
                         <img
@@ -2600,7 +2678,7 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
       {/* ========================================================= */}
       {/* 21 & 22. ELIGIBILITY & 4-STEP ADMISSION PROCESS          */}
       {/* ========================================================= */}
-      <section id="admissions" className="py-16 bg-white border-b border-slate-200">
+      <section id="admissions" className="py-16 bg-white border-b border-slate-200 overflow-hidden">
         <div className="max-w-[1550px] mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-12 reveal-init">
             {/* Eyebrow Tag with Pulsing Yellow Dot */}
@@ -2633,8 +2711,14 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
             </div>
           </div>
 
-          {/* 4-Step Process Timeline (Deep Blue Cards on White Bg) */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 max-w-5xl mx-auto">
+          {/* Mobile Swipe Hint */}
+          <div className="flex sm:hidden items-center justify-end gap-1.5 text-[11px] text-slate-500 font-medium -mt-6 mb-3 px-1">
+            <span>Swipe 4-step admission process</span>
+            <ArrowRight className="w-3.5 h-3.5 text-cyan-600" />
+          </div>
+
+          {/* 4-Step Process Timeline: Mobile Horizontal Swipe, Desktop 4-Col Grid */}
+          <div className="flex overflow-x-auto pb-4 gap-4 snap-x snap-mandatory scrollbar-hide sm:grid sm:grid-cols-2 lg:grid-cols-4 sm:overflow-visible max-w-5xl mx-auto">
             {[
               { ...admissionSteps[0], beam: 'from-cyan-400 to-sky-500', stepColor: 'text-cyan-400 group-hover:text-cyan-300' },
               { ...admissionSteps[1], beam: 'from-amber-400 to-yellow-500', stepColor: 'text-amber-400 group-hover:text-amber-300' },
@@ -2643,7 +2727,7 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
             ].map((s, idx) => (
               <div 
                 key={s.step} 
-                className={`p-6 rounded-2xl bg-[#0c2440] text-white border border-[#1e3e6b] relative flex flex-col justify-between shadow-xl card-hover-lift hover:border-cyan-400 hover:shadow-cyan-500/20 transition-all duration-300 group reveal-init reveal-delay-${idx * 100 + 100} overflow-hidden`}
+                className={`w-[80vw] max-w-[290px] shrink-0 snap-start sm:w-auto sm:max-w-none sm:shrink p-6 rounded-2xl bg-[#0c2440] text-white border border-[#1e3e6b] relative flex flex-col justify-between shadow-xl card-hover-lift hover:border-cyan-400 hover:shadow-cyan-500/20 transition-all duration-300 group reveal-init reveal-delay-${idx * 100 + 100} overflow-hidden`}
               >
                 <div className={`absolute top-0 left-0 right-0 h-1 bg-gradient-to-r ${s.beam}`} />
                 <div>
