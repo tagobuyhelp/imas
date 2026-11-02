@@ -1074,48 +1074,88 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
                 </p>
               </div>
 
-              {/* Key Programme Badges from Spec */}
-              <div className="flex flex-wrap items-center gap-1.5 text-[11px] font-semibold text-slate-200">
-                {[
-                  '2 Years Full-Time',
-                  '5 Specialisations',
-                  'Dual Specialisation Option',
-                  'Summer Internship',
-                  'International Immersion'
-                ].map((b) => (
-                  <span key={b} className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-md bg-[#0c2444]/80 border border-slate-700/60 backdrop-blur-xs">
-                    <Check className="h-3 w-3 text-[#00d2d3]" /> {b}
-                  </span>
-                ))}
+              {/* Key Programme Badges: Single-Line Auto-Marquee Track */}
+              <div className="overflow-hidden relative w-full py-0.5">
+                {/* Subtle side fade overlays */}
+                <div className="absolute left-0 inset-y-0 w-6 sm:w-10 bg-gradient-to-r from-[#071d3d] to-transparent z-10 pointer-events-none" />
+                <div className="absolute right-0 inset-y-0 w-6 sm:w-10 bg-gradient-to-l from-[#071d3d] to-transparent z-10 pointer-events-none" />
+
+                <div 
+                  className="flex items-center gap-2 sm:gap-2.5 w-max animate-marquee py-0.5"
+                  style={{ animationDuration: '22s' }}
+                >
+                  {[
+                    '2 Years Full-Time',
+                    '5 Specialisations',
+                    'Dual Specialisation Option',
+                    'Summer Internship',
+                    'International Immersion',
+                    '2 Years Full-Time',
+                    '5 Specialisations',
+                    'Dual Specialisation Option',
+                    'Summer Internship',
+                    'International Immersion'
+                  ].map((b, idx) => (
+                    <span 
+                      key={`${b}-${idx}`} 
+                      className="inline-flex items-center gap-1.5 px-2.5 sm:px-3 py-1 rounded-md bg-[#0c2444]/90 border border-slate-700/70 text-[10px] sm:text-[11px] font-semibold text-slate-200 backdrop-blur-xs whitespace-nowrap shadow-xs hover:border-[#00bcd4] hover:text-white transition-colors cursor-default"
+                    >
+                      <Check className="h-3 w-3 text-[#00d2d3] shrink-0" />
+                      <span>{b}</span>
+                    </span>
+                  ))}
+                </div>
               </div>
 
-              {/* Mandatory Placement Metrics Row (Strictly '100% Placement Assistance') */}
-              <div className="grid grid-cols-2 sm:grid-cols-3 gap-2 sm:gap-2.5 pt-0.5">
-                <div className="p-2 sm:p-2.5 rounded-lg bg-gradient-to-br from-amber-500/20 via-amber-500/10 to-transparent border border-amber-500/30 card-hover-lift hover:border-amber-400/60 hover:shadow-amber-500/20 group cursor-default">
-                  <div className="flex items-center justify-between text-amber-400 mb-0.5">
-                    <Trophy className="h-3.5 w-3.5 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300" />
-                    <span className="text-[9px] uppercase font-bold tracking-wider">Top Compensation</span>
+              {/* Mandatory Placement Metrics Row (3 Cards in 1 Row on Mobile & Desktop) */}
+              <div className="grid grid-cols-3 gap-1.5 sm:gap-2.5 pt-0.5">
+                <div className="p-1.5 xs:p-2 sm:p-2.5 rounded-lg bg-gradient-to-br from-amber-500/20 via-amber-500/10 to-transparent border border-amber-500/30 card-hover-lift hover:border-amber-400/60 hover:shadow-amber-500/20 group cursor-default flex flex-col justify-between">
+                  <div className="flex items-center justify-between text-amber-400 mb-0.5 gap-1">
+                    <Trophy className="h-2.5 w-2.5 xs:h-3 xs:w-3 sm:h-3.5 sm:w-3.5 shrink-0 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300" />
+                    <span className="text-[7px] xs:text-[8px] sm:text-[9px] uppercase font-bold tracking-tight truncate">
+                      <span className="xs:hidden">Top Comp</span>
+                      <span className="hidden xs:inline">Top Compensation</span>
+                    </span>
                   </div>
-                  <div className="font-display text-lg sm:text-xl lg:text-2xl font-black text-white tracking-tight group-hover:text-amber-300 transition-colors">₹18.5 LPA</div>
-                  <div className="text-[10px] text-amber-200 font-medium">Highest CTC Achieved</div>
+                  <div className="font-display text-[13px] xs:text-base sm:text-xl lg:text-2xl font-black text-white tracking-tight group-hover:text-amber-300 transition-colors leading-tight my-0.5">
+                    ₹18.5 LPA
+                  </div>
+                  <div className="text-[7.5px] xs:text-[8.5px] sm:text-[10px] text-amber-200/90 font-medium leading-tight truncate">
+                    <span className="xs:hidden">Highest CTC</span>
+                    <span className="hidden xs:inline">Highest CTC Achieved</span>
+                  </div>
                 </div>
 
-                <div className="p-2 sm:p-2.5 rounded-lg bg-gradient-to-br from-[#00bcd4]/20 via-[#00bcd4]/10 to-transparent border border-[#00bcd4]/30 card-hover-lift hover:border-cyan-400/60 hover:shadow-cyan-500/20 group cursor-default">
-                  <div className="flex items-center justify-between text-cyan-400 mb-0.5">
-                    <ShieldCheck className="h-3.5 w-3.5 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300" />
-                    <span className="text-[9px] uppercase font-bold tracking-wider">Commitment</span>
+                <div className="p-1.5 xs:p-2 sm:p-2.5 rounded-lg bg-gradient-to-br from-[#00bcd4]/20 via-[#00bcd4]/10 to-transparent border border-[#00bcd4]/30 card-hover-lift hover:border-cyan-400/60 hover:shadow-cyan-500/20 group cursor-default flex flex-col justify-between">
+                  <div className="flex items-center justify-between text-cyan-400 mb-0.5 gap-1">
+                    <ShieldCheck className="h-2.5 w-2.5 xs:h-3 xs:w-3 sm:h-3.5 sm:w-3.5 shrink-0 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300" />
+                    <span className="text-[7px] xs:text-[8px] sm:text-[9px] uppercase font-bold tracking-wider truncate">
+                      Commitment
+                    </span>
                   </div>
-                  <div className="font-display text-lg sm:text-xl lg:text-2xl font-black text-white tracking-tight group-hover:text-cyan-300 transition-colors">100%</div>
-                  <div className="text-[10px] text-cyan-200 font-medium">Placement Assistance</div>
+                  <div className="font-display text-[13px] xs:text-base sm:text-xl lg:text-2xl font-black text-white tracking-tight group-hover:text-cyan-300 transition-colors leading-tight my-0.5">
+                    100%
+                  </div>
+                  <div className="text-[7.5px] xs:text-[8.5px] sm:text-[10px] text-cyan-200/90 font-medium leading-tight truncate">
+                    <span className="xs:hidden">Placement Asst.</span>
+                    <span className="hidden xs:inline">Placement Assistance</span>
+                  </div>
                 </div>
 
-                <div className="col-span-2 sm:col-span-1 p-2 sm:p-2.5 rounded-lg bg-gradient-to-br from-blue-500/20 via-blue-500/10 to-transparent border border-blue-500/30 card-hover-lift hover:border-blue-400/60 hover:shadow-blue-500/20 group cursor-default">
-                  <div className="flex items-center justify-between text-blue-400 mb-0.5">
-                    <Building2 className="h-3.5 w-3.5 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300" />
-                    <span className="text-[9px] uppercase font-bold tracking-wider">Network</span>
+                <div className="p-1.5 xs:p-2 sm:p-2.5 rounded-lg bg-gradient-to-br from-blue-500/20 via-blue-500/10 to-transparent border border-blue-500/30 card-hover-lift hover:border-blue-400/60 hover:shadow-blue-500/20 group cursor-default flex flex-col justify-between">
+                  <div className="flex items-center justify-between text-blue-400 mb-0.5 gap-1">
+                    <Building2 className="h-2.5 w-2.5 xs:h-3 xs:w-3 sm:h-3.5 sm:w-3.5 shrink-0 group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300" />
+                    <span className="text-[7px] xs:text-[8px] sm:text-[9px] uppercase font-bold tracking-wider truncate">
+                      Network
+                    </span>
                   </div>
-                  <div className="font-display text-lg sm:text-xl lg:text-2xl font-black text-white tracking-tight group-hover:text-blue-300 transition-colors">200+</div>
-                  <div className="text-[10px] text-blue-200 font-medium">Corporate Recruiters</div>
+                  <div className="font-display text-[13px] xs:text-base sm:text-xl lg:text-2xl font-black text-white tracking-tight group-hover:text-blue-300 transition-colors leading-tight my-0.5">
+                    200+
+                  </div>
+                  <div className="text-[7.5px] xs:text-[8.5px] sm:text-[10px] text-blue-200/90 font-medium leading-tight truncate">
+                    <span className="xs:hidden">Recruiters</span>
+                    <span className="hidden xs:inline">Corporate Recruiters</span>
+                  </div>
                 </div>
               </div>
 
