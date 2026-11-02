@@ -39,7 +39,7 @@ const getSnapshotThemeStyles = (theme?: string) => {
   switch (theme) {
     case 'amber':
       return {
-        cardBg: 'bg-gradient-to-br from-[#0c2440] via-[#0c2440] to-amber-950/30',
+        cardBg: 'bg-[#0c2440] bg-gradient-to-br from-[#0c2440] via-[#0c2440] to-amber-950',
         border: 'border-amber-500/35 hover:border-amber-400 hover:shadow-amber-500/20',
         beam: 'bg-gradient-to-r from-yellow-400 via-amber-400 to-orange-500',
         iconBox: 'bg-amber-500/15 text-amber-400 group-hover:bg-gradient-to-r group-hover:from-yellow-500 group-hover:to-amber-500 group-hover:text-slate-950',
@@ -49,7 +49,7 @@ const getSnapshotThemeStyles = (theme?: string) => {
       }
     case 'orange':
       return {
-        cardBg: 'bg-gradient-to-br from-[#0c2440] via-[#0c2440] to-orange-950/30',
+        cardBg: 'bg-[#0c2440] bg-gradient-to-br from-[#0c2440] via-[#0c2440] to-orange-950',
         border: 'border-orange-500/35 hover:border-orange-400 hover:shadow-orange-500/20',
         beam: 'bg-gradient-to-r from-orange-500 via-amber-400 to-yellow-400',
         iconBox: 'bg-orange-500/15 text-orange-400 group-hover:bg-gradient-to-r group-hover:from-orange-500 group-hover:to-amber-500 group-hover:text-slate-950',
@@ -59,7 +59,7 @@ const getSnapshotThemeStyles = (theme?: string) => {
       }
     case 'blue':
       return {
-        cardBg: 'bg-gradient-to-br from-[#0c2440] via-[#0c2440] to-blue-950/30',
+        cardBg: 'bg-[#0c2440] bg-gradient-to-br from-[#0c2440] via-[#0c2440] to-blue-950',
         border: 'border-blue-500/35 hover:border-blue-400 hover:shadow-blue-500/20',
         beam: 'bg-gradient-to-r from-blue-500 via-[#00bcd4] to-yellow-400',
         iconBox: 'bg-blue-500/15 text-blue-400 group-hover:bg-gradient-to-r group-hover:from-blue-500 group-hover:to-sky-400 group-hover:text-white',
@@ -70,7 +70,7 @@ const getSnapshotThemeStyles = (theme?: string) => {
     case 'cyan':
     default:
       return {
-        cardBg: 'bg-gradient-to-br from-[#0c2440] via-[#0c2440] to-cyan-950/30',
+        cardBg: 'bg-[#0c2440] bg-gradient-to-br from-[#0c2440] via-[#0c2440] to-cyan-950',
         border: 'border-[#00bcd4]/35 hover:border-cyan-400 hover:shadow-cyan-500/20',
         beam: 'bg-gradient-to-r from-[#00bcd4] via-[#38bdf8] to-[#1d4ed8]',
         iconBox: 'bg-[#00bcd4]/15 text-cyan-400 group-hover:bg-gradient-to-r group-hover:from-[#00bcd4] group-hover:to-cyan-300 group-hover:text-[#0c2440]',
@@ -187,7 +187,7 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
   const [activeCarouselDot, setActiveCarouselDot] = useState(0)
   const heroSliderImages = useMemo(() => [
     { src: '/uploads/imas_hero_image_2.webp', label: 'Interactive Executive Classroom' },
-    { src: '/uploads/campus_photos/DSC_2802.jpg', label: 'State-of-the-Art Auditorium' },
+    { src: '/uploads/campus_tour/Classroom-Photo/IMG_7864.jpg', label: 'State-of-the-Art Auditorium' },
     { src: '/uploads/campus_tour/Classroom-Photo/DSC_0049.jpg', label: 'Case Discussion Lab' },
     { src: '/uploads/pgdm_plus/hero_image2.png', label: 'Corporate Management Cohort' }
   ], [])
@@ -227,14 +227,14 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
   // --- MASTER DATA FROM SPECIFICATION ---
 
   const programmeSnapshot = [
-    { label: 'Programme Duration', value: '2 Years', desc: '4 Semesters Full-Time', icon: Clock, theme: 'cyan' },
-    { label: 'Study Mode', value: 'Full-Time', desc: 'Classroom + Analytics Lab', icon: GraduationCap, theme: 'blue' },
-    { label: 'Year 1 Focus', value: 'Foundation', desc: 'Common Management Core', icon: BookOpen, theme: 'cyan' },
-    { label: 'Year 2 Focus', value: 'Specialisation', desc: '5 Career Specialisations', icon: Layers, theme: 'orange' },
-    { label: 'Summer Internship', value: '8–10 Weeks', desc: 'Corporate Hands-On SIP', icon: Briefcase, theme: 'amber' },
-    { label: 'Global Exposure', value: 'Immersion', desc: 'Dubai, Singapore, Thailand, Bali', icon: Globe, theme: 'blue' },
-    { label: 'Capstone Project', value: 'Industry-Based', desc: 'Real-World Case Defense', icon: Target, theme: 'orange' },
-    { label: 'Highest CTC', value: '₹18.5 LPA', desc: '100% Placement Assistance', icon: Trophy, theme: 'amber' }
+    { label: 'Programme Duration', value: '2 Years', desc: '4 Semesters Full-Time', icon: Clock, theme: 'cyan', image: '/uploads/hero_campus_bg.jpg' },
+    { label: 'Study Mode', value: 'Full-Time', desc: 'Classroom + Analytics Lab', icon: GraduationCap, theme: 'blue', image: '/uploads/campus_tour/Classroom-Photo/DSC_0049.jpg' },
+    { label: 'Year 1 Focus', value: 'Foundation', desc: 'Common Management Core', icon: BookOpen, theme: 'cyan', image: '/uploads/campus_photos/NEW_IMAS_Building_Logo.png' },
+    { label: 'Year 2 Focus', value: 'Specialisation', desc: '5 Career Specialisations', icon: Layers, theme: 'orange', image: '/uploads/campus_tour/Classroom-Photo/DSC_0214.jpg' },
+    { label: 'Summer Internship', value: '8–10 Weeks', desc: 'Corporate Hands-On SIP', icon: Briefcase, theme: 'amber', image: '/uploads/Industrial_visit_at_Reliance_Trends.jpeg' },
+    { label: 'Global Exposure', value: 'Immersion', desc: 'Dubai, Singapore, Thailand, Bali', icon: Globe, theme: 'blue', image: '/uploads/destinations/dubai.jpg' },
+    { label: 'Capstone Project', value: 'Industry-Based', desc: 'Real-World Case Defense', icon: Target, theme: 'orange', image: '/uploads/Workshop_at_JSW_Plant.jpg' },
+    { label: 'Highest CTC', value: '₹18.5 LPA', desc: '100% Placement Assistance', icon: Trophy, theme: 'amber', image: '/uploads/events/taj-centre-bengal-chamber-1.jpg' }
   ]
 
   const whyPgdmPlusFeatures = [
@@ -243,42 +243,48 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
       desc: 'Build an unshakeable ground in managerial economics, corporate finance, marketing, organizational behaviour, and quantitative analytics.',
       icon: BookOpen,
       tag: 'Core Pillar',
-      theme: 'cyan'
+      theme: 'cyan',
+      image: '/uploads/campus_tour/College-Life/DSC_0184.jpg'
     },
     {
       title: 'Specialised Expertise',
       desc: 'Gain advanced cutting-edge domain mastery in one of 5 industry-demanded corporate specialisations with dedicated faculty mentorship.',
       icon: Layers,
       tag: 'Depth',
-      theme: 'orange'
+      theme: 'orange',
+      image: '/uploads/campus_tour/Classroom-Photo/DSC_0068.jpg'
     },
     {
       title: 'Practical Tools & Analytics',
       desc: 'Hands-on practical training in Business Analytics, Power BI, Advanced Excel & VBA, CRM suites, ERP, and Supply Chain modeling.',
       icon: Laptop,
       tag: 'Tech-Driven',
-      theme: 'blue'
+      theme: 'blue',
+      image: '/uploads/campus_tour/Classroom-Photo/DSC_0152.jpg'
     },
     {
       title: 'Deep Industry Exposure',
       desc: 'Compulsory 8-10 week summer internship, industrial visits to MNC plants, enterprise projects, simulations, and capstone case defense.',
       icon: Briefcase,
       tag: 'Experiential',
-      theme: 'amber'
+      theme: 'amber',
+      image: '/uploads/events/Coca-Cola-Factory-visit-1.jpg'
     },
     {
       title: 'Global Perspective',
       desc: 'International Immersion programmes offering global business insights, foreign university workshops, and multinational enterprise visits.',
       icon: Globe,
       tag: 'International',
-      theme: 'cyan'
+      theme: 'cyan',
+      image: '/uploads/destinations/singapore.jpg'
     },
     {
       title: 'Career Preparation & Leadership',
       desc: 'Comprehensive grooming with 20+ presentations per semester, GD-PI clinics, resume engineering, and continuous corporate mentorship.',
       icon: Users,
       tag: 'Employability',
-      theme: 'amber'
+      theme: 'amber',
+      image: '/uploads/events/lalit-great-eastern-1.jpg'
     }
   ]
 
@@ -291,7 +297,7 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
       desc: 'Students engaging in multimedia strategic management case discussions'
     },
     {
-      src: '/uploads/campus_photos/DSC_2802.jpg',
+      src: '/uploads/campus_tour/Classroom-Photo/IMG_7864.jpg',
       category: 'classrooms',
       title: 'Executive Auditorium',
       desc: 'Modern air-conditioned auditorium hosting guest lectures and symposiums'
@@ -626,31 +632,76 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
     }
   }
 
-  const careerPathwaysData: Record<SpecialisationKey, { title: string; roles: string[]; recruiters: string[] }> = {
+  const careerPathwaysData: Record<SpecialisationKey, { title: string; roles: string[]; recruiters: { name: string; logo: string }[] }> = {
     marketing: {
       title: 'Marketing & Brand Leadership',
       roles: ['Brand Manager', 'Digital Marketing Strategist', 'Omni-Channel Sales Head', 'Growth Marketer', 'Customer Experience (CX) Lead', 'Market Intelligence Specialist'],
-      recruiters: ['Amazon', 'Google', 'ITC Limited', 'Hindustan Unilever', 'Godrej', 'Zomato', 'Swiggy', 'Flipkart']
+      recruiters: [
+        { name: 'Amazon', logo: '/uploads/Customer-logo_Amazon.png' },
+        { name: 'Google', logo: '/uploads/Google_logo_2013-2015-600x206.png' },
+        { name: 'ITC Limited', logo: '/uploads/ITC_Limited_Logo.svg.png' },
+        { name: 'Hindustan Unilever', logo: '/uploads/companies/Hindustan_Unilever_Logo.svg.png' },
+        { name: 'Godrej', logo: '/uploads/Godrej_Logo.svg.png' },
+        { name: 'Zomato', logo: '/uploads/companies/Zomato-logo.png' },
+        { name: 'Swiggy', logo: '/uploads/swiggy-logo.svg' },
+        { name: 'Flipkart', logo: '/uploads/flipkart-logo.webp' }
+      ]
     },
     finance: {
       title: 'Corporate Finance & Banking Horizons',
       roles: ['Investment Banking Analyst', 'Equity Research Associate', 'Corporate Finance Manager', 'Financial Risk Analyst', 'Treasury Operations Lead', 'Wealth Consultant'],
-      recruiters: ['Deloitte', 'PwC', 'EY', 'KPMG', 'HDFC Bank', 'ICICI Bank', 'Kotak Mahindra', 'Aditya Birla Capital']
+      recruiters: [
+        { name: 'Deloitte', logo: '/uploads/deloitte.png' },
+        { name: 'PwC', logo: '/uploads/pwclogo.png' },
+        { name: 'EY', logo: '/uploads/EY_logo_2019.svg.png' },
+        { name: 'KPMG', logo: '/uploads/kpmglogo.png' },
+        { name: 'HDFC Bank', logo: '/uploads/companies/HDFC-Bank-logo.png' },
+        { name: 'ICICI Bank', logo: '/uploads/ICICI_Bank_Logo.svg.png' },
+        { name: 'Kotak Mahindra', logo: '/uploads/kotaklogo.png' },
+        { name: 'Aditya Birla Capital', logo: '/uploads/Aditya_Birla_Group_Logo.svg.png' }
+      ]
     },
     hr: {
       title: 'Strategic People & Culture Leadership',
       roles: ['HR Business Partner (HRBP)', 'Global Talent Acquisition Lead', 'People Analytics Consultant', 'Compensation & Benefits Specialist', 'Learning & Culture Head'],
-      recruiters: ['Tata Consultancy Services', 'Infosys', 'Wipro', 'Accenture', 'L&T', 'Cognizant', 'IBM']
+      recruiters: [
+        { name: 'Tata Consultancy Services', logo: '/uploads/companies/tcs.png' },
+        { name: 'Infosys', logo: '/uploads/companies/Infosys_logo.svg.png' },
+        { name: 'Wipro', logo: '/uploads/companies/Wipro_new_logo.svg.png' },
+        { name: 'Accenture', logo: '/uploads/companies/Accenture.png' },
+        { name: 'L&T', logo: '/uploads/L&T.png' },
+        { name: 'Cognizant', logo: '/uploads/companies/cognizant logo.jpg' },
+        { name: 'IBM', logo: '/uploads/IBM_logo.svg.webp' },
+        { name: 'Genpact', logo: '/uploads/companies/Genpact_logo.svg.png' }
+      ]
     },
     healthcare: {
       title: 'Hospital & Healthcare Executive Careers',
       roles: ['Hospital Operations Director', 'Healthcare Quality & NABH Manager', 'Medical Informatics Specialist', 'Clinical Risk Consultant', 'Public Health Director'],
-      recruiters: ['Apollo Hospitals', 'Fortis Healthcare', 'Manipal Hospitals', 'Max Healthcare', 'Narayana Health', 'Medica Superspecialty']
+      recruiters: [
+        { name: 'Apollo Hospitals', logo: '/uploads/apollo-hospitals-logo-png-transparent.png' },
+        { name: 'Fortis Healthcare', logo: '/uploads/companies/Fortis-Logo.png' },
+        { name: 'Manipal Hospitals', logo: '/uploads/manipalhospitallogo.png' },
+        { name: 'Max Healthcare', logo: '/uploads/max-logo.png' },
+        { name: 'Deloitte Healthcare', logo: '/uploads/deloitte.png' },
+        { name: 'PwC Healthcare', logo: '/uploads/pwclogo.png' },
+        { name: 'TCS Healthcare', logo: '/uploads/companies/tcs.png' },
+        { name: 'EXL Healthcare', logo: '/uploads/companies/EXL_Service_logo.png' }
+      ]
     },
     logistics: {
       title: 'Global Supply Chain & Logistics Operations',
       roles: ['Global SCM Strategist', 'Procurement & Strategic Sourcing Lead', 'Warehouse Logistics Director', 'Freight Forwarding Manager', 'Supply Chain Analyst'],
-      recruiters: ['DHL Express', 'FedEx', 'Blue Dart', 'Delhivery', 'Maersk Logistics', 'Mahindra Logistics', 'Amazon Logistics']
+      recruiters: [
+        { name: 'DHL Express', logo: '/uploads/dhl-1.svg' },
+        { name: 'FedEx', logo: '/uploads/purepng.com-fedex-logologobrand-logoiconslogos-251519939539h7rji.png' },
+        { name: 'Blue Dart', logo: '/uploads/companies/Blue_Dart_logo_transparent.png' },
+        { name: 'Delhivery', logo: '/uploads/delhivery.png' },
+        { name: 'Mahindra Logistics', logo: '/uploads/mahindra-logo-vector-free-11574210410bvsayvnvbr.png' },
+        { name: 'Amazon Logistics', logo: '/uploads/Customer-logo_Amazon.png' },
+        { name: 'Flipkart Logistics', logo: '/uploads/flipkart-logo.webp' },
+        { name: 'Adani Logistics', logo: '/uploads/companies/adani.png' }
+      ]
     }
   }
 
@@ -737,11 +788,11 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
         />
         <meta property="og:type" content="website" />
         <meta property="og:url" content={canonicalUrl} />
-        <meta property="og:image" content="https://www.imas.ac.in/uploads/IMASBUILDING.jpeg" />
+        <meta property="og:image" content="https://www.imas.ac.in/uploads/campus_photos/NEW_IMAS_Building_Logo.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="PGDM Plus | IMAS Business School" />
         <meta name="twitter:description" content="2-Year Full-Time PGDM Plus with Dual Specialisation & Global Immersion." />
-        <meta name="twitter:image" content="https://www.imas.ac.in/uploads/IMASBUILDING.jpeg" />
+        <meta name="twitter:image" content="https://www.imas.ac.in/uploads/campus_photos/NEW_IMAS_Building_Logo.png" />
 
         {/* Structured JSON-LD Schema */}
         <script type="application/ld+json">
@@ -1279,84 +1330,93 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
       {/* ========================================================= */}
       {/* 5. PROGRAMME SNAPSHOT (EXECUTIVE OVERVIEW)                */}
       {/* ========================================================= */}
-      <section id="overview" className="py-16 sm:py-20 bg-slate-50 border-b border-slate-200 relative overflow-hidden">
+      <section id="overview" className="py-10 sm:py-12 bg-slate-50 border-b border-slate-200 relative overflow-hidden">
         {/* Subtle Ambient Glows Matching Hero */}
         <div className="absolute -top-24 -left-24 w-96 h-96 bg-cyan-500/5 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute -bottom-24 -right-24 w-96 h-96 bg-amber-500/5 rounded-full blur-3xl pointer-events-none" />
 
         <div className="max-w-[1550px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center max-w-3xl mx-auto mb-12 reveal-init">
+          <div className="text-center max-w-3xl mx-auto mb-7 sm:mb-8 reveal-init">
             {/* Eyebrow Tag with Pulsing Dot */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#0c2440] border border-[#00bcd4]/40 text-xs font-bold tracking-[0.14em] text-white uppercase shadow-md mb-3">
+            <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#0c2440] border border-[#00bcd4]/40 text-[11px] font-bold tracking-[0.14em] text-white uppercase shadow-md mb-2">
               <span className="w-1.5 h-1.5 rounded-full bg-yellow-400 animate-pulse shrink-0" />
               <span className="text-cyan-300 font-bold">Executive Overview</span>
             </div>
 
             {/* Master Headline with Hero Gradient Highlight */}
-            <h2 className="font-display text-3xl sm:text-4xl lg:text-[42px] font-bold text-[#0c2340] tracking-tight">
+            <h2 className="font-display text-2xl sm:text-3xl lg:text-[36px] font-bold text-[#0c2340] tracking-tight">
               Programme{' '}
               <span className="font-display bg-gradient-to-r from-orange-500 via-yellow-500 to-amber-500 bg-clip-text text-transparent">
                 Snapshot
               </span>
             </h2>
 
-            <p className="text-sm sm:text-base text-slate-600 mt-2.5 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-xs sm:text-sm text-slate-600 mt-1.5 max-w-2xl mx-auto leading-relaxed">
               Key operational parameters and structure of the 2-Year Post Graduate Diploma in Management (PGDM Plus).
             </p>
           </div>
 
-          {/* 8 Bento Snapshot Cards with Hero Consistency */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-5">
+          {/* 8 Bento Snapshot Cards with Hero Consistency (Streamlined 30% Height Reduction) */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-3 sm:gap-3.5">
             {programmeSnapshot.map((item, idx) => {
               const styles = getSnapshotThemeStyles(item.theme)
               return (
                 <div 
                   key={item.label} 
-                  className={`p-5 sm:p-6 rounded-2xl ${styles.cardBg} text-white border ${styles.border} shadow-xl card-hover-lift transition-all duration-300 group relative overflow-hidden reveal-init reveal-delay-${(idx % 4) * 100 + 100}`}
+                  className={`p-3.5 sm:p-4 rounded-xl ${styles.cardBg} text-white border ${styles.border} shadow-lg card-hover-lift transition-all duration-300 group relative overflow-hidden reveal-init reveal-delay-${(idx % 4) * 100 + 100}`}
                 >
-                  {/* Top accent beam that expands on hover */}
-                  <div className={`absolute top-0 left-0 right-0 h-1 ${styles.beam} scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left`} />
-                  
-                  <div className={`h-11 w-11 rounded-xl ${styles.iconBox} flex items-center justify-center mb-3.5 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-xs`}>
-                    <item.icon className="h-5 w-5" />
-                  </div>
+                  {/* Background Image with Clean Dark Gradient Vignette */}
+                  <div 
+                    className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110 opacity-50 group-hover:opacity-70 pointer-events-none"
+                    style={{ backgroundImage: `url(${item.image})` }}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0c2440] via-[#0c2440]/70 to-[#0c2440]/30 pointer-events-none" />
 
-                  <div className={`text-xs ${styles.label} font-semibold tracking-wide`}>{item.label}</div>
-                  <div className={`text-xl sm:text-2xl font-black text-white mt-1 ${styles.valueHover} transition-colors tracking-tight`}>
-                    {item.value}
+                  {/* Top accent beam that expands on hover */}
+                  <div className={`absolute top-0 left-0 right-0 h-1 ${styles.beam} scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left z-20`} />
+                  
+                  <div className="relative z-10">
+                    <div className={`h-9 w-9 rounded-lg ${styles.iconBox} flex items-center justify-center mb-2.5 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300`}>
+                      <item.icon className="h-4 w-4" />
+                    </div>
+
+                    <div className={`text-[11px] ${styles.label} font-semibold tracking-wide`}>{item.label}</div>
+                    <div className={`text-lg sm:text-xl font-black text-white mt-0.5 ${styles.valueHover} transition-colors tracking-tight`}>
+                      {item.value}
+                    </div>
+                    <div className="text-[11px] text-slate-300 mt-1 font-medium leading-snug">{item.desc}</div>
                   </div>
-                  <div className="text-xs text-slate-300 mt-1.5 font-medium leading-relaxed">{item.desc}</div>
                 </div>
               )
             })}
           </div>
 
           {/* Bottom Trust & Action Strip Matching Hero */}
-          <div className="mt-10 pt-6 border-t border-slate-200/90 flex flex-wrap items-center justify-between gap-4 bg-white/70 backdrop-blur-xs p-4 sm:p-5 rounded-2xl border shadow-xs">
-            <div className="flex flex-wrap items-center gap-3">
+          <div className="mt-6 pt-4 border-t border-slate-200/90 flex flex-wrap items-center justify-between gap-3 bg-white/70 backdrop-blur-xs p-3 sm:p-4 rounded-xl border shadow-xs">
+            <div className="flex flex-wrap items-center gap-2.5">
               <div className="flex items-center gap-1 text-amber-500">
                 {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="h-4 w-4 fill-amber-400 text-amber-400" />
+                  <Star key={i} className="h-3.5 w-3.5 fill-amber-400 text-amber-400" />
                 ))}
               </div>
-              <span className="text-xs font-bold text-slate-700">
+              <span className="text-[11px] sm:text-xs font-bold text-slate-700">
                 AICTE Approved • Newtown Campus, Kolkata • Phase II Admissions 2026
               </span>
             </div>
 
-            <div className="flex items-center gap-3 w-full sm:w-auto justify-end">
+            <div className="flex items-center gap-2.5 w-full sm:w-auto justify-end">
               <Button
                 onClick={handleDownloadBrochure}
                 variant="outline"
                 size="sm"
-                className="flex-1 sm:flex-initial border-slate-300 hover:border-slate-400 text-slate-700 hover:text-[#0c2440] hover:bg-white rounded-xl text-xs font-semibold px-4 transition-all"
+                className="flex-1 sm:flex-initial border-slate-300 hover:border-slate-400 text-slate-700 hover:text-[#0c2440] hover:bg-white rounded-lg text-xs font-semibold px-3.5 h-8 sm:h-9 transition-all"
               >
                 <Download className="mr-1.5 h-3.5 w-3.5 text-[#00bcd4]" /> Download Syllabus
               </Button>
               <Button
                 onClick={handleOpenEnquiry}
                 size="sm"
-                className="flex-1 sm:flex-initial bg-gradient-to-r from-yellow-500 via-[#00a8cc] to-[#1d4ed8] hover:from-[#00acc1] hover:to-[#1e40af] text-white rounded-xl text-xs font-bold px-5 shadow-sm shimmer-hover active:scale-95 transition-all"
+                className="flex-1 sm:flex-initial bg-gradient-to-r from-yellow-500 via-[#00a8cc] to-[#1d4ed8] hover:from-[#00acc1] hover:to-[#1e40af] text-white rounded-lg text-xs font-bold px-4 h-8 sm:h-9 shadow-sm shimmer-hover active:scale-95 transition-all"
               >
                 Apply Now <ArrowRight className="ml-1.5 h-3.5 w-3.5" />
               </Button>
@@ -1369,6 +1429,13 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
       {/* 6. PROGRAMME ARCHITECTURE (INTERACTIVE TIMELINE)          */}
       {/* ========================================================= */}
       <section id="architecture" className="py-16 bg-[#071d3d] text-white border-b border-slate-800 relative overflow-hidden">
+        {/* Background Campus Image with Deep Navy Gradient Overlay */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-35 pointer-events-none"
+          style={{ backgroundImage: `url('/uploads/campus_photos/NEW_IMAS_Building_Logo.png')` }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#071d3d]/90 via-[#071d3d]/70 to-[#071d3d]/90 pointer-events-none" />
+
         {/* Ambient Subtle Glows */}
         <div className="absolute -top-24 -right-24 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute -bottom-24 -left-24 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl pointer-events-none" />
@@ -1520,22 +1587,31 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
                   key={item.title} 
                   className={`p-6 sm:p-7 rounded-2xl ${styles.cardBg} text-white border ${styles.border} shadow-xl card-hover-lift transition-all duration-300 group relative overflow-hidden reveal-init reveal-delay-${(idx % 3) * 100 + 100}`}
                 >
-                  {/* Top accent beam expanding on hover */}
-                  <div className={`absolute top-0 left-0 right-0 h-1 ${styles.beam} scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left`} />
-                  
-                  <div className="flex items-center justify-between mb-5">
-                    <div className={`h-12 w-12 rounded-xl ${styles.iconBox} flex items-center justify-center border border-white/10 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300 shadow-xs`}>
-                      <item.icon className="h-6 w-6" />
-                    </div>
-                    <span className={`text-[11px] font-bold ${styles.tag} px-3 py-1 rounded-lg border transition-colors`}>
-                      {item.tag}
-                    </span>
-                  </div>
+                  {/* Background Image with Clean Dark Gradient Vignette */}
+                  <div 
+                    className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110 opacity-50 group-hover:opacity-70 pointer-events-none"
+                    style={{ backgroundImage: `url(${item.image})` }}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0c2440] via-[#0c2440]/70 to-[#0c2440]/30 pointer-events-none" />
 
-                  <h3 className={`text-xl font-bold text-white mb-2.5 ${styles.valueHover} transition-colors tracking-tight`}>
-                    {item.title}
-                  </h3>
-                  <p className="text-sm text-slate-300 leading-relaxed font-normal">{item.desc}</p>
+                  {/* Top accent beam expanding on hover */}
+                  <div className={`absolute top-0 left-0 right-0 h-1 ${styles.beam} scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left z-20`} />
+                  
+                  <div className="relative z-10">
+                    <div className="flex items-center justify-between mb-5">
+                      <div className={`h-12 w-12 rounded-xl ${styles.iconBox} flex items-center justify-center group-hover:scale-110 group-hover:rotate-6 transition-all duration-300`}>
+                        <item.icon className="h-6 w-6" />
+                      </div>
+                      <span className={`text-[11px] font-bold ${styles.tag} px-3 py-1 rounded-lg border transition-colors`}>
+                        {item.tag}
+                      </span>
+                    </div>
+
+                    <h3 className={`text-xl font-bold text-white mb-2.5 ${styles.valueHover} transition-colors tracking-tight`}>
+                      {item.title}
+                    </h3>
+                    <p className="text-sm text-slate-300 leading-relaxed font-normal">{item.desc}</p>
+                  </div>
                 </div>
               )
             })}
@@ -1776,7 +1852,7 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
           {(() => {
             const spec = specialisationsList.find((s) => s.id === activeSpecialisation)!
             return (
-              <div className="bg-gradient-to-br from-[#0c2440] via-[#0c2440] to-cyan-950/30 text-white rounded-2xl border border-[#00bcd4]/35 p-6 sm:p-8 shadow-2xl max-w-4xl mx-auto card-hover-lift hover:border-cyan-400 hover:shadow-cyan-500/20 transition-all duration-300 group relative overflow-hidden reveal-init">
+              <div className="bg-[#0c2440] bg-gradient-to-br from-[#0c2440] via-[#0c2440] to-cyan-950 text-white rounded-2xl border border-[#00bcd4]/35 p-6 sm:p-8 shadow-2xl max-w-4xl mx-auto card-hover-lift hover:border-cyan-400 hover:shadow-cyan-500/20 transition-all duration-300 group relative overflow-hidden reveal-init">
                 {/* Top accent beam */}
                 <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-yellow-400 via-amber-400 to-orange-500 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
                 <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 pb-6 border-b border-white/10">
@@ -2478,7 +2554,7 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
             ))}
           </div>
 
-          {/* Active Career Pathway Card (Deep Blue on Light Bg) */}
+          {/* Active Career Pathway Card (Clean Original Design with Recruiter Logos) */}
           {(() => {
             const pathway = careerPathwaysData[activeCareerTab]
             return (
@@ -2487,7 +2563,7 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
                 <h3 className="text-xl font-bold text-white mb-4">{pathway.title}</h3>
                 
                 <div className="mb-6">
-                  <h4 className="text-xs font-bold uppercase tracking-wider text-cyan-300 mb-2">Target Corporate Job Roles:</h4>
+                  <h4 className="text-xs font-bold uppercase tracking-wider text-cyan-300 mb-2.5">Target Corporate Job Roles:</h4>
                   <div className="flex flex-wrap gap-2">
                     {pathway.roles.map((r) => (
                       <span key={r} className="px-3 py-1 rounded-lg text-xs font-semibold bg-cyan-500/20 text-cyan-200 border border-cyan-500/30">
@@ -2498,12 +2574,20 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
                 </div>
 
                 <div>
-                  <h4 className="text-xs font-bold uppercase tracking-wider text-amber-300 mb-2">Key Recruiter Organizations:</h4>
-                  <div className="flex flex-wrap gap-2">
+                  <h4 className="text-xs font-bold uppercase tracking-wider text-amber-300 mb-3">Key Recruiter Organizations:</h4>
+                  <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
                     {pathway.recruiters.map((rec) => (
-                      <span key={rec} className="px-3 py-1 rounded-lg text-xs font-medium bg-amber-400/10 text-amber-200 border border-amber-400/25">
-                        {rec}
-                      </span>
+                      <div
+                        key={rec.name}
+                        className="bg-white rounded-xl p-2 sm:p-2.5 flex items-center justify-center h-12 shadow-xs border border-slate-200/90 hover:scale-105 transition-all duration-200 cursor-default"
+                        title={rec.name}
+                      >
+                        <img
+                          src={rec.logo}
+                          alt={rec.name}
+                          className="max-h-7 max-w-[85%] object-contain"
+                        />
+                      </div>
                     ))}
                   </div>
                 </div>
@@ -2697,8 +2781,14 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
       {/* ========================================================= */}
       {/* 25. FINAL HIGH-CONVERSION CTA                             */}
       {/* ========================================================= */}
-      <section className="relative py-20 bg-gradient-to-br from-[#071328] via-[#0c244d] to-[#071328] text-white overflow-hidden">
-        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#26c1d3_1px,transparent_1px)] [background-size:16px_16px]" />
+      <section className="relative py-20 bg-[#071328] text-white overflow-hidden">
+        {/* Background Campus Image with Dark Executive Overlay */}
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-35 pointer-events-none"
+          style={{ backgroundImage: `url('/uploads/hero_campus_bg.jpg')` }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#071328]/90 via-[#0c244d]/75 to-[#071328]/95 pointer-events-none" />
+        <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#26c1d3_1px,transparent_1px)] [background-size:16px_16px] pointer-events-none" />
 
         <div className="relative max-w-4xl mx-auto px-4 text-center space-y-6">
           {/* Eyebrow Badge Matching Dark Sections */}
