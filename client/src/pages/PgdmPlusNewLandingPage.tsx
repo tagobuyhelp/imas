@@ -9,7 +9,7 @@ import {
   ChevronDown, ChevronRight, ArrowRight, Play, Sparkles, Compass, ShieldCheck,
   TrendingUp, Laptop, PieChart, Check, Calendar, Clock, DollarSign, HelpCircle,
   FileText, ArrowUpRight, BadgePercent, Cpu, Network, BarChart3, Settings2,
-  Megaphone, Eye, CheckCircle, Flame, Camera
+  Megaphone, Eye, CheckCircle, Flame, Camera, CreditCard
 } from 'lucide-react'
 
 // --- TYPES ---
@@ -714,23 +714,23 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
   const admissionSteps = [
     {
       step: '01',
-      title: 'Online Application',
-      desc: 'Submit the online admission form with academic transcripts, work history (if any), and valid entrance test scores (CAT / MAT / XAT / CMAT / ATMA / IMAS Test).'
+      title: 'APPLICATION',
+      desc: 'Submit the completed application form along with academic records and entrance test scores.'
     },
     {
       step: '02',
-      title: 'Application Screening',
-      desc: 'Admissions committee reviews your academic credentials, extra-curricular profile, and eligibility requirements for business education.'
+      title: 'APPLICATION REVIEW',
+      desc: 'Applications are reviewed based on eligibility criteria, academic background, and overall profile.'
     },
     {
       step: '03',
-      title: 'Selection & PI Round',
-      desc: 'Shortlisted candidates attend Personal Interview (PI) and Group Discussion (GD) with senior academic faculty and corporate mentors.'
+      title: 'COUNSELLING / SELECTION',
+      desc: 'Shortlisted candidates are invited for counselling and evaluation as per the institutional admission process.'
     },
     {
       step: '04',
-      title: 'Admission Confirmation',
-      desc: 'Selected candidates receive an official offer letter and secure their seat by completing verification and initial admission fee payment.'
+      title: 'ADMISSION CONFIRMATION',
+      desc: 'Selected candidates receive admission confirmation and complete the necessary formalities to secure their seat.'
     }
   ]
 
@@ -1183,16 +1183,26 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
                   <Download className="mr-1.5 h-3.5 w-3.5 text-[#00bcd4] group-hover:translate-y-0.5 transition-transform duration-300" /> Brochure
                 </Button>
 
+                <a 
+                  href={`tel:${IMAS_CONTACT.PHONE.replace(/\s/g, '')}`}
+                  className="flex-1 sm:flex-initial justify-center inline-flex items-center gap-1.5 bg-[#0c2444]/90 hover:bg-[#102d55] border border-amber-400/50 hover:border-amber-300 text-amber-300 px-3.5 sm:px-4 h-9 sm:h-10 rounded-lg text-xs sm:text-sm font-bold shadow-sm transition-all shimmer-hover active:scale-95 group"
+                >
+                  <Phone className="h-3.5 w-3.5 text-yellow-400 group-hover:rotate-12 transition-transform duration-300" />
+                  <span className="hidden xs:inline">Talk to a Counsellor</span>
+                  <span className="xs:hidden">Counsellor</span>
+                </a>
+
                 <button 
                   onClick={handleOpenVideoModal}
-                  className="w-full sm:w-auto justify-center sm:justify-start flex items-center gap-2.5 px-2 py-0.5 text-slate-200 hover:text-cyan-300 transition-colors group cursor-pointer"
+                  className="w-full sm:w-auto justify-center sm:justify-start flex items-center gap-2 px-1.5 py-0.5 text-slate-200 hover:text-cyan-300 transition-colors group cursor-pointer"
+                  title="Watch IMAS Campus Tour Video"
                 >
-                  <div className="relative w-8 h-8 sm:w-9 sm:h-9 rounded-full bg-[#0284c7] hover:bg-[#0369a1] text-white flex items-center justify-center transition-transform group-hover:scale-110 shadow-md shrink-0 before:absolute before:inset-0 before:rounded-full before:bg-cyan-400/40 before:animate-ping before:opacity-75">
-                    <Play className="h-3.5 w-3.5 fill-white text-white ml-0.5 relative z-10" />
+                  <div className="relative w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#0284c7] hover:bg-[#0369a1] text-white flex items-center justify-center transition-transform group-hover:scale-110 shadow-md shrink-0 before:absolute before:inset-0 before:rounded-full before:bg-cyan-400/40 before:animate-ping before:opacity-75">
+                    <Play className="h-3 w-3 fill-white text-white ml-0.5 relative z-10" />
                   </div>
                   <div className="text-left leading-tight">
-                    <span className="block text-[10px] text-slate-300 font-medium">Watch</span>
-                    <span className="block text-xs font-bold text-white group-hover:text-cyan-300 transition-colors">Campus Video</span>
+                    <span className="block text-[8.5px] text-slate-300 font-medium">Campus</span>
+                    <span className="block text-[10.5px] sm:text-xs font-bold text-white group-hover:text-cyan-300 transition-colors">Video Tour</span>
                   </div>
                 </button>
               </div>
@@ -2408,6 +2418,26 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
             </p>
           </div>
 
+          {/* Global Academic Partner Network */}
+          <div className="max-w-4xl mx-auto mb-8 px-2 reveal-init">
+            <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-2.5 text-[11px] sm:text-xs">
+              <span className="text-slate-400 font-semibold uppercase tracking-wider text-[10px] mr-1">Academic Alliances:</span>
+              {[
+                { name: 'Univ. of Sunderland', country: 'UK' },
+                { name: 'Lincoln Univ. College', country: 'Malaysia' },
+                { name: 'SEGi University', country: 'Malaysia' },
+                { name: 'FPT University', country: 'Vietnam' },
+                { name: 'INTI Intl University', country: 'Malaysia' },
+              ].map((uni) => (
+                <span key={uni.name} className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-white/10 border border-white/15 text-cyan-200">
+                  <Globe className="h-3 w-3 text-cyan-400" />
+                  <span className="font-bold text-white">{uni.name}</span>
+                  <span className="text-[9.5px] text-amber-300 font-semibold">({uni.country})</span>
+                </span>
+              ))}
+            </div>
+          </div>
+
           {/* Destination Tabs */}
           <div className="flex overflow-x-auto pb-2 scrollbar-none gap-2 justify-start sm:justify-center mb-10 reveal-init">
             {(['dubai', 'singapore', 'thailand', 'bali'] as DestinationKey[]).map((key) => {
@@ -2615,6 +2645,23 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
             </div>
           </div>
 
+          {/* Industry & Chamber Collaborations */}
+          <div className="max-w-5xl mx-auto mb-10 reveal-init">
+            <div className="p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-[#0c2440] via-[#103258] to-[#0c2440] border border-cyan-400/30 text-white shadow-xl flex flex-col sm:flex-row items-center justify-between gap-4">
+              <div className="text-center sm:text-left">
+                <span className="text-[10px] uppercase font-bold text-cyan-300 tracking-wider block">Industry Tie-Ups & Governance</span>
+                <h4 className="text-sm sm:text-base font-bold text-white">Strategic Industry & Chamber Collaborations</h4>
+              </div>
+              <div className="flex flex-wrap items-center justify-center gap-2">
+                {['CII', 'ICC', 'BCC&I', 'MSME', 'NHRD', 'ERSC'].map((partner) => (
+                  <span key={partner} className="px-3 py-1 rounded-lg bg-white/10 hover:bg-white/20 border border-white/15 text-xs font-bold text-amber-300 transition-colors shadow-xs">
+                    {partner}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+
           {/* 6 Career Support Pillars */}
           <div className="max-w-5xl mx-auto">
             <h3 className="text-xs font-bold uppercase tracking-wider text-slate-500 text-center mb-6 reveal-init">
@@ -2633,7 +2680,7 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
                 { title: 'Interview Preparation', desc: 'Mock technical & behavioral panels', hoverBorder: 'hover:border-amber-400' },
                 { title: 'Group Discussion', desc: 'Topic-based corporate GD rounds', hoverBorder: 'hover:border-orange-400' },
                 { title: 'Business Communication', desc: 'Executive presence & corporate email', hoverBorder: 'hover:border-blue-400' },
-                { title: 'Employability Prep', desc: 'Aptitude & psychometric tests', hoverBorder: 'hover:border-yellow-400' },
+                { title: 'Employability Preparation', desc: 'Aptitude & psychometric tests', hoverBorder: 'hover:border-yellow-400' },
                 { title: 'Industry Exposure', desc: 'CXO guest lectures & mentorship', hoverBorder: 'hover:border-sky-400' }
               ].map((p, idx) => (
                 <div 
@@ -2867,9 +2914,36 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
             </div>
 
             <div className="p-4 bg-[#081a33] border-t border-white/10 text-center">
-              <p className="text-[11px] text-slate-400 leading-relaxed italic">
-                * Developer / Candidate Note: Fees must be validated against the latest IMAS-approved fee schedule before publication. Flexible semester installment plans and educational loan support from nationalized banks are available.
+              <p className="text-[11px] text-slate-300 leading-relaxed">
+                * Flexible semester installment plans are available. IMAS offers comprehensive financial guidance and education loan documentation support.
               </p>
+            </div>
+          </div>
+
+          {/* Education Loan & Student Credit Card Financial Aid Support */}
+          <div className="max-w-2xl mx-auto mt-6 grid grid-cols-1 sm:grid-cols-2 gap-4 reveal-init">
+            <div className="p-4 rounded-xl bg-white border border-slate-200 shadow-sm flex items-start gap-3 hover:border-cyan-400 transition-colors">
+              <div className="w-9 h-9 rounded-lg bg-cyan-50 border border-cyan-200 text-cyan-700 flex items-center justify-center shrink-0">
+                <CreditCard className="h-5 w-5" />
+              </div>
+              <div>
+                <h4 className="text-xs font-bold text-[#0c2340]">West Bengal Student Credit Card (WBSCC)</h4>
+                <p className="text-[11px] text-slate-600 mt-0.5 leading-snug">
+                  Eligible candidates can avail collateral-free education loans up to ₹10 Lakhs at 4% simple interest under state govt rules.
+                </p>
+              </div>
+            </div>
+
+            <div className="p-4 rounded-xl bg-white border border-slate-200 shadow-sm flex items-start gap-3 hover:border-amber-400 transition-colors">
+              <div className="w-9 h-9 rounded-lg bg-amber-50 border border-amber-200 text-amber-700 flex items-center justify-center shrink-0">
+                <Building2 className="h-5 w-5" />
+              </div>
+              <div>
+                <h4 className="text-xs font-bold text-[#0c2340]">On-Campus Education Loan Desk</h4>
+                <p className="text-[11px] text-slate-600 mt-0.5 leading-snug">
+                  Institutional loan assistance, immediate documentation letter issuance, and tie-up with nationalized banks (Bank of India).
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -2945,11 +3019,12 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
             Explore PGDM Plus, choose your specialisation and begin your journey towards industry-ready management skills with 100% placement assistance.
           </p>
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4 reveal-init">
+          {/* Item 25 Client PDF: APPLY NOW | DOWNLOAD BROCHURE | TALK TO A COUNSELLOR */}
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-3.5 pt-4 reveal-init">
             <Button
               onClick={handleOpenEnquiry}
               size="lg"
-              className="h-12 rounded-xl bg-gradient-to-r from-yellow-500 via-[#00a8cc] to-[#1d4ed8] hover:from-[#00acc1] hover:to-[#1e40af] text-white font-extrabold text-sm px-8 shadow-xl shadow-cyan-500/30 shimmer-hover active:scale-95 group transition-all"
+              className="h-12 rounded-xl bg-gradient-to-r from-yellow-500 via-[#00a8cc] to-[#1d4ed8] hover:from-[#00acc1] hover:to-[#1e40af] text-white font-extrabold text-sm px-7 shadow-xl shadow-cyan-500/30 shimmer-hover active:scale-95 group transition-all"
             >
               <span>Apply Now</span>
               <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1.5 transition-transform duration-300" />
@@ -2964,7 +3039,7 @@ export function PgdmPlusNewLandingPage(): React.JSX.Element {
             </Button>
             <a
               href={`tel:${IMAS_CONTACT.PHONE.replace(/\s/g, '')}`}
-              className="inline-flex items-center gap-2 text-xs font-semibold text-slate-300 hover:text-cyan-300 transition-colors hover:scale-105"
+              className="h-12 rounded-xl border border-cyan-400/60 bg-[#0c2444]/80 text-cyan-300 hover:bg-cyan-500/20 font-bold text-sm px-6 flex items-center justify-center gap-2 shadow-lg shimmer-hover active:scale-95 transition-all"
             >
               <Phone className="h-4 w-4 text-yellow-400" />
               <span>Talk to a Counsellor</span>
